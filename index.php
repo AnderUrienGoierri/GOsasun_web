@@ -1,7 +1,7 @@
 <?php
-$base_path = '';
-$page_title = "GOsasun - Zure Osasun Ataria";
-$current_page = "index";
+$bide_absolutua = '';
+$orri_izenburua = "GOsasun - Zure Osasun Ataria";
+$uneko_orria = "index";
 
 include 'php_includeak/goiburua.php';
 ?>
@@ -78,7 +78,7 @@ include 'php_includeak/goiburua.php';
     </section>
 
 <?php
-$extra_js = ["index.js"];
+$js_gehigarria = ["index.js"];
 include 'php_includeak/footer.php';
 ?>
 
