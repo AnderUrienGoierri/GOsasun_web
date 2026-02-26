@@ -208,3 +208,21 @@ header {
     gap: 40px;
   }
 }
+
+/* Specific responsiveness for small screens */
+@media (max-width: 400px) {
+  .logoa a {
+    font-size: 1.3rem;
+    gap: 8px;
+  }
+  .logo-irudia {
+    height: 40px;
+  }
+  .logo-etiketa {
+    font-size: 0.9rem;
+    display: none; /* Hide 'Medikua'/'Pazientea' label on very small screens to save space */
+  }
+  .menu-botoia {
+    font-size: 1.6rem;
+  }
+}

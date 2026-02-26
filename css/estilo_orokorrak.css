@@ -36,6 +36,11 @@ body::before {
   box-sizing: border-box;
 }
 
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
 body {
   font-family: "Inter", "Roboto", sans-serif; /* Google Fonts gomendatua */
   background-color: var(--light-bg);
@@ -266,6 +271,9 @@ body {
   border-radius: var(--border-radius);
   overflow: hidden;
   box-shadow: var(--box-shadow);
+  display: block; /* Important for mobile */
+  overflow-x: auto; /* Important for mobile */
+  white-space: nowrap; /* Important for mobile */
 }
 
 .datu-taula th, .datu-taula td,
@@ -550,9 +558,9 @@ body {
     margin-top: 20px;
     width: 100%;
 }
-.kutxa-zuria-itzala-30 {
+.kutxa-zuria {
     background: white;
-    padding: 20px; /* Reduced for mobile */
+    padding: 20px; 
     border-radius: 15px;
     box-shadow: var(--box-shadow);
     margin-bottom: 30px;
@@ -575,6 +583,7 @@ body {
 .korritze-horizontala {
     overflow-x: auto;
     width: 100%;
+    display: block;
 }
 .testu-grisa-lerrobakarra {
     color: #888;
@@ -594,7 +603,7 @@ body {
     box-shadow: var(--box-shadow);
 }
 
-/* Utilities & Empty States */
+/* Erabilgarritasunak eta egoera hutsak */
 .egoera-hutsa {
     padding: 60px 20px;
     text-align: center;
@@ -629,14 +638,14 @@ body {
 .flex-goi-15 {
     margin-top: 15px;
     display: flex;
-    flex-direction: column; /* Stacked for mobile */
+    flex-direction: column; 
     gap: 10px;
 }
 .paziente-txartel-zuria {
     display: flex;
-    flex-direction: column; /* Stacked for mobile */
+    flex-direction: column; 
     gap: 15px;
-    align-items: center; /* Centered for mobile */
+    align-items: center; 
     background: white;
     padding: 20px;
     border-radius: 12px;
@@ -674,7 +683,7 @@ body {
     display:inline;
 }
 .ikono-handia-3 {
-    font-size:2.5rem; /* Reduced for mobile */
+    font-size:2.5rem; 
     margin-bottom:15px;
     opacity:0.3;
 }
@@ -691,7 +700,7 @@ body {
     color: var(--gray);
 }
 .flex-bukaera {
-    align-items: stretch; /* Full width button on mobile */
+    align-items: stretch; 
     flex-direction: column;
     gap: 10px;
 }
@@ -714,7 +723,7 @@ body {
   }
 }
 
-/* ================= MEDIA QUERIES (DESKTOP LATER - min-width) ================= */
+/* ================= MEDIA QUERIES (mahaigañekoak - min-width) ================= */
 
 @media (min-width: 480px) {
   .sareta-bikoa {
@@ -723,12 +732,16 @@ body {
 }
 
 
+  /* Mobile-first approach for panel nagusia (above 768px handled below) */
   .panel-nagusia {
-    padding: 40px 5%;
+    padding: 20px 15px; 
+    width: 100%;
+    overflow-x: hidden;
   }
-
+  
   .kaixo-atalak {
-    padding: 40px;
+    padding: 20px 15px; 
+    align-items: flex-start;
   }
 
   .kaixo-atalak h1 {
@@ -741,8 +754,8 @@ body {
   }
 
   .menu-sareta {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    gap: 15px;
   }
 
   .botoi-taldea-flex {
@@ -756,14 +769,32 @@ body {
   }
 
   .flex-bukaera {
-    flex-direction: row;
-    align-items: flex-end;
+    flex-direction: column; /* Stack on mobile */
+    align-items: stretch;
   }
 
   .kutxa-zuria-800, .kutxa-zuria-700 {
     padding: 30px;
   }
 
+
+@media (min-width: 768px) {
+  .panel-nagusia {
+    padding: 40px 5%;
+  }
+  .kaixo-atalak {
+    padding: 40px;
+    align-items: center;
+  }
+  .menu-sareta {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  .flex-bukaera {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
 
 /* Specific responsiveness for small screens like 300px */
 @media (max-width: 350px) {

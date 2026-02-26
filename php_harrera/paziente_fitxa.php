@@ -77,7 +77,7 @@ include_once '../php_includeak/harrera_goiburua.php';
         <!-- Eskuineko zutabea: Neurketak eta Hitzorduak -->
         <div>
             <!-- Azken neurketen laburpena -->
-            <div class="kutxa-zuria-itzala-30">
+            <div class="kutxa-zuria">
                 <h3 class="goiburu-iluna-flex">
                     Azken Parametroak
                     <?php if(count($neurketak) > 0): ?>
@@ -89,24 +89,24 @@ include_once '../php_includeak/harrera_goiburua.php';
                     <?php $azkena = $neurketak[0]; ?>
                     <div class="param-sareta">
                         <div class="param-txartela">
-                            <div class="param-label">Tentsioa</div>
+                            <div>Tentsioa</div>
                             <div class="param-balioa"><?php echo $azkena['tentsio_sistolikoa'] . '/' . $azkena['tentsio_diastolikoa']; ?></div>
-                            <div class="param-label">mmHg</div>
+                            <div>mmHg</div>
                         </div>
                         <div class="param-txartela">
-                            <div class="param-label">Glukosa</div>
+                            <div>Glukosa</div>
                             <div class="param-balioa"><?php echo $azkena['glukosa_mg_dl']; ?></div>
-                            <div class="param-label">mg/dL</div>
+                            <div>mg/dL</div>
                         </div>
                         <div class="param-txartela">
-                            <div class="param-label">Pisua</div>
+                            <div>Pisua</div>
                             <div class="param-balioa"><?php echo $azkena['pisua_kg']; ?></div>
-                            <div class="param-label">kg</div>
+                            <div>kg</div>
                         </div>
                         <div class="param-txartela">
-                            <div class="param-label">Altuera</div>
-                            <div class="param-balioa"><?php echo $azkena['altuera_m']; ?></div>
-                            <div class="param-label">m</div>
+                            <div>Altuera</div>
+                            <div class="param-balioa"><?php echo $azkena['altuera']; ?></div>
+                            <div>m</div>
                         </div>
                     </div>
                 <?php else: ?>
