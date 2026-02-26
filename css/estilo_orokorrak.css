@@ -42,7 +42,7 @@ html, body {
 }
 
 body {
-  font-family: "Inter", "Roboto", sans-serif; /* Google Fonts gomendatua */
+  font-family: "Inter", "Roboto", sans-serif; /* Recommended Google Fonts */
   background-color: var(--light-bg);
   color: var(--dark-text);
   line-height: 1.6;
@@ -84,7 +84,7 @@ body {
   color: var(--danger-color);
   font-size: 0.875rem;
   margin-top: 5px;
-  display: none; /* jQuery bidez erakusteko */
+  display: none; /* To be shown via jQuery */
 }
 
 /* Data / Information Display */
@@ -603,7 +603,7 @@ body {
     box-shadow: var(--box-shadow);
 }
 
-/* Erabilgarritasunak eta egoera hutsak */
+/* Utilities and empty states */
 .egoera-hutsa {
     padding: 60px 20px;
     text-align: center;
@@ -723,7 +723,7 @@ body {
   }
 }
 
-/* ================= MEDIA QUERIES (mahaigañekoak - min-width) ================= */
+/* ================= MEDIA QUERIES (Desktop - min-width) ================= */
 
 @media (min-width: 480px) {
   .sareta-bikoa {

@@ -86,7 +86,7 @@
     color: var(--gray);
 }
 
-/* ================= MEDIA QUERIES (DESKTOP LATER - min-width) ================= */
+/* ================= MEDIA QUERIES (Desktop - min-width) ================= */
 @media (min-width: 768px) {
     .ezaugarriak {
         grid-template-columns: repeat(3, 1fr);
