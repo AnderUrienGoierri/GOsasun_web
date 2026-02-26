@@ -35,7 +35,7 @@ include_once '../php_includeak/harrera_goiburua.php';
 
     <main class="panel-nagusia">
         <div class="orri-goiburua">
-            <h2>👨‍⚕️ Medikuen Kudeaketa</h2>
+            <h2><img src="../img/stethoscope.svg" alt="" style="width: 1.25rem; height: 1.25rem; vertical-align: middle; margin-right: 10px; filter: var(--primary-filter);"> Medikuen Kudeaketa</h2>
             <p>Ikusi eta kudeatu zentroko lantalde medikoa.</p>
         </div>
 
@@ -56,9 +56,9 @@ include_once '../php_includeak/harrera_goiburua.php';
                 <thead>
                     <tr>
                         <th>Argazkia</th>
-                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(1)">Izena ↕️</th>
-                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(2)">Espezialitatea ↕️</th>
-                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(3)">Elkargokide Zkia. ↕️</th>
+                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(1)">Izena <img src="../img/sort.svg" alt="" style="width: 1rem; height: 1rem; vertical-align: middle; opacity: 0.5;"></th>
+                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(2)">Espezialitatea <img src="../img/sort.svg" alt="" style="width: 1rem; height: 1rem; vertical-align: middle; opacity: 0.5;"></th>
+                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(3)">Elkargokide Zkia. <img src="../img/sort.svg" alt="" style="width: 1rem; height: 1rem; vertical-align: middle; opacity: 0.5;"></th>
                         <th>Ekintzak</th>
                     </tr>
                 </thead>

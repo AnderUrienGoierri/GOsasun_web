@@ -47,7 +47,7 @@ include_once '../php_includeak/harrera_goiburua.php';
 
 <main class="panel-nagusia">
     <div class="orri-goiburua marjina-behe-20">
-        <h2 class="izenburu-nagusia">✍️ Mezu Berria</h2>
+        <h2 class="izenburu-nagusia"><img src="../img/clipboard-pen.svg" alt="" style="width: 1.25rem; height: 1.25rem; vertical-align: middle; filter: var(--primary-filter); margin-right: 10px;"> Mezu Berria</h2>
         <p class="azpititulu-grisa">Sistemako edozein erabiltzaileri mezua bidali.</p>
     </div>
 
@@ -55,7 +55,7 @@ include_once '../php_includeak/harrera_goiburua.php';
         <?php if ($arrakasta_mezua): ?>
             <div class="alerta alerta-arrakasta marjina-behe-20">
                 <?php echo $arrakasta_mezua; ?>
-                <div class="marjina-goi-10"><a href="mezuak.php" class="esteka-arrakasta">← Itzuli mezuetara</a></div>
+                <div class="marjina-goi-10"><a href="mezuak.php" class="esteka-arrakasta"><img src="../img/arrow-left.svg" alt="" style="width: 1em; height: 1em; vertical-align: middle; filter: var(--primary-filter); margin-right: 5px;"> Itzuli mezuetara</a></div>
             </div>
         <?php endif; ?>
 

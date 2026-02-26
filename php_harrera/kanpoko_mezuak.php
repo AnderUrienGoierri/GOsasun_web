@@ -60,7 +60,7 @@ include_once '../php_includeak/harrera_goiburua.php';
                 </table>
             <?php else: ?>
                 <div class="egoera-hutsa">
-                    <div class="ikono-hutsa">📩</div>
+                    <div class="ikono-hutsa"><img src="../img/mailbox.svg" alt="" style="width: 3rem; height: 3rem; opacity: 0.3;"></div>
                     <h3>Ez dago mezurik</h3>
                     <p>Mementoz ez da kanpoko mezurik jaso.</p>
                 </div>

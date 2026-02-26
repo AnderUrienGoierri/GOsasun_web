@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <body class="panel-gorputza">
     <header class="panel-goiburua">
         <div class="logoa">
-            <a href="index.php">🏢 GOsasun - Harrera</a>
+            <a href="index.php"><img src="../img/building.svg" alt="" style="width: 1em; height: 1em; vertical-align: middle; filter: var(--primary-filter); margin-right: 5px;"> GOsasun - Harrera</a>
         </div>
         <ul class="nabigazio-estekak">
             <li><a href="index.php">Hasiera</a></li>

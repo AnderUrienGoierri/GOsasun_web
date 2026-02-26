@@ -27,7 +27,7 @@ include_once '../php_includeak/mediku_goiburua.php';
     <main class="panel-nagusia">
         <div class="orri-goiburua">
             <div>
-                <h2><img src="../img/users.svg" alt="" style="width: 1.2em; height: 1.2em; vertical-align: middle; filter: invert(0.3) sepia(1) saturate(5) hue-rotate(200deg); margin-right: 5px;"> Nire Pazienteak</h2>
+                <h2><img src="../img/users.svg" alt="" style="width: 1.2em; height: 1.2em; vertical-align: middle; filter: var(--primary-filter); margin-right: 5px;"> Nire Pazienteak</h2>
                 <p>Zuri esleitutako pazienteen zerrenda eta jarraipena.</p>
             </div>
             <div class="bilaketa-barra">
@@ -40,9 +40,9 @@ include_once '../php_includeak/mediku_goiburua.php';
                 <thead>
                     <tr>
                         <th>Argazkia</th>
-                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(1)">ID ↕️</th>
-                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(2)">Izen-abizenak ↕️</th>
-                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(3)">NAN ↕️</th>
+                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(1)">ID <img src="../img/sort.svg" alt="" style="width: 1rem; height: 1rem; vertical-align: middle; opacity: 0.5;"></th>
+                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(2)">Izen-abizenak <img src="../img/sort.svg" alt="" style="width: 1rem; height: 1rem; vertical-align: middle; opacity: 0.5;"></th>
+                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(3)">NAN <img src="../img/sort.svg" alt="" style="width: 1rem; height: 1rem; vertical-align: middle; opacity: 0.5;"></th>
                         <th>Telefonoa</th>
                         <th>Odol Taldea</th>
                         <th>Ekintzak</th>
