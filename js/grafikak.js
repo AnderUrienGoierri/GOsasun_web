@@ -1,7 +1,7 @@
 // js/grafikak.js
 $(document).ready(function() {
     let myChart = null;
-    const canvas = document.getElementById('grafika');
+    const canvas = document.getElementById('osabide-grafika');
     if (!canvas) return; // Exit ez badago margotzeko lekurik
     const ctx = canvas.getContext('2d');
     
