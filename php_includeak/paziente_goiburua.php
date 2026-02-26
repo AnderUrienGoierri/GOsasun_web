@@ -17,7 +17,11 @@ if (session_status() === PHP_SESSION_NONE) {
     <link rel="stylesheet" href="<?php echo $bide_absolutua; ?>css/goiburua.css">
     <?php
         $orri_izena = basename($_SERVER['PHP_SELF'], '.php');
-        $css_fitxategia = "pazientea_" . $orri_izena . ".css";
+        if (isset($css_pertsonalizatua)) {
+            $css_fitxategia = $css_pertsonalizatua;
+        } else {
+            $css_fitxategia = "pazientea_" . $orri_izena . ".css";
+        }
     ?>
     <link rel="stylesheet" href="<?php echo $bide_absolutua; ?>css/<?php echo $css_fitxategia; ?>">
     <!-- jQuery -->
