@@ -10,7 +10,7 @@ VALUES (1, 'Administratzailea'),
     (4, 'Harrera');
 -- 2. Erabiltzaileak (100+)
 -- Medikuak (50), Pazienteak (50)
--- Pasahitz ohia: '1234'
+-- Pasahitz guztientzat: '1234'
 INSERT INTO Erabiltzaileak (
         erabiltzaile_id,
         email,
@@ -41457,4 +41457,362 @@ WHERE paziente_id IN (51, 52, 53, 54, 55, 56);
 UPDATE Harrerako_Langileak
 SET irudia = CONCAT('img/harrera_', langile_id, '.png')
 WHERE langile_id = 101;
+-- 14. Botikak (50 erabilienak)
+INSERT INTO Botikak (
+        izena,
+        izen_kimikoa,
+        nomenklatura_kimikoa,
+        eragin_fokoa,
+        aktibitatea
+    )
+VALUES (
+        'Paracetamol',
+        'N-acetil-p-aminofenol',
+        'C8H9NO2',
+        'Nerbio-sistema zentrala',
+        'Analgesikoa eta antipiretikoa'
+    ),
+    (
+        'Ibuprofeno',
+        'Azido isobutilfenilpropioniko',
+        'C13H18O2',
+        'Ehun periferikoak',
+        'Hanturaren aurkakoa, analgesikoa'
+    ),
+    (
+        'Amoxizilina',
+        'D-alfa-amino-p-hidroxibenzil penizilina',
+        'C16H19N3O5S',
+        'Bakterioen pareta',
+        'Antibiotikoa'
+    ),
+    (
+        'Omeprazol',
+        '5-metoxi-2-[(4-metoxi-3,5-dimetil-piridin-2-il)metilsulfinil]-1H-benzimidazol',
+        'C17H19N3O3S',
+        'Urdaila',
+        'Azido gastrikoaren jariatzea murrizten du'
+    ),
+    (
+        'Lorazepam',
+        '7-kloro-5-(2-klorofenil)-3-hidroxi-1,3-dihidro-2H-1,4-benzodiazepin-2-ona',
+        'C15H10Cl2N2O2',
+        'Nerbio-sistema zentrala',
+        'Antsiolitikoa'
+    ),
+    (
+        'Metformina',
+        '1,1-Dimetilbiguanida',
+        'C4H11N5',
+        'Gibela',
+        'Antidiabetikoa'
+    ),
+    (
+        'Simvastatina',
+        'Azido butanoikoa, 2,2-dimetil...',
+        'C25H38O5',
+        'Gibela',
+        'Kolesterola murriztekoa'
+    ),
+    (
+        'Aspirina',
+        'Azido azetilsalizilikoa',
+        'C9H8O4',
+        'Gorputz osoa',
+        'Analgesikoa, antipiretikoa, antiagregatzailea'
+    ),
+    (
+        'Enalapril',
+        'Enalapril maleato',
+        'C20H28N2O5',
+        'Bihotza eta odol-hodiak',
+        'Hipertentsioaren aurkakoa'
+    ),
+    (
+        'Diazepam',
+        '7-kloro-1-metil-5-fenil...',
+        'C16H13ClN2O',
+        'Nerbio-sistema zentrala',
+        'Antsiolitikoa, gihar-lasaigarria'
+    ),
+    (
+        'Atorvastatina',
+        'Atorvastatina',
+        'C33H35FN2O5',
+        'Gibela',
+        'Kolesterola murriztekoa'
+    ),
+    (
+        'Salbutamol',
+        'Albuterol',
+        'C13H21NO3',
+        'Birikak',
+        'Bronkodilatadorea'
+    ),
+    (
+        'Lansoprazol',
+        'Lansoprazol',
+        'C16H14F3N3O2S',
+        'Urdaila',
+        'Azido gastrikoaren jariatzea murrizten du'
+    ),
+    (
+        'Ciprofloxacino',
+        'Ziprofloxazino',
+        'C17H18FN3O3',
+        'Gorputz osoa',
+        'Antibiotikoa'
+    ),
+    (
+        'Furosemida',
+        'Furosemida',
+        'C12H11ClN2O5S',
+        'Giltzurrunak',
+        'Diuretikoa'
+    ),
+    (
+        'Losartan',
+        'Losartan potasikoa',
+        'C22H23ClN6O',
+        'Bihotza eta odol-hodiak',
+        'Hipertentsioaren aurkakoa'
+    ),
+    (
+        'Pantoprazol',
+        'Pantoprazol sodio',
+        'C16H15F2N3O4S',
+        'Urdaila',
+        'Azido gastrikoaren jariatzea murrizten du'
+    ),
+    (
+        'Sertralina',
+        'Sertralina klorhidrato',
+        'C17H17Cl2N',
+        'Nerbio-sistema zentrala',
+        'Antidepresiboa'
+    ),
+    (
+        'Fluoxetina',
+        'Fluoxetina',
+        'C17H18F3NO',
+        'Nerbio-sistema zentrala',
+        'Antidepresiboa'
+    ),
+    (
+        'Citalopram',
+        'Citalopram',
+        'C20H21FN2O',
+        'Nerbio-sistema zentrala',
+        'Antidepresiboa'
+    ),
+    (
+        'Escitalopram',
+        'Escitalopram',
+        'C20H21FN2O',
+        'Nerbio-sistema zentrala',
+        'Antidepresiboa'
+    ),
+    (
+        'Tramadol',
+        'Tramadol klorhidrato',
+        'C16H25NO2',
+        'Nerbio-sistema zentrala',
+        'Analgesiko opioidea'
+    ),
+    (
+        'Naproxeno',
+        'Naproxeno',
+        'C14H14O3',
+        'Ehun periferikoak',
+        'Hanturaren aurkakoa, analgesikoa'
+    ),
+    (
+        'Diclofenaco',
+        'Diklofenako',
+        'C14H11Cl2NO2',
+        'Ehun periferikoak',
+        'Hanturaren aurkakoa, analgesikoa'
+    ),
+    (
+        'Prednisona',
+        'Prednisona',
+        'C21H26O5',
+        'Sistema immunitarioa',
+        'Kortikoidea, hanturaren aurkakoa'
+    ),
+    (
+        'Azitromicina',
+        'Azitromizina',
+        'C38H72N2O12',
+        'Gorputz osoa',
+        'Antibiotikoa'
+    ),
+    (
+        'Clopidogrel',
+        'Klopidogrel',
+        'C16H16ClNO2S',
+        'Odola',
+        'Antiagregatzailea'
+    ),
+    (
+        'Levotiroxina',
+        'L-tiroxina',
+        'C15H11I4NO4',
+        'Tiroide guruina',
+        'Hormona ordezkapena'
+    ),
+    (
+        'Atenolol',
+        'Atenolol',
+        'C14H22N2O3',
+        'Bihotza',
+        'Beta-blokeatzailea'
+    ),
+    (
+        'Bisoprolol',
+        'Bisoprolol fumarato',
+        'C18H31NO4',
+        'Bihotza',
+        'Beta-blokeatzailea'
+    ),
+    (
+        'Carvedilol',
+        'Karbedilol',
+        'C24H26N2O4',
+        'Bihotza',
+        'Beta-blokeatzailea'
+    ),
+    (
+        'Amlodipino',
+        'Amlodipino',
+        'C20H25ClN2O5',
+        'Bihotza eta odol-hodiak',
+        'Kaltzio-antagonista'
+    ),
+    (
+        'Nifedipino',
+        'Nifedipino',
+        'C17H18N2O6',
+        'Bihotza eta odol-hodiak',
+        'Kaltzio-antagonista'
+    ),
+    (
+        'Valsartan',
+        'Valsartan',
+        'C24H29N5O2',
+        'Bihotza eta odol-hodiak',
+        'Hipertentsioaren aurkakoa'
+    ),
+    (
+        'Candesartan',
+        'Candesartan cilexetilo',
+        'C33H34N6O6',
+        'Bihotza eta odol-hodiak',
+        'Hipertentsioaren aurkakoa'
+    ),
+    (
+        'Olmesartan',
+        'Olmesartan medoxomilo',
+        'C29H30N4O6',
+        'Bihotza eta odol-hodiak',
+        'Hipertentsioaren aurkakoa'
+    ),
+    (
+        'Ramipril',
+        'Ramipril',
+        'C23H32N2O5',
+        'Bihotza eta odol-hodiak',
+        'Hipertentsioaren aurkakoa'
+    ),
+    (
+        'Lisinopril',
+        'Lisinopril',
+        'C21H31N3O5',
+        'Bihotza eta odol-hodiak',
+        'Hipertentsioaren aurkakoa'
+    ),
+    (
+        'Cefalexina',
+        'Zefalexina',
+        'C16H17N3O4S',
+        'Bakterioen pareta',
+        'Antibiotikoa'
+    ),
+    (
+        'Amoxicilina/Clavulánico',
+        'Amoxizilina eta azido klabulanikoa',
+        'C16H19N3O5S-C8H9NO5',
+        'Bakterioen pareta',
+        'Antibiotiko indartua'
+    ),
+    (
+        'Doxiciclina',
+        'Doxiziklina',
+        'C22H24N2O8',
+        'Bakterioen proteinak',
+        'Antibiotikoa'
+    ),
+    (
+        'Claritromicina',
+        'Klaritromizina',
+        'C38H69NO13',
+        'Bakterioen proteinak',
+        'Antibiotikoa'
+    ),
+    (
+        'Metronidazol',
+        'Metronidazol',
+        'C6H9N3O3',
+        'Mikororganismoak',
+        'Antibiotikoa, antiparasitarioa'
+    ),
+    (
+        'Fluconazol',
+        'Flukonazol',
+        'C13H12F2N6O',
+        'Onddoak',
+        'Antifungikoa'
+    ),
+    (
+        'Aciclovir',
+        'Aziklobir',
+        'C8H11N5O3',
+        'Birusak',
+        'Antibiral'
+    ),
+    (
+        'Valaciclovir',
+        'Valaziklobir',
+        'C13H20N6O4',
+        'Birusak',
+        'Antibiral'
+    ),
+    (
+        'Gabapentina',
+        'Gabapentina',
+        'C9H17NO2',
+        'Nerbio-sistema',
+        'Antiespasmodikoa, analgesiko neuropatikoa'
+    ),
+    (
+        'Pregabalina',
+        'Pregabalina',
+        'C8H17NO2',
+        'Nerbio-sistema',
+        'Antiespasmodikoa, analgesiko neuropatikoa'
+    ),
+    (
+        'Amitriptilina',
+        'Amitriptilina',
+        'C20H23N',
+        'Nerbio-sistema',
+        'Antidepresiboa, analgesiko neuropatikoa'
+    ),
+    (
+        'Duloxetina',
+        'Duloxetina',
+        'C18H19NOS',
+        'Nerbio-sistema',
+        'Antidepresiboa'
+    );
 SET FOREIGN_KEY_CHECKS = 1;

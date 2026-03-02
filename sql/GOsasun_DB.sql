@@ -3,12 +3,12 @@
 CREATE DATABASE IF NOT EXISTS GOsasun_DB CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 USE GOsasun_DB;
 -- 1. ROLAK TAULA
-CREATE TABLE IF NOT EXISTS Rolak (
+CREATE TABLE IF NOT EXISTS rolak (
     rol_id INT AUTO_INCREMENT PRIMARY KEY,
     izena VARCHAR(50) NOT NULL UNIQUE
 );
 -- 2. ERABILTZAILEAK TAULA
-CREATE TABLE IF NOT EXISTS Erabiltzaileak (
+CREATE TABLE IF NOT EXISTS erabiltzaileak (
     erabiltzaile_id INT AUTO_INCREMENT PRIMARY KEY,
     email VARCHAR(100) NOT NULL UNIQUE,
     pasahitza VARCHAR(255) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE IF NOT EXISTS Erabiltzaileak (
     FOREIGN KEY (rol_id) REFERENCES Rolak(rol_id) ON DELETE RESTRICT
 );
 -- 3. PAZIENTEAK TAULA
-CREATE TABLE IF NOT EXISTS Pazienteak (
+CREATE TABLE IF NOT EXISTS pazienteak (
     paziente_id INT PRIMARY KEY,
     nan VARCHAR(15) NOT NULL UNIQUE,
     izena VARCHAR(50) NOT NULL,
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS Pazienteak (
     FOREIGN KEY (paziente_id) REFERENCES Erabiltzaileak(erabiltzaile_id) ON DELETE CASCADE
 );
 -- 4. MEDIKUAK TAULA
-CREATE TABLE IF NOT EXISTS Medikuak (
+CREATE TABLE IF NOT EXISTS medikuak (
     mediku_id INT PRIMARY KEY,
     izena VARCHAR(50) NOT NULL,
     abizenak VARCHAR(100) NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS Medikuak (
     FOREIGN KEY (mediku_id) REFERENCES Erabiltzaileak(erabiltzaile_id) ON DELETE CASCADE
 );
 -- 5. HARRERAKO LANGILEAK TAULA
-CREATE TABLE IF NOT EXISTS Harrerako_Langileak (
+CREATE TABLE IF NOT EXISTS harrerako_Langileak (
     langile_id INT PRIMARY KEY,
     izena VARCHAR(50) NOT NULL,
     abizenak VARCHAR(100) NOT NULL,
@@ -53,7 +53,7 @@ CREATE TABLE IF NOT EXISTS Harrerako_Langileak (
     FOREIGN KEY (langile_id) REFERENCES Erabiltzaileak(erabiltzaile_id) ON DELETE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 -- 6. MEDIKU-PAZIENTE LOTURA TAULA
-CREATE TABLE IF NOT EXISTS Mediku_Paziente (
+CREATE TABLE IF NOT EXISTS mediku_Paziente (
     lotura_id INT AUTO_INCREMENT PRIMARY KEY,
     mediku_id INT NOT NULL,
     paziente_id INT NOT NULL,
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS Mediku_Paziente (
     UNIQUE(mediku_id, paziente_id)
 );
 -- 7. OSASUN NEURKETAK TAULA
-CREATE TABLE IF NOT EXISTS Neurketak (
+CREATE TABLE IF NOT EXISTS neurketak (
     neurketa_id INT AUTO_INCREMENT PRIMARY KEY,
     paziente_id INT NOT NULL,
     data DATE NOT NULL,
@@ -78,7 +78,7 @@ CREATE TABLE IF NOT EXISTS Neurketak (
     FOREIGN KEY (paziente_id) REFERENCES Pazienteak(paziente_id) ON DELETE CASCADE
 );
 -- 8. KONTUAK / MEZULARITZA TAULA
-CREATE TABLE IF NOT EXISTS Mezuak (
+CREATE TABLE IF NOT EXISTS mezuak (
     mezu_id INT AUTO_INCREMENT PRIMARY KEY,
     bidaltzaile_id INT NOT NULL,
     hartzaile_id INT NOT NULL,
@@ -90,7 +90,7 @@ CREATE TABLE IF NOT EXISTS Mezuak (
     FOREIGN KEY (hartzaile_id) REFERENCES Erabiltzaileak(erabiltzaile_id) ON DELETE CASCADE
 );
 -- 9. DOKUMENTUAK TAULA
-CREATE TABLE IF NOT EXISTS Dokumentuak (
+CREATE TABLE IF NOT EXISTS dokumentuak (
     dokumentu_id INT AUTO_INCREMENT PRIMARY KEY,
     paziente_id INT NOT NULL,
     igotzaile_id INT NOT NULL,
@@ -103,7 +103,7 @@ CREATE TABLE IF NOT EXISTS Dokumentuak (
     FOREIGN KEY (igotzaile_id) REFERENCES Erabiltzaileak(erabiltzaile_id) ON DELETE CASCADE
 );
 -- 10. HITZORDUAK TAULA
-CREATE TABLE IF NOT EXISTS Hitzorduak (
+CREATE TABLE IF NOT EXISTS hitzorduak (
     hitzordu_id INT AUTO_INCREMENT PRIMARY KEY,
     paziente_id INT NOT NULL,
     mediku_id INT NOT NULL,
@@ -117,7 +117,7 @@ CREATE TABLE IF NOT EXISTS Hitzorduak (
     FOREIGN KEY (mediku_id) REFERENCES Medikuak(mediku_id) ON DELETE CASCADE
 );
 -- 11. ERREZETAK ETA DIAGNOSTIKOAK TAULA
-CREATE TABLE IF NOT EXISTS Errezetak (
+CREATE TABLE IF NOT EXISTS errezetak (
     errezeta_id INT AUTO_INCREMENT PRIMARY KEY,
     hitzordu_id INT,
     mediku_id INT NOT NULL,
@@ -133,7 +133,7 @@ CREATE TABLE IF NOT EXISTS Errezetak (
         FOREIGN KEY (paziente_id) REFERENCES Pazienteak(paziente_id) ON DELETE CASCADE
 );
 -- 12. KONTAKTURAKO MEZUAK
-CREATE TABLE IF NOT EXISTS Kontaktua_Mezuak (
+CREATE TABLE IF NOT EXISTS kontaktua_Mezuak (
     mezu_id INT AUTO_INCREMENT PRIMARY KEY,
     izena VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
@@ -144,7 +144,7 @@ CREATE TABLE IF NOT EXISTS Kontaktua_Mezuak (
     bidalketa_data TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 -- 13. ABISUAK TAULA
-CREATE TABLE IF NOT EXISTS Abisuak (
+CREATE TABLE IF NOT EXISTS abisuak (
     abisu_id INT AUTO_INCREMENT PRIMARY KEY,
     paziente_id INT NOT NULL,
     data DATETIME DEFAULT CURRENT_TIMESTAMP,
@@ -152,4 +152,22 @@ CREATE TABLE IF NOT EXISTS Abisuak (
     testua TEXT,
     irakurrita TINYINT(1) DEFAULT 0,
     FOREIGN KEY (paziente_id) REFERENCES Pazienteak(paziente_id) ON DELETE CASCADE
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+-- 14. BOTIKAK TAULA
+CREATE TABLE IF NOT EXISTS botikak (
+    botika_id INT AUTO_INCREMENT PRIMARY KEY,
+    izena VARCHAR(100) NOT NULL UNIQUE,
+    izen_kimikoa VARCHAR(150),
+    nomenklatura_kimikoa VARCHAR(150),
+    eragin_fokoa VARCHAR(200),
+    aktibitatea TEXT
+) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+-- 15. ERREZETA-BOTIKAK LOTURA TAULA
+CREATE TABLE IF NOT EXISTS errezeta_botikak (
+    lotura_id INT AUTO_INCREMENT PRIMARY KEY,
+    errezeta_id INT NOT NULL,
+    botika_id INT NOT NULL,
+    FOREIGN KEY (errezeta_id) REFERENCES Errezetak(errezeta_id) ON DELETE CASCADE,
+    FOREIGN KEY (botika_id) REFERENCES Botikak(botika_id) ON DELETE CASCADE,
+    UNIQUE(errezeta_id, botika_id)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
