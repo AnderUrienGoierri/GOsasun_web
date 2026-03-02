@@ -1,10 +1,10 @@
 $(document).ready(function() {
-    // Mobile menu toggle
+    // Mugikorreko menuaren togglea
     $('.menu-botoia').click(function() {
         $('.nabigazio-estekak').toggleClass('aktiboa');
     });
 
-    // Close menu when clicking outside
+    // Itxi menua kanpoan klik egitean
     $(document).click(function(event) {
         if (!$(event.target).closest('header').length) {
             $('.nabigazio-estekak').removeClass('aktiboa');

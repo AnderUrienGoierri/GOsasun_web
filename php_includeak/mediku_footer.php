@@ -15,7 +15,7 @@
     </footer>
 
     <!-- JS -->
-    <script src="<?php echo $bide_absolutua; ?>js/common.js"></script>
+    <script src="<?php echo $bide_absolutua; ?>js/orokorrak.js"></script>
     <?php if (isset($js_gehigarria)): ?>
         <?php foreach ($js_gehigarria as $js): ?>
             <script src="<?php echo $bide_absolutua; ?>js/<?php echo $js; ?>"></script>
