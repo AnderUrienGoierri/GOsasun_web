@@ -2,95 +2,113 @@
 
 /* index.css-tik dakar - Diseinua Mugikorra Lehenetsiz */
 .hero-sekzioa {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 30px 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
 }
 
 .hero-edukia {
-    width: 100%;
+  width: 100%;
 }
 
 .hero-edukia h1 {
-    font-size: 2.2rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    line-height: 1.2;
+  font-size: 2.2rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
 
 .hero-edukia p {
-    font-size: 1.1rem;
-    color: var(--gray);
-    margin-bottom: 30px;
+  font-size: 1.1rem;
+  color: var(--gray);
+  margin-bottom: 30px;
 }
 
 .hero-botoiak {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .hero-irudia {
-    width: 100%;
+  width: 100%;
 }
 
 .hero-irudia img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+  width: 100%;
+  max-width: 500px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
+/* Bideoaren estiloak */
+.hero-bideo-edukiontzia {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  background: #000;
+}
+
+.hero-bideoa {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
 }
 
 .ezaugarriak {
-    display: grid;
-    grid-template-columns: 1fr; /* Mugikorra lehenetsia */
-    gap: 20px;
-    padding: 30px 5%;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: var(--white);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr; /* Mugikorra lehenetsia */
+  gap: 20px;
+  padding: 30px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-bottom: 50px;
 }
 
 .ezaugarri-txartela {
-    text-align: center;
-    padding: 25px;
-    border: 1px solid #eee;
-    border-radius: var(--border-radius);
-    transition: var(--transition);
+  text-align: center;
+  padding: 25px;
+  border: 1px solid #eee;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
 }
 
 .ezaugarri-txartela:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 .ezaugarri-ikonoa {
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
 }
 
 .ezaugarri-txartela h3 {
-    color: var(--dark-text);
-    margin-bottom: 10px;
+  color: var(--dark-text);
+  margin-bottom: 10px;
 }
 
 .ezaugarri-txartela p {
-    color: var(--gray);
+  color: var(--gray);
 }
 
 /* ================= EBAZPEN-ARAUAK (Media queries) (Mahaigaina - gutxieneko zabalera) ================= */
 @media (min-width: 768px) {
-    .ezaugarriak {
-        grid-template-columns: repeat(3, 1fr);
-        padding: 50px 5%;
-        gap: 30px;
-    }
+  .ezaugarriak {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 50px 5%;
+    gap: 30px;
+  }
 }

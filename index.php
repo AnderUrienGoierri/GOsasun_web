@@ -19,6 +19,14 @@ include 'php_includeak/goiburua.php';
             <p class="azpititulua">Zure osasuna kudeatzeko, neurketak jarraipena egiteko eta medikuarekin konektatzeko plataforma segurua</p>
         </div>
 
+        <!-- Aurkezpen bideoa -->
+        <div class="hero-bideo-edukiontzia">
+            <video class="hero-bideoa" autoplay muted loop controls poster="img/index_pazientea.png">
+                <source src="mp4/GOsasun_bideoa.mp4" type="video/mp4">
+                Zure brauserrak ez du bideoa onartzen.
+            </video>
+        </div>
+
         
         <div class="hero-errenkada-3 portal-sarbideak">
             <!-- Pazientea -->
