@@ -8,7 +8,7 @@ include 'php_includeak/goiburua.php';
 
     <main class="hero-sekzioa">
             
-        <div class="hero-errenkada-1">
+        <div class="hero-errenkada">
             <h1>Zure osasuna, gure lehentasuna</h1>
             <img src="img/GOsasun_logoa.png" alt="GOsasun" class="hero-logo-handia">
             
@@ -28,7 +28,7 @@ include 'php_includeak/goiburua.php';
         </div>
 
         
-        <div class="hero-errenkada-3 portal-sarbideak">
+        <div class="hero-errenkada portal-sarbideak">
             <!-- Pazientea -->
             <a href="php_hasiera/login.php" class="portal-txartela">
                 <div class="portal-irudia">
@@ -67,26 +67,28 @@ include 'php_includeak/goiburua.php';
         </div>
     </main>
 
-    <section class="ezaugarriak">
-        <div class="ezaugarri-txartela">
-            <div class="ezaugarri-ikonoa"><img src="img/line-chart.svg" alt="Neurketa Jarraipena" style="width: 40px; height: 40px; filter: invert(0.3) sepia(1) saturate(5) hue-rotate(200deg);"></div>
-            <h3>Neurketa Jarraipena</h3>
-            <p>Sartu zure eguneroko osasun datuak (tentsioa, pisua, glukosa...) eta ikusi bilakaera.</p>
-        </div>
-        <div class="ezaugarri-txartela">
-            <div class="ezaugarri-ikonoa"><img src="img/calendar.svg" alt="Hitzorduak" style="width: 40px; height: 40px; filter: invert(0.3) sepia(1) saturate(5) hue-rotate(200deg);"></div>
-            <h3>Hitzorduak</h3>
-            <p>Ikusi zure hurrengo hitzorduak era erraz eta azkar batean.</p>
-        </div>
-        <div class="ezaugarri-txartela">
-            <div class="ezaugarri-ikonoa"><img src="img/message-square.svg" alt="Komunikazio Zuzena" style="width: 40px; height: 40px; filter: invert(0.3) sepia(1) saturate(5) hue-rotate(200deg);"></div>
-            <h3>Komunikazio Zuzena</h3>
-            <p>Zure medikuarekin harremanetan jarri mezu bidez modu seguruan.</p>
+    <section class="ezaugarriak-wrapper">
+        <div class="ezaugarriak-container">
+            <div class="ezaugarri-txartela">
+                <div class="ezaugarri-ikonoa"><img src="img/line-chart.svg" alt="Neurketa Jarraipena"></div>
+                <h3>Neurketa Jarraipena</h3>
+                <p>Sartu zure eguneroko osasun datuak (tentsioa, pisua, glukosa...) eta ikusi bilakaera.</p>
+            </div>
+            <div class="ezaugarri-txartela">
+                <div class="ezaugarri-ikonoa"><img src="img/calendar.svg" alt="Hitzorduak"></div>
+                <h3>Hitzorduak</h3>
+                <p>Ikusi zure hurrengo hitzorduak era erraz eta azkar batean.</p>
+            </div>
+            <div class="ezaugarri-txartela">
+                <div class="ezaugarri-ikonoa"><img src="img/message-square.svg" alt="Komunikazio Zuzena"></div>
+                <h3>Komunikazio Zuzena</h3>
+                <p>Zure medikuarekin harremanetan jarri mezu bidez modu seguruan.</p>
+            </div>
         </div>
     </section>
 
 <?php
-$js_gehigarria = ["index.js"];
+$js_gehigarria = ["hasiera_index.js"];
 include 'php_includeak/footer.php';
 ?>
 

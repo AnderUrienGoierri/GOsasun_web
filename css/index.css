@@ -64,24 +64,29 @@
   border-radius: 12px;
 }
 
-.ezaugarriak {
-  display: grid;
-  grid-template-columns: 1fr; /* Mugikorra lehenetsia */
-  gap: 20px;
-  padding: 30px 5%;
+.ezaugarriak-wrapper {
+  width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
-  background-color: var(--white);
-  border-radius: var(--border-radius);
-  box-shadow: var(--box-shadow);
-  margin-bottom: 50px;
+  margin: 0 auto 50px auto;
+  overflow: hidden;
+  position: relative;
+  padding: 30px 5%;
+}
+
+.ezaugarriak-container {
+  display: flex;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 300%; /* 3 slides */
 }
 
 .ezaugarri-txartela {
+  flex: 0 0 33.333333%; /* 1 slide visible at a time */
   text-align: center;
-  padding: 25px;
+  padding: 40px;
+  background-color: var(--white);
   border: 1px solid #eee;
   border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
   transition: var(--transition);
 }
 
@@ -106,9 +111,5 @@
 
 /* ================= EBAZPEN-ARAUAK (Media queries) (Mahaigaina - gutxieneko zabalera) ================= */
 @media (min-width: 768px) {
-  .ezaugarriak {
-    grid-template-columns: repeat(3, 1fr);
-    padding: 50px 5%;
-    gap: 30px;
-  }
+  /* Desktop specific overrides for carousel if needed */
 }

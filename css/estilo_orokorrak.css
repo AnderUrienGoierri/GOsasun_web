@@ -142,7 +142,7 @@ body {
     align-items: center;
 }
 
-.hero-errenkada-1 {
+.hero-errenkada {
     display: flex;
     flex-direction: column; /* Mugikorra lehenetsia: pilatuak */
     align-items: center;

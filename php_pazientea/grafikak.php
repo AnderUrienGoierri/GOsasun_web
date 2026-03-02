@@ -46,7 +46,7 @@ include_once '../php_includeak/paziente_goiburua.php';
 
         <?php if (count($neurketak) > 0): ?>
             <div class="grafika-txartela">
-                <canvas id="grafika" class="nire-grafika"></canvas>
+                <canvas id="osabide-grafika" class="nire-grafika"></canvas>
             </div>
         <?php else: ?>
             <p class="daturik-ez">Oraindik ez dago neurketarik erregistratuta grafika sortzeko.</p>

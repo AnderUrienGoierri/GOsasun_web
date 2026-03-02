@@ -9,10 +9,14 @@ require_once '../php_laguntzaileak/DB_konexioa.php';
 $paziente_id = $_SESSION['erabiltzaile_id'];
 
 // Lortu pazienteari agindutako errezeta guztiak
-$sql = "SELECT e.*, m.izena, m.abizenak 
+$sql = "SELECT e.*, m.izena, m.abizenak,
+        GROUP_CONCAT(CONCAT(b.izena, ' (', eb.dosia, ', ', eb.maiztasuna, ')') SEPARATOR ' | ') as botikak_info 
         FROM Errezetak e
         JOIN Medikuak m ON e.mediku_id = m.mediku_id
+        LEFT JOIN errezeta_botikak eb ON e.errezeta_id = eb.errezeta_id
+        LEFT JOIN Botikak b ON eb.botika_id = b.botika_id
         WHERE e.paziente_id = :pid 
+        GROUP BY e.errezeta_id
         ORDER BY e.igorpen_data DESC, e.errezeta_id DESC";
 $stmtErr = $pdo->prepare($sql);
 $stmtErr->execute(['pid' => $paziente_id]);
@@ -58,6 +62,9 @@ include_once '../php_includeak/paziente_goiburua.php';
                         <div class="errezeta-xehetasunak">
                             <h4><img src="../img/stethoscope.svg" alt="" class="ikono-ertaina marjina-esk-5"> <?php echo htmlspecialchars($e['diagnostiko_laburra']); ?></h4>
                             <p class="medikua">Ematen duena: Dr. <?php echo htmlspecialchars($e['izena'] . ' ' . $e['abizenak']); ?></p>
+                            <?php if (!empty($e['botikak_info'])): ?>
+                                <p class="botikak-info"><img src="../img/pill.svg" alt="" class="ikono-ertaina marjina-esk-5"> <strong>Botikak:</strong> <?php echo htmlspecialchars($e['botikak_info']); ?></p>
+                            <?php endif; ?>
                             <?php if ($e['iraungitze_data']): ?>
                                 <p class="iraungitzea">Noiz arte: <?php echo date('Y/m/d', strtotime($e['iraungitze_data'])); ?></p>
                             <?php else: ?>

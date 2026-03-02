@@ -29,6 +29,10 @@ $stmtH = $pdo->prepare("SELECT hitzordu_id, data, hasiera_ordua, p.izena, p.abiz
 $stmtH->execute([$mediku_id]);
 $hitzordu_aukerak = $stmtH->fetchAll(PDO::FETCH_ASSOC);
 
+// 2b. Lortu botiken zerrenda
+$stmtB = $pdo->query("SELECT botika_id, izena FROM Botikak ORDER BY izena ASC");
+$botikak_aukerak = $stmtB->fetchAll(PDO::FETCH_ASSOC);
+
 // 3. Kudeatu errezeta ekintzak
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['gorde_errezeta'])) {
@@ -52,7 +56,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 } else {
                     $stm_sartu = $pdo->prepare("INSERT INTO Errezetak (mediku_id, paziente_id, hitzordu_id, igorpen_data, iraungitze_data, diagnostiko_laburra, aktibo) VALUES (?, ?, ?, ?, ?, ?, ?)");
                     $stm_sartu->execute([$mediku_id, $p_id, $h_id, $i_data, $ir_data, $diag, $aktibo]);
+                    $e_id = $pdo->lastInsertId();
                     $mezua = "Errezeta arrakastaz sortu da.";
+                }
+
+                if (!empty($_POST['botika_id'])) {
+                    $b_id = $_POST['botika_id'];
+                    $dosia = $_POST['dosia'] ?? '';
+                    $maiztasuna = $_POST['maiztasuna'] ?? '';
+                    
+                    $stmtEB = $pdo->prepare("INSERT INTO errezeta_botikak (errezeta_id, botika_id, dosia, maiztasuna) VALUES (?, ?, ?, ?) ON DUPLICATE KEY UPDATE dosia = VALUES(dosia), maiztasuna = VALUES(maiztasuna)");
+                    $stmtEB->execute([$e_id, $b_id, $dosia, $maiztasuna]);
+                    $mezua .= " Botika arrakastaz gehitu/eguneratu da.";
                 }
             } catch (PDOException $e) {
                 $errorea = "Errorea gertatu da: " . $e->getMessage();
@@ -73,10 +88,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // 4. Lortu medikuak sortutako errezeta guztiak
-$sql = "SELECT e.*, p.izena, p.abizenak, p.nan 
+$sql = "SELECT e.*, p.izena, p.abizenak, p.nan, 
+        GROUP_CONCAT(CONCAT(b.izena, ' (', eb.dosia, ', ', eb.maiztasuna, ')') SEPARATOR ' | ') as botikak_info
         FROM Errezetak e
         JOIN Pazienteak p ON e.paziente_id = p.paziente_id
+        LEFT JOIN errezeta_botikak eb ON e.errezeta_id = eb.errezeta_id
+        LEFT JOIN Botikak b ON eb.botika_id = b.botika_id
         WHERE e.mediku_id = :mid 
+        GROUP BY e.errezeta_id
         ORDER BY e.igorpen_data DESC, e.errezeta_id DESC";
 $stmtErr = $pdo->prepare($sql);
 $stmtErr->execute(['mid' => $mediku_id]);
@@ -130,6 +149,9 @@ include_once '../php_includeak/mediku_goiburua.php';
                         <div class="errezeta-xehetasunak">
                             <h4><?php echo htmlspecialchars($e['izena'] . ' ' . $e['abizenak']); ?> (<?php echo htmlspecialchars($e['nan']); ?>)</h4>
                             <p class="diagnostikoa"><img src="../img/stethoscope.svg" alt="" class="ikono-ertaina marjina-esk-5"> <?php echo htmlspecialchars($e['diagnostiko_laburra']); ?></p>
+                            <?php if (!empty($e['botikak_info'])): ?>
+                                <p class="botikak-info"><img src="../img/pill.svg" alt="" class="ikono-ertaina marjina-esk-5"> <strong>Botikak:</strong> <?php echo htmlspecialchars($e['botikak_info']); ?></p>
+                            <?php endif; ?>
                             <?php if ($e['iraungitze_data']): ?>
                                 <p class="iraungitzea">Bukaera: <?php echo date('Y/m/d', strtotime($e['iraungitze_data'])); ?></p>
                             <?php else: ?>
@@ -204,6 +226,29 @@ include_once '../php_includeak/mediku_goiburua.php';
                         <label for="diagnostiko_laburra">Diagnostiko Laburra / Tratamendua *</label>
                         <textarea name="diagnostiko_laburra" id="modal_diagnostikoa" class="inprimaki-kontrola" errenkadak="3" required></textarea>
                     </div>
+
+                    <div style="background-color: var(--azentua-argia); padding: 15px; border-radius: 8px; margin-bottom: 15px;">
+                        <h4 style="margin-top: 0; margin-bottom: 10px; color: var(--lehen-mailako-kolorea);"><img src="../img/pill.svg" alt="" class="ikono-ertaina marjina-esk-5"> Gehitu / Eguneratu Botika</h4>
+                        <div class="inprimaki-taldea">
+                            <label for="botika_id">Botika</label>
+                            <select name="botika_id" id="modal_botika_id" class="inprimaki-kontrola">
+                                <option value="">Hautatu botika bat...</option>
+                                <?php foreach ($botikak_aukerak as $b): ?>
+                                    <option value="<?php echo $b['botika_id']; ?>"><?php echo htmlspecialchars($b['izena']); ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div class="sareta-bikoa sareta-bikoa-sareta">
+                            <div class="inprimaki-taldea">
+                                <label for="dosia">Dosia</label>
+                                <input type="text" name="dosia" id="modal_dosia" class="inprimaki-kontrola" placeholder="Adib. 500mg">
+                            </div>
+                            <div class="inprimaki-taldea">
+                                <label for="maiztasuna">Maiztasuna</label>
+                                <input type="text" name="maiztasuna" id="modal_maiztasuna" class="inprimaki-kontrola" placeholder="Adib. 8 ordutik behin">
+                            </div>
+                        </div>
+                    </div>
                     
                     <div class="inprimaki-taldea checkbox-taldea marjina-bertikal-doikuntza">
                         <label class="flex-erdian">
@@ -242,6 +287,12 @@ include_once '../php_includeak/mediku_goiburua.php';
                 document.getElementById('modal_errezeta_id').value = '';
                 document.getElementById('modal_igorpen_data').value = '<?php echo date("Y-m-d"); ?>';
                 document.getElementById('modal_aktibo').checked = true;
+                
+                // Reset botika fields
+                document.getElementById('modal_botika_id').value = '';
+                document.getElementById('modal_dosia').value = '';
+                document.getElementById('modal_maiztasuna').value = '';
+
                 ezabatu_botoia.style.display = 'none';
                 bidali_botoia.textContent = 'Gorde';
             } else {

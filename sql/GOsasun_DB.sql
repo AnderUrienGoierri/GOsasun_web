@@ -167,6 +167,8 @@ CREATE TABLE IF NOT EXISTS errezeta_botikak (
     lotura_id INT AUTO_INCREMENT PRIMARY KEY,
     errezeta_id INT NOT NULL,
     botika_id INT NOT NULL,
+    dosia VARCHAR(100),
+    maiztasuna VARCHAR(100),
     FOREIGN KEY (errezeta_id) REFERENCES Errezetak(errezeta_id) ON DELETE CASCADE,
     FOREIGN KEY (botika_id) REFERENCES Botikak(botika_id) ON DELETE CASCADE,
     UNIQUE(errezeta_id, botika_id)
