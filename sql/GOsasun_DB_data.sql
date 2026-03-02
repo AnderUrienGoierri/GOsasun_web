@@ -133,7 +133,8 @@ INSERT INTO Medikuak (
         jaiotze_data,
         elkargokide_zenbakia,
         espezialitatea,
-        telefonoa
+        telefonoa,
+        irudia
     )
 VALUES (
         1,
@@ -142,7 +143,8 @@ VALUES (
         '1975-04-12',
         'MED-001',
         'Kardiologia',
-        '600111222'
+        '600111222',
+        'img/medikua_1.png'
     ),
     (
         2,
@@ -151,7 +153,8 @@ VALUES (
         '1980-08-25',
         'MED-002',
         'Neurologia',
-        '600222333'
+        '600222333',
+        'img/medikua_2.png'
     ),
     (
         3,
@@ -160,7 +163,8 @@ VALUES (
         '1972-11-03',
         'MED-003',
         'Pediatria',
-        '600333444'
+        '600333444',
+        'img/medikua_3.png'
     ),
     (
         4,
@@ -169,7 +173,8 @@ VALUES (
         '1985-02-18',
         'MED-004',
         'Traumatologia',
-        '600444555'
+        '600444555',
+        'img/medikua_4.png'
     ),
     (
         5,
@@ -178,7 +183,8 @@ VALUES (
         '1978-06-30',
         'MED-005',
         'Dermatologia',
-        '600555666'
+        '600555666',
+        'img/medikua_5.png'
     ),
     (
         6,
@@ -187,7 +193,8 @@ VALUES (
         '1965-09-15',
         'MED-006',
         'Psikiatria',
-        '600666777'
+        '600666777',
+        'img/medikua_6.png'
     ),
     (
         7,
@@ -196,7 +203,8 @@ VALUES (
         '1982-12-05',
         'MED-007',
         'Ginekologia',
-        '600777888'
+        '600777888',
+        'img/medikua_7.png'
     ),
     (
         8,
@@ -205,7 +213,8 @@ VALUES (
         '1990-01-20',
         'MED-008',
         'Oftalmologia',
-        '600888999'
+        '600888999',
+        'img/medikua_8.png'
     ),
     (
         9,
@@ -214,7 +223,8 @@ VALUES (
         '1973-03-08',
         'MED-009',
         'Otorrinolaringologia',
-        '600999000'
+        '600999000',
+        'img/medikua_9.png'
     ),
     (
         10,
@@ -223,7 +233,8 @@ VALUES (
         '1988-07-12',
         'MED-010',
         'Urologia',
-        '611000111'
+        '611000111',
+        'img/medikua_10.png'
     ),
     (
         11,
@@ -232,7 +243,8 @@ VALUES (
         '1976-10-22',
         'MED-011',
         'Onkologia',
-        '611111222'
+        '611111222',
+        'img/medikua_11.png'
     ),
     (
         12,
@@ -241,7 +253,8 @@ VALUES (
         '1981-05-14',
         'MED-012',
         'Endokrinologia',
-        '611222333'
+        '611222333',
+        'img/medikua_12.png'
     ),
     (
         13,
@@ -250,7 +263,8 @@ VALUES (
         '1970-12-30',
         'MED-013',
         'Erreumatologia',
-        '611333444'
+        '611333444',
+        'img/medikua_13.png'
     ),
     (
         14,
@@ -259,7 +273,8 @@ VALUES (
         '1986-04-05',
         'MED-014',
         'Digestiboa',
-        '611444555'
+        '611444555',
+        'img/medikua_14.png'
     ),
     (
         15,
@@ -268,7 +283,8 @@ VALUES (
         '1979-09-18',
         'MED-015',
         'Pneumologia',
-        '611555666'
+        '611555666',
+        'img/medikua_15.png'
     ),
     (
         16,
@@ -277,7 +293,8 @@ VALUES (
         '1984-01-25',
         'MED-016',
         'Nefrologia',
-        '611666777'
+        '611666777',
+        'img/medikua_16.png'
     ),
     (
         17,
@@ -286,7 +303,8 @@ VALUES (
         '1968-08-10',
         'MED-017',
         'Kardiologia',
-        '611777888'
+        '611777888',
+        'img/medikua_17.png'
     ),
     (
         18,
@@ -295,7 +313,8 @@ VALUES (
         '1992-03-02',
         'MED-018',
         'Pediatria',
-        '611888999'
+        '611888999',
+        'img/medikua_18.png'
     ),
     (
         19,
@@ -304,7 +323,8 @@ VALUES (
         '1983-11-15',
         'MED-019',
         'Neurologia',
-        '611999000'
+        '611999000',
+        'img/medikua_19.png'
     ),
     (
         20,
@@ -313,7 +333,8 @@ VALUES (
         '1974-06-20',
         'MED-020',
         'Dermatologia',
-        '622000111'
+        '622000111',
+        'img/medikua_20.png'
     ),
     (
         21,
@@ -322,7 +343,8 @@ VALUES (
         '1987-02-08',
         'MED-021',
         'Traumatologia',
-        '622111222'
+        '622111222',
+        'img/medikua_21.png'
     ),
     (
         22,
@@ -331,7 +353,8 @@ VALUES (
         '1971-09-28',
         'MED-022',
         'Psikiatria',
-        '622222333'
+        '622222333',
+        'img/medikua_22.png'
     ),
     (
         23,
@@ -340,7 +363,8 @@ VALUES (
         '1989-05-12',
         'MED-023',
         'Ginekologia',
-        '622333444'
+        '622333444',
+        'img/medikua_23.png'
     ),
     (
         24,
@@ -349,7 +373,8 @@ VALUES (
         '1977-12-05',
         'MED-024',
         'Oftalmologia',
-        '622444555'
+        '622444555',
+        'img/medikua_24.png'
     ),
     (
         25,
@@ -358,7 +383,8 @@ VALUES (
         '1982-04-18',
         'MED-025',
         'Otorrinolaringologia',
-        '622555666'
+        '622555666',
+        'img/medikua_25.png'
     ),
     (
         26,
@@ -367,7 +393,8 @@ VALUES (
         '1969-10-30',
         'MED-026',
         'Urologia',
-        '622666777'
+        '622666777',
+        'img/medikua_26.png'
     ),
     (
         27,
@@ -376,7 +403,8 @@ VALUES (
         '1986-01-15',
         'MED-027',
         'Onkologia',
-        '622777888'
+        '622777888',
+        'img/medikua_27.png'
     ),
     (
         28,
@@ -385,7 +413,8 @@ VALUES (
         '1980-08-02',
         'MED-028',
         'Endokrinologia',
-        '622888999'
+        '622888999',
+        'img/medikua_28.png'
     ),
     (
         29,
@@ -394,7 +423,8 @@ VALUES (
         '1975-03-22',
         'MED-029',
         'Erreumatologia',
-        '622999000'
+        '622999000',
+        'img/medikua_29.png'
     ),
     (
         30,
@@ -403,7 +433,8 @@ VALUES (
         '1991-07-10',
         'MED-030',
         'Digestiboa',
-        '633000111'
+        '633000111',
+        'img/medikua_30.png'
     ),
     (
         31,
@@ -412,7 +443,8 @@ VALUES (
         '1973-11-28',
         'MED-031',
         'Pneumologia',
-        '633111222'
+        '633111222',
+        'img/medikua_31.png'
     ),
     (
         32,
@@ -421,7 +453,8 @@ VALUES (
         '1988-05-05',
         'MED-032',
         'Nefrologia',
-        '633222333'
+        '633222333',
+        'img/medikua_32.png'
     ),
     (
         33,
@@ -430,7 +463,8 @@ VALUES (
         '1978-02-14',
         'MED-033',
         'Kardiologia',
-        '633333444'
+        '633333444',
+        'img/medikua_33.png'
     ),
     (
         34,
@@ -439,7 +473,8 @@ VALUES (
         '1985-09-08',
         'MED-034',
         'Pediatria',
-        '633444555'
+        '633444555',
+        'img/medikua_34.png'
     ),
     (
         35,
@@ -448,7 +483,8 @@ VALUES (
         '1970-04-25',
         'MED-035',
         'Neurologia',
-        '633555666'
+        '633555666',
+        'img/medikua_35.png'
     ),
     (
         36,
@@ -457,7 +493,8 @@ VALUES (
         '1983-12-12',
         'MED-036',
         'Dermatologia',
-        '633666777'
+        '633666777',
+        'img/medikua_36.png'
     ),
     (
         37,
@@ -466,7 +503,8 @@ VALUES (
         '1990-06-30',
         'MED-037',
         'Traumatologia',
-        '633777888'
+        '633777888',
+        'img/medikua_37.png'
     ),
     (
         38,
@@ -475,7 +513,8 @@ VALUES (
         '1976-01-18',
         'MED-038',
         'Psikiatria',
-        '633888999'
+        '633888999',
+        'img/medikua_38.png'
     ),
     (
         39,
@@ -484,7 +523,8 @@ VALUES (
         '1981-08-05',
         'MED-039',
         'Ginekologia',
-        '633999000'
+        '633999000',
+        'img/medikua_39.png'
     ),
     (
         40,
@@ -493,7 +533,8 @@ VALUES (
         '1967-03-28',
         'MED-040',
         'Oftalmologia',
-        '644000111'
+        '644000111',
+        'img/medikua_40.png'
     ),
     (
         41,
@@ -502,7 +543,8 @@ VALUES (
         '1989-10-15',
         'MED-041',
         'Otorrinolaringologia',
-        '644111222'
+        '644111222',
+        'img/medikua_41.png'
     ),
     (
         42,
@@ -511,7 +553,8 @@ VALUES (
         '1974-05-02',
         'MED-042',
         'Urologia',
-        '644222333'
+        '644222333',
+        'img/medikua_42.png'
     ),
     (
         43,
@@ -520,7 +563,8 @@ VALUES (
         '1986-12-20',
         'MED-043',
         'Onkologia',
-        '644333444'
+        '644333444',
+        'img/medikua_43.png'
     ),
     (
         44,
@@ -529,7 +573,8 @@ VALUES (
         '1980-07-08',
         'MED-044',
         'Endokrinologia',
-        '644444555'
+        '644444555',
+        'img/medikua_44.png'
     ),
     (
         45,
@@ -538,7 +583,8 @@ VALUES (
         '1975-02-25',
         'MED-045',
         'Erreumatologia',
-        '644555666'
+        '644555666',
+        'img/medikua_45.png'
     ),
     (
         46,
@@ -547,7 +593,8 @@ VALUES (
         '1992-09-12',
         'MED-046',
         'Digestiboa',
-        '644666777'
+        '644666777',
+        'img/medikua_46.png'
     ),
     (
         47,
@@ -556,7 +603,8 @@ VALUES (
         '1979-04-30',
         'MED-047',
         'Pneumologia',
-        '644777888'
+        '644777888',
+        'img/medikua_47.png'
     ),
     (
         48,
@@ -565,7 +613,8 @@ VALUES (
         '1984-11-18',
         'MED-048',
         'Nefrologia',
-        '644888999'
+        '644888999',
+        'img/medikua_48.png'
     ),
     (
         49,
@@ -574,7 +623,8 @@ VALUES (
         '1968-06-05',
         'MED-049',
         'Kardiologia',
-        '644999000'
+        '644999000',
+        'img/medikua_49.png'
     ),
     (
         50,
@@ -583,7 +633,8 @@ VALUES (
         '1987-01-22',
         'MED-050',
         'Pediatria',
-        '655000111'
+        '655000111',
+        'img/medikua_50.png'
     );
 -- 4. Harrerako Langileak
 INSERT INTO Harrerako_Langileak (langile_id, izena, abizenak)
@@ -41447,10 +41498,6 @@ SELECT paziente_id,
     CONCAT('Pisua baxua da: ', pisua_kg, ' kg')
 FROM Neurketak
 WHERE pisua_kg < 45;
--- Update image paths for users with specific profile pictures
-UPDATE Medikuak
-SET irudia = CONCAT('img/medikua_', mediku_id, '.png')
-WHERE mediku_id IN (1, 2, 3, 4, 5, 6, 7, 8);
 UPDATE Pazienteak
 SET irudia = CONCAT('img/pazientea_', paziente_id, '.png')
 WHERE paziente_id IN (51, 52, 53, 54, 55, 56);
