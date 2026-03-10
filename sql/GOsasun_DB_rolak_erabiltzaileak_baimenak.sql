@@ -42,6 +42,7 @@ GRANT SELECT,
       INSERT,
       UPDATE,
       DELETE ON GOsasun_DB.Errezetak TO 'db_medikua';
+      
 GRANT SELECT ON GOsasun_DB.Rolak TO 'db_pazientea';
 GRANT SELECT,
       UPDATE ON GOsasun_DB.Erabiltzaileak TO 'db_pazientea';

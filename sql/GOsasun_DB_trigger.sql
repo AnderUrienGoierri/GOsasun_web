@@ -7,7 +7,7 @@ DROP TRIGGER IF EXISTS Eguneratu_Paziente_Datuak;
 DELIMITER //
 
 CREATE TRIGGER Eguneratu_Paziente_Datuak
-AFTER INSERT ON Neurketak   -- taula intermedia (historial_neurketak) para guardar las lineas que saltan (se cambian) con el trigger.
+AFTER INSERT ON Neurketak   -- taula intermedioa (historial_neurketak) sortu beharko da? 
 FOR EACH ROW
 BEGIN
     UPDATE Pazienteak
@@ -17,6 +17,8 @@ BEGIN
 END //
 
 DELIMITER ;
+
+-- nahikoa da trigger hau   ?
 
 -- 2. TG_Abisuak_Sortu: Neurketa berrietan abisu klinikoak automatikoki sortzeko
 -- (MIGRATUTA JS-RA)
