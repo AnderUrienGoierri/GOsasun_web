@@ -1,41 +1,56 @@
 // js/grafikak.js
 $(document).ready(function() {
-    let myChart = null;
-    const canvas = document.getElementById('osabide-grafika');
-    if (!canvas) return; // Exit ez badago margotzeko lekurik
-    const ctx = canvas.getContext('2d');
+    let nireGrafika = null;
+    const kanbasa = document.getElementById('osabide-grafika');
+    if (!kanbasa) return; 
+    const ctx = kanbasa.getContext('2d');
     
-    // Initial draw
-    drawChart('pisua');
+    // Hasierako marrazketa
+    marraztuGrafika('pisua');
     
-    // Handle select change
+    // Aldaketak kudeatu hautatzailean
     $('#datu-mota').on('change', function() {
-        drawChart($(this).val());
+        marraztuGrafika($(this).val());
     });
     
-    // Function to draw chart based on type
-    function drawChart(type) {
-        // neurketakData exists in global scope via PHP
+    // Grafika motaren arabera marrazteko funtzioa
+    function marraztuGrafika(mota) {
         if (typeof neurketakData === 'undefined' || neurketakData.length === 0) return;
         
-        const labels = neurketakData.map(errenkada => errenkada.data);
-        let datasets = [];
+        let datuMultzoak = [];
+        let unitatea = '';
+        let etiketak = [];
         
-        if (type === 'pisua') {
-            datasets = [{
+        if (mota === 'pisua') {
+            // Iragazi datuak balioa dutenak bakarrik hartzeko
+            const neurketaIragaziak = neurketakData.filter(d => d.pisua_kg !== null && d.pisua_kg !== undefined && d.pisua_kg !== '');
+            const datuak = neurketaIragaziak.map(d => parseFloat(d.pisua_kg));
+            etiketak = neurketaIragaziak.map(d => d.data);
+            unitatea = 'kg';
+            
+            datuMultzoak.push({
                 label: 'Pisua (kg)',
-                data: neurketakData.map(errenkada => parseFloat(errenkada.pisua_kg)),
+                data: datuak,
                 borderColor: '#007bff',
                 backgroundColor: 'rgba(0, 123, 255, 0.1)',
                 borderWidth: 2,
                 fill: true,
                 tension: 0.3
-            }];
-        } else if (type === 'tentsioa') {
-            datasets = [
+            });
+            datuMultzoak.push(lortuRegresioLerroa(datuak, 'Joera (Pisua)', '#0056b3'));
+            eguneratuEstatistikaPanela(datuak, unitatea);
+
+        } else if (mota === 'tentsioa') {
+            const neurketaIragaziak = neurketakData.filter(d => d.tentsio_sistolikoa !== null && d.tentsio_diastolikoa !== null);
+            const sistolikoa = neurketaIragaziak.map(d => parseInt(d.tentsio_sistolikoa));
+            const diastolikoa = neurketaIragaziak.map(d => parseInt(d.tentsio_diastolikoa));
+            etiketak = neurketaIragaziak.map(d => d.data);
+            unitatea = 'mmHg';
+            
+            datuMultzoak = [
                 {
                     label: 'Tentsio Sistolikoa ',
-                    data: neurketakData.map(errenkada => parseInt(errenkada.tentsio_sistolikoa)),
+                    data: sistolikoa,
                     borderColor: '#dc3545',
                     backgroundColor: 'rgba(220, 53, 69, 0.1)',
                     borderWidth: 2,
@@ -44,7 +59,7 @@ $(document).ready(function() {
                 },
                 {
                     label: 'Tentsio Diastolikoa',
-                    data: neurketakData.map(errenkada => parseInt(errenkada.tentsio_diastolikoa)),
+                    data: diastolikoa,
                     borderColor: '#17a2b8',
                     backgroundColor: 'rgba(23, 162, 184, 0.1)',
                     borderWidth: 2,
@@ -52,29 +67,56 @@ $(document).ready(function() {
                     tension: 0.1
                 }
             ];
-        } else if (type === 'glukosa') {
-            datasets = [{
+            datuMultzoak.push(lortuRegresioLerroa(sistolikoa, 'Joera (Sist.)', '#a71d2a'));
+            datuMultzoak.push(lortuRegresioLerroa(diastolikoa, 'Joera (Diast.)', '#117a8b'));
+            eguneratuEstatistikaPanela(sistolikoa, unitatea, 'Sistolikoa', diastolikoa, 'Diastolikoa');
+
+        } else if (mota === 'glukosa') {
+            const neurketaIragaziak = neurketakData.filter(d => d.glukosa_mg_dl !== null && d.glukosa_mg_dl !== undefined && d.glukosa_mg_dl !== '');
+            const datuak = neurketaIragaziak.map(d => parseFloat(d.glukosa_mg_dl));
+            etiketak = neurketaIragaziak.map(d => d.data);
+            unitatea = 'mg/dl';
+            
+            datuMultzoak.push({
                 label: 'Glukosa (mg/dl)',
-                data: neurketakData.map(errenkada => parseFloat(errenkada.glukosa_mg_dl)),
+                data: datuak,
                 borderColor: '#28a745',
                 backgroundColor: 'rgba(40, 167, 69, 0.1)',
                 borderWidth: 2,
                 fill: true,
                 tension: 0.3
-            }];
+            });
+            datuMultzoak.push(lortuRegresioLerroa(datuak, 'Joera (Glukosa)', '#1e7e34'));
+            eguneratuEstatistikaPanela(datuak, unitatea);
+
+        } else if (mota === 'pultsua') {
+            const neurketaIragaziak = neurketakData.filter(d => d.pultsua_ppm !== null && d.pultsua_ppm !== undefined && d.pultsua_ppm !== '');
+            const datuak = neurketaIragaziak.map(d => parseInt(d.pultsua_ppm));
+            etiketak = neurketaIragaziak.map(d => d.data);
+            unitatea = 'ppm';
+            
+            datuMultzoak.push({
+                label: 'Pultsua (ppm)',
+                data: datuak,
+                borderColor: '#fd7e14',
+                backgroundColor: 'rgba(253, 126, 20, 0.1)',
+                borderWidth: 2,
+                fill: true,
+                tension: 0.3
+            });
+            datuMultzoak.push(lortuRegresioLerroa(datuak, 'Joera (Pultsua)', '#d4660a'));
+            eguneratuEstatistikaPanela(datuak, unitatea);
         }
         
-        // Destroy existing chart to prevent overlap bugs
-        if (myChart) {
-            myChart.destroy();
+        if (nireGrafika) {
+            nireGrafika.destroy();
         }
         
-        // Create new Chart.js instance
-        myChart = new Chart(ctx, {
+        nireGrafika = new Chart(ctx, {
             type: 'line',
             data: {
-                labels: labels,
-                datasets: datasets
+                labels: etiketak,
+                datasets: datuMultzoak
             },
             options: {
                 responsive: true,
@@ -83,9 +125,96 @@ $(document).ready(function() {
                     y: {
                         beginAtZero: false
                     }
+                },
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
                 }
             }
         });
+    }
+
+    // Regresio linealeko lerroa kalkulatzeko funtzioa (Karratu txikien metodoa)
+    function lortuRegresioLerroa(datuak, etiketa, kolorea) {
+        const n = datuak.length;
+        if (n < 2) return { label: etiketa, data: datuak, showLine: false };
+
+        let batX = 0, batY = 0, batXY = 0, batX2 = 0;
+        for (let i = 0; i < n; i++) {
+            batX += i;
+            batY += datuak[i];
+            batXY += i * datuak[i];
+            batX2 += i * i;
+        }
+
+        const malda = (n * batXY - batX * batY) / (n * batX2 - batX * batX);
+        const jatorria = (batY - malda * batX) / n;
+
+        const regresioPuntuak = datuak.map((_, i) => malda * i + jatorria);
+
+        return {
+            label: etiketa,
+            data: regresioPuntuak,
+            borderColor: kolorea,
+            borderWidth: 2,
+            borderDash: [5, 5], 
+            fill: false,
+            pointRadius: 0, 
+            tension: 0
+        };
+    }
+
+    // Estatistika panela eguneratzeko funtzioa
+    function eguneratuEstatistikaPanela(datuak1, unitatea1, etiketa1 = '', datuak2 = null, etiketa2 = '') {
+        const panela = $('#estatistika-panela');
+        if (!panela.length) return;
+
+        let html = '';
+
+        const kalkulatu = (d) => {
+            const iragazita = d.filter(v => !isNaN(v) && v !== null);
+            if (iragazita.length === 0) return null;
+            const batura = iragazita.reduce((a, b) => a + b, 0);
+            return {
+                batazbestekoa: (batura / iragazita.length).toFixed(1),
+                maximoa: Math.max(...iragazita),
+                minimoa: Math.min(...iragazita),
+                kopurua: iragazita.length
+            };
+        };
+
+        const e1 = kalkulatu(datuak1);
+        if (e1) {
+            html += `
+                <div class="estat-txartela">
+                    <div class="estat-izenburua">${etiketa1 ? etiketa1 + ' ' : ''}Batez bestekoa</div>
+                    <div class="estat-balioa">${e1.batazbestekoa}<span class="estat-unitatea">${unitatea1}</span></div>
+                </div>
+                <div class="estat-txartela">
+                    <div class="estat-izenburua">${etiketa1 ? etiketa1 + ' ' : ''}Maximoa</div>
+                    <div class="estat-balioa">${e1.maximoa}<span class="estat-unitatea">${unitatea1}</span></div>
+                </div>
+                <div class="estat-txartela">
+                    <div class="estat-izenburua">${etiketa1 ? etiketa1 + ' ' : ''}Minimoa</div>
+                    <div class="estat-balioa">${e1.minimoa}<span class="estat-unitatea">${unitatea1}</span></div>
+                </div>
+            `;
+        }
+
+        if (datuak2) {
+            const e2 = kalkulatu(datuak2);
+            if (e2) {
+                html += `
+                    <div class="estat-txartela">
+                        <div class="estat-izenburua">${etiketa2} Batez bestekoa</div>
+                        <div class="estat-balioa">${e2.batazbestekoa}<span class="estat-unitatea">${unitatea1}</span></div>
+                    </div>
+                `;
+            }
+        }
+
+        panela.html(html);
     }
 
     // PDF Deskargatu logika html2pdf erabiliz

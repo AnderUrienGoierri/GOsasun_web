@@ -8,8 +8,8 @@ if (!isset($_SESSION['rol_id']) || $_SESSION['rol_izena'] !== 'Pazientea') {
 }
 
 $erab_id = $_SESSION['erabiltzaile_id'];
-$stmt = $pdo->prepare("SELECT data, glukosa_mg_dl, tentsio_sistolikoa, tentsio_diastolikoa, pisua_kg, altuera 
-                       FROM Neurketak WHERE paziente_id = ? ORDER BY data ASC");
+$stmt = $pdo->prepare("SELECT DATE(erregistro_data) AS data, glukosa_mg_dl, tentsio_sistolikoa, tentsio_diastolikoa, pisua_kg, altuera, pultsua_ppm 
+                       FROM Neurketak WHERE paziente_id = ? ORDER BY erregistro_data ASC");
 $stmt->execute([$erab_id]);
 $neurketak = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -35,6 +35,7 @@ include_once '../php_includeak/paziente_goiburua.php';
                     <option value="pisua">Pisua (kg)</option>
                     <option value="tentsioa">Tentsio Arteriala</option>
                     <option value="glukosa">Glukosa (mg/dl)</option>
+                    <option value="pultsua">Pultsua (ppm)</option>
                 </select>
                 <button type="button" class="botoia botoi-nagusia" id="btn-deskargatu-pdf">
                     <img src="../img/file-text.svg" alt="" class="ikono-ertaina marjina-esk-5"> Deskargatu PDF (Txostena)
@@ -47,6 +48,10 @@ include_once '../php_includeak/paziente_goiburua.php';
         <?php if (count($neurketak) > 0): ?>
             <div class="grafika-txartela">
                 <canvas id="osabide-grafika" class="nire-grafika"></canvas>
+            </div>
+
+            <div id="estatistika-panela" class="estatistika-panela marjina-goi-25">
+                <!-- JavaScript-ek beteko du hau dinamikoki -->
             </div>
         <?php else: ?>
             <p class="daturik-ez">Oraindik ez dago neurketarik erregistratuta grafika sortzeko.</p>

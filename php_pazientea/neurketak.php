@@ -18,21 +18,21 @@ $arrakasta_mezua = '';
 $errore_mezua = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $data = $_POST['data'] ?? date('Y-m-d');
-    $ordua = $_POST['ordua'] ?? date('H:i');
+    // Data eta ordua automatikoki hartuko dira erregistro_data bidez (TIMESTAMP)
     $glukosa = !empty($_POST['glukosa']) ? $_POST['glukosa'] : null;
     $sistolikoa = !empty($_POST['sistolikoa']) ? $_POST['sistolikoa'] : null;
     $diastolikoa = !empty($_POST['diastolikoa']) ? $_POST['diastolikoa'] : null;
     $pisua = !empty($_POST['pisua']) ? str_replace(',', '.', $_POST['pisua']) : null;
+    $pultsua = !empty($_POST['pultsua']) ? $_POST['pultsua'] : null;
     $sintomak = !empty($_POST['sintomak']) ? $_POST['sintomak'] : null;
 
-    if ($glukosa || ($sistolikoa && $diastolikoa) || $pisua || $sintomak) {
+    if ($glukosa || ($sistolikoa && $diastolikoa) || $pisua || $pultsua || $sintomak) {
         try {
             $stmt = $pdo->prepare("
-                INSERT INTO Neurketak (paziente_id, data, ordua, glukosa_mg_dl, tentsio_sistolikoa, tentsio_diastolikoa, pisua_kg, sintomak) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                INSERT INTO Neurketak (paziente_id, glukosa_mg_dl, tentsio_sistolikoa, tentsio_diastolikoa, pisua_kg, pultsua_ppm, sintomak) 
+                VALUES (?, ?, ?, ?, ?, ?, ?)
             ");
-            $stmt->execute([$paziente_id, $data, $ordua, $glukosa, $sistolikoa, $diastolikoa, $pisua, $sintomak]);
+            $stmt->execute([$paziente_id, $glukosa, $sistolikoa, $diastolikoa, $pisua, $pultsua, $sintomak]);
             $arrakasta_mezua = "Neurketak ondo erregistratu dira!";
         } catch (PDOException $e) {
             $errore_mezua = "Errorea gertatu da datuak gordetzean: " . $e->getMessage();
@@ -64,21 +64,18 @@ include_once '../php_includeak/paziente_goiburua.php';
 
         <div class="inprimaki-edukiontzia">
             <form id="neurketaForm" action="neurketak.php" method="POST" class="neurketa-inprimakia">
-                <div class="inprimaki-lerroa data-ordu-lerroa">
-                    <div class="inprimaki-taldea">
-                        <label for="data">Data:</label>
-                        <input type="date" id="data" name="data" value="<?php echo date('Y-m-d'); ?>" class="inprimaki-kontrola">
-                    </div>
-                    <div class="inprimaki-taldea">
-                        <label for="ordua">Ordua:</label>
-                        <input type="time" id="ordua" name="ordua" value="<?php echo date('H:i'); ?>" class="inprimaki-kontrola">
-                    </div>
-                </div>
+                <!-- Data eta ordua automatikoki erregistratzen dira -->
 
                 <div class="neurketa-taldea">
-                    <div class="inprimaki-taldea">
-                        <label for="glukosa">Glukosa (mg/dL):</label>
-                        <input type="number" step="0.1" id="glukosa" name="glukosa" placeholder="Adib: 105" class="inprimaki-kontrola">
+                    <div class="inprimaki-lerroa">
+                        <div class="inprimaki-taldea">
+                            <label for="glukosa">Glukosa (mg/dL):</label>
+                            <input type="number" step="0.1" id="glukosa" name="glukosa" placeholder="Adib: 105" class="inprimaki-kontrola">
+                        </div>
+                        <div class="inprimaki-taldea">
+                            <label for="pultsua">Pultsua (ppm):</label>
+                            <input type="number" id="pultsua" name="pultsua" placeholder="Adib: 75" class="inprimaki-kontrola">
+                        </div>
                     </div>
                     <div class="inprimaki-lerroa">
                         <div class="inprimaki-taldea">

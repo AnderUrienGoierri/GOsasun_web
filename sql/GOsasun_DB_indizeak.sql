@@ -12,7 +12,7 @@ CREATE INDEX idx_hitzorduak_data ON hitzorduak (data);
 
 -- NEURKETAK
 -- 3. Neurketen historia paziente bakoitzeko dataren arabera ordenatuta azkartzeko
-CREATE INDEX idx_neurketak_paziente_data ON neurketak (paziente_id, data);
+CREATE INDEX idx_neurketak_paziente_data ON neurketak (paziente_id, erregistro_data);
 
 -- MEZUAK
 -- 4. Mezularitza sarrera-ontzia (hartzailearen arabera eta dataren arabera)

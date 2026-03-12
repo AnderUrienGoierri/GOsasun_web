@@ -9,10 +9,11 @@ $(document).ready(function() {
         const sistolikoa = $('#sistolikoa').val();
         const diastolikoa = $('#diastolikoa').val();
         const pisua = $('#pisua').val();
+        const pultsua = $('#pultsua').val();
         const sintomak = $('#sintomak').val();
         
         // Egiaztatu gutxienez datu bat sartu dela
-        if (glukosa !== '' || (sistolikoa !== '' && diastolikoa !== '') || pisua !== '' || sintomak !== '') {
+        if (glukosa !== '' || (sistolikoa !== '' && diastolikoa !== '') || pisua !== '' || pultsua !== '' || sintomak !== '') {
             gutxienez_bat_behar_da = true;
         }
 
@@ -56,6 +57,18 @@ $(document).ready(function() {
             }
         }
 
+        // Pultsua balidazioa
+        if (pultsua !== '') {
+            let numPultsua = parseInt(pultsua);
+            if (numPultsua < 30 || numPultsua > 220) {
+                if ($('#err-pultsua').length) $('#err-pultsua').show();
+                else alert("Pultsu balio ezegokia (30-220 bpm artean egon behar du).");
+                baliozkoa_da = false;
+            } else {
+                if ($('#err-pultsua').length) $('#err-pultsua').hide();
+            }
+        }
+
         if (baliozkoa_da) {
             // Logika hemen: Formularioa bidali aurretik abisuak egiaztatu ditzakegu
             // Edo formularioa bidali ondoren (AJAX bidez bada hobe)
@@ -67,7 +80,8 @@ $(document).ready(function() {
                 glukosa: glukosa,
                 sistolikoa: sistolikoa,
                 diastolikoa: diastolikoa,
-                pisua: pisua
+                pisua: pisua,
+                pultsua: pultsua
             };
 
             egiaztatuAbisuak(pazienteId, data);

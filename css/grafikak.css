@@ -97,6 +97,49 @@
     100% { opacity: 0.7; }
 }
 
+/* Estatistika panela */
+.estatistika-panela {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.estat-txartela {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border: 1px solid #f0f2f5;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.estat-txartela:hover {
+    transform: translateY(-5px);
+}
+
+.estat-izenburua {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-bottom: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.estat-balioa {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.estat-unitatea {
+    font-size: 0.9rem;
+    color: var(--gray);
+    margin-left: 4px;
+    font-weight: 500;
+}
+
 @media (max-width: 768px) {
     .grafika-goiburua {
         flex-direction: column;

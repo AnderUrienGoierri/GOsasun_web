@@ -24,21 +24,21 @@ $paziente_id_lehenetsia = $_GET['paziente_id'] ?? null;
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $paziente_id_post = $_POST['paziente_id'] ?? null;
-    $data = $_POST['data'] ?? date('Y-m-d');
-    $ordua = $_POST['ordua'] ?? date('H:i');
+    // Data eta ordua automatikoki hartuko dira erregistro_data bidez (TIMESTAMP)
     $glukosa = !empty($_POST['glukosa']) ? $_POST['glukosa'] : null;
     $sistolikoa = !empty($_POST['sistolikoa']) ? $_POST['sistolikoa'] : null;
     $diastolikoa = !empty($_POST['diastolikoa']) ? $_POST['diastolikoa'] : null;
     $pisua = !empty($_POST['pisua']) ? str_replace(',', '.', $_POST['pisua']) : null;
+    $pultsua = !empty($_POST['pultsua']) ? $_POST['pultsua'] : null;
     $sintomak = !empty($_POST['sintomak']) ? $_POST['sintomak'] : null;
 
-    if ($paziente_id_post && ($glukosa || ($sistolikoa && $diastolikoa) || $pisua || $sintomak)) {
+    if ($paziente_id_post && ($glukosa || ($sistolikoa && $diastolikoa) || $pisua || $pultsua || $sintomak)) {
         try {
             $stmt = $pdo->prepare("
-                INSERT INTO Neurketak (paziente_id, data, ordua, glukosa_mg_dl, tentsio_sistolikoa, tentsio_diastolikoa, pisua_kg, sintomak) 
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+                INSERT INTO Neurketak (paziente_id, glukosa_mg_dl, tentsio_sistolikoa, tentsio_diastolikoa, pisua_kg, pultsua_ppm, sintomak) 
+                VALUES (?, ?, ?, ?, ?, ?, ?)
             ");
-            $stmt->execute([$paziente_id_post, $data, $ordua, $glukosa, $sistolikoa, $diastolikoa, $pisua, $sintomak]);
+            $stmt->execute([$paziente_id_post, $glukosa, $sistolikoa, $diastolikoa, $pisua, $pultsua, $sintomak]);
             
             if ($pisua) {
                 $stmtPisua = $pdo->prepare("UPDATE Pazienteak SET azken_pisua = ? WHERE paziente_id = ?");
@@ -93,21 +93,18 @@ include_once '../php_includeak/mediku_goiburua.php';
                     </select>
                 </div>
 
-                <div class="inprimaki-lerroa data-ordu-lerroa flex-20px-tartea-marjina">
-                    <div class="inprimaki-taldea flex-1">
-                        <label for="data" class="etiketa-lodia">Data:</label>
-                        <input type="date" id="data" name="data" value="<?php echo date('Y-m-d'); ?>" class="inprimaki-kontrola sarrera-handia">
-                    </div>
-                    <div class="inprimaki-taldea flex-1">
-                        <label for="ordua" class="etiketa-lodia">Ordua:</label>
-                        <input type="time" id="ordua" name="ordua" value="<?php echo date('H:i'); ?>" class="inprimaki-kontrola sarrera-handia">
-                    </div>
-                </div>
+                <!-- Data eta ordua automatikoki erregistratzen dira -->
 
                 <div class="neurketa-taldea neurketa-kutxa-argia">
-                    <div class="inprimaki-taldea marjina-behe-15">
-                        <label for="glukosa" class="etiketa-lodia">Glukosa (mg/dL):</label>
-                        <input type="number" step="0.1" id="glukosa" name="glukosa" placeholder="Adib: 105" class="inprimaki-kontrola sarrera-handia">
+                    <div class="inprimaki-lerroa flex-20px-tartea marjina-behe-15">
+                        <div class="inprimaki-taldea flex-1">
+                            <label for="glukosa" class="etiketa-lodia">Glukosa (mg/dL):</label>
+                            <input type="number" step="0.1" id="glukosa" name="glukosa" placeholder="Adib: 105" class="inprimaki-kontrola sarrera-handia">
+                        </div>
+                        <div class="inprimaki-taldea flex-1">
+                            <label for="pultsua" class="etiketa-lodia">Pultsua (ppm):</label>
+                            <input type="number" id="pultsua" name="pultsua" placeholder="Adib: 75" class="inprimaki-kontrola sarrera-handia">
+                        </div>
                     </div>
                     <div class="inprimaki-lerroa flex-20px-tartea">
                         <div class="inprimaki-taldea flex-1">

@@ -34,10 +34,7 @@ GRANT SELECT,
       INSERT,
       UPDATE,
       DELETE ON GOsasun_DB.Dokumentuak TO 'db_medikua';
-GRANT SELECT,
-      INSERT,
-      UPDATE,
-      DELETE ON GOsasun_DB.Hitzorduak TO 'db_medikua';
+GRANT SELECT ON GOsasun_DB.Hitzorduak TO 'db_medikua';
 GRANT SELECT,
       INSERT,
       UPDATE,

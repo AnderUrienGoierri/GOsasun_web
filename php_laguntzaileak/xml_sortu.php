@@ -57,10 +57,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         // Lortu neurketak tarte horretan
         $neurketak_stmt = $pdo->prepare("
-            SELECT data, ordua, glukosa_mg_dl, tentsio_sistolikoa, tentsio_diastolikoa, pisua_kg, altuera, sintomak 
+            SELECT DATE(erregistro_data) AS data, TIME(erregistro_data) AS ordua, glukosa_mg_dl, tentsio_sistolikoa, tentsio_diastolikoa, pisua_kg, altuera, sintomak 
             FROM Neurketak 
-            WHERE paziente_id = ? AND data BETWEEN ? AND ?
-            ORDER BY data ASC, ordua ASC
+            WHERE paziente_id = ? AND DATE(erregistro_data) BETWEEN ? AND ?
+            ORDER BY erregistro_data ASC
         ");
         $neurketak_stmt->execute([$jomuga_paziente_id, $hasiera_data, $bukaera_data]);
         $neurketak_emaitzak = $neurketak_stmt->fetchAll(PDO::FETCH_ASSOC);

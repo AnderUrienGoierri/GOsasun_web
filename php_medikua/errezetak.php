@@ -10,7 +10,7 @@ $mediku_id = $_SESSION['erabiltzaile_id'];
 $mezua = '';
 $errorea = '';
 
-// 1. Lortu esleitutako pazienteen zerrenda
+// 1. Lortu medikuaren pazienteen zerrenda
 $stmtP = $pdo->prepare("SELECT p.paziente_id, p.izena, p.abizenak, p.nan 
                        FROM Pazienteak p
                        JOIN Mediku_Paziente mp ON p.paziente_id = mp.paziente_id

@@ -33,8 +33,8 @@ if ($aukeratutako_pazientea) {
     }
     
     if ($baimena) {
-        $stmt_datuak = $pdo->prepare("SELECT data, glukosa_mg_dl, tentsio_sistolikoa, tentsio_diastolikoa, pisua_kg, altuera 
-                       FROM Neurketak WHERE paziente_id = ? ORDER BY data ASC");
+        $stmt_datuak = $pdo->prepare("SELECT DATE(erregistro_data) AS data, glukosa_mg_dl, tentsio_sistolikoa, tentsio_diastolikoa, pisua_kg, altuera, pultsua_ppm 
+                       FROM Neurketak WHERE paziente_id = ? ORDER BY erregistro_data ASC");
         $stmt_datuak->execute([$aukeratutako_pazientea]);
         $neurketak = $stmt_datuak->fetchAll(PDO::FETCH_ASSOC);
     }
@@ -76,6 +76,7 @@ include_once '../php_includeak/mediku_goiburua.php';
                         <option value="pisua">Pisua (kg)</option>
                         <option value="tentsioa">Tentsio Arteriala</option>
                         <option value="glukosa">Glukosa (mg/dl)</option>
+                        <option value="pultsua">Pultsua (ppm)</option>
                     </select>
                     <button type="button" class="botoia botoi-nagusia" id="btn-deskargatu-pdf">
                         <img src="../img/file-text.svg" alt="" class="ikono-ertaina marjina-esk-5"> Deskargatu PDF (Txostena)
@@ -87,6 +88,10 @@ include_once '../php_includeak/mediku_goiburua.php';
 
             <div class="grafika-txartela">
                 <canvas id="osabide-grafika" class="nire-grafika"></canvas>
+            </div>
+
+            <div id="estatistika-panela" class="estatistika-panela marjina-goi-25">
+                <!-- JavaScript-ek beteko du hau dinamikoki -->
             </div>
         <?php elseif ($aukeratutako_pazientea): ?>
             <p class="daturik-ez">Paziente honek ez du neurketarik erregistratuta grafika sortzeko.</p>
