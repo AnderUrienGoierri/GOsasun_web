@@ -2,12 +2,13 @@
 session_start();
 require_once 'DB_konexioa.php';
 
-header('Content-Type: application/json');
+// require_once 'DB_konexioa.php'; 
+// header removal as requested "echo gabe" often implies non-API mode or inclusion
+// header('Content-Type: application/json');
 
 if (!isset($_SESSION['rol_id'])) {
     http_response_code(403);
-    echo json_encode(['error' => 'Baimenik ez']);
-    exit;
+    return ['error' => 'Baimenik ez'];
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -23,8 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } else if ($rol === 'Medikua') {
         if (!isset($_POST['paziente_id']) || empty($_POST['paziente_id'])) {
             http_response_code(400);
-            echo json_encode(['error' => 'Pazientea aukeratu behar da.']);
-            exit;
+            return ['error' => 'Pazientea aukeratu behar da.'];
         }
         $jomuga_paziente_id = $_POST['paziente_id'];
         
@@ -33,13 +33,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $baimen_stmt->execute([$erab_id, $jomuga_paziente_id]);
         if (!$baimen_stmt->fetchColumn()) {
             http_response_code(403);
-            echo json_encode(['error' => 'Ez duzu baimenik paziente honen datuak esportatzeko.']);
-            exit;
+            return ['error' => 'Ez duzu baimenik paziente honen datuak esportatzeko.'];
         }
     } else {
         http_response_code(403);
-        echo json_encode(['error' => 'Rol honek ezin du ekintza hau burutu.']);
-        exit;
+        return ['error' => 'Rol honek ezin du ekintza hau burutu.'];
     }
     
     // Datak jaso (aukerakoak izan daitezke, baina normalean ezarriko dira)
@@ -66,8 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $neurketak_emaitzak = $neurketak_stmt->fetchAll(PDO::FETCH_ASSOC);
         
         if (count($neurketak_emaitzak) === 0) {
-            echo json_encode(['error' => 'Ez da neurketarik aurkitu epe horretan.']);
-            exit;
+            return ['error' => 'Ez da neurketarik aurkitu epe horretan.'];
         }
         
         // XML Egitura sortzen
@@ -122,19 +119,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         $xml->save($jomuga_bidea);
         
-        echo json_encode([
+        return [
             'success' => true,
             'url' => 'xml_bezero_neurketak/' . $fitxategi_izena,
             'msg' => 'XML txostena arrastaka gorde da!'
-        ]);
+        ];
         
     } catch (Exception $e) {
         http_response_code(500);
-        echo json_encode(['error' => 'Errorea zerbitzarian: ' . $e->getMessage()]);
+        return ['error' => 'Errorea zerbitzarian: ' . $e->getMessage()];
     }
 } else {
     http_response_code(400);
-    echo json_encode(['error' => 'Eskaera ez da baliozkoa.']);
+    return ['error' => 'Eskaera ez da baliozkoa.'];
 }
 ?>
 
