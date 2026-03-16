@@ -2,7 +2,6 @@
 $hizkuntza_def = "eu";
 $kolore_nagusia_def = "#4361ee";
 $bigarren_kolorea_def = "#3f37c9";
-$footer_kolorea_def = "#2b2d42";
 $gaia_def = "argia";
 
 // Osasun ezarpenak
@@ -19,7 +18,6 @@ if (file_exists($xml_path)) {
         $hizkuntza_def = isset($xml_conf->hizkuntza) ? (string)$xml_conf->hizkuntza : $hizkuntza_def;
         $kolore_nagusia_def = isset($xml_conf->kolore_nagusia) ? (string)$xml_conf->kolore_nagusia : $kolore_nagusia_def;
         $bigarren_kolorea_def = isset($xml_conf->bigarren_kolorea) ? (string)$xml_conf->bigarren_kolorea : $bigarren_kolorea_def;
-        $footer_kolorea_def = isset($xml_conf->footer_kolorea) ? (string)$xml_conf->footer_kolorea : $footer_kolorea_def;
         $gaia_def = isset($xml_conf->gaia) ? (string)$xml_conf->gaia : $gaia_def;
         
         if (isset($xml_conf->osasun_zentroa)) {
@@ -59,7 +57,6 @@ $orri_izenburua = $sistema_izena_def . " - Zure Osasun Ataria";
     echo ":root {\n";
     echo "  --primary-color: " . htmlspecialchars($kolore_nagusia_def) . " !important;\n";
     echo "  --secondary-color: " . htmlspecialchars($bigarren_kolorea_def) . " !important;\n";
-    echo "  --footer-color: " . htmlspecialchars($footer_kolorea_def) . " !important;\n";
     echo "}\n";
     
     if ($gaia_def == 'iluna') {

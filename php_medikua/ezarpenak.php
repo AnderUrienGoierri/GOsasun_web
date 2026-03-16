@@ -13,23 +13,13 @@ $uneko_orria = "ezarpenak";
 
 include_once '../php_includeak/mediku_goiburua.php';
 
-$xml_path = '../xml_konfigurazioa/config.xml';
-$hizkuntza_def = 'eu';
-$kolore_nagusia_def = '#4361ee';
-$bigarren_kolorea_def = '#3f37c9';
-$footer_kolorea_def = '#2b2d42';
-$gaia_def = 'argia';
+require_once '../php_includeak/konfigurazioa_kargatu.php';
+$konf = kargatuKonfigurazioa(false);
 
-if (file_exists($xml_path)) {
-    $xml_conf = simplexml_load_file($xml_path);
-    if ($xml_conf) {
-        $hizkuntza_def = (string)$xml_conf->hizkuntza ?: $hizkuntza_def;
-        $kolore_nagusia_def = (string)$xml_conf->kolore_nagusia ?: $kolore_nagusia_def;
-        $bigarren_kolorea_def = (string)$xml_conf->bigarren_kolorea ?: $bigarren_kolorea_def;
-        $footer_kolorea_def = (string)$xml_conf->footer_kolorea ?: $footer_kolorea_def;
-        $gaia_def = (string)$xml_conf->gaia ?: $gaia_def;
-    }
-}
+$hizkuntza_def = $konf['hizkuntza'];
+$kolore_nagusia_def = $konf['kolore_nagusia'];
+$bigarren_kolorea_def = $konf['bigarren_kolorea'];
+$gaia_def = $konf['gaia'];
 ?>
 
 <main class="panel-nagusia">
@@ -45,10 +35,13 @@ if (file_exists($xml_path)) {
                 <?php if (isset($_GET['ezarpenak_gordeta'])): ?>
                     <div class="alerta alerta-arrakasta marjina-goi-15">Ezarpenak XML fitxategian gorde dira!</div>
                 <?php endif; ?>
+                <?php if (isset($_GET['ezarpenak_reset'])): ?>
+                    <div class="alerta alerta-arrakasta marjina-goi-15">Hasierako baloreak berreskuratu dira!</div>
+                <?php endif; ?>
             </div>
             <form action="../php_laguntzaileak/ezarpenak_gorde.php" method="POST">
                 <!-- Ezarpen orokorretarako (itxura) -->
-                <input type="hidden" name="form_type" value="orokorra_aplikazio_barnekoa">
+                <input type="hidden" name="form_type" value="orokorra">
                 <input type="hidden" name="itzulera" value="medikua">
 
                 <div class="inprimaki-taldea">
@@ -85,6 +78,14 @@ if (file_exists($xml_path)) {
 
                 <div class="testua-erdian-marjina-goi-30">
                     <button type="submit" class="botoia botoi-nagusia zabalera-osoa-300px">Gorde Ezarpenak (XML-an)</button>
+                </div>
+            </form>
+
+            <form action="../php_laguntzaileak/ezarpenak_gorde.php" method="POST" class="marjina-goi-15">
+                <input type="hidden" name="ekintza" value="reset">
+                <input type="hidden" name="itzulera" value="medikua">
+                <div class="testua-erdian">
+                    <button type="submit" class="botoia botoi-itsua-gorria" onclick="return confirm('Ziur zaude zure ezarpenak ezabatu eta hasierakoak berreskuratu nahi dituzula?')">Berreskuratu hasierako baloreak</button>
                 </div>
             </form>
         </div>

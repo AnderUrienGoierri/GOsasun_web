@@ -13,23 +13,14 @@ $uneko_orria = "ezarpenak";
 
 include_once '../php_includeak/harrera_goiburua.php';
 
-$xml_path = '../xml_konfigurazioa/config.xml';
-$sistema_izena_def = 'GOsasun';
-$hitzordu_muga_def = '20';
-$ordutegia_ireki_def = '08:00';
-$ordutegia_itxi_def = '20:00';
-$mantenimendua_def = 'ez';
+require_once '../php_includeak/konfigurazioa_kargatu.php';
+$konf = kargatuKonfigurazioa(false);
 
-if (file_exists($xml_path)) {
-    $xml_conf = simplexml_load_file($xml_path);
-    if ($xml_conf && isset($xml_conf->osasun_zentroa)) {
-        $sistema_izena_def = (string)$xml_conf->osasun_zentroa->sistema_izena ?: $sistema_izena_def;
-        $hitzordu_muga_def = (string)$xml_conf->osasun_zentroa->mediku_bakoitzeko_gehienezko_hitzorduak ?: $hitzordu_muga_def;
-        $ordutegia_ireki_def = (string)$xml_conf->osasun_zentroa->ordutegia_ireki ?: $ordutegia_ireki_def;
-        $ordutegia_itxi_def = (string)$xml_conf->osasun_zentroa->ordutegia_itxi ?: $ordutegia_itxi_def;
-        $mantenimendua_def = (string)$xml_conf->osasun_zentroa->mantenimendu_modua ?: $mantenimendua_def;
-    }
-}
+$sistema_izena_def = $konf['sistema_izena'];
+$hitzordu_muga_def = $konf['hitzordu_muga'];
+$ordutegia_ireki_def = $konf['ordutegia_ireki'];
+$ordutegia_itxi_def = $konf['ordutegia_itxi'];
+$mantenimendua_def = $konf['mantenimendua'];
 ?>
 
 <main class="panel-nagusia">
@@ -44,6 +35,9 @@ if (file_exists($xml_path)) {
                 <p class="testu-grisa">Hemen web-aren logika aplikatiboa eta zentroaren informazioa konfiguratu ditzakezu XML fitxategian.</p>
                 <?php if (isset($_GET['ezarpenak_gordeta'])): ?>
                     <div class="alerta alerta-arrakasta marjina-goi-15">Ezarpenak XML fitxategian gorde dira!</div>
+                <?php endif; ?>
+                <?php if (isset($_GET['ezarpenak_reset'])): ?>
+                    <div class="alerta alerta-arrakasta marjina-goi-15">Hasierako baloreak berreskuratu dira!</div>
                 <?php endif; ?>
             </div>
             <form action="../php_laguntzaileak/ezarpenak_gorde.php" method="POST">
@@ -77,6 +71,15 @@ if (file_exists($xml_path)) {
 
                 <div class="testua-erdian-marjina-goi-30">
                     <button type="submit" class="botoia botoi-nagusia zabalera-osoa-300px">Gorde Ezarpenak (XML-an)</button>
+                </div>
+            </form>
+
+            <form action="../php_laguntzaileak/ezarpenak_gorde.php" method="POST" class="marjina-goi-15">
+                <input type="hidden" name="ekintza" value="reset">
+                <input type="hidden" name="form_type" value="osasun_zentroa">
+                <input type="hidden" name="itzulera" value="harrera">
+                <div class="testua-erdian">
+                    <button type="submit" class="botoia botoi-itsua-gorria" onclick="return confirm('Ziur zaude osasun zentroaren ezarpenak leheneratu nahi dituzula?')">Berreskuratu hasierako baloreak</button>
                 </div>
             </form>
         </div>

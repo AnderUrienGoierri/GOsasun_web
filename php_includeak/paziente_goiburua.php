@@ -44,32 +44,6 @@ if (file_exists($xml_path)) {
     <link rel="stylesheet" href="<?php echo $bide_absolutua; ?>css/<?php echo $css_fitxategia; ?>">
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <?php
-    echo "<style>\n";
-    echo ":root {\n";
-    echo "  --primary-color: " . htmlspecialchars($kolore_nagusia_def) . " !important;\n";
-    echo "  --secondary-color: " . htmlspecialchars($bigarren_kolorea_def) . " !important;\n";
-    echo "  --footer-color: " . htmlspecialchars($footer_kolorea_def) . " !important;\n";
-    echo "}\n";
-    
-    if ($gaia_def == 'iluna') {
-        echo "body, main { background-color: #121212 !important; color: #f0f0f0 !important; }\n";
-        echo ".panel-gorputza, .panel-nagusia { background-color: #121212 !important; color: #f0f0f0 !important; }\n";
-        echo ".kutxa-zuria, .kaixo-atalak, .menu-txartela, .kutxa-zuria-800, .kutxa-zuria-700, .kuadro-estatistikak, .panel-goiburua {\n";
-        echo "    background-color: #1e1e1e !important; color: #f0f0f0 !important; border-color: #333 !important;\n";
-        echo "}\n";
-        echo "h1, h2, h3, .izenburu-nagusia, .izenburu-iluna, .nabigazio-estekak a {\n";
-        echo "    color: #ffffff !important;\n";
-        echo "}\n";
-        echo ".azpititulua, .testu-gris-txikia, .azpititulu-grisa, .gray-text, .deskribapen-grisa, .logo-etiketa {\n";
-        echo "    color: #cccccc !important;\n";
-        echo "}\n";
-        echo "td, th { color: #f0f0f0 !important; border-color: #333 !important; }\n";
-        echo "th { background: #2d2d2d !important; }\n";
-        echo ".egoera-hutsa, .kutxa-hutsa-40, .inprimaki-kontrola { background-color: #1e1e1e !important; color: #fff !important; border-color: #555 !important; }\n";
-    }
-    echo "</style>\n";
-    ?>
 </head>
 <body class="<?php echo $body_class ?? 'panel-gorputza'; ?>">
     <header class="panel-goiburua">
@@ -89,7 +63,6 @@ if (file_exists($xml_path)) {
             <li><a href="errezetak.php" <?php echo (isset($uneko_orria) && $uneko_orria === 'errezetak') ? 'class="aktiboa"' : ''; ?>>Errezetak</a></li>
             <li><a href="mezuak.php" <?php echo (isset($uneko_orria) && $uneko_orria === 'mezuak') ? 'class="aktiboa"' : ''; ?>>Mezuak</a></li>
             <li><a href="abisuak.php" <?php echo (isset($uneko_orria) && $uneko_orria === 'abisuak') ? 'class="aktiboa"' : ''; ?>>Abisuak</a></li>
-            <li><a href="ezarpenak.php" <?php echo (isset($uneko_orria) && $uneko_orria === 'ezarpenak') ? 'class="aktiboa"' : ''; ?>><img src="<?php echo $bide_absolutua; ?>img/settings.svg" alt="" class="ikono-24px-erdian" <?php if ($gaia_def == 'iluna') echo 'style="filter: invert(1);"'; ?>> Ezarpenak</a></li>
             <li><a href="<?php echo $bide_absolutua; ?>php_laguntzaileak/logout.php" class="botoia botoi-ertza arrisku-kolorea" >Saioa Itxi</a></li>
             <li id="usb-status-container" class="usb-disconnected" data-tooltip="Konektatu neurketa gailua">
                 <img src="<?php echo $bide_absolutua; ?>img/usb.svg" alt="USB" class="usb-icon">

@@ -16,7 +16,7 @@ $stmt->execute([$erabiltzaile_id]);
 $erabiltzaile_datuak = $stmt->fetch(PDO::FETCH_ASSOC);
 
 // Azken neurketa lortu
-$stmtNeurketa = $pdo->prepare("SELECT data, tentsio_sistolikoa, tentsio_diastolikoa, glukosa_mg_dl FROM Neurketak WHERE paziente_id = ? ORDER BY data DESC, ordua DESC LIMIT 1");
+$stmtNeurketa = $pdo->prepare("SELECT erregistro_data, tentsio_sistolikoa, tentsio_diastolikoa, glukosa_mg_dl FROM Neurketak WHERE paziente_id = ? ORDER BY erregistro_data DESC LIMIT 1");
 $stmtNeurketa->execute([$erabiltzaile_id]);
 $azkenNeurketa = $stmtNeurketa->fetch(PDO::FETCH_ASSOC);
 
@@ -68,7 +68,7 @@ include_once '../php_includeak/paziente_goiburua.php';
                             <div class="informazio-balioa"><?php echo htmlspecialchars($erabiltzaile_datuak['azken_pisua'] ?? '-'); ?> kg</div>
                         </div>
                     </div>
-                    <p class="testu-gris-txikia marjina-goi-15">Eguneratua: <?php echo date('Y/m/d', strtotime($azkenNeurketa['data'])); ?></p>
+                    <p class="testu-gris-txikia marjina-goi-15">Eguneratua: <?php echo date('Y/m/d', strtotime($azkenNeurketa['erregistro_data'])); ?></p>
                 <?php else: ?>
                     <p class="testu-gris-etzana">Ez dago neurketa erregistratutik.</p>
                 <?php endif; ?>

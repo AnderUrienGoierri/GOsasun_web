@@ -25,7 +25,7 @@ if (!$pazientea) {
 }
 
 // 2. Azken neurketak lortu
-$stmtN = $pdo->prepare("SELECT * FROM Neurketak WHERE paziente_id = ? ORDER BY data DESC LIMIT 5");
+$stmtN = $pdo->prepare("SELECT erregistro_data, tentsio_sistolikoa, tentsio_diastolikoa, glukosa_mg_dl, pisua_kg, altuera FROM Neurketak WHERE paziente_id = ? ORDER BY erregistro_data DESC LIMIT 5");
 $stmtN->execute([$id]);
 $neurketak = $stmtN->fetchAll(PDO::FETCH_ASSOC);
 
@@ -81,7 +81,7 @@ include_once '../php_includeak/harrera_goiburua.php';
                 <h3 class="goiburu-iluna-flex">
                     Azken Parametroak
                     <?php if(count($neurketak) > 0): ?>
-                        <small class="datu-txikia-grisa">(<?php echo date('Y/m/d', strtotime($neurketak[0]['data'])); ?>)</small>
+                        <small class="datu-txikia-grisa">(<?php echo date('Y/m/d', strtotime($neurketak[0]['erregistro_data'])); ?>)</small>
                     <?php endif; ?>
                 </h3>
                 

@@ -1,6 +1,34 @@
 <?php
+session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $form_type = $_POST['form_type'] ?? 'orokorra';
+    $ekintza = $_POST['ekintza'] ?? 'gorde';
     $xml_path = "../xml_konfigurazioa/config.xml";
+
+    // 'osasun_zentroa' bada, beti globala (config.xml)
+    // 'orokorra' bada eta logeatuta badago, erabiltzailearena
+    if ($form_type === 'orokorra' && isset($_SESSION['erabiltzaile_id'])) {
+        $xml_path = "../xml_konfigurazioa/config_user_" . $_SESSION['erabiltzaile_id'] . ".xml";
+    }
+
+    // Ekintza 'reset' bada, fitxategia ezabatu eta itzuli
+    if ($ekintza === 'reset') {
+        if (file_exists($xml_path)) {
+            unlink($xml_path);
+        }
+        
+        $itzulera = $_POST['itzulera'] ?? 'orokorra';
+        if ($itzulera === 'medikua') {
+            header("Location: ../php_medikua/ezarpenak.php?ezarpenak_reset=1");
+        } elseif ($itzulera === 'pazientea') {
+            header("Location: ../php_pazientea/ezarpenak.php?ezarpenak_reset=1");
+        } elseif ($itzulera === 'harrera') {
+             header("Location: ../php_harrera/ezarpenak.php?ezarpenak_reset=1");
+        } else {
+            header("Location: ../index.php?ezarpenak_reset=1");
+        }
+        exit();
+    }
     
     // Lehenetsitako balioak (fitxategia hutsik badoa)
     $hizk = 'eu'; $kol_nag = '#4361ee'; $big_kol = '#3f37c9'; $foot_kol = '#2b2d42'; $gaia = 'argia';

@@ -41,32 +41,6 @@ if (file_exists($xml_path)) {
         }
     ?>
     <link rel="stylesheet" href="<?php echo $bide_absolutua; ?>css/<?php echo $css_fitxategia; ?>">
-    <?php
-    echo "<style>\n";
-    echo ":root {\n";
-    echo "  --primary-color: " . htmlspecialchars($kolore_nagusia_def) . " !important;\n";
-    echo "  --secondary-color: " . htmlspecialchars($bigarren_kolorea_def) . " !important;\n";
-    echo "  --footer-color: " . htmlspecialchars($footer_kolorea_def) . " !important;\n";
-    echo "}\n";
-    
-    if ($gaia_def == 'iluna') {
-        echo "body, main { background-color: #121212 !important; color: #f0f0f0 !important; }\n";
-        echo ".panel-gorputza, .panel-nagusia { background-color: #121212 !important; color: #f0f0f0 !important; }\n";
-        echo ".kutxa-zuria, .kaixo-atalak, .menu-txartela, .kutxa-zuria-800, .kutxa-zuria-700, .kuadro-estatistikak, .panel-goiburua {\n";
-        echo "    background-color: #1e1e1e !important; color: #f0f0f0 !important; border-color: #333 !important;\n";
-        echo "}\n";
-        echo "h1, h2, h3, .izenburu-nagusia, .izenburu-iluna, .nabigazio-estekak a {\n";
-        echo "    color: #ffffff !important;\n";
-        echo "}\n";
-        echo ".azpititulua, .testu-gris-txikia, .azpititulu-grisa, .gray-text, .deskribapen-grisa, .logo-etiketa {\n";
-        echo "    color: #cccccc !important;\n";
-        echo "}\n";
-        echo "td, th { color: #f0f0f0 !important; border-color: #333 !important; }\n";
-        echo "th { background: #2d2d2d !important; }\n";
-        echo ".egoera-hutsa, .kutxa-hutsa-40, .inprimaki-kontrola { background-color: #1e1e1e !important; color: #fff !important; border-color: #555 !important; }\n";
-    }
-    echo "</style>\n";
-    ?>
 </head>
 <body class="<?php echo $body_class ?? 'panel-gorputza'; ?>">
     <header class="panel-goiburua">
@@ -85,7 +59,6 @@ if (file_exists($xml_path)) {
             <li><a href="mezuak.php" class="<?php echo ($uneko_orria === 'mezuak') ? 'aktiboa' : ''; ?>">Mezuak</a></li>
             <li><a href="kanpoko_mezuak.php" class="<?php echo ($uneko_orria === 'kanpoko_mezuak') ? 'aktiboa' : ''; ?>">Kanpoko Mezuak</a></li>
             <li><a href="harrerako_langileak.php" class="<?php echo ($uneko_orria === 'harrerako_langileak') ? 'aktiboa' : ''; ?>">Harrerako Langileak</a></li>
-            <li><a href="ezarpenak.php" class="<?php echo ($uneko_orria === 'ezarpenak') ? 'aktiboa' : ''; ?>"><img src="<?php echo $bide_absolutua; ?>img/settings.svg" alt="" class="ikono-24px-erdian" <?php if ($gaia_def == 'iluna') echo 'style="filter: invert(1);"'; ?>> Ezarpenak</a></li>
             <li><a href="<?php echo $bide_absolutua; ?>php_laguntzaileak/logout.php" class="botoia botoi-ertza arrisku-kolorea">Saioa Itxi</a></li>
         </ul>
     </header>

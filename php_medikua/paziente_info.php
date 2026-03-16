@@ -39,7 +39,7 @@ $stmt->execute([$paziente_id]);
 $pazientea = $stmt->fetch(PDO::FETCH_ASSOC);
 
 // Azken neurketak
-$stmtNeurketak = $pdo->prepare("SELECT * FROM Neurketak WHERE paziente_id = ? ORDER BY data DESC, ordua DESC LIMIT 10");
+$stmtNeurketak = $pdo->prepare("SELECT erregistro_data, glukosa_mg_dl, tentsio_sistolikoa, tentsio_diastolikoa, pisua_kg, sintomak FROM Neurketak WHERE paziente_id = ? ORDER BY erregistro_data DESC LIMIT 10");
 $stmtNeurketak->execute([$paziente_id]);
 $neurketak = $stmtNeurketak->fetchAll(PDO::FETCH_ASSOC);
 
@@ -140,7 +140,7 @@ include_once '../php_includeak/mediku_goiburua.php';
                             <taula_gorputza>
                                 <?php foreach ($neurketak as $n): ?>
                                     <tr>
-                                        <td><?php echo date('Y/m/d H:i', strtotime($n['data'] . ' ' . $n['ordua'])); ?></td>
+                                        <td><?php echo date('Y/m/d H:i', strtotime($n['erregistro_data'])); ?></td>
                                         <td><?php echo $n['glukosa_mg_dl']; ?> mg/dL</td>
                                         <td><?php echo $n['tentsio_sistolikoa'] . '/' . $n['tentsio_diastolikoa']; ?></td>
                                         <td><?php echo $n['pisua_kg']; ?> kg</td>
