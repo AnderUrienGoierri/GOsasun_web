@@ -21,6 +21,7 @@ $konf = kargatuKonfigurazioa(false);
 $hizkuntza_def = $konf['hizkuntza'];
 $kolore_nagusia_def = $konf['kolore_nagusia'];
 $bigarren_kolorea_def = $konf['bigarren_kolorea'];
+$footer_kolorea_def = $konf['footer_kolorea'];
 $gaia_def = $konf['gaia'];
 ?>
 
@@ -78,6 +79,21 @@ $gaia_def = $konf['gaia'];
                             </label>
                         </div>
                     </div>
+                </div>
+ 
+                <div class="inprimaki-taldea">
+                    <label><?php echo $itzulpenak->ezarpenak->kolore_nagusia; ?></label>
+                    <input type="color" name="kolore_nagusia" value="<?php echo htmlspecialchars($kolore_nagusia_def); ?>" class="inprimaki-kontrola sarrera-altuera-50">
+                </div>
+ 
+                <div class="inprimaki-taldea">
+                    <label><?php echo $itzulpenak->ezarpenak->bigarren_kolorea; ?></label>
+                    <input type="color" name="bigarren_kolorea" value="<?php echo htmlspecialchars($bigarren_kolorea_def); ?>" class="inprimaki-kontrola sarrera-altuera-50">
+                </div>
+ 
+                <div class="inprimaki-taldea">
+                    <label><?php echo $itzulpenak->ezarpenak->footer_kolorea; ?></label>
+                    <input type="color" name="footer_kolorea" value="<?php echo htmlspecialchars($footer_kolorea_def); ?>" class="inprimaki-kontrola sarrera-altuera-50">
                 </div>
  
                 <div class="inprimaki-taldea">
