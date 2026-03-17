@@ -4,10 +4,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Debug log
     error_log("Saving configuration. Form type: " . ($_POST['form_type'] ?? 'unknown') . ". Language: " . ($_POST['hizkuntza'] ?? 'not set'));
     
-    $debug_log = __DIR__ . "/save_debug.log";
-    $log_msg = date('[Y-m-d H:i:s] ') . "POST: " . json_encode($_POST) . "\n";
-    file_put_contents($debug_log, $log_msg, FILE_APPEND);
-    
     $form_type = $_POST['form_type'] ?? 'orokorra';
     $ekintza = $_POST['ekintza'] ?? 'gorde';
     $xml_path = "../xml_konfigurazioa/konfigurazio_orokorra.xml";
@@ -68,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
  
     // Log values right before saving
-    file_put_contents($debug_log, "FINAL VALUES: " . json_encode(['hizk'=>$hizk, 'path'=>$xml_path]) . "\n", FILE_APPEND);
+ 
  
     $xml = new DOMDocument("1.0", "UTF-8");
     $xml->formatOutput = true;
@@ -82,9 +78,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $root->appendChild($xml->createElement("gaia", $gaia));
 
     if ($xml->save($xml_path)) {
-        file_put_contents($debug_log, "SAVED SUCCESSFULLY to " . realpath($xml_path) . "\n", FILE_APPEND);
+        // saved
     } else {
-        file_put_contents($debug_log, "SAVE FAILED to " . $xml_path . "\n", FILE_APPEND);
+        // failed
     }
 
     $nondik = $_POST['nondik'] ?? '';
