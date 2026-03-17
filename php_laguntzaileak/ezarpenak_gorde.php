@@ -102,6 +102,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: ../php_medikua/ezarpenak.php?ezarpenak_gordeta=1");
     } elseif ($itzulera === 'pazientea') {
         header("Location: ../php_pazientea/ezarpenak.php?ezarpenak_gordeta=1");
+    } elseif ($itzulera === 'harrera') {
+        header("Location: ../php_harrera/ezarpenak.php?ezarpenak_gordeta=1");
     } else {
         header("Location: ../index.php?ezarpenak_gordeta=1");
     }
