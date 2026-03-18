@@ -132,6 +132,10 @@
         <itxura>Aplikazioaren Itxura (Gaia):</itxura>
         <gaia_argia>Argia (Mahaigaina klasikoa)</gaia_argia>
         <gaia_iluna>Iluna (Modo oscuro)</gaia_iluna>
+        <hizkuntza_eu>Euskara</hizkuntza_eu>
+        <hizkuntza_es>Gaztelania</hizkuntza_es>
+        <hizkuntza_en>Ingelesa</hizkuntza_en>
+        <hizkuntza_nl>Nederlandera</hizkuntza_nl>
         <gorde_botoia>Gorde Ezarpenak (XML-an)</gorde_botoia>
         <reset_botoia>Berreskuratu hasierako baloreak</reset_botoia>
         <reset_konfirmazioa>Ziur zaude hasierako baloreak berreskuratu nahi dituzula?</reset_konfirmazioa>
