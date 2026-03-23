@@ -23,7 +23,7 @@ include_once '../php_includeak/paziente_goiburua.php';
 
     <main class="panel-nagusia">
         <div class="orri-goiburua">
-            <h2><img src="../img/clipboard-pen.svg" alt="" class="ikono-ertaina marjina-esk-5"> Neurketen Historiala</h2>
+            <h2><img src="../img/svg/clipboard-pen.svg" alt="" class="ikono-ertaina marjina-esk-5"> Neurketen Historiala</h2>
             <p>Hemen zure osasun datuen jarraipena ikusi dezakezu. Neurketak kanpoko gailu bidez inportatzen dira.</p>
         </div>
 

@@ -41,7 +41,13 @@ include_once '../php_includeak/paziente_goiburua.php';
 ?>
     <main class="panel-nagusia">
         <section class="kaixo-atalak">
-            <img src="../<?php echo str_replace('img/', 'img/png/', htmlspecialchars($erabiltzaile_datuak['irudia'] ?? 'img/lehenetsia_pazientea.png')); ?>" alt="Zure profila" class="profil-irudia-80">
+            <?php 
+            $irudia_bide = htmlspecialchars($erabiltzaile_datuak['irudia'] ?? 'img/lehenetsia_pazientea.png');
+            if (strpos($irudia_bide, 'img/') === 0 && strpos($irudia_bide, 'img/png/') === false && strpos($irudia_bide, 'img/svg/') === false) {
+                $irudia_bide = str_replace('img/', 'img/png/', $irudia_bide);
+            }
+            ?>
+            <img src="../<?php echo $irudia_bide; ?>" alt="Zure profila" class="profil-irudia-80">
             <div>
                 <h1 class="izenburu-nagusia"><?php echo $itzulpenak->erabiltzaile_panela->kaixo; ?>, <?php echo htmlspecialchars($erabiltzaile_datuak['izena']); ?>?</h1>
                 <p class="azpititulu-grisa"><?php echo $itzulpenak->erabiltzaile_panela->laburpena; ?></p>

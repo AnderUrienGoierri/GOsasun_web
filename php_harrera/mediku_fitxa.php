@@ -53,7 +53,13 @@ include_once '../php_includeak/harrera_goiburua.php';
     <div class="fitxa-edukiontzia">
         <!-- Ezkerreko zutabea: Datu profesionalak -->
         <div class="profil-txartela">
-            <img src="../<?php echo htmlspecialchars($medikua['irudia'] ?? 'img/lehenetsia_medikua.png'); ?>" alt="Profila" class="profil-irudia">
+            <?php 
+            $irudia_bide = htmlspecialchars($medikua['irudia'] ?? 'img/lehenetsia_medikua.png');
+            if (strpos($irudia_bide, 'img/') === 0 && strpos($irudia_bide, 'img/png/') === false && strpos($irudia_bide, 'img/svg/') === false) {
+                $irudia_bide = str_replace('img/', 'img/png/', $irudia_bide);
+            }
+            ?>
+            <img src="../<?php echo $irudia_bide; ?>" alt="Profila" class="profil-irudia">
             <h3><?php echo htmlspecialchars($medikua['izena'] . ' ' . $medikua['abizenak']); ?></h3>
             <div class="espezialitatea-txapa"><?php echo htmlspecialchars($medikua['espezialitatea']); ?></div>
             

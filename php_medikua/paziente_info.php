@@ -77,7 +77,13 @@ include_once '../php_includeak/mediku_goiburua.php';
         <div class="profil-edukiontzia">
             <div class="paziente-txartela paziente-txartel-zuria" >
             <div class="argazki-inguratzailea">
-                <img src="../<?php echo htmlspecialchars($pazientea['irudia'] ?? 'img/lehenetsia_pazientea.png'); ?>" 
+                <?php 
+                $irudia_bide = htmlspecialchars($pazientea['irudia'] ?? 'img/lehenetsia_pazientea.png');
+                if (strpos($irudia_bide, 'img/') === 0 && strpos($irudia_bide, 'img/png/') === false && strpos($irudia_bide, 'img/svg/') === false) {
+                    $irudia_bide = str_replace('img/', 'img/png/', $irudia_bide);
+                }
+                ?>
+                <img src="../<?php echo $irudia_bide; ?>" 
                      alt="Pazientea" 
                      class="paziente-irudi-handia">
             </div>

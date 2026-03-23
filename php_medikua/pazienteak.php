@@ -27,7 +27,7 @@ include_once '../php_includeak/mediku_goiburua.php';
     <main class="panel-nagusia">
         <div class="orri-goiburua">
             <div>
-                <h2><img src="../img/users.svg" alt="" class="ikono-ertaina marjina-esk-5"> Nire Pazienteak</h2>
+                <h2><img src="../img/svg/users.svg" alt="" class="ikono-ertaina marjina-esk-5"> Nire Pazienteak</h2>
                 <p>Zuri esleitutako pazienteen zerrenda eta jarraipena.</p>
             </div>
             <div class="bilaketa-barra">
@@ -40,9 +40,9 @@ include_once '../php_includeak/mediku_goiburua.php';
                 <thead>
                     <tr>
                         <th>Argazkia</th>
-                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(1)">ID <img src="../img/sort.svg" alt="" class="ikono-txikia-gardena"></th>
-                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(2)">Izen-abizenak <img src="../img/sort.svg" alt="" class="ikono-txikia-gardena"></th>
-                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(3)">NAN <img src="../img/sort.svg" alt="" class="ikono-txikia-gardena"></th>
+                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(1)">ID <img src="../img/svg/sort.svg" alt="" class="ikono-txikia-gardena"></th>
+                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(2)">Izen-abizenak <img src="../img/svg/sort.svg" alt="" class="ikono-txikia-gardena"></th>
+                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(3)">NAN <img src="../img/svg/sort.svg" alt="" class="ikono-txikia-gardena"></th>
                         <th>Telefonoa</th>
                         <th>Odol Taldea</th>
                         <th>Ekintzak</th>
@@ -53,7 +53,7 @@ include_once '../php_includeak/mediku_goiburua.php';
                         <?php foreach ($pazienteak as $p): ?>
                             <tr>
                                 <td class="zabalera-50">
-                                    <img src="../img/lehenetsia_pazientea.png" 
+                                    <img src="../img/png/lehenetsia_pazientea.png" 
                                          alt="ID" class="irudia-txikia">
                                 </td>
                                 <td class="identifikadorea">#<?php echo $p['paziente_id']; ?></td>
@@ -65,7 +65,7 @@ include_once '../php_includeak/mediku_goiburua.php';
                                 <td><span class="badge odol-txapa"><?php echo htmlspecialchars($p['odol_taldea'] ?? '-'); ?></span></td>
                                 <td>
                                     <div class="taula-ekintzak">
-                                        <a href="paziente_info.php?id=<?php echo $p['paziente_id']; ?>" class="botoi-ikonoa ikusi-botoia" title="Ikusi xehetasunak"><img src="../img/eye.svg" alt="" class="ikono-ertaina marjina-esk-5"></a>
+                                        <a href="paziente_info.php?id=<?php echo $p['paziente_id']; ?>" class="botoi-ikonoa ikusi-botoia" title="Ikusi xehetasunak"><img src="../img/svg/eye.svg" alt="" class="ikono-ertaina marjina-esk-5"></a>
                                     </div>
                                 </td>
                             </tr>

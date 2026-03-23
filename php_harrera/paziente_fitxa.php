@@ -60,7 +60,13 @@ include_once '../php_includeak/harrera_goiburua.php';
     <div class="fitxa-edukiontzia">
         <!-- Ezkerreko zutabea: Datu pertsonalak -->
         <div class="profil-txartela">
-            <img src="../<?php echo htmlspecialchars($pazientea['irudia'] ?? 'img/lehenetsia_pazientea.png'); ?>" alt="Profila" class="profil-irudia">
+            <?php 
+            $irudia_bide = htmlspecialchars($pazientea['irudia'] ?? 'img/lehenetsia_pazientea.png');
+            if (strpos($irudia_bide, 'img/') === 0 && strpos($irudia_bide, 'img/png/') === false && strpos($irudia_bide, 'img/svg/') === false) {
+                $irudia_bide = str_replace('img/', 'img/png/', $irudia_bide);
+            }
+            ?>
+            <img src="../<?php echo $irudia_bide; ?>" alt="Profila" class="profil-irudia">
             <h3><?php echo htmlspecialchars($pazientea['izena'] . ' ' . $pazientea['abizenak']); ?></h3>
             <p class="identifikadorea">ID: #<?php echo $pazientea['paziente_id']; ?> | NAN: <?php echo htmlspecialchars($pazientea['nan']); ?></p>
             
