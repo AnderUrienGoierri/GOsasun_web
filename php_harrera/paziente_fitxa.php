@@ -48,7 +48,7 @@ include_once '../php_includeak/harrera_goiburua.php';
 
 
 <main class="panel-nagusia">
-    <a href="pazienteak.php" class="atzera-botoia"><img src="../img/arrow-left.svg" alt="" class="ikono-ertaina marjina-esk-5"> Pazienteen zerrendara itzuli</a>
+    <a href="pazienteak.php" class="atzera-botoia"><img src="../img/svg/arrow-left.svg" alt="" class="ikono-ertaina marjina-esk-5"> Pazienteen zerrendara itzuli</a>
     
     <div class="orri-goiburua">
         <h2><img src="../img/user.svg" alt="" class="ikono-ertaina marjina-esk-5"> Pazientearen Fitxa</h2>

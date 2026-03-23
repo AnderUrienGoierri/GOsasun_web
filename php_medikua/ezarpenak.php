@@ -24,8 +24,8 @@ $gaia_def = $konf['gaia'];
 
 <main class="panel-nagusia">
     <div class="orri-goiburua">
-        <h1><img src="../img/settings.svg" alt="" class="ikono-32px-erdian"> <?php echo $itzulpenak->menua_medikua->ezarpenak ?? 'Ezarpenak'; ?></h1>
-        <a href="index.php" class="botoia botoi-itsua"><img src="../img/arrow-left.svg" alt="" class="ikono-16px-erdian"> <?php echo $itzulpenak->login->itzuli ?? 'Itzuli'; ?></a>
+        <h1><img src="../img/svg/settings.svg" alt="" class="ikono-32px-erdian"> <?php echo $itzulpenak->menua_medikua->ezarpenak ?? 'Ezarpenak'; ?></h1>
+        <a href="index.php" class="botoia botoi-itsua"><img src="../img/svg/arrow-left.svg" alt="" class="ikono-16px-erdian"> <?php echo $itzulpenak->login->itzuli ?? 'Itzuli'; ?></a>
     </div>
  
     <section class="ezarpen-panela-wrapper edukiontzi-ertaina">
@@ -50,28 +50,28 @@ $gaia_def = $konf['gaia'];
                         <div class="hizkuntza-aukera">
                             <input type="radio" name="hizkuntza" id="lang-eu" value="eu" <?php echo ($hizkuntza_def === 'eu') ? 'checked' : ''; ?>>
                             <label for="lang-eu" class="aukera-edukia">
-                                <img src="../img/hizkunta_ikonoak/eu.png" alt="Euskara" style="width:60px !important; height:60px !important; border-radius:50%; object-fit:cover;">
+                                <img src="../img/png/hizkunta_ikonoak/eu.png" alt="Euskara" style="width:60px !important; height:60px !important; border-radius:50%; object-fit:cover;">
                                 <span><?php echo $itzulpenak->ezarpenak->hizkuntza_eu; ?></span>
                             </label>
                         </div>
                         <div class="hizkuntza-aukera">
                             <input type="radio" name="hizkuntza" id="lang-es" value="es" <?php echo ($hizkuntza_def === 'es') ? 'checked' : ''; ?>>
                             <label for="lang-es" class="aukera-edukia">
-                                <img src="../img/hizkunta_ikonoak/es.png" alt="Castellano" style="width:60px !important; height:60px !important; border-radius:50%; object-fit:cover;">
+                                <img src="../img/png/hizkunta_ikonoak/es.png" alt="Castellano" style="width:60px !important; height:60px !important; border-radius:50%; object-fit:cover;">
                                 <span><?php echo $itzulpenak->ezarpenak->hizkuntza_es; ?></span>
                             </label>
                         </div>
                         <div class="hizkuntza-aukera">
                             <input type="radio" name="hizkuntza" id="lang-en" value="en" <?php echo ($hizkuntza_def === 'en') ? 'checked' : ''; ?>>
                             <label for="lang-en" class="aukera-edukia">
-                                <img src="../img/hizkunta_ikonoak/en.png" alt="English" style="width:60px !important; height:60px !important; border-radius:50%; object-fit:cover;">
+                                <img src="../img/png/hizkunta_ikonoak/en.png" alt="English" style="width:60px !important; height:60px !important; border-radius:50%; object-fit:cover;">
                                 <span><?php echo $itzulpenak->ezarpenak->hizkuntza_en; ?></span>
                             </label>
                         </div>
                         <div class="hizkuntza-aukera">
                             <input type="radio" name="hizkuntza" id="lang-nl" value="nl" <?php echo ($hizkuntza_def === 'nl') ? 'checked' : ''; ?>>
                             <label for="lang-nl" class="aukera-edukia">
-                                <img src="../img/hizkunta_ikonoak/nl.png" alt="Nederlands" style="width:60px !important; height:60px !important; border-radius:50%; object-fit:cover;">
+                                <img src="../img/png/hizkunta_ikonoak/nl.png" alt="Nederlands" style="width:60px !important; height:60px !important; border-radius:50%; object-fit:cover;">
                                 <span><?php echo $itzulpenak->ezarpenak->hizkuntza_nl; ?></span>
                             </label>
                         </div>

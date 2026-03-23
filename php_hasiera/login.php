@@ -93,7 +93,7 @@ include '../php_includeak/goiburua.php';
             </form>
             
             <div class="hasiera-oina">
-                <p><a href="../index.php"><img src="../img/arrow-left.svg" alt="" class="ikono-16px-erdian"> <?php echo $itzulpenak->login->itzuli; ?></a></p>
+                <p><a href="../index.php"><img src="../img/svg/arrow-left.svg" alt="" class="ikono-16px-erdian"> <?php echo $itzulpenak->login->itzuli; ?></a></p>
             </div>
         </div>
     </div>

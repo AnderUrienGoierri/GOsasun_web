@@ -55,7 +55,7 @@ include_once '../php_includeak/harrera_goiburua.php';
         <?php if ($arrakasta_mezua): ?>
             <div class="alerta alerta-arrakasta marjina-behe-20">
                 <?php echo $arrakasta_mezua; ?>
-                <div class="marjina-goi-10"><a href="mezuak.php" class="esteka-arrakasta"><img src="../img/arrow-left.svg" alt="" class="ikono-1em marjina-esk-5"> Itzuli mezuetara</a></div>
+                <div class="marjina-goi-10"><a href="mezuak.php" class="esteka-arrakasta"><img src="../img/svg/arrow-left.svg" alt="" class="ikono-1em marjina-esk-5"> Itzuli mezuetara</a></div>
             </div>
         <?php endif; ?>
 

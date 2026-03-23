@@ -54,7 +54,7 @@ include_once '../php_includeak/mediku_goiburua.php';
     
 
     <main class="panel-nagusia">
-        <a href="pazienteak.php" class="atzera-esteka"><img src="../img/arrow-left.svg" alt="" class="ikono-1em marjina-esk-5"> Itzuli zerrendara</a>
+        <a href="pazienteak.php" class="atzera-esteka"><img src="../img/svg/arrow-left.svg" alt="" class="ikono-1em marjina-esk-5"> Itzuli zerrendara</a>
         
         <div class="orri-goiburua">
             <h2>Pazientearen Fitxa Klinikoa</h2>
