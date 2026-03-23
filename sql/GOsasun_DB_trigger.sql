@@ -7,19 +7,18 @@ DROP TRIGGER IF EXISTS Eguneratu_Paziente_Datuak;
 DELIMITER //
 
 CREATE TRIGGER Eguneratu_Paziente_Datuak
+
 AFTER INSERT ON Neurketak   -- taula intermedioa (historial_neurketak) sortu beharko da? 
 FOR EACH ROW
 BEGIN
-    UPDATE Pazienteak
-    SET azken_pisua = IFNULL(NEW.pisua_kg, azken_pisua),
-        azken_altuera = IFNULL(NEW.altuera, azken_altuera)
+    UPDATE Pazienteak   -- NEURKETAK taulan insert bat egiten denean eguneratu pazienteak taulako azken_pisua eta azken_altuera zutabeak
+    SET azken_pisua =   IFNULL(NEW.pisua_kg, azken_pisua),   -- pisu neurketa berriak balioa badu, eguneratu, bestela, ez
+        azken_altuera = IFNULL(NEW.altuera, azken_altuera)   -- altuera neurketa berriak balioa badu, eguneratu, bestela, ez
     WHERE paziente_id = NEW.paziente_id;
-END //
+END 
 
-DELIMITER ;
+// DELIMITER ;
 
 -- nahikoa da trigger hau   ?
 
--- 2. TG_Abisuak_Sortu: Neurketa berrietan abisu klinikoak automatikoki sortzeko
--- (MIGRATUTA JS-RA)
--- Abisuak orain js/abisuak_logika.js bidez kudeatzen dira.
+
