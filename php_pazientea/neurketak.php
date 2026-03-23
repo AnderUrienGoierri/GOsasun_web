@@ -27,7 +27,7 @@ include_once '../php_includeak/paziente_goiburua.php';
             <p>Hemen zure osasun datuen jarraipena ikusi dezakezu. Neurketak kanpoko gailu bidez inportatzen dira.</p>
         </div>
 
-        <div class="txartel-klinikoa marjina-goi-20">
+        <div class="txartel-klinikoa">
             <h3><img src="../img/svg/line-chart.svg" alt="" class="ikono-1_5rem marjina-esk-10"> Azken Neurketak</h3>
             
             <?php if (count($neurketak) > 0): ?>

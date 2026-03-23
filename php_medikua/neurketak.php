@@ -73,7 +73,7 @@ include_once '../php_includeak/mediku_goiburua.php';
         </div>
 
         <?php if ($paziente_id_aukera): ?>
-            <div class="txartel-klinikoa marjina-goi-30">
+            <div class="txartel-klinikoa">
                 <div class="flex-tartea-15 flex-erdia marjina-behe-15">
                     <h3 class="izenburu-urdina marjina-behe-0"><?php echo htmlspecialchars($paziente_izena); ?> -(r)en Neurketak</h3>
                     <a href="paziente_info.php?id=<?php echo $paziente_id_aukera; ?>" class="testu-esteka testu-gris-txikia">Ikusi fitxa osoa</a>

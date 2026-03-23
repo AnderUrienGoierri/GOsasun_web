@@ -16,7 +16,7 @@ $stmt->execute([$erabiltzaile_id]);
 $erabiltzaile_datuak = $stmt->fetch(PDO::FETCH_ASSOC);
 
 // Azken neurketa lortu
-$stmtNeurketa = $pdo->prepare("SELECT erregistro_data, tentsio_sistolikoa, tentsio_diastolikoa, glukosa_mg_dl FROM Neurketak WHERE paziente_id = ? ORDER BY erregistro_data DESC LIMIT 1");
+$stmtNeurketa = $pdo->prepare("SELECT erregistro_data, tentsio_sistolikoa, tentsio_diastolikoa, glukosa_mg_dl, pultsua_ppm, altuera, pisua_kg FROM Neurketak WHERE paziente_id = ? ORDER BY erregistro_data DESC LIMIT 1");
 $stmtNeurketa->execute([$erabiltzaile_id]);
 $azkenNeurketa = $stmtNeurketa->fetch(PDO::FETCH_ASSOC);
 
@@ -53,6 +53,12 @@ include_once '../php_includeak/paziente_goiburua.php';
             <!-- Azken Neurketak -->
             <div id="dash-neurketak-card" class="kutxa-zuria-itzala">
                 <h3 class="izenburu-iluna"><img src="../img/svg/line-chart.svg" alt="" class="ikono-ertaina marjina-esk-5"> <?php echo $itzulpenak->dashboard_pazientea->azken_neurketak; ?></h3>
+                
+                <div class="paziente-informazio-laburpena marjina-behe-15">
+                    <p><strong><?php echo htmlspecialchars($erabiltzaile_datuak['izena'] . ' ' . $erabiltzaile_datuak['abizenak']); ?></strong></p>
+                    <p class="testu-gris-txikia"><?php echo date('Y/m/d', strtotime($erabiltzaile_datuak['jaiotze_data'])); ?> (<?php echo $erabiltzaile_datuak['odol_taldea']; ?>)</p>
+                </div>
+
                 <?php if ($azkenNeurketa): ?>
                     <div class="sareta-bikoa">
                         <div class="informazio-taldea">
@@ -64,8 +70,16 @@ include_once '../php_includeak/paziente_goiburua.php';
                             <div class="informazio-balioa"><?php echo htmlspecialchars($azkenNeurketa['glukosa_mg_dl']); ?> mg/dL</div>
                         </div>
                         <div class="informazio-taldea">
+                            <label><?php echo $itzulpenak->dashboard_pazientea->pultsua; ?></label>
+                            <div class="informazio-balioa"><?php echo htmlspecialchars($azkenNeurketa['pultsua_ppm'] ?? '-'); ?> ppm</div>
+                        </div>
+                        <div class="informazio-taldea">
+                            <label><?php echo $itzulpenak->dashboard_pazientea->altuera; ?></label>
+                            <div class="informazio-balioa"><?php echo htmlspecialchars($azkenNeurketa['altuera'] ?? '-'); ?> cm</div>
+                        </div>
+                        <div class="informazio-taldea">
                             <label><?php echo $itzulpenak->dashboard_pazientea->pisua; ?></label>
-                            <div class="informazio-balioa"><?php echo htmlspecialchars($erabiltzaile_datuak['azken_pisua'] ?? '-'); ?> kg</div>
+                            <div class="informazio-balioa"><?php echo htmlspecialchars($azkenNeurketa['pisua_kg'] ?? $erabiltzaile_datuak['azken_pisua'] ?? '-'); ?> kg</div>
                         </div>
                     </div>
                     <p class="testu-gris-txikia marjina-goi-15"><?php echo $itzulpenak->dashboard_pazientea->eguneratua; ?>: <?php echo date('Y/m/d', strtotime($azkenNeurketa['erregistro_data'])); ?></p>
