@@ -1,4 +1,4 @@
-﻿-- GOsasun_DB_data.sql
+-- GOsasun_DB_data.sql
 USE GOsasun_DB;
 -- Disable constraint checks temporarily for bulk inserts if needed (optional)
 SET FOREIGN_KEY_CHECKS = 0;
@@ -1351,6 +1351,7 @@ INSERT INTO Neurketak (
         tentsio_diastolikoa,
         pisua_kg,
         altuera,
+        pultsua_ppm,
         sintomak
     ) VALUES (
         51,
@@ -1360,6 +1361,7 @@ INSERT INTO Neurketak (
         85,
         64.5,
         1.75,
+        72,
         'Arazorik gabe, medikazioa hartuta.'
     ),
     (
@@ -1370,6 +1372,7 @@ INSERT INTO Neurketak (
         82,
         64.8,
         1.75,
+        70,
         'Lotan ondo deskantsatu dut.'
     ),
     (
@@ -1380,6 +1383,7 @@ INSERT INTO Neurketak (
         90,
         65.0,
         1.62,
+        88,
         'Buruhauste txikiak goizean.'
     ),
     (
@@ -1390,6 +1394,7 @@ INSERT INTO Neurketak (
         88,
         65.4,
         1.62,
+        84,
         'Hobeto sentitzen naiz gaur.'
     ),
     (
@@ -1400,6 +1405,7 @@ INSERT INTO Neurketak (
         80,
         82.3,
         1.80,
+        76,
         'Krisi asmatikoa gaindituta.'
     ),
     (
@@ -1410,6 +1416,7 @@ INSERT INTO Neurketak (
         95,
         85.1,
         1.78,
+        92,
         'Odol azukrea apur bat altu.'
     ),
     (
@@ -1420,6 +1427,7 @@ INSERT INTO Neurketak (
         90,
         84.7,
         1.78,
+        88,
         'Dieta zaintzen nabil.'
     ),
     (
@@ -1430,6 +1438,7 @@ INSERT INTO Neurketak (
         88,
         84.5,
         1.78,
+        85,
         'Emaitzak hobetzen.'
     ),
     (
@@ -1440,6 +1449,7 @@ INSERT INTO Neurketak (
         75,
         62.4,
         1.55,
+        68,
         'Dena ondo.'
     ),
     (
@@ -1450,6 +1460,7 @@ INSERT INTO Neurketak (
         86,
         76.8,
         1.72,
+        74,
         'Arnasestuka kirola egitean.'
     ),
     (
@@ -1460,6 +1471,7 @@ INSERT INTO Neurketak (
         80,
         81.0,
         1.79,
+        72,
         'Normaltasuna.'
     ),
     (
@@ -1470,6 +1482,7 @@ INSERT INTO Neurketak (
         95,
         79.2,
         1.70,
+        95,
         'Tentsioa apur bat altu.'
     ),
     (
@@ -1480,6 +1493,7 @@ INSERT INTO Neurketak (
         78,
         75.6,
         1.75,
+        70,
         'Begi lekuan mina.'
     ),
     (
@@ -1490,6 +1504,7 @@ INSERT INTO Neurketak (
         84,
         74.4,
         1.69,
+        78,
         'Eztula dut egun osoan.'
     ),
     (
@@ -1500,6 +1515,7 @@ INSERT INTO Neurketak (
         88,
         80.5,
         1.76,
+        82,
         'Bularreko mina txikia.'
     ),
     (
@@ -1510,6 +1526,7 @@ INSERT INTO Neurketak (
         76,
         77.1,
         1.74,
+        65,
         'Belauneko mina.'
     ),
     (
@@ -1520,6 +1537,7 @@ INSERT INTO Neurketak (
         82,
         72.9,
         1.68,
+        72,
         'Urdailgo mina jan ondoren.'
     ),
     (
@@ -1530,6 +1548,7 @@ INSERT INTO Neurketak (
         92,
         86.7,
         1.81,
+        96,
         'Takikardiak tarteka.'
     ),
     (
@@ -1540,6 +1559,7 @@ INSERT INTO Neurketak (
         80,
         83.4,
         1.77,
+        74,
         'Aldakako mina.'
     ),
     (
@@ -1550,6 +1570,7 @@ INSERT INTO Neurketak (
         96,
         78.8,
         1.73,
+        90,
         'Nekea eta zorabioak.'
     ),
     (
@@ -1560,6 +1581,7 @@ INSERT INTO Neurketak (
         85,
         84.6,
         1.79,
+        76,
         'Dena ondo doa.'
     ),
     (
@@ -1570,6 +1592,7 @@ INSERT INTO Neurketak (
         78,
         75.9,
         1.71,
+        72,
         'Arnasa hartzeko zailtasun txikiak.'
     ),
     (
@@ -1580,6 +1603,7 @@ INSERT INTO Neurketak (
         90,
         89.1,
         1.83,
+        84,
         'Gernu arazoak.'
     ),
     (
@@ -1590,6 +1614,7 @@ INSERT INTO Neurketak (
         94,
         73.2,
         1.68,
+        82,
         'Ahotseko urradura.'
     ),
     (
@@ -1600,6 +1625,7 @@ INSERT INTO Neurketak (
         82,
         80.8,
         1.74,
+        78,
         'Bihotz erritmo irregularra.'
     ),
     (
@@ -1610,6 +1636,7 @@ INSERT INTO Neurketak (
         86,
         68.6,
         1.66,
+        75,
         'Dena normaltasunean.'
     ),
     (
@@ -1620,6 +1647,7 @@ INSERT INTO Neurketak (
         92,
         82.5,
         1.76,
+        85,
         'Hanka minduta.'
     ),
     (
@@ -1630,6 +1658,7 @@ INSERT INTO Neurketak (
         84,
         85.4,
         1.80,
+        82,
         'Arnasketa sakona egitean mina.'
     ),
     (
@@ -1640,6 +1669,7 @@ INSERT INTO Neurketak (
         88,
         83.9,
         1.78,
+        88,
         'Larruazaleko orbanak.'
     ),
     (
@@ -1650,6 +1680,7 @@ INSERT INTO Neurketak (
         84,
         64.7,
         1.75,
+        73,
         'Beti bezala.'
     ),
     (
@@ -1660,6 +1691,7 @@ INSERT INTO Neurketak (
         75,
         59.8,
         1.68,
+        64,
         'Ondo sentitzen naiz.'
     ),
     (
@@ -1670,6 +1702,7 @@ INSERT INTO Neurketak (
         78,
         55.2,
         1.60,
+        75,
         'Eskalatzen min hartu nuen besoan.'
     ),
     (
@@ -1680,6 +1713,7 @@ INSERT INTO Neurketak (
         80,
         61.5,
         1.65,
+        72,
         'Bizkarreko mina lanean.'
     ),
     (
@@ -1690,6 +1724,7 @@ INSERT INTO Neurketak (
         82,
         58.7,
         1.58,
+        68,
         'Dena ondo.'
     ),
     (
@@ -1700,6 +1735,7 @@ INSERT INTO Neurketak (
         76,
         63.1,
         1.64,
+        70,
         'Azal gorritua eguzkiagatik.'
     ),
     (
@@ -1710,6 +1746,7 @@ INSERT INTO Neurketak (
         85,
         66.3,
         1.67,
+        82,
         'Digestio astuna atzo.'
     ),
     (
@@ -1720,6 +1757,7 @@ INSERT INTO Neurketak (
         80,
         60.9,
         1.61,
+        74,
         'Medikazioa ahaztu nuen.'
     ),
     (
@@ -1730,6 +1768,7 @@ INSERT INTO Neurketak (
         88,
         68.2,
         1.71,
+        88,
         'Zorabio txikia goizean.'
     ),
     (
@@ -1740,6 +1779,7 @@ INSERT INTO Neurketak (
         78,
         62.8,
         1.63,
+        72,
         'Buruko miña.'
     ),
     (
@@ -1750,6 +1790,7 @@ INSERT INTO Neurketak (
         84,
         64.6,
         1.66,
+        76,
         'Normal.'
     ),
     (
@@ -1760,6 +1801,7 @@ INSERT INTO Neurketak (
         75,
         56.4,
         1.59,
+        65,
         'Lasaia.'
     ),
     (
@@ -1770,6 +1812,7 @@ INSERT INTO Neurketak (
         80,
         61.1,
         1.62,
+        72,
         'Pixka bat ahul.'
     ),
     (
@@ -1780,6 +1823,7 @@ INSERT INTO Neurketak (
         86,
         65.5,
         1.65,
+        78,
         'Bikain.'
     ),
     (
@@ -1790,6 +1834,7 @@ INSERT INTO Neurketak (
         76,
         59.2,
         1.60,
+        70,
         'Tripetako mina.'
     ),
     (
@@ -1800,6 +1845,7 @@ INSERT INTO Neurketak (
         82,
         67.3,
         1.67,
+        74,
         'Dena ondo.'
     ),
     (
@@ -1810,6 +1856,7 @@ INSERT INTO Neurketak (
         84,
         63.7,
         1.64,
+        76,
         'Giharretako karga.'
     ),
     (
@@ -1820,6 +1867,7 @@ INSERT INTO Neurketak (
         78,
         57.5,
         1.57,
+        68,
         'Ondo lo egin dut.'
     ),
     (
@@ -1830,6 +1878,7 @@ INSERT INTO Neurketak (
         88,
         69.4,
         1.69,
+        80,
         'Dena bere bidean.'
     ),
     (
@@ -1840,6 +1889,7 @@ INSERT INTO Neurketak (
         80,
         60.3,
         1.61,
+        72,
         'Ezkerreko hankan mina.'
     ),
     (
@@ -1850,6 +1900,7 @@ INSERT INTO Neurketak (
         85,
         64.9,
         1.63,
+        75,
         'Osasuntsu.'
     ),
     (
@@ -1860,6 +1911,7 @@ INSERT INTO Neurketak (
         76,
         58.1,
         1.58,
+        82,
         'Griparekin.'
     ),
     (
@@ -1870,6 +1922,7 @@ INSERT INTO Neurketak (
         82,
         62.7,
         1.62,
+        74,
         'Hobetzen.'
     ),
     (
@@ -1880,8 +1933,10 @@ INSERT INTO Neurketak (
         86,
         66.8,
         1.65,
+        80,
         'Normala.'
     );
+
 -- 7. Hitzorduak (Gaurko, iraganeko eta etorkizuneko hitzorduak)
 INSERT INTO Hitzorduak (
         paziente_id,
@@ -2284,6 +2339,7 @@ INSERT INTO Neurketak (
         tentsio_diastolikoa,
         pisua_kg,
         altuera,
+        pultsua_ppm,
         sintomak
     ) VALUES (
         51,
@@ -2293,7 +2349,7 @@ INSERT INTO Neurketak (
         78,
         65.0,
         1.76,
-        'Gosariaren ondoren.'
+        85, 'Gosariaren ondoren.'
     ),
     (
         52,
@@ -2303,7 +2359,7 @@ INSERT INTO Neurketak (
         93,
         94.1,
         1.77,
-        'Gosariaren ondoren.'
+        78, 'Gosariaren ondoren.'
     ),
     (
         53,
@@ -2313,7 +2369,7 @@ INSERT INTO Neurketak (
         93,
         74.2,
         1.75,
-        'Kirola egin ondoren.'
+        87, 'Kirola egin ondoren.'
     ),
     (
         54,
@@ -2323,7 +2379,7 @@ INSERT INTO Neurketak (
         74,
         87.4,
         1.60,
-        'Baraualdian.'
+        88, 'Baraualdian.'
     ),
     (
         55,
@@ -2333,7 +2389,7 @@ INSERT INTO Neurketak (
         78,
         80.5,
         1.76,
-        'Ondo sentitzen naiz.'
+        75, 'Ondo sentitzen naiz.'
     ),
     (
         56,
@@ -2343,7 +2399,7 @@ INSERT INTO Neurketak (
         86,
         91.0,
         1.61,
-        'Ondo sentitzen naiz.'
+        79, 'Ondo sentitzen naiz.'
     ),
     (
         57,
@@ -2353,7 +2409,7 @@ INSERT INTO Neurketak (
         87,
         84.0,
         1.69,
-        'Apur bat nekatuta.'
+        84, 'Apur bat nekatuta.'
     ),
     (
         58,
@@ -2363,7 +2419,7 @@ INSERT INTO Neurketak (
         85,
         67.5,
         1.68,
-        'Apur bat nekatuta.'
+        84, 'Apur bat nekatuta.'
     ),
     (
         60,
@@ -2373,7 +2429,7 @@ INSERT INTO Neurketak (
         94,
         79.0,
         1.81,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         61,
@@ -2383,7 +2439,7 @@ INSERT INTO Neurketak (
         89,
         72.1,
         1.83,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         62,
@@ -2393,7 +2449,7 @@ INSERT INTO Neurketak (
         85,
         66.1,
         1.56,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         64,
@@ -2403,7 +2459,7 @@ INSERT INTO Neurketak (
         82,
         94.8,
         1.56,
-        'Ondo sentitzen naiz.'
+        72, 'Ondo sentitzen naiz.'
     ),
     (
         65,
@@ -2413,7 +2469,7 @@ INSERT INTO Neurketak (
         78,
         90.5,
         1.55,
-        'Gosariaren ondoren.'
+        80, 'Gosariaren ondoren.'
     ),
     (
         66,
@@ -2423,7 +2479,7 @@ INSERT INTO Neurketak (
         85,
         74.6,
         1.59,
-        'Gosariaren ondoren.'
+        93, 'Gosariaren ondoren.'
     ),
     (
         67,
@@ -2433,7 +2489,7 @@ INSERT INTO Neurketak (
         84,
         71.5,
         1.72,
-        'Gosariaren ondoren.'
+        88, 'Gosariaren ondoren.'
     ),
     (
         68,
@@ -2443,7 +2499,7 @@ INSERT INTO Neurketak (
         84,
         60.2,
         1.85,
-        'Kirola egin ondoren.'
+        93, 'Kirola egin ondoren.'
     ),
     (
         69,
@@ -2453,7 +2509,7 @@ INSERT INTO Neurketak (
         86,
         94.1,
         1.66,
-        'Ondo sentitzen naiz.'
+        80, 'Ondo sentitzen naiz.'
     ),
     (
         70,
@@ -2463,7 +2519,7 @@ INSERT INTO Neurketak (
         78,
         74.0,
         1.70,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         72,
@@ -2473,7 +2529,7 @@ INSERT INTO Neurketak (
         82,
         91.9,
         1.69,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         73,
@@ -2483,7 +2539,7 @@ INSERT INTO Neurketak (
         81,
         95.2,
         1.55,
-        'Gosariaren ondoren.'
+        88, 'Gosariaren ondoren.'
     ),
     (
         74,
@@ -2493,7 +2549,7 @@ INSERT INTO Neurketak (
         80,
         64.8,
         1.67,
-        'Ondo sentitzen naiz.'
+        77, 'Ondo sentitzen naiz.'
     ),
     (
         76,
@@ -2503,7 +2559,7 @@ INSERT INTO Neurketak (
         87,
         65.1,
         1.69,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         78,
@@ -2513,7 +2569,7 @@ INSERT INTO Neurketak (
         76,
         63.6,
         1.61,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         79,
@@ -2523,7 +2579,7 @@ INSERT INTO Neurketak (
         84,
         68.0,
         1.67,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         80,
@@ -2533,7 +2589,7 @@ INSERT INTO Neurketak (
         88,
         63.7,
         1.78,
-        'Kirola egin ondoren.'
+        88, 'Kirola egin ondoren.'
     ),
     (
         82,
@@ -2543,7 +2599,7 @@ INSERT INTO Neurketak (
         80,
         89.1,
         1.77,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         83,
@@ -2553,7 +2609,7 @@ INSERT INTO Neurketak (
         81,
         64.1,
         1.80,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         84,
@@ -2563,7 +2619,7 @@ INSERT INTO Neurketak (
         90,
         79.1,
         1.67,
-        'Gosariaren ondoren.'
+        77, 'Gosariaren ondoren.'
     ),
     (
         85,
@@ -2573,7 +2629,7 @@ INSERT INTO Neurketak (
         91,
         80.0,
         1.72,
-        'Gaur goizean neurtuta.'
+        88, 'Gaur goizean neurtuta.'
     ),
     (
         86,
@@ -2583,7 +2639,7 @@ INSERT INTO Neurketak (
         75,
         68.3,
         1.57,
-        'Apur bat nekatuta.'
+        84, 'Apur bat nekatuta.'
     ),
     (
         87,
@@ -2593,7 +2649,7 @@ INSERT INTO Neurketak (
         75,
         72.4,
         1.61,
-        'Ondo sentitzen naiz.'
+        65, 'Ondo sentitzen naiz.'
     ),
     (
         88,
@@ -2603,7 +2659,7 @@ INSERT INTO Neurketak (
         85,
         90.8,
         1.81,
-        'Gaur goizean neurtuta.'
+        78, 'Gaur goizean neurtuta.'
     ),
     (
         89,
@@ -2613,7 +2669,7 @@ INSERT INTO Neurketak (
         85,
         91.1,
         1.84,
-        'Kirola egin ondoren.'
+        83, 'Kirola egin ondoren.'
     ),
     (
         91,
@@ -2623,7 +2679,7 @@ INSERT INTO Neurketak (
         87,
         89.7,
         1.58,
-        'Baraualdian.'
+        93, 'Baraualdian.'
     ),
     (
         92,
@@ -2633,7 +2689,7 @@ INSERT INTO Neurketak (
         86,
         59.9,
         1.79,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         93,
@@ -2643,7 +2699,7 @@ INSERT INTO Neurketak (
         83,
         75.8,
         1.81,
-        'Kirola egin ondoren.'
+        81, 'Kirola egin ondoren.'
     ),
     (
         94,
@@ -2653,7 +2709,7 @@ INSERT INTO Neurketak (
         91,
         86.4,
         1.83,
-        'Gosariaren ondoren.'
+        68, 'Gosariaren ondoren.'
     ),
     (
         95,
@@ -2663,7 +2719,7 @@ INSERT INTO Neurketak (
         85,
         90.8,
         1.77,
-        'Kirola egin ondoren.'
+        75, 'Kirola egin ondoren.'
     ),
     (
         96,
@@ -2673,7 +2729,7 @@ INSERT INTO Neurketak (
         80,
         76.2,
         1.71,
-        'Apur bat nekatuta.'
+        93, 'Apur bat nekatuta.'
     ),
     (
         97,
@@ -2683,7 +2739,7 @@ INSERT INTO Neurketak (
         81,
         88.0,
         1.56,
-        'Ondo sentitzen naiz.'
+        87, 'Ondo sentitzen naiz.'
     ),
     (
         98,
@@ -2693,7 +2749,7 @@ INSERT INTO Neurketak (
         89,
         83.9,
         1.60,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         100,
@@ -2703,7 +2759,7 @@ INSERT INTO Neurketak (
         78,
         82.0,
         1.57,
-        'Ondo sentitzen naiz.'
+        73, 'Ondo sentitzen naiz.'
     ),
     (
         53,
@@ -2713,7 +2769,7 @@ INSERT INTO Neurketak (
         81,
         75.4,
         1.75,
-        'Dena ondo.'
+        73, 'Dena ondo.'
     ),
     (
         54,
@@ -2723,7 +2779,7 @@ INSERT INTO Neurketak (
         74,
         86.1,
         1.60,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         55,
@@ -2733,7 +2789,7 @@ INSERT INTO Neurketak (
         73,
         81.6,
         1.76,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         57,
@@ -2743,7 +2799,7 @@ INSERT INTO Neurketak (
         83,
         83.9,
         1.69,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         59,
@@ -2753,7 +2809,7 @@ INSERT INTO Neurketak (
         81,
         62.9,
         1.73,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         60,
@@ -2763,7 +2819,7 @@ INSERT INTO Neurketak (
         85,
         78.3,
         1.81,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         61,
@@ -2773,7 +2829,7 @@ INSERT INTO Neurketak (
         93,
         72.2,
         1.83,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         62,
@@ -2783,7 +2839,7 @@ INSERT INTO Neurketak (
         78,
         66.3,
         1.56,
-        'Apur bat nekatuta.'
+        72, 'Apur bat nekatuta.'
     ),
     (
         63,
@@ -2793,7 +2849,7 @@ INSERT INTO Neurketak (
         80,
         81.9,
         1.80,
-        'Apur bat nekatuta.'
+        67, 'Apur bat nekatuta.'
     ),
     (
         64,
@@ -2803,7 +2859,7 @@ INSERT INTO Neurketak (
         79,
         94.9,
         1.56,
-        'Gosariaren ondoren.'
+        77, 'Gosariaren ondoren.'
     ),
     (
         66,
@@ -2813,7 +2869,7 @@ INSERT INTO Neurketak (
         81,
         75.0,
         1.59,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         67,
@@ -2823,7 +2879,7 @@ INSERT INTO Neurketak (
         82,
         71.8,
         1.72,
-        'Baraualdian.'
+        86, 'Baraualdian.'
     ),
     (
         69,
@@ -2833,7 +2889,7 @@ INSERT INTO Neurketak (
         83,
         94.7,
         1.66,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         70,
@@ -2843,7 +2899,7 @@ INSERT INTO Neurketak (
         78,
         75.5,
         1.70,
-        'Gaur goizean neurtuta.'
+        68, 'Gaur goizean neurtuta.'
     ),
     (
         71,
@@ -2853,7 +2909,7 @@ INSERT INTO Neurketak (
         80,
         90.0,
         1.63,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         72,
@@ -2863,7 +2919,7 @@ INSERT INTO Neurketak (
         77,
         92.1,
         1.69,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         73,
@@ -2873,7 +2929,7 @@ INSERT INTO Neurketak (
         75,
         95.3,
         1.55,
-        'Ondo sentitzen naiz.'
+        68, 'Ondo sentitzen naiz.'
     ),
     (
         74,
@@ -2883,7 +2939,7 @@ INSERT INTO Neurketak (
         88,
         63.9,
         1.67,
-        'Baraualdian.'
+        89, 'Baraualdian.'
     ),
     (
         76,
@@ -2893,7 +2949,7 @@ INSERT INTO Neurketak (
         84,
         66.2,
         1.69,
-        'Gaur goizean neurtuta.'
+        66, 'Gaur goizean neurtuta.'
     ),
     (
         77,
@@ -2903,7 +2959,7 @@ INSERT INTO Neurketak (
         79,
         66.2,
         1.67,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         78,
@@ -2913,7 +2969,7 @@ INSERT INTO Neurketak (
         74,
         63.0,
         1.61,
-        'Apur bat nekatuta.'
+        75, 'Apur bat nekatuta.'
     ),
     (
         79,
@@ -2923,7 +2979,7 @@ INSERT INTO Neurketak (
         77,
         67.1,
         1.67,
-        'Dena ondo.'
+        86, 'Dena ondo.'
     ),
     (
         80,
@@ -2933,7 +2989,7 @@ INSERT INTO Neurketak (
         84,
         63.2,
         1.78,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         81,
@@ -2943,7 +2999,7 @@ INSERT INTO Neurketak (
         93,
         86.3,
         1.58,
-        'Ondo sentitzen naiz.'
+        84, 'Ondo sentitzen naiz.'
     ),
     (
         82,
@@ -2953,7 +3009,7 @@ INSERT INTO Neurketak (
         84,
         89.1,
         1.77,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         83,
@@ -2963,7 +3019,7 @@ INSERT INTO Neurketak (
         79,
         64.3,
         1.80,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         85,
@@ -2973,7 +3029,7 @@ INSERT INTO Neurketak (
         93,
         80.1,
         1.72,
-        'Ondo sentitzen naiz.'
+        84, 'Ondo sentitzen naiz.'
     ),
     (
         86,
@@ -2983,7 +3039,7 @@ INSERT INTO Neurketak (
         80,
         68.2,
         1.57,
-        'Ondo sentitzen naiz.'
+        69, 'Ondo sentitzen naiz.'
     ),
     (
         87,
@@ -2993,7 +3049,7 @@ INSERT INTO Neurketak (
         84,
         73.0,
         1.61,
-        'Ondo sentitzen naiz.'
+        84, 'Ondo sentitzen naiz.'
     ),
     (
         88,
@@ -3003,7 +3059,7 @@ INSERT INTO Neurketak (
         86,
         89.2,
         1.81,
-        'Gaur goizean neurtuta.'
+        80, 'Gaur goizean neurtuta.'
     ),
     (
         91,
@@ -3013,7 +3069,7 @@ INSERT INTO Neurketak (
         82,
         89.4,
         1.58,
-        'Ondo sentitzen naiz.'
+        80, 'Ondo sentitzen naiz.'
     ),
     (
         92,
@@ -3023,7 +3079,7 @@ INSERT INTO Neurketak (
         79,
         60.5,
         1.79,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         95,
@@ -3033,7 +3089,7 @@ INSERT INTO Neurketak (
         79,
         89.9,
         1.77,
-        'Gosariaren ondoren.'
+        73, 'Gosariaren ondoren.'
     ),
     (
         96,
@@ -3043,7 +3099,7 @@ INSERT INTO Neurketak (
         74,
         77.3,
         1.71,
-        'Dena ondo.'
+        76, 'Dena ondo.'
     ),
     (
         97,
@@ -3053,7 +3109,7 @@ INSERT INTO Neurketak (
         81,
         87.2,
         1.56,
-        'Gaur goizean neurtuta.'
+        78, 'Gaur goizean neurtuta.'
     ),
     (
         98,
@@ -3063,7 +3119,7 @@ INSERT INTO Neurketak (
         77,
         85.0,
         1.60,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         99,
@@ -3073,7 +3129,7 @@ INSERT INTO Neurketak (
         73,
         86.8,
         1.71,
-        'Ondo sentitzen naiz.'
+        93, 'Ondo sentitzen naiz.'
     ),
     (
         51,
@@ -3083,7 +3139,7 @@ INSERT INTO Neurketak (
         91,
         65.0,
         1.76,
-        'Gosariaren ondoren.'
+        73, 'Gosariaren ondoren.'
     ),
     (
         52,
@@ -3093,7 +3149,7 @@ INSERT INTO Neurketak (
         79,
         93.8,
         1.77,
-        'Apur bat nekatuta.'
+        73, 'Apur bat nekatuta.'
     ),
     (
         55,
@@ -3103,7 +3159,7 @@ INSERT INTO Neurketak (
         82,
         80.5,
         1.76,
-        'Apur bat nekatuta.'
+        81, 'Apur bat nekatuta.'
     ),
     (
         56,
@@ -3113,7 +3169,7 @@ INSERT INTO Neurketak (
         85,
         89.2,
         1.61,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         57,
@@ -3123,7 +3179,7 @@ INSERT INTO Neurketak (
         82,
         82.6,
         1.69,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         58,
@@ -3133,7 +3189,7 @@ INSERT INTO Neurketak (
         87,
         66.2,
         1.68,
-        'Kirola egin ondoren.'
+        78, 'Kirola egin ondoren.'
     ),
     (
         59,
@@ -3143,7 +3199,7 @@ INSERT INTO Neurketak (
         86,
         63.3,
         1.73,
-        'Apur bat nekatuta.'
+        66, 'Apur bat nekatuta.'
     ),
     (
         60,
@@ -3153,7 +3209,7 @@ INSERT INTO Neurketak (
         91,
         77.1,
         1.81,
-        'Apur bat nekatuta.'
+        89, 'Apur bat nekatuta.'
     ),
     (
         61,
@@ -3163,7 +3219,7 @@ INSERT INTO Neurketak (
         83,
         74.0,
         1.83,
-        'Gaur goizean neurtuta.'
+        80, 'Gaur goizean neurtuta.'
     ),
     (
         63,
@@ -3173,7 +3229,7 @@ INSERT INTO Neurketak (
         86,
         81.4,
         1.80,
-        'Gosariaren ondoren.'
+        67, 'Gosariaren ondoren.'
     ),
     (
         64,
@@ -3183,7 +3239,7 @@ INSERT INTO Neurketak (
         73,
         95.1,
         1.56,
-        'Gaur goizean neurtuta.'
+        76, 'Gaur goizean neurtuta.'
     ),
     (
         65,
@@ -3193,7 +3249,7 @@ INSERT INTO Neurketak (
         87,
         91.3,
         1.55,
-        'Ondo sentitzen naiz.'
+        75, 'Ondo sentitzen naiz.'
     ),
     (
         66,
@@ -3203,7 +3259,7 @@ INSERT INTO Neurketak (
         82,
         75.2,
         1.59,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         67,
@@ -3213,7 +3269,7 @@ INSERT INTO Neurketak (
         89,
         71.2,
         1.72,
-        'Gosariaren ondoren.'
+        85, 'Gosariaren ondoren.'
     ),
     (
         69,
@@ -3223,7 +3279,7 @@ INSERT INTO Neurketak (
         85,
         95.2,
         1.66,
-        'Ondo sentitzen naiz.'
+        89, 'Ondo sentitzen naiz.'
     ),
     (
         70,
@@ -3233,7 +3289,7 @@ INSERT INTO Neurketak (
         80,
         74.0,
         1.70,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         72,
@@ -3243,7 +3299,7 @@ INSERT INTO Neurketak (
         80,
         91.7,
         1.69,
-        'Gosariaren ondoren.'
+        89, 'Gosariaren ondoren.'
     ),
     (
         74,
@@ -3253,7 +3309,7 @@ INSERT INTO Neurketak (
         77,
         63.5,
         1.67,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         75,
@@ -3263,7 +3319,7 @@ INSERT INTO Neurketak (
         74,
         60.5,
         1.65,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         76,
@@ -3273,7 +3329,7 @@ INSERT INTO Neurketak (
         85,
         65.1,
         1.69,
-        'Gaur goizean neurtuta.'
+        71, 'Gaur goizean neurtuta.'
     ),
     (
         77,
@@ -3283,7 +3339,7 @@ INSERT INTO Neurketak (
         81,
         67.1,
         1.67,
-        'Baraualdian.'
+        73, 'Baraualdian.'
     ),
     (
         78,
@@ -3293,7 +3349,7 @@ INSERT INTO Neurketak (
         77,
         63.6,
         1.61,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         79,
@@ -3303,7 +3359,7 @@ INSERT INTO Neurketak (
         87,
         66.4,
         1.67,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -3313,7 +3369,7 @@ INSERT INTO Neurketak (
         81,
         85.8,
         1.58,
-        'Ondo sentitzen naiz.'
+        78, 'Ondo sentitzen naiz.'
     ),
     (
         83,
@@ -3323,7 +3379,7 @@ INSERT INTO Neurketak (
         93,
         64.9,
         1.80,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         84,
@@ -3333,7 +3389,7 @@ INSERT INTO Neurketak (
         76,
         78.3,
         1.67,
-        'Gaur goizean neurtuta.'
+        76, 'Gaur goizean neurtuta.'
     ),
     (
         85,
@@ -3343,7 +3399,7 @@ INSERT INTO Neurketak (
         84,
         80.5,
         1.72,
-        'Gaur goizean neurtuta.'
+        68, 'Gaur goizean neurtuta.'
     ),
     (
         86,
@@ -3353,7 +3409,7 @@ INSERT INTO Neurketak (
         76,
         67.4,
         1.57,
-        'Kirola egin ondoren.'
+        81, 'Kirola egin ondoren.'
     ),
     (
         87,
@@ -3363,7 +3419,7 @@ INSERT INTO Neurketak (
         88,
         72.0,
         1.61,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         89,
@@ -3373,7 +3429,7 @@ INSERT INTO Neurketak (
         89,
         91.7,
         1.84,
-        'Dena ondo.'
+        72, 'Dena ondo.'
     ),
     (
         91,
@@ -3383,7 +3439,7 @@ INSERT INTO Neurketak (
         90,
         90.8,
         1.58,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         92,
@@ -3393,7 +3449,7 @@ INSERT INTO Neurketak (
         91,
         59.6,
         1.79,
-        'Ondo sentitzen naiz.'
+        89, 'Ondo sentitzen naiz.'
     ),
     (
         93,
@@ -3403,7 +3459,7 @@ INSERT INTO Neurketak (
         89,
         76.2,
         1.81,
-        'Dena ondo.'
+        86, 'Dena ondo.'
     ),
     (
         95,
@@ -3413,7 +3469,7 @@ INSERT INTO Neurketak (
         74,
         89.5,
         1.77,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         97,
@@ -3423,7 +3479,7 @@ INSERT INTO Neurketak (
         75,
         87.1,
         1.56,
-        'Gosariaren ondoren.'
+        86, 'Gosariaren ondoren.'
     ),
     (
         98,
@@ -3433,7 +3489,7 @@ INSERT INTO Neurketak (
         87,
         84.3,
         1.60,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         99,
@@ -3443,7 +3499,7 @@ INSERT INTO Neurketak (
         85,
         85.7,
         1.71,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         100,
@@ -3453,7 +3509,7 @@ INSERT INTO Neurketak (
         74,
         81.8,
         1.57,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         51,
@@ -3463,7 +3519,7 @@ INSERT INTO Neurketak (
         92,
         63.3,
         1.76,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         53,
@@ -3473,7 +3529,7 @@ INSERT INTO Neurketak (
         88,
         74.7,
         1.75,
-        'Gosariaren ondoren.'
+        76, 'Gosariaren ondoren.'
     ),
     (
         54,
@@ -3483,7 +3539,7 @@ INSERT INTO Neurketak (
         74,
         87.7,
         1.60,
-        'Kirola egin ondoren.'
+        71, 'Kirola egin ondoren.'
     ),
     (
         55,
@@ -3493,7 +3549,7 @@ INSERT INTO Neurketak (
         85,
         80.2,
         1.76,
-        'Ondo sentitzen naiz.'
+        93, 'Ondo sentitzen naiz.'
     ),
     (
         56,
@@ -3503,7 +3559,7 @@ INSERT INTO Neurketak (
         90,
         90.4,
         1.61,
-        'Baraualdian.'
+        73, 'Baraualdian.'
     ),
     (
         57,
@@ -3513,7 +3569,7 @@ INSERT INTO Neurketak (
         89,
         82.2,
         1.69,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         58,
@@ -3523,7 +3579,7 @@ INSERT INTO Neurketak (
         87,
         67.7,
         1.68,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         59,
@@ -3533,7 +3589,7 @@ INSERT INTO Neurketak (
         90,
         63.7,
         1.73,
-        'Gosariaren ondoren.'
+        66, 'Gosariaren ondoren.'
     ),
     (
         61,
@@ -3543,7 +3599,7 @@ INSERT INTO Neurketak (
         87,
         74.0,
         1.83,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         62,
@@ -3553,7 +3609,7 @@ INSERT INTO Neurketak (
         73,
         65.2,
         1.56,
-        'Apur bat nekatuta.'
+        91, 'Apur bat nekatuta.'
     ),
     (
         63,
@@ -3563,7 +3619,7 @@ INSERT INTO Neurketak (
         76,
         81.3,
         1.80,
-        'Gaur goizean neurtuta.'
+        87, 'Gaur goizean neurtuta.'
     ),
     (
         65,
@@ -3573,7 +3629,7 @@ INSERT INTO Neurketak (
         76,
         91.7,
         1.55,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         66,
@@ -3583,7 +3639,7 @@ INSERT INTO Neurketak (
         91,
         75.5,
         1.59,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         67,
@@ -3593,7 +3649,7 @@ INSERT INTO Neurketak (
         79,
         71.0,
         1.72,
-        'Apur bat nekatuta.'
+        66, 'Apur bat nekatuta.'
     ),
     (
         68,
@@ -3603,7 +3659,7 @@ INSERT INTO Neurketak (
         74,
         61.8,
         1.85,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         69,
@@ -3613,7 +3669,7 @@ INSERT INTO Neurketak (
         82,
         94.2,
         1.66,
-        'Gosariaren ondoren.'
+        89, 'Gosariaren ondoren.'
     ),
     (
         70,
@@ -3623,7 +3679,7 @@ INSERT INTO Neurketak (
         86,
         75.5,
         1.70,
-        'Ondo sentitzen naiz.'
+        87, 'Ondo sentitzen naiz.'
     ),
     (
         71,
@@ -3633,7 +3689,7 @@ INSERT INTO Neurketak (
         85,
         89.0,
         1.63,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         72,
@@ -3643,7 +3699,7 @@ INSERT INTO Neurketak (
         75,
         91.4,
         1.69,
-        'Dena ondo.'
+        90, 'Dena ondo.'
     ),
     (
         73,
@@ -3653,7 +3709,7 @@ INSERT INTO Neurketak (
         84,
         95.3,
         1.55,
-        'Gosariaren ondoren.'
+        72, 'Gosariaren ondoren.'
     ),
     (
         74,
@@ -3663,7 +3719,7 @@ INSERT INTO Neurketak (
         89,
         63.5,
         1.67,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         75,
@@ -3673,7 +3729,7 @@ INSERT INTO Neurketak (
         83,
         59.0,
         1.65,
-        'Ondo sentitzen naiz.'
+        82, 'Ondo sentitzen naiz.'
     ),
     (
         77,
@@ -3683,7 +3739,7 @@ INSERT INTO Neurketak (
         80,
         66.8,
         1.67,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         79,
@@ -3693,7 +3749,7 @@ INSERT INTO Neurketak (
         88,
         66.1,
         1.67,
-        'Dena ondo.'
+        74, 'Dena ondo.'
     ),
     (
         80,
@@ -3703,7 +3759,7 @@ INSERT INTO Neurketak (
         89,
         62.4,
         1.78,
-        'Kirola egin ondoren.'
+        91, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -3713,7 +3769,7 @@ INSERT INTO Neurketak (
         90,
         86.4,
         1.58,
-        'Gaur goizean neurtuta.'
+        91, 'Gaur goizean neurtuta.'
     ),
     (
         83,
@@ -3723,7 +3779,7 @@ INSERT INTO Neurketak (
         88,
         64.5,
         1.80,
-        'Gaur goizean neurtuta.'
+        71, 'Gaur goizean neurtuta.'
     ),
     (
         84,
@@ -3733,7 +3789,7 @@ INSERT INTO Neurketak (
         89,
         78.4,
         1.67,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         85,
@@ -3743,7 +3799,7 @@ INSERT INTO Neurketak (
         79,
         80.7,
         1.72,
-        'Ondo sentitzen naiz.'
+        72, 'Ondo sentitzen naiz.'
     ),
     (
         86,
@@ -3753,7 +3809,7 @@ INSERT INTO Neurketak (
         87,
         68.0,
         1.57,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         87,
@@ -3763,7 +3819,7 @@ INSERT INTO Neurketak (
         82,
         72.9,
         1.61,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         88,
@@ -3773,7 +3829,7 @@ INSERT INTO Neurketak (
         72,
         91.0,
         1.81,
-        'Gosariaren ondoren.'
+        68, 'Gosariaren ondoren.'
     ),
     (
         89,
@@ -3783,7 +3839,7 @@ INSERT INTO Neurketak (
         79,
         90.4,
         1.84,
-        'Ondo sentitzen naiz.'
+        71, 'Ondo sentitzen naiz.'
     ),
     (
         90,
@@ -3793,7 +3849,7 @@ INSERT INTO Neurketak (
         90,
         65.5,
         1.60,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         91,
@@ -3803,7 +3859,7 @@ INSERT INTO Neurketak (
         91,
         90.1,
         1.58,
-        'Gosariaren ondoren.'
+        94, 'Gosariaren ondoren.'
     ),
     (
         92,
@@ -3813,7 +3869,7 @@ INSERT INTO Neurketak (
         82,
         60.5,
         1.79,
-        'Ondo sentitzen naiz.'
+        77, 'Ondo sentitzen naiz.'
     ),
     (
         93,
@@ -3823,7 +3879,7 @@ INSERT INTO Neurketak (
         94,
         75.0,
         1.81,
-        'Ondo sentitzen naiz.'
+        85, 'Ondo sentitzen naiz.'
     ),
     (
         94,
@@ -3833,7 +3889,7 @@ INSERT INTO Neurketak (
         83,
         86.9,
         1.83,
-        'Baraualdian.'
+        86, 'Baraualdian.'
     ),
     (
         95,
@@ -3843,7 +3899,7 @@ INSERT INTO Neurketak (
         72,
         90.1,
         1.77,
-        'Kirola egin ondoren.'
+        89, 'Kirola egin ondoren.'
     ),
     (
         96,
@@ -3853,7 +3909,7 @@ INSERT INTO Neurketak (
         80,
         76.3,
         1.71,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         99,
@@ -3863,7 +3919,7 @@ INSERT INTO Neurketak (
         86,
         85.5,
         1.71,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         100,
@@ -3873,7 +3929,7 @@ INSERT INTO Neurketak (
         72,
         81.2,
         1.57,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         51,
@@ -3883,7 +3939,7 @@ INSERT INTO Neurketak (
         83,
         64.8,
         1.76,
-        'Dena ondo.'
+        83, 'Dena ondo.'
     ),
     (
         52,
@@ -3893,7 +3949,7 @@ INSERT INTO Neurketak (
         89,
         93.5,
         1.77,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         53,
@@ -3903,7 +3959,7 @@ INSERT INTO Neurketak (
         92,
         74.0,
         1.75,
-        'Kirola egin ondoren.'
+        94, 'Kirola egin ondoren.'
     ),
     (
         54,
@@ -3913,7 +3969,7 @@ INSERT INTO Neurketak (
         80,
         86.5,
         1.60,
-        'Gaur goizean neurtuta.'
+        94, 'Gaur goizean neurtuta.'
     ),
     (
         56,
@@ -3923,7 +3979,7 @@ INSERT INTO Neurketak (
         86,
         89.4,
         1.61,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         57,
@@ -3933,7 +3989,7 @@ INSERT INTO Neurketak (
         91,
         82.6,
         1.69,
-        'Kirola egin ondoren.'
+        93, 'Kirola egin ondoren.'
     ),
     (
         58,
@@ -3943,7 +3999,7 @@ INSERT INTO Neurketak (
         76,
         67.0,
         1.68,
-        'Apur bat nekatuta.'
+        83, 'Apur bat nekatuta.'
     ),
     (
         60,
@@ -3953,7 +4009,7 @@ INSERT INTO Neurketak (
         87,
         78.3,
         1.81,
-        'Ondo sentitzen naiz.'
+        66, 'Ondo sentitzen naiz.'
     ),
     (
         61,
@@ -3963,7 +4019,7 @@ INSERT INTO Neurketak (
         83,
         73.0,
         1.83,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         63,
@@ -3973,7 +4029,7 @@ INSERT INTO Neurketak (
         76,
         80.9,
         1.80,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         64,
@@ -3983,7 +4039,7 @@ INSERT INTO Neurketak (
         81,
         95.2,
         1.56,
-        'Ondo sentitzen naiz.'
+        77, 'Ondo sentitzen naiz.'
     ),
     (
         65,
@@ -3993,7 +4049,7 @@ INSERT INTO Neurketak (
         84,
         91.9,
         1.55,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         66,
@@ -4003,7 +4059,7 @@ INSERT INTO Neurketak (
         86,
         74.9,
         1.59,
-        'Baraualdian.'
+        94, 'Baraualdian.'
     ),
     (
         68,
@@ -4013,7 +4069,7 @@ INSERT INTO Neurketak (
         80,
         61.6,
         1.85,
-        'Ondo sentitzen naiz.'
+        91, 'Ondo sentitzen naiz.'
     ),
     (
         69,
@@ -4023,7 +4079,7 @@ INSERT INTO Neurketak (
         83,
         95.2,
         1.66,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         70,
@@ -4033,7 +4089,7 @@ INSERT INTO Neurketak (
         76,
         75.4,
         1.70,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         71,
@@ -4043,7 +4099,7 @@ INSERT INTO Neurketak (
         82,
         88.0,
         1.63,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         74,
@@ -4053,7 +4109,7 @@ INSERT INTO Neurketak (
         77,
         63.9,
         1.67,
-        'Dena ondo.'
+        76, 'Dena ondo.'
     ),
     (
         75,
@@ -4063,7 +4119,7 @@ INSERT INTO Neurketak (
         71,
         61.0,
         1.65,
-        'Baraualdian.'
+        86, 'Baraualdian.'
     ),
     (
         76,
@@ -4073,7 +4129,7 @@ INSERT INTO Neurketak (
         95,
         65.2,
         1.69,
-        'Ondo sentitzen naiz.'
+        74, 'Ondo sentitzen naiz.'
     ),
     (
         77,
@@ -4083,7 +4139,7 @@ INSERT INTO Neurketak (
         79,
         66.6,
         1.67,
-        'Kirola egin ondoren.'
+        69, 'Kirola egin ondoren.'
     ),
     (
         78,
@@ -4093,7 +4149,7 @@ INSERT INTO Neurketak (
         73,
         63.5,
         1.61,
-        'Apur bat nekatuta.'
+        66, 'Apur bat nekatuta.'
     ),
     (
         79,
@@ -4103,7 +4159,7 @@ INSERT INTO Neurketak (
         76,
         67.8,
         1.67,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         80,
@@ -4113,7 +4169,7 @@ INSERT INTO Neurketak (
         90,
         63.9,
         1.78,
-        'Dena ondo.'
+        85, 'Dena ondo.'
     ),
     (
         81,
@@ -4123,7 +4179,7 @@ INSERT INTO Neurketak (
         94,
         85.3,
         1.58,
-        'Apur bat nekatuta.'
+        88, 'Apur bat nekatuta.'
     ),
     (
         83,
@@ -4133,7 +4189,7 @@ INSERT INTO Neurketak (
         79,
         66.0,
         1.80,
-        'Gaur goizean neurtuta.'
+        94, 'Gaur goizean neurtuta.'
     ),
     (
         84,
@@ -4143,7 +4199,7 @@ INSERT INTO Neurketak (
         82,
         79.3,
         1.67,
-        'Gosariaren ondoren.'
+        91, 'Gosariaren ondoren.'
     ),
     (
         85,
@@ -4153,7 +4209,7 @@ INSERT INTO Neurketak (
         80,
         81.9,
         1.72,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         86,
@@ -4163,7 +4219,7 @@ INSERT INTO Neurketak (
         87,
         67.2,
         1.57,
-        'Apur bat nekatuta.'
+        85, 'Apur bat nekatuta.'
     ),
     (
         90,
@@ -4173,7 +4229,7 @@ INSERT INTO Neurketak (
         90,
         66.1,
         1.60,
-        'Gosariaren ondoren.'
+        77, 'Gosariaren ondoren.'
     ),
     (
         91,
@@ -4183,7 +4239,7 @@ INSERT INTO Neurketak (
         87,
         90.1,
         1.58,
-        'Ondo sentitzen naiz.'
+        89, 'Ondo sentitzen naiz.'
     ),
     (
         92,
@@ -4193,7 +4249,7 @@ INSERT INTO Neurketak (
         82,
         60.0,
         1.79,
-        'Kirola egin ondoren.'
+        66, 'Kirola egin ondoren.'
     ),
     (
         93,
@@ -4203,7 +4259,7 @@ INSERT INTO Neurketak (
         84,
         75.6,
         1.81,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         94,
@@ -4213,7 +4269,7 @@ INSERT INTO Neurketak (
         84,
         87.0,
         1.83,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         95,
@@ -4223,7 +4279,7 @@ INSERT INTO Neurketak (
         80,
         90.0,
         1.77,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         98,
@@ -4233,7 +4289,7 @@ INSERT INTO Neurketak (
         90,
         83.8,
         1.60,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         100,
@@ -4243,7 +4299,7 @@ INSERT INTO Neurketak (
         86,
         82.8,
         1.57,
-        'Baraualdian.'
+        74, 'Baraualdian.'
     ),
     (
         51,
@@ -4253,7 +4309,7 @@ INSERT INTO Neurketak (
         86,
         63.1,
         1.76,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         52,
@@ -4263,7 +4319,7 @@ INSERT INTO Neurketak (
         90,
         94.7,
         1.77,
-        'Apur bat nekatuta.'
+        93, 'Apur bat nekatuta.'
     ),
     (
         53,
@@ -4273,7 +4329,7 @@ INSERT INTO Neurketak (
         80,
         75.0,
         1.75,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         54,
@@ -4283,7 +4339,7 @@ INSERT INTO Neurketak (
         88,
         87.2,
         1.60,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         56,
@@ -4293,7 +4349,7 @@ INSERT INTO Neurketak (
         85,
         89.6,
         1.61,
-        'Gosariaren ondoren.'
+        70, 'Gosariaren ondoren.'
     ),
     (
         57,
@@ -4303,7 +4359,7 @@ INSERT INTO Neurketak (
         92,
         82.5,
         1.69,
-        'Ondo sentitzen naiz.'
+        92, 'Ondo sentitzen naiz.'
     ),
     (
         59,
@@ -4313,7 +4369,7 @@ INSERT INTO Neurketak (
         90,
         62.4,
         1.73,
-        'Dena ondo.'
+        76, 'Dena ondo.'
     ),
     (
         60,
@@ -4323,7 +4379,7 @@ INSERT INTO Neurketak (
         94,
         78.4,
         1.81,
-        'Apur bat nekatuta.'
+        71, 'Apur bat nekatuta.'
     ),
     (
         61,
@@ -4333,7 +4389,7 @@ INSERT INTO Neurketak (
         83,
         73.6,
         1.83,
-        'Apur bat nekatuta.'
+        73, 'Apur bat nekatuta.'
     ),
     (
         63,
@@ -4343,7 +4399,7 @@ INSERT INTO Neurketak (
         82,
         81.0,
         1.80,
-        'Ondo sentitzen naiz.'
+        88, 'Ondo sentitzen naiz.'
     ),
     (
         64,
@@ -4353,7 +4409,7 @@ INSERT INTO Neurketak (
         83,
         95.5,
         1.56,
-        'Kirola egin ondoren.'
+        72, 'Kirola egin ondoren.'
     ),
     (
         65,
@@ -4363,7 +4419,7 @@ INSERT INTO Neurketak (
         90,
         92.0,
         1.55,
-        'Apur bat nekatuta.'
+        78, 'Apur bat nekatuta.'
     ),
     (
         66,
@@ -4373,7 +4429,7 @@ INSERT INTO Neurketak (
         87,
         74.2,
         1.59,
-        'Gaur goizean neurtuta.'
+        94, 'Gaur goizean neurtuta.'
     ),
     (
         67,
@@ -4383,7 +4439,7 @@ INSERT INTO Neurketak (
         83,
         71.6,
         1.72,
-        'Ondo sentitzen naiz.'
+        70, 'Ondo sentitzen naiz.'
     ),
     (
         68,
@@ -4393,7 +4449,7 @@ INSERT INTO Neurketak (
         77,
         62.0,
         1.85,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         69,
@@ -4403,7 +4459,7 @@ INSERT INTO Neurketak (
         86,
         95.3,
         1.66,
-        'Apur bat nekatuta.'
+        69, 'Apur bat nekatuta.'
     ),
     (
         70,
@@ -4413,7 +4469,7 @@ INSERT INTO Neurketak (
         79,
         74.5,
         1.70,
-        'Kirola egin ondoren.'
+        82, 'Kirola egin ondoren.'
     ),
     (
         71,
@@ -4423,7 +4479,7 @@ INSERT INTO Neurketak (
         79,
         88.3,
         1.63,
-        'Gosariaren ondoren.'
+        80, 'Gosariaren ondoren.'
     ),
     (
         72,
@@ -4433,7 +4489,7 @@ INSERT INTO Neurketak (
         81,
         91.7,
         1.69,
-        'Gosariaren ondoren.'
+        66, 'Gosariaren ondoren.'
     ),
     (
         73,
@@ -4443,7 +4499,7 @@ INSERT INTO Neurketak (
         72,
         96.0,
         1.55,
-        'Gosariaren ondoren.'
+        70, 'Gosariaren ondoren.'
     ),
     (
         75,
@@ -4453,7 +4509,7 @@ INSERT INTO Neurketak (
         80,
         59.4,
         1.65,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         76,
@@ -4463,7 +4519,7 @@ INSERT INTO Neurketak (
         87,
         66.8,
         1.69,
-        'Gaur goizean neurtuta.'
+        66, 'Gaur goizean neurtuta.'
     ),
     (
         77,
@@ -4473,7 +4529,7 @@ INSERT INTO Neurketak (
         82,
         66.9,
         1.67,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         80,
@@ -4483,7 +4539,7 @@ INSERT INTO Neurketak (
         87,
         62.6,
         1.78,
-        'Gosariaren ondoren.'
+        66, 'Gosariaren ondoren.'
     ),
     (
         81,
@@ -4493,7 +4549,7 @@ INSERT INTO Neurketak (
         95,
         86.1,
         1.58,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         83,
@@ -4503,7 +4559,7 @@ INSERT INTO Neurketak (
         80,
         66.0,
         1.80,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         84,
@@ -4513,7 +4569,7 @@ INSERT INTO Neurketak (
         80,
         78.3,
         1.67,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         85,
@@ -4523,7 +4579,7 @@ INSERT INTO Neurketak (
         85,
         81.1,
         1.72,
-        'Ondo sentitzen naiz.'
+        91, 'Ondo sentitzen naiz.'
     ),
     (
         86,
@@ -4533,7 +4589,7 @@ INSERT INTO Neurketak (
         81,
         68.7,
         1.57,
-        'Baraualdian.'
+        70, 'Baraualdian.'
     ),
     (
         87,
@@ -4543,7 +4599,7 @@ INSERT INTO Neurketak (
         73,
         72.5,
         1.61,
-        'Gosariaren ondoren.'
+        78, 'Gosariaren ondoren.'
     ),
     (
         89,
@@ -4553,7 +4609,7 @@ INSERT INTO Neurketak (
         85,
         91.5,
         1.84,
-        'Gaur goizean neurtuta.'
+        92, 'Gaur goizean neurtuta.'
     ),
     (
         91,
@@ -4563,7 +4619,7 @@ INSERT INTO Neurketak (
         86,
         89.5,
         1.58,
-        'Ondo sentitzen naiz.'
+        72, 'Ondo sentitzen naiz.'
     ),
     (
         92,
@@ -4573,7 +4629,7 @@ INSERT INTO Neurketak (
         85,
         60.7,
         1.79,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         93,
@@ -4583,7 +4639,7 @@ INSERT INTO Neurketak (
         82,
         76.1,
         1.81,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         94,
@@ -4593,7 +4649,7 @@ INSERT INTO Neurketak (
         79,
         87.8,
         1.83,
-        'Ondo sentitzen naiz.'
+        73, 'Ondo sentitzen naiz.'
     ),
     (
         95,
@@ -4603,7 +4659,7 @@ INSERT INTO Neurketak (
         75,
         89.8,
         1.77,
-        'Kirola egin ondoren.'
+        94, 'Kirola egin ondoren.'
     ),
     (
         96,
@@ -4613,7 +4669,7 @@ INSERT INTO Neurketak (
         87,
         77.3,
         1.71,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         97,
@@ -4623,7 +4679,7 @@ INSERT INTO Neurketak (
         81,
         87.2,
         1.56,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         98,
@@ -4633,7 +4689,7 @@ INSERT INTO Neurketak (
         88,
         83.3,
         1.60,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         100,
@@ -4643,7 +4699,7 @@ INSERT INTO Neurketak (
         83,
         82.3,
         1.57,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         51,
@@ -4653,7 +4709,7 @@ INSERT INTO Neurketak (
         80,
         63.3,
         1.76,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         53,
@@ -4663,7 +4719,7 @@ INSERT INTO Neurketak (
         90,
         75.7,
         1.75,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         54,
@@ -4673,7 +4729,7 @@ INSERT INTO Neurketak (
         87,
         87.0,
         1.60,
-        'Baraualdian.'
+        69, 'Baraualdian.'
     ),
     (
         57,
@@ -4683,7 +4739,7 @@ INSERT INTO Neurketak (
         83,
         83.3,
         1.69,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         58,
@@ -4693,7 +4749,7 @@ INSERT INTO Neurketak (
         84,
         67.2,
         1.68,
-        'Dena ondo.'
+        68, 'Dena ondo.'
     ),
     (
         60,
@@ -4703,7 +4759,7 @@ INSERT INTO Neurketak (
         84,
         78.0,
         1.81,
-        'Kirola egin ondoren.'
+        66, 'Kirola egin ondoren.'
     ),
     (
         61,
@@ -4713,7 +4769,7 @@ INSERT INTO Neurketak (
         84,
         73.6,
         1.83,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         63,
@@ -4723,7 +4779,7 @@ INSERT INTO Neurketak (
         76,
         80.8,
         1.80,
-        'Dena ondo.'
+        92, 'Dena ondo.'
     ),
     (
         64,
@@ -4733,7 +4789,7 @@ INSERT INTO Neurketak (
         83,
         95.0,
         1.56,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         66,
@@ -4743,7 +4799,7 @@ INSERT INTO Neurketak (
         88,
         75.7,
         1.59,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         67,
@@ -4753,7 +4809,7 @@ INSERT INTO Neurketak (
         76,
         71.2,
         1.72,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         69,
@@ -4763,7 +4819,7 @@ INSERT INTO Neurketak (
         90,
         94.7,
         1.66,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         70,
@@ -4773,7 +4829,7 @@ INSERT INTO Neurketak (
         79,
         74.3,
         1.70,
-        'Baraualdian.'
+        85, 'Baraualdian.'
     ),
     (
         71,
@@ -4783,7 +4839,7 @@ INSERT INTO Neurketak (
         84,
         89.0,
         1.63,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         74,
@@ -4793,7 +4849,7 @@ INSERT INTO Neurketak (
         90,
         63.9,
         1.67,
-        'Dena ondo.'
+        93, 'Dena ondo.'
     ),
     (
         75,
@@ -4803,7 +4859,7 @@ INSERT INTO Neurketak (
         72,
         59.9,
         1.65,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         76,
@@ -4813,7 +4869,7 @@ INSERT INTO Neurketak (
         93,
         66.1,
         1.69,
-        'Apur bat nekatuta.'
+        89, 'Apur bat nekatuta.'
     ),
     (
         78,
@@ -4823,7 +4879,7 @@ INSERT INTO Neurketak (
         79,
         62.5,
         1.61,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         80,
@@ -4833,7 +4889,7 @@ INSERT INTO Neurketak (
         84,
         64.0,
         1.78,
-        'Baraualdian.'
+        75, 'Baraualdian.'
     ),
     (
         82,
@@ -4843,7 +4899,7 @@ INSERT INTO Neurketak (
         82,
         88.1,
         1.77,
-        'Baraualdian.'
+        79, 'Baraualdian.'
     ),
     (
         85,
@@ -4853,7 +4909,7 @@ INSERT INTO Neurketak (
         78,
         80.4,
         1.72,
-        'Gosariaren ondoren.'
+        65, 'Gosariaren ondoren.'
     ),
     (
         86,
@@ -4863,7 +4919,7 @@ INSERT INTO Neurketak (
         84,
         67.7,
         1.57,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         87,
@@ -4873,7 +4929,7 @@ INSERT INTO Neurketak (
         80,
         73.7,
         1.61,
-        'Gosariaren ondoren.'
+        87, 'Gosariaren ondoren.'
     ),
     (
         88,
@@ -4883,7 +4939,7 @@ INSERT INTO Neurketak (
         81,
         89.0,
         1.81,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         89,
@@ -4893,7 +4949,7 @@ INSERT INTO Neurketak (
         80,
         90.1,
         1.84,
-        'Apur bat nekatuta.'
+        78, 'Apur bat nekatuta.'
     ),
     (
         90,
@@ -4903,7 +4959,7 @@ INSERT INTO Neurketak (
         80,
         66.2,
         1.60,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         91,
@@ -4913,7 +4969,7 @@ INSERT INTO Neurketak (
         90,
         89.7,
         1.58,
-        'Dena ondo.'
+        76, 'Dena ondo.'
     ),
     (
         92,
@@ -4923,7 +4979,7 @@ INSERT INTO Neurketak (
         94,
         59.6,
         1.79,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         93,
@@ -4933,7 +4989,7 @@ INSERT INTO Neurketak (
         94,
         75.8,
         1.81,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         94,
@@ -4943,7 +4999,7 @@ INSERT INTO Neurketak (
         78,
         87.4,
         1.83,
-        'Dena ondo.'
+        70, 'Dena ondo.'
     ),
     (
         95,
@@ -4953,7 +5009,7 @@ INSERT INTO Neurketak (
         81,
         89.3,
         1.77,
-        'Gaur goizean neurtuta.'
+        70, 'Gaur goizean neurtuta.'
     ),
     (
         96,
@@ -4963,7 +5019,7 @@ INSERT INTO Neurketak (
         82,
         77.4,
         1.71,
-        'Kirola egin ondoren.'
+        74, 'Kirola egin ondoren.'
     ),
     (
         98,
@@ -4973,7 +5029,7 @@ INSERT INTO Neurketak (
         88,
         84.4,
         1.60,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         99,
@@ -4983,7 +5039,7 @@ INSERT INTO Neurketak (
         85,
         86.9,
         1.71,
-        'Baraualdian.'
+        86, 'Baraualdian.'
     ),
     (
         100,
@@ -4993,7 +5049,7 @@ INSERT INTO Neurketak (
         84,
         81.1,
         1.57,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         51,
@@ -5003,7 +5059,7 @@ INSERT INTO Neurketak (
         84,
         63.0,
         1.76,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         52,
@@ -5013,7 +5069,7 @@ INSERT INTO Neurketak (
         79,
         93.1,
         1.77,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         53,
@@ -5023,7 +5079,7 @@ INSERT INTO Neurketak (
         80,
         75.5,
         1.75,
-        'Apur bat nekatuta.'
+        86, 'Apur bat nekatuta.'
     ),
     (
         54,
@@ -5033,7 +5089,7 @@ INSERT INTO Neurketak (
         88,
         86.0,
         1.60,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         55,
@@ -5043,7 +5099,7 @@ INSERT INTO Neurketak (
         79,
         81.8,
         1.76,
-        'Apur bat nekatuta.'
+        92, 'Apur bat nekatuta.'
     ),
     (
         57,
@@ -5053,7 +5109,7 @@ INSERT INTO Neurketak (
         85,
         82.3,
         1.69,
-        'Kirola egin ondoren.'
+        69, 'Kirola egin ondoren.'
     ),
     (
         58,
@@ -5063,7 +5119,7 @@ INSERT INTO Neurketak (
         88,
         67.8,
         1.68,
-        'Dena ondo.'
+        70, 'Dena ondo.'
     ),
     (
         61,
@@ -5073,7 +5129,7 @@ INSERT INTO Neurketak (
         82,
         72.9,
         1.83,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         62,
@@ -5083,7 +5139,7 @@ INSERT INTO Neurketak (
         76,
         65.9,
         1.56,
-        'Ondo sentitzen naiz.'
+        68, 'Ondo sentitzen naiz.'
     ),
     (
         63,
@@ -5093,7 +5149,7 @@ INSERT INTO Neurketak (
         82,
         80.3,
         1.80,
-        'Baraualdian.'
+        90, 'Baraualdian.'
     ),
     (
         64,
@@ -5103,7 +5159,7 @@ INSERT INTO Neurketak (
         73,
         95.5,
         1.56,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         65,
@@ -5113,7 +5169,7 @@ INSERT INTO Neurketak (
         83,
         91.9,
         1.55,
-        'Baraualdian.'
+        79, 'Baraualdian.'
     ),
     (
         66,
@@ -5123,7 +5179,7 @@ INSERT INTO Neurketak (
         81,
         75.7,
         1.59,
-        'Gosariaren ondoren.'
+        91, 'Gosariaren ondoren.'
     ),
     (
         67,
@@ -5133,7 +5189,7 @@ INSERT INTO Neurketak (
         89,
         71.6,
         1.72,
-        'Gosariaren ondoren.'
+        89, 'Gosariaren ondoren.'
     ),
     (
         68,
@@ -5143,7 +5199,7 @@ INSERT INTO Neurketak (
         84,
         60.7,
         1.85,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         69,
@@ -5153,7 +5209,7 @@ INSERT INTO Neurketak (
         90,
         94.2,
         1.66,
-        'Apur bat nekatuta.'
+        69, 'Apur bat nekatuta.'
     ),
     (
         70,
@@ -5163,7 +5219,7 @@ INSERT INTO Neurketak (
         83,
         74.5,
         1.70,
-        'Dena ondo.'
+        74, 'Dena ondo.'
     ),
     (
         71,
@@ -5173,7 +5229,7 @@ INSERT INTO Neurketak (
         84,
         88.9,
         1.63,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         72,
@@ -5183,7 +5239,7 @@ INSERT INTO Neurketak (
         87,
         92.7,
         1.69,
-        'Gosariaren ondoren.'
+        82, 'Gosariaren ondoren.'
     ),
     (
         73,
@@ -5193,7 +5249,7 @@ INSERT INTO Neurketak (
         71,
         95.9,
         1.55,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         74,
@@ -5203,7 +5259,7 @@ INSERT INTO Neurketak (
         90,
         64.9,
         1.67,
-        'Gaur goizean neurtuta.'
+        78, 'Gaur goizean neurtuta.'
     ),
     (
         76,
@@ -5213,7 +5269,7 @@ INSERT INTO Neurketak (
         81,
         65.8,
         1.69,
-        'Apur bat nekatuta.'
+        92, 'Apur bat nekatuta.'
     ),
     (
         77,
@@ -5223,7 +5279,7 @@ INSERT INTO Neurketak (
         84,
         66.3,
         1.67,
-        'Ondo sentitzen naiz.'
+        89, 'Ondo sentitzen naiz.'
     ),
     (
         78,
@@ -5233,7 +5289,7 @@ INSERT INTO Neurketak (
         80,
         62.8,
         1.61,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         79,
@@ -5243,7 +5299,7 @@ INSERT INTO Neurketak (
         79,
         67.8,
         1.67,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         80,
@@ -5253,7 +5309,7 @@ INSERT INTO Neurketak (
         90,
         63.3,
         1.78,
-        'Kirola egin ondoren.'
+        69, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -5263,7 +5319,7 @@ INSERT INTO Neurketak (
         95,
         85.0,
         1.58,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         82,
@@ -5273,7 +5329,7 @@ INSERT INTO Neurketak (
         91,
         88.1,
         1.77,
-        'Ondo sentitzen naiz.'
+        69, 'Ondo sentitzen naiz.'
     ),
     (
         83,
@@ -5283,7 +5339,7 @@ INSERT INTO Neurketak (
         86,
         64.3,
         1.80,
-        'Gaur goizean neurtuta.'
+        92, 'Gaur goizean neurtuta.'
     ),
     (
         86,
@@ -5293,7 +5349,7 @@ INSERT INTO Neurketak (
         82,
         68.3,
         1.57,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         87,
@@ -5303,7 +5359,7 @@ INSERT INTO Neurketak (
         88,
         72.3,
         1.61,
-        'Kirola egin ondoren.'
+        75, 'Kirola egin ondoren.'
     ),
     (
         88,
@@ -5313,7 +5369,7 @@ INSERT INTO Neurketak (
         84,
         89.1,
         1.81,
-        'Ondo sentitzen naiz.'
+        90, 'Ondo sentitzen naiz.'
     ),
     (
         91,
@@ -5323,7 +5379,7 @@ INSERT INTO Neurketak (
         80,
         89.2,
         1.58,
-        'Ondo sentitzen naiz.'
+        87, 'Ondo sentitzen naiz.'
     ),
     (
         92,
@@ -5333,7 +5389,7 @@ INSERT INTO Neurketak (
         79,
         60.7,
         1.79,
-        'Gosariaren ondoren.'
+        66, 'Gosariaren ondoren.'
     ),
     (
         93,
@@ -5343,7 +5399,7 @@ INSERT INTO Neurketak (
         81,
         75.6,
         1.81,
-        'Dena ondo.'
+        90, 'Dena ondo.'
     ),
     (
         94,
@@ -5353,7 +5409,7 @@ INSERT INTO Neurketak (
         78,
         87.6,
         1.83,
-        'Ondo sentitzen naiz.'
+        74, 'Ondo sentitzen naiz.'
     ),
     (
         95,
@@ -5363,7 +5419,7 @@ INSERT INTO Neurketak (
         72,
         89.1,
         1.77,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         96,
@@ -5373,7 +5429,7 @@ INSERT INTO Neurketak (
         82,
         76.6,
         1.71,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         97,
@@ -5383,7 +5439,7 @@ INSERT INTO Neurketak (
         71,
         88.0,
         1.56,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         98,
@@ -5393,7 +5449,7 @@ INSERT INTO Neurketak (
         86,
         84.5,
         1.60,
-        'Gaur goizean neurtuta.'
+        74, 'Gaur goizean neurtuta.'
     ),
     (
         100,
@@ -5403,7 +5459,7 @@ INSERT INTO Neurketak (
         74,
         82.5,
         1.57,
-        'Ondo sentitzen naiz.'
+        73, 'Ondo sentitzen naiz.'
     ),
     (
         51,
@@ -5413,7 +5469,7 @@ INSERT INTO Neurketak (
         83,
         64.7,
         1.76,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         52,
@@ -5423,7 +5479,7 @@ INSERT INTO Neurketak (
         84,
         93.6,
         1.77,
-        'Baraualdian.'
+        86, 'Baraualdian.'
     ),
     (
         53,
@@ -5433,7 +5489,7 @@ INSERT INTO Neurketak (
         89,
         74.8,
         1.75,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         54,
@@ -5443,7 +5499,7 @@ INSERT INTO Neurketak (
         86,
         87.9,
         1.60,
-        'Ondo sentitzen naiz.'
+        85, 'Ondo sentitzen naiz.'
     ),
     (
         55,
@@ -5453,7 +5509,7 @@ INSERT INTO Neurketak (
         79,
         81.2,
         1.76,
-        'Dena ondo.'
+        72, 'Dena ondo.'
     ),
     (
         58,
@@ -5463,7 +5519,7 @@ INSERT INTO Neurketak (
         89,
         66.0,
         1.68,
-        'Gosariaren ondoren.'
+        72, 'Gosariaren ondoren.'
     ),
     (
         59,
@@ -5473,7 +5529,7 @@ INSERT INTO Neurketak (
         91,
         63.7,
         1.73,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         61,
@@ -5483,7 +5539,7 @@ INSERT INTO Neurketak (
         81,
         72.6,
         1.83,
-        'Ondo sentitzen naiz.'
+        78, 'Ondo sentitzen naiz.'
     ),
     (
         63,
@@ -5493,7 +5549,7 @@ INSERT INTO Neurketak (
         78,
         81.7,
         1.80,
-        'Ondo sentitzen naiz.'
+        70, 'Ondo sentitzen naiz.'
     ),
     (
         64,
@@ -5503,7 +5559,7 @@ INSERT INTO Neurketak (
         84,
         95.5,
         1.56,
-        'Gaur goizean neurtuta.'
+        91, 'Gaur goizean neurtuta.'
     ),
     (
         66,
@@ -5513,7 +5569,7 @@ INSERT INTO Neurketak (
         91,
         74.6,
         1.59,
-        'Baraualdian.'
+        74, 'Baraualdian.'
     ),
     (
         67,
@@ -5523,7 +5579,7 @@ INSERT INTO Neurketak (
         83,
         72.5,
         1.72,
-        'Apur bat nekatuta.'
+        71, 'Apur bat nekatuta.'
     ),
     (
         68,
@@ -5533,7 +5589,7 @@ INSERT INTO Neurketak (
         79,
         61.5,
         1.85,
-        'Dena ondo.'
+        94, 'Dena ondo.'
     ),
     (
         69,
@@ -5543,7 +5599,7 @@ INSERT INTO Neurketak (
         76,
         95.1,
         1.66,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         70,
@@ -5553,7 +5609,7 @@ INSERT INTO Neurketak (
         76,
         74.1,
         1.70,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         71,
@@ -5563,7 +5619,7 @@ INSERT INTO Neurketak (
         75,
         88.1,
         1.63,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         72,
@@ -5573,7 +5629,7 @@ INSERT INTO Neurketak (
         85,
         92.3,
         1.69,
-        'Gosariaren ondoren.'
+        89, 'Gosariaren ondoren.'
     ),
     (
         73,
@@ -5583,7 +5639,7 @@ INSERT INTO Neurketak (
         76,
         94.0,
         1.55,
-        'Apur bat nekatuta.'
+        85, 'Apur bat nekatuta.'
     ),
     (
         76,
@@ -5593,7 +5649,7 @@ INSERT INTO Neurketak (
         89,
         67.0,
         1.69,
-        'Baraualdian.'
+        73, 'Baraualdian.'
     ),
     (
         78,
@@ -5603,7 +5659,7 @@ INSERT INTO Neurketak (
         85,
         63.6,
         1.61,
-        'Gosariaren ondoren.'
+        78, 'Gosariaren ondoren.'
     ),
     (
         80,
@@ -5613,7 +5669,7 @@ INSERT INTO Neurketak (
         86,
         64.0,
         1.78,
-        'Ondo sentitzen naiz.'
+        89, 'Ondo sentitzen naiz.'
     ),
     (
         81,
@@ -5623,7 +5679,7 @@ INSERT INTO Neurketak (
         92,
         86.7,
         1.58,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         82,
@@ -5633,7 +5689,7 @@ INSERT INTO Neurketak (
         92,
         88.6,
         1.77,
-        'Dena ondo.'
+        92, 'Dena ondo.'
     ),
     (
         84,
@@ -5643,7 +5699,7 @@ INSERT INTO Neurketak (
         78,
         79.8,
         1.67,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         85,
@@ -5653,7 +5709,7 @@ INSERT INTO Neurketak (
         93,
         80.1,
         1.72,
-        'Gosariaren ondoren.'
+        70, 'Gosariaren ondoren.'
     ),
     (
         86,
@@ -5663,7 +5719,7 @@ INSERT INTO Neurketak (
         78,
         68.7,
         1.57,
-        'Ondo sentitzen naiz.'
+        94, 'Ondo sentitzen naiz.'
     ),
     (
         87,
@@ -5673,7 +5729,7 @@ INSERT INTO Neurketak (
         74,
         73.4,
         1.61,
-        'Apur bat nekatuta.'
+        86, 'Apur bat nekatuta.'
     ),
     (
         88,
@@ -5683,7 +5739,7 @@ INSERT INTO Neurketak (
         81,
         89.8,
         1.81,
-        'Gaur goizean neurtuta.'
+        71, 'Gaur goizean neurtuta.'
     ),
     (
         91,
@@ -5693,7 +5749,7 @@ INSERT INTO Neurketak (
         85,
         90.6,
         1.58,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         92,
@@ -5703,7 +5759,7 @@ INSERT INTO Neurketak (
         93,
         60.5,
         1.79,
-        'Apur bat nekatuta.'
+        69, 'Apur bat nekatuta.'
     ),
     (
         94,
@@ -5713,7 +5769,7 @@ INSERT INTO Neurketak (
         79,
         87.9,
         1.83,
-        'Dena ondo.'
+        79, 'Dena ondo.'
     ),
     (
         95,
@@ -5723,7 +5779,7 @@ INSERT INTO Neurketak (
         84,
         89.1,
         1.77,
-        'Ondo sentitzen naiz.'
+        89, 'Ondo sentitzen naiz.'
     ),
     (
         96,
@@ -5733,7 +5789,7 @@ INSERT INTO Neurketak (
         88,
         77.3,
         1.71,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         98,
@@ -5743,7 +5799,7 @@ INSERT INTO Neurketak (
         86,
         84.6,
         1.60,
-        'Gaur goizean neurtuta.'
+        66, 'Gaur goizean neurtuta.'
     ),
     (
         99,
@@ -5753,7 +5809,7 @@ INSERT INTO Neurketak (
         86,
         86.0,
         1.71,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         100,
@@ -5763,7 +5819,7 @@ INSERT INTO Neurketak (
         76,
         81.6,
         1.57,
-        'Gosariaren ondoren.'
+        94, 'Gosariaren ondoren.'
     ),
     (
         51,
@@ -5773,7 +5829,7 @@ INSERT INTO Neurketak (
         93,
         63.9,
         1.76,
-        'Baraualdian.'
+        94, 'Baraualdian.'
     ),
     (
         52,
@@ -5783,7 +5839,7 @@ INSERT INTO Neurketak (
         90,
         93.0,
         1.77,
-        'Gosariaren ondoren.'
+        86, 'Gosariaren ondoren.'
     ),
     (
         54,
@@ -5793,7 +5849,7 @@ INSERT INTO Neurketak (
         88,
         87.3,
         1.60,
-        'Apur bat nekatuta.'
+        94, 'Apur bat nekatuta.'
     ),
     (
         56,
@@ -5803,7 +5859,7 @@ INSERT INTO Neurketak (
         93,
         90.8,
         1.61,
-        'Gosariaren ondoren.'
+        88, 'Gosariaren ondoren.'
     ),
     (
         57,
@@ -5813,7 +5869,7 @@ INSERT INTO Neurketak (
         86,
         82.9,
         1.69,
-        'Apur bat nekatuta.'
+        91, 'Apur bat nekatuta.'
     ),
     (
         58,
@@ -5823,7 +5879,7 @@ INSERT INTO Neurketak (
         86,
         67.4,
         1.68,
-        'Dena ondo.'
+        85, 'Dena ondo.'
     ),
     (
         59,
@@ -5833,7 +5889,7 @@ INSERT INTO Neurketak (
         90,
         62.2,
         1.73,
-        'Baraualdian.'
+        93, 'Baraualdian.'
     ),
     (
         60,
@@ -5843,7 +5899,7 @@ INSERT INTO Neurketak (
         84,
         78.1,
         1.81,
-        'Baraualdian.'
+        88, 'Baraualdian.'
     ),
     (
         62,
@@ -5853,7 +5909,7 @@ INSERT INTO Neurketak (
         72,
         66.9,
         1.56,
-        'Apur bat nekatuta.'
+        91, 'Apur bat nekatuta.'
     ),
     (
         64,
@@ -5863,7 +5919,7 @@ INSERT INTO Neurketak (
         82,
         96.0,
         1.56,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         65,
@@ -5873,7 +5929,7 @@ INSERT INTO Neurketak (
         87,
         90.3,
         1.55,
-        'Gosariaren ondoren.'
+        82, 'Gosariaren ondoren.'
     ),
     (
         67,
@@ -5883,7 +5939,7 @@ INSERT INTO Neurketak (
         77,
         71.1,
         1.72,
-        'Dena ondo.'
+        92, 'Dena ondo.'
     ),
     (
         69,
@@ -5893,7 +5949,7 @@ INSERT INTO Neurketak (
         82,
         95.6,
         1.66,
-        'Baraualdian.'
+        93, 'Baraualdian.'
     ),
     (
         70,
@@ -5903,7 +5959,7 @@ INSERT INTO Neurketak (
         87,
         75.7,
         1.70,
-        'Ondo sentitzen naiz.'
+        92, 'Ondo sentitzen naiz.'
     ),
     (
         71,
@@ -5913,7 +5969,7 @@ INSERT INTO Neurketak (
         76,
         88.1,
         1.63,
-        'Ondo sentitzen naiz.'
+        79, 'Ondo sentitzen naiz.'
     ),
     (
         73,
@@ -5923,7 +5979,7 @@ INSERT INTO Neurketak (
         81,
         94.8,
         1.55,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         74,
@@ -5933,7 +5989,7 @@ INSERT INTO Neurketak (
         82,
         63.6,
         1.67,
-        'Kirola egin ondoren.'
+        80, 'Kirola egin ondoren.'
     ),
     (
         75,
@@ -5943,7 +5999,7 @@ INSERT INTO Neurketak (
         80,
         59.1,
         1.65,
-        'Apur bat nekatuta.'
+        88, 'Apur bat nekatuta.'
     ),
     (
         78,
@@ -5953,7 +6009,7 @@ INSERT INTO Neurketak (
         74,
         62.6,
         1.61,
-        'Dena ondo.'
+        88, 'Dena ondo.'
     ),
     (
         79,
@@ -5963,7 +6019,7 @@ INSERT INTO Neurketak (
         82,
         67.5,
         1.67,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         80,
@@ -5973,7 +6029,7 @@ INSERT INTO Neurketak (
         79,
         63.7,
         1.78,
-        'Dena ondo.'
+        92, 'Dena ondo.'
     ),
     (
         82,
@@ -5983,7 +6039,7 @@ INSERT INTO Neurketak (
         83,
         89.8,
         1.77,
-        'Gosariaren ondoren.'
+        91, 'Gosariaren ondoren.'
     ),
     (
         83,
@@ -5993,7 +6049,7 @@ INSERT INTO Neurketak (
         89,
         66.0,
         1.80,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         84,
@@ -6003,7 +6059,7 @@ INSERT INTO Neurketak (
         79,
         78.8,
         1.67,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         86,
@@ -6013,7 +6069,7 @@ INSERT INTO Neurketak (
         79,
         67.3,
         1.57,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         88,
@@ -6023,7 +6079,7 @@ INSERT INTO Neurketak (
         75,
         89.7,
         1.81,
-        'Gosariaren ondoren.'
+        87, 'Gosariaren ondoren.'
     ),
     (
         89,
@@ -6033,7 +6089,7 @@ INSERT INTO Neurketak (
         82,
         90.1,
         1.84,
-        'Ondo sentitzen naiz.'
+        78, 'Ondo sentitzen naiz.'
     ),
     (
         91,
@@ -6043,7 +6099,7 @@ INSERT INTO Neurketak (
         80,
         90.5,
         1.58,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         92,
@@ -6053,7 +6109,7 @@ INSERT INTO Neurketak (
         80,
         61.0,
         1.79,
-        'Ondo sentitzen naiz.'
+        84, 'Ondo sentitzen naiz.'
     ),
     (
         93,
@@ -6063,7 +6119,7 @@ INSERT INTO Neurketak (
         84,
         76.2,
         1.81,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         94,
@@ -6073,7 +6129,7 @@ INSERT INTO Neurketak (
         77,
         86.7,
         1.83,
-        'Gosariaren ondoren.'
+        78, 'Gosariaren ondoren.'
     ),
     (
         95,
@@ -6083,7 +6139,7 @@ INSERT INTO Neurketak (
         81,
         89.8,
         1.77,
-        'Baraualdian.'
+        66, 'Baraualdian.'
     ),
     (
         96,
@@ -6093,7 +6149,7 @@ INSERT INTO Neurketak (
         77,
         76.6,
         1.71,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         98,
@@ -6103,7 +6159,7 @@ INSERT INTO Neurketak (
         90,
         84.9,
         1.60,
-        'Dena ondo.'
+        78, 'Dena ondo.'
     ),
     (
         99,
@@ -6113,7 +6169,7 @@ INSERT INTO Neurketak (
         80,
         86.1,
         1.71,
-        'Apur bat nekatuta.'
+        88, 'Apur bat nekatuta.'
     ),
     (
         100,
@@ -6123,7 +6179,7 @@ INSERT INTO Neurketak (
         85,
         81.1,
         1.57,
-        'Kirola egin ondoren.'
+        68, 'Kirola egin ondoren.'
     ),
     (
         51,
@@ -6133,7 +6189,7 @@ INSERT INTO Neurketak (
         92,
         63.1,
         1.76,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         52,
@@ -6143,7 +6199,7 @@ INSERT INTO Neurketak (
         94,
         94.2,
         1.77,
-        'Ondo sentitzen naiz.'
+        91, 'Ondo sentitzen naiz.'
     ),
     (
         55,
@@ -6153,7 +6209,7 @@ INSERT INTO Neurketak (
         71,
         80.5,
         1.76,
-        'Ondo sentitzen naiz.'
+        71, 'Ondo sentitzen naiz.'
     ),
     (
         56,
@@ -6163,7 +6219,7 @@ INSERT INTO Neurketak (
         83,
         89.3,
         1.61,
-        'Apur bat nekatuta.'
+        81, 'Apur bat nekatuta.'
     ),
     (
         57,
@@ -6173,7 +6229,7 @@ INSERT INTO Neurketak (
         86,
         83.6,
         1.69,
-        'Baraualdian.'
+        80, 'Baraualdian.'
     ),
     (
         58,
@@ -6183,7 +6239,7 @@ INSERT INTO Neurketak (
         78,
         66.2,
         1.68,
-        'Gosariaren ondoren.'
+        76, 'Gosariaren ondoren.'
     ),
     (
         59,
@@ -6193,7 +6249,7 @@ INSERT INTO Neurketak (
         81,
         62.1,
         1.73,
-        'Baraualdian.'
+        91, 'Baraualdian.'
     ),
     (
         60,
@@ -6203,7 +6259,7 @@ INSERT INTO Neurketak (
         80,
         77.5,
         1.81,
-        'Gaur goizean neurtuta.'
+        87, 'Gaur goizean neurtuta.'
     ),
     (
         61,
@@ -6213,7 +6269,7 @@ INSERT INTO Neurketak (
         78,
         72.6,
         1.83,
-        'Apur bat nekatuta.'
+        92, 'Apur bat nekatuta.'
     ),
     (
         62,
@@ -6223,7 +6279,7 @@ INSERT INTO Neurketak (
         72,
         66.9,
         1.56,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         63,
@@ -6233,7 +6289,7 @@ INSERT INTO Neurketak (
         89,
         81.5,
         1.80,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         64,
@@ -6243,7 +6299,7 @@ INSERT INTO Neurketak (
         82,
         95.0,
         1.56,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         65,
@@ -6253,7 +6309,7 @@ INSERT INTO Neurketak (
         78,
         90.4,
         1.55,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         67,
@@ -6263,7 +6319,7 @@ INSERT INTO Neurketak (
         88,
         71.1,
         1.72,
-        'Kirola egin ondoren.'
+        67, 'Kirola egin ondoren.'
     ),
     (
         68,
@@ -6273,7 +6329,7 @@ INSERT INTO Neurketak (
         87,
         60.6,
         1.85,
-        'Baraualdian.'
+        65, 'Baraualdian.'
     ),
     (
         69,
@@ -6283,7 +6339,7 @@ INSERT INTO Neurketak (
         87,
         95.3,
         1.66,
-        'Kirola egin ondoren.'
+        69, 'Kirola egin ondoren.'
     ),
     (
         70,
@@ -6293,7 +6349,7 @@ INSERT INTO Neurketak (
         76,
         75.7,
         1.70,
-        'Apur bat nekatuta.'
+        91, 'Apur bat nekatuta.'
     ),
     (
         71,
@@ -6303,7 +6359,7 @@ INSERT INTO Neurketak (
         71,
         88.5,
         1.63,
-        'Ondo sentitzen naiz.'
+        86, 'Ondo sentitzen naiz.'
     ),
     (
         72,
@@ -6313,7 +6369,7 @@ INSERT INTO Neurketak (
         86,
         92.7,
         1.69,
-        'Gosariaren ondoren.'
+        81, 'Gosariaren ondoren.'
     ),
     (
         73,
@@ -6323,7 +6379,7 @@ INSERT INTO Neurketak (
         73,
         94.6,
         1.55,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         74,
@@ -6333,7 +6389,7 @@ INSERT INTO Neurketak (
         76,
         64.9,
         1.67,
-        'Baraualdian.'
+        93, 'Baraualdian.'
     ),
     (
         75,
@@ -6343,7 +6399,7 @@ INSERT INTO Neurketak (
         78,
         60.3,
         1.65,
-        'Kirola egin ondoren.'
+        71, 'Kirola egin ondoren.'
     ),
     (
         76,
@@ -6353,7 +6409,7 @@ INSERT INTO Neurketak (
         85,
         65.8,
         1.69,
-        'Dena ondo.'
+        86, 'Dena ondo.'
     ),
     (
         77,
@@ -6363,7 +6419,7 @@ INSERT INTO Neurketak (
         90,
         67.7,
         1.67,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         78,
@@ -6373,7 +6429,7 @@ INSERT INTO Neurketak (
         80,
         63.2,
         1.61,
-        'Apur bat nekatuta.'
+        69, 'Apur bat nekatuta.'
     ),
     (
         79,
@@ -6383,7 +6439,7 @@ INSERT INTO Neurketak (
         80,
         66.7,
         1.67,
-        'Ondo sentitzen naiz.'
+        67, 'Ondo sentitzen naiz.'
     ),
     (
         80,
@@ -6393,7 +6449,7 @@ INSERT INTO Neurketak (
         86,
         63.3,
         1.78,
-        'Baraualdian.'
+        91, 'Baraualdian.'
     ),
     (
         82,
@@ -6403,7 +6459,7 @@ INSERT INTO Neurketak (
         94,
         88.9,
         1.77,
-        'Gosariaren ondoren.'
+        71, 'Gosariaren ondoren.'
     ),
     (
         84,
@@ -6413,7 +6469,7 @@ INSERT INTO Neurketak (
         79,
         79.8,
         1.67,
-        'Gosariaren ondoren.'
+        71, 'Gosariaren ondoren.'
     ),
     (
         85,
@@ -6423,7 +6479,7 @@ INSERT INTO Neurketak (
         80,
         81.7,
         1.72,
-        'Apur bat nekatuta.'
+        81, 'Apur bat nekatuta.'
     ),
     (
         87,
@@ -6433,7 +6489,7 @@ INSERT INTO Neurketak (
         86,
         73.9,
         1.61,
-        'Kirola egin ondoren.'
+        88, 'Kirola egin ondoren.'
     ),
     (
         88,
@@ -6443,7 +6499,7 @@ INSERT INTO Neurketak (
         84,
         89.3,
         1.81,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         90,
@@ -6453,7 +6509,7 @@ INSERT INTO Neurketak (
         92,
         66.2,
         1.60,
-        'Apur bat nekatuta.'
+        65, 'Apur bat nekatuta.'
     ),
     (
         91,
@@ -6463,7 +6519,7 @@ INSERT INTO Neurketak (
         79,
         90.7,
         1.58,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         92,
@@ -6473,7 +6529,7 @@ INSERT INTO Neurketak (
         82,
         60.0,
         1.79,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         94,
@@ -6483,7 +6539,7 @@ INSERT INTO Neurketak (
         85,
         86.9,
         1.83,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         95,
@@ -6493,7 +6549,7 @@ INSERT INTO Neurketak (
         79,
         90.5,
         1.77,
-        'Gosariaren ondoren.'
+        83, 'Gosariaren ondoren.'
     ),
     (
         96,
@@ -6503,7 +6559,7 @@ INSERT INTO Neurketak (
         89,
         77.6,
         1.71,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         98,
@@ -6513,7 +6569,7 @@ INSERT INTO Neurketak (
         89,
         83.3,
         1.60,
-        'Apur bat nekatuta.'
+        94, 'Apur bat nekatuta.'
     ),
     (
         99,
@@ -6523,7 +6579,7 @@ INSERT INTO Neurketak (
         77,
         86.6,
         1.71,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         53,
@@ -6533,7 +6589,7 @@ INSERT INTO Neurketak (
         83,
         74.8,
         1.75,
-        'Dena ondo.'
+        74, 'Dena ondo.'
     ),
     (
         54,
@@ -6543,7 +6599,7 @@ INSERT INTO Neurketak (
         81,
         86.1,
         1.60,
-        'Gosariaren ondoren.'
+        77, 'Gosariaren ondoren.'
     ),
     (
         55,
@@ -6553,7 +6609,7 @@ INSERT INTO Neurketak (
         78,
         80.6,
         1.76,
-        'Dena ondo.'
+        86, 'Dena ondo.'
     ),
     (
         57,
@@ -6563,7 +6619,7 @@ INSERT INTO Neurketak (
         93,
         83.1,
         1.69,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         58,
@@ -6573,7 +6629,7 @@ INSERT INTO Neurketak (
         86,
         66.0,
         1.68,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         59,
@@ -6583,7 +6639,7 @@ INSERT INTO Neurketak (
         92,
         63.8,
         1.73,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         60,
@@ -6593,7 +6649,7 @@ INSERT INTO Neurketak (
         85,
         77.9,
         1.81,
-        'Gosariaren ondoren.'
+        79, 'Gosariaren ondoren.'
     ),
     (
         61,
@@ -6603,7 +6659,7 @@ INSERT INTO Neurketak (
         79,
         72.0,
         1.83,
-        'Kirola egin ondoren.'
+        82, 'Kirola egin ondoren.'
     ),
     (
         62,
@@ -6613,7 +6669,7 @@ INSERT INTO Neurketak (
         71,
         66.2,
         1.56,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         63,
@@ -6623,7 +6679,7 @@ INSERT INTO Neurketak (
         78,
         81.3,
         1.80,
-        'Gosariaren ondoren.'
+        82, 'Gosariaren ondoren.'
     ),
     (
         65,
@@ -6633,7 +6689,7 @@ INSERT INTO Neurketak (
         82,
         90.1,
         1.55,
-        'Dena ondo.'
+        93, 'Dena ondo.'
     ),
     (
         66,
@@ -6643,7 +6699,7 @@ INSERT INTO Neurketak (
         76,
         74.9,
         1.59,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         67,
@@ -6653,7 +6709,7 @@ INSERT INTO Neurketak (
         90,
         72.3,
         1.72,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         68,
@@ -6663,7 +6719,7 @@ INSERT INTO Neurketak (
         75,
         60.4,
         1.85,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         70,
@@ -6673,7 +6729,7 @@ INSERT INTO Neurketak (
         78,
         74.2,
         1.70,
-        'Kirola egin ondoren.'
+        83, 'Kirola egin ondoren.'
     ),
     (
         71,
@@ -6683,7 +6739,7 @@ INSERT INTO Neurketak (
         72,
         89.2,
         1.63,
-        'Gosariaren ondoren.'
+        82, 'Gosariaren ondoren.'
     ),
     (
         72,
@@ -6693,7 +6749,7 @@ INSERT INTO Neurketak (
         86,
         91.4,
         1.69,
-        'Apur bat nekatuta.'
+        84, 'Apur bat nekatuta.'
     ),
     (
         73,
@@ -6703,7 +6759,7 @@ INSERT INTO Neurketak (
         77,
         95.4,
         1.55,
-        'Ondo sentitzen naiz.'
+        89, 'Ondo sentitzen naiz.'
     ),
     (
         74,
@@ -6713,7 +6769,7 @@ INSERT INTO Neurketak (
         84,
         63.5,
         1.67,
-        'Gaur goizean neurtuta.'
+        66, 'Gaur goizean neurtuta.'
     ),
     (
         75,
@@ -6723,7 +6779,7 @@ INSERT INTO Neurketak (
         77,
         60.5,
         1.65,
-        'Apur bat nekatuta.'
+        88, 'Apur bat nekatuta.'
     ),
     (
         76,
@@ -6733,7 +6789,7 @@ INSERT INTO Neurketak (
         80,
         66.1,
         1.69,
-        'Dena ondo.'
+        77, 'Dena ondo.'
     ),
     (
         77,
@@ -6743,7 +6799,7 @@ INSERT INTO Neurketak (
         93,
         66.4,
         1.67,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         78,
@@ -6753,7 +6809,7 @@ INSERT INTO Neurketak (
         74,
         62.3,
         1.61,
-        'Apur bat nekatuta.'
+        72, 'Apur bat nekatuta.'
     ),
     (
         79,
@@ -6763,7 +6819,7 @@ INSERT INTO Neurketak (
         88,
         66.0,
         1.67,
-        'Apur bat nekatuta.'
+        88, 'Apur bat nekatuta.'
     ),
     (
         81,
@@ -6773,7 +6829,7 @@ INSERT INTO Neurketak (
         93,
         85.5,
         1.58,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         82,
@@ -6783,7 +6839,7 @@ INSERT INTO Neurketak (
         90,
         90.0,
         1.77,
-        'Baraualdian.'
+        69, 'Baraualdian.'
     ),
     (
         84,
@@ -6793,7 +6849,7 @@ INSERT INTO Neurketak (
         88,
         79.0,
         1.67,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         85,
@@ -6803,7 +6859,7 @@ INSERT INTO Neurketak (
         90,
         81.5,
         1.72,
-        'Baraualdian.'
+        83, 'Baraualdian.'
     ),
     (
         86,
@@ -6813,7 +6869,7 @@ INSERT INTO Neurketak (
         80,
         67.7,
         1.57,
-        'Kirola egin ondoren.'
+        68, 'Kirola egin ondoren.'
     ),
     (
         87,
@@ -6823,7 +6879,7 @@ INSERT INTO Neurketak (
         78,
         73.5,
         1.61,
-        'Baraualdian.'
+        66, 'Baraualdian.'
     ),
     (
         88,
@@ -6833,7 +6889,7 @@ INSERT INTO Neurketak (
         80,
         90.7,
         1.81,
-        'Apur bat nekatuta.'
+        92, 'Apur bat nekatuta.'
     ),
     (
         89,
@@ -6843,7 +6899,7 @@ INSERT INTO Neurketak (
         86,
         90.9,
         1.84,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         90,
@@ -6853,7 +6909,7 @@ INSERT INTO Neurketak (
         83,
         66.8,
         1.60,
-        'Baraualdian.'
+        66, 'Baraualdian.'
     ),
     (
         92,
@@ -6863,7 +6919,7 @@ INSERT INTO Neurketak (
         86,
         59.6,
         1.79,
-        'Kirola egin ondoren.'
+        71, 'Kirola egin ondoren.'
     ),
     (
         93,
@@ -6873,7 +6929,7 @@ INSERT INTO Neurketak (
         83,
         75.2,
         1.81,
-        'Gaur goizean neurtuta.'
+        87, 'Gaur goizean neurtuta.'
     ),
     (
         94,
@@ -6883,7 +6939,7 @@ INSERT INTO Neurketak (
         81,
         86.7,
         1.83,
-        'Apur bat nekatuta.'
+        92, 'Apur bat nekatuta.'
     ),
     (
         96,
@@ -6893,7 +6949,7 @@ INSERT INTO Neurketak (
         82,
         77.0,
         1.71,
-        'Dena ondo.'
+        65, 'Dena ondo.'
     ),
     (
         97,
@@ -6903,7 +6959,7 @@ INSERT INTO Neurketak (
         71,
         86.4,
         1.56,
-        'Baraualdian.'
+        74, 'Baraualdian.'
     ),
     (
         98,
@@ -6913,7 +6969,7 @@ INSERT INTO Neurketak (
         75,
         84.4,
         1.60,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         99,
@@ -6923,7 +6979,7 @@ INSERT INTO Neurketak (
         88,
         86.0,
         1.71,
-        'Baraualdian.'
+        89, 'Baraualdian.'
     ),
     (
         100,
@@ -6933,7 +6989,7 @@ INSERT INTO Neurketak (
         79,
         82.7,
         1.57,
-        'Dena ondo.'
+        93, 'Dena ondo.'
     ),
     (
         52,
@@ -6943,7 +6999,7 @@ INSERT INTO Neurketak (
         87,
         94.1,
         1.77,
-        'Kirola egin ondoren.'
+        93, 'Kirola egin ondoren.'
     ),
     (
         53,
@@ -6953,7 +7009,7 @@ INSERT INTO Neurketak (
         84,
         75.0,
         1.75,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         54,
@@ -6963,7 +7019,7 @@ INSERT INTO Neurketak (
         87,
         87.6,
         1.60,
-        'Gosariaren ondoren.'
+        86, 'Gosariaren ondoren.'
     ),
     (
         55,
@@ -6973,7 +7029,7 @@ INSERT INTO Neurketak (
         78,
         81.1,
         1.76,
-        'Baraualdian.'
+        80, 'Baraualdian.'
     ),
     (
         56,
@@ -6983,7 +7039,7 @@ INSERT INTO Neurketak (
         91,
         90.2,
         1.61,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         57,
@@ -6993,7 +7049,7 @@ INSERT INTO Neurketak (
         88,
         83.5,
         1.69,
-        'Gaur goizean neurtuta.'
+        76, 'Gaur goizean neurtuta.'
     ),
     (
         58,
@@ -7003,7 +7059,7 @@ INSERT INTO Neurketak (
         75,
         67.4,
         1.68,
-        'Gaur goizean neurtuta.'
+        87, 'Gaur goizean neurtuta.'
     ),
     (
         59,
@@ -7013,7 +7069,7 @@ INSERT INTO Neurketak (
         87,
         63.7,
         1.73,
-        'Apur bat nekatuta.'
+        86, 'Apur bat nekatuta.'
     ),
     (
         60,
@@ -7023,7 +7079,7 @@ INSERT INTO Neurketak (
         87,
         78.8,
         1.81,
-        'Baraualdian.'
+        73, 'Baraualdian.'
     ),
     (
         61,
@@ -7033,7 +7089,7 @@ INSERT INTO Neurketak (
         85,
         72.8,
         1.83,
-        'Baraualdian.'
+        65, 'Baraualdian.'
     ),
     (
         62,
@@ -7043,7 +7099,7 @@ INSERT INTO Neurketak (
         75,
         66.5,
         1.56,
-        'Ondo sentitzen naiz.'
+        92, 'Ondo sentitzen naiz.'
     ),
     (
         63,
@@ -7053,7 +7109,7 @@ INSERT INTO Neurketak (
         89,
         82.0,
         1.80,
-        'Gaur goizean neurtuta.'
+        86, 'Gaur goizean neurtuta.'
     ),
     (
         64,
@@ -7063,7 +7119,7 @@ INSERT INTO Neurketak (
         80,
         95.0,
         1.56,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         65,
@@ -7073,7 +7129,7 @@ INSERT INTO Neurketak (
         88,
         91.2,
         1.55,
-        'Baraualdian.'
+        84, 'Baraualdian.'
     ),
     (
         66,
@@ -7083,7 +7139,7 @@ INSERT INTO Neurketak (
         87,
         75.5,
         1.59,
-        'Gosariaren ondoren.'
+        88, 'Gosariaren ondoren.'
     ),
     (
         67,
@@ -7093,7 +7149,7 @@ INSERT INTO Neurketak (
         86,
         72.0,
         1.72,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         68,
@@ -7103,7 +7159,7 @@ INSERT INTO Neurketak (
         84,
         60.7,
         1.85,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         69,
@@ -7113,7 +7169,7 @@ INSERT INTO Neurketak (
         88,
         95.8,
         1.66,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         70,
@@ -7123,7 +7179,7 @@ INSERT INTO Neurketak (
         88,
         74.4,
         1.70,
-        'Ondo sentitzen naiz.'
+        80, 'Ondo sentitzen naiz.'
     ),
     (
         71,
@@ -7133,7 +7189,7 @@ INSERT INTO Neurketak (
         83,
         89.0,
         1.63,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         72,
@@ -7143,7 +7199,7 @@ INSERT INTO Neurketak (
         77,
         92.6,
         1.69,
-        'Ondo sentitzen naiz.'
+        66, 'Ondo sentitzen naiz.'
     ),
     (
         73,
@@ -7153,7 +7209,7 @@ INSERT INTO Neurketak (
         86,
         95.7,
         1.55,
-        'Ondo sentitzen naiz.'
+        91, 'Ondo sentitzen naiz.'
     ),
     (
         75,
@@ -7163,7 +7219,7 @@ INSERT INTO Neurketak (
         84,
         60.7,
         1.65,
-        'Dena ondo.'
+        72, 'Dena ondo.'
     ),
     (
         76,
@@ -7173,7 +7229,7 @@ INSERT INTO Neurketak (
         87,
         66.5,
         1.69,
-        'Baraualdian.'
+        83, 'Baraualdian.'
     ),
     (
         77,
@@ -7183,7 +7239,7 @@ INSERT INTO Neurketak (
         91,
         67.4,
         1.67,
-        'Gosariaren ondoren.'
+        83, 'Gosariaren ondoren.'
     ),
     (
         79,
@@ -7193,7 +7249,7 @@ INSERT INTO Neurketak (
         85,
         66.8,
         1.67,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         80,
@@ -7203,7 +7259,7 @@ INSERT INTO Neurketak (
         90,
         62.1,
         1.78,
-        'Ondo sentitzen naiz.'
+        91, 'Ondo sentitzen naiz.'
     ),
     (
         81,
@@ -7213,7 +7269,7 @@ INSERT INTO Neurketak (
         89,
         86.6,
         1.58,
-        'Apur bat nekatuta.'
+        71, 'Apur bat nekatuta.'
     ),
     (
         82,
@@ -7223,7 +7279,7 @@ INSERT INTO Neurketak (
         82,
         89.7,
         1.77,
-        'Baraualdian.'
+        66, 'Baraualdian.'
     ),
     (
         83,
@@ -7233,7 +7289,7 @@ INSERT INTO Neurketak (
         91,
         65.3,
         1.80,
-        'Gaur goizean neurtuta.'
+        76, 'Gaur goizean neurtuta.'
     ),
     (
         84,
@@ -7243,7 +7299,7 @@ INSERT INTO Neurketak (
         79,
         78.3,
         1.67,
-        'Ondo sentitzen naiz.'
+        87, 'Ondo sentitzen naiz.'
     ),
     (
         85,
@@ -7253,7 +7309,7 @@ INSERT INTO Neurketak (
         81,
         81.1,
         1.72,
-        'Gosariaren ondoren.'
+        78, 'Gosariaren ondoren.'
     ),
     (
         86,
@@ -7263,7 +7319,7 @@ INSERT INTO Neurketak (
         81,
         67.4,
         1.57,
-        'Ondo sentitzen naiz.'
+        66, 'Ondo sentitzen naiz.'
     ),
     (
         87,
@@ -7273,7 +7329,7 @@ INSERT INTO Neurketak (
         80,
         73.2,
         1.61,
-        'Kirola egin ondoren.'
+        85, 'Kirola egin ondoren.'
     ),
     (
         88,
@@ -7283,7 +7339,7 @@ INSERT INTO Neurketak (
         75,
         89.7,
         1.81,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         89,
@@ -7293,7 +7349,7 @@ INSERT INTO Neurketak (
         85,
         91.7,
         1.84,
-        'Kirola egin ondoren.'
+        69, 'Kirola egin ondoren.'
     ),
     (
         90,
@@ -7303,7 +7359,7 @@ INSERT INTO Neurketak (
         84,
         65.6,
         1.60,
-        'Kirola egin ondoren.'
+        91, 'Kirola egin ondoren.'
     ),
     (
         91,
@@ -7313,7 +7369,7 @@ INSERT INTO Neurketak (
         87,
         90.6,
         1.58,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         92,
@@ -7323,7 +7379,7 @@ INSERT INTO Neurketak (
         89,
         59.9,
         1.79,
-        'Gaur goizean neurtuta.'
+        66, 'Gaur goizean neurtuta.'
     ),
     (
         93,
@@ -7333,7 +7389,7 @@ INSERT INTO Neurketak (
         90,
         76.7,
         1.81,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         95,
@@ -7343,7 +7399,7 @@ INSERT INTO Neurketak (
         83,
         89.7,
         1.77,
-        'Gaur goizean neurtuta.'
+        66, 'Gaur goizean neurtuta.'
     ),
     (
         96,
@@ -7353,7 +7409,7 @@ INSERT INTO Neurketak (
         88,
         77.1,
         1.71,
-        'Gaur goizean neurtuta.'
+        66, 'Gaur goizean neurtuta.'
     ),
     (
         99,
@@ -7363,7 +7419,7 @@ INSERT INTO Neurketak (
         75,
         85.3,
         1.71,
-        'Baraualdian.'
+        68, 'Baraualdian.'
     ),
     (
         100,
@@ -7373,7 +7429,7 @@ INSERT INTO Neurketak (
         78,
         81.7,
         1.57,
-        'Gosariaren ondoren.'
+        77, 'Gosariaren ondoren.'
     ),
     (
         52,
@@ -7383,7 +7439,7 @@ INSERT INTO Neurketak (
         89,
         94.6,
         1.77,
-        'Ondo sentitzen naiz.'
+        77, 'Ondo sentitzen naiz.'
     ),
     (
         53,
@@ -7393,7 +7449,7 @@ INSERT INTO Neurketak (
         79,
         74.7,
         1.75,
-        'Gosariaren ondoren.'
+        74, 'Gosariaren ondoren.'
     ),
     (
         54,
@@ -7403,7 +7459,7 @@ INSERT INTO Neurketak (
         79,
         86.0,
         1.60,
-        'Ondo sentitzen naiz.'
+        86, 'Ondo sentitzen naiz.'
     ),
     (
         55,
@@ -7413,7 +7469,7 @@ INSERT INTO Neurketak (
         72,
         80.2,
         1.76,
-        'Apur bat nekatuta.'
+        86, 'Apur bat nekatuta.'
     ),
     (
         57,
@@ -7423,7 +7479,7 @@ INSERT INTO Neurketak (
         88,
         83.6,
         1.69,
-        'Baraualdian.'
+        80, 'Baraualdian.'
     ),
     (
         58,
@@ -7433,7 +7489,7 @@ INSERT INTO Neurketak (
         77,
         67.9,
         1.68,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         59,
@@ -7443,7 +7499,7 @@ INSERT INTO Neurketak (
         85,
         62.1,
         1.73,
-        'Kirola egin ondoren.'
+        68, 'Kirola egin ondoren.'
     ),
     (
         60,
@@ -7453,7 +7509,7 @@ INSERT INTO Neurketak (
         95,
         78.9,
         1.81,
-        'Gosariaren ondoren.'
+        94, 'Gosariaren ondoren.'
     ),
     (
         61,
@@ -7463,7 +7519,7 @@ INSERT INTO Neurketak (
         93,
         72.0,
         1.83,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         62,
@@ -7473,7 +7529,7 @@ INSERT INTO Neurketak (
         72,
         66.8,
         1.56,
-        'Dena ondo.'
+        72, 'Dena ondo.'
     ),
     (
         63,
@@ -7483,7 +7539,7 @@ INSERT INTO Neurketak (
         86,
         82.0,
         1.80,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         65,
@@ -7493,7 +7549,7 @@ INSERT INTO Neurketak (
         79,
         90.0,
         1.55,
-        'Apur bat nekatuta.'
+        72, 'Apur bat nekatuta.'
     ),
     (
         66,
@@ -7503,7 +7559,7 @@ INSERT INTO Neurketak (
         85,
         74.0,
         1.59,
-        'Gosariaren ondoren.'
+        87, 'Gosariaren ondoren.'
     ),
     (
         68,
@@ -7513,7 +7569,7 @@ INSERT INTO Neurketak (
         80,
         60.1,
         1.85,
-        'Gosariaren ondoren.'
+        67, 'Gosariaren ondoren.'
     ),
     (
         69,
@@ -7523,7 +7579,7 @@ INSERT INTO Neurketak (
         80,
         95.2,
         1.66,
-        'Kirola egin ondoren.'
+        88, 'Kirola egin ondoren.'
     ),
     (
         70,
@@ -7533,7 +7589,7 @@ INSERT INTO Neurketak (
         88,
         75.6,
         1.70,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         72,
@@ -7543,7 +7599,7 @@ INSERT INTO Neurketak (
         75,
         91.7,
         1.69,
-        'Baraualdian.'
+        65, 'Baraualdian.'
     ),
     (
         73,
@@ -7553,7 +7609,7 @@ INSERT INTO Neurketak (
         86,
         95.1,
         1.55,
-        'Apur bat nekatuta.'
+        92, 'Apur bat nekatuta.'
     ),
     (
         74,
@@ -7563,7 +7619,7 @@ INSERT INTO Neurketak (
         86,
         65.0,
         1.67,
-        'Apur bat nekatuta.'
+        71, 'Apur bat nekatuta.'
     ),
     (
         75,
@@ -7573,7 +7629,7 @@ INSERT INTO Neurketak (
         82,
         59.0,
         1.65,
-        'Apur bat nekatuta.'
+        65, 'Apur bat nekatuta.'
     ),
     (
         76,
@@ -7583,7 +7639,7 @@ INSERT INTO Neurketak (
         94,
         66.5,
         1.69,
-        'Baraualdian.'
+        66, 'Baraualdian.'
     ),
     (
         77,
@@ -7593,7 +7649,7 @@ INSERT INTO Neurketak (
         79,
         66.9,
         1.67,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         78,
@@ -7603,7 +7659,7 @@ INSERT INTO Neurketak (
         86,
         63.6,
         1.61,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         79,
@@ -7613,7 +7669,7 @@ INSERT INTO Neurketak (
         77,
         67.5,
         1.67,
-        'Gosariaren ondoren.'
+        65, 'Gosariaren ondoren.'
     ),
     (
         80,
@@ -7623,7 +7679,7 @@ INSERT INTO Neurketak (
         81,
         62.2,
         1.78,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         83,
@@ -7633,7 +7689,7 @@ INSERT INTO Neurketak (
         87,
         65.5,
         1.80,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         84,
@@ -7643,7 +7699,7 @@ INSERT INTO Neurketak (
         84,
         79.9,
         1.67,
-        'Baraualdian.'
+        90, 'Baraualdian.'
     ),
     (
         85,
@@ -7653,7 +7709,7 @@ INSERT INTO Neurketak (
         84,
         82.0,
         1.72,
-        'Apur bat nekatuta.'
+        78, 'Apur bat nekatuta.'
     ),
     (
         87,
@@ -7663,7 +7719,7 @@ INSERT INTO Neurketak (
         83,
         73.4,
         1.61,
-        'Kirola egin ondoren.'
+        66, 'Kirola egin ondoren.'
     ),
     (
         88,
@@ -7673,7 +7729,7 @@ INSERT INTO Neurketak (
         74,
         90.5,
         1.81,
-        'Ondo sentitzen naiz.'
+        65, 'Ondo sentitzen naiz.'
     ),
     (
         89,
@@ -7683,7 +7739,7 @@ INSERT INTO Neurketak (
         92,
         91.2,
         1.84,
-        'Dena ondo.'
+        81, 'Dena ondo.'
     ),
     (
         90,
@@ -7693,7 +7749,7 @@ INSERT INTO Neurketak (
         93,
         66.0,
         1.60,
-        'Dena ondo.'
+        88, 'Dena ondo.'
     ),
     (
         91,
@@ -7703,7 +7759,7 @@ INSERT INTO Neurketak (
         91,
         90.7,
         1.58,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         93,
@@ -7713,7 +7769,7 @@ INSERT INTO Neurketak (
         81,
         76.3,
         1.81,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         94,
@@ -7723,7 +7779,7 @@ INSERT INTO Neurketak (
         78,
         87.4,
         1.83,
-        'Ondo sentitzen naiz.'
+        88, 'Ondo sentitzen naiz.'
     ),
     (
         95,
@@ -7733,7 +7789,7 @@ INSERT INTO Neurketak (
         75,
         89.2,
         1.77,
-        'Apur bat nekatuta.'
+        73, 'Apur bat nekatuta.'
     ),
     (
         96,
@@ -7743,7 +7799,7 @@ INSERT INTO Neurketak (
         88,
         76.4,
         1.71,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         97,
@@ -7753,7 +7809,7 @@ INSERT INTO Neurketak (
         71,
         88.0,
         1.56,
-        'Apur bat nekatuta.'
+        86, 'Apur bat nekatuta.'
     ),
     (
         98,
@@ -7763,7 +7819,7 @@ INSERT INTO Neurketak (
         84,
         84.3,
         1.60,
-        'Kirola egin ondoren.'
+        82, 'Kirola egin ondoren.'
     ),
     (
         99,
@@ -7773,7 +7829,7 @@ INSERT INTO Neurketak (
         76,
         86.7,
         1.71,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         100,
@@ -7783,7 +7839,7 @@ INSERT INTO Neurketak (
         79,
         82.4,
         1.57,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         51,
@@ -7793,7 +7849,7 @@ INSERT INTO Neurketak (
         85,
         63.7,
         1.76,
-        'Dena ondo.'
+        77, 'Dena ondo.'
     ),
     (
         52,
@@ -7803,7 +7859,7 @@ INSERT INTO Neurketak (
         82,
         94.6,
         1.77,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         53,
@@ -7813,7 +7869,7 @@ INSERT INTO Neurketak (
         93,
         74.0,
         1.75,
-        'Gosariaren ondoren.'
+        76, 'Gosariaren ondoren.'
     ),
     (
         55,
@@ -7823,7 +7879,7 @@ INSERT INTO Neurketak (
         84,
         81.0,
         1.76,
-        'Apur bat nekatuta.'
+        93, 'Apur bat nekatuta.'
     ),
     (
         56,
@@ -7833,7 +7889,7 @@ INSERT INTO Neurketak (
         86,
         89.5,
         1.61,
-        'Gaur goizean neurtuta.'
+        71, 'Gaur goizean neurtuta.'
     ),
     (
         57,
@@ -7843,7 +7899,7 @@ INSERT INTO Neurketak (
         80,
         82.8,
         1.69,
-        'Kirola egin ondoren.'
+        89, 'Kirola egin ondoren.'
     ),
     (
         58,
@@ -7853,7 +7909,7 @@ INSERT INTO Neurketak (
         79,
         66.3,
         1.68,
-        'Dena ondo.'
+        76, 'Dena ondo.'
     ),
     (
         59,
@@ -7863,7 +7919,7 @@ INSERT INTO Neurketak (
         91,
         63.4,
         1.73,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         60,
@@ -7873,7 +7929,7 @@ INSERT INTO Neurketak (
         87,
         78.1,
         1.81,
-        'Gosariaren ondoren.'
+        71, 'Gosariaren ondoren.'
     ),
     (
         61,
@@ -7883,7 +7939,7 @@ INSERT INTO Neurketak (
         85,
         73.8,
         1.83,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         62,
@@ -7893,7 +7949,7 @@ INSERT INTO Neurketak (
         76,
         66.1,
         1.56,
-        'Gosariaren ondoren.'
+        91, 'Gosariaren ondoren.'
     ),
     (
         63,
@@ -7903,7 +7959,7 @@ INSERT INTO Neurketak (
         83,
         81.6,
         1.80,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         65,
@@ -7913,7 +7969,7 @@ INSERT INTO Neurketak (
         91,
         91.1,
         1.55,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         66,
@@ -7923,7 +7979,7 @@ INSERT INTO Neurketak (
         84,
         74.2,
         1.59,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         67,
@@ -7933,7 +7989,7 @@ INSERT INTO Neurketak (
         79,
         73.0,
         1.72,
-        'Kirola egin ondoren.'
+        94, 'Kirola egin ondoren.'
     ),
     (
         70,
@@ -7943,7 +7999,7 @@ INSERT INTO Neurketak (
         88,
         74.5,
         1.70,
-        'Baraualdian.'
+        83, 'Baraualdian.'
     ),
     (
         71,
@@ -7953,7 +8009,7 @@ INSERT INTO Neurketak (
         77,
         88.6,
         1.63,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         72,
@@ -7963,7 +8019,7 @@ INSERT INTO Neurketak (
         80,
         92.4,
         1.69,
-        'Gaur goizean neurtuta.'
+        70, 'Gaur goizean neurtuta.'
     ),
     (
         73,
@@ -7973,7 +8029,7 @@ INSERT INTO Neurketak (
         75,
         95.0,
         1.55,
-        'Ondo sentitzen naiz.'
+        65, 'Ondo sentitzen naiz.'
     ),
     (
         74,
@@ -7983,7 +8039,7 @@ INSERT INTO Neurketak (
         89,
         64.3,
         1.67,
-        'Dena ondo.'
+        86, 'Dena ondo.'
     ),
     (
         76,
@@ -7993,7 +8049,7 @@ INSERT INTO Neurketak (
         92,
         65.8,
         1.69,
-        'Kirola egin ondoren.'
+        91, 'Kirola egin ondoren.'
     ),
     (
         77,
@@ -8003,7 +8059,7 @@ INSERT INTO Neurketak (
         79,
         67.5,
         1.67,
-        'Dena ondo.'
+        76, 'Dena ondo.'
     ),
     (
         78,
@@ -8013,7 +8069,7 @@ INSERT INTO Neurketak (
         85,
         63.7,
         1.61,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         79,
@@ -8023,7 +8079,7 @@ INSERT INTO Neurketak (
         78,
         66.8,
         1.67,
-        'Kirola egin ondoren.'
+        81, 'Kirola egin ondoren.'
     ),
     (
         80,
@@ -8033,7 +8089,7 @@ INSERT INTO Neurketak (
         87,
         63.8,
         1.78,
-        'Kirola egin ondoren.'
+        80, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -8043,7 +8099,7 @@ INSERT INTO Neurketak (
         85,
         85.1,
         1.58,
-        'Dena ondo.'
+        92, 'Dena ondo.'
     ),
     (
         82,
@@ -8053,7 +8109,7 @@ INSERT INTO Neurketak (
         81,
         89.7,
         1.77,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         83,
@@ -8063,7 +8119,7 @@ INSERT INTO Neurketak (
         88,
         65.5,
         1.80,
-        'Gosariaren ondoren.'
+        91, 'Gosariaren ondoren.'
     ),
     (
         84,
@@ -8073,7 +8129,7 @@ INSERT INTO Neurketak (
         83,
         78.8,
         1.67,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         85,
@@ -8083,7 +8139,7 @@ INSERT INTO Neurketak (
         92,
         81.8,
         1.72,
-        'Gosariaren ondoren.'
+        85, 'Gosariaren ondoren.'
     ),
     (
         86,
@@ -8093,7 +8149,7 @@ INSERT INTO Neurketak (
         73,
         68.3,
         1.57,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         87,
@@ -8103,7 +8159,7 @@ INSERT INTO Neurketak (
         85,
         72.9,
         1.61,
-        'Gaur goizean neurtuta.'
+        68, 'Gaur goizean neurtuta.'
     ),
     (
         88,
@@ -8113,7 +8169,7 @@ INSERT INTO Neurketak (
         81,
         90.6,
         1.81,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         89,
@@ -8123,7 +8179,7 @@ INSERT INTO Neurketak (
         79,
         90.9,
         1.84,
-        'Dena ondo.'
+        92, 'Dena ondo.'
     ),
     (
         92,
@@ -8133,7 +8189,7 @@ INSERT INTO Neurketak (
         93,
         60.4,
         1.79,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         93,
@@ -8143,7 +8199,7 @@ INSERT INTO Neurketak (
         86,
         76.6,
         1.81,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         94,
@@ -8153,7 +8209,7 @@ INSERT INTO Neurketak (
         86,
         86.6,
         1.83,
-        'Apur bat nekatuta.'
+        69, 'Apur bat nekatuta.'
     ),
     (
         95,
@@ -8163,7 +8219,7 @@ INSERT INTO Neurketak (
         82,
         89.0,
         1.77,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         97,
@@ -8173,7 +8229,7 @@ INSERT INTO Neurketak (
         86,
         86.3,
         1.56,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         98,
@@ -8183,7 +8239,7 @@ INSERT INTO Neurketak (
         79,
         84.1,
         1.60,
-        'Kirola egin ondoren.'
+        82, 'Kirola egin ondoren.'
     ),
     (
         99,
@@ -8193,7 +8249,7 @@ INSERT INTO Neurketak (
         88,
         85.9,
         1.71,
-        'Gosariaren ondoren.'
+        81, 'Gosariaren ondoren.'
     ),
     (
         100,
@@ -8203,7 +8259,7 @@ INSERT INTO Neurketak (
         74,
         82.5,
         1.57,
-        'Baraualdian.'
+        84, 'Baraualdian.'
     ),
     (
         51,
@@ -8213,7 +8269,7 @@ INSERT INTO Neurketak (
         80,
         63.8,
         1.76,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         53,
@@ -8223,7 +8279,7 @@ INSERT INTO Neurketak (
         78,
         75.3,
         1.75,
-        'Dena ondo.'
+        70, 'Dena ondo.'
     ),
     (
         54,
@@ -8233,7 +8289,7 @@ INSERT INTO Neurketak (
         79,
         87.7,
         1.60,
-        'Gosariaren ondoren.'
+        85, 'Gosariaren ondoren.'
     ),
     (
         55,
@@ -8243,7 +8299,7 @@ INSERT INTO Neurketak (
         82,
         80.6,
         1.76,
-        'Baraualdian.'
+        90, 'Baraualdian.'
     ),
     (
         57,
@@ -8253,7 +8309,7 @@ INSERT INTO Neurketak (
         87,
         82.3,
         1.69,
-        'Gaur goizean neurtuta.'
+        92, 'Gaur goizean neurtuta.'
     ),
     (
         58,
@@ -8263,7 +8319,7 @@ INSERT INTO Neurketak (
         77,
         66.3,
         1.68,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         59,
@@ -8273,7 +8329,7 @@ INSERT INTO Neurketak (
         90,
         63.2,
         1.73,
-        'Ondo sentitzen naiz.'
+        91, 'Ondo sentitzen naiz.'
     ),
     (
         60,
@@ -8283,7 +8339,7 @@ INSERT INTO Neurketak (
         88,
         77.1,
         1.81,
-        'Baraualdian.'
+        86, 'Baraualdian.'
     ),
     (
         61,
@@ -8293,7 +8349,7 @@ INSERT INTO Neurketak (
         88,
         72.6,
         1.83,
-        'Baraualdian.'
+        84, 'Baraualdian.'
     ),
     (
         62,
@@ -8303,7 +8359,7 @@ INSERT INTO Neurketak (
         80,
         65.6,
         1.56,
-        'Apur bat nekatuta.'
+        73, 'Apur bat nekatuta.'
     ),
     (
         63,
@@ -8313,7 +8369,7 @@ INSERT INTO Neurketak (
         80,
         81.0,
         1.80,
-        'Baraualdian.'
+        90, 'Baraualdian.'
     ),
     (
         64,
@@ -8323,7 +8379,7 @@ INSERT INTO Neurketak (
         84,
         95.1,
         1.56,
-        'Kirola egin ondoren.'
+        67, 'Kirola egin ondoren.'
     ),
     (
         65,
@@ -8333,7 +8389,7 @@ INSERT INTO Neurketak (
         87,
         90.2,
         1.55,
-        'Kirola egin ondoren.'
+        91, 'Kirola egin ondoren.'
     ),
     (
         66,
@@ -8343,7 +8399,7 @@ INSERT INTO Neurketak (
         85,
         75.8,
         1.59,
-        'Apur bat nekatuta.'
+        92, 'Apur bat nekatuta.'
     ),
     (
         67,
@@ -8353,7 +8409,7 @@ INSERT INTO Neurketak (
         84,
         71.5,
         1.72,
-        'Apur bat nekatuta.'
+        75, 'Apur bat nekatuta.'
     ),
     (
         68,
@@ -8363,7 +8419,7 @@ INSERT INTO Neurketak (
         73,
         60.4,
         1.85,
-        'Apur bat nekatuta.'
+        65, 'Apur bat nekatuta.'
     ),
     (
         69,
@@ -8373,7 +8429,7 @@ INSERT INTO Neurketak (
         91,
         95.3,
         1.66,
-        'Gaur goizean neurtuta.'
+        94, 'Gaur goizean neurtuta.'
     ),
     (
         70,
@@ -8383,7 +8439,7 @@ INSERT INTO Neurketak (
         75,
         75.8,
         1.70,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         71,
@@ -8393,7 +8449,7 @@ INSERT INTO Neurketak (
         82,
         88.8,
         1.63,
-        'Gosariaren ondoren.'
+        67, 'Gosariaren ondoren.'
     ),
     (
         72,
@@ -8403,7 +8459,7 @@ INSERT INTO Neurketak (
         77,
         91.3,
         1.69,
-        'Gaur goizean neurtuta.'
+        72, 'Gaur goizean neurtuta.'
     ),
     (
         73,
@@ -8413,7 +8469,7 @@ INSERT INTO Neurketak (
         79,
         95.0,
         1.55,
-        'Baraualdian.'
+        70, 'Baraualdian.'
     ),
     (
         75,
@@ -8423,7 +8479,7 @@ INSERT INTO Neurketak (
         82,
         60.4,
         1.65,
-        'Apur bat nekatuta.'
+        75, 'Apur bat nekatuta.'
     ),
     (
         76,
@@ -8433,7 +8489,7 @@ INSERT INTO Neurketak (
         82,
         65.8,
         1.69,
-        'Kirola egin ondoren.'
+        85, 'Kirola egin ondoren.'
     ),
     (
         78,
@@ -8443,7 +8499,7 @@ INSERT INTO Neurketak (
         80,
         62.5,
         1.61,
-        'Ondo sentitzen naiz.'
+        90, 'Ondo sentitzen naiz.'
     ),
     (
         79,
@@ -8453,7 +8509,7 @@ INSERT INTO Neurketak (
         81,
         66.2,
         1.67,
-        'Ondo sentitzen naiz.'
+        86, 'Ondo sentitzen naiz.'
     ),
     (
         80,
@@ -8463,7 +8519,7 @@ INSERT INTO Neurketak (
         81,
         62.4,
         1.78,
-        'Gosariaren ondoren.'
+        82, 'Gosariaren ondoren.'
     ),
     (
         82,
@@ -8473,7 +8529,7 @@ INSERT INTO Neurketak (
         80,
         89.7,
         1.77,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         84,
@@ -8483,7 +8539,7 @@ INSERT INTO Neurketak (
         83,
         80.0,
         1.67,
-        'Dena ondo.'
+        93, 'Dena ondo.'
     ),
     (
         85,
@@ -8493,7 +8549,7 @@ INSERT INTO Neurketak (
         89,
         80.0,
         1.72,
-        'Gosariaren ondoren.'
+        78, 'Gosariaren ondoren.'
     ),
     (
         86,
@@ -8503,7 +8559,7 @@ INSERT INTO Neurketak (
         74,
         68.7,
         1.57,
-        'Ondo sentitzen naiz.'
+        86, 'Ondo sentitzen naiz.'
     ),
     (
         87,
@@ -8513,7 +8569,7 @@ INSERT INTO Neurketak (
         85,
         72.8,
         1.61,
-        'Gosariaren ondoren.'
+        66, 'Gosariaren ondoren.'
     ),
     (
         89,
@@ -8523,7 +8579,7 @@ INSERT INTO Neurketak (
         80,
         91.3,
         1.84,
-        'Ondo sentitzen naiz.'
+        77, 'Ondo sentitzen naiz.'
     ),
     (
         91,
@@ -8533,7 +8589,7 @@ INSERT INTO Neurketak (
         80,
         90.0,
         1.58,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         93,
@@ -8543,7 +8599,7 @@ INSERT INTO Neurketak (
         88,
         76.6,
         1.81,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         94,
@@ -8553,7 +8609,7 @@ INSERT INTO Neurketak (
         83,
         86.0,
         1.83,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         95,
@@ -8563,7 +8619,7 @@ INSERT INTO Neurketak (
         74,
         90.4,
         1.77,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         96,
@@ -8573,7 +8629,7 @@ INSERT INTO Neurketak (
         76,
         76.1,
         1.71,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         97,
@@ -8583,7 +8639,7 @@ INSERT INTO Neurketak (
         75,
         86.8,
         1.56,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         99,
@@ -8593,7 +8649,7 @@ INSERT INTO Neurketak (
         81,
         86.7,
         1.71,
-        'Apur bat nekatuta.'
+        71, 'Apur bat nekatuta.'
     ),
     (
         51,
@@ -8603,7 +8659,7 @@ INSERT INTO Neurketak (
         83,
         63.5,
         1.76,
-        'Ondo sentitzen naiz.'
+        68, 'Ondo sentitzen naiz.'
     ),
     (
         53,
@@ -8613,7 +8669,7 @@ INSERT INTO Neurketak (
         78,
         74.3,
         1.75,
-        'Dena ondo.'
+        76, 'Dena ondo.'
     ),
     (
         54,
@@ -8623,7 +8679,7 @@ INSERT INTO Neurketak (
         86,
         87.4,
         1.60,
-        'Baraualdian.'
+        89, 'Baraualdian.'
     ),
     (
         55,
@@ -8633,7 +8689,7 @@ INSERT INTO Neurketak (
         78,
         81.2,
         1.76,
-        'Apur bat nekatuta.'
+        91, 'Apur bat nekatuta.'
     ),
     (
         57,
@@ -8643,7 +8699,7 @@ INSERT INTO Neurketak (
         88,
         82.9,
         1.69,
-        'Baraualdian.'
+        86, 'Baraualdian.'
     ),
     (
         58,
@@ -8653,7 +8709,7 @@ INSERT INTO Neurketak (
         82,
         67.6,
         1.68,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         59,
@@ -8663,7 +8719,7 @@ INSERT INTO Neurketak (
         84,
         63.7,
         1.73,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         61,
@@ -8673,7 +8729,7 @@ INSERT INTO Neurketak (
         78,
         72.1,
         1.83,
-        'Dena ondo.'
+        79, 'Dena ondo.'
     ),
     (
         62,
@@ -8683,7 +8739,7 @@ INSERT INTO Neurketak (
         78,
         66.4,
         1.56,
-        'Kirola egin ondoren.'
+        89, 'Kirola egin ondoren.'
     ),
     (
         63,
@@ -8693,7 +8749,7 @@ INSERT INTO Neurketak (
         89,
         80.1,
         1.80,
-        'Kirola egin ondoren.'
+        73, 'Kirola egin ondoren.'
     ),
     (
         65,
@@ -8703,7 +8759,7 @@ INSERT INTO Neurketak (
         85,
         90.8,
         1.55,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         66,
@@ -8713,7 +8769,7 @@ INSERT INTO Neurketak (
         78,
         74.8,
         1.59,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         67,
@@ -8723,7 +8779,7 @@ INSERT INTO Neurketak (
         87,
         72.8,
         1.72,
-        'Kirola egin ondoren.'
+        88, 'Kirola egin ondoren.'
     ),
     (
         68,
@@ -8733,7 +8789,7 @@ INSERT INTO Neurketak (
         72,
         60.0,
         1.85,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         69,
@@ -8743,7 +8799,7 @@ INSERT INTO Neurketak (
         86,
         94.5,
         1.66,
-        'Kirola egin ondoren.'
+        78, 'Kirola egin ondoren.'
     ),
     (
         70,
@@ -8753,7 +8809,7 @@ INSERT INTO Neurketak (
         76,
         74.9,
         1.70,
-        'Dena ondo.'
+        67, 'Dena ondo.'
     ),
     (
         71,
@@ -8763,7 +8819,7 @@ INSERT INTO Neurketak (
         82,
         89.0,
         1.63,
-        'Ondo sentitzen naiz.'
+        67, 'Ondo sentitzen naiz.'
     ),
     (
         72,
@@ -8773,7 +8829,7 @@ INSERT INTO Neurketak (
         76,
         93.0,
         1.69,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         73,
@@ -8783,7 +8839,7 @@ INSERT INTO Neurketak (
         71,
         95.5,
         1.55,
-        'Baraualdian.'
+        93, 'Baraualdian.'
     ),
     (
         74,
@@ -8793,7 +8849,7 @@ INSERT INTO Neurketak (
         77,
         64.6,
         1.67,
-        'Dena ondo.'
+        76, 'Dena ondo.'
     ),
     (
         75,
@@ -8803,7 +8859,7 @@ INSERT INTO Neurketak (
         71,
         59.4,
         1.65,
-        'Kirola egin ondoren.'
+        67, 'Kirola egin ondoren.'
     ),
     (
         76,
@@ -8813,7 +8869,7 @@ INSERT INTO Neurketak (
         89,
         66.3,
         1.69,
-        'Kirola egin ondoren.'
+        73, 'Kirola egin ondoren.'
     ),
     (
         77,
@@ -8823,7 +8879,7 @@ INSERT INTO Neurketak (
         85,
         66.4,
         1.67,
-        'Apur bat nekatuta.'
+        76, 'Apur bat nekatuta.'
     ),
     (
         78,
@@ -8833,7 +8889,7 @@ INSERT INTO Neurketak (
         76,
         64.0,
         1.61,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         80,
@@ -8843,7 +8899,7 @@ INSERT INTO Neurketak (
         87,
         63.3,
         1.78,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         81,
@@ -8853,7 +8909,7 @@ INSERT INTO Neurketak (
         92,
         87.0,
         1.58,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         82,
@@ -8863,7 +8919,7 @@ INSERT INTO Neurketak (
         88,
         88.4,
         1.77,
-        'Kirola egin ondoren.'
+        73, 'Kirola egin ondoren.'
     ),
     (
         83,
@@ -8873,7 +8929,7 @@ INSERT INTO Neurketak (
         92,
         64.2,
         1.80,
-        'Dena ondo.'
+        76, 'Dena ondo.'
     ),
     (
         84,
@@ -8883,7 +8939,7 @@ INSERT INTO Neurketak (
         90,
         78.3,
         1.67,
-        'Baraualdian.'
+        93, 'Baraualdian.'
     ),
     (
         85,
@@ -8893,7 +8949,7 @@ INSERT INTO Neurketak (
         92,
         81.3,
         1.72,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         86,
@@ -8903,7 +8959,7 @@ INSERT INTO Neurketak (
         79,
         67.8,
         1.57,
-        'Dena ondo.'
+        90, 'Dena ondo.'
     ),
     (
         87,
@@ -8913,7 +8969,7 @@ INSERT INTO Neurketak (
         87,
         73.0,
         1.61,
-        'Apur bat nekatuta.'
+        92, 'Apur bat nekatuta.'
     ),
     (
         88,
@@ -8923,7 +8979,7 @@ INSERT INTO Neurketak (
         81,
         90.7,
         1.81,
-        'Gosariaren ondoren.'
+        86, 'Gosariaren ondoren.'
     ),
     (
         89,
@@ -8933,7 +8989,7 @@ INSERT INTO Neurketak (
         92,
         91.6,
         1.84,
-        'Baraualdian.'
+        84, 'Baraualdian.'
     ),
     (
         90,
@@ -8943,7 +8999,7 @@ INSERT INTO Neurketak (
         87,
         65.7,
         1.60,
-        'Kirola egin ondoren.'
+        80, 'Kirola egin ondoren.'
     ),
     (
         92,
@@ -8953,7 +9009,7 @@ INSERT INTO Neurketak (
         83,
         59.0,
         1.79,
-        'Ondo sentitzen naiz.'
+        65, 'Ondo sentitzen naiz.'
     ),
     (
         93,
@@ -8963,7 +9019,7 @@ INSERT INTO Neurketak (
         80,
         75.2,
         1.81,
-        'Dena ondo.'
+        81, 'Dena ondo.'
     ),
     (
         94,
@@ -8973,7 +9029,7 @@ INSERT INTO Neurketak (
         85,
         86.2,
         1.83,
-        'Dena ondo.'
+        73, 'Dena ondo.'
     ),
     (
         95,
@@ -8983,7 +9039,7 @@ INSERT INTO Neurketak (
         73,
         89.6,
         1.77,
-        'Apur bat nekatuta.'
+        81, 'Apur bat nekatuta.'
     ),
     (
         97,
@@ -8993,7 +9049,7 @@ INSERT INTO Neurketak (
         76,
         87.3,
         1.56,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         99,
@@ -9003,7 +9059,7 @@ INSERT INTO Neurketak (
         88,
         86.1,
         1.71,
-        'Gaur goizean neurtuta.'
+        66, 'Gaur goizean neurtuta.'
     ),
     (
         100,
@@ -9013,7 +9069,7 @@ INSERT INTO Neurketak (
         77,
         82.3,
         1.57,
-        'Apur bat nekatuta.'
+        72, 'Apur bat nekatuta.'
     ),
     (
         51,
@@ -9023,7 +9079,7 @@ INSERT INTO Neurketak (
         80,
         63.9,
         1.76,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         53,
@@ -9033,7 +9089,7 @@ INSERT INTO Neurketak (
         83,
         76.0,
         1.75,
-        'Dena ondo.'
+        83, 'Dena ondo.'
     ),
     (
         55,
@@ -9043,7 +9099,7 @@ INSERT INTO Neurketak (
         85,
         80.8,
         1.76,
-        'Baraualdian.'
+        73, 'Baraualdian.'
     ),
     (
         56,
@@ -9053,7 +9109,7 @@ INSERT INTO Neurketak (
         86,
         89.4,
         1.61,
-        'Apur bat nekatuta.'
+        66, 'Apur bat nekatuta.'
     ),
     (
         57,
@@ -9063,7 +9119,7 @@ INSERT INTO Neurketak (
         89,
         83.3,
         1.69,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         59,
@@ -9073,7 +9129,7 @@ INSERT INTO Neurketak (
         84,
         62.5,
         1.73,
-        'Ondo sentitzen naiz.'
+        67, 'Ondo sentitzen naiz.'
     ),
     (
         62,
@@ -9083,7 +9139,7 @@ INSERT INTO Neurketak (
         79,
         66.6,
         1.56,
-        'Dena ondo.'
+        73, 'Dena ondo.'
     ),
     (
         63,
@@ -9093,7 +9149,7 @@ INSERT INTO Neurketak (
         83,
         80.6,
         1.80,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         64,
@@ -9103,7 +9159,7 @@ INSERT INTO Neurketak (
         84,
         96.0,
         1.56,
-        'Ondo sentitzen naiz.'
+        70, 'Ondo sentitzen naiz.'
     ),
     (
         65,
@@ -9113,7 +9169,7 @@ INSERT INTO Neurketak (
         91,
         90.3,
         1.55,
-        'Dena ondo.'
+        67, 'Dena ondo.'
     ),
     (
         66,
@@ -9123,7 +9179,7 @@ INSERT INTO Neurketak (
         85,
         74.1,
         1.59,
-        'Gosariaren ondoren.'
+        72, 'Gosariaren ondoren.'
     ),
     (
         67,
@@ -9133,7 +9189,7 @@ INSERT INTO Neurketak (
         83,
         71.8,
         1.72,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         68,
@@ -9143,7 +9199,7 @@ INSERT INTO Neurketak (
         77,
         60.8,
         1.85,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         69,
@@ -9153,7 +9209,7 @@ INSERT INTO Neurketak (
         85,
         94.7,
         1.66,
-        'Gosariaren ondoren.'
+        90, 'Gosariaren ondoren.'
     ),
     (
         70,
@@ -9163,7 +9219,7 @@ INSERT INTO Neurketak (
         77,
         74.3,
         1.70,
-        'Kirola egin ondoren.'
+        69, 'Kirola egin ondoren.'
     ),
     (
         71,
@@ -9173,7 +9229,7 @@ INSERT INTO Neurketak (
         72,
         89.5,
         1.63,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         72,
@@ -9183,7 +9239,7 @@ INSERT INTO Neurketak (
         82,
         91.3,
         1.69,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         73,
@@ -9193,7 +9249,7 @@ INSERT INTO Neurketak (
         77,
         95.7,
         1.55,
-        'Ondo sentitzen naiz.'
+        87, 'Ondo sentitzen naiz.'
     ),
     (
         74,
@@ -9203,7 +9259,7 @@ INSERT INTO Neurketak (
         87,
         63.9,
         1.67,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         75,
@@ -9213,7 +9269,7 @@ INSERT INTO Neurketak (
         70,
         59.5,
         1.65,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         76,
@@ -9223,7 +9279,7 @@ INSERT INTO Neurketak (
         87,
         65.6,
         1.69,
-        'Kirola egin ondoren.'
+        75, 'Kirola egin ondoren.'
     ),
     (
         77,
@@ -9233,7 +9289,7 @@ INSERT INTO Neurketak (
         92,
         67.7,
         1.67,
-        'Baraualdian.'
+        74, 'Baraualdian.'
     ),
     (
         78,
@@ -9243,7 +9299,7 @@ INSERT INTO Neurketak (
         83,
         63.4,
         1.61,
-        'Dena ondo.'
+        94, 'Dena ondo.'
     ),
     (
         79,
@@ -9253,7 +9309,7 @@ INSERT INTO Neurketak (
         80,
         67.8,
         1.67,
-        'Kirola egin ondoren.'
+        76, 'Kirola egin ondoren.'
     ),
     (
         80,
@@ -9263,7 +9319,7 @@ INSERT INTO Neurketak (
         80,
         63.6,
         1.78,
-        'Ondo sentitzen naiz.'
+        73, 'Ondo sentitzen naiz.'
     ),
     (
         82,
@@ -9273,7 +9329,7 @@ INSERT INTO Neurketak (
         81,
         89.5,
         1.77,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         84,
@@ -9283,7 +9339,7 @@ INSERT INTO Neurketak (
         84,
         79.0,
         1.67,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         86,
@@ -9293,7 +9349,7 @@ INSERT INTO Neurketak (
         80,
         67.8,
         1.57,
-        'Apur bat nekatuta.'
+        92, 'Apur bat nekatuta.'
     ),
     (
         88,
@@ -9303,7 +9359,7 @@ INSERT INTO Neurketak (
         81,
         90.5,
         1.81,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         89,
@@ -9313,7 +9369,7 @@ INSERT INTO Neurketak (
         91,
         91.0,
         1.84,
-        'Apur bat nekatuta.'
+        83, 'Apur bat nekatuta.'
     ),
     (
         90,
@@ -9323,7 +9379,7 @@ INSERT INTO Neurketak (
         79,
         65.0,
         1.60,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         91,
@@ -9333,7 +9389,7 @@ INSERT INTO Neurketak (
         76,
         90.7,
         1.58,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         94,
@@ -9343,7 +9399,7 @@ INSERT INTO Neurketak (
         80,
         87.0,
         1.83,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         96,
@@ -9353,7 +9409,7 @@ INSERT INTO Neurketak (
         76,
         77.4,
         1.71,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         98,
@@ -9363,7 +9419,7 @@ INSERT INTO Neurketak (
         78,
         84.2,
         1.60,
-        'Kirola egin ondoren.'
+        73, 'Kirola egin ondoren.'
     ),
     (
         99,
@@ -9373,7 +9429,7 @@ INSERT INTO Neurketak (
         75,
         85.9,
         1.71,
-        'Gosariaren ondoren.'
+        77, 'Gosariaren ondoren.'
     ),
     (
         100,
@@ -9383,7 +9439,7 @@ INSERT INTO Neurketak (
         81,
         82.7,
         1.57,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         51,
@@ -9393,7 +9449,7 @@ INSERT INTO Neurketak (
         84,
         64.9,
         1.76,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         52,
@@ -9403,7 +9459,7 @@ INSERT INTO Neurketak (
         85,
         93.2,
         1.77,
-        'Kirola egin ondoren.'
+        91, 'Kirola egin ondoren.'
     ),
     (
         54,
@@ -9413,7 +9469,7 @@ INSERT INTO Neurketak (
         80,
         87.3,
         1.60,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         55,
@@ -9423,7 +9479,7 @@ INSERT INTO Neurketak (
         84,
         81.0,
         1.76,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         56,
@@ -9433,7 +9489,7 @@ INSERT INTO Neurketak (
         79,
         90.8,
         1.61,
-        'Baraualdian.'
+        75, 'Baraualdian.'
     ),
     (
         57,
@@ -9443,7 +9499,7 @@ INSERT INTO Neurketak (
         89,
         83.3,
         1.69,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         59,
@@ -9453,7 +9509,7 @@ INSERT INTO Neurketak (
         82,
         63.5,
         1.73,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         61,
@@ -9463,7 +9519,7 @@ INSERT INTO Neurketak (
         80,
         73.5,
         1.83,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         63,
@@ -9473,7 +9529,7 @@ INSERT INTO Neurketak (
         84,
         81.2,
         1.80,
-        'Apur bat nekatuta.'
+        75, 'Apur bat nekatuta.'
     ),
     (
         64,
@@ -9483,7 +9539,7 @@ INSERT INTO Neurketak (
         74,
         94.1,
         1.56,
-        'Gosariaren ondoren.'
+        88, 'Gosariaren ondoren.'
     ),
     (
         65,
@@ -9493,7 +9549,7 @@ INSERT INTO Neurketak (
         78,
         91.5,
         1.55,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         66,
@@ -9503,7 +9559,7 @@ INSERT INTO Neurketak (
         78,
         74.3,
         1.59,
-        'Kirola egin ondoren.'
+        90, 'Kirola egin ondoren.'
     ),
     (
         67,
@@ -9513,7 +9569,7 @@ INSERT INTO Neurketak (
         76,
         73.0,
         1.72,
-        'Ondo sentitzen naiz.'
+        65, 'Ondo sentitzen naiz.'
     ),
     (
         70,
@@ -9523,7 +9579,7 @@ INSERT INTO Neurketak (
         77,
         75.8,
         1.70,
-        'Baraualdian.'
+        66, 'Baraualdian.'
     ),
     (
         73,
@@ -9533,7 +9589,7 @@ INSERT INTO Neurketak (
         72,
         95.1,
         1.55,
-        'Gaur goizean neurtuta.'
+        76, 'Gaur goizean neurtuta.'
     ),
     (
         74,
@@ -9543,7 +9599,7 @@ INSERT INTO Neurketak (
         90,
         65.0,
         1.67,
-        'Apur bat nekatuta.'
+        71, 'Apur bat nekatuta.'
     ),
     (
         75,
@@ -9553,7 +9609,7 @@ INSERT INTO Neurketak (
         71,
         59.3,
         1.65,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         76,
@@ -9563,7 +9619,7 @@ INSERT INTO Neurketak (
         80,
         65.2,
         1.69,
-        'Gosariaren ondoren.'
+        82, 'Gosariaren ondoren.'
     ),
     (
         77,
@@ -9573,7 +9629,7 @@ INSERT INTO Neurketak (
         86,
         67.0,
         1.67,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         78,
@@ -9583,7 +9639,7 @@ INSERT INTO Neurketak (
         83,
         62.5,
         1.61,
-        'Baraualdian.'
+        79, 'Baraualdian.'
     ),
     (
         79,
@@ -9593,7 +9649,7 @@ INSERT INTO Neurketak (
         84,
         66.1,
         1.67,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         80,
@@ -9603,7 +9659,7 @@ INSERT INTO Neurketak (
         92,
         63.4,
         1.78,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         81,
@@ -9613,7 +9669,7 @@ INSERT INTO Neurketak (
         93,
         86.0,
         1.58,
-        'Gosariaren ondoren.'
+        93, 'Gosariaren ondoren.'
     ),
     (
         82,
@@ -9623,7 +9679,7 @@ INSERT INTO Neurketak (
         85,
         88.7,
         1.77,
-        'Dena ondo.'
+        68, 'Dena ondo.'
     ),
     (
         83,
@@ -9633,7 +9689,7 @@ INSERT INTO Neurketak (
         94,
         64.8,
         1.80,
-        'Apur bat nekatuta.'
+        92, 'Apur bat nekatuta.'
     ),
     (
         84,
@@ -9643,7 +9699,7 @@ INSERT INTO Neurketak (
         76,
         79.4,
         1.67,
-        'Baraualdian.'
+        70, 'Baraualdian.'
     ),
     (
         85,
@@ -9653,7 +9709,7 @@ INSERT INTO Neurketak (
         84,
         80.2,
         1.72,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         86,
@@ -9663,7 +9719,7 @@ INSERT INTO Neurketak (
         76,
         67.3,
         1.57,
-        'Ondo sentitzen naiz.'
+        66, 'Ondo sentitzen naiz.'
     ),
     (
         87,
@@ -9673,7 +9729,7 @@ INSERT INTO Neurketak (
         76,
         74.0,
         1.61,
-        'Dena ondo.'
+        86, 'Dena ondo.'
     ),
     (
         88,
@@ -9683,7 +9739,7 @@ INSERT INTO Neurketak (
         84,
         90.3,
         1.81,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         89,
@@ -9693,7 +9749,7 @@ INSERT INTO Neurketak (
         79,
         90.1,
         1.84,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         90,
@@ -9703,7 +9759,7 @@ INSERT INTO Neurketak (
         88,
         66.7,
         1.60,
-        'Gosariaren ondoren.'
+        67, 'Gosariaren ondoren.'
     ),
     (
         91,
@@ -9713,7 +9769,7 @@ INSERT INTO Neurketak (
         79,
         91.0,
         1.58,
-        'Kirola egin ondoren.'
+        66, 'Kirola egin ondoren.'
     ),
     (
         92,
@@ -9723,7 +9779,7 @@ INSERT INTO Neurketak (
         84,
         59.1,
         1.79,
-        'Dena ondo.'
+        86, 'Dena ondo.'
     ),
     (
         93,
@@ -9733,7 +9789,7 @@ INSERT INTO Neurketak (
         91,
         76.6,
         1.81,
-        'Apur bat nekatuta.'
+        78, 'Apur bat nekatuta.'
     ),
     (
         94,
@@ -9743,7 +9799,7 @@ INSERT INTO Neurketak (
         76,
         86.1,
         1.83,
-        'Gaur goizean neurtuta.'
+        91, 'Gaur goizean neurtuta.'
     ),
     (
         95,
@@ -9753,7 +9809,7 @@ INSERT INTO Neurketak (
         79,
         89.6,
         1.77,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         96,
@@ -9763,7 +9819,7 @@ INSERT INTO Neurketak (
         78,
         76.7,
         1.71,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         97,
@@ -9773,7 +9829,7 @@ INSERT INTO Neurketak (
         80,
         86.6,
         1.56,
-        'Baraualdian.'
+        83, 'Baraualdian.'
     ),
     (
         98,
@@ -9783,7 +9839,7 @@ INSERT INTO Neurketak (
         75,
         83.6,
         1.60,
-        'Gosariaren ondoren.'
+        76, 'Gosariaren ondoren.'
     ),
     (
         99,
@@ -9793,7 +9849,7 @@ INSERT INTO Neurketak (
         73,
         86.2,
         1.71,
-        'Kirola egin ondoren.'
+        94, 'Kirola egin ondoren.'
     ),
     (
         100,
@@ -9803,7 +9859,7 @@ INSERT INTO Neurketak (
         77,
         81.6,
         1.57,
-        'Ondo sentitzen naiz.'
+        74, 'Ondo sentitzen naiz.'
     ),
     (
         51,
@@ -9813,7 +9869,7 @@ INSERT INTO Neurketak (
         92,
         64.0,
         1.76,
-        'Gosariaren ondoren.'
+        68, 'Gosariaren ondoren.'
     ),
     (
         52,
@@ -9823,7 +9879,7 @@ INSERT INTO Neurketak (
         81,
         94.5,
         1.77,
-        'Baraualdian.'
+        93, 'Baraualdian.'
     ),
     (
         53,
@@ -9833,7 +9889,7 @@ INSERT INTO Neurketak (
         82,
         74.0,
         1.75,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         54,
@@ -9843,7 +9899,7 @@ INSERT INTO Neurketak (
         82,
         87.1,
         1.60,
-        'Baraualdian.'
+        75, 'Baraualdian.'
     ),
     (
         55,
@@ -9853,7 +9909,7 @@ INSERT INTO Neurketak (
         86,
         80.6,
         1.76,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         56,
@@ -9863,7 +9919,7 @@ INSERT INTO Neurketak (
         94,
         90.0,
         1.61,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         57,
@@ -9873,7 +9929,7 @@ INSERT INTO Neurketak (
         82,
         84.0,
         1.69,
-        'Ondo sentitzen naiz.'
+        70, 'Ondo sentitzen naiz.'
     ),
     (
         58,
@@ -9883,7 +9939,7 @@ INSERT INTO Neurketak (
         85,
         67.5,
         1.68,
-        'Baraualdian.'
+        65, 'Baraualdian.'
     ),
     (
         59,
@@ -9893,7 +9949,7 @@ INSERT INTO Neurketak (
         93,
         63.2,
         1.73,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         60,
@@ -9903,7 +9959,7 @@ INSERT INTO Neurketak (
         86,
         79.0,
         1.81,
-        'Gosariaren ondoren.'
+        72, 'Gosariaren ondoren.'
     ),
     (
         61,
@@ -9913,7 +9969,7 @@ INSERT INTO Neurketak (
         92,
         72.3,
         1.83,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         62,
@@ -9923,7 +9979,7 @@ INSERT INTO Neurketak (
         86,
         65.7,
         1.56,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         64,
@@ -9933,7 +9989,7 @@ INSERT INTO Neurketak (
         76,
         94.1,
         1.56,
-        'Ondo sentitzen naiz.'
+        84, 'Ondo sentitzen naiz.'
     ),
     (
         65,
@@ -9943,7 +9999,7 @@ INSERT INTO Neurketak (
         77,
         90.3,
         1.55,
-        'Dena ondo.'
+        77, 'Dena ondo.'
     ),
     (
         66,
@@ -9953,7 +10009,7 @@ INSERT INTO Neurketak (
         76,
         74.6,
         1.59,
-        'Dena ondo.'
+        68, 'Dena ondo.'
     ),
     (
         67,
@@ -9963,7 +10019,7 @@ INSERT INTO Neurketak (
         90,
         71.9,
         1.72,
-        'Gosariaren ondoren.'
+        94, 'Gosariaren ondoren.'
     ),
     (
         68,
@@ -9973,7 +10029,7 @@ INSERT INTO Neurketak (
         72,
         61.3,
         1.85,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         69,
@@ -9983,7 +10039,7 @@ INSERT INTO Neurketak (
         89,
         95.6,
         1.66,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         70,
@@ -9993,7 +10049,7 @@ INSERT INTO Neurketak (
         79,
         74.9,
         1.70,
-        'Dena ondo.'
+        78, 'Dena ondo.'
     ),
     (
         71,
@@ -10003,7 +10059,7 @@ INSERT INTO Neurketak (
         72,
         89.3,
         1.63,
-        'Apur bat nekatuta.'
+        93, 'Apur bat nekatuta.'
     ),
     (
         73,
@@ -10013,7 +10069,7 @@ INSERT INTO Neurketak (
         76,
         94.7,
         1.55,
-        'Apur bat nekatuta.'
+        85, 'Apur bat nekatuta.'
     ),
     (
         74,
@@ -10023,7 +10079,7 @@ INSERT INTO Neurketak (
         84,
         64.7,
         1.67,
-        'Ondo sentitzen naiz.'
+        68, 'Ondo sentitzen naiz.'
     ),
     (
         76,
@@ -10033,7 +10089,7 @@ INSERT INTO Neurketak (
         83,
         66.9,
         1.69,
-        'Dena ondo.'
+        73, 'Dena ondo.'
     ),
     (
         77,
@@ -10043,7 +10099,7 @@ INSERT INTO Neurketak (
         85,
         66.7,
         1.67,
-        'Kirola egin ondoren.'
+        78, 'Kirola egin ondoren.'
     ),
     (
         78,
@@ -10053,7 +10109,7 @@ INSERT INTO Neurketak (
         83,
         62.1,
         1.61,
-        'Dena ondo.'
+        77, 'Dena ondo.'
     ),
     (
         80,
@@ -10063,7 +10119,7 @@ INSERT INTO Neurketak (
         92,
         62.4,
         1.78,
-        'Gaur goizean neurtuta.'
+        71, 'Gaur goizean neurtuta.'
     ),
     (
         81,
@@ -10073,7 +10129,7 @@ INSERT INTO Neurketak (
         95,
         86.3,
         1.58,
-        'Baraualdian.'
+        91, 'Baraualdian.'
     ),
     (
         82,
@@ -10083,7 +10139,7 @@ INSERT INTO Neurketak (
         84,
         88.7,
         1.77,
-        'Gosariaren ondoren.'
+        72, 'Gosariaren ondoren.'
     ),
     (
         83,
@@ -10093,7 +10149,7 @@ INSERT INTO Neurketak (
         93,
         66.0,
         1.80,
-        'Dena ondo.'
+        70, 'Dena ondo.'
     ),
     (
         84,
@@ -10103,7 +10159,7 @@ INSERT INTO Neurketak (
         87,
         78.8,
         1.67,
-        'Apur bat nekatuta.'
+        81, 'Apur bat nekatuta.'
     ),
     (
         85,
@@ -10113,7 +10169,7 @@ INSERT INTO Neurketak (
         83,
         81.7,
         1.72,
-        'Dena ondo.'
+        86, 'Dena ondo.'
     ),
     (
         86,
@@ -10123,7 +10179,7 @@ INSERT INTO Neurketak (
         85,
         67.3,
         1.57,
-        'Kirola egin ondoren.'
+        80, 'Kirola egin ondoren.'
     ),
     (
         87,
@@ -10133,7 +10189,7 @@ INSERT INTO Neurketak (
         75,
         73.5,
         1.61,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         88,
@@ -10143,7 +10199,7 @@ INSERT INTO Neurketak (
         83,
         90.7,
         1.81,
-        'Gaur goizean neurtuta.'
+        76, 'Gaur goizean neurtuta.'
     ),
     (
         90,
@@ -10153,7 +10209,7 @@ INSERT INTO Neurketak (
         86,
         65.0,
         1.60,
-        'Dena ondo.'
+        94, 'Dena ondo.'
     ),
     (
         92,
@@ -10163,7 +10219,7 @@ INSERT INTO Neurketak (
         79,
         60.3,
         1.79,
-        'Apur bat nekatuta.'
+        69, 'Apur bat nekatuta.'
     ),
     (
         93,
@@ -10173,7 +10229,7 @@ INSERT INTO Neurketak (
         80,
         75.1,
         1.81,
-        'Gosariaren ondoren.'
+        72, 'Gosariaren ondoren.'
     ),
     (
         94,
@@ -10183,7 +10239,7 @@ INSERT INTO Neurketak (
         76,
         87.6,
         1.83,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         95,
@@ -10193,7 +10249,7 @@ INSERT INTO Neurketak (
         77,
         89.4,
         1.77,
-        'Gaur goizean neurtuta.'
+        66, 'Gaur goizean neurtuta.'
     ),
     (
         96,
@@ -10203,7 +10259,7 @@ INSERT INTO Neurketak (
         80,
         78.0,
         1.71,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         97,
@@ -10213,7 +10269,7 @@ INSERT INTO Neurketak (
         85,
         87.3,
         1.56,
-        'Kirola egin ondoren.'
+        67, 'Kirola egin ondoren.'
     ),
     (
         98,
@@ -10223,7 +10279,7 @@ INSERT INTO Neurketak (
         83,
         84.9,
         1.60,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         99,
@@ -10233,7 +10289,7 @@ INSERT INTO Neurketak (
         80,
         86.5,
         1.71,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         100,
@@ -10243,7 +10299,7 @@ INSERT INTO Neurketak (
         83,
         82.0,
         1.57,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         51,
@@ -10253,7 +10309,7 @@ INSERT INTO Neurketak (
         93,
         65.0,
         1.76,
-        'Ondo sentitzen naiz.'
+        86, 'Ondo sentitzen naiz.'
     ),
     (
         56,
@@ -10263,7 +10319,7 @@ INSERT INTO Neurketak (
         83,
         89.7,
         1.61,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         57,
@@ -10273,7 +10329,7 @@ INSERT INTO Neurketak (
         86,
         83.9,
         1.69,
-        'Gosariaren ondoren.'
+        74, 'Gosariaren ondoren.'
     ),
     (
         59,
@@ -10283,7 +10339,7 @@ INSERT INTO Neurketak (
         81,
         62.6,
         1.73,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         60,
@@ -10293,7 +10349,7 @@ INSERT INTO Neurketak (
         89,
         78.1,
         1.81,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         61,
@@ -10303,7 +10359,7 @@ INSERT INTO Neurketak (
         86,
         73.3,
         1.83,
-        'Gosariaren ondoren.'
+        73, 'Gosariaren ondoren.'
     ),
     (
         62,
@@ -10313,7 +10369,7 @@ INSERT INTO Neurketak (
         73,
         66.2,
         1.56,
-        'Baraualdian.'
+        74, 'Baraualdian.'
     ),
     (
         64,
@@ -10323,7 +10379,7 @@ INSERT INTO Neurketak (
         76,
         94.6,
         1.56,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         65,
@@ -10333,7 +10389,7 @@ INSERT INTO Neurketak (
         87,
         91.5,
         1.55,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         66,
@@ -10343,7 +10399,7 @@ INSERT INTO Neurketak (
         84,
         75.4,
         1.59,
-        'Dena ondo.'
+        85, 'Dena ondo.'
     ),
     (
         67,
@@ -10353,7 +10409,7 @@ INSERT INTO Neurketak (
         91,
         72.7,
         1.72,
-        'Apur bat nekatuta.'
+        92, 'Apur bat nekatuta.'
     ),
     (
         68,
@@ -10363,7 +10419,7 @@ INSERT INTO Neurketak (
         80,
         60.2,
         1.85,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         69,
@@ -10373,7 +10429,7 @@ INSERT INTO Neurketak (
         87,
         95.7,
         1.66,
-        'Ondo sentitzen naiz.'
+        77, 'Ondo sentitzen naiz.'
     ),
     (
         70,
@@ -10383,7 +10439,7 @@ INSERT INTO Neurketak (
         88,
         74.5,
         1.70,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         71,
@@ -10393,7 +10449,7 @@ INSERT INTO Neurketak (
         73,
         89.9,
         1.63,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         72,
@@ -10403,7 +10459,7 @@ INSERT INTO Neurketak (
         80,
         91.5,
         1.69,
-        'Ondo sentitzen naiz.'
+        92, 'Ondo sentitzen naiz.'
     ),
     (
         73,
@@ -10413,7 +10469,7 @@ INSERT INTO Neurketak (
         74,
         96.0,
         1.55,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         75,
@@ -10423,7 +10479,7 @@ INSERT INTO Neurketak (
         80,
         60.5,
         1.65,
-        'Kirola egin ondoren.'
+        90, 'Kirola egin ondoren.'
     ),
     (
         77,
@@ -10433,7 +10489,7 @@ INSERT INTO Neurketak (
         83,
         67.9,
         1.67,
-        'Apur bat nekatuta.'
+        78, 'Apur bat nekatuta.'
     ),
     (
         79,
@@ -10443,7 +10499,7 @@ INSERT INTO Neurketak (
         84,
         67.1,
         1.67,
-        'Baraualdian.'
+        93, 'Baraualdian.'
     ),
     (
         81,
@@ -10453,7 +10509,7 @@ INSERT INTO Neurketak (
         83,
         85.8,
         1.58,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         82,
@@ -10463,7 +10519,7 @@ INSERT INTO Neurketak (
         80,
         88.4,
         1.77,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         83,
@@ -10473,7 +10529,7 @@ INSERT INTO Neurketak (
         83,
         65.4,
         1.80,
-        'Dena ondo.'
+        67, 'Dena ondo.'
     ),
     (
         84,
@@ -10483,7 +10539,7 @@ INSERT INTO Neurketak (
         80,
         78.8,
         1.67,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         85,
@@ -10493,7 +10549,7 @@ INSERT INTO Neurketak (
         90,
         81.0,
         1.72,
-        'Gosariaren ondoren.'
+        85, 'Gosariaren ondoren.'
     ),
     (
         86,
@@ -10503,7 +10559,7 @@ INSERT INTO Neurketak (
         74,
         68.7,
         1.57,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         87,
@@ -10513,7 +10569,7 @@ INSERT INTO Neurketak (
         88,
         73.1,
         1.61,
-        'Kirola egin ondoren.'
+        88, 'Kirola egin ondoren.'
     ),
     (
         88,
@@ -10523,7 +10579,7 @@ INSERT INTO Neurketak (
         78,
         90.5,
         1.81,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         89,
@@ -10533,7 +10589,7 @@ INSERT INTO Neurketak (
         92,
         90.8,
         1.84,
-        'Baraualdian.'
+        94, 'Baraualdian.'
     ),
     (
         91,
@@ -10543,7 +10599,7 @@ INSERT INTO Neurketak (
         81,
         89.8,
         1.58,
-        'Kirola egin ondoren.'
+        87, 'Kirola egin ondoren.'
     ),
     (
         93,
@@ -10553,7 +10609,7 @@ INSERT INTO Neurketak (
         83,
         75.7,
         1.81,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         94,
@@ -10563,7 +10619,7 @@ INSERT INTO Neurketak (
         87,
         86.2,
         1.83,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         96,
@@ -10573,7 +10629,7 @@ INSERT INTO Neurketak (
         82,
         77.3,
         1.71,
-        'Apur bat nekatuta.'
+        93, 'Apur bat nekatuta.'
     ),
     (
         98,
@@ -10583,7 +10639,7 @@ INSERT INTO Neurketak (
         83,
         83.3,
         1.60,
-        'Gosariaren ondoren.'
+        76, 'Gosariaren ondoren.'
     ),
     (
         100,
@@ -10593,7 +10649,7 @@ INSERT INTO Neurketak (
         81,
         82.9,
         1.57,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         51,
@@ -10603,7 +10659,7 @@ INSERT INTO Neurketak (
         85,
         65.0,
         1.76,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         52,
@@ -10613,7 +10669,7 @@ INSERT INTO Neurketak (
         86,
         93.6,
         1.77,
-        'Gosariaren ondoren.'
+        87, 'Gosariaren ondoren.'
     ),
     (
         53,
@@ -10623,7 +10679,7 @@ INSERT INTO Neurketak (
         93,
         75.2,
         1.75,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         55,
@@ -10633,7 +10689,7 @@ INSERT INTO Neurketak (
         72,
         81.3,
         1.76,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         56,
@@ -10643,7 +10699,7 @@ INSERT INTO Neurketak (
         86,
         89.9,
         1.61,
-        'Apur bat nekatuta.'
+        76, 'Apur bat nekatuta.'
     ),
     (
         57,
@@ -10653,7 +10709,7 @@ INSERT INTO Neurketak (
         90,
         83.4,
         1.69,
-        'Dena ondo.'
+        70, 'Dena ondo.'
     ),
     (
         58,
@@ -10663,7 +10719,7 @@ INSERT INTO Neurketak (
         83,
         67.1,
         1.68,
-        'Ondo sentitzen naiz.'
+        77, 'Ondo sentitzen naiz.'
     ),
     (
         59,
@@ -10673,7 +10729,7 @@ INSERT INTO Neurketak (
         92,
         62.3,
         1.73,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         60,
@@ -10683,7 +10739,7 @@ INSERT INTO Neurketak (
         85,
         78.1,
         1.81,
-        'Apur bat nekatuta.'
+        81, 'Apur bat nekatuta.'
     ),
     (
         62,
@@ -10693,7 +10749,7 @@ INSERT INTO Neurketak (
         77,
         66.9,
         1.56,
-        'Gosariaren ondoren.'
+        81, 'Gosariaren ondoren.'
     ),
     (
         65,
@@ -10703,7 +10759,7 @@ INSERT INTO Neurketak (
         78,
         91.5,
         1.55,
-        'Gaur goizean neurtuta.'
+        91, 'Gaur goizean neurtuta.'
     ),
     (
         67,
@@ -10713,7 +10769,7 @@ INSERT INTO Neurketak (
         86,
         72.5,
         1.72,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         68,
@@ -10723,7 +10779,7 @@ INSERT INTO Neurketak (
         87,
         61.1,
         1.85,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         70,
@@ -10733,7 +10789,7 @@ INSERT INTO Neurketak (
         79,
         76.0,
         1.70,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         71,
@@ -10743,7 +10799,7 @@ INSERT INTO Neurketak (
         78,
         89.4,
         1.63,
-        'Ondo sentitzen naiz.'
+        87, 'Ondo sentitzen naiz.'
     ),
     (
         72,
@@ -10753,7 +10809,7 @@ INSERT INTO Neurketak (
         79,
         92.7,
         1.69,
-        'Kirola egin ondoren.'
+        78, 'Kirola egin ondoren.'
     ),
     (
         73,
@@ -10763,7 +10819,7 @@ INSERT INTO Neurketak (
         74,
         94.3,
         1.55,
-        'Kirola egin ondoren.'
+        80, 'Kirola egin ondoren.'
     ),
     (
         74,
@@ -10773,7 +10829,7 @@ INSERT INTO Neurketak (
         83,
         64.0,
         1.67,
-        'Gaur goizean neurtuta.'
+        76, 'Gaur goizean neurtuta.'
     ),
     (
         75,
@@ -10783,7 +10839,7 @@ INSERT INTO Neurketak (
         76,
         59.5,
         1.65,
-        'Ondo sentitzen naiz.'
+        91, 'Ondo sentitzen naiz.'
     ),
     (
         76,
@@ -10793,7 +10849,7 @@ INSERT INTO Neurketak (
         81,
         66.6,
         1.69,
-        'Dena ondo.'
+        76, 'Dena ondo.'
     ),
     (
         77,
@@ -10803,7 +10859,7 @@ INSERT INTO Neurketak (
         81,
         68.0,
         1.67,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         78,
@@ -10813,7 +10869,7 @@ INSERT INTO Neurketak (
         75,
         63.7,
         1.61,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         79,
@@ -10823,7 +10879,7 @@ INSERT INTO Neurketak (
         77,
         66.0,
         1.67,
-        'Ondo sentitzen naiz.'
+        84, 'Ondo sentitzen naiz.'
     ),
     (
         80,
@@ -10833,7 +10889,7 @@ INSERT INTO Neurketak (
         85,
         62.7,
         1.78,
-        'Gosariaren ondoren.'
+        74, 'Gosariaren ondoren.'
     ),
     (
         81,
@@ -10843,7 +10899,7 @@ INSERT INTO Neurketak (
         80,
         86.1,
         1.58,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         82,
@@ -10853,7 +10909,7 @@ INSERT INTO Neurketak (
         80,
         90.0,
         1.77,
-        'Gosariaren ondoren.'
+        65, 'Gosariaren ondoren.'
     ),
     (
         84,
@@ -10863,7 +10919,7 @@ INSERT INTO Neurketak (
         87,
         79.2,
         1.67,
-        'Gosariaren ondoren.'
+        82, 'Gosariaren ondoren.'
     ),
     (
         85,
@@ -10873,7 +10929,7 @@ INSERT INTO Neurketak (
         83,
         81.2,
         1.72,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         88,
@@ -10883,7 +10939,7 @@ INSERT INTO Neurketak (
         74,
         89.8,
         1.81,
-        'Gosariaren ondoren.'
+        94, 'Gosariaren ondoren.'
     ),
     (
         89,
@@ -10893,7 +10949,7 @@ INSERT INTO Neurketak (
         86,
         91.0,
         1.84,
-        'Dena ondo.'
+        94, 'Dena ondo.'
     ),
     (
         90,
@@ -10903,7 +10959,7 @@ INSERT INTO Neurketak (
         82,
         66.8,
         1.60,
-        'Gaur goizean neurtuta.'
+        74, 'Gaur goizean neurtuta.'
     ),
     (
         91,
@@ -10913,7 +10969,7 @@ INSERT INTO Neurketak (
         90,
         89.1,
         1.58,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         93,
@@ -10923,7 +10979,7 @@ INSERT INTO Neurketak (
         88,
         76.5,
         1.81,
-        'Apur bat nekatuta.'
+        65, 'Apur bat nekatuta.'
     ),
     (
         94,
@@ -10933,7 +10989,7 @@ INSERT INTO Neurketak (
         90,
         87.9,
         1.83,
-        'Baraualdian.'
+        76, 'Baraualdian.'
     ),
     (
         95,
@@ -10943,7 +10999,7 @@ INSERT INTO Neurketak (
         77,
         89.3,
         1.77,
-        'Kirola egin ondoren.'
+        66, 'Kirola egin ondoren.'
     ),
     (
         96,
@@ -10953,7 +11009,7 @@ INSERT INTO Neurketak (
         80,
         76.2,
         1.71,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         97,
@@ -10963,7 +11019,7 @@ INSERT INTO Neurketak (
         72,
         86.7,
         1.56,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         100,
@@ -10973,7 +11029,7 @@ INSERT INTO Neurketak (
         84,
         82.8,
         1.57,
-        'Kirola egin ondoren.'
+        85, 'Kirola egin ondoren.'
     ),
     (
         51,
@@ -10983,7 +11039,7 @@ INSERT INTO Neurketak (
         87,
         63.4,
         1.76,
-        'Ondo sentitzen naiz.'
+        66, 'Ondo sentitzen naiz.'
     ),
     (
         53,
@@ -10993,7 +11049,7 @@ INSERT INTO Neurketak (
         86,
         75.4,
         1.75,
-        'Kirola egin ondoren.'
+        76, 'Kirola egin ondoren.'
     ),
     (
         54,
@@ -11003,7 +11059,7 @@ INSERT INTO Neurketak (
         83,
         87.7,
         1.60,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         55,
@@ -11013,7 +11069,7 @@ INSERT INTO Neurketak (
         71,
         81.6,
         1.76,
-        'Apur bat nekatuta.'
+        91, 'Apur bat nekatuta.'
     ),
     (
         56,
@@ -11023,7 +11079,7 @@ INSERT INTO Neurketak (
         94,
         89.1,
         1.61,
-        'Gosariaren ondoren.'
+        73, 'Gosariaren ondoren.'
     ),
     (
         58,
@@ -11033,7 +11089,7 @@ INSERT INTO Neurketak (
         81,
         66.0,
         1.68,
-        'Dena ondo.'
+        83, 'Dena ondo.'
     ),
     (
         60,
@@ -11043,7 +11099,7 @@ INSERT INTO Neurketak (
         80,
         77.2,
         1.81,
-        'Ondo sentitzen naiz.'
+        71, 'Ondo sentitzen naiz.'
     ),
     (
         61,
@@ -11053,7 +11109,7 @@ INSERT INTO Neurketak (
         87,
         73.6,
         1.83,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         62,
@@ -11063,7 +11119,7 @@ INSERT INTO Neurketak (
         75,
         66.2,
         1.56,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         63,
@@ -11073,7 +11129,7 @@ INSERT INTO Neurketak (
         79,
         81.8,
         1.80,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         64,
@@ -11083,7 +11139,7 @@ INSERT INTO Neurketak (
         77,
         94.8,
         1.56,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         65,
@@ -11093,7 +11149,7 @@ INSERT INTO Neurketak (
         85,
         90.4,
         1.55,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         67,
@@ -11103,7 +11159,7 @@ INSERT INTO Neurketak (
         84,
         71.2,
         1.72,
-        'Baraualdian.'
+        73, 'Baraualdian.'
     ),
     (
         68,
@@ -11113,7 +11169,7 @@ INSERT INTO Neurketak (
         75,
         61.5,
         1.85,
-        'Gosariaren ondoren.'
+        65, 'Gosariaren ondoren.'
     ),
     (
         69,
@@ -11123,7 +11179,7 @@ INSERT INTO Neurketak (
         83,
         95.8,
         1.66,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         71,
@@ -11133,7 +11189,7 @@ INSERT INTO Neurketak (
         82,
         88.5,
         1.63,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         72,
@@ -11143,7 +11199,7 @@ INSERT INTO Neurketak (
         88,
         91.3,
         1.69,
-        'Ondo sentitzen naiz.'
+        66, 'Ondo sentitzen naiz.'
     ),
     (
         74,
@@ -11153,7 +11209,7 @@ INSERT INTO Neurketak (
         78,
         63.2,
         1.67,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         75,
@@ -11163,7 +11219,7 @@ INSERT INTO Neurketak (
         74,
         60.6,
         1.65,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         76,
@@ -11173,7 +11229,7 @@ INSERT INTO Neurketak (
         81,
         66.0,
         1.69,
-        'Apur bat nekatuta.'
+        94, 'Apur bat nekatuta.'
     ),
     (
         77,
@@ -11183,7 +11239,7 @@ INSERT INTO Neurketak (
         80,
         67.9,
         1.67,
-        'Apur bat nekatuta.'
+        78, 'Apur bat nekatuta.'
     ),
     (
         78,
@@ -11193,7 +11249,7 @@ INSERT INTO Neurketak (
         73,
         62.2,
         1.61,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         79,
@@ -11203,7 +11259,7 @@ INSERT INTO Neurketak (
         77,
         66.6,
         1.67,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         80,
@@ -11213,7 +11269,7 @@ INSERT INTO Neurketak (
         84,
         62.0,
         1.78,
-        'Kirola egin ondoren.'
+        93, 'Kirola egin ondoren.'
     ),
     (
         82,
@@ -11223,7 +11279,7 @@ INSERT INTO Neurketak (
         87,
         88.6,
         1.77,
-        'Ondo sentitzen naiz.'
+        90, 'Ondo sentitzen naiz.'
     ),
     (
         84,
@@ -11233,7 +11289,7 @@ INSERT INTO Neurketak (
         81,
         79.1,
         1.67,
-        'Apur bat nekatuta.'
+        83, 'Apur bat nekatuta.'
     ),
     (
         85,
@@ -11243,7 +11299,7 @@ INSERT INTO Neurketak (
         86,
         81.4,
         1.72,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         87,
@@ -11253,7 +11309,7 @@ INSERT INTO Neurketak (
         86,
         74.0,
         1.61,
-        'Dena ondo.'
+        70, 'Dena ondo.'
     ),
     (
         88,
@@ -11263,7 +11319,7 @@ INSERT INTO Neurketak (
         85,
         89.1,
         1.81,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         89,
@@ -11273,7 +11329,7 @@ INSERT INTO Neurketak (
         80,
         91.5,
         1.84,
-        'Ondo sentitzen naiz.'
+        79, 'Ondo sentitzen naiz.'
     ),
     (
         90,
@@ -11283,7 +11339,7 @@ INSERT INTO Neurketak (
         87,
         66.6,
         1.60,
-        'Ondo sentitzen naiz.'
+        72, 'Ondo sentitzen naiz.'
     ),
     (
         91,
@@ -11293,7 +11349,7 @@ INSERT INTO Neurketak (
         88,
         90.3,
         1.58,
-        'Kirola egin ondoren.'
+        87, 'Kirola egin ondoren.'
     ),
     (
         93,
@@ -11303,7 +11359,7 @@ INSERT INTO Neurketak (
         87,
         75.6,
         1.81,
-        'Apur bat nekatuta.'
+        89, 'Apur bat nekatuta.'
     ),
     (
         94,
@@ -11313,7 +11369,7 @@ INSERT INTO Neurketak (
         86,
         87.0,
         1.83,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         95,
@@ -11323,7 +11379,7 @@ INSERT INTO Neurketak (
         74,
         89.6,
         1.77,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         96,
@@ -11333,7 +11389,7 @@ INSERT INTO Neurketak (
         85,
         76.5,
         1.71,
-        'Ondo sentitzen naiz.'
+        70, 'Ondo sentitzen naiz.'
     ),
     (
         99,
@@ -11343,7 +11399,7 @@ INSERT INTO Neurketak (
         77,
         85.8,
         1.71,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         100,
@@ -11353,7 +11409,7 @@ INSERT INTO Neurketak (
         72,
         82.1,
         1.57,
-        'Apur bat nekatuta.'
+        92, 'Apur bat nekatuta.'
     ),
     (
         51,
@@ -11363,7 +11419,7 @@ INSERT INTO Neurketak (
         86,
         63.7,
         1.76,
-        'Dena ondo.'
+        88, 'Dena ondo.'
     ),
     (
         52,
@@ -11373,7 +11429,7 @@ INSERT INTO Neurketak (
         92,
         94.2,
         1.77,
-        'Gosariaren ondoren.'
+        94, 'Gosariaren ondoren.'
     ),
     (
         53,
@@ -11383,7 +11439,7 @@ INSERT INTO Neurketak (
         85,
         74.5,
         1.75,
-        'Gaur goizean neurtuta.'
+        87, 'Gaur goizean neurtuta.'
     ),
     (
         54,
@@ -11393,7 +11449,7 @@ INSERT INTO Neurketak (
         76,
         87.7,
         1.60,
-        'Kirola egin ondoren.'
+        93, 'Kirola egin ondoren.'
     ),
     (
         55,
@@ -11403,7 +11459,7 @@ INSERT INTO Neurketak (
         79,
         80.0,
         1.76,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         56,
@@ -11413,7 +11469,7 @@ INSERT INTO Neurketak (
         91,
         90.8,
         1.61,
-        'Gosariaren ondoren.'
+        85, 'Gosariaren ondoren.'
     ),
     (
         57,
@@ -11423,7 +11479,7 @@ INSERT INTO Neurketak (
         82,
         82.6,
         1.69,
-        'Apur bat nekatuta.'
+        84, 'Apur bat nekatuta.'
     ),
     (
         58,
@@ -11433,7 +11489,7 @@ INSERT INTO Neurketak (
         89,
         66.7,
         1.68,
-        'Kirola egin ondoren.'
+        91, 'Kirola egin ondoren.'
     ),
     (
         59,
@@ -11443,7 +11499,7 @@ INSERT INTO Neurketak (
         86,
         64.0,
         1.73,
-        'Baraualdian.'
+        84, 'Baraualdian.'
     ),
     (
         60,
@@ -11453,7 +11509,7 @@ INSERT INTO Neurketak (
         90,
         77.5,
         1.81,
-        'Gaur goizean neurtuta.'
+        66, 'Gaur goizean neurtuta.'
     ),
     (
         61,
@@ -11463,7 +11519,7 @@ INSERT INTO Neurketak (
         84,
         73.7,
         1.83,
-        'Apur bat nekatuta.'
+        84, 'Apur bat nekatuta.'
     ),
     (
         63,
@@ -11473,7 +11529,7 @@ INSERT INTO Neurketak (
         84,
         81.9,
         1.80,
-        'Baraualdian.'
+        93, 'Baraualdian.'
     ),
     (
         66,
@@ -11483,7 +11539,7 @@ INSERT INTO Neurketak (
         83,
         74.7,
         1.59,
-        'Dena ondo.'
+        92, 'Dena ondo.'
     ),
     (
         67,
@@ -11493,7 +11549,7 @@ INSERT INTO Neurketak (
         80,
         72.6,
         1.72,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         68,
@@ -11503,7 +11559,7 @@ INSERT INTO Neurketak (
         73,
         61.9,
         1.85,
-        'Gosariaren ondoren.'
+        65, 'Gosariaren ondoren.'
     ),
     (
         70,
@@ -11513,7 +11569,7 @@ INSERT INTO Neurketak (
         75,
         74.4,
         1.70,
-        'Dena ondo.'
+        93, 'Dena ondo.'
     ),
     (
         72,
@@ -11523,7 +11579,7 @@ INSERT INTO Neurketak (
         77,
         91.2,
         1.69,
-        'Apur bat nekatuta.'
+        93, 'Apur bat nekatuta.'
     ),
     (
         73,
@@ -11533,7 +11589,7 @@ INSERT INTO Neurketak (
         81,
         95.5,
         1.55,
-        'Ondo sentitzen naiz.'
+        75, 'Ondo sentitzen naiz.'
     ),
     (
         74,
@@ -11543,7 +11599,7 @@ INSERT INTO Neurketak (
         90,
         63.1,
         1.67,
-        'Ondo sentitzen naiz.'
+        89, 'Ondo sentitzen naiz.'
     ),
     (
         76,
@@ -11553,7 +11609,7 @@ INSERT INTO Neurketak (
         83,
         66.2,
         1.69,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         77,
@@ -11563,7 +11619,7 @@ INSERT INTO Neurketak (
         93,
         67.2,
         1.67,
-        'Ondo sentitzen naiz.'
+        79, 'Ondo sentitzen naiz.'
     ),
     (
         78,
@@ -11573,7 +11629,7 @@ INSERT INTO Neurketak (
         82,
         62.9,
         1.61,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         79,
@@ -11583,7 +11639,7 @@ INSERT INTO Neurketak (
         77,
         67.6,
         1.67,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         81,
@@ -11593,7 +11649,7 @@ INSERT INTO Neurketak (
         94,
         85.2,
         1.58,
-        'Dena ondo.'
+        85, 'Dena ondo.'
     ),
     (
         82,
@@ -11603,7 +11659,7 @@ INSERT INTO Neurketak (
         94,
         88.2,
         1.77,
-        'Ondo sentitzen naiz.'
+        67, 'Ondo sentitzen naiz.'
     ),
     (
         83,
@@ -11613,7 +11669,7 @@ INSERT INTO Neurketak (
         87,
         65.4,
         1.80,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         85,
@@ -11623,7 +11679,7 @@ INSERT INTO Neurketak (
         88,
         81.5,
         1.72,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         86,
@@ -11633,7 +11689,7 @@ INSERT INTO Neurketak (
         84,
         69.0,
         1.57,
-        'Dena ondo.'
+        68, 'Dena ondo.'
     ),
     (
         88,
@@ -11643,7 +11699,7 @@ INSERT INTO Neurketak (
         80,
         90.2,
         1.81,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         89,
@@ -11653,7 +11709,7 @@ INSERT INTO Neurketak (
         91,
         90.7,
         1.84,
-        'Gaur goizean neurtuta.'
+        76, 'Gaur goizean neurtuta.'
     ),
     (
         90,
@@ -11663,7 +11719,7 @@ INSERT INTO Neurketak (
         79,
         66.1,
         1.60,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         91,
@@ -11673,7 +11729,7 @@ INSERT INTO Neurketak (
         87,
         90.9,
         1.58,
-        'Gosariaren ondoren.'
+        77, 'Gosariaren ondoren.'
     ),
     (
         92,
@@ -11683,7 +11739,7 @@ INSERT INTO Neurketak (
         83,
         60.8,
         1.79,
-        'Kirola egin ondoren.'
+        67, 'Kirola egin ondoren.'
     ),
     (
         94,
@@ -11693,7 +11749,7 @@ INSERT INTO Neurketak (
         87,
         86.5,
         1.83,
-        'Dena ondo.'
+        72, 'Dena ondo.'
     ),
     (
         95,
@@ -11703,7 +11759,7 @@ INSERT INTO Neurketak (
         85,
         89.9,
         1.77,
-        'Dena ondo.'
+        81, 'Dena ondo.'
     ),
     (
         96,
@@ -11713,7 +11769,7 @@ INSERT INTO Neurketak (
         82,
         76.5,
         1.71,
-        'Gosariaren ondoren.'
+        65, 'Gosariaren ondoren.'
     ),
     (
         97,
@@ -11723,7 +11779,7 @@ INSERT INTO Neurketak (
         72,
         86.0,
         1.56,
-        'Apur bat nekatuta.'
+        69, 'Apur bat nekatuta.'
     ),
     (
         98,
@@ -11733,7 +11789,7 @@ INSERT INTO Neurketak (
         77,
         84.3,
         1.60,
-        'Ondo sentitzen naiz.'
+        87, 'Ondo sentitzen naiz.'
     ),
     (
         99,
@@ -11743,7 +11799,7 @@ INSERT INTO Neurketak (
         79,
         86.7,
         1.71,
-        'Apur bat nekatuta.'
+        92, 'Apur bat nekatuta.'
     ),
     (
         100,
@@ -11753,7 +11809,7 @@ INSERT INTO Neurketak (
         72,
         82.1,
         1.57,
-        'Baraualdian.'
+        75, 'Baraualdian.'
     ),
     (
         51,
@@ -11763,7 +11819,7 @@ INSERT INTO Neurketak (
         83,
         64.0,
         1.76,
-        'Kirola egin ondoren.'
+        85, 'Kirola egin ondoren.'
     ),
     (
         52,
@@ -11773,7 +11829,7 @@ INSERT INTO Neurketak (
         90,
         93.9,
         1.77,
-        'Apur bat nekatuta.'
+        72, 'Apur bat nekatuta.'
     ),
     (
         53,
@@ -11783,7 +11839,7 @@ INSERT INTO Neurketak (
         84,
         74.7,
         1.75,
-        'Ondo sentitzen naiz.'
+        93, 'Ondo sentitzen naiz.'
     ),
     (
         56,
@@ -11793,7 +11849,7 @@ INSERT INTO Neurketak (
         84,
         90.1,
         1.61,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         57,
@@ -11803,7 +11859,7 @@ INSERT INTO Neurketak (
         91,
         83.9,
         1.69,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         61,
@@ -11813,7 +11869,7 @@ INSERT INTO Neurketak (
         86,
         72.8,
         1.83,
-        'Apur bat nekatuta.'
+        83, 'Apur bat nekatuta.'
     ),
     (
         62,
@@ -11823,7 +11879,7 @@ INSERT INTO Neurketak (
         77,
         67.0,
         1.56,
-        'Dena ondo.'
+        65, 'Dena ondo.'
     ),
     (
         63,
@@ -11833,7 +11889,7 @@ INSERT INTO Neurketak (
         81,
         80.3,
         1.80,
-        'Dena ondo.'
+        73, 'Dena ondo.'
     ),
     (
         64,
@@ -11843,7 +11899,7 @@ INSERT INTO Neurketak (
         79,
         96.0,
         1.56,
-        'Kirola egin ondoren.'
+        81, 'Kirola egin ondoren.'
     ),
     (
         66,
@@ -11853,7 +11909,7 @@ INSERT INTO Neurketak (
         85,
         75.1,
         1.59,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         67,
@@ -11863,7 +11919,7 @@ INSERT INTO Neurketak (
         79,
         71.7,
         1.72,
-        'Gosariaren ondoren.'
+        82, 'Gosariaren ondoren.'
     ),
     (
         68,
@@ -11873,7 +11929,7 @@ INSERT INTO Neurketak (
         87,
         61.7,
         1.85,
-        'Ondo sentitzen naiz.'
+        74, 'Ondo sentitzen naiz.'
     ),
     (
         69,
@@ -11883,7 +11939,7 @@ INSERT INTO Neurketak (
         87,
         95.2,
         1.66,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         70,
@@ -11893,7 +11949,7 @@ INSERT INTO Neurketak (
         83,
         74.7,
         1.70,
-        'Ondo sentitzen naiz.'
+        92, 'Ondo sentitzen naiz.'
     ),
     (
         71,
@@ -11903,7 +11959,7 @@ INSERT INTO Neurketak (
         75,
         88.8,
         1.63,
-        'Ondo sentitzen naiz.'
+        94, 'Ondo sentitzen naiz.'
     ),
     (
         72,
@@ -11913,7 +11969,7 @@ INSERT INTO Neurketak (
         76,
         92.3,
         1.69,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         73,
@@ -11923,7 +11979,7 @@ INSERT INTO Neurketak (
         82,
         94.0,
         1.55,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         74,
@@ -11933,7 +11989,7 @@ INSERT INTO Neurketak (
         76,
         64.5,
         1.67,
-        'Ondo sentitzen naiz.'
+        90, 'Ondo sentitzen naiz.'
     ),
     (
         76,
@@ -11943,7 +11999,7 @@ INSERT INTO Neurketak (
         81,
         65.7,
         1.69,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         79,
@@ -11953,7 +12009,7 @@ INSERT INTO Neurketak (
         86,
         67.4,
         1.67,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         80,
@@ -11963,7 +12019,7 @@ INSERT INTO Neurketak (
         91,
         62.7,
         1.78,
-        'Ondo sentitzen naiz.'
+        89, 'Ondo sentitzen naiz.'
     ),
     (
         82,
@@ -11973,7 +12029,7 @@ INSERT INTO Neurketak (
         88,
         88.4,
         1.77,
-        'Gosariaren ondoren.'
+        73, 'Gosariaren ondoren.'
     ),
     (
         83,
@@ -11983,7 +12039,7 @@ INSERT INTO Neurketak (
         80,
         65.6,
         1.80,
-        'Ondo sentitzen naiz.'
+        78, 'Ondo sentitzen naiz.'
     ),
     (
         84,
@@ -11993,7 +12049,7 @@ INSERT INTO Neurketak (
         78,
         78.4,
         1.67,
-        'Gaur goizean neurtuta.'
+        85, 'Gaur goizean neurtuta.'
     ),
     (
         85,
@@ -12003,7 +12059,7 @@ INSERT INTO Neurketak (
         83,
         82.0,
         1.72,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         86,
@@ -12013,7 +12069,7 @@ INSERT INTO Neurketak (
         81,
         68.3,
         1.57,
-        'Gosariaren ondoren.'
+        85, 'Gosariaren ondoren.'
     ),
     (
         88,
@@ -12023,7 +12079,7 @@ INSERT INTO Neurketak (
         76,
         90.9,
         1.81,
-        'Ondo sentitzen naiz.'
+        67, 'Ondo sentitzen naiz.'
     ),
     (
         89,
@@ -12033,7 +12089,7 @@ INSERT INTO Neurketak (
         82,
         91.2,
         1.84,
-        'Gosariaren ondoren.'
+        79, 'Gosariaren ondoren.'
     ),
     (
         90,
@@ -12043,7 +12099,7 @@ INSERT INTO Neurketak (
         82,
         66.1,
         1.60,
-        'Gosariaren ondoren.'
+        74, 'Gosariaren ondoren.'
     ),
     (
         93,
@@ -12053,7 +12109,7 @@ INSERT INTO Neurketak (
         86,
         76.3,
         1.81,
-        'Apur bat nekatuta.'
+        83, 'Apur bat nekatuta.'
     ),
     (
         94,
@@ -12063,7 +12119,7 @@ INSERT INTO Neurketak (
         78,
         86.2,
         1.83,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         95,
@@ -12073,7 +12129,7 @@ INSERT INTO Neurketak (
         87,
         90.0,
         1.77,
-        'Kirola egin ondoren.'
+        81, 'Kirola egin ondoren.'
     ),
     (
         96,
@@ -12083,7 +12139,7 @@ INSERT INTO Neurketak (
         86,
         77.1,
         1.71,
-        'Gaur goizean neurtuta.'
+        85, 'Gaur goizean neurtuta.'
     ),
     (
         52,
@@ -12093,7 +12149,7 @@ INSERT INTO Neurketak (
         94,
         95.0,
         1.77,
-        'Baraualdian.'
+        68, 'Baraualdian.'
     ),
     (
         53,
@@ -12103,7 +12159,7 @@ INSERT INTO Neurketak (
         82,
         74.6,
         1.75,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         54,
@@ -12113,7 +12169,7 @@ INSERT INTO Neurketak (
         84,
         87.6,
         1.60,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         55,
@@ -12123,7 +12179,7 @@ INSERT INTO Neurketak (
         78,
         81.8,
         1.76,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         58,
@@ -12133,7 +12189,7 @@ INSERT INTO Neurketak (
         82,
         67.6,
         1.68,
-        'Ondo sentitzen naiz.'
+        73, 'Ondo sentitzen naiz.'
     ),
     (
         59,
@@ -12143,7 +12199,7 @@ INSERT INTO Neurketak (
         81,
         62.5,
         1.73,
-        'Apur bat nekatuta.'
+        94, 'Apur bat nekatuta.'
     ),
     (
         60,
@@ -12153,7 +12209,7 @@ INSERT INTO Neurketak (
         92,
         77.2,
         1.81,
-        'Apur bat nekatuta.'
+        73, 'Apur bat nekatuta.'
     ),
     (
         61,
@@ -12163,7 +12219,7 @@ INSERT INTO Neurketak (
         79,
         72.1,
         1.83,
-        'Baraualdian.'
+        76, 'Baraualdian.'
     ),
     (
         62,
@@ -12173,7 +12229,7 @@ INSERT INTO Neurketak (
         84,
         66.5,
         1.56,
-        'Ondo sentitzen naiz.'
+        72, 'Ondo sentitzen naiz.'
     ),
     (
         64,
@@ -12183,7 +12239,7 @@ INSERT INTO Neurketak (
         85,
         94.9,
         1.56,
-        'Ondo sentitzen naiz.'
+        74, 'Ondo sentitzen naiz.'
     ),
     (
         65,
@@ -12193,7 +12249,7 @@ INSERT INTO Neurketak (
         91,
         91.0,
         1.55,
-        'Baraualdian.'
+        73, 'Baraualdian.'
     ),
     (
         66,
@@ -12203,7 +12259,7 @@ INSERT INTO Neurketak (
         76,
         74.5,
         1.59,
-        'Ondo sentitzen naiz.'
+        68, 'Ondo sentitzen naiz.'
     ),
     (
         67,
@@ -12213,7 +12269,7 @@ INSERT INTO Neurketak (
         79,
         72.7,
         1.72,
-        'Baraualdian.'
+        76, 'Baraualdian.'
     ),
     (
         68,
@@ -12223,7 +12279,7 @@ INSERT INTO Neurketak (
         84,
         61.0,
         1.85,
-        'Kirola egin ondoren.'
+        89, 'Kirola egin ondoren.'
     ),
     (
         69,
@@ -12233,7 +12289,7 @@ INSERT INTO Neurketak (
         78,
         95.7,
         1.66,
-        'Kirola egin ondoren.'
+        72, 'Kirola egin ondoren.'
     ),
     (
         70,
@@ -12243,7 +12299,7 @@ INSERT INTO Neurketak (
         82,
         74.5,
         1.70,
-        'Gosariaren ondoren.'
+        83, 'Gosariaren ondoren.'
     ),
     (
         71,
@@ -12253,7 +12309,7 @@ INSERT INTO Neurketak (
         72,
         90.0,
         1.63,
-        'Apur bat nekatuta.'
+        94, 'Apur bat nekatuta.'
     ),
     (
         72,
@@ -12263,7 +12319,7 @@ INSERT INTO Neurketak (
         89,
         92.9,
         1.69,
-        'Dena ondo.'
+        90, 'Dena ondo.'
     ),
     (
         73,
@@ -12273,7 +12329,7 @@ INSERT INTO Neurketak (
         81,
         94.4,
         1.55,
-        'Gosariaren ondoren.'
+        66, 'Gosariaren ondoren.'
     ),
     (
         74,
@@ -12283,7 +12339,7 @@ INSERT INTO Neurketak (
         89,
         64.9,
         1.67,
-        'Gosariaren ondoren.'
+        86, 'Gosariaren ondoren.'
     ),
     (
         75,
@@ -12293,7 +12349,7 @@ INSERT INTO Neurketak (
         71,
         61.0,
         1.65,
-        'Kirola egin ondoren.'
+        81, 'Kirola egin ondoren.'
     ),
     (
         76,
@@ -12303,7 +12359,7 @@ INSERT INTO Neurketak (
         90,
         65.5,
         1.69,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         77,
@@ -12313,7 +12369,7 @@ INSERT INTO Neurketak (
         79,
         67.2,
         1.67,
-        'Dena ondo.'
+        88, 'Dena ondo.'
     ),
     (
         78,
@@ -12323,7 +12379,7 @@ INSERT INTO Neurketak (
         83,
         63.7,
         1.61,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         79,
@@ -12333,7 +12389,7 @@ INSERT INTO Neurketak (
         78,
         66.7,
         1.67,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         80,
@@ -12343,7 +12399,7 @@ INSERT INTO Neurketak (
         86,
         63.1,
         1.78,
-        'Dena ondo.'
+        92, 'Dena ondo.'
     ),
     (
         81,
@@ -12353,7 +12409,7 @@ INSERT INTO Neurketak (
         83,
         86.5,
         1.58,
-        'Ondo sentitzen naiz.'
+        92, 'Ondo sentitzen naiz.'
     ),
     (
         83,
@@ -12363,7 +12419,7 @@ INSERT INTO Neurketak (
         86,
         65.2,
         1.80,
-        'Kirola egin ondoren.'
+        91, 'Kirola egin ondoren.'
     ),
     (
         84,
@@ -12373,7 +12429,7 @@ INSERT INTO Neurketak (
         88,
         79.5,
         1.67,
-        'Baraualdian.'
+        69, 'Baraualdian.'
     ),
     (
         86,
@@ -12383,7 +12439,7 @@ INSERT INTO Neurketak (
         82,
         67.7,
         1.57,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         87,
@@ -12393,7 +12449,7 @@ INSERT INTO Neurketak (
         81,
         72.7,
         1.61,
-        'Ondo sentitzen naiz.'
+        80, 'Ondo sentitzen naiz.'
     ),
     (
         88,
@@ -12403,7 +12459,7 @@ INSERT INTO Neurketak (
         87,
         90.4,
         1.81,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         89,
@@ -12413,7 +12469,7 @@ INSERT INTO Neurketak (
         80,
         91.9,
         1.84,
-        'Apur bat nekatuta.'
+        67, 'Apur bat nekatuta.'
     ),
     (
         90,
@@ -12423,7 +12479,7 @@ INSERT INTO Neurketak (
         79,
         66.3,
         1.60,
-        'Dena ondo.'
+        76, 'Dena ondo.'
     ),
     (
         92,
@@ -12433,7 +12489,7 @@ INSERT INTO Neurketak (
         93,
         59.5,
         1.79,
-        'Dena ondo.'
+        94, 'Dena ondo.'
     ),
     (
         93,
@@ -12443,7 +12499,7 @@ INSERT INTO Neurketak (
         90,
         76.9,
         1.81,
-        'Gaur goizean neurtuta.'
+        86, 'Gaur goizean neurtuta.'
     ),
     (
         95,
@@ -12453,7 +12509,7 @@ INSERT INTO Neurketak (
         82,
         90.8,
         1.77,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         96,
@@ -12463,7 +12519,7 @@ INSERT INTO Neurketak (
         88,
         77.4,
         1.71,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         98,
@@ -12473,7 +12529,7 @@ INSERT INTO Neurketak (
         90,
         84.4,
         1.60,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         99,
@@ -12483,7 +12539,7 @@ INSERT INTO Neurketak (
         80,
         85.0,
         1.71,
-        'Dena ondo.'
+        72, 'Dena ondo.'
     ),
     (
         100,
@@ -12493,7 +12549,7 @@ INSERT INTO Neurketak (
         72,
         82.0,
         1.57,
-        'Ondo sentitzen naiz.'
+        94, 'Ondo sentitzen naiz.'
     ),
     (
         51,
@@ -12503,7 +12559,7 @@ INSERT INTO Neurketak (
         84,
         63.4,
         1.76,
-        'Baraualdian.'
+        94, 'Baraualdian.'
     ),
     (
         53,
@@ -12513,7 +12569,7 @@ INSERT INTO Neurketak (
         93,
         75.3,
         1.75,
-        'Kirola egin ondoren.'
+        78, 'Kirola egin ondoren.'
     ),
     (
         54,
@@ -12523,7 +12579,7 @@ INSERT INTO Neurketak (
         80,
         86.0,
         1.60,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         55,
@@ -12533,7 +12589,7 @@ INSERT INTO Neurketak (
         84,
         81.7,
         1.76,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         56,
@@ -12543,7 +12599,7 @@ INSERT INTO Neurketak (
         80,
         89.1,
         1.61,
-        'Baraualdian.'
+        70, 'Baraualdian.'
     ),
     (
         57,
@@ -12553,7 +12609,7 @@ INSERT INTO Neurketak (
         80,
         83.2,
         1.69,
-        'Dena ondo.'
+        81, 'Dena ondo.'
     ),
     (
         59,
@@ -12563,7 +12619,7 @@ INSERT INTO Neurketak (
         87,
         62.9,
         1.73,
-        'Apur bat nekatuta.'
+        91, 'Apur bat nekatuta.'
     ),
     (
         60,
@@ -12573,7 +12629,7 @@ INSERT INTO Neurketak (
         80,
         77.4,
         1.81,
-        'Gaur goizean neurtuta.'
+        68, 'Gaur goizean neurtuta.'
     ),
     (
         61,
@@ -12583,7 +12639,7 @@ INSERT INTO Neurketak (
         83,
         72.9,
         1.83,
-        'Ondo sentitzen naiz.'
+        73, 'Ondo sentitzen naiz.'
     ),
     (
         62,
@@ -12593,7 +12649,7 @@ INSERT INTO Neurketak (
         86,
         65.3,
         1.56,
-        'Gosariaren ondoren.'
+        71, 'Gosariaren ondoren.'
     ),
     (
         63,
@@ -12603,7 +12659,7 @@ INSERT INTO Neurketak (
         91,
         81.2,
         1.80,
-        'Ondo sentitzen naiz.'
+        75, 'Ondo sentitzen naiz.'
     ),
     (
         64,
@@ -12613,7 +12669,7 @@ INSERT INTO Neurketak (
         78,
         95.0,
         1.56,
-        'Apur bat nekatuta.'
+        71, 'Apur bat nekatuta.'
     ),
     (
         65,
@@ -12623,7 +12679,7 @@ INSERT INTO Neurketak (
         81,
         91.2,
         1.55,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         66,
@@ -12633,7 +12689,7 @@ INSERT INTO Neurketak (
         83,
         76.0,
         1.59,
-        'Dena ondo.'
+        78, 'Dena ondo.'
     ),
     (
         67,
@@ -12643,7 +12699,7 @@ INSERT INTO Neurketak (
         80,
         71.0,
         1.72,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         68,
@@ -12653,7 +12709,7 @@ INSERT INTO Neurketak (
         82,
         60.1,
         1.85,
-        'Kirola egin ondoren.'
+        73, 'Kirola egin ondoren.'
     ),
     (
         69,
@@ -12663,7 +12719,7 @@ INSERT INTO Neurketak (
         84,
         95.8,
         1.66,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         70,
@@ -12673,7 +12729,7 @@ INSERT INTO Neurketak (
         86,
         75.9,
         1.70,
-        'Gaur goizean neurtuta.'
+        78, 'Gaur goizean neurtuta.'
     ),
     (
         71,
@@ -12683,7 +12739,7 @@ INSERT INTO Neurketak (
         84,
         88.2,
         1.63,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         72,
@@ -12693,7 +12749,7 @@ INSERT INTO Neurketak (
         86,
         91.4,
         1.69,
-        'Gaur goizean neurtuta.'
+        72, 'Gaur goizean neurtuta.'
     ),
     (
         73,
@@ -12703,7 +12759,7 @@ INSERT INTO Neurketak (
         84,
         95.4,
         1.55,
-        'Dena ondo.'
+        67, 'Dena ondo.'
     ),
     (
         74,
@@ -12713,7 +12769,7 @@ INSERT INTO Neurketak (
         81,
         63.7,
         1.67,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         75,
@@ -12723,7 +12779,7 @@ INSERT INTO Neurketak (
         85,
         60.4,
         1.65,
-        'Ondo sentitzen naiz.'
+        74, 'Ondo sentitzen naiz.'
     ),
     (
         76,
@@ -12733,7 +12789,7 @@ INSERT INTO Neurketak (
         89,
         65.0,
         1.69,
-        'Ondo sentitzen naiz.'
+        93, 'Ondo sentitzen naiz.'
     ),
     (
         79,
@@ -12743,7 +12799,7 @@ INSERT INTO Neurketak (
         74,
         67.7,
         1.67,
-        'Baraualdian.'
+        70, 'Baraualdian.'
     ),
     (
         80,
@@ -12753,7 +12809,7 @@ INSERT INTO Neurketak (
         81,
         62.5,
         1.78,
-        'Kirola egin ondoren.'
+        85, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -12763,7 +12819,7 @@ INSERT INTO Neurketak (
         83,
         86.2,
         1.58,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         83,
@@ -12773,7 +12829,7 @@ INSERT INTO Neurketak (
         83,
         65.3,
         1.80,
-        'Kirola egin ondoren.'
+        94, 'Kirola egin ondoren.'
     ),
     (
         84,
@@ -12783,7 +12839,7 @@ INSERT INTO Neurketak (
         86,
         79.3,
         1.67,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         86,
@@ -12793,7 +12849,7 @@ INSERT INTO Neurketak (
         74,
         67.3,
         1.57,
-        'Gosariaren ondoren.'
+        65, 'Gosariaren ondoren.'
     ),
     (
         87,
@@ -12803,7 +12859,7 @@ INSERT INTO Neurketak (
         86,
         72.4,
         1.61,
-        'Baraualdian.'
+        73, 'Baraualdian.'
     ),
     (
         89,
@@ -12813,7 +12869,7 @@ INSERT INTO Neurketak (
         92,
         91.6,
         1.84,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         92,
@@ -12823,7 +12879,7 @@ INSERT INTO Neurketak (
         92,
         60.6,
         1.79,
-        'Apur bat nekatuta.'
+        86, 'Apur bat nekatuta.'
     ),
     (
         93,
@@ -12833,7 +12889,7 @@ INSERT INTO Neurketak (
         81,
         75.5,
         1.81,
-        'Gaur goizean neurtuta.'
+        85, 'Gaur goizean neurtuta.'
     ),
     (
         94,
@@ -12843,7 +12899,7 @@ INSERT INTO Neurketak (
         85,
         87.4,
         1.83,
-        'Dena ondo.'
+        92, 'Dena ondo.'
     ),
     (
         95,
@@ -12853,7 +12909,7 @@ INSERT INTO Neurketak (
         85,
         89.0,
         1.77,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         96,
@@ -12863,7 +12919,7 @@ INSERT INTO Neurketak (
         79,
         76.4,
         1.71,
-        'Ondo sentitzen naiz.'
+        79, 'Ondo sentitzen naiz.'
     ),
     (
         97,
@@ -12873,7 +12929,7 @@ INSERT INTO Neurketak (
         76,
         87.4,
         1.56,
-        'Apur bat nekatuta.'
+        94, 'Apur bat nekatuta.'
     ),
     (
         98,
@@ -12883,7 +12939,7 @@ INSERT INTO Neurketak (
         83,
         83.5,
         1.60,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         100,
@@ -12893,7 +12949,7 @@ INSERT INTO Neurketak (
         77,
         81.6,
         1.57,
-        'Apur bat nekatuta.'
+        67, 'Apur bat nekatuta.'
     ),
     (
         51,
@@ -12903,7 +12959,7 @@ INSERT INTO Neurketak (
         80,
         63.9,
         1.76,
-        'Baraualdian.'
+        74, 'Baraualdian.'
     ),
     (
         52,
@@ -12913,7 +12969,7 @@ INSERT INTO Neurketak (
         80,
         93.7,
         1.77,
-        'Baraualdian.'
+        83, 'Baraualdian.'
     ),
     (
         53,
@@ -12923,7 +12979,7 @@ INSERT INTO Neurketak (
         87,
         74.6,
         1.75,
-        'Ondo sentitzen naiz.'
+        69, 'Ondo sentitzen naiz.'
     ),
     (
         54,
@@ -12933,7 +12989,7 @@ INSERT INTO Neurketak (
         74,
         87.4,
         1.60,
-        'Baraualdian.'
+        83, 'Baraualdian.'
     ),
     (
         55,
@@ -12943,7 +12999,7 @@ INSERT INTO Neurketak (
         86,
         80.4,
         1.76,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         57,
@@ -12953,7 +13009,7 @@ INSERT INTO Neurketak (
         79,
         82.3,
         1.69,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         58,
@@ -12963,7 +13019,7 @@ INSERT INTO Neurketak (
         84,
         67.1,
         1.68,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         59,
@@ -12973,7 +13029,7 @@ INSERT INTO Neurketak (
         93,
         62.5,
         1.73,
-        'Apur bat nekatuta.'
+        89, 'Apur bat nekatuta.'
     ),
     (
         61,
@@ -12983,7 +13039,7 @@ INSERT INTO Neurketak (
         90,
         73.2,
         1.83,
-        'Ondo sentitzen naiz.'
+        85, 'Ondo sentitzen naiz.'
     ),
     (
         62,
@@ -12993,7 +13049,7 @@ INSERT INTO Neurketak (
         80,
         66.7,
         1.56,
-        'Dena ondo.'
+        90, 'Dena ondo.'
     ),
     (
         63,
@@ -13003,7 +13059,7 @@ INSERT INTO Neurketak (
         76,
         81.0,
         1.80,
-        'Kirola egin ondoren.'
+        90, 'Kirola egin ondoren.'
     ),
     (
         64,
@@ -13013,7 +13069,7 @@ INSERT INTO Neurketak (
         73,
         94.1,
         1.56,
-        'Ondo sentitzen naiz.'
+        69, 'Ondo sentitzen naiz.'
     ),
     (
         67,
@@ -13023,7 +13079,7 @@ INSERT INTO Neurketak (
         80,
         71.9,
         1.72,
-        'Kirola egin ondoren.'
+        80, 'Kirola egin ondoren.'
     ),
     (
         68,
@@ -13033,7 +13089,7 @@ INSERT INTO Neurketak (
         74,
         60.7,
         1.85,
-        'Baraualdian.'
+        74, 'Baraualdian.'
     ),
     (
         69,
@@ -13043,7 +13099,7 @@ INSERT INTO Neurketak (
         78,
         95.1,
         1.66,
-        'Ondo sentitzen naiz.'
+        65, 'Ondo sentitzen naiz.'
     ),
     (
         71,
@@ -13053,7 +13109,7 @@ INSERT INTO Neurketak (
         80,
         88.9,
         1.63,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         74,
@@ -13063,7 +13119,7 @@ INSERT INTO Neurketak (
         83,
         64.3,
         1.67,
-        'Gosariaren ondoren.'
+        65, 'Gosariaren ondoren.'
     ),
     (
         76,
@@ -13073,7 +13129,7 @@ INSERT INTO Neurketak (
         89,
         66.1,
         1.69,
-        'Kirola egin ondoren.'
+        80, 'Kirola egin ondoren.'
     ),
     (
         77,
@@ -13083,7 +13139,7 @@ INSERT INTO Neurketak (
         78,
         67.9,
         1.67,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         78,
@@ -13093,7 +13149,7 @@ INSERT INTO Neurketak (
         80,
         63.9,
         1.61,
-        'Baraualdian.'
+        88, 'Baraualdian.'
     ),
     (
         79,
@@ -13103,7 +13159,7 @@ INSERT INTO Neurketak (
         88,
         68.0,
         1.67,
-        'Gosariaren ondoren.'
+        83, 'Gosariaren ondoren.'
     ),
     (
         80,
@@ -13113,7 +13169,7 @@ INSERT INTO Neurketak (
         87,
         62.4,
         1.78,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         81,
@@ -13123,7 +13179,7 @@ INSERT INTO Neurketak (
         94,
         85.1,
         1.58,
-        'Apur bat nekatuta.'
+        83, 'Apur bat nekatuta.'
     ),
     (
         82,
@@ -13133,7 +13189,7 @@ INSERT INTO Neurketak (
         94,
         88.2,
         1.77,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         83,
@@ -13143,7 +13199,7 @@ INSERT INTO Neurketak (
         79,
         65.8,
         1.80,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         84,
@@ -13153,7 +13209,7 @@ INSERT INTO Neurketak (
         87,
         78.2,
         1.67,
-        'Kirola egin ondoren.'
+        73, 'Kirola egin ondoren.'
     ),
     (
         85,
@@ -13163,7 +13219,7 @@ INSERT INTO Neurketak (
         79,
         81.6,
         1.72,
-        'Gaur goizean neurtuta.'
+        78, 'Gaur goizean neurtuta.'
     ),
     (
         86,
@@ -13173,7 +13229,7 @@ INSERT INTO Neurketak (
         77,
         68.2,
         1.57,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         87,
@@ -13183,7 +13239,7 @@ INSERT INTO Neurketak (
         75,
         73.4,
         1.61,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         88,
@@ -13193,7 +13249,7 @@ INSERT INTO Neurketak (
         86,
         90.9,
         1.81,
-        'Gosariaren ondoren.'
+        76, 'Gosariaren ondoren.'
     ),
     (
         90,
@@ -13203,7 +13259,7 @@ INSERT INTO Neurketak (
         80,
         65.8,
         1.60,
-        'Dena ondo.'
+        67, 'Dena ondo.'
     ),
     (
         91,
@@ -13213,7 +13269,7 @@ INSERT INTO Neurketak (
         84,
         90.1,
         1.58,
-        'Kirola egin ondoren.'
+        71, 'Kirola egin ondoren.'
     ),
     (
         92,
@@ -13223,7 +13279,7 @@ INSERT INTO Neurketak (
         92,
         59.8,
         1.79,
-        'Apur bat nekatuta.'
+        81, 'Apur bat nekatuta.'
     ),
     (
         93,
@@ -13233,7 +13289,7 @@ INSERT INTO Neurketak (
         92,
         76.8,
         1.81,
-        'Gosariaren ondoren.'
+        79, 'Gosariaren ondoren.'
     ),
     (
         94,
@@ -13243,7 +13299,7 @@ INSERT INTO Neurketak (
         79,
         86.5,
         1.83,
-        'Kirola egin ondoren.'
+        88, 'Kirola egin ondoren.'
     ),
     (
         95,
@@ -13253,7 +13309,7 @@ INSERT INTO Neurketak (
         78,
         90.5,
         1.77,
-        'Gosariaren ondoren.'
+        79, 'Gosariaren ondoren.'
     ),
     (
         96,
@@ -13263,7 +13319,7 @@ INSERT INTO Neurketak (
         87,
         76.7,
         1.71,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         97,
@@ -13273,7 +13329,7 @@ INSERT INTO Neurketak (
         71,
         86.9,
         1.56,
-        'Gaur goizean neurtuta.'
+        91, 'Gaur goizean neurtuta.'
     ),
     (
         98,
@@ -13283,7 +13339,7 @@ INSERT INTO Neurketak (
         75,
         84.3,
         1.60,
-        'Ondo sentitzen naiz.'
+        70, 'Ondo sentitzen naiz.'
     ),
     (
         99,
@@ -13293,7 +13349,7 @@ INSERT INTO Neurketak (
         87,
         85.8,
         1.71,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         51,
@@ -13303,7 +13359,7 @@ INSERT INTO Neurketak (
         84,
         64.5,
         1.76,
-        'Apur bat nekatuta.'
+        93, 'Apur bat nekatuta.'
     ),
     (
         52,
@@ -13313,7 +13369,7 @@ INSERT INTO Neurketak (
         81,
         93.6,
         1.77,
-        'Kirola egin ondoren.'
+        89, 'Kirola egin ondoren.'
     ),
     (
         53,
@@ -13323,7 +13379,7 @@ INSERT INTO Neurketak (
         85,
         75.2,
         1.75,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         54,
@@ -13333,7 +13389,7 @@ INSERT INTO Neurketak (
         82,
         87.5,
         1.60,
-        'Gosariaren ondoren.'
+        89, 'Gosariaren ondoren.'
     ),
     (
         55,
@@ -13343,7 +13399,7 @@ INSERT INTO Neurketak (
         75,
         80.7,
         1.76,
-        'Kirola egin ondoren.'
+        68, 'Kirola egin ondoren.'
     ),
     (
         56,
@@ -13353,7 +13409,7 @@ INSERT INTO Neurketak (
         80,
         89.0,
         1.61,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         58,
@@ -13363,7 +13419,7 @@ INSERT INTO Neurketak (
         79,
         66.2,
         1.68,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         59,
@@ -13373,7 +13429,7 @@ INSERT INTO Neurketak (
         85,
         63.2,
         1.73,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         60,
@@ -13383,7 +13439,7 @@ INSERT INTO Neurketak (
         84,
         77.7,
         1.81,
-        'Dena ondo.'
+        68, 'Dena ondo.'
     ),
     (
         61,
@@ -13393,7 +13449,7 @@ INSERT INTO Neurketak (
         81,
         72.4,
         1.83,
-        'Ondo sentitzen naiz.'
+        74, 'Ondo sentitzen naiz.'
     ),
     (
         62,
@@ -13403,7 +13459,7 @@ INSERT INTO Neurketak (
         84,
         66.5,
         1.56,
-        'Apur bat nekatuta.'
+        93, 'Apur bat nekatuta.'
     ),
     (
         63,
@@ -13413,7 +13469,7 @@ INSERT INTO Neurketak (
         88,
         81.3,
         1.80,
-        'Gosariaren ondoren.'
+        68, 'Gosariaren ondoren.'
     ),
     (
         64,
@@ -13423,7 +13479,7 @@ INSERT INTO Neurketak (
         79,
         94.6,
         1.56,
-        'Kirola egin ondoren.'
+        89, 'Kirola egin ondoren.'
     ),
     (
         66,
@@ -13433,7 +13489,7 @@ INSERT INTO Neurketak (
         88,
         74.0,
         1.59,
-        'Apur bat nekatuta.'
+        81, 'Apur bat nekatuta.'
     ),
     (
         67,
@@ -13443,7 +13499,7 @@ INSERT INTO Neurketak (
         83,
         71.2,
         1.72,
-        'Gosariaren ondoren.'
+        78, 'Gosariaren ondoren.'
     ),
     (
         68,
@@ -13453,7 +13509,7 @@ INSERT INTO Neurketak (
         79,
         61.1,
         1.85,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         70,
@@ -13463,7 +13519,7 @@ INSERT INTO Neurketak (
         90,
         74.7,
         1.70,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         71,
@@ -13473,7 +13529,7 @@ INSERT INTO Neurketak (
         83,
         88.7,
         1.63,
-        'Gosariaren ondoren.'
+        94, 'Gosariaren ondoren.'
     ),
     (
         72,
@@ -13483,7 +13539,7 @@ INSERT INTO Neurketak (
         81,
         92.7,
         1.69,
-        'Gosariaren ondoren.'
+        77, 'Gosariaren ondoren.'
     ),
     (
         73,
@@ -13493,7 +13549,7 @@ INSERT INTO Neurketak (
         81,
         94.4,
         1.55,
-        'Ondo sentitzen naiz.'
+        70, 'Ondo sentitzen naiz.'
     ),
     (
         74,
@@ -13503,7 +13559,7 @@ INSERT INTO Neurketak (
         79,
         64.7,
         1.67,
-        'Gaur goizean neurtuta.'
+        85, 'Gaur goizean neurtuta.'
     ),
     (
         75,
@@ -13513,7 +13569,7 @@ INSERT INTO Neurketak (
         72,
         59.0,
         1.65,
-        'Baraualdian.'
+        80, 'Baraualdian.'
     ),
     (
         79,
@@ -13523,7 +13579,7 @@ INSERT INTO Neurketak (
         79,
         66.2,
         1.67,
-        'Apur bat nekatuta.'
+        76, 'Apur bat nekatuta.'
     ),
     (
         81,
@@ -13533,7 +13589,7 @@ INSERT INTO Neurketak (
         82,
         85.1,
         1.58,
-        'Baraualdian.'
+        91, 'Baraualdian.'
     ),
     (
         82,
@@ -13543,7 +13599,7 @@ INSERT INTO Neurketak (
         94,
         89.0,
         1.77,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         83,
@@ -13553,7 +13609,7 @@ INSERT INTO Neurketak (
         93,
         66.0,
         1.80,
-        'Apur bat nekatuta.'
+        65, 'Apur bat nekatuta.'
     ),
     (
         84,
@@ -13563,7 +13619,7 @@ INSERT INTO Neurketak (
         77,
         78.2,
         1.67,
-        'Dena ondo.'
+        67, 'Dena ondo.'
     ),
     (
         85,
@@ -13573,7 +13629,7 @@ INSERT INTO Neurketak (
         87,
         81.2,
         1.72,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         86,
@@ -13583,7 +13639,7 @@ INSERT INTO Neurketak (
         74,
         67.0,
         1.57,
-        'Apur bat nekatuta.'
+        85, 'Apur bat nekatuta.'
     ),
     (
         87,
@@ -13593,7 +13649,7 @@ INSERT INTO Neurketak (
         82,
         73.8,
         1.61,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         88,
@@ -13603,7 +13659,7 @@ INSERT INTO Neurketak (
         86,
         89.8,
         1.81,
-        'Dena ondo.'
+        79, 'Dena ondo.'
     ),
     (
         89,
@@ -13613,7 +13669,7 @@ INSERT INTO Neurketak (
         78,
         90.2,
         1.84,
-        'Gosariaren ondoren.'
+        94, 'Gosariaren ondoren.'
     ),
     (
         90,
@@ -13623,7 +13679,7 @@ INSERT INTO Neurketak (
         87,
         66.3,
         1.60,
-        'Gosariaren ondoren.'
+        87, 'Gosariaren ondoren.'
     ),
     (
         92,
@@ -13633,7 +13689,7 @@ INSERT INTO Neurketak (
         87,
         59.1,
         1.79,
-        'Gosariaren ondoren.'
+        88, 'Gosariaren ondoren.'
     ),
     (
         93,
@@ -13643,7 +13699,7 @@ INSERT INTO Neurketak (
         91,
         76.1,
         1.81,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         94,
@@ -13653,7 +13709,7 @@ INSERT INTO Neurketak (
         90,
         86.5,
         1.83,
-        'Ondo sentitzen naiz.'
+        69, 'Ondo sentitzen naiz.'
     ),
     (
         95,
@@ -13663,7 +13719,7 @@ INSERT INTO Neurketak (
         83,
         89.2,
         1.77,
-        'Baraualdian.'
+        65, 'Baraualdian.'
     ),
     (
         96,
@@ -13673,7 +13729,7 @@ INSERT INTO Neurketak (
         79,
         76.8,
         1.71,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         97,
@@ -13683,7 +13739,7 @@ INSERT INTO Neurketak (
         76,
         86.2,
         1.56,
-        'Gosariaren ondoren.'
+        91, 'Gosariaren ondoren.'
     ),
     (
         98,
@@ -13693,7 +13749,7 @@ INSERT INTO Neurketak (
         84,
         83.6,
         1.60,
-        'Baraualdian.'
+        90, 'Baraualdian.'
     ),
     (
         99,
@@ -13703,7 +13759,7 @@ INSERT INTO Neurketak (
         85,
         85.2,
         1.71,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         100,
@@ -13713,7 +13769,7 @@ INSERT INTO Neurketak (
         75,
         82.3,
         1.57,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         52,
@@ -13723,7 +13779,7 @@ INSERT INTO Neurketak (
         81,
         93.0,
         1.77,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         53,
@@ -13733,7 +13789,7 @@ INSERT INTO Neurketak (
         80,
         74.7,
         1.75,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         54,
@@ -13743,7 +13799,7 @@ INSERT INTO Neurketak (
         76,
         86.2,
         1.60,
-        'Dena ondo.'
+        81, 'Dena ondo.'
     ),
     (
         56,
@@ -13753,7 +13809,7 @@ INSERT INTO Neurketak (
         83,
         90.0,
         1.61,
-        'Kirola egin ondoren.'
+        93, 'Kirola egin ondoren.'
     ),
     (
         57,
@@ -13763,7 +13819,7 @@ INSERT INTO Neurketak (
         91,
         82.8,
         1.69,
-        'Gaur goizean neurtuta.'
+        94, 'Gaur goizean neurtuta.'
     ),
     (
         59,
@@ -13773,7 +13829,7 @@ INSERT INTO Neurketak (
         86,
         63.2,
         1.73,
-        'Gosariaren ondoren.'
+        66, 'Gosariaren ondoren.'
     ),
     (
         60,
@@ -13783,7 +13839,7 @@ INSERT INTO Neurketak (
         86,
         78.9,
         1.81,
-        'Gaur goizean neurtuta.'
+        74, 'Gaur goizean neurtuta.'
     ),
     (
         61,
@@ -13793,7 +13849,7 @@ INSERT INTO Neurketak (
         78,
         73.1,
         1.83,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         62,
@@ -13803,7 +13859,7 @@ INSERT INTO Neurketak (
         75,
         65.5,
         1.56,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         63,
@@ -13813,7 +13869,7 @@ INSERT INTO Neurketak (
         85,
         81.6,
         1.80,
-        'Ondo sentitzen naiz.'
+        73, 'Ondo sentitzen naiz.'
     ),
     (
         65,
@@ -13823,7 +13879,7 @@ INSERT INTO Neurketak (
         84,
         91.1,
         1.55,
-        'Ondo sentitzen naiz.'
+        91, 'Ondo sentitzen naiz.'
     ),
     (
         66,
@@ -13833,7 +13889,7 @@ INSERT INTO Neurketak (
         76,
         74.0,
         1.59,
-        'Gosariaren ondoren.'
+        88, 'Gosariaren ondoren.'
     ),
     (
         68,
@@ -13843,7 +13899,7 @@ INSERT INTO Neurketak (
         85,
         61.8,
         1.85,
-        'Gosariaren ondoren.'
+        70, 'Gosariaren ondoren.'
     ),
     (
         69,
@@ -13853,7 +13909,7 @@ INSERT INTO Neurketak (
         87,
         95.5,
         1.66,
-        'Gaur goizean neurtuta.'
+        87, 'Gaur goizean neurtuta.'
     ),
     (
         70,
@@ -13863,7 +13919,7 @@ INSERT INTO Neurketak (
         88,
         74.1,
         1.70,
-        'Dena ondo.'
+        74, 'Dena ondo.'
     ),
     (
         71,
@@ -13873,7 +13929,7 @@ INSERT INTO Neurketak (
         76,
         89.5,
         1.63,
-        'Ondo sentitzen naiz.'
+        75, 'Ondo sentitzen naiz.'
     ),
     (
         72,
@@ -13883,7 +13939,7 @@ INSERT INTO Neurketak (
         76,
         91.3,
         1.69,
-        'Ondo sentitzen naiz.'
+        91, 'Ondo sentitzen naiz.'
     ),
     (
         73,
@@ -13893,7 +13949,7 @@ INSERT INTO Neurketak (
         79,
         94.3,
         1.55,
-        'Apur bat nekatuta.'
+        94, 'Apur bat nekatuta.'
     ),
     (
         74,
@@ -13903,7 +13959,7 @@ INSERT INTO Neurketak (
         85,
         64.3,
         1.67,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         75,
@@ -13913,7 +13969,7 @@ INSERT INTO Neurketak (
         74,
         60.6,
         1.65,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         76,
@@ -13923,7 +13979,7 @@ INSERT INTO Neurketak (
         93,
         65.6,
         1.69,
-        'Baraualdian.'
+        94, 'Baraualdian.'
     ),
     (
         77,
@@ -13933,7 +13989,7 @@ INSERT INTO Neurketak (
         93,
         66.3,
         1.67,
-        'Kirola egin ondoren.'
+        81, 'Kirola egin ondoren.'
     ),
     (
         78,
@@ -13943,7 +13999,7 @@ INSERT INTO Neurketak (
         78,
         62.5,
         1.61,
-        'Baraualdian.'
+        65, 'Baraualdian.'
     ),
     (
         79,
@@ -13953,7 +14009,7 @@ INSERT INTO Neurketak (
         81,
         66.8,
         1.67,
-        'Gosariaren ondoren.'
+        83, 'Gosariaren ondoren.'
     ),
     (
         82,
@@ -13963,7 +14019,7 @@ INSERT INTO Neurketak (
         86,
         89.0,
         1.77,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         83,
@@ -13973,7 +14029,7 @@ INSERT INTO Neurketak (
         83,
         65.2,
         1.80,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         84,
@@ -13983,7 +14039,7 @@ INSERT INTO Neurketak (
         79,
         79.7,
         1.67,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         85,
@@ -13993,7 +14049,7 @@ INSERT INTO Neurketak (
         90,
         80.9,
         1.72,
-        'Apur bat nekatuta.'
+        86, 'Apur bat nekatuta.'
     ),
     (
         86,
@@ -14003,7 +14059,7 @@ INSERT INTO Neurketak (
         74,
         68.8,
         1.57,
-        'Ondo sentitzen naiz.'
+        71, 'Ondo sentitzen naiz.'
     ),
     (
         87,
@@ -14013,7 +14069,7 @@ INSERT INTO Neurketak (
         88,
         73.4,
         1.61,
-        'Gosariaren ondoren.'
+        77, 'Gosariaren ondoren.'
     ),
     (
         88,
@@ -14023,7 +14079,7 @@ INSERT INTO Neurketak (
         72,
         91.0,
         1.81,
-        'Dena ondo.'
+        85, 'Dena ondo.'
     ),
     (
         91,
@@ -14033,7 +14089,7 @@ INSERT INTO Neurketak (
         81,
         89.1,
         1.58,
-        'Baraualdian.'
+        74, 'Baraualdian.'
     ),
     (
         92,
@@ -14043,7 +14099,7 @@ INSERT INTO Neurketak (
         92,
         59.0,
         1.79,
-        'Baraualdian.'
+        69, 'Baraualdian.'
     ),
     (
         93,
@@ -14053,7 +14109,7 @@ INSERT INTO Neurketak (
         89,
         76.7,
         1.81,
-        'Baraualdian.'
+        90, 'Baraualdian.'
     ),
     (
         95,
@@ -14063,7 +14119,7 @@ INSERT INTO Neurketak (
         74,
         90.3,
         1.77,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         96,
@@ -14073,7 +14129,7 @@ INSERT INTO Neurketak (
         74,
         77.8,
         1.71,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         98,
@@ -14083,7 +14139,7 @@ INSERT INTO Neurketak (
         85,
         83.3,
         1.60,
-        'Ondo sentitzen naiz.'
+        79, 'Ondo sentitzen naiz.'
     ),
     (
         99,
@@ -14093,7 +14149,7 @@ INSERT INTO Neurketak (
         75,
         85.0,
         1.71,
-        'Gosariaren ondoren.'
+        71, 'Gosariaren ondoren.'
     ),
     (
         51,
@@ -14103,7 +14159,7 @@ INSERT INTO Neurketak (
         86,
         64.0,
         1.76,
-        'Gaur goizean neurtuta.'
+        80, 'Gaur goizean neurtuta.'
     ),
     (
         53,
@@ -14113,7 +14169,7 @@ INSERT INTO Neurketak (
         80,
         74.1,
         1.75,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         54,
@@ -14123,7 +14179,7 @@ INSERT INTO Neurketak (
         88,
         87.9,
         1.60,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         55,
@@ -14133,7 +14189,7 @@ INSERT INTO Neurketak (
         73,
         80.7,
         1.76,
-        'Ondo sentitzen naiz.'
+        85, 'Ondo sentitzen naiz.'
     ),
     (
         57,
@@ -14143,7 +14199,7 @@ INSERT INTO Neurketak (
         79,
         83.7,
         1.69,
-        'Ondo sentitzen naiz.'
+        94, 'Ondo sentitzen naiz.'
     ),
     (
         58,
@@ -14153,7 +14209,7 @@ INSERT INTO Neurketak (
         84,
         66.9,
         1.68,
-        'Gosariaren ondoren.'
+        87, 'Gosariaren ondoren.'
     ),
     (
         59,
@@ -14163,7 +14219,7 @@ INSERT INTO Neurketak (
         95,
         62.3,
         1.73,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         60,
@@ -14173,7 +14229,7 @@ INSERT INTO Neurketak (
         82,
         79.0,
         1.81,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         61,
@@ -14183,7 +14239,7 @@ INSERT INTO Neurketak (
         93,
         73.6,
         1.83,
-        'Ondo sentitzen naiz.'
+        75, 'Ondo sentitzen naiz.'
     ),
     (
         62,
@@ -14193,7 +14249,7 @@ INSERT INTO Neurketak (
         75,
         65.1,
         1.56,
-        'Ondo sentitzen naiz.'
+        66, 'Ondo sentitzen naiz.'
     ),
     (
         63,
@@ -14203,7 +14259,7 @@ INSERT INTO Neurketak (
         86,
         81.3,
         1.80,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         64,
@@ -14213,7 +14269,7 @@ INSERT INTO Neurketak (
         83,
         95.4,
         1.56,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         65,
@@ -14223,7 +14279,7 @@ INSERT INTO Neurketak (
         86,
         91.8,
         1.55,
-        'Gaur goizean neurtuta.'
+        86, 'Gaur goizean neurtuta.'
     ),
     (
         67,
@@ -14233,7 +14289,7 @@ INSERT INTO Neurketak (
         77,
         71.3,
         1.72,
-        'Baraualdian.'
+        89, 'Baraualdian.'
     ),
     (
         68,
@@ -14243,7 +14299,7 @@ INSERT INTO Neurketak (
         86,
         60.9,
         1.85,
-        'Baraualdian.'
+        79, 'Baraualdian.'
     ),
     (
         69,
@@ -14253,7 +14309,7 @@ INSERT INTO Neurketak (
         91,
         95.7,
         1.66,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         70,
@@ -14263,7 +14319,7 @@ INSERT INTO Neurketak (
         80,
         75.9,
         1.70,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         71,
@@ -14273,7 +14329,7 @@ INSERT INTO Neurketak (
         79,
         88.0,
         1.63,
-        'Baraualdian.'
+        84, 'Baraualdian.'
     ),
     (
         73,
@@ -14283,7 +14339,7 @@ INSERT INTO Neurketak (
         79,
         95.7,
         1.55,
-        'Gosariaren ondoren.'
+        67, 'Gosariaren ondoren.'
     ),
     (
         74,
@@ -14293,7 +14349,7 @@ INSERT INTO Neurketak (
         78,
         63.0,
         1.67,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         75,
@@ -14303,7 +14359,7 @@ INSERT INTO Neurketak (
         83,
         59.6,
         1.65,
-        'Baraualdian.'
+        84, 'Baraualdian.'
     ),
     (
         76,
@@ -14313,7 +14369,7 @@ INSERT INTO Neurketak (
         88,
         66.9,
         1.69,
-        'Baraualdian.'
+        86, 'Baraualdian.'
     ),
     (
         77,
@@ -14323,7 +14379,7 @@ INSERT INTO Neurketak (
         79,
         66.9,
         1.67,
-        'Apur bat nekatuta.'
+        81, 'Apur bat nekatuta.'
     ),
     (
         78,
@@ -14333,7 +14389,7 @@ INSERT INTO Neurketak (
         73,
         64.0,
         1.61,
-        'Gosariaren ondoren.'
+        88, 'Gosariaren ondoren.'
     ),
     (
         81,
@@ -14343,7 +14399,7 @@ INSERT INTO Neurketak (
         88,
         86.9,
         1.58,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         82,
@@ -14353,7 +14409,7 @@ INSERT INTO Neurketak (
         93,
         88.0,
         1.77,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         83,
@@ -14363,7 +14419,7 @@ INSERT INTO Neurketak (
         80,
         64.7,
         1.80,
-        'Ondo sentitzen naiz.'
+        66, 'Ondo sentitzen naiz.'
     ),
     (
         85,
@@ -14373,7 +14429,7 @@ INSERT INTO Neurketak (
         82,
         81.4,
         1.72,
-        'Kirola egin ondoren.'
+        85, 'Kirola egin ondoren.'
     ),
     (
         86,
@@ -14383,7 +14439,7 @@ INSERT INTO Neurketak (
         81,
         68.8,
         1.57,
-        'Kirola egin ondoren.'
+        69, 'Kirola egin ondoren.'
     ),
     (
         87,
@@ -14393,7 +14449,7 @@ INSERT INTO Neurketak (
         74,
         73.2,
         1.61,
-        'Ondo sentitzen naiz.'
+        65, 'Ondo sentitzen naiz.'
     ),
     (
         88,
@@ -14403,7 +14459,7 @@ INSERT INTO Neurketak (
         76,
         89.8,
         1.81,
-        'Gaur goizean neurtuta.'
+        72, 'Gaur goizean neurtuta.'
     ),
     (
         92,
@@ -14413,7 +14469,7 @@ INSERT INTO Neurketak (
         82,
         59.4,
         1.79,
-        'Gosariaren ondoren.'
+        70, 'Gosariaren ondoren.'
     ),
     (
         93,
@@ -14423,7 +14479,7 @@ INSERT INTO Neurketak (
         84,
         76.2,
         1.81,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         95,
@@ -14433,7 +14489,7 @@ INSERT INTO Neurketak (
         86,
         89.6,
         1.77,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         96,
@@ -14443,7 +14499,7 @@ INSERT INTO Neurketak (
         80,
         76.0,
         1.71,
-        'Dena ondo.'
+        83, 'Dena ondo.'
     ),
     (
         97,
@@ -14453,7 +14509,7 @@ INSERT INTO Neurketak (
         78,
         86.2,
         1.56,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         98,
@@ -14463,7 +14519,7 @@ INSERT INTO Neurketak (
         83,
         83.2,
         1.60,
-        'Gaur goizean neurtuta.'
+        86, 'Gaur goizean neurtuta.'
     ),
     (
         100,
@@ -14473,7 +14529,7 @@ INSERT INTO Neurketak (
         72,
         83.0,
         1.57,
-        'Dena ondo.'
+        85, 'Dena ondo.'
     ),
     (
         54,
@@ -14483,7 +14539,7 @@ INSERT INTO Neurketak (
         78,
         86.4,
         1.60,
-        'Baraualdian.'
+        88, 'Baraualdian.'
     ),
     (
         55,
@@ -14493,7 +14549,7 @@ INSERT INTO Neurketak (
         75,
         80.5,
         1.76,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         57,
@@ -14503,7 +14559,7 @@ INSERT INTO Neurketak (
         94,
         83.9,
         1.69,
-        'Apur bat nekatuta.'
+        71, 'Apur bat nekatuta.'
     ),
     (
         58,
@@ -14513,7 +14569,7 @@ INSERT INTO Neurketak (
         84,
         67.9,
         1.68,
-        'Baraualdian.'
+        73, 'Baraualdian.'
     ),
     (
         59,
@@ -14523,7 +14579,7 @@ INSERT INTO Neurketak (
         86,
         62.3,
         1.73,
-        'Kirola egin ondoren.'
+        75, 'Kirola egin ondoren.'
     ),
     (
         60,
@@ -14533,7 +14589,7 @@ INSERT INTO Neurketak (
         86,
         78.6,
         1.81,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         61,
@@ -14543,7 +14599,7 @@ INSERT INTO Neurketak (
         80,
         73.2,
         1.83,
-        'Gosariaren ondoren.'
+        87, 'Gosariaren ondoren.'
     ),
     (
         62,
@@ -14553,7 +14609,7 @@ INSERT INTO Neurketak (
         72,
         66.1,
         1.56,
-        'Apur bat nekatuta.'
+        76, 'Apur bat nekatuta.'
     ),
     (
         63,
@@ -14563,7 +14619,7 @@ INSERT INTO Neurketak (
         90,
         81.7,
         1.80,
-        'Dena ondo.'
+        68, 'Dena ondo.'
     ),
     (
         64,
@@ -14573,7 +14629,7 @@ INSERT INTO Neurketak (
         81,
         94.2,
         1.56,
-        'Apur bat nekatuta.'
+        89, 'Apur bat nekatuta.'
     ),
     (
         65,
@@ -14583,7 +14639,7 @@ INSERT INTO Neurketak (
         91,
         91.2,
         1.55,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         66,
@@ -14593,7 +14649,7 @@ INSERT INTO Neurketak (
         91,
         74.0,
         1.59,
-        'Baraualdian.'
+        74, 'Baraualdian.'
     ),
     (
         67,
@@ -14603,7 +14659,7 @@ INSERT INTO Neurketak (
         85,
         73.0,
         1.72,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         68,
@@ -14613,7 +14669,7 @@ INSERT INTO Neurketak (
         82,
         60.1,
         1.85,
-        'Ondo sentitzen naiz.'
+        90, 'Ondo sentitzen naiz.'
     ),
     (
         69,
@@ -14623,7 +14679,7 @@ INSERT INTO Neurketak (
         87,
         95.7,
         1.66,
-        'Ondo sentitzen naiz.'
+        85, 'Ondo sentitzen naiz.'
     ),
     (
         70,
@@ -14633,7 +14689,7 @@ INSERT INTO Neurketak (
         85,
         74.7,
         1.70,
-        'Gosariaren ondoren.'
+        85, 'Gosariaren ondoren.'
     ),
     (
         72,
@@ -14643,7 +14699,7 @@ INSERT INTO Neurketak (
         83,
         92.0,
         1.69,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         73,
@@ -14653,7 +14709,7 @@ INSERT INTO Neurketak (
         78,
         94.3,
         1.55,
-        'Apur bat nekatuta.'
+        94, 'Apur bat nekatuta.'
     ),
     (
         74,
@@ -14663,7 +14719,7 @@ INSERT INTO Neurketak (
         82,
         63.7,
         1.67,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         75,
@@ -14673,7 +14729,7 @@ INSERT INTO Neurketak (
         74,
         59.5,
         1.65,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         78,
@@ -14683,7 +14739,7 @@ INSERT INTO Neurketak (
         84,
         63.9,
         1.61,
-        'Kirola egin ondoren.'
+        94, 'Kirola egin ondoren.'
     ),
     (
         79,
@@ -14693,7 +14749,7 @@ INSERT INTO Neurketak (
         77,
         66.4,
         1.67,
-        'Apur bat nekatuta.'
+        85, 'Apur bat nekatuta.'
     ),
     (
         80,
@@ -14703,7 +14759,7 @@ INSERT INTO Neurketak (
         92,
         62.8,
         1.78,
-        'Baraualdian.'
+        90, 'Baraualdian.'
     ),
     (
         82,
@@ -14713,7 +14769,7 @@ INSERT INTO Neurketak (
         86,
         89.8,
         1.77,
-        'Ondo sentitzen naiz.'
+        71, 'Ondo sentitzen naiz.'
     ),
     (
         83,
@@ -14723,7 +14779,7 @@ INSERT INTO Neurketak (
         92,
         64.1,
         1.80,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         84,
@@ -14733,7 +14789,7 @@ INSERT INTO Neurketak (
         77,
         78.3,
         1.67,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         85,
@@ -14743,7 +14799,7 @@ INSERT INTO Neurketak (
         86,
         80.9,
         1.72,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         86,
@@ -14753,7 +14809,7 @@ INSERT INTO Neurketak (
         81,
         68.4,
         1.57,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         87,
@@ -14763,7 +14819,7 @@ INSERT INTO Neurketak (
         88,
         73.0,
         1.61,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         88,
@@ -14773,7 +14829,7 @@ INSERT INTO Neurketak (
         83,
         90.6,
         1.81,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         89,
@@ -14783,7 +14839,7 @@ INSERT INTO Neurketak (
         91,
         91.6,
         1.84,
-        'Kirola egin ondoren.'
+        66, 'Kirola egin ondoren.'
     ),
     (
         90,
@@ -14793,7 +14849,7 @@ INSERT INTO Neurketak (
         79,
         65.7,
         1.60,
-        'Gosariaren ondoren.'
+        89, 'Gosariaren ondoren.'
     ),
     (
         91,
@@ -14803,7 +14859,7 @@ INSERT INTO Neurketak (
         83,
         90.9,
         1.58,
-        'Gosariaren ondoren.'
+        74, 'Gosariaren ondoren.'
     ),
     (
         92,
@@ -14813,7 +14869,7 @@ INSERT INTO Neurketak (
         80,
         61.0,
         1.79,
-        'Gosariaren ondoren.'
+        86, 'Gosariaren ondoren.'
     ),
     (
         93,
@@ -14823,7 +14879,7 @@ INSERT INTO Neurketak (
         92,
         76.9,
         1.81,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         94,
@@ -14833,7 +14889,7 @@ INSERT INTO Neurketak (
         85,
         87.1,
         1.83,
-        'Kirola egin ondoren.'
+        67, 'Kirola egin ondoren.'
     ),
     (
         95,
@@ -14843,7 +14899,7 @@ INSERT INTO Neurketak (
         82,
         89.0,
         1.77,
-        'Baraualdian.'
+        76, 'Baraualdian.'
     ),
     (
         96,
@@ -14853,7 +14909,7 @@ INSERT INTO Neurketak (
         81,
         76.1,
         1.71,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         97,
@@ -14863,7 +14919,7 @@ INSERT INTO Neurketak (
         75,
         88.0,
         1.56,
-        'Apur bat nekatuta.'
+        91, 'Apur bat nekatuta.'
     ),
     (
         98,
@@ -14873,7 +14929,7 @@ INSERT INTO Neurketak (
         77,
         84.4,
         1.60,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         100,
@@ -14883,7 +14939,7 @@ INSERT INTO Neurketak (
         83,
         82.8,
         1.57,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         51,
@@ -14893,7 +14949,7 @@ INSERT INTO Neurketak (
         93,
         63.6,
         1.76,
-        'Gosariaren ondoren.'
+        83, 'Gosariaren ondoren.'
     ),
     (
         52,
@@ -14903,7 +14959,7 @@ INSERT INTO Neurketak (
         81,
         95.0,
         1.77,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         53,
@@ -14913,7 +14969,7 @@ INSERT INTO Neurketak (
         92,
         74.0,
         1.75,
-        'Kirola egin ondoren.'
+        93, 'Kirola egin ondoren.'
     ),
     (
         54,
@@ -14923,7 +14979,7 @@ INSERT INTO Neurketak (
         80,
         86.9,
         1.60,
-        'Gaur goizean neurtuta.'
+        86, 'Gaur goizean neurtuta.'
     ),
     (
         55,
@@ -14933,7 +14989,7 @@ INSERT INTO Neurketak (
         79,
         81.0,
         1.76,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         56,
@@ -14943,7 +14999,7 @@ INSERT INTO Neurketak (
         83,
         89.1,
         1.61,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         57,
@@ -14953,7 +15009,7 @@ INSERT INTO Neurketak (
         82,
         82.1,
         1.69,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         58,
@@ -14963,7 +15019,7 @@ INSERT INTO Neurketak (
         81,
         66.5,
         1.68,
-        'Ondo sentitzen naiz.'
+        74, 'Ondo sentitzen naiz.'
     ),
     (
         60,
@@ -14973,7 +15029,7 @@ INSERT INTO Neurketak (
         83,
         77.2,
         1.81,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         61,
@@ -14983,7 +15039,7 @@ INSERT INTO Neurketak (
         88,
         72.5,
         1.83,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         63,
@@ -14993,7 +15049,7 @@ INSERT INTO Neurketak (
         90,
         81.2,
         1.80,
-        'Dena ondo.'
+        94, 'Dena ondo.'
     ),
     (
         64,
@@ -15003,7 +15059,7 @@ INSERT INTO Neurketak (
         85,
         94.3,
         1.56,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         66,
@@ -15013,7 +15069,7 @@ INSERT INTO Neurketak (
         78,
         74.1,
         1.59,
-        'Gosariaren ondoren.'
+        72, 'Gosariaren ondoren.'
     ),
     (
         67,
@@ -15023,7 +15079,7 @@ INSERT INTO Neurketak (
         88,
         72.7,
         1.72,
-        'Gaur goizean neurtuta.'
+        78, 'Gaur goizean neurtuta.'
     ),
     (
         68,
@@ -15033,7 +15089,7 @@ INSERT INTO Neurketak (
         72,
         60.0,
         1.85,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         69,
@@ -15043,7 +15099,7 @@ INSERT INTO Neurketak (
         76,
         95.0,
         1.66,
-        'Dena ondo.'
+        86, 'Dena ondo.'
     ),
     (
         70,
@@ -15053,7 +15109,7 @@ INSERT INTO Neurketak (
         76,
         74.1,
         1.70,
-        'Gaur goizean neurtuta.'
+        80, 'Gaur goizean neurtuta.'
     ),
     (
         74,
@@ -15063,7 +15119,7 @@ INSERT INTO Neurketak (
         86,
         64.8,
         1.67,
-        'Apur bat nekatuta.'
+        94, 'Apur bat nekatuta.'
     ),
     (
         75,
@@ -15073,7 +15129,7 @@ INSERT INTO Neurketak (
         77,
         60.6,
         1.65,
-        'Kirola egin ondoren.'
+        94, 'Kirola egin ondoren.'
     ),
     (
         78,
@@ -15083,7 +15139,7 @@ INSERT INTO Neurketak (
         84,
         63.8,
         1.61,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         79,
@@ -15093,7 +15149,7 @@ INSERT INTO Neurketak (
         74,
         66.4,
         1.67,
-        'Baraualdian.'
+        80, 'Baraualdian.'
     ),
     (
         80,
@@ -15103,7 +15159,7 @@ INSERT INTO Neurketak (
         90,
         62.5,
         1.78,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         81,
@@ -15113,7 +15169,7 @@ INSERT INTO Neurketak (
         80,
         85.6,
         1.58,
-        'Gosariaren ondoren.'
+        80, 'Gosariaren ondoren.'
     ),
     (
         82,
@@ -15123,7 +15179,7 @@ INSERT INTO Neurketak (
         80,
         89.2,
         1.77,
-        'Ondo sentitzen naiz.'
+        68, 'Ondo sentitzen naiz.'
     ),
     (
         83,
@@ -15133,7 +15189,7 @@ INSERT INTO Neurketak (
         93,
         64.2,
         1.80,
-        'Dena ondo.'
+        83, 'Dena ondo.'
     ),
     (
         85,
@@ -15143,7 +15199,7 @@ INSERT INTO Neurketak (
         80,
         80.5,
         1.72,
-        'Kirola egin ondoren.'
+        87, 'Kirola egin ondoren.'
     ),
     (
         86,
@@ -15153,7 +15209,7 @@ INSERT INTO Neurketak (
         76,
         67.1,
         1.57,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         88,
@@ -15163,7 +15219,7 @@ INSERT INTO Neurketak (
         73,
         89.6,
         1.81,
-        'Kirola egin ondoren.'
+        66, 'Kirola egin ondoren.'
     ),
     (
         89,
@@ -15173,7 +15229,7 @@ INSERT INTO Neurketak (
         89,
         91.7,
         1.84,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         92,
@@ -15183,7 +15239,7 @@ INSERT INTO Neurketak (
         87,
         60.2,
         1.79,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         93,
@@ -15193,7 +15249,7 @@ INSERT INTO Neurketak (
         91,
         76.8,
         1.81,
-        'Baraualdian.'
+        80, 'Baraualdian.'
     ),
     (
         94,
@@ -15203,7 +15259,7 @@ INSERT INTO Neurketak (
         79,
         87.5,
         1.83,
-        'Kirola egin ondoren.'
+        78, 'Kirola egin ondoren.'
     ),
     (
         95,
@@ -15213,7 +15269,7 @@ INSERT INTO Neurketak (
         76,
         89.9,
         1.77,
-        'Gosariaren ondoren.'
+        66, 'Gosariaren ondoren.'
     ),
     (
         96,
@@ -15223,7 +15279,7 @@ INSERT INTO Neurketak (
         80,
         77.3,
         1.71,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         97,
@@ -15233,7 +15289,7 @@ INSERT INTO Neurketak (
         82,
         87.5,
         1.56,
-        'Gaur goizean neurtuta.'
+        91, 'Gaur goizean neurtuta.'
     ),
     (
         98,
@@ -15243,7 +15299,7 @@ INSERT INTO Neurketak (
         90,
         85.0,
         1.60,
-        'Gosariaren ondoren.'
+        91, 'Gosariaren ondoren.'
     ),
     (
         99,
@@ -15253,7 +15309,7 @@ INSERT INTO Neurketak (
         75,
         85.7,
         1.71,
-        'Gosariaren ondoren.'
+        65, 'Gosariaren ondoren.'
     ),
     (
         100,
@@ -15263,7 +15319,7 @@ INSERT INTO Neurketak (
         83,
         81.4,
         1.57,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         52,
@@ -15273,7 +15329,7 @@ INSERT INTO Neurketak (
         91,
         94.7,
         1.77,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         54,
@@ -15283,7 +15339,7 @@ INSERT INTO Neurketak (
         85,
         86.5,
         1.60,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         55,
@@ -15293,7 +15349,7 @@ INSERT INTO Neurketak (
         73,
         81.1,
         1.76,
-        'Kirola egin ondoren.'
+        87, 'Kirola egin ondoren.'
     ),
     (
         56,
@@ -15303,7 +15359,7 @@ INSERT INTO Neurketak (
         90,
         90.2,
         1.61,
-        'Gosariaren ondoren.'
+        83, 'Gosariaren ondoren.'
     ),
     (
         57,
@@ -15313,7 +15369,7 @@ INSERT INTO Neurketak (
         94,
         82.9,
         1.69,
-        'Gaur goizean neurtuta.'
+        78, 'Gaur goizean neurtuta.'
     ),
     (
         58,
@@ -15323,7 +15379,7 @@ INSERT INTO Neurketak (
         81,
         67.8,
         1.68,
-        'Ondo sentitzen naiz.'
+        89, 'Ondo sentitzen naiz.'
     ),
     (
         59,
@@ -15333,7 +15389,7 @@ INSERT INTO Neurketak (
         93,
         62.1,
         1.73,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         60,
@@ -15343,7 +15399,7 @@ INSERT INTO Neurketak (
         90,
         77.1,
         1.81,
-        'Gaur goizean neurtuta.'
+        76, 'Gaur goizean neurtuta.'
     ),
     (
         61,
@@ -15353,7 +15409,7 @@ INSERT INTO Neurketak (
         86,
         73.4,
         1.83,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         62,
@@ -15363,7 +15419,7 @@ INSERT INTO Neurketak (
         71,
         66.2,
         1.56,
-        'Apur bat nekatuta.'
+        69, 'Apur bat nekatuta.'
     ),
     (
         63,
@@ -15373,7 +15429,7 @@ INSERT INTO Neurketak (
         90,
         81.2,
         1.80,
-        'Dena ondo.'
+        81, 'Dena ondo.'
     ),
     (
         64,
@@ -15383,7 +15439,7 @@ INSERT INTO Neurketak (
         81,
         95.8,
         1.56,
-        'Apur bat nekatuta.'
+        86, 'Apur bat nekatuta.'
     ),
     (
         65,
@@ -15393,7 +15449,7 @@ INSERT INTO Neurketak (
         85,
         90.9,
         1.55,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         66,
@@ -15403,7 +15459,7 @@ INSERT INTO Neurketak (
         78,
         74.6,
         1.59,
-        'Ondo sentitzen naiz.'
+        75, 'Ondo sentitzen naiz.'
     ),
     (
         67,
@@ -15413,7 +15469,7 @@ INSERT INTO Neurketak (
         87,
         72.4,
         1.72,
-        'Kirola egin ondoren.'
+        76, 'Kirola egin ondoren.'
     ),
     (
         68,
@@ -15423,7 +15479,7 @@ INSERT INTO Neurketak (
         83,
         61.7,
         1.85,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         69,
@@ -15433,7 +15489,7 @@ INSERT INTO Neurketak (
         80,
         94.9,
         1.66,
-        'Baraualdian.'
+        88, 'Baraualdian.'
     ),
     (
         71,
@@ -15443,7 +15499,7 @@ INSERT INTO Neurketak (
         71,
         89.6,
         1.63,
-        'Kirola egin ondoren.'
+        90, 'Kirola egin ondoren.'
     ),
     (
         72,
@@ -15453,7 +15509,7 @@ INSERT INTO Neurketak (
         86,
         92.1,
         1.69,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         75,
@@ -15463,7 +15519,7 @@ INSERT INTO Neurketak (
         85,
         59.4,
         1.65,
-        'Gosariaren ondoren.'
+        76, 'Gosariaren ondoren.'
     ),
     (
         76,
@@ -15473,7 +15529,7 @@ INSERT INTO Neurketak (
         93,
         66.8,
         1.69,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         78,
@@ -15483,7 +15539,7 @@ INSERT INTO Neurketak (
         85,
         62.8,
         1.61,
-        'Gosariaren ondoren.'
+        81, 'Gosariaren ondoren.'
     ),
     (
         79,
@@ -15493,7 +15549,7 @@ INSERT INTO Neurketak (
         80,
         66.5,
         1.67,
-        'Ondo sentitzen naiz.'
+        88, 'Ondo sentitzen naiz.'
     ),
     (
         80,
@@ -15503,7 +15559,7 @@ INSERT INTO Neurketak (
         81,
         62.3,
         1.78,
-        'Ondo sentitzen naiz.'
+        70, 'Ondo sentitzen naiz.'
     ),
     (
         81,
@@ -15513,7 +15569,7 @@ INSERT INTO Neurketak (
         83,
         86.1,
         1.58,
-        'Gosariaren ondoren.'
+        74, 'Gosariaren ondoren.'
     ),
     (
         82,
@@ -15523,7 +15579,7 @@ INSERT INTO Neurketak (
         89,
         88.8,
         1.77,
-        'Gaur goizean neurtuta.'
+        87, 'Gaur goizean neurtuta.'
     ),
     (
         83,
@@ -15533,7 +15589,7 @@ INSERT INTO Neurketak (
         91,
         64.8,
         1.80,
-        'Kirola egin ondoren.'
+        75, 'Kirola egin ondoren.'
     ),
     (
         84,
@@ -15543,7 +15599,7 @@ INSERT INTO Neurketak (
         84,
         78.7,
         1.67,
-        'Dena ondo.'
+        79, 'Dena ondo.'
     ),
     (
         85,
@@ -15553,7 +15609,7 @@ INSERT INTO Neurketak (
         86,
         81.2,
         1.72,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         86,
@@ -15563,7 +15619,7 @@ INSERT INTO Neurketak (
         74,
         69.0,
         1.57,
-        'Gosariaren ondoren.'
+        77, 'Gosariaren ondoren.'
     ),
     (
         88,
@@ -15573,7 +15629,7 @@ INSERT INTO Neurketak (
         85,
         89.2,
         1.81,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         90,
@@ -15583,7 +15639,7 @@ INSERT INTO Neurketak (
         91,
         65.1,
         1.60,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         91,
@@ -15593,7 +15649,7 @@ INSERT INTO Neurketak (
         91,
         90.8,
         1.58,
-        'Dena ondo.'
+        79, 'Dena ondo.'
     ),
     (
         92,
@@ -15603,7 +15659,7 @@ INSERT INTO Neurketak (
         85,
         59.0,
         1.79,
-        'Gosariaren ondoren.'
+        91, 'Gosariaren ondoren.'
     ),
     (
         93,
@@ -15613,7 +15669,7 @@ INSERT INTO Neurketak (
         94,
         75.0,
         1.81,
-        'Apur bat nekatuta.'
+        67, 'Apur bat nekatuta.'
     ),
     (
         94,
@@ -15623,7 +15679,7 @@ INSERT INTO Neurketak (
         85,
         87.2,
         1.83,
-        'Apur bat nekatuta.'
+        73, 'Apur bat nekatuta.'
     ),
     (
         95,
@@ -15633,7 +15689,7 @@ INSERT INTO Neurketak (
         74,
         89.9,
         1.77,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         96,
@@ -15643,7 +15699,7 @@ INSERT INTO Neurketak (
         81,
         77.5,
         1.71,
-        'Dena ondo.'
+        88, 'Dena ondo.'
     ),
     (
         97,
@@ -15653,7 +15709,7 @@ INSERT INTO Neurketak (
         75,
         86.3,
         1.56,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         98,
@@ -15663,7 +15719,7 @@ INSERT INTO Neurketak (
         83,
         83.0,
         1.60,
-        'Gaur goizean neurtuta.'
+        71, 'Gaur goizean neurtuta.'
     ),
     (
         99,
@@ -15673,7 +15729,7 @@ INSERT INTO Neurketak (
         76,
         85.6,
         1.71,
-        'Baraualdian.'
+        73, 'Baraualdian.'
     ),
     (
         100,
@@ -15683,7 +15739,7 @@ INSERT INTO Neurketak (
         83,
         81.1,
         1.57,
-        'Ondo sentitzen naiz.'
+        90, 'Ondo sentitzen naiz.'
     ),
     (
         52,
@@ -15693,7 +15749,7 @@ INSERT INTO Neurketak (
         88,
         94.0,
         1.77,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         53,
@@ -15703,7 +15759,7 @@ INSERT INTO Neurketak (
         92,
         75.2,
         1.75,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         54,
@@ -15713,7 +15769,7 @@ INSERT INTO Neurketak (
         84,
         86.1,
         1.60,
-        'Gaur goizean neurtuta.'
+        88, 'Gaur goizean neurtuta.'
     ),
     (
         55,
@@ -15723,7 +15779,7 @@ INSERT INTO Neurketak (
         82,
         80.7,
         1.76,
-        'Gosariaren ondoren.'
+        85, 'Gosariaren ondoren.'
     ),
     (
         56,
@@ -15733,7 +15789,7 @@ INSERT INTO Neurketak (
         91,
         90.6,
         1.61,
-        'Gaur goizean neurtuta.'
+        71, 'Gaur goizean neurtuta.'
     ),
     (
         57,
@@ -15743,7 +15799,7 @@ INSERT INTO Neurketak (
         85,
         84.0,
         1.69,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         59,
@@ -15753,7 +15809,7 @@ INSERT INTO Neurketak (
         93,
         62.3,
         1.73,
-        'Gosariaren ondoren.'
+        76, 'Gosariaren ondoren.'
     ),
     (
         60,
@@ -15763,7 +15819,7 @@ INSERT INTO Neurketak (
         82,
         77.5,
         1.81,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         61,
@@ -15773,7 +15829,7 @@ INSERT INTO Neurketak (
         82,
         73.9,
         1.83,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         62,
@@ -15783,7 +15839,7 @@ INSERT INTO Neurketak (
         83,
         66.4,
         1.56,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         64,
@@ -15793,7 +15849,7 @@ INSERT INTO Neurketak (
         88,
         94.9,
         1.56,
-        'Baraualdian.'
+        91, 'Baraualdian.'
     ),
     (
         65,
@@ -15803,7 +15859,7 @@ INSERT INTO Neurketak (
         87,
         90.2,
         1.55,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         66,
@@ -15813,7 +15869,7 @@ INSERT INTO Neurketak (
         81,
         75.7,
         1.59,
-        'Dena ondo.'
+        92, 'Dena ondo.'
     ),
     (
         67,
@@ -15823,7 +15879,7 @@ INSERT INTO Neurketak (
         84,
         71.9,
         1.72,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         68,
@@ -15833,7 +15889,7 @@ INSERT INTO Neurketak (
         73,
         60.1,
         1.85,
-        'Baraualdian.'
+        93, 'Baraualdian.'
     ),
     (
         69,
@@ -15843,7 +15899,7 @@ INSERT INTO Neurketak (
         76,
         94.4,
         1.66,
-        'Gaur goizean neurtuta.'
+        68, 'Gaur goizean neurtuta.'
     ),
     (
         70,
@@ -15853,7 +15909,7 @@ INSERT INTO Neurketak (
         79,
         74.3,
         1.70,
-        'Apur bat nekatuta.'
+        65, 'Apur bat nekatuta.'
     ),
     (
         71,
@@ -15863,7 +15919,7 @@ INSERT INTO Neurketak (
         72,
         89.5,
         1.63,
-        'Ondo sentitzen naiz.'
+        79, 'Ondo sentitzen naiz.'
     ),
     (
         72,
@@ -15873,7 +15929,7 @@ INSERT INTO Neurketak (
         78,
         92.9,
         1.69,
-        'Ondo sentitzen naiz.'
+        74, 'Ondo sentitzen naiz.'
     ),
     (
         73,
@@ -15883,7 +15939,7 @@ INSERT INTO Neurketak (
         83,
         95.6,
         1.55,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         74,
@@ -15893,7 +15949,7 @@ INSERT INTO Neurketak (
         86,
         63.0,
         1.67,
-        'Gosariaren ondoren.'
+        79, 'Gosariaren ondoren.'
     ),
     (
         75,
@@ -15903,7 +15959,7 @@ INSERT INTO Neurketak (
         76,
         59.3,
         1.65,
-        'Gosariaren ondoren.'
+        91, 'Gosariaren ondoren.'
     ),
     (
         76,
@@ -15913,7 +15969,7 @@ INSERT INTO Neurketak (
         84,
         65.7,
         1.69,
-        'Ondo sentitzen naiz.'
+        78, 'Ondo sentitzen naiz.'
     ),
     (
         78,
@@ -15923,7 +15979,7 @@ INSERT INTO Neurketak (
         86,
         63.7,
         1.61,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         79,
@@ -15933,7 +15989,7 @@ INSERT INTO Neurketak (
         82,
         66.5,
         1.67,
-        'Ondo sentitzen naiz.'
+        65, 'Ondo sentitzen naiz.'
     ),
     (
         80,
@@ -15943,7 +15999,7 @@ INSERT INTO Neurketak (
         85,
         63.3,
         1.78,
-        'Kirola egin ondoren.'
+        71, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -15953,7 +16009,7 @@ INSERT INTO Neurketak (
         82,
         86.6,
         1.58,
-        'Gosariaren ondoren.'
+        93, 'Gosariaren ondoren.'
     ),
     (
         83,
@@ -15963,7 +16019,7 @@ INSERT INTO Neurketak (
         94,
         65.5,
         1.80,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         84,
@@ -15973,7 +16029,7 @@ INSERT INTO Neurketak (
         84,
         79.6,
         1.67,
-        'Gosariaren ondoren.'
+        80, 'Gosariaren ondoren.'
     ),
     (
         85,
@@ -15983,7 +16039,7 @@ INSERT INTO Neurketak (
         88,
         81.9,
         1.72,
-        'Apur bat nekatuta.'
+        75, 'Apur bat nekatuta.'
     ),
     (
         87,
@@ -15993,7 +16049,7 @@ INSERT INTO Neurketak (
         74,
         72.5,
         1.61,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         88,
@@ -16003,7 +16059,7 @@ INSERT INTO Neurketak (
         84,
         89.2,
         1.81,
-        'Kirola egin ondoren.'
+        74, 'Kirola egin ondoren.'
     ),
     (
         89,
@@ -16013,7 +16069,7 @@ INSERT INTO Neurketak (
         79,
         91.8,
         1.84,
-        'Ondo sentitzen naiz.'
+        65, 'Ondo sentitzen naiz.'
     ),
     (
         90,
@@ -16023,7 +16079,7 @@ INSERT INTO Neurketak (
         82,
         65.0,
         1.60,
-        'Gosariaren ondoren.'
+        68, 'Gosariaren ondoren.'
     ),
     (
         93,
@@ -16033,7 +16089,7 @@ INSERT INTO Neurketak (
         94,
         76.3,
         1.81,
-        'Ondo sentitzen naiz.'
+        94, 'Ondo sentitzen naiz.'
     ),
     (
         94,
@@ -16043,7 +16099,7 @@ INSERT INTO Neurketak (
         79,
         87.3,
         1.83,
-        'Dena ondo.'
+        88, 'Dena ondo.'
     ),
     (
         95,
@@ -16053,7 +16109,7 @@ INSERT INTO Neurketak (
         75,
         89.9,
         1.77,
-        'Dena ondo.'
+        90, 'Dena ondo.'
     ),
     (
         97,
@@ -16063,7 +16119,7 @@ INSERT INTO Neurketak (
         80,
         86.7,
         1.56,
-        'Gosariaren ondoren.'
+        91, 'Gosariaren ondoren.'
     ),
     (
         98,
@@ -16073,7 +16129,7 @@ INSERT INTO Neurketak (
         78,
         84.7,
         1.60,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         99,
@@ -16083,7 +16139,7 @@ INSERT INTO Neurketak (
         86,
         86.1,
         1.71,
-        'Kirola egin ondoren.'
+        88, 'Kirola egin ondoren.'
     ),
     (
         100,
@@ -16093,7 +16149,7 @@ INSERT INTO Neurketak (
         73,
         82.9,
         1.57,
-        'Baraualdian.'
+        65, 'Baraualdian.'
     ),
     (
         52,
@@ -16103,7 +16159,7 @@ INSERT INTO Neurketak (
         93,
         93.8,
         1.77,
-        'Gosariaren ondoren.'
+        73, 'Gosariaren ondoren.'
     ),
     (
         53,
@@ -16113,7 +16169,7 @@ INSERT INTO Neurketak (
         79,
         74.0,
         1.75,
-        'Baraualdian.'
+        76, 'Baraualdian.'
     ),
     (
         54,
@@ -16123,7 +16179,7 @@ INSERT INTO Neurketak (
         78,
         86.2,
         1.60,
-        'Kirola egin ondoren.'
+        76, 'Kirola egin ondoren.'
     ),
     (
         55,
@@ -16133,7 +16189,7 @@ INSERT INTO Neurketak (
         81,
         81.6,
         1.76,
-        'Ondo sentitzen naiz.'
+        89, 'Ondo sentitzen naiz.'
     ),
     (
         56,
@@ -16143,7 +16199,7 @@ INSERT INTO Neurketak (
         93,
         90.4,
         1.61,
-        'Gosariaren ondoren.'
+        74, 'Gosariaren ondoren.'
     ),
     (
         58,
@@ -16153,7 +16209,7 @@ INSERT INTO Neurketak (
         84,
         66.8,
         1.68,
-        'Baraualdian.'
+        91, 'Baraualdian.'
     ),
     (
         59,
@@ -16163,7 +16219,7 @@ INSERT INTO Neurketak (
         95,
         62.6,
         1.73,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         60,
@@ -16173,7 +16229,7 @@ INSERT INTO Neurketak (
         80,
         78.6,
         1.81,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         61,
@@ -16183,7 +16239,7 @@ INSERT INTO Neurketak (
         93,
         72.9,
         1.83,
-        'Apur bat nekatuta.'
+        86, 'Apur bat nekatuta.'
     ),
     (
         63,
@@ -16193,7 +16249,7 @@ INSERT INTO Neurketak (
         83,
         81.9,
         1.80,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         64,
@@ -16203,7 +16259,7 @@ INSERT INTO Neurketak (
         86,
         95.6,
         1.56,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         66,
@@ -16213,7 +16269,7 @@ INSERT INTO Neurketak (
         88,
         75.9,
         1.59,
-        'Dena ondo.'
+        67, 'Dena ondo.'
     ),
     (
         67,
@@ -16223,7 +16279,7 @@ INSERT INTO Neurketak (
         81,
         72.5,
         1.72,
-        'Kirola egin ondoren.'
+        78, 'Kirola egin ondoren.'
     ),
     (
         69,
@@ -16233,7 +16289,7 @@ INSERT INTO Neurketak (
         88,
         94.1,
         1.66,
-        'Kirola egin ondoren.'
+        69, 'Kirola egin ondoren.'
     ),
     (
         70,
@@ -16243,7 +16299,7 @@ INSERT INTO Neurketak (
         75,
         75.5,
         1.70,
-        'Ondo sentitzen naiz.'
+        90, 'Ondo sentitzen naiz.'
     ),
     (
         71,
@@ -16253,7 +16309,7 @@ INSERT INTO Neurketak (
         77,
         89.5,
         1.63,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         72,
@@ -16263,7 +16319,7 @@ INSERT INTO Neurketak (
         74,
         92.8,
         1.69,
-        'Gosariaren ondoren.'
+        81, 'Gosariaren ondoren.'
     ),
     (
         73,
@@ -16273,7 +16329,7 @@ INSERT INTO Neurketak (
         73,
         95.4,
         1.55,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         74,
@@ -16283,7 +16339,7 @@ INSERT INTO Neurketak (
         88,
         64.0,
         1.67,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         75,
@@ -16293,7 +16349,7 @@ INSERT INTO Neurketak (
         82,
         59.6,
         1.65,
-        'Gosariaren ondoren.'
+        86, 'Gosariaren ondoren.'
     ),
     (
         77,
@@ -16303,7 +16359,7 @@ INSERT INTO Neurketak (
         88,
         66.1,
         1.67,
-        'Gaur goizean neurtuta.'
+        80, 'Gaur goizean neurtuta.'
     ),
     (
         78,
@@ -16313,7 +16369,7 @@ INSERT INTO Neurketak (
         78,
         62.2,
         1.61,
-        'Apur bat nekatuta.'
+        67, 'Apur bat nekatuta.'
     ),
     (
         81,
@@ -16323,7 +16379,7 @@ INSERT INTO Neurketak (
         95,
         86.2,
         1.58,
-        'Baraualdian.'
+        80, 'Baraualdian.'
     ),
     (
         82,
@@ -16333,7 +16389,7 @@ INSERT INTO Neurketak (
         84,
         89.1,
         1.77,
-        'Dena ondo.'
+        74, 'Dena ondo.'
     ),
     (
         83,
@@ -16343,7 +16399,7 @@ INSERT INTO Neurketak (
         86,
         65.9,
         1.80,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         85,
@@ -16353,7 +16409,7 @@ INSERT INTO Neurketak (
         87,
         80.5,
         1.72,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         86,
@@ -16363,7 +16419,7 @@ INSERT INTO Neurketak (
         79,
         68.8,
         1.57,
-        'Apur bat nekatuta.'
+        84, 'Apur bat nekatuta.'
     ),
     (
         87,
@@ -16373,7 +16429,7 @@ INSERT INTO Neurketak (
         87,
         72.8,
         1.61,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         88,
@@ -16383,7 +16439,7 @@ INSERT INTO Neurketak (
         80,
         91.0,
         1.81,
-        'Baraualdian.'
+        73, 'Baraualdian.'
     ),
     (
         90,
@@ -16393,7 +16449,7 @@ INSERT INTO Neurketak (
         88,
         66.1,
         1.60,
-        'Apur bat nekatuta.'
+        91, 'Apur bat nekatuta.'
     ),
     (
         91,
@@ -16403,7 +16459,7 @@ INSERT INTO Neurketak (
         76,
         89.6,
         1.58,
-        'Baraualdian.'
+        89, 'Baraualdian.'
     ),
     (
         92,
@@ -16413,7 +16469,7 @@ INSERT INTO Neurketak (
         83,
         59.3,
         1.79,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         93,
@@ -16423,7 +16479,7 @@ INSERT INTO Neurketak (
         86,
         76.4,
         1.81,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         94,
@@ -16433,7 +16489,7 @@ INSERT INTO Neurketak (
         87,
         86.8,
         1.83,
-        'Baraualdian.'
+        91, 'Baraualdian.'
     ),
     (
         95,
@@ -16443,7 +16499,7 @@ INSERT INTO Neurketak (
         86,
         90.2,
         1.77,
-        'Kirola egin ondoren.'
+        89, 'Kirola egin ondoren.'
     ),
     (
         96,
@@ -16453,7 +16509,7 @@ INSERT INTO Neurketak (
         87,
         77.9,
         1.71,
-        'Ondo sentitzen naiz.'
+        86, 'Ondo sentitzen naiz.'
     ),
     (
         97,
@@ -16463,7 +16519,7 @@ INSERT INTO Neurketak (
         79,
         87.1,
         1.56,
-        'Kirola egin ondoren.'
+        80, 'Kirola egin ondoren.'
     ),
     (
         98,
@@ -16473,7 +16529,7 @@ INSERT INTO Neurketak (
         88,
         85.0,
         1.60,
-        'Ondo sentitzen naiz.'
+        69, 'Ondo sentitzen naiz.'
     ),
     (
         100,
@@ -16483,7 +16539,7 @@ INSERT INTO Neurketak (
         78,
         82.6,
         1.57,
-        'Dena ondo.'
+        85, 'Dena ondo.'
     ),
     (
         51,
@@ -16493,7 +16549,7 @@ INSERT INTO Neurketak (
         88,
         65.0,
         1.76,
-        'Gosariaren ondoren.'
+        81, 'Gosariaren ondoren.'
     ),
     (
         52,
@@ -16503,7 +16559,7 @@ INSERT INTO Neurketak (
         85,
         93.8,
         1.77,
-        'Apur bat nekatuta.'
+        66, 'Apur bat nekatuta.'
     ),
     (
         53,
@@ -16513,7 +16569,7 @@ INSERT INTO Neurketak (
         91,
         74.2,
         1.75,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         54,
@@ -16523,7 +16579,7 @@ INSERT INTO Neurketak (
         81,
         86.8,
         1.60,
-        'Apur bat nekatuta.'
+        94, 'Apur bat nekatuta.'
     ),
     (
         55,
@@ -16533,7 +16589,7 @@ INSERT INTO Neurketak (
         82,
         80.4,
         1.76,
-        'Dena ondo.'
+        94, 'Dena ondo.'
     ),
     (
         56,
@@ -16543,7 +16599,7 @@ INSERT INTO Neurketak (
         91,
         89.9,
         1.61,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         57,
@@ -16553,7 +16609,7 @@ INSERT INTO Neurketak (
         83,
         82.0,
         1.69,
-        'Ondo sentitzen naiz.'
+        77, 'Ondo sentitzen naiz.'
     ),
     (
         58,
@@ -16563,7 +16619,7 @@ INSERT INTO Neurketak (
         76,
         67.5,
         1.68,
-        'Baraualdian.'
+        84, 'Baraualdian.'
     ),
     (
         59,
@@ -16573,7 +16629,7 @@ INSERT INTO Neurketak (
         87,
         63.9,
         1.73,
-        'Dena ondo.'
+        90, 'Dena ondo.'
     ),
     (
         60,
@@ -16583,7 +16639,7 @@ INSERT INTO Neurketak (
         94,
         78.7,
         1.81,
-        'Ondo sentitzen naiz.'
+        78, 'Ondo sentitzen naiz.'
     ),
     (
         61,
@@ -16593,7 +16649,7 @@ INSERT INTO Neurketak (
         88,
         72.1,
         1.83,
-        'Gosariaren ondoren.'
+        80, 'Gosariaren ondoren.'
     ),
     (
         62,
@@ -16603,7 +16659,7 @@ INSERT INTO Neurketak (
         79,
         66.1,
         1.56,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         63,
@@ -16613,7 +16669,7 @@ INSERT INTO Neurketak (
         88,
         80.8,
         1.80,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         64,
@@ -16623,7 +16679,7 @@ INSERT INTO Neurketak (
         81,
         95.9,
         1.56,
-        'Apur bat nekatuta.'
+        72, 'Apur bat nekatuta.'
     ),
     (
         65,
@@ -16633,7 +16689,7 @@ INSERT INTO Neurketak (
         76,
         91.5,
         1.55,
-        'Dena ondo.'
+        73, 'Dena ondo.'
     ),
     (
         66,
@@ -16643,7 +16699,7 @@ INSERT INTO Neurketak (
         84,
         74.7,
         1.59,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         67,
@@ -16653,7 +16709,7 @@ INSERT INTO Neurketak (
         82,
         72.8,
         1.72,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         69,
@@ -16663,7 +16719,7 @@ INSERT INTO Neurketak (
         82,
         94.6,
         1.66,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         70,
@@ -16673,7 +16729,7 @@ INSERT INTO Neurketak (
         80,
         75.3,
         1.70,
-        'Gosariaren ondoren.'
+        82, 'Gosariaren ondoren.'
     ),
     (
         71,
@@ -16683,7 +16739,7 @@ INSERT INTO Neurketak (
         83,
         88.9,
         1.63,
-        'Ondo sentitzen naiz.'
+        86, 'Ondo sentitzen naiz.'
     ),
     (
         72,
@@ -16693,7 +16749,7 @@ INSERT INTO Neurketak (
         87,
         91.6,
         1.69,
-        'Dena ondo.'
+        93, 'Dena ondo.'
     ),
     (
         73,
@@ -16703,7 +16759,7 @@ INSERT INTO Neurketak (
         84,
         94.3,
         1.55,
-        'Apur bat nekatuta.'
+        81, 'Apur bat nekatuta.'
     ),
     (
         74,
@@ -16713,7 +16769,7 @@ INSERT INTO Neurketak (
         84,
         63.8,
         1.67,
-        'Dena ondo.'
+        78, 'Dena ondo.'
     ),
     (
         76,
@@ -16723,7 +16779,7 @@ INSERT INTO Neurketak (
         89,
         65.6,
         1.69,
-        'Gosariaren ondoren.'
+        77, 'Gosariaren ondoren.'
     ),
     (
         78,
@@ -16733,7 +16789,7 @@ INSERT INTO Neurketak (
         74,
         63.4,
         1.61,
-        'Gosariaren ondoren.'
+        83, 'Gosariaren ondoren.'
     ),
     (
         79,
@@ -16743,7 +16799,7 @@ INSERT INTO Neurketak (
         82,
         67.7,
         1.67,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         80,
@@ -16753,7 +16809,7 @@ INSERT INTO Neurketak (
         81,
         64.0,
         1.78,
-        'Ondo sentitzen naiz.'
+        92, 'Ondo sentitzen naiz.'
     ),
     (
         81,
@@ -16763,7 +16819,7 @@ INSERT INTO Neurketak (
         93,
         85.5,
         1.58,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         83,
@@ -16773,7 +16829,7 @@ INSERT INTO Neurketak (
         82,
         65.6,
         1.80,
-        'Baraualdian.'
+        65, 'Baraualdian.'
     ),
     (
         87,
@@ -16783,7 +16839,7 @@ INSERT INTO Neurketak (
         85,
         72.5,
         1.61,
-        'Kirola egin ondoren.'
+        94, 'Kirola egin ondoren.'
     ),
     (
         88,
@@ -16793,7 +16849,7 @@ INSERT INTO Neurketak (
         86,
         90.7,
         1.81,
-        'Baraualdian.'
+        65, 'Baraualdian.'
     ),
     (
         89,
@@ -16803,7 +16859,7 @@ INSERT INTO Neurketak (
         89,
         90.8,
         1.84,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         90,
@@ -16813,7 +16869,7 @@ INSERT INTO Neurketak (
         84,
         66.9,
         1.60,
-        'Baraualdian.'
+        66, 'Baraualdian.'
     ),
     (
         91,
@@ -16823,7 +16879,7 @@ INSERT INTO Neurketak (
         88,
         89.4,
         1.58,
-        'Baraualdian.'
+        79, 'Baraualdian.'
     ),
     (
         92,
@@ -16833,7 +16889,7 @@ INSERT INTO Neurketak (
         92,
         59.7,
         1.79,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         93,
@@ -16843,7 +16899,7 @@ INSERT INTO Neurketak (
         88,
         76.5,
         1.81,
-        'Apur bat nekatuta.'
+        78, 'Apur bat nekatuta.'
     ),
     (
         94,
@@ -16853,7 +16909,7 @@ INSERT INTO Neurketak (
         77,
         87.3,
         1.83,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         95,
@@ -16863,7 +16919,7 @@ INSERT INTO Neurketak (
         82,
         91.0,
         1.77,
-        'Kirola egin ondoren.'
+        93, 'Kirola egin ondoren.'
     ),
     (
         97,
@@ -16873,7 +16929,7 @@ INSERT INTO Neurketak (
         82,
         86.2,
         1.56,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         98,
@@ -16883,7 +16939,7 @@ INSERT INTO Neurketak (
         79,
         84.5,
         1.60,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         99,
@@ -16893,7 +16949,7 @@ INSERT INTO Neurketak (
         73,
         86.3,
         1.71,
-        'Kirola egin ondoren.'
+        89, 'Kirola egin ondoren.'
     ),
     (
         100,
@@ -16903,7 +16959,7 @@ INSERT INTO Neurketak (
         82,
         81.2,
         1.57,
-        'Gosariaren ondoren.'
+        74, 'Gosariaren ondoren.'
     ),
     (
         51,
@@ -16913,7 +16969,7 @@ INSERT INTO Neurketak (
         88,
         63.1,
         1.76,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         52,
@@ -16923,7 +16979,7 @@ INSERT INTO Neurketak (
         79,
         93.4,
         1.77,
-        'Ondo sentitzen naiz.'
+        66, 'Ondo sentitzen naiz.'
     ),
     (
         53,
@@ -16933,7 +16989,7 @@ INSERT INTO Neurketak (
         89,
         74.8,
         1.75,
-        'Kirola egin ondoren.'
+        83, 'Kirola egin ondoren.'
     ),
     (
         54,
@@ -16943,7 +16999,7 @@ INSERT INTO Neurketak (
         80,
         86.8,
         1.60,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         55,
@@ -16953,7 +17009,7 @@ INSERT INTO Neurketak (
         75,
         80.9,
         1.76,
-        'Gaur goizean neurtuta.'
+        78, 'Gaur goizean neurtuta.'
     ),
     (
         56,
@@ -16963,7 +17019,7 @@ INSERT INTO Neurketak (
         94,
         90.0,
         1.61,
-        'Kirola egin ondoren.'
+        85, 'Kirola egin ondoren.'
     ),
     (
         57,
@@ -16973,7 +17029,7 @@ INSERT INTO Neurketak (
         86,
         82.3,
         1.69,
-        'Kirola egin ondoren.'
+        90, 'Kirola egin ondoren.'
     ),
     (
         58,
@@ -16983,7 +17039,7 @@ INSERT INTO Neurketak (
         82,
         66.4,
         1.68,
-        'Gosariaren ondoren.'
+        79, 'Gosariaren ondoren.'
     ),
     (
         59,
@@ -16993,7 +17049,7 @@ INSERT INTO Neurketak (
         94,
         63.4,
         1.73,
-        'Gaur goizean neurtuta.'
+        87, 'Gaur goizean neurtuta.'
     ),
     (
         60,
@@ -17003,7 +17059,7 @@ INSERT INTO Neurketak (
         90,
         77.0,
         1.81,
-        'Dena ondo.'
+        74, 'Dena ondo.'
     ),
     (
         61,
@@ -17013,7 +17069,7 @@ INSERT INTO Neurketak (
         83,
         72.9,
         1.83,
-        'Gaur goizean neurtuta.'
+        74, 'Gaur goizean neurtuta.'
     ),
     (
         63,
@@ -17023,7 +17079,7 @@ INSERT INTO Neurketak (
         87,
         80.6,
         1.80,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         64,
@@ -17033,7 +17089,7 @@ INSERT INTO Neurketak (
         79,
         94.9,
         1.56,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         65,
@@ -17043,7 +17099,7 @@ INSERT INTO Neurketak (
         87,
         92.0,
         1.55,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         66,
@@ -17053,7 +17109,7 @@ INSERT INTO Neurketak (
         89,
         75.5,
         1.59,
-        'Gosariaren ondoren.'
+        80, 'Gosariaren ondoren.'
     ),
     (
         69,
@@ -17063,7 +17119,7 @@ INSERT INTO Neurketak (
         86,
         94.1,
         1.66,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         70,
@@ -17073,7 +17129,7 @@ INSERT INTO Neurketak (
         83,
         75.4,
         1.70,
-        'Gaur goizean neurtuta.'
+        74, 'Gaur goizean neurtuta.'
     ),
     (
         71,
@@ -17083,7 +17139,7 @@ INSERT INTO Neurketak (
         81,
         88.2,
         1.63,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         74,
@@ -17093,7 +17149,7 @@ INSERT INTO Neurketak (
         86,
         64.3,
         1.67,
-        'Gosariaren ondoren.'
+        68, 'Gosariaren ondoren.'
     ),
     (
         75,
@@ -17103,7 +17159,7 @@ INSERT INTO Neurketak (
         71,
         60.3,
         1.65,
-        'Ondo sentitzen naiz.'
+        84, 'Ondo sentitzen naiz.'
     ),
     (
         76,
@@ -17113,7 +17169,7 @@ INSERT INTO Neurketak (
         94,
         65.9,
         1.69,
-        'Dena ondo.'
+        67, 'Dena ondo.'
     ),
     (
         77,
@@ -17123,7 +17179,7 @@ INSERT INTO Neurketak (
         92,
         66.1,
         1.67,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         78,
@@ -17133,7 +17189,7 @@ INSERT INTO Neurketak (
         81,
         63.2,
         1.61,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         79,
@@ -17143,7 +17199,7 @@ INSERT INTO Neurketak (
         80,
         66.9,
         1.67,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         80,
@@ -17153,7 +17209,7 @@ INSERT INTO Neurketak (
         88,
         62.3,
         1.78,
-        'Baraualdian.'
+        91, 'Baraualdian.'
     ),
     (
         82,
@@ -17163,7 +17219,7 @@ INSERT INTO Neurketak (
         89,
         89.5,
         1.77,
-        'Kirola egin ondoren.'
+        78, 'Kirola egin ondoren.'
     ),
     (
         85,
@@ -17173,7 +17229,7 @@ INSERT INTO Neurketak (
         80,
         81.0,
         1.72,
-        'Kirola egin ondoren.'
+        90, 'Kirola egin ondoren.'
     ),
     (
         86,
@@ -17183,7 +17239,7 @@ INSERT INTO Neurketak (
         80,
         69.0,
         1.57,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         87,
@@ -17193,7 +17249,7 @@ INSERT INTO Neurketak (
         77,
         73.4,
         1.61,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         88,
@@ -17203,7 +17259,7 @@ INSERT INTO Neurketak (
         73,
         90.3,
         1.81,
-        'Baraualdian.'
+        89, 'Baraualdian.'
     ),
     (
         90,
@@ -17213,7 +17269,7 @@ INSERT INTO Neurketak (
         79,
         65.1,
         1.60,
-        'Dena ondo.'
+        65, 'Dena ondo.'
     ),
     (
         91,
@@ -17223,7 +17279,7 @@ INSERT INTO Neurketak (
         90,
         90.6,
         1.58,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         92,
@@ -17233,7 +17289,7 @@ INSERT INTO Neurketak (
         92,
         60.2,
         1.79,
-        'Kirola egin ondoren.'
+        89, 'Kirola egin ondoren.'
     ),
     (
         93,
@@ -17243,7 +17299,7 @@ INSERT INTO Neurketak (
         85,
         76.0,
         1.81,
-        'Gaur goizean neurtuta.'
+        94, 'Gaur goizean neurtuta.'
     ),
     (
         94,
@@ -17253,7 +17309,7 @@ INSERT INTO Neurketak (
         91,
         86.8,
         1.83,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         95,
@@ -17263,7 +17319,7 @@ INSERT INTO Neurketak (
         72,
         89.0,
         1.77,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         96,
@@ -17273,7 +17329,7 @@ INSERT INTO Neurketak (
         88,
         76.2,
         1.71,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         97,
@@ -17283,7 +17339,7 @@ INSERT INTO Neurketak (
         72,
         86.6,
         1.56,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         98,
@@ -17293,7 +17349,7 @@ INSERT INTO Neurketak (
         89,
         83.2,
         1.60,
-        'Baraualdian.'
+        75, 'Baraualdian.'
     ),
     (
         100,
@@ -17303,7 +17359,7 @@ INSERT INTO Neurketak (
         80,
         82.2,
         1.57,
-        'Baraualdian.'
+        70, 'Baraualdian.'
     ),
     (
         51,
@@ -17313,7 +17369,7 @@ INSERT INTO Neurketak (
         82,
         64.1,
         1.76,
-        'Gaur goizean neurtuta.'
+        86, 'Gaur goizean neurtuta.'
     ),
     (
         52,
@@ -17323,7 +17379,7 @@ INSERT INTO Neurketak (
         93,
         94.9,
         1.77,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         53,
@@ -17333,7 +17389,7 @@ INSERT INTO Neurketak (
         86,
         74.6,
         1.75,
-        'Gosariaren ondoren.'
+        89, 'Gosariaren ondoren.'
     ),
     (
         54,
@@ -17343,7 +17399,7 @@ INSERT INTO Neurketak (
         82,
         87.4,
         1.60,
-        'Ondo sentitzen naiz.'
+        89, 'Ondo sentitzen naiz.'
     ),
     (
         55,
@@ -17353,7 +17409,7 @@ INSERT INTO Neurketak (
         84,
         80.0,
         1.76,
-        'Kirola egin ondoren.'
+        91, 'Kirola egin ondoren.'
     ),
     (
         56,
@@ -17363,7 +17419,7 @@ INSERT INTO Neurketak (
         87,
         89.5,
         1.61,
-        'Ondo sentitzen naiz.'
+        72, 'Ondo sentitzen naiz.'
     ),
     (
         57,
@@ -17373,7 +17429,7 @@ INSERT INTO Neurketak (
         80,
         83.7,
         1.69,
-        'Gaur goizean neurtuta.'
+        94, 'Gaur goizean neurtuta.'
     ),
     (
         59,
@@ -17383,7 +17439,7 @@ INSERT INTO Neurketak (
         92,
         62.9,
         1.73,
-        'Ondo sentitzen naiz.'
+        85, 'Ondo sentitzen naiz.'
     ),
     (
         60,
@@ -17393,7 +17449,7 @@ INSERT INTO Neurketak (
         89,
         77.2,
         1.81,
-        'Gosariaren ondoren.'
+        73, 'Gosariaren ondoren.'
     ),
     (
         61,
@@ -17403,7 +17459,7 @@ INSERT INTO Neurketak (
         78,
         73.6,
         1.83,
-        'Ondo sentitzen naiz.'
+        88, 'Ondo sentitzen naiz.'
     ),
     (
         62,
@@ -17413,7 +17469,7 @@ INSERT INTO Neurketak (
         82,
         65.6,
         1.56,
-        'Ondo sentitzen naiz.'
+        86, 'Ondo sentitzen naiz.'
     ),
     (
         63,
@@ -17423,7 +17479,7 @@ INSERT INTO Neurketak (
         90,
         82.0,
         1.80,
-        'Dena ondo.'
+        83, 'Dena ondo.'
     ),
     (
         64,
@@ -17433,7 +17489,7 @@ INSERT INTO Neurketak (
         73,
         95.7,
         1.56,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         65,
@@ -17443,7 +17499,7 @@ INSERT INTO Neurketak (
         76,
         91.1,
         1.55,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         66,
@@ -17453,7 +17509,7 @@ INSERT INTO Neurketak (
         85,
         74.7,
         1.59,
-        'Ondo sentitzen naiz.'
+        66, 'Ondo sentitzen naiz.'
     ),
     (
         67,
@@ -17463,7 +17519,7 @@ INSERT INTO Neurketak (
         82,
         72.7,
         1.72,
-        'Ondo sentitzen naiz.'
+        90, 'Ondo sentitzen naiz.'
     ),
     (
         68,
@@ -17473,7 +17529,7 @@ INSERT INTO Neurketak (
         86,
         61.7,
         1.85,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         69,
@@ -17483,7 +17539,7 @@ INSERT INTO Neurketak (
         82,
         95.7,
         1.66,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         70,
@@ -17493,7 +17549,7 @@ INSERT INTO Neurketak (
         86,
         74.7,
         1.70,
-        'Ondo sentitzen naiz.'
+        88, 'Ondo sentitzen naiz.'
     ),
     (
         71,
@@ -17503,7 +17559,7 @@ INSERT INTO Neurketak (
         77,
         88.8,
         1.63,
-        'Ondo sentitzen naiz.'
+        77, 'Ondo sentitzen naiz.'
     ),
     (
         73,
@@ -17513,7 +17569,7 @@ INSERT INTO Neurketak (
         80,
         94.7,
         1.55,
-        'Apur bat nekatuta.'
+        93, 'Apur bat nekatuta.'
     ),
     (
         74,
@@ -17523,7 +17579,7 @@ INSERT INTO Neurketak (
         82,
         63.5,
         1.67,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         75,
@@ -17533,7 +17589,7 @@ INSERT INTO Neurketak (
         85,
         59.9,
         1.65,
-        'Apur bat nekatuta.'
+        85, 'Apur bat nekatuta.'
     ),
     (
         76,
@@ -17543,7 +17599,7 @@ INSERT INTO Neurketak (
         92,
         65.9,
         1.69,
-        'Kirola egin ondoren.'
+        83, 'Kirola egin ondoren.'
     ),
     (
         78,
@@ -17553,7 +17609,7 @@ INSERT INTO Neurketak (
         83,
         62.9,
         1.61,
-        'Gosariaren ondoren.'
+        90, 'Gosariaren ondoren.'
     ),
     (
         80,
@@ -17563,7 +17619,7 @@ INSERT INTO Neurketak (
         92,
         62.2,
         1.78,
-        'Gosariaren ondoren.'
+        65, 'Gosariaren ondoren.'
     ),
     (
         81,
@@ -17573,7 +17629,7 @@ INSERT INTO Neurketak (
         88,
         86.4,
         1.58,
-        'Gaur goizean neurtuta.'
+        70, 'Gaur goizean neurtuta.'
     ),
     (
         82,
@@ -17583,7 +17639,7 @@ INSERT INTO Neurketak (
         92,
         89.7,
         1.77,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         84,
@@ -17593,7 +17649,7 @@ INSERT INTO Neurketak (
         86,
         79.5,
         1.67,
-        'Kirola egin ondoren.'
+        75, 'Kirola egin ondoren.'
     ),
     (
         88,
@@ -17603,7 +17659,7 @@ INSERT INTO Neurketak (
         81,
         90.3,
         1.81,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         89,
@@ -17613,7 +17669,7 @@ INSERT INTO Neurketak (
         78,
         92.0,
         1.84,
-        'Apur bat nekatuta.'
+        89, 'Apur bat nekatuta.'
     ),
     (
         90,
@@ -17623,7 +17679,7 @@ INSERT INTO Neurketak (
         80,
         65.3,
         1.60,
-        'Dena ondo.'
+        77, 'Dena ondo.'
     ),
     (
         93,
@@ -17633,7 +17689,7 @@ INSERT INTO Neurketak (
         79,
         75.7,
         1.81,
-        'Apur bat nekatuta.'
+        69, 'Apur bat nekatuta.'
     ),
     (
         94,
@@ -17643,7 +17699,7 @@ INSERT INTO Neurketak (
         82,
         86.8,
         1.83,
-        'Apur bat nekatuta.'
+        76, 'Apur bat nekatuta.'
     ),
     (
         96,
@@ -17653,7 +17709,7 @@ INSERT INTO Neurketak (
         83,
         77.7,
         1.71,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         97,
@@ -17663,7 +17719,7 @@ INSERT INTO Neurketak (
         77,
         87.3,
         1.56,
-        'Ondo sentitzen naiz.'
+        73, 'Ondo sentitzen naiz.'
     ),
     (
         98,
@@ -17673,7 +17729,7 @@ INSERT INTO Neurketak (
         81,
         84.0,
         1.60,
-        'Apur bat nekatuta.'
+        66, 'Apur bat nekatuta.'
     ),
     (
         100,
@@ -17683,7 +17739,7 @@ INSERT INTO Neurketak (
         81,
         82.9,
         1.57,
-        'Ondo sentitzen naiz.'
+        71, 'Ondo sentitzen naiz.'
     ),
     (
         51,
@@ -17693,7 +17749,7 @@ INSERT INTO Neurketak (
         84,
         63.4,
         1.76,
-        'Dena ondo.'
+        78, 'Dena ondo.'
     ),
     (
         53,
@@ -17703,7 +17759,7 @@ INSERT INTO Neurketak (
         83,
         75.4,
         1.75,
-        'Gosariaren ondoren.'
+        73, 'Gosariaren ondoren.'
     ),
     (
         55,
@@ -17713,7 +17769,7 @@ INSERT INTO Neurketak (
         84,
         80.8,
         1.76,
-        'Dena ondo.'
+        90, 'Dena ondo.'
     ),
     (
         56,
@@ -17723,7 +17779,7 @@ INSERT INTO Neurketak (
         87,
         90.1,
         1.61,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         57,
@@ -17733,7 +17789,7 @@ INSERT INTO Neurketak (
         93,
         82.6,
         1.69,
-        'Kirola egin ondoren.'
+        85, 'Kirola egin ondoren.'
     ),
     (
         58,
@@ -17743,7 +17799,7 @@ INSERT INTO Neurketak (
         79,
         67.9,
         1.68,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         59,
@@ -17753,7 +17809,7 @@ INSERT INTO Neurketak (
         81,
         62.6,
         1.73,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         61,
@@ -17763,7 +17819,7 @@ INSERT INTO Neurketak (
         82,
         73.6,
         1.83,
-        'Ondo sentitzen naiz.'
+        90, 'Ondo sentitzen naiz.'
     ),
     (
         63,
@@ -17773,7 +17829,7 @@ INSERT INTO Neurketak (
         78,
         82.0,
         1.80,
-        'Gosariaren ondoren.'
+        79, 'Gosariaren ondoren.'
     ),
     (
         64,
@@ -17783,7 +17839,7 @@ INSERT INTO Neurketak (
         73,
         95.1,
         1.56,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         65,
@@ -17793,7 +17849,7 @@ INSERT INTO Neurketak (
         81,
         90.6,
         1.55,
-        'Dena ondo.'
+        94, 'Dena ondo.'
     ),
     (
         69,
@@ -17803,7 +17859,7 @@ INSERT INTO Neurketak (
         88,
         95.6,
         1.66,
-        'Apur bat nekatuta.'
+        92, 'Apur bat nekatuta.'
     ),
     (
         70,
@@ -17813,7 +17869,7 @@ INSERT INTO Neurketak (
         86,
         75.1,
         1.70,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         72,
@@ -17823,7 +17879,7 @@ INSERT INTO Neurketak (
         81,
         92.4,
         1.69,
-        'Kirola egin ondoren.'
+        88, 'Kirola egin ondoren.'
     ),
     (
         73,
@@ -17833,7 +17889,7 @@ INSERT INTO Neurketak (
         80,
         94.6,
         1.55,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         74,
@@ -17843,7 +17899,7 @@ INSERT INTO Neurketak (
         87,
         63.2,
         1.67,
-        'Baraualdian.'
+        76, 'Baraualdian.'
     ),
     (
         75,
@@ -17853,7 +17909,7 @@ INSERT INTO Neurketak (
         83,
         59.6,
         1.65,
-        'Baraualdian.'
+        80, 'Baraualdian.'
     ),
     (
         77,
@@ -17863,7 +17919,7 @@ INSERT INTO Neurketak (
         86,
         66.6,
         1.67,
-        'Gaur goizean neurtuta.'
+        68, 'Gaur goizean neurtuta.'
     ),
     (
         78,
@@ -17873,7 +17929,7 @@ INSERT INTO Neurketak (
         82,
         62.9,
         1.61,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         79,
@@ -17883,7 +17939,7 @@ INSERT INTO Neurketak (
         78,
         67.3,
         1.67,
-        'Gosariaren ondoren.'
+        93, 'Gosariaren ondoren.'
     ),
     (
         81,
@@ -17893,7 +17949,7 @@ INSERT INTO Neurketak (
         93,
         86.9,
         1.58,
-        'Gosariaren ondoren.'
+        79, 'Gosariaren ondoren.'
     ),
     (
         82,
@@ -17903,7 +17959,7 @@ INSERT INTO Neurketak (
         93,
         88.1,
         1.77,
-        'Gosariaren ondoren.'
+        67, 'Gosariaren ondoren.'
     ),
     (
         83,
@@ -17913,7 +17969,7 @@ INSERT INTO Neurketak (
         94,
         65.8,
         1.80,
-        'Ondo sentitzen naiz.'
+        73, 'Ondo sentitzen naiz.'
     ),
     (
         84,
@@ -17923,7 +17979,7 @@ INSERT INTO Neurketak (
         76,
         78.8,
         1.67,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         85,
@@ -17933,7 +17989,7 @@ INSERT INTO Neurketak (
         91,
         81.1,
         1.72,
-        'Dena ondo.'
+        72, 'Dena ondo.'
     ),
     (
         86,
@@ -17943,7 +17999,7 @@ INSERT INTO Neurketak (
         83,
         67.7,
         1.57,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         87,
@@ -17953,7 +18009,7 @@ INSERT INTO Neurketak (
         84,
         74.0,
         1.61,
-        'Baraualdian.'
+        70, 'Baraualdian.'
     ),
     (
         88,
@@ -17963,7 +18019,7 @@ INSERT INTO Neurketak (
         86,
         89.9,
         1.81,
-        'Baraualdian.'
+        75, 'Baraualdian.'
     ),
     (
         89,
@@ -17973,7 +18029,7 @@ INSERT INTO Neurketak (
         83,
         90.0,
         1.84,
-        'Ondo sentitzen naiz.'
+        74, 'Ondo sentitzen naiz.'
     ),
     (
         90,
@@ -17983,7 +18039,7 @@ INSERT INTO Neurketak (
         79,
         65.5,
         1.60,
-        'Kirola egin ondoren.'
+        69, 'Kirola egin ondoren.'
     ),
     (
         91,
@@ -17993,7 +18049,7 @@ INSERT INTO Neurketak (
         89,
         90.2,
         1.58,
-        'Apur bat nekatuta.'
+        72, 'Apur bat nekatuta.'
     ),
     (
         92,
@@ -18003,7 +18059,7 @@ INSERT INTO Neurketak (
         93,
         59.0,
         1.79,
-        'Kirola egin ondoren.'
+        78, 'Kirola egin ondoren.'
     ),
     (
         93,
@@ -18013,7 +18069,7 @@ INSERT INTO Neurketak (
         80,
         76.5,
         1.81,
-        'Ondo sentitzen naiz.'
+        68, 'Ondo sentitzen naiz.'
     ),
     (
         94,
@@ -18023,7 +18079,7 @@ INSERT INTO Neurketak (
         86,
         87.0,
         1.83,
-        'Gaur goizean neurtuta.'
+        92, 'Gaur goizean neurtuta.'
     ),
     (
         95,
@@ -18033,7 +18089,7 @@ INSERT INTO Neurketak (
         73,
         89.9,
         1.77,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         96,
@@ -18043,7 +18099,7 @@ INSERT INTO Neurketak (
         74,
         77.1,
         1.71,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         97,
@@ -18053,7 +18109,7 @@ INSERT INTO Neurketak (
         86,
         87.4,
         1.56,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         98,
@@ -18063,7 +18119,7 @@ INSERT INTO Neurketak (
         76,
         83.6,
         1.60,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         99,
@@ -18073,7 +18129,7 @@ INSERT INTO Neurketak (
         74,
         86.8,
         1.71,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         100,
@@ -18083,7 +18139,7 @@ INSERT INTO Neurketak (
         79,
         81.2,
         1.57,
-        'Kirola egin ondoren.'
+        88, 'Kirola egin ondoren.'
     ),
     (
         51,
@@ -18093,7 +18149,7 @@ INSERT INTO Neurketak (
         81,
         64.9,
         1.76,
-        'Dena ondo.'
+        76, 'Dena ondo.'
     ),
     (
         52,
@@ -18103,7 +18159,7 @@ INSERT INTO Neurketak (
         94,
         94.7,
         1.77,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         53,
@@ -18113,7 +18169,7 @@ INSERT INTO Neurketak (
         85,
         74.8,
         1.75,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         54,
@@ -18123,7 +18179,7 @@ INSERT INTO Neurketak (
         89,
         87.8,
         1.60,
-        'Gosariaren ondoren.'
+        74, 'Gosariaren ondoren.'
     ),
     (
         56,
@@ -18133,7 +18189,7 @@ INSERT INTO Neurketak (
         82,
         90.8,
         1.61,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         57,
@@ -18143,7 +18199,7 @@ INSERT INTO Neurketak (
         85,
         84.0,
         1.69,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         58,
@@ -18153,7 +18209,7 @@ INSERT INTO Neurketak (
         85,
         66.5,
         1.68,
-        'Dena ondo.'
+        88, 'Dena ondo.'
     ),
     (
         59,
@@ -18163,7 +18219,7 @@ INSERT INTO Neurketak (
         88,
         62.7,
         1.73,
-        'Dena ondo.'
+        83, 'Dena ondo.'
     ),
     (
         60,
@@ -18173,7 +18229,7 @@ INSERT INTO Neurketak (
         84,
         78.2,
         1.81,
-        'Ondo sentitzen naiz.'
+        75, 'Ondo sentitzen naiz.'
     ),
     (
         61,
@@ -18183,7 +18239,7 @@ INSERT INTO Neurketak (
         90,
         73.2,
         1.83,
-        'Gosariaren ondoren.'
+        82, 'Gosariaren ondoren.'
     ),
     (
         63,
@@ -18193,7 +18249,7 @@ INSERT INTO Neurketak (
         85,
         80.0,
         1.80,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         65,
@@ -18203,7 +18259,7 @@ INSERT INTO Neurketak (
         88,
         91.6,
         1.55,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         66,
@@ -18213,7 +18269,7 @@ INSERT INTO Neurketak (
         84,
         75.0,
         1.59,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         67,
@@ -18223,7 +18279,7 @@ INSERT INTO Neurketak (
         79,
         71.1,
         1.72,
-        'Baraualdian.'
+        89, 'Baraualdian.'
     ),
     (
         68,
@@ -18233,7 +18289,7 @@ INSERT INTO Neurketak (
         86,
         60.1,
         1.85,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         71,
@@ -18243,7 +18299,7 @@ INSERT INTO Neurketak (
         74,
         88.9,
         1.63,
-        'Baraualdian.'
+        84, 'Baraualdian.'
     ),
     (
         72,
@@ -18253,7 +18309,7 @@ INSERT INTO Neurketak (
         82,
         91.7,
         1.69,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         74,
@@ -18263,7 +18319,7 @@ INSERT INTO Neurketak (
         79,
         64.5,
         1.67,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         75,
@@ -18273,7 +18329,7 @@ INSERT INTO Neurketak (
         75,
         60.3,
         1.65,
-        'Gaur goizean neurtuta.'
+        88, 'Gaur goizean neurtuta.'
     ),
     (
         76,
@@ -18283,7 +18339,7 @@ INSERT INTO Neurketak (
         84,
         65.2,
         1.69,
-        'Gaur goizean neurtuta.'
+        87, 'Gaur goizean neurtuta.'
     ),
     (
         77,
@@ -18293,7 +18349,7 @@ INSERT INTO Neurketak (
         87,
         67.0,
         1.67,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         78,
@@ -18303,7 +18359,7 @@ INSERT INTO Neurketak (
         77,
         63.7,
         1.61,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         79,
@@ -18313,7 +18369,7 @@ INSERT INTO Neurketak (
         74,
         66.2,
         1.67,
-        'Gaur goizean neurtuta.'
+        72, 'Gaur goizean neurtuta.'
     ),
     (
         80,
@@ -18323,7 +18379,7 @@ INSERT INTO Neurketak (
         90,
         63.1,
         1.78,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         82,
@@ -18333,7 +18389,7 @@ INSERT INTO Neurketak (
         81,
         89.3,
         1.77,
-        'Gosariaren ondoren.'
+        72, 'Gosariaren ondoren.'
     ),
     (
         83,
@@ -18343,7 +18399,7 @@ INSERT INTO Neurketak (
         86,
         65.3,
         1.80,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         84,
@@ -18353,7 +18409,7 @@ INSERT INTO Neurketak (
         90,
         78.5,
         1.67,
-        'Baraualdian.'
+        89, 'Baraualdian.'
     ),
     (
         85,
@@ -18363,7 +18419,7 @@ INSERT INTO Neurketak (
         79,
         81.9,
         1.72,
-        'Ondo sentitzen naiz.'
+        79, 'Ondo sentitzen naiz.'
     ),
     (
         87,
@@ -18373,7 +18429,7 @@ INSERT INTO Neurketak (
         78,
         72.3,
         1.61,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         88,
@@ -18383,7 +18439,7 @@ INSERT INTO Neurketak (
         86,
         90.7,
         1.81,
-        'Gaur goizean neurtuta.'
+        78, 'Gaur goizean neurtuta.'
     ),
     (
         89,
@@ -18393,7 +18449,7 @@ INSERT INTO Neurketak (
         84,
         91.4,
         1.84,
-        'Gosariaren ondoren.'
+        70, 'Gosariaren ondoren.'
     ),
     (
         90,
@@ -18403,7 +18459,7 @@ INSERT INTO Neurketak (
         81,
         66.1,
         1.60,
-        'Gaur goizean neurtuta.'
+        66, 'Gaur goizean neurtuta.'
     ),
     (
         92,
@@ -18413,7 +18469,7 @@ INSERT INTO Neurketak (
         88,
         60.9,
         1.79,
-        'Dena ondo.'
+        81, 'Dena ondo.'
     ),
     (
         93,
@@ -18423,7 +18479,7 @@ INSERT INTO Neurketak (
         87,
         75.3,
         1.81,
-        'Kirola egin ondoren.'
+        73, 'Kirola egin ondoren.'
     ),
     (
         94,
@@ -18433,7 +18489,7 @@ INSERT INTO Neurketak (
         85,
         87.8,
         1.83,
-        'Baraualdian.'
+        83, 'Baraualdian.'
     ),
     (
         95,
@@ -18443,7 +18499,7 @@ INSERT INTO Neurketak (
         74,
         89.7,
         1.77,
-        'Ondo sentitzen naiz.'
+        84, 'Ondo sentitzen naiz.'
     ),
     (
         97,
@@ -18453,7 +18509,7 @@ INSERT INTO Neurketak (
         85,
         87.5,
         1.56,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         98,
@@ -18463,7 +18519,7 @@ INSERT INTO Neurketak (
         89,
         83.1,
         1.60,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         99,
@@ -18473,7 +18529,7 @@ INSERT INTO Neurketak (
         88,
         85.1,
         1.71,
-        'Ondo sentitzen naiz.'
+        80, 'Ondo sentitzen naiz.'
     ),
     (
         100,
@@ -18483,7 +18539,7 @@ INSERT INTO Neurketak (
         86,
         81.0,
         1.57,
-        'Baraualdian.'
+        76, 'Baraualdian.'
     ),
     (
         51,
@@ -18493,7 +18549,7 @@ INSERT INTO Neurketak (
         79,
         63.1,
         1.76,
-        'Baraualdian.'
+        90, 'Baraualdian.'
     ),
     (
         52,
@@ -18503,7 +18559,7 @@ INSERT INTO Neurketak (
         94,
         93.1,
         1.77,
-        'Dena ondo.'
+        94, 'Dena ondo.'
     ),
     (
         53,
@@ -18513,7 +18569,7 @@ INSERT INTO Neurketak (
         82,
         75.2,
         1.75,
-        'Gaur goizean neurtuta.'
+        80, 'Gaur goizean neurtuta.'
     ),
     (
         55,
@@ -18523,7 +18579,7 @@ INSERT INTO Neurketak (
         76,
         81.9,
         1.76,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         56,
@@ -18533,7 +18589,7 @@ INSERT INTO Neurketak (
         88,
         89.7,
         1.61,
-        'Gosariaren ondoren.'
+        80, 'Gosariaren ondoren.'
     ),
     (
         57,
@@ -18543,7 +18599,7 @@ INSERT INTO Neurketak (
         82,
         83.5,
         1.69,
-        'Kirola egin ondoren.'
+        78, 'Kirola egin ondoren.'
     ),
     (
         58,
@@ -18553,7 +18609,7 @@ INSERT INTO Neurketak (
         90,
         66.7,
         1.68,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         59,
@@ -18563,7 +18619,7 @@ INSERT INTO Neurketak (
         92,
         63.0,
         1.73,
-        'Kirola egin ondoren.'
+        73, 'Kirola egin ondoren.'
     ),
     (
         61,
@@ -18573,7 +18629,7 @@ INSERT INTO Neurketak (
         93,
         73.4,
         1.83,
-        'Apur bat nekatuta.'
+        73, 'Apur bat nekatuta.'
     ),
     (
         62,
@@ -18583,7 +18639,7 @@ INSERT INTO Neurketak (
         73,
         65.0,
         1.56,
-        'Dena ondo.'
+        79, 'Dena ondo.'
     ),
     (
         63,
@@ -18593,7 +18649,7 @@ INSERT INTO Neurketak (
         86,
         81.9,
         1.80,
-        'Baraualdian.'
+        88, 'Baraualdian.'
     ),
     (
         65,
@@ -18603,7 +18659,7 @@ INSERT INTO Neurketak (
         82,
         90.5,
         1.55,
-        'Gaur goizean neurtuta.'
+        94, 'Gaur goizean neurtuta.'
     ),
     (
         66,
@@ -18613,7 +18669,7 @@ INSERT INTO Neurketak (
         82,
         74.8,
         1.59,
-        'Kirola egin ondoren.'
+        87, 'Kirola egin ondoren.'
     ),
     (
         68,
@@ -18623,7 +18679,7 @@ INSERT INTO Neurketak (
         74,
         61.3,
         1.85,
-        'Dena ondo.'
+        72, 'Dena ondo.'
     ),
     (
         69,
@@ -18633,7 +18689,7 @@ INSERT INTO Neurketak (
         81,
         95.5,
         1.66,
-        'Ondo sentitzen naiz.'
+        79, 'Ondo sentitzen naiz.'
     ),
     (
         70,
@@ -18643,7 +18699,7 @@ INSERT INTO Neurketak (
         83,
         74.9,
         1.70,
-        'Baraualdian.'
+        85, 'Baraualdian.'
     ),
     (
         72,
@@ -18653,7 +18709,7 @@ INSERT INTO Neurketak (
         78,
         92.4,
         1.69,
-        'Gaur goizean neurtuta.'
+        71, 'Gaur goizean neurtuta.'
     ),
     (
         73,
@@ -18663,7 +18719,7 @@ INSERT INTO Neurketak (
         83,
         95.3,
         1.55,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         74,
@@ -18673,7 +18729,7 @@ INSERT INTO Neurketak (
         76,
         63.7,
         1.67,
-        'Baraualdian.'
+        79, 'Baraualdian.'
     ),
     (
         75,
@@ -18683,7 +18739,7 @@ INSERT INTO Neurketak (
         76,
         59.1,
         1.65,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         76,
@@ -18693,7 +18749,7 @@ INSERT INTO Neurketak (
         82,
         66.7,
         1.69,
-        'Ondo sentitzen naiz.'
+        79, 'Ondo sentitzen naiz.'
     ),
     (
         77,
@@ -18703,7 +18759,7 @@ INSERT INTO Neurketak (
         84,
         67.4,
         1.67,
-        'Ondo sentitzen naiz.'
+        65, 'Ondo sentitzen naiz.'
     ),
     (
         78,
@@ -18713,7 +18769,7 @@ INSERT INTO Neurketak (
         77,
         63.8,
         1.61,
-        'Baraualdian.'
+        91, 'Baraualdian.'
     ),
     (
         79,
@@ -18723,7 +18779,7 @@ INSERT INTO Neurketak (
         81,
         67.0,
         1.67,
-        'Ondo sentitzen naiz.'
+        77, 'Ondo sentitzen naiz.'
     ),
     (
         80,
@@ -18733,7 +18789,7 @@ INSERT INTO Neurketak (
         84,
         63.5,
         1.78,
-        'Ondo sentitzen naiz.'
+        66, 'Ondo sentitzen naiz.'
     ),
     (
         81,
@@ -18743,7 +18799,7 @@ INSERT INTO Neurketak (
         91,
         86.1,
         1.58,
-        'Apur bat nekatuta.'
+        83, 'Apur bat nekatuta.'
     ),
     (
         82,
@@ -18753,7 +18809,7 @@ INSERT INTO Neurketak (
         83,
         90.0,
         1.77,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         83,
@@ -18763,7 +18819,7 @@ INSERT INTO Neurketak (
         89,
         65.9,
         1.80,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         84,
@@ -18773,7 +18829,7 @@ INSERT INTO Neurketak (
         80,
         78.5,
         1.67,
-        'Apur bat nekatuta.'
+        86, 'Apur bat nekatuta.'
     ),
     (
         85,
@@ -18783,7 +18839,7 @@ INSERT INTO Neurketak (
         88,
         81.0,
         1.72,
-        'Ondo sentitzen naiz.'
+        67, 'Ondo sentitzen naiz.'
     ),
     (
         86,
@@ -18793,7 +18849,7 @@ INSERT INTO Neurketak (
         76,
         67.3,
         1.57,
-        'Baraualdian.'
+        79, 'Baraualdian.'
     ),
     (
         87,
@@ -18803,7 +18859,7 @@ INSERT INTO Neurketak (
         82,
         73.5,
         1.61,
-        'Ondo sentitzen naiz.'
+        75, 'Ondo sentitzen naiz.'
     ),
     (
         88,
@@ -18813,7 +18869,7 @@ INSERT INTO Neurketak (
         75,
         89.7,
         1.81,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         89,
@@ -18823,7 +18879,7 @@ INSERT INTO Neurketak (
         90,
         91.1,
         1.84,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         92,
@@ -18833,7 +18889,7 @@ INSERT INTO Neurketak (
         83,
         59.5,
         1.79,
-        'Gosariaren ondoren.'
+        70, 'Gosariaren ondoren.'
     ),
     (
         93,
@@ -18843,7 +18899,7 @@ INSERT INTO Neurketak (
         79,
         75.5,
         1.81,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         95,
@@ -18853,7 +18909,7 @@ INSERT INTO Neurketak (
         84,
         89.7,
         1.77,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         96,
@@ -18863,7 +18919,7 @@ INSERT INTO Neurketak (
         76,
         77.4,
         1.71,
-        'Gaur goizean neurtuta.'
+        92, 'Gaur goizean neurtuta.'
     ),
     (
         97,
@@ -18873,7 +18929,7 @@ INSERT INTO Neurketak (
         81,
         87.9,
         1.56,
-        'Gosariaren ondoren.'
+        80, 'Gosariaren ondoren.'
     ),
     (
         98,
@@ -18883,7 +18939,7 @@ INSERT INTO Neurketak (
         82,
         84.7,
         1.60,
-        'Baraualdian.'
+        65, 'Baraualdian.'
     ),
     (
         99,
@@ -18893,7 +18949,7 @@ INSERT INTO Neurketak (
         82,
         85.6,
         1.71,
-        'Apur bat nekatuta.'
+        85, 'Apur bat nekatuta.'
     ),
     (
         100,
@@ -18903,7 +18959,7 @@ INSERT INTO Neurketak (
         78,
         81.0,
         1.57,
-        'Apur bat nekatuta.'
+        66, 'Apur bat nekatuta.'
     ),
     (
         51,
@@ -18913,7 +18969,7 @@ INSERT INTO Neurketak (
         81,
         64.2,
         1.76,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         52,
@@ -18923,7 +18979,7 @@ INSERT INTO Neurketak (
         85,
         94.2,
         1.77,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         53,
@@ -18933,7 +18989,7 @@ INSERT INTO Neurketak (
         81,
         75.7,
         1.75,
-        'Ondo sentitzen naiz.'
+        94, 'Ondo sentitzen naiz.'
     ),
     (
         54,
@@ -18943,7 +18999,7 @@ INSERT INTO Neurketak (
         80,
         86.6,
         1.60,
-        'Dena ondo.'
+        72, 'Dena ondo.'
     ),
     (
         55,
@@ -18953,7 +19009,7 @@ INSERT INTO Neurketak (
         81,
         80.2,
         1.76,
-        'Gaur goizean neurtuta.'
+        87, 'Gaur goizean neurtuta.'
     ),
     (
         57,
@@ -18963,7 +19019,7 @@ INSERT INTO Neurketak (
         81,
         83.4,
         1.69,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         58,
@@ -18973,7 +19029,7 @@ INSERT INTO Neurketak (
         80,
         67.2,
         1.68,
-        'Apur bat nekatuta.'
+        75, 'Apur bat nekatuta.'
     ),
     (
         59,
@@ -18983,7 +19039,7 @@ INSERT INTO Neurketak (
         92,
         62.5,
         1.73,
-        'Kirola egin ondoren.'
+        91, 'Kirola egin ondoren.'
     ),
     (
         60,
@@ -18993,7 +19049,7 @@ INSERT INTO Neurketak (
         94,
         78.5,
         1.81,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         61,
@@ -19003,7 +19059,7 @@ INSERT INTO Neurketak (
         79,
         72.9,
         1.83,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         62,
@@ -19013,7 +19069,7 @@ INSERT INTO Neurketak (
         85,
         66.0,
         1.56,
-        'Apur bat nekatuta.'
+        85, 'Apur bat nekatuta.'
     ),
     (
         63,
@@ -19023,7 +19079,7 @@ INSERT INTO Neurketak (
         76,
         81.8,
         1.80,
-        'Baraualdian.'
+        86, 'Baraualdian.'
     ),
     (
         64,
@@ -19033,7 +19089,7 @@ INSERT INTO Neurketak (
         84,
         94.2,
         1.56,
-        'Ondo sentitzen naiz.'
+        71, 'Ondo sentitzen naiz.'
     ),
     (
         65,
@@ -19043,7 +19099,7 @@ INSERT INTO Neurketak (
         76,
         90.5,
         1.55,
-        'Kirola egin ondoren.'
+        72, 'Kirola egin ondoren.'
     ),
     (
         66,
@@ -19053,7 +19109,7 @@ INSERT INTO Neurketak (
         88,
         75.2,
         1.59,
-        'Ondo sentitzen naiz.'
+        87, 'Ondo sentitzen naiz.'
     ),
     (
         67,
@@ -19063,7 +19119,7 @@ INSERT INTO Neurketak (
         84,
         72.4,
         1.72,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         68,
@@ -19073,7 +19129,7 @@ INSERT INTO Neurketak (
         73,
         62.0,
         1.85,
-        'Kirola egin ondoren.'
+        94, 'Kirola egin ondoren.'
     ),
     (
         69,
@@ -19083,7 +19139,7 @@ INSERT INTO Neurketak (
         82,
         94.3,
         1.66,
-        'Gosariaren ondoren.'
+        91, 'Gosariaren ondoren.'
     ),
     (
         71,
@@ -19093,7 +19149,7 @@ INSERT INTO Neurketak (
         73,
         89.2,
         1.63,
-        'Apur bat nekatuta.'
+        89, 'Apur bat nekatuta.'
     ),
     (
         72,
@@ -19103,7 +19159,7 @@ INSERT INTO Neurketak (
         76,
         91.3,
         1.69,
-        'Ondo sentitzen naiz.'
+        78, 'Ondo sentitzen naiz.'
     ),
     (
         73,
@@ -19113,7 +19169,7 @@ INSERT INTO Neurketak (
         79,
         95.0,
         1.55,
-        'Baraualdian.'
+        80, 'Baraualdian.'
     ),
     (
         74,
@@ -19123,7 +19179,7 @@ INSERT INTO Neurketak (
         86,
         65.0,
         1.67,
-        'Gaur goizean neurtuta.'
+        71, 'Gaur goizean neurtuta.'
     ),
     (
         75,
@@ -19133,7 +19189,7 @@ INSERT INTO Neurketak (
         84,
         59.0,
         1.65,
-        'Ondo sentitzen naiz.'
+        85, 'Ondo sentitzen naiz.'
     ),
     (
         76,
@@ -19143,7 +19199,7 @@ INSERT INTO Neurketak (
         95,
         65.1,
         1.69,
-        'Kirola egin ondoren.'
+        81, 'Kirola egin ondoren.'
     ),
     (
         78,
@@ -19153,7 +19209,7 @@ INSERT INTO Neurketak (
         80,
         63.3,
         1.61,
-        'Dena ondo.'
+        77, 'Dena ondo.'
     ),
     (
         79,
@@ -19163,7 +19219,7 @@ INSERT INTO Neurketak (
         84,
         67.4,
         1.67,
-        'Gosariaren ondoren.'
+        87, 'Gosariaren ondoren.'
     ),
     (
         82,
@@ -19173,7 +19229,7 @@ INSERT INTO Neurketak (
         85,
         89.3,
         1.77,
-        'Dena ondo.'
+        88, 'Dena ondo.'
     ),
     (
         83,
@@ -19183,7 +19239,7 @@ INSERT INTO Neurketak (
         92,
         65.4,
         1.80,
-        'Dena ondo.'
+        78, 'Dena ondo.'
     ),
     (
         84,
@@ -19193,7 +19249,7 @@ INSERT INTO Neurketak (
         84,
         78.4,
         1.67,
-        'Apur bat nekatuta.'
+        73, 'Apur bat nekatuta.'
     ),
     (
         85,
@@ -19203,7 +19259,7 @@ INSERT INTO Neurketak (
         83,
         80.8,
         1.72,
-        'Dena ondo.'
+        86, 'Dena ondo.'
     ),
     (
         88,
@@ -19213,7 +19269,7 @@ INSERT INTO Neurketak (
         83,
         89.9,
         1.81,
-        'Baraualdian.'
+        65, 'Baraualdian.'
     ),
     (
         89,
@@ -19223,7 +19279,7 @@ INSERT INTO Neurketak (
         79,
         90.7,
         1.84,
-        'Ondo sentitzen naiz.'
+        88, 'Ondo sentitzen naiz.'
     ),
     (
         90,
@@ -19233,7 +19289,7 @@ INSERT INTO Neurketak (
         82,
         65.2,
         1.60,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         91,
@@ -19243,7 +19299,7 @@ INSERT INTO Neurketak (
         79,
         90.0,
         1.58,
-        'Gosariaren ondoren.'
+        90, 'Gosariaren ondoren.'
     ),
     (
         92,
@@ -19253,7 +19309,7 @@ INSERT INTO Neurketak (
         79,
         59.9,
         1.79,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         93,
@@ -19263,7 +19319,7 @@ INSERT INTO Neurketak (
         86,
         76.9,
         1.81,
-        'Gosariaren ondoren.'
+        66, 'Gosariaren ondoren.'
     ),
     (
         94,
@@ -19273,7 +19329,7 @@ INSERT INTO Neurketak (
         78,
         86.2,
         1.83,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         95,
@@ -19283,7 +19339,7 @@ INSERT INTO Neurketak (
         84,
         89.0,
         1.77,
-        'Ondo sentitzen naiz.'
+        78, 'Ondo sentitzen naiz.'
     ),
     (
         96,
@@ -19293,7 +19349,7 @@ INSERT INTO Neurketak (
         86,
         76.0,
         1.71,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         97,
@@ -19303,7 +19359,7 @@ INSERT INTO Neurketak (
         71,
         87.8,
         1.56,
-        'Dena ondo.'
+        83, 'Dena ondo.'
     ),
     (
         98,
@@ -19313,7 +19369,7 @@ INSERT INTO Neurketak (
         84,
         84.0,
         1.60,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         99,
@@ -19323,7 +19379,7 @@ INSERT INTO Neurketak (
         73,
         85.1,
         1.71,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         100,
@@ -19333,7 +19389,7 @@ INSERT INTO Neurketak (
         77,
         81.0,
         1.57,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         52,
@@ -19343,7 +19399,7 @@ INSERT INTO Neurketak (
         79,
         93.3,
         1.77,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         53,
@@ -19353,7 +19409,7 @@ INSERT INTO Neurketak (
         86,
         74.8,
         1.75,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         54,
@@ -19363,7 +19419,7 @@ INSERT INTO Neurketak (
         74,
         86.5,
         1.60,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         55,
@@ -19373,7 +19429,7 @@ INSERT INTO Neurketak (
         86,
         81.4,
         1.76,
-        'Apur bat nekatuta.'
+        73, 'Apur bat nekatuta.'
     ),
     (
         56,
@@ -19383,7 +19439,7 @@ INSERT INTO Neurketak (
         86,
         90.6,
         1.61,
-        'Kirola egin ondoren.'
+        80, 'Kirola egin ondoren.'
     ),
     (
         57,
@@ -19393,7 +19449,7 @@ INSERT INTO Neurketak (
         81,
         83.6,
         1.69,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         58,
@@ -19403,7 +19459,7 @@ INSERT INTO Neurketak (
         88,
         67.3,
         1.68,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         59,
@@ -19413,7 +19469,7 @@ INSERT INTO Neurketak (
         85,
         62.0,
         1.73,
-        'Gosariaren ondoren.'
+        88, 'Gosariaren ondoren.'
     ),
     (
         61,
@@ -19423,7 +19479,7 @@ INSERT INTO Neurketak (
         91,
         73.1,
         1.83,
-        'Dena ondo.'
+        65, 'Dena ondo.'
     ),
     (
         62,
@@ -19433,7 +19489,7 @@ INSERT INTO Neurketak (
         73,
         65.0,
         1.56,
-        'Dena ondo.'
+        72, 'Dena ondo.'
     ),
     (
         64,
@@ -19443,7 +19499,7 @@ INSERT INTO Neurketak (
         81,
         95.7,
         1.56,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         65,
@@ -19453,7 +19509,7 @@ INSERT INTO Neurketak (
         85,
         90.5,
         1.55,
-        'Gaur goizean neurtuta.'
+        87, 'Gaur goizean neurtuta.'
     ),
     (
         66,
@@ -19463,7 +19519,7 @@ INSERT INTO Neurketak (
         76,
         74.3,
         1.59,
-        'Gosariaren ondoren.'
+        65, 'Gosariaren ondoren.'
     ),
     (
         67,
@@ -19473,7 +19529,7 @@ INSERT INTO Neurketak (
         76,
         71.4,
         1.72,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         68,
@@ -19483,7 +19539,7 @@ INSERT INTO Neurketak (
         78,
         61.2,
         1.85,
-        'Baraualdian.'
+        76, 'Baraualdian.'
     ),
     (
         69,
@@ -19493,7 +19549,7 @@ INSERT INTO Neurketak (
         80,
         94.3,
         1.66,
-        'Kirola egin ondoren.'
+        93, 'Kirola egin ondoren.'
     ),
     (
         70,
@@ -19503,7 +19559,7 @@ INSERT INTO Neurketak (
         89,
         76.0,
         1.70,
-        'Ondo sentitzen naiz.'
+        80, 'Ondo sentitzen naiz.'
     ),
     (
         71,
@@ -19513,7 +19569,7 @@ INSERT INTO Neurketak (
         78,
         89.5,
         1.63,
-        'Apur bat nekatuta.'
+        81, 'Apur bat nekatuta.'
     ),
     (
         72,
@@ -19523,7 +19579,7 @@ INSERT INTO Neurketak (
         84,
         93.0,
         1.69,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         74,
@@ -19533,7 +19589,7 @@ INSERT INTO Neurketak (
         76,
         63.5,
         1.67,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         75,
@@ -19543,7 +19599,7 @@ INSERT INTO Neurketak (
         79,
         61.0,
         1.65,
-        'Kirola egin ondoren.'
+        81, 'Kirola egin ondoren.'
     ),
     (
         77,
@@ -19553,7 +19609,7 @@ INSERT INTO Neurketak (
         88,
         67.0,
         1.67,
-        'Kirola egin ondoren.'
+        76, 'Kirola egin ondoren.'
     ),
     (
         78,
@@ -19563,7 +19619,7 @@ INSERT INTO Neurketak (
         74,
         63.7,
         1.61,
-        'Ondo sentitzen naiz.'
+        92, 'Ondo sentitzen naiz.'
     ),
     (
         80,
@@ -19573,7 +19629,7 @@ INSERT INTO Neurketak (
         83,
         63.6,
         1.78,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         82,
@@ -19583,7 +19639,7 @@ INSERT INTO Neurketak (
         84,
         88.6,
         1.77,
-        'Gosariaren ondoren.'
+        76, 'Gosariaren ondoren.'
     ),
     (
         83,
@@ -19593,7 +19649,7 @@ INSERT INTO Neurketak (
         86,
         65.3,
         1.80,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         85,
@@ -19603,7 +19659,7 @@ INSERT INTO Neurketak (
         90,
         80.6,
         1.72,
-        'Baraualdian.'
+        89, 'Baraualdian.'
     ),
     (
         87,
@@ -19613,7 +19669,7 @@ INSERT INTO Neurketak (
         83,
         72.7,
         1.61,
-        'Baraualdian.'
+        76, 'Baraualdian.'
     ),
     (
         88,
@@ -19623,7 +19679,7 @@ INSERT INTO Neurketak (
         76,
         89.0,
         1.81,
-        'Ondo sentitzen naiz.'
+        90, 'Ondo sentitzen naiz.'
     ),
     (
         90,
@@ -19633,7 +19689,7 @@ INSERT INTO Neurketak (
         92,
         66.9,
         1.60,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         93,
@@ -19643,7 +19699,7 @@ INSERT INTO Neurketak (
         84,
         76.6,
         1.81,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         94,
@@ -19653,7 +19709,7 @@ INSERT INTO Neurketak (
         77,
         86.7,
         1.83,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         95,
@@ -19663,7 +19719,7 @@ INSERT INTO Neurketak (
         83,
         89.1,
         1.77,
-        'Ondo sentitzen naiz.'
+        90, 'Ondo sentitzen naiz.'
     ),
     (
         96,
@@ -19673,7 +19729,7 @@ INSERT INTO Neurketak (
         85,
         76.2,
         1.71,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         97,
@@ -19683,7 +19739,7 @@ INSERT INTO Neurketak (
         74,
         86.2,
         1.56,
-        'Gosariaren ondoren.'
+        93, 'Gosariaren ondoren.'
     ),
     (
         98,
@@ -19693,7 +19749,7 @@ INSERT INTO Neurketak (
         82,
         84.2,
         1.60,
-        'Gosariaren ondoren.'
+        72, 'Gosariaren ondoren.'
     ),
     (
         100,
@@ -19703,7 +19759,7 @@ INSERT INTO Neurketak (
         75,
         81.4,
         1.57,
-        'Baraualdian.'
+        86, 'Baraualdian.'
     ),
     (
         51,
@@ -19713,7 +19769,7 @@ INSERT INTO Neurketak (
         88,
         63.4,
         1.76,
-        'Baraualdian.'
+        93, 'Baraualdian.'
     ),
     (
         52,
@@ -19723,7 +19779,7 @@ INSERT INTO Neurketak (
         91,
         94.0,
         1.77,
-        'Dena ondo.'
+        92, 'Dena ondo.'
     ),
     (
         53,
@@ -19733,7 +19789,7 @@ INSERT INTO Neurketak (
         88,
         75.8,
         1.75,
-        'Gosariaren ondoren.'
+        87, 'Gosariaren ondoren.'
     ),
     (
         54,
@@ -19743,7 +19799,7 @@ INSERT INTO Neurketak (
         84,
         86.1,
         1.60,
-        'Kirola egin ondoren.'
+        81, 'Kirola egin ondoren.'
     ),
     (
         55,
@@ -19753,7 +19809,7 @@ INSERT INTO Neurketak (
         85,
         80.8,
         1.76,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         56,
@@ -19763,7 +19819,7 @@ INSERT INTO Neurketak (
         88,
         89.4,
         1.61,
-        'Gosariaren ondoren.'
+        67, 'Gosariaren ondoren.'
     ),
     (
         57,
@@ -19773,7 +19829,7 @@ INSERT INTO Neurketak (
         84,
         83.3,
         1.69,
-        'Gosariaren ondoren.'
+        90, 'Gosariaren ondoren.'
     ),
     (
         60,
@@ -19783,7 +19839,7 @@ INSERT INTO Neurketak (
         93,
         78.0,
         1.81,
-        'Gosariaren ondoren.'
+        74, 'Gosariaren ondoren.'
     ),
     (
         62,
@@ -19793,7 +19849,7 @@ INSERT INTO Neurketak (
         82,
         66.1,
         1.56,
-        'Gosariaren ondoren.'
+        91, 'Gosariaren ondoren.'
     ),
     (
         64,
@@ -19803,7 +19859,7 @@ INSERT INTO Neurketak (
         84,
         95.0,
         1.56,
-        'Ondo sentitzen naiz.'
+        87, 'Ondo sentitzen naiz.'
     ),
     (
         66,
@@ -19813,7 +19869,7 @@ INSERT INTO Neurketak (
         81,
         74.8,
         1.59,
-        'Kirola egin ondoren.'
+        78, 'Kirola egin ondoren.'
     ),
     (
         67,
@@ -19823,7 +19879,7 @@ INSERT INTO Neurketak (
         80,
         72.6,
         1.72,
-        'Dena ondo.'
+        73, 'Dena ondo.'
     ),
     (
         68,
@@ -19833,7 +19889,7 @@ INSERT INTO Neurketak (
         73,
         60.2,
         1.85,
-        'Gaur goizean neurtuta.'
+        87, 'Gaur goizean neurtuta.'
     ),
     (
         69,
@@ -19843,7 +19899,7 @@ INSERT INTO Neurketak (
         80,
         95.3,
         1.66,
-        'Dena ondo.'
+        92, 'Dena ondo.'
     ),
     (
         70,
@@ -19853,7 +19909,7 @@ INSERT INTO Neurketak (
         79,
         75.1,
         1.70,
-        'Apur bat nekatuta.'
+        71, 'Apur bat nekatuta.'
     ),
     (
         71,
@@ -19863,7 +19919,7 @@ INSERT INTO Neurketak (
         79,
         89.5,
         1.63,
-        'Kirola egin ondoren.'
+        80, 'Kirola egin ondoren.'
     ),
     (
         72,
@@ -19873,7 +19929,7 @@ INSERT INTO Neurketak (
         84,
         92.4,
         1.69,
-        'Kirola egin ondoren.'
+        81, 'Kirola egin ondoren.'
     ),
     (
         73,
@@ -19883,7 +19939,7 @@ INSERT INTO Neurketak (
         71,
         95.9,
         1.55,
-        'Kirola egin ondoren.'
+        67, 'Kirola egin ondoren.'
     ),
     (
         74,
@@ -19893,7 +19949,7 @@ INSERT INTO Neurketak (
         78,
         63.3,
         1.67,
-        'Baraualdian.'
+        79, 'Baraualdian.'
     ),
     (
         75,
@@ -19903,7 +19959,7 @@ INSERT INTO Neurketak (
         83,
         60.4,
         1.65,
-        'Dena ondo.'
+        70, 'Dena ondo.'
     ),
     (
         78,
@@ -19913,7 +19969,7 @@ INSERT INTO Neurketak (
         82,
         63.0,
         1.61,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         79,
@@ -19923,7 +19979,7 @@ INSERT INTO Neurketak (
         88,
         66.0,
         1.67,
-        'Dena ondo.'
+        90, 'Dena ondo.'
     ),
     (
         80,
@@ -19933,7 +19989,7 @@ INSERT INTO Neurketak (
         79,
         62.9,
         1.78,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         83,
@@ -19943,7 +19999,7 @@ INSERT INTO Neurketak (
         86,
         65.3,
         1.80,
-        'Gaur goizean neurtuta.'
+        86, 'Gaur goizean neurtuta.'
     ),
     (
         85,
@@ -19953,7 +20009,7 @@ INSERT INTO Neurketak (
         80,
         81.1,
         1.72,
-        'Gaur goizean neurtuta.'
+        91, 'Gaur goizean neurtuta.'
     ),
     (
         86,
@@ -19963,7 +20019,7 @@ INSERT INTO Neurketak (
         73,
         68.0,
         1.57,
-        'Apur bat nekatuta.'
+        85, 'Apur bat nekatuta.'
     ),
     (
         87,
@@ -19973,7 +20029,7 @@ INSERT INTO Neurketak (
         81,
         73.3,
         1.61,
-        'Apur bat nekatuta.'
+        92, 'Apur bat nekatuta.'
     ),
     (
         88,
@@ -19983,7 +20039,7 @@ INSERT INTO Neurketak (
         83,
         90.8,
         1.81,
-        'Gosariaren ondoren.'
+        76, 'Gosariaren ondoren.'
     ),
     (
         89,
@@ -19993,7 +20049,7 @@ INSERT INTO Neurketak (
         84,
         90.1,
         1.84,
-        'Gosariaren ondoren.'
+        67, 'Gosariaren ondoren.'
     ),
     (
         90,
@@ -20003,7 +20059,7 @@ INSERT INTO Neurketak (
         86,
         65.1,
         1.60,
-        'Gaur goizean neurtuta.'
+        78, 'Gaur goizean neurtuta.'
     ),
     (
         91,
@@ -20013,7 +20069,7 @@ INSERT INTO Neurketak (
         81,
         90.6,
         1.58,
-        'Apur bat nekatuta.'
+        75, 'Apur bat nekatuta.'
     ),
     (
         93,
@@ -20023,7 +20079,7 @@ INSERT INTO Neurketak (
         80,
         76.2,
         1.81,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         94,
@@ -20033,7 +20089,7 @@ INSERT INTO Neurketak (
         82,
         86.5,
         1.83,
-        'Kirola egin ondoren.'
+        74, 'Kirola egin ondoren.'
     ),
     (
         97,
@@ -20043,7 +20099,7 @@ INSERT INTO Neurketak (
         86,
         86.7,
         1.56,
-        'Gaur goizean neurtuta.'
+        66, 'Gaur goizean neurtuta.'
     ),
     (
         98,
@@ -20053,7 +20109,7 @@ INSERT INTO Neurketak (
         76,
         84.6,
         1.60,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         100,
@@ -20063,7 +20119,7 @@ INSERT INTO Neurketak (
         84,
         81.9,
         1.57,
-        'Baraualdian.'
+        91, 'Baraualdian.'
     ),
     (
         52,
@@ -20073,7 +20129,7 @@ INSERT INTO Neurketak (
         94,
         94.1,
         1.77,
-        'Baraualdian.'
+        80, 'Baraualdian.'
     ),
     (
         54,
@@ -20083,7 +20139,7 @@ INSERT INTO Neurketak (
         88,
         87.6,
         1.60,
-        'Apur bat nekatuta.'
+        67, 'Apur bat nekatuta.'
     ),
     (
         55,
@@ -20093,7 +20149,7 @@ INSERT INTO Neurketak (
         77,
         80.7,
         1.76,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         56,
@@ -20103,7 +20159,7 @@ INSERT INTO Neurketak (
         79,
         89.2,
         1.61,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         57,
@@ -20113,7 +20169,7 @@ INSERT INTO Neurketak (
         83,
         83.3,
         1.69,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         58,
@@ -20123,7 +20179,7 @@ INSERT INTO Neurketak (
         76,
         67.3,
         1.68,
-        'Apur bat nekatuta.'
+        93, 'Apur bat nekatuta.'
     ),
     (
         59,
@@ -20133,7 +20189,7 @@ INSERT INTO Neurketak (
         82,
         64.0,
         1.73,
-        'Apur bat nekatuta.'
+        83, 'Apur bat nekatuta.'
     ),
     (
         60,
@@ -20143,7 +20199,7 @@ INSERT INTO Neurketak (
         88,
         78.2,
         1.81,
-        'Gosariaren ondoren.'
+        80, 'Gosariaren ondoren.'
     ),
     (
         61,
@@ -20153,7 +20209,7 @@ INSERT INTO Neurketak (
         93,
         72.5,
         1.83,
-        'Gosariaren ondoren.'
+        67, 'Gosariaren ondoren.'
     ),
     (
         62,
@@ -20163,7 +20219,7 @@ INSERT INTO Neurketak (
         74,
         65.6,
         1.56,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         63,
@@ -20173,7 +20229,7 @@ INSERT INTO Neurketak (
         81,
         81.9,
         1.80,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         64,
@@ -20183,7 +20239,7 @@ INSERT INTO Neurketak (
         85,
         94.8,
         1.56,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         65,
@@ -20193,7 +20249,7 @@ INSERT INTO Neurketak (
         91,
         91.9,
         1.55,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         66,
@@ -20203,7 +20259,7 @@ INSERT INTO Neurketak (
         79,
         75.7,
         1.59,
-        'Kirola egin ondoren.'
+        83, 'Kirola egin ondoren.'
     ),
     (
         67,
@@ -20213,7 +20269,7 @@ INSERT INTO Neurketak (
         87,
         72.7,
         1.72,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         68,
@@ -20223,7 +20279,7 @@ INSERT INTO Neurketak (
         84,
         60.5,
         1.85,
-        'Gaur goizean neurtuta.'
+        92, 'Gaur goizean neurtuta.'
     ),
     (
         69,
@@ -20233,7 +20289,7 @@ INSERT INTO Neurketak (
         90,
         94.8,
         1.66,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         70,
@@ -20243,7 +20299,7 @@ INSERT INTO Neurketak (
         81,
         74.6,
         1.70,
-        'Apur bat nekatuta.'
+        85, 'Apur bat nekatuta.'
     ),
     (
         71,
@@ -20253,7 +20309,7 @@ INSERT INTO Neurketak (
         72,
         89.1,
         1.63,
-        'Baraualdian.'
+        91, 'Baraualdian.'
     ),
     (
         72,
@@ -20263,7 +20319,7 @@ INSERT INTO Neurketak (
         77,
         92.5,
         1.69,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         73,
@@ -20273,7 +20329,7 @@ INSERT INTO Neurketak (
         86,
         95.7,
         1.55,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         74,
@@ -20283,7 +20339,7 @@ INSERT INTO Neurketak (
         78,
         64.8,
         1.67,
-        'Ondo sentitzen naiz.'
+        94, 'Ondo sentitzen naiz.'
     ),
     (
         75,
@@ -20293,7 +20349,7 @@ INSERT INTO Neurketak (
         85,
         60.3,
         1.65,
-        'Baraualdian.'
+        68, 'Baraualdian.'
     ),
     (
         76,
@@ -20303,7 +20359,7 @@ INSERT INTO Neurketak (
         83,
         66.7,
         1.69,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         77,
@@ -20313,7 +20369,7 @@ INSERT INTO Neurketak (
         92,
         67.1,
         1.67,
-        'Ondo sentitzen naiz.'
+        74, 'Ondo sentitzen naiz.'
     ),
     (
         79,
@@ -20323,7 +20379,7 @@ INSERT INTO Neurketak (
         76,
         67.9,
         1.67,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         81,
@@ -20333,7 +20389,7 @@ INSERT INTO Neurketak (
         95,
         86.2,
         1.58,
-        'Dena ondo.'
+        73, 'Dena ondo.'
     ),
     (
         82,
@@ -20343,7 +20399,7 @@ INSERT INTO Neurketak (
         85,
         88.6,
         1.77,
-        'Baraualdian.'
+        66, 'Baraualdian.'
     ),
     (
         83,
@@ -20353,7 +20409,7 @@ INSERT INTO Neurketak (
         79,
         65.9,
         1.80,
-        'Apur bat nekatuta.'
+        75, 'Apur bat nekatuta.'
     ),
     (
         84,
@@ -20363,7 +20419,7 @@ INSERT INTO Neurketak (
         77,
         78.0,
         1.67,
-        'Gosariaren ondoren.'
+        76, 'Gosariaren ondoren.'
     ),
     (
         85,
@@ -20373,7 +20429,7 @@ INSERT INTO Neurketak (
         83,
         80.4,
         1.72,
-        'Gaur goizean neurtuta.'
+        88, 'Gaur goizean neurtuta.'
     ),
     (
         86,
@@ -20383,7 +20439,7 @@ INSERT INTO Neurketak (
         86,
         68.7,
         1.57,
-        'Gosariaren ondoren.'
+        67, 'Gosariaren ondoren.'
     ),
     (
         87,
@@ -20393,7 +20449,7 @@ INSERT INTO Neurketak (
         80,
         72.2,
         1.61,
-        'Kirola egin ondoren.'
+        74, 'Kirola egin ondoren.'
     ),
     (
         89,
@@ -20403,7 +20459,7 @@ INSERT INTO Neurketak (
         77,
         91.4,
         1.84,
-        'Baraualdian.'
+        85, 'Baraualdian.'
     ),
     (
         90,
@@ -20413,7 +20469,7 @@ INSERT INTO Neurketak (
         88,
         66.4,
         1.60,
-        'Baraualdian.'
+        74, 'Baraualdian.'
     ),
     (
         91,
@@ -20423,7 +20479,7 @@ INSERT INTO Neurketak (
         80,
         89.8,
         1.58,
-        'Kirola egin ondoren.'
+        74, 'Kirola egin ondoren.'
     ),
     (
         92,
@@ -20433,7 +20489,7 @@ INSERT INTO Neurketak (
         92,
         60.8,
         1.79,
-        'Ondo sentitzen naiz.'
+        79, 'Ondo sentitzen naiz.'
     ),
     (
         93,
@@ -20443,7 +20499,7 @@ INSERT INTO Neurketak (
         89,
         75.7,
         1.81,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         94,
@@ -20453,7 +20509,7 @@ INSERT INTO Neurketak (
         78,
         86.5,
         1.83,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         95,
@@ -20463,7 +20519,7 @@ INSERT INTO Neurketak (
         85,
         91.0,
         1.77,
-        'Gaur goizean neurtuta.'
+        74, 'Gaur goizean neurtuta.'
     ),
     (
         97,
@@ -20473,7 +20529,7 @@ INSERT INTO Neurketak (
         82,
         86.1,
         1.56,
-        'Baraualdian.'
+        93, 'Baraualdian.'
     ),
     (
         98,
@@ -20483,7 +20539,7 @@ INSERT INTO Neurketak (
         86,
         83.8,
         1.60,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         99,
@@ -20493,7 +20549,7 @@ INSERT INTO Neurketak (
         84,
         86.1,
         1.71,
-        'Apur bat nekatuta.'
+        85, 'Apur bat nekatuta.'
     ),
     (
         100,
@@ -20503,7 +20559,7 @@ INSERT INTO Neurketak (
         85,
         82.7,
         1.57,
-        'Gaur goizean neurtuta.'
+        74, 'Gaur goizean neurtuta.'
     ),
     (
         51,
@@ -20513,7 +20569,7 @@ INSERT INTO Neurketak (
         89,
         64.6,
         1.76,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         52,
@@ -20523,7 +20579,7 @@ INSERT INTO Neurketak (
         92,
         94.1,
         1.77,
-        'Apur bat nekatuta.'
+        71, 'Apur bat nekatuta.'
     ),
     (
         53,
@@ -20533,7 +20589,7 @@ INSERT INTO Neurketak (
         82,
         75.4,
         1.75,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         55,
@@ -20543,7 +20599,7 @@ INSERT INTO Neurketak (
         86,
         81.1,
         1.76,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         56,
@@ -20553,7 +20609,7 @@ INSERT INTO Neurketak (
         89,
         89.6,
         1.61,
-        'Kirola egin ondoren.'
+        75, 'Kirola egin ondoren.'
     ),
     (
         61,
@@ -20563,7 +20619,7 @@ INSERT INTO Neurketak (
         89,
         72.8,
         1.83,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         62,
@@ -20573,7 +20629,7 @@ INSERT INTO Neurketak (
         76,
         66.1,
         1.56,
-        'Dena ondo.'
+        93, 'Dena ondo.'
     ),
     (
         63,
@@ -20583,7 +20639,7 @@ INSERT INTO Neurketak (
         84,
         81.1,
         1.80,
-        'Gaur goizean neurtuta.'
+        71, 'Gaur goizean neurtuta.'
     ),
     (
         65,
@@ -20593,7 +20649,7 @@ INSERT INTO Neurketak (
         91,
         90.2,
         1.55,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         66,
@@ -20603,7 +20659,7 @@ INSERT INTO Neurketak (
         87,
         74.1,
         1.59,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         67,
@@ -20613,7 +20669,7 @@ INSERT INTO Neurketak (
         76,
         71.0,
         1.72,
-        'Gosariaren ondoren.'
+        85, 'Gosariaren ondoren.'
     ),
     (
         68,
@@ -20623,7 +20679,7 @@ INSERT INTO Neurketak (
         86,
         60.3,
         1.85,
-        'Gosariaren ondoren.'
+        70, 'Gosariaren ondoren.'
     ),
     (
         69,
@@ -20633,7 +20689,7 @@ INSERT INTO Neurketak (
         87,
         96.0,
         1.66,
-        'Gosariaren ondoren.'
+        71, 'Gosariaren ondoren.'
     ),
     (
         70,
@@ -20643,7 +20699,7 @@ INSERT INTO Neurketak (
         75,
         74.5,
         1.70,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         71,
@@ -20653,7 +20709,7 @@ INSERT INTO Neurketak (
         72,
         89.2,
         1.63,
-        'Gosariaren ondoren.'
+        81, 'Gosariaren ondoren.'
     ),
     (
         72,
@@ -20663,7 +20719,7 @@ INSERT INTO Neurketak (
         77,
         92.0,
         1.69,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         73,
@@ -20673,7 +20729,7 @@ INSERT INTO Neurketak (
         81,
         95.1,
         1.55,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         75,
@@ -20683,7 +20739,7 @@ INSERT INTO Neurketak (
         85,
         60.9,
         1.65,
-        'Apur bat nekatuta.'
+        91, 'Apur bat nekatuta.'
     ),
     (
         77,
@@ -20693,7 +20749,7 @@ INSERT INTO Neurketak (
         85,
         67.1,
         1.67,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         78,
@@ -20703,7 +20759,7 @@ INSERT INTO Neurketak (
         86,
         62.5,
         1.61,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         79,
@@ -20713,7 +20769,7 @@ INSERT INTO Neurketak (
         80,
         67.3,
         1.67,
-        'Kirola egin ondoren.'
+        71, 'Kirola egin ondoren.'
     ),
     (
         80,
@@ -20723,7 +20779,7 @@ INSERT INTO Neurketak (
         89,
         62.0,
         1.78,
-        'Gosariaren ondoren.'
+        66, 'Gosariaren ondoren.'
     ),
     (
         81,
@@ -20733,7 +20789,7 @@ INSERT INTO Neurketak (
         92,
         85.6,
         1.58,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         83,
@@ -20743,7 +20799,7 @@ INSERT INTO Neurketak (
         93,
         65.2,
         1.80,
-        'Ondo sentitzen naiz.'
+        87, 'Ondo sentitzen naiz.'
     ),
     (
         84,
@@ -20753,7 +20809,7 @@ INSERT INTO Neurketak (
         90,
         78.2,
         1.67,
-        'Gaur goizean neurtuta.'
+        92, 'Gaur goizean neurtuta.'
     ),
     (
         85,
@@ -20763,7 +20819,7 @@ INSERT INTO Neurketak (
         81,
         80.8,
         1.72,
-        'Kirola egin ondoren.'
+        83, 'Kirola egin ondoren.'
     ),
     (
         90,
@@ -20773,7 +20829,7 @@ INSERT INTO Neurketak (
         89,
         65.7,
         1.60,
-        'Ondo sentitzen naiz.'
+        66, 'Ondo sentitzen naiz.'
     ),
     (
         92,
@@ -20783,7 +20839,7 @@ INSERT INTO Neurketak (
         90,
         59.7,
         1.79,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         94,
@@ -20793,7 +20849,7 @@ INSERT INTO Neurketak (
         76,
         87.5,
         1.83,
-        'Gaur goizean neurtuta.'
+        94, 'Gaur goizean neurtuta.'
     ),
     (
         95,
@@ -20803,7 +20859,7 @@ INSERT INTO Neurketak (
         78,
         90.5,
         1.77,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         97,
@@ -20813,7 +20869,7 @@ INSERT INTO Neurketak (
         77,
         87.2,
         1.56,
-        'Kirola egin ondoren.'
+        75, 'Kirola egin ondoren.'
     ),
     (
         98,
@@ -20823,7 +20879,7 @@ INSERT INTO Neurketak (
         76,
         83.3,
         1.60,
-        'Apur bat nekatuta.'
+        65, 'Apur bat nekatuta.'
     ),
     (
         99,
@@ -20833,7 +20889,7 @@ INSERT INTO Neurketak (
         84,
         85.1,
         1.71,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         100,
@@ -20843,7 +20899,7 @@ INSERT INTO Neurketak (
         86,
         82.0,
         1.57,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         51,
@@ -20853,7 +20909,7 @@ INSERT INTO Neurketak (
         80,
         63.3,
         1.76,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         54,
@@ -20863,7 +20919,7 @@ INSERT INTO Neurketak (
         81,
         86.6,
         1.60,
-        'Baraualdian.'
+        76, 'Baraualdian.'
     ),
     (
         55,
@@ -20873,7 +20929,7 @@ INSERT INTO Neurketak (
         71,
         80.1,
         1.76,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         57,
@@ -20883,7 +20939,7 @@ INSERT INTO Neurketak (
         88,
         82.4,
         1.69,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         58,
@@ -20893,7 +20949,7 @@ INSERT INTO Neurketak (
         79,
         67.8,
         1.68,
-        'Gaur goizean neurtuta.'
+        87, 'Gaur goizean neurtuta.'
     ),
     (
         59,
@@ -20903,7 +20959,7 @@ INSERT INTO Neurketak (
         82,
         63.9,
         1.73,
-        'Apur bat nekatuta.'
+        91, 'Apur bat nekatuta.'
     ),
     (
         63,
@@ -20913,7 +20969,7 @@ INSERT INTO Neurketak (
         80,
         81.7,
         1.80,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         64,
@@ -20923,7 +20979,7 @@ INSERT INTO Neurketak (
         82,
         95.5,
         1.56,
-        'Baraualdian.'
+        74, 'Baraualdian.'
     ),
     (
         65,
@@ -20933,7 +20989,7 @@ INSERT INTO Neurketak (
         82,
         91.9,
         1.55,
-        'Apur bat nekatuta.'
+        88, 'Apur bat nekatuta.'
     ),
     (
         66,
@@ -20943,7 +20999,7 @@ INSERT INTO Neurketak (
         81,
         74.7,
         1.59,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         69,
@@ -20953,7 +21009,7 @@ INSERT INTO Neurketak (
         82,
         94.7,
         1.66,
-        'Apur bat nekatuta.'
+        93, 'Apur bat nekatuta.'
     ),
     (
         70,
@@ -20963,7 +21019,7 @@ INSERT INTO Neurketak (
         81,
         74.5,
         1.70,
-        'Ondo sentitzen naiz.'
+        66, 'Ondo sentitzen naiz.'
     ),
     (
         71,
@@ -20973,7 +21029,7 @@ INSERT INTO Neurketak (
         74,
         89.6,
         1.63,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         72,
@@ -20983,7 +21039,7 @@ INSERT INTO Neurketak (
         86,
         91.4,
         1.69,
-        'Kirola egin ondoren.'
+        78, 'Kirola egin ondoren.'
     ),
     (
         73,
@@ -20993,7 +21049,7 @@ INSERT INTO Neurketak (
         73,
         95.3,
         1.55,
-        'Dena ondo.'
+        68, 'Dena ondo.'
     ),
     (
         74,
@@ -21003,7 +21059,7 @@ INSERT INTO Neurketak (
         83,
         63.5,
         1.67,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         76,
@@ -21013,7 +21069,7 @@ INSERT INTO Neurketak (
         85,
         65.0,
         1.69,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         77,
@@ -21023,7 +21079,7 @@ INSERT INTO Neurketak (
         79,
         67.9,
         1.67,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         78,
@@ -21033,7 +21089,7 @@ INSERT INTO Neurketak (
         75,
         63.7,
         1.61,
-        'Dena ondo.'
+        68, 'Dena ondo.'
     ),
     (
         79,
@@ -21043,7 +21099,7 @@ INSERT INTO Neurketak (
         89,
         66.6,
         1.67,
-        'Gosariaren ondoren.'
+        66, 'Gosariaren ondoren.'
     ),
     (
         80,
@@ -21053,7 +21109,7 @@ INSERT INTO Neurketak (
         88,
         62.9,
         1.78,
-        'Dena ondo.'
+        85, 'Dena ondo.'
     ),
     (
         83,
@@ -21063,7 +21119,7 @@ INSERT INTO Neurketak (
         90,
         64.1,
         1.80,
-        'Gaur goizean neurtuta.'
+        70, 'Gaur goizean neurtuta.'
     ),
     (
         84,
@@ -21073,7 +21129,7 @@ INSERT INTO Neurketak (
         76,
         79.0,
         1.67,
-        'Ondo sentitzen naiz.'
+        85, 'Ondo sentitzen naiz.'
     ),
     (
         86,
@@ -21083,7 +21139,7 @@ INSERT INTO Neurketak (
         75,
         68.9,
         1.57,
-        'Apur bat nekatuta.'
+        73, 'Apur bat nekatuta.'
     ),
     (
         87,
@@ -21093,7 +21149,7 @@ INSERT INTO Neurketak (
         88,
         73.5,
         1.61,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         88,
@@ -21103,7 +21159,7 @@ INSERT INTO Neurketak (
         81,
         90.1,
         1.81,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         89,
@@ -21113,7 +21169,7 @@ INSERT INTO Neurketak (
         92,
         91.3,
         1.84,
-        'Kirola egin ondoren.'
+        90, 'Kirola egin ondoren.'
     ),
     (
         90,
@@ -21123,7 +21179,7 @@ INSERT INTO Neurketak (
         79,
         65.9,
         1.60,
-        'Baraualdian.'
+        68, 'Baraualdian.'
     ),
     (
         91,
@@ -21133,7 +21189,7 @@ INSERT INTO Neurketak (
         83,
         91.0,
         1.58,
-        'Baraualdian.'
+        89, 'Baraualdian.'
     ),
     (
         92,
@@ -21143,7 +21199,7 @@ INSERT INTO Neurketak (
         92,
         59.9,
         1.79,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         93,
@@ -21153,7 +21209,7 @@ INSERT INTO Neurketak (
         87,
         76.3,
         1.81,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         94,
@@ -21163,7 +21219,7 @@ INSERT INTO Neurketak (
         85,
         86.1,
         1.83,
-        'Baraualdian.'
+        91, 'Baraualdian.'
     ),
     (
         97,
@@ -21173,7 +21229,7 @@ INSERT INTO Neurketak (
         72,
         87.4,
         1.56,
-        'Kirola egin ondoren.'
+        68, 'Kirola egin ondoren.'
     ),
     (
         100,
@@ -21183,7 +21239,7 @@ INSERT INTO Neurketak (
         77,
         82.6,
         1.57,
-        'Ondo sentitzen naiz.'
+        69, 'Ondo sentitzen naiz.'
     ),
     (
         51,
@@ -21193,7 +21249,7 @@ INSERT INTO Neurketak (
         87,
         63.2,
         1.76,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         53,
@@ -21203,7 +21259,7 @@ INSERT INTO Neurketak (
         80,
         75.3,
         1.75,
-        'Dena ondo.'
+        68, 'Dena ondo.'
     ),
     (
         54,
@@ -21213,7 +21269,7 @@ INSERT INTO Neurketak (
         76,
         86.1,
         1.60,
-        'Dena ondo.'
+        74, 'Dena ondo.'
     ),
     (
         55,
@@ -21223,7 +21279,7 @@ INSERT INTO Neurketak (
         80,
         80.3,
         1.76,
-        'Apur bat nekatuta.'
+        72, 'Apur bat nekatuta.'
     ),
     (
         56,
@@ -21233,7 +21289,7 @@ INSERT INTO Neurketak (
         84,
         90.2,
         1.61,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         58,
@@ -21243,7 +21299,7 @@ INSERT INTO Neurketak (
         76,
         67.3,
         1.68,
-        'Ondo sentitzen naiz.'
+        88, 'Ondo sentitzen naiz.'
     ),
     (
         59,
@@ -21253,7 +21309,7 @@ INSERT INTO Neurketak (
         80,
         63.4,
         1.73,
-        'Ondo sentitzen naiz.'
+        90, 'Ondo sentitzen naiz.'
     ),
     (
         60,
@@ -21263,7 +21319,7 @@ INSERT INTO Neurketak (
         89,
         78.5,
         1.81,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         61,
@@ -21273,7 +21329,7 @@ INSERT INTO Neurketak (
         83,
         73.7,
         1.83,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         62,
@@ -21283,7 +21339,7 @@ INSERT INTO Neurketak (
         81,
         66.2,
         1.56,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         64,
@@ -21293,7 +21349,7 @@ INSERT INTO Neurketak (
         74,
         94.0,
         1.56,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         65,
@@ -21303,7 +21359,7 @@ INSERT INTO Neurketak (
         84,
         91.4,
         1.55,
-        'Kirola egin ondoren.'
+        75, 'Kirola egin ondoren.'
     ),
     (
         66,
@@ -21313,7 +21369,7 @@ INSERT INTO Neurketak (
         79,
         75.0,
         1.59,
-        'Dena ondo.'
+        94, 'Dena ondo.'
     ),
     (
         67,
@@ -21323,7 +21379,7 @@ INSERT INTO Neurketak (
         83,
         71.6,
         1.72,
-        'Kirola egin ondoren.'
+        93, 'Kirola egin ondoren.'
     ),
     (
         69,
@@ -21333,7 +21389,7 @@ INSERT INTO Neurketak (
         84,
         95.8,
         1.66,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         70,
@@ -21343,7 +21399,7 @@ INSERT INTO Neurketak (
         86,
         74.3,
         1.70,
-        'Baraualdian.'
+        68, 'Baraualdian.'
     ),
     (
         71,
@@ -21353,7 +21409,7 @@ INSERT INTO Neurketak (
         77,
         88.1,
         1.63,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         72,
@@ -21363,7 +21419,7 @@ INSERT INTO Neurketak (
         83,
         91.0,
         1.69,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         73,
@@ -21373,7 +21429,7 @@ INSERT INTO Neurketak (
         81,
         95.9,
         1.55,
-        'Gosariaren ondoren.'
+        82, 'Gosariaren ondoren.'
     ),
     (
         75,
@@ -21383,7 +21439,7 @@ INSERT INTO Neurketak (
         83,
         59.2,
         1.65,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         76,
@@ -21393,7 +21449,7 @@ INSERT INTO Neurketak (
         93,
         66.4,
         1.69,
-        'Ondo sentitzen naiz.'
+        71, 'Ondo sentitzen naiz.'
     ),
     (
         77,
@@ -21403,7 +21459,7 @@ INSERT INTO Neurketak (
         89,
         66.3,
         1.67,
-        'Kirola egin ondoren.'
+        88, 'Kirola egin ondoren.'
     ),
     (
         78,
@@ -21413,7 +21469,7 @@ INSERT INTO Neurketak (
         80,
         62.8,
         1.61,
-        'Gosariaren ondoren.'
+        83, 'Gosariaren ondoren.'
     ),
     (
         79,
@@ -21423,7 +21479,7 @@ INSERT INTO Neurketak (
         78,
         67.6,
         1.67,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         80,
@@ -21433,7 +21489,7 @@ INSERT INTO Neurketak (
         87,
         64.0,
         1.78,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         82,
@@ -21443,7 +21499,7 @@ INSERT INTO Neurketak (
         79,
         88.5,
         1.77,
-        'Gosariaren ondoren.'
+        86, 'Gosariaren ondoren.'
     ),
     (
         84,
@@ -21453,7 +21509,7 @@ INSERT INTO Neurketak (
         89,
         79.5,
         1.67,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         85,
@@ -21463,7 +21519,7 @@ INSERT INTO Neurketak (
         83,
         80.7,
         1.72,
-        'Gosariaren ondoren.'
+        74, 'Gosariaren ondoren.'
     ),
     (
         86,
@@ -21473,7 +21529,7 @@ INSERT INTO Neurketak (
         86,
         67.6,
         1.57,
-        'Kirola egin ondoren.'
+        94, 'Kirola egin ondoren.'
     ),
     (
         87,
@@ -21483,7 +21539,7 @@ INSERT INTO Neurketak (
         87,
         73.2,
         1.61,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         88,
@@ -21493,7 +21549,7 @@ INSERT INTO Neurketak (
         75,
         89.1,
         1.81,
-        'Apur bat nekatuta.'
+        86, 'Apur bat nekatuta.'
     ),
     (
         89,
@@ -21503,7 +21559,7 @@ INSERT INTO Neurketak (
         78,
         92.0,
         1.84,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         90,
@@ -21513,7 +21569,7 @@ INSERT INTO Neurketak (
         85,
         66.2,
         1.60,
-        'Kirola egin ondoren.'
+        93, 'Kirola egin ondoren.'
     ),
     (
         93,
@@ -21523,7 +21579,7 @@ INSERT INTO Neurketak (
         92,
         76.2,
         1.81,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         94,
@@ -21533,7 +21589,7 @@ INSERT INTO Neurketak (
         88,
         87.7,
         1.83,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         95,
@@ -21543,7 +21599,7 @@ INSERT INTO Neurketak (
         87,
         90.1,
         1.77,
-        'Ondo sentitzen naiz.'
+        89, 'Ondo sentitzen naiz.'
     ),
     (
         96,
@@ -21553,7 +21609,7 @@ INSERT INTO Neurketak (
         74,
         76.1,
         1.71,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         97,
@@ -21563,7 +21619,7 @@ INSERT INTO Neurketak (
         83,
         87.4,
         1.56,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         98,
@@ -21573,7 +21629,7 @@ INSERT INTO Neurketak (
         75,
         84.3,
         1.60,
-        'Kirola egin ondoren.'
+        83, 'Kirola egin ondoren.'
     ),
     (
         99,
@@ -21583,7 +21639,7 @@ INSERT INTO Neurketak (
         76,
         86.3,
         1.71,
-        'Ondo sentitzen naiz.'
+        89, 'Ondo sentitzen naiz.'
     ),
     (
         100,
@@ -21593,7 +21649,7 @@ INSERT INTO Neurketak (
         79,
         82.5,
         1.57,
-        'Apur bat nekatuta.'
+        84, 'Apur bat nekatuta.'
     ),
     (
         52,
@@ -21603,7 +21659,7 @@ INSERT INTO Neurketak (
         93,
         94.5,
         1.77,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         53,
@@ -21613,7 +21669,7 @@ INSERT INTO Neurketak (
         78,
         74.4,
         1.75,
-        'Baraualdian.'
+        73, 'Baraualdian.'
     ),
     (
         54,
@@ -21623,7 +21679,7 @@ INSERT INTO Neurketak (
         89,
         87.6,
         1.60,
-        'Ondo sentitzen naiz.'
+        93, 'Ondo sentitzen naiz.'
     ),
     (
         55,
@@ -21633,7 +21689,7 @@ INSERT INTO Neurketak (
         80,
         82.0,
         1.76,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         56,
@@ -21643,7 +21699,7 @@ INSERT INTO Neurketak (
         83,
         89.5,
         1.61,
-        'Apur bat nekatuta.'
+        83, 'Apur bat nekatuta.'
     ),
     (
         57,
@@ -21653,7 +21709,7 @@ INSERT INTO Neurketak (
         88,
         82.5,
         1.69,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         59,
@@ -21663,7 +21719,7 @@ INSERT INTO Neurketak (
         80,
         62.6,
         1.73,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         60,
@@ -21673,7 +21729,7 @@ INSERT INTO Neurketak (
         91,
         78.3,
         1.81,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         61,
@@ -21683,7 +21739,7 @@ INSERT INTO Neurketak (
         79,
         72.4,
         1.83,
-        'Kirola egin ondoren.'
+        83, 'Kirola egin ondoren.'
     ),
     (
         62,
@@ -21693,7 +21749,7 @@ INSERT INTO Neurketak (
         77,
         65.9,
         1.56,
-        'Apur bat nekatuta.'
+        69, 'Apur bat nekatuta.'
     ),
     (
         64,
@@ -21703,7 +21759,7 @@ INSERT INTO Neurketak (
         73,
         94.8,
         1.56,
-        'Ondo sentitzen naiz.'
+        92, 'Ondo sentitzen naiz.'
     ),
     (
         65,
@@ -21713,7 +21769,7 @@ INSERT INTO Neurketak (
         91,
         90.5,
         1.55,
-        'Apur bat nekatuta.'
+        69, 'Apur bat nekatuta.'
     ),
     (
         66,
@@ -21723,7 +21779,7 @@ INSERT INTO Neurketak (
         85,
         75.6,
         1.59,
-        'Kirola egin ondoren.'
+        68, 'Kirola egin ondoren.'
     ),
     (
         67,
@@ -21733,7 +21789,7 @@ INSERT INTO Neurketak (
         86,
         71.2,
         1.72,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         68,
@@ -21743,7 +21799,7 @@ INSERT INTO Neurketak (
         73,
         61.8,
         1.85,
-        'Gosariaren ondoren.'
+        74, 'Gosariaren ondoren.'
     ),
     (
         69,
@@ -21753,7 +21809,7 @@ INSERT INTO Neurketak (
         80,
         94.8,
         1.66,
-        'Ondo sentitzen naiz.'
+        68, 'Ondo sentitzen naiz.'
     ),
     (
         71,
@@ -21763,7 +21819,7 @@ INSERT INTO Neurketak (
         77,
         88.7,
         1.63,
-        'Dena ondo.'
+        70, 'Dena ondo.'
     ),
     (
         72,
@@ -21773,7 +21829,7 @@ INSERT INTO Neurketak (
         89,
         92.7,
         1.69,
-        'Ondo sentitzen naiz.'
+        66, 'Ondo sentitzen naiz.'
     ),
     (
         73,
@@ -21783,7 +21839,7 @@ INSERT INTO Neurketak (
         71,
         94.1,
         1.55,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         74,
@@ -21793,7 +21849,7 @@ INSERT INTO Neurketak (
         84,
         63.0,
         1.67,
-        'Gosariaren ondoren.'
+        66, 'Gosariaren ondoren.'
     ),
     (
         75,
@@ -21803,7 +21859,7 @@ INSERT INTO Neurketak (
         77,
         60.7,
         1.65,
-        'Ondo sentitzen naiz.'
+        82, 'Ondo sentitzen naiz.'
     ),
     (
         77,
@@ -21813,7 +21869,7 @@ INSERT INTO Neurketak (
         87,
         66.2,
         1.67,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         79,
@@ -21823,7 +21879,7 @@ INSERT INTO Neurketak (
         79,
         67.4,
         1.67,
-        'Gaur goizean neurtuta.'
+        91, 'Gaur goizean neurtuta.'
     ),
     (
         80,
@@ -21833,7 +21889,7 @@ INSERT INTO Neurketak (
         88,
         63.7,
         1.78,
-        'Kirola egin ondoren.'
+        74, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -21843,7 +21899,7 @@ INSERT INTO Neurketak (
         82,
         85.2,
         1.58,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         82,
@@ -21853,7 +21909,7 @@ INSERT INTO Neurketak (
         87,
         89.2,
         1.77,
-        'Dena ondo.'
+        68, 'Dena ondo.'
     ),
     (
         83,
@@ -21863,7 +21919,7 @@ INSERT INTO Neurketak (
         92,
         65.6,
         1.80,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         84,
@@ -21873,7 +21929,7 @@ INSERT INTO Neurketak (
         79,
         79.8,
         1.67,
-        'Baraualdian.'
+        93, 'Baraualdian.'
     ),
     (
         85,
@@ -21883,7 +21939,7 @@ INSERT INTO Neurketak (
         85,
         80.4,
         1.72,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         86,
@@ -21893,7 +21949,7 @@ INSERT INTO Neurketak (
         77,
         68.8,
         1.57,
-        'Gaur goizean neurtuta.'
+        78, 'Gaur goizean neurtuta.'
     ),
     (
         88,
@@ -21903,7 +21959,7 @@ INSERT INTO Neurketak (
         82,
         89.0,
         1.81,
-        'Apur bat nekatuta.'
+        78, 'Apur bat nekatuta.'
     ),
     (
         89,
@@ -21913,7 +21969,7 @@ INSERT INTO Neurketak (
         88,
         91.5,
         1.84,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         90,
@@ -21923,7 +21979,7 @@ INSERT INTO Neurketak (
         79,
         65.8,
         1.60,
-        'Ondo sentitzen naiz.'
+        84, 'Ondo sentitzen naiz.'
     ),
     (
         92,
@@ -21933,7 +21989,7 @@ INSERT INTO Neurketak (
         84,
         59.9,
         1.79,
-        'Ondo sentitzen naiz.'
+        88, 'Ondo sentitzen naiz.'
     ),
     (
         93,
@@ -21943,7 +21999,7 @@ INSERT INTO Neurketak (
         90,
         75.1,
         1.81,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         94,
@@ -21953,7 +22009,7 @@ INSERT INTO Neurketak (
         79,
         86.1,
         1.83,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         96,
@@ -21963,7 +22019,7 @@ INSERT INTO Neurketak (
         77,
         78.0,
         1.71,
-        'Ondo sentitzen naiz.'
+        78, 'Ondo sentitzen naiz.'
     ),
     (
         98,
@@ -21973,7 +22029,7 @@ INSERT INTO Neurketak (
         80,
         85.0,
         1.60,
-        'Kirola egin ondoren.'
+        80, 'Kirola egin ondoren.'
     ),
     (
         100,
@@ -21983,7 +22039,7 @@ INSERT INTO Neurketak (
         72,
         82.4,
         1.57,
-        'Apur bat nekatuta.'
+        73, 'Apur bat nekatuta.'
     ),
     (
         51,
@@ -21993,7 +22049,7 @@ INSERT INTO Neurketak (
         90,
         64.7,
         1.76,
-        'Gaur goizean neurtuta.'
+        94, 'Gaur goizean neurtuta.'
     ),
     (
         54,
@@ -22003,7 +22059,7 @@ INSERT INTO Neurketak (
         83,
         86.1,
         1.60,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         55,
@@ -22013,7 +22069,7 @@ INSERT INTO Neurketak (
         71,
         80.1,
         1.76,
-        'Apur bat nekatuta.'
+        89, 'Apur bat nekatuta.'
     ),
     (
         56,
@@ -22023,7 +22079,7 @@ INSERT INTO Neurketak (
         92,
         89.4,
         1.61,
-        'Gaur goizean neurtuta.'
+        91, 'Gaur goizean neurtuta.'
     ),
     (
         57,
@@ -22033,7 +22089,7 @@ INSERT INTO Neurketak (
         89,
         82.0,
         1.69,
-        'Ondo sentitzen naiz.'
+        88, 'Ondo sentitzen naiz.'
     ),
     (
         58,
@@ -22043,7 +22099,7 @@ INSERT INTO Neurketak (
         82,
         66.2,
         1.68,
-        'Gosariaren ondoren.'
+        77, 'Gosariaren ondoren.'
     ),
     (
         59,
@@ -22053,7 +22109,7 @@ INSERT INTO Neurketak (
         86,
         63.4,
         1.73,
-        'Gaur goizean neurtuta.'
+        72, 'Gaur goizean neurtuta.'
     ),
     (
         61,
@@ -22063,7 +22119,7 @@ INSERT INTO Neurketak (
         79,
         73.3,
         1.83,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         62,
@@ -22073,7 +22129,7 @@ INSERT INTO Neurketak (
         84,
         65.9,
         1.56,
-        'Apur bat nekatuta.'
+        94, 'Apur bat nekatuta.'
     ),
     (
         63,
@@ -22083,7 +22139,7 @@ INSERT INTO Neurketak (
         87,
         80.2,
         1.80,
-        'Baraualdian.'
+        84, 'Baraualdian.'
     ),
     (
         64,
@@ -22093,7 +22149,7 @@ INSERT INTO Neurketak (
         76,
         94.8,
         1.56,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         66,
@@ -22103,7 +22159,7 @@ INSERT INTO Neurketak (
         90,
         75.6,
         1.59,
-        'Gosariaren ondoren.'
+        67, 'Gosariaren ondoren.'
     ),
     (
         67,
@@ -22113,7 +22169,7 @@ INSERT INTO Neurketak (
         90,
         71.4,
         1.72,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         69,
@@ -22123,7 +22179,7 @@ INSERT INTO Neurketak (
         82,
         94.1,
         1.66,
-        'Kirola egin ondoren.'
+        66, 'Kirola egin ondoren.'
     ),
     (
         70,
@@ -22133,7 +22189,7 @@ INSERT INTO Neurketak (
         77,
         75.2,
         1.70,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         71,
@@ -22143,7 +22199,7 @@ INSERT INTO Neurketak (
         86,
         89.0,
         1.63,
-        'Gaur goizean neurtuta.'
+        72, 'Gaur goizean neurtuta.'
     ),
     (
         72,
@@ -22153,7 +22209,7 @@ INSERT INTO Neurketak (
         82,
         92.2,
         1.69,
-        'Ondo sentitzen naiz.'
+        86, 'Ondo sentitzen naiz.'
     ),
     (
         74,
@@ -22163,7 +22219,7 @@ INSERT INTO Neurketak (
         89,
         63.8,
         1.67,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         75,
@@ -22173,7 +22229,7 @@ INSERT INTO Neurketak (
         81,
         60.0,
         1.65,
-        'Ondo sentitzen naiz.'
+        68, 'Ondo sentitzen naiz.'
     ),
     (
         76,
@@ -22183,7 +22239,7 @@ INSERT INTO Neurketak (
         87,
         65.6,
         1.69,
-        'Gosariaren ondoren.'
+        78, 'Gosariaren ondoren.'
     ),
     (
         78,
@@ -22193,7 +22249,7 @@ INSERT INTO Neurketak (
         74,
         63.2,
         1.61,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         79,
@@ -22203,7 +22259,7 @@ INSERT INTO Neurketak (
         88,
         67.1,
         1.67,
-        'Baraualdian.'
+        79, 'Baraualdian.'
     ),
     (
         80,
@@ -22213,7 +22269,7 @@ INSERT INTO Neurketak (
         79,
         62.0,
         1.78,
-        'Kirola egin ondoren.'
+        71, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -22223,7 +22279,7 @@ INSERT INTO Neurketak (
         93,
         85.1,
         1.58,
-        'Apur bat nekatuta.'
+        76, 'Apur bat nekatuta.'
     ),
     (
         82,
@@ -22233,7 +22289,7 @@ INSERT INTO Neurketak (
         79,
         88.9,
         1.77,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         83,
@@ -22243,7 +22299,7 @@ INSERT INTO Neurketak (
         92,
         65.2,
         1.80,
-        'Baraualdian.'
+        75, 'Baraualdian.'
     ),
     (
         85,
@@ -22253,7 +22309,7 @@ INSERT INTO Neurketak (
         88,
         81.0,
         1.72,
-        'Ondo sentitzen naiz.'
+        92, 'Ondo sentitzen naiz.'
     ),
     (
         87,
@@ -22263,7 +22319,7 @@ INSERT INTO Neurketak (
         88,
         73.5,
         1.61,
-        'Kirola egin ondoren.'
+        76, 'Kirola egin ondoren.'
     ),
     (
         88,
@@ -22273,7 +22329,7 @@ INSERT INTO Neurketak (
         73,
         90.1,
         1.81,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         89,
@@ -22283,7 +22339,7 @@ INSERT INTO Neurketak (
         77,
         90.0,
         1.84,
-        'Gaur goizean neurtuta.'
+        92, 'Gaur goizean neurtuta.'
     ),
     (
         91,
@@ -22293,7 +22349,7 @@ INSERT INTO Neurketak (
         78,
         90.4,
         1.58,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         92,
@@ -22303,7 +22359,7 @@ INSERT INTO Neurketak (
         81,
         59.3,
         1.79,
-        'Apur bat nekatuta.'
+        88, 'Apur bat nekatuta.'
     ),
     (
         93,
@@ -22313,7 +22369,7 @@ INSERT INTO Neurketak (
         85,
         75.1,
         1.81,
-        'Gosariaren ondoren.'
+        89, 'Gosariaren ondoren.'
     ),
     (
         96,
@@ -22323,7 +22379,7 @@ INSERT INTO Neurketak (
         80,
         76.9,
         1.71,
-        'Apur bat nekatuta.'
+        76, 'Apur bat nekatuta.'
     ),
     (
         97,
@@ -22333,7 +22389,7 @@ INSERT INTO Neurketak (
         71,
         87.2,
         1.56,
-        'Gosariaren ondoren.'
+        85, 'Gosariaren ondoren.'
     ),
     (
         99,
@@ -22343,7 +22399,7 @@ INSERT INTO Neurketak (
         79,
         86.7,
         1.71,
-        'Gosariaren ondoren.'
+        89, 'Gosariaren ondoren.'
     ),
     (
         100,
@@ -22353,7 +22409,7 @@ INSERT INTO Neurketak (
         85,
         81.3,
         1.57,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         52,
@@ -22363,7 +22419,7 @@ INSERT INTO Neurketak (
         91,
         94.0,
         1.77,
-        'Baraualdian.'
+        89, 'Baraualdian.'
     ),
     (
         53,
@@ -22373,7 +22429,7 @@ INSERT INTO Neurketak (
         91,
         75.7,
         1.75,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         54,
@@ -22383,7 +22439,7 @@ INSERT INTO Neurketak (
         84,
         86.0,
         1.60,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         55,
@@ -22393,7 +22449,7 @@ INSERT INTO Neurketak (
         76,
         81.9,
         1.76,
-        'Baraualdian.'
+        94, 'Baraualdian.'
     ),
     (
         56,
@@ -22403,7 +22459,7 @@ INSERT INTO Neurketak (
         82,
         90.4,
         1.61,
-        'Ondo sentitzen naiz.'
+        84, 'Ondo sentitzen naiz.'
     ),
     (
         57,
@@ -22413,7 +22469,7 @@ INSERT INTO Neurketak (
         84,
         83.3,
         1.69,
-        'Baraualdian.'
+        93, 'Baraualdian.'
     ),
     (
         58,
@@ -22423,7 +22479,7 @@ INSERT INTO Neurketak (
         87,
         67.6,
         1.68,
-        'Apur bat nekatuta.'
+        73, 'Apur bat nekatuta.'
     ),
     (
         59,
@@ -22433,7 +22489,7 @@ INSERT INTO Neurketak (
         85,
         63.8,
         1.73,
-        'Gosariaren ondoren.'
+        78, 'Gosariaren ondoren.'
     ),
     (
         60,
@@ -22443,7 +22499,7 @@ INSERT INTO Neurketak (
         88,
         77.9,
         1.81,
-        'Gaur goizean neurtuta.'
+        94, 'Gaur goizean neurtuta.'
     ),
     (
         61,
@@ -22453,7 +22509,7 @@ INSERT INTO Neurketak (
         87,
         72.6,
         1.83,
-        'Dena ondo.'
+        78, 'Dena ondo.'
     ),
     (
         62,
@@ -22463,7 +22519,7 @@ INSERT INTO Neurketak (
         80,
         65.2,
         1.56,
-        'Dena ondo.'
+        86, 'Dena ondo.'
     ),
     (
         64,
@@ -22473,7 +22529,7 @@ INSERT INTO Neurketak (
         88,
         94.4,
         1.56,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         68,
@@ -22483,7 +22539,7 @@ INSERT INTO Neurketak (
         80,
         62.0,
         1.85,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         69,
@@ -22493,7 +22549,7 @@ INSERT INTO Neurketak (
         78,
         95.5,
         1.66,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         70,
@@ -22503,7 +22559,7 @@ INSERT INTO Neurketak (
         76,
         74.5,
         1.70,
-        'Kirola egin ondoren.'
+        67, 'Kirola egin ondoren.'
     ),
     (
         72,
@@ -22513,7 +22569,7 @@ INSERT INTO Neurketak (
         74,
         92.6,
         1.69,
-        'Apur bat nekatuta.'
+        75, 'Apur bat nekatuta.'
     ),
     (
         73,
@@ -22523,7 +22579,7 @@ INSERT INTO Neurketak (
         76,
         94.5,
         1.55,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         75,
@@ -22533,7 +22589,7 @@ INSERT INTO Neurketak (
         75,
         59.2,
         1.65,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         76,
@@ -22543,7 +22599,7 @@ INSERT INTO Neurketak (
         81,
         65.3,
         1.69,
-        'Gaur goizean neurtuta.'
+        70, 'Gaur goizean neurtuta.'
     ),
     (
         77,
@@ -22553,7 +22609,7 @@ INSERT INTO Neurketak (
         90,
         66.0,
         1.67,
-        'Apur bat nekatuta.'
+        89, 'Apur bat nekatuta.'
     ),
     (
         79,
@@ -22563,7 +22619,7 @@ INSERT INTO Neurketak (
         77,
         66.6,
         1.67,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         80,
@@ -22573,7 +22629,7 @@ INSERT INTO Neurketak (
         81,
         62.7,
         1.78,
-        'Kirola egin ondoren.'
+        91, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -22583,7 +22639,7 @@ INSERT INTO Neurketak (
         86,
         86.4,
         1.58,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         82,
@@ -22593,7 +22649,7 @@ INSERT INTO Neurketak (
         84,
         88.7,
         1.77,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         83,
@@ -22603,7 +22659,7 @@ INSERT INTO Neurketak (
         89,
         65.4,
         1.80,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         84,
@@ -22613,7 +22669,7 @@ INSERT INTO Neurketak (
         81,
         79.6,
         1.67,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         85,
@@ -22623,7 +22679,7 @@ INSERT INTO Neurketak (
         82,
         80.5,
         1.72,
-        'Ondo sentitzen naiz.'
+        77, 'Ondo sentitzen naiz.'
     ),
     (
         86,
@@ -22633,7 +22689,7 @@ INSERT INTO Neurketak (
         73,
         68.0,
         1.57,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         88,
@@ -22643,7 +22699,7 @@ INSERT INTO Neurketak (
         79,
         89.2,
         1.81,
-        'Dena ondo.'
+        72, 'Dena ondo.'
     ),
     (
         89,
@@ -22653,7 +22709,7 @@ INSERT INTO Neurketak (
         78,
         90.8,
         1.84,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         90,
@@ -22663,7 +22719,7 @@ INSERT INTO Neurketak (
         93,
         65.7,
         1.60,
-        'Apur bat nekatuta.'
+        72, 'Apur bat nekatuta.'
     ),
     (
         91,
@@ -22673,7 +22729,7 @@ INSERT INTO Neurketak (
         77,
         90.8,
         1.58,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         92,
@@ -22683,7 +22739,7 @@ INSERT INTO Neurketak (
         90,
         60.8,
         1.79,
-        'Baraualdian.'
+        86, 'Baraualdian.'
     ),
     (
         93,
@@ -22693,7 +22749,7 @@ INSERT INTO Neurketak (
         90,
         76.9,
         1.81,
-        'Dena ondo.'
+        73, 'Dena ondo.'
     ),
     (
         95,
@@ -22703,7 +22759,7 @@ INSERT INTO Neurketak (
         79,
         89.0,
         1.77,
-        'Gaur goizean neurtuta.'
+        86, 'Gaur goizean neurtuta.'
     ),
     (
         96,
@@ -22713,7 +22769,7 @@ INSERT INTO Neurketak (
         82,
         77.1,
         1.71,
-        'Kirola egin ondoren.'
+        87, 'Kirola egin ondoren.'
     ),
     (
         97,
@@ -22723,7 +22779,7 @@ INSERT INTO Neurketak (
         86,
         87.3,
         1.56,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         98,
@@ -22733,7 +22789,7 @@ INSERT INTO Neurketak (
         78,
         84.6,
         1.60,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         99,
@@ -22743,7 +22799,7 @@ INSERT INTO Neurketak (
         77,
         86.9,
         1.71,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         51,
@@ -22753,7 +22809,7 @@ INSERT INTO Neurketak (
         78,
         64.4,
         1.76,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         52,
@@ -22763,7 +22819,7 @@ INSERT INTO Neurketak (
         87,
         94.7,
         1.77,
-        'Ondo sentitzen naiz.'
+        82, 'Ondo sentitzen naiz.'
     ),
     (
         54,
@@ -22773,7 +22829,7 @@ INSERT INTO Neurketak (
         89,
         87.7,
         1.60,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         55,
@@ -22783,7 +22839,7 @@ INSERT INTO Neurketak (
         78,
         80.4,
         1.76,
-        'Gaur goizean neurtuta.'
+        68, 'Gaur goizean neurtuta.'
     ),
     (
         56,
@@ -22793,7 +22849,7 @@ INSERT INTO Neurketak (
         88,
         91.0,
         1.61,
-        'Gosariaren ondoren.'
+        70, 'Gosariaren ondoren.'
     ),
     (
         58,
@@ -22803,7 +22859,7 @@ INSERT INTO Neurketak (
         90,
         66.0,
         1.68,
-        'Baraualdian.'
+        70, 'Baraualdian.'
     ),
     (
         61,
@@ -22813,7 +22869,7 @@ INSERT INTO Neurketak (
         81,
         73.0,
         1.83,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         62,
@@ -22823,7 +22879,7 @@ INSERT INTO Neurketak (
         73,
         66.9,
         1.56,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         64,
@@ -22833,7 +22889,7 @@ INSERT INTO Neurketak (
         83,
         95.2,
         1.56,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         65,
@@ -22843,7 +22899,7 @@ INSERT INTO Neurketak (
         85,
         91.6,
         1.55,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         66,
@@ -22853,7 +22909,7 @@ INSERT INTO Neurketak (
         90,
         74.7,
         1.59,
-        'Gosariaren ondoren.'
+        80, 'Gosariaren ondoren.'
     ),
     (
         69,
@@ -22863,7 +22919,7 @@ INSERT INTO Neurketak (
         84,
         95.4,
         1.66,
-        'Kirola egin ondoren.'
+        76, 'Kirola egin ondoren.'
     ),
     (
         70,
@@ -22873,7 +22929,7 @@ INSERT INTO Neurketak (
         79,
         75.8,
         1.70,
-        'Dena ondo.'
+        67, 'Dena ondo.'
     ),
     (
         71,
@@ -22883,7 +22939,7 @@ INSERT INTO Neurketak (
         73,
         88.8,
         1.63,
-        'Gosariaren ondoren.'
+        86, 'Gosariaren ondoren.'
     ),
     (
         72,
@@ -22893,7 +22949,7 @@ INSERT INTO Neurketak (
         74,
         91.5,
         1.69,
-        'Dena ondo.'
+        93, 'Dena ondo.'
     ),
     (
         74,
@@ -22903,7 +22959,7 @@ INSERT INTO Neurketak (
         82,
         64.8,
         1.67,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         75,
@@ -22913,7 +22969,7 @@ INSERT INTO Neurketak (
         72,
         60.1,
         1.65,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         76,
@@ -22923,7 +22979,7 @@ INSERT INTO Neurketak (
         82,
         65.9,
         1.69,
-        'Dena ondo.'
+        74, 'Dena ondo.'
     ),
     (
         77,
@@ -22933,7 +22989,7 @@ INSERT INTO Neurketak (
         87,
         67.4,
         1.67,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         78,
@@ -22943,7 +22999,7 @@ INSERT INTO Neurketak (
         88,
         62.0,
         1.61,
-        'Kirola egin ondoren.'
+        66, 'Kirola egin ondoren.'
     ),
     (
         79,
@@ -22953,7 +23009,7 @@ INSERT INTO Neurketak (
         76,
         66.8,
         1.67,
-        'Gosariaren ondoren.'
+        80, 'Gosariaren ondoren.'
     ),
     (
         80,
@@ -22963,7 +23019,7 @@ INSERT INTO Neurketak (
         79,
         63.3,
         1.78,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         81,
@@ -22973,7 +23029,7 @@ INSERT INTO Neurketak (
         92,
         86.1,
         1.58,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         82,
@@ -22983,7 +23039,7 @@ INSERT INTO Neurketak (
         88,
         89.7,
         1.77,
-        'Kirola egin ondoren.'
+        82, 'Kirola egin ondoren.'
     ),
     (
         83,
@@ -22993,7 +23049,7 @@ INSERT INTO Neurketak (
         94,
         64.2,
         1.80,
-        'Baraualdian.'
+        69, 'Baraualdian.'
     ),
     (
         84,
@@ -23003,7 +23059,7 @@ INSERT INTO Neurketak (
         85,
         78.9,
         1.67,
-        'Gosariaren ondoren.'
+        72, 'Gosariaren ondoren.'
     ),
     (
         85,
@@ -23013,7 +23069,7 @@ INSERT INTO Neurketak (
         92,
         80.7,
         1.72,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         88,
@@ -23023,7 +23079,7 @@ INSERT INTO Neurketak (
         77,
         89.7,
         1.81,
-        'Gosariaren ondoren.'
+        79, 'Gosariaren ondoren.'
     ),
     (
         91,
@@ -23033,7 +23089,7 @@ INSERT INTO Neurketak (
         85,
         89.3,
         1.58,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         92,
@@ -23043,7 +23099,7 @@ INSERT INTO Neurketak (
         89,
         60.0,
         1.79,
-        'Dena ondo.'
+        65, 'Dena ondo.'
     ),
     (
         93,
@@ -23053,7 +23109,7 @@ INSERT INTO Neurketak (
         83,
         76.9,
         1.81,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         94,
@@ -23063,7 +23119,7 @@ INSERT INTO Neurketak (
         86,
         86.5,
         1.83,
-        'Dena ondo.'
+        78, 'Dena ondo.'
     ),
     (
         95,
@@ -23073,7 +23129,7 @@ INSERT INTO Neurketak (
         77,
         90.3,
         1.77,
-        'Ondo sentitzen naiz.'
+        71, 'Ondo sentitzen naiz.'
     ),
     (
         96,
@@ -23083,7 +23139,7 @@ INSERT INTO Neurketak (
         86,
         77.7,
         1.71,
-        'Kirola egin ondoren.'
+        81, 'Kirola egin ondoren.'
     ),
     (
         97,
@@ -23093,7 +23149,7 @@ INSERT INTO Neurketak (
         81,
         87.8,
         1.56,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         98,
@@ -23103,7 +23159,7 @@ INSERT INTO Neurketak (
         80,
         83.8,
         1.60,
-        'Apur bat nekatuta.'
+        78, 'Apur bat nekatuta.'
     ),
     (
         99,
@@ -23113,7 +23169,7 @@ INSERT INTO Neurketak (
         77,
         85.7,
         1.71,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         100,
@@ -23123,7 +23179,7 @@ INSERT INTO Neurketak (
         80,
         82.2,
         1.57,
-        'Kirola egin ondoren.'
+        83, 'Kirola egin ondoren.'
     ),
     (
         52,
@@ -23133,7 +23189,7 @@ INSERT INTO Neurketak (
         81,
         94.5,
         1.77,
-        'Dena ondo.'
+        70, 'Dena ondo.'
     ),
     (
         53,
@@ -23143,7 +23199,7 @@ INSERT INTO Neurketak (
         92,
         75.7,
         1.75,
-        'Gosariaren ondoren.'
+        67, 'Gosariaren ondoren.'
     ),
     (
         54,
@@ -23153,7 +23209,7 @@ INSERT INTO Neurketak (
         76,
         86.1,
         1.60,
-        'Gosariaren ondoren.'
+        72, 'Gosariaren ondoren.'
     ),
     (
         56,
@@ -23163,7 +23219,7 @@ INSERT INTO Neurketak (
         86,
         89.2,
         1.61,
-        'Gaur goizean neurtuta.'
+        71, 'Gaur goizean neurtuta.'
     ),
     (
         58,
@@ -23173,7 +23229,7 @@ INSERT INTO Neurketak (
         84,
         67.6,
         1.68,
-        'Kirola egin ondoren.'
+        68, 'Kirola egin ondoren.'
     ),
     (
         59,
@@ -23183,7 +23239,7 @@ INSERT INTO Neurketak (
         83,
         62.1,
         1.73,
-        'Gaur goizean neurtuta.'
+        80, 'Gaur goizean neurtuta.'
     ),
     (
         61,
@@ -23193,7 +23249,7 @@ INSERT INTO Neurketak (
         79,
         74.0,
         1.83,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         62,
@@ -23203,7 +23259,7 @@ INSERT INTO Neurketak (
         83,
         66.9,
         1.56,
-        'Apur bat nekatuta.'
+        89, 'Apur bat nekatuta.'
     ),
     (
         65,
@@ -23213,7 +23269,7 @@ INSERT INTO Neurketak (
         86,
         90.0,
         1.55,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         66,
@@ -23223,7 +23279,7 @@ INSERT INTO Neurketak (
         87,
         74.7,
         1.59,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         67,
@@ -23233,7 +23289,7 @@ INSERT INTO Neurketak (
         81,
         71.5,
         1.72,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         68,
@@ -23243,7 +23299,7 @@ INSERT INTO Neurketak (
         87,
         60.0,
         1.85,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         69,
@@ -23253,7 +23309,7 @@ INSERT INTO Neurketak (
         83,
         94.8,
         1.66,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         71,
@@ -23263,7 +23319,7 @@ INSERT INTO Neurketak (
         74,
         89.6,
         1.63,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         72,
@@ -23273,7 +23329,7 @@ INSERT INTO Neurketak (
         88,
         92.0,
         1.69,
-        'Gosariaren ondoren.'
+        90, 'Gosariaren ondoren.'
     ),
     (
         73,
@@ -23283,7 +23339,7 @@ INSERT INTO Neurketak (
         72,
         94.2,
         1.55,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         74,
@@ -23293,7 +23349,7 @@ INSERT INTO Neurketak (
         90,
         64.9,
         1.67,
-        'Kirola egin ondoren.'
+        85, 'Kirola egin ondoren.'
     ),
     (
         75,
@@ -23303,7 +23359,7 @@ INSERT INTO Neurketak (
         81,
         59.0,
         1.65,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         77,
@@ -23313,7 +23369,7 @@ INSERT INTO Neurketak (
         81,
         67.1,
         1.67,
-        'Apur bat nekatuta.'
+        83, 'Apur bat nekatuta.'
     ),
     (
         78,
@@ -23323,7 +23379,7 @@ INSERT INTO Neurketak (
         80,
         62.4,
         1.61,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         79,
@@ -23333,7 +23389,7 @@ INSERT INTO Neurketak (
         84,
         66.7,
         1.67,
-        'Gosariaren ondoren.'
+        67, 'Gosariaren ondoren.'
     ),
     (
         80,
@@ -23343,7 +23399,7 @@ INSERT INTO Neurketak (
         92,
         62.6,
         1.78,
-        'Apur bat nekatuta.'
+        66, 'Apur bat nekatuta.'
     ),
     (
         82,
@@ -23353,7 +23409,7 @@ INSERT INTO Neurketak (
         88,
         89.8,
         1.77,
-        'Ondo sentitzen naiz.'
+        93, 'Ondo sentitzen naiz.'
     ),
     (
         83,
@@ -23363,7 +23419,7 @@ INSERT INTO Neurketak (
         84,
         65.7,
         1.80,
-        'Ondo sentitzen naiz.'
+        67, 'Ondo sentitzen naiz.'
     ),
     (
         84,
@@ -23373,7 +23429,7 @@ INSERT INTO Neurketak (
         90,
         79.7,
         1.67,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         85,
@@ -23383,7 +23439,7 @@ INSERT INTO Neurketak (
         91,
         81.1,
         1.72,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         86,
@@ -23393,7 +23449,7 @@ INSERT INTO Neurketak (
         72,
         67.7,
         1.57,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         87,
@@ -23403,7 +23459,7 @@ INSERT INTO Neurketak (
         81,
         72.0,
         1.61,
-        'Apur bat nekatuta.'
+        83, 'Apur bat nekatuta.'
     ),
     (
         88,
@@ -23413,7 +23469,7 @@ INSERT INTO Neurketak (
         78,
         90.4,
         1.81,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         89,
@@ -23423,7 +23479,7 @@ INSERT INTO Neurketak (
         78,
         90.0,
         1.84,
-        'Baraualdian.'
+        85, 'Baraualdian.'
     ),
     (
         90,
@@ -23433,7 +23489,7 @@ INSERT INTO Neurketak (
         79,
         65.1,
         1.60,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         91,
@@ -23443,7 +23499,7 @@ INSERT INTO Neurketak (
         80,
         89.6,
         1.58,
-        'Ondo sentitzen naiz.'
+        80, 'Ondo sentitzen naiz.'
     ),
     (
         93,
@@ -23453,7 +23509,7 @@ INSERT INTO Neurketak (
         80,
         76.5,
         1.81,
-        'Kirola egin ondoren.'
+        74, 'Kirola egin ondoren.'
     ),
     (
         95,
@@ -23463,7 +23519,7 @@ INSERT INTO Neurketak (
         81,
         89.6,
         1.77,
-        'Gosariaren ondoren.'
+        71, 'Gosariaren ondoren.'
     ),
     (
         96,
@@ -23473,7 +23529,7 @@ INSERT INTO Neurketak (
         78,
         77.2,
         1.71,
-        'Gosariaren ondoren.'
+        82, 'Gosariaren ondoren.'
     ),
     (
         97,
@@ -23483,7 +23539,7 @@ INSERT INTO Neurketak (
         71,
         86.0,
         1.56,
-        'Apur bat nekatuta.'
+        76, 'Apur bat nekatuta.'
     ),
     (
         98,
@@ -23493,7 +23549,7 @@ INSERT INTO Neurketak (
         79,
         83.8,
         1.60,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         100,
@@ -23503,7 +23559,7 @@ INSERT INTO Neurketak (
         78,
         81.6,
         1.57,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         51,
@@ -23513,7 +23569,7 @@ INSERT INTO Neurketak (
         86,
         63.4,
         1.76,
-        'Dena ondo.'
+        78, 'Dena ondo.'
     ),
     (
         52,
@@ -23523,7 +23579,7 @@ INSERT INTO Neurketak (
         93,
         93.1,
         1.77,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         53,
@@ -23533,7 +23589,7 @@ INSERT INTO Neurketak (
         90,
         75.1,
         1.75,
-        'Apur bat nekatuta.'
+        93, 'Apur bat nekatuta.'
     ),
     (
         54,
@@ -23543,7 +23599,7 @@ INSERT INTO Neurketak (
         82,
         87.0,
         1.60,
-        'Gosariaren ondoren.'
+        86, 'Gosariaren ondoren.'
     ),
     (
         55,
@@ -23553,7 +23609,7 @@ INSERT INTO Neurketak (
         85,
         80.8,
         1.76,
-        'Dena ondo.'
+        88, 'Dena ondo.'
     ),
     (
         56,
@@ -23563,7 +23619,7 @@ INSERT INTO Neurketak (
         87,
         89.2,
         1.61,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         57,
@@ -23573,7 +23629,7 @@ INSERT INTO Neurketak (
         85,
         82.4,
         1.69,
-        'Apur bat nekatuta.'
+        72, 'Apur bat nekatuta.'
     ),
     (
         58,
@@ -23583,7 +23639,7 @@ INSERT INTO Neurketak (
         90,
         67.2,
         1.68,
-        'Baraualdian.'
+        84, 'Baraualdian.'
     ),
     (
         59,
@@ -23593,7 +23649,7 @@ INSERT INTO Neurketak (
         89,
         63.2,
         1.73,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         61,
@@ -23603,7 +23659,7 @@ INSERT INTO Neurketak (
         91,
         72.4,
         1.83,
-        'Gaur goizean neurtuta.'
+        80, 'Gaur goizean neurtuta.'
     ),
     (
         62,
@@ -23613,7 +23669,7 @@ INSERT INTO Neurketak (
         83,
         65.2,
         1.56,
-        'Ondo sentitzen naiz.'
+        84, 'Ondo sentitzen naiz.'
     ),
     (
         64,
@@ -23623,7 +23679,7 @@ INSERT INTO Neurketak (
         73,
         95.3,
         1.56,
-        'Dena ondo.'
+        86, 'Dena ondo.'
     ),
     (
         65,
@@ -23633,7 +23689,7 @@ INSERT INTO Neurketak (
         85,
         90.1,
         1.55,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         66,
@@ -23643,7 +23699,7 @@ INSERT INTO Neurketak (
         78,
         74.5,
         1.59,
-        'Dena ondo.'
+        76, 'Dena ondo.'
     ),
     (
         67,
@@ -23653,7 +23709,7 @@ INSERT INTO Neurketak (
         79,
         71.4,
         1.72,
-        'Baraualdian.'
+        88, 'Baraualdian.'
     ),
     (
         68,
@@ -23663,7 +23719,7 @@ INSERT INTO Neurketak (
         72,
         60.9,
         1.85,
-        'Dena ondo.'
+        68, 'Dena ondo.'
     ),
     (
         69,
@@ -23673,7 +23729,7 @@ INSERT INTO Neurketak (
         80,
         95.6,
         1.66,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         70,
@@ -23683,7 +23739,7 @@ INSERT INTO Neurketak (
         77,
         74.0,
         1.70,
-        'Kirola egin ondoren.'
+        89, 'Kirola egin ondoren.'
     ),
     (
         71,
@@ -23693,7 +23749,7 @@ INSERT INTO Neurketak (
         85,
         90.0,
         1.63,
-        'Apur bat nekatuta.'
+        85, 'Apur bat nekatuta.'
     ),
     (
         72,
@@ -23703,7 +23759,7 @@ INSERT INTO Neurketak (
         84,
         91.1,
         1.69,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         73,
@@ -23713,7 +23769,7 @@ INSERT INTO Neurketak (
         73,
         94.9,
         1.55,
-        'Gosariaren ondoren.'
+        70, 'Gosariaren ondoren.'
     ),
     (
         74,
@@ -23723,7 +23779,7 @@ INSERT INTO Neurketak (
         90,
         63.3,
         1.67,
-        'Baraualdian.'
+        86, 'Baraualdian.'
     ),
     (
         75,
@@ -23733,7 +23789,7 @@ INSERT INTO Neurketak (
         72,
         59.0,
         1.65,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         76,
@@ -23743,7 +23799,7 @@ INSERT INTO Neurketak (
         86,
         67.0,
         1.69,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         77,
@@ -23753,7 +23809,7 @@ INSERT INTO Neurketak (
         81,
         67.8,
         1.67,
-        'Dena ondo.'
+        68, 'Dena ondo.'
     ),
     (
         78,
@@ -23763,7 +23819,7 @@ INSERT INTO Neurketak (
         77,
         63.9,
         1.61,
-        'Dena ondo.'
+        72, 'Dena ondo.'
     ),
     (
         79,
@@ -23773,7 +23829,7 @@ INSERT INTO Neurketak (
         81,
         67.5,
         1.67,
-        'Ondo sentitzen naiz.'
+        67, 'Ondo sentitzen naiz.'
     ),
     (
         80,
@@ -23783,7 +23839,7 @@ INSERT INTO Neurketak (
         84,
         63.8,
         1.78,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         82,
@@ -23793,7 +23849,7 @@ INSERT INTO Neurketak (
         85,
         89.8,
         1.77,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         83,
@@ -23803,7 +23859,7 @@ INSERT INTO Neurketak (
         84,
         65.1,
         1.80,
-        'Kirola egin ondoren.'
+        91, 'Kirola egin ondoren.'
     ),
     (
         85,
@@ -23813,7 +23869,7 @@ INSERT INTO Neurketak (
         91,
         80.7,
         1.72,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         86,
@@ -23823,7 +23879,7 @@ INSERT INTO Neurketak (
         81,
         67.2,
         1.57,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         87,
@@ -23833,7 +23889,7 @@ INSERT INTO Neurketak (
         84,
         73.8,
         1.61,
-        'Gaur goizean neurtuta.'
+        88, 'Gaur goizean neurtuta.'
     ),
     (
         88,
@@ -23843,7 +23899,7 @@ INSERT INTO Neurketak (
         86,
         90.4,
         1.81,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         89,
@@ -23853,7 +23909,7 @@ INSERT INTO Neurketak (
         92,
         90.7,
         1.84,
-        'Kirola egin ondoren.'
+        75, 'Kirola egin ondoren.'
     ),
     (
         90,
@@ -23863,7 +23919,7 @@ INSERT INTO Neurketak (
         86,
         65.1,
         1.60,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         91,
@@ -23873,7 +23929,7 @@ INSERT INTO Neurketak (
         87,
         89.7,
         1.58,
-        'Ondo sentitzen naiz.'
+        68, 'Ondo sentitzen naiz.'
     ),
     (
         92,
@@ -23883,7 +23939,7 @@ INSERT INTO Neurketak (
         91,
         59.9,
         1.79,
-        'Gaur goizean neurtuta.'
+        66, 'Gaur goizean neurtuta.'
     ),
     (
         93,
@@ -23893,7 +23949,7 @@ INSERT INTO Neurketak (
         93,
         75.8,
         1.81,
-        'Apur bat nekatuta.'
+        73, 'Apur bat nekatuta.'
     ),
     (
         94,
@@ -23903,7 +23959,7 @@ INSERT INTO Neurketak (
         89,
         87.9,
         1.83,
-        'Kirola egin ondoren.'
+        69, 'Kirola egin ondoren.'
     ),
     (
         95,
@@ -23913,7 +23969,7 @@ INSERT INTO Neurketak (
         81,
         89.3,
         1.77,
-        'Apur bat nekatuta.'
+        71, 'Apur bat nekatuta.'
     ),
     (
         96,
@@ -23923,7 +23979,7 @@ INSERT INTO Neurketak (
         88,
         76.3,
         1.71,
-        'Baraualdian.'
+        80, 'Baraualdian.'
     ),
     (
         97,
@@ -23933,7 +23989,7 @@ INSERT INTO Neurketak (
         74,
         86.8,
         1.56,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         98,
@@ -23943,7 +23999,7 @@ INSERT INTO Neurketak (
         86,
         83.2,
         1.60,
-        'Kirola egin ondoren.'
+        90, 'Kirola egin ondoren.'
     ),
     (
         99,
@@ -23953,7 +24009,7 @@ INSERT INTO Neurketak (
         74,
         86.0,
         1.71,
-        'Apur bat nekatuta.'
+        67, 'Apur bat nekatuta.'
     ),
     (
         100,
@@ -23963,7 +24019,7 @@ INSERT INTO Neurketak (
         72,
         82.5,
         1.57,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         51,
@@ -23973,7 +24029,7 @@ INSERT INTO Neurketak (
         79,
         64.3,
         1.76,
-        'Gosariaren ondoren.'
+        67, 'Gosariaren ondoren.'
     ),
     (
         52,
@@ -23983,7 +24039,7 @@ INSERT INTO Neurketak (
         92,
         94.3,
         1.77,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         53,
@@ -23993,7 +24049,7 @@ INSERT INTO Neurketak (
         86,
         74.2,
         1.75,
-        'Baraualdian.'
+        94, 'Baraualdian.'
     ),
     (
         55,
@@ -24003,7 +24059,7 @@ INSERT INTO Neurketak (
         83,
         82.0,
         1.76,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         58,
@@ -24013,7 +24069,7 @@ INSERT INTO Neurketak (
         83,
         67.0,
         1.68,
-        'Gosariaren ondoren.'
+        73, 'Gosariaren ondoren.'
     ),
     (
         59,
@@ -24023,7 +24079,7 @@ INSERT INTO Neurketak (
         95,
         63.7,
         1.73,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         61,
@@ -24033,7 +24089,7 @@ INSERT INTO Neurketak (
         92,
         72.1,
         1.83,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         62,
@@ -24043,7 +24099,7 @@ INSERT INTO Neurketak (
         77,
         66.0,
         1.56,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         63,
@@ -24053,7 +24109,7 @@ INSERT INTO Neurketak (
         78,
         81.8,
         1.80,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         64,
@@ -24063,7 +24119,7 @@ INSERT INTO Neurketak (
         75,
         95.9,
         1.56,
-        'Baraualdian.'
+        74, 'Baraualdian.'
     ),
     (
         65,
@@ -24073,7 +24129,7 @@ INSERT INTO Neurketak (
         81,
         92.0,
         1.55,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         66,
@@ -24083,7 +24139,7 @@ INSERT INTO Neurketak (
         91,
         75.8,
         1.59,
-        'Ondo sentitzen naiz.'
+        92, 'Ondo sentitzen naiz.'
     ),
     (
         67,
@@ -24093,7 +24149,7 @@ INSERT INTO Neurketak (
         76,
         71.6,
         1.72,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         68,
@@ -24103,7 +24159,7 @@ INSERT INTO Neurketak (
         83,
         60.5,
         1.85,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         69,
@@ -24113,7 +24169,7 @@ INSERT INTO Neurketak (
         89,
         94.2,
         1.66,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         71,
@@ -24123,7 +24179,7 @@ INSERT INTO Neurketak (
         77,
         89.9,
         1.63,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         72,
@@ -24133,7 +24189,7 @@ INSERT INTO Neurketak (
         84,
         91.8,
         1.69,
-        'Gosariaren ondoren.'
+        65, 'Gosariaren ondoren.'
     ),
     (
         74,
@@ -24143,7 +24199,7 @@ INSERT INTO Neurketak (
         80,
         63.4,
         1.67,
-        'Gosariaren ondoren.'
+        91, 'Gosariaren ondoren.'
     ),
     (
         75,
@@ -24153,7 +24209,7 @@ INSERT INTO Neurketak (
         72,
         60.4,
         1.65,
-        'Dena ondo.'
+        73, 'Dena ondo.'
     ),
     (
         76,
@@ -24163,7 +24219,7 @@ INSERT INTO Neurketak (
         89,
         65.3,
         1.69,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         77,
@@ -24173,7 +24229,7 @@ INSERT INTO Neurketak (
         89,
         67.8,
         1.67,
-        'Ondo sentitzen naiz.'
+        71, 'Ondo sentitzen naiz.'
     ),
     (
         78,
@@ -24183,7 +24239,7 @@ INSERT INTO Neurketak (
         79,
         63.2,
         1.61,
-        'Baraualdian.'
+        80, 'Baraualdian.'
     ),
     (
         79,
@@ -24193,7 +24249,7 @@ INSERT INTO Neurketak (
         76,
         66.0,
         1.67,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         80,
@@ -24203,7 +24259,7 @@ INSERT INTO Neurketak (
         83,
         62.1,
         1.78,
-        'Baraualdian.'
+        65, 'Baraualdian.'
     ),
     (
         81,
@@ -24213,7 +24269,7 @@ INSERT INTO Neurketak (
         83,
         85.5,
         1.58,
-        'Dena ondo.'
+        83, 'Dena ondo.'
     ),
     (
         82,
@@ -24223,7 +24279,7 @@ INSERT INTO Neurketak (
         94,
         88.8,
         1.77,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         84,
@@ -24233,7 +24289,7 @@ INSERT INTO Neurketak (
         86,
         78.9,
         1.67,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         86,
@@ -24243,7 +24299,7 @@ INSERT INTO Neurketak (
         80,
         68.7,
         1.57,
-        'Gaur goizean neurtuta.'
+        71, 'Gaur goizean neurtuta.'
     ),
     (
         88,
@@ -24253,7 +24309,7 @@ INSERT INTO Neurketak (
         85,
         90.6,
         1.81,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         89,
@@ -24263,7 +24319,7 @@ INSERT INTO Neurketak (
         80,
         90.8,
         1.84,
-        'Gosariaren ondoren.'
+        89, 'Gosariaren ondoren.'
     ),
     (
         90,
@@ -24273,7 +24329,7 @@ INSERT INTO Neurketak (
         79,
         66.6,
         1.60,
-        'Baraualdian.'
+        69, 'Baraualdian.'
     ),
     (
         92,
@@ -24283,7 +24339,7 @@ INSERT INTO Neurketak (
         86,
         60.1,
         1.79,
-        'Gosariaren ondoren.'
+        66, 'Gosariaren ondoren.'
     ),
     (
         93,
@@ -24293,7 +24349,7 @@ INSERT INTO Neurketak (
         91,
         75.3,
         1.81,
-        'Baraualdian.'
+        75, 'Baraualdian.'
     ),
     (
         94,
@@ -24303,7 +24359,7 @@ INSERT INTO Neurketak (
         77,
         87.9,
         1.83,
-        'Apur bat nekatuta.'
+        67, 'Apur bat nekatuta.'
     ),
     (
         95,
@@ -24313,7 +24369,7 @@ INSERT INTO Neurketak (
         86,
         90.6,
         1.77,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         96,
@@ -24323,7 +24379,7 @@ INSERT INTO Neurketak (
         82,
         76.5,
         1.71,
-        'Baraualdian.'
+        85, 'Baraualdian.'
     ),
     (
         97,
@@ -24333,7 +24389,7 @@ INSERT INTO Neurketak (
         81,
         86.5,
         1.56,
-        'Baraualdian.'
+        68, 'Baraualdian.'
     ),
     (
         98,
@@ -24343,7 +24399,7 @@ INSERT INTO Neurketak (
         84,
         84.4,
         1.60,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         99,
@@ -24353,7 +24409,7 @@ INSERT INTO Neurketak (
         86,
         86.4,
         1.71,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         100,
@@ -24363,7 +24419,7 @@ INSERT INTO Neurketak (
         79,
         83.0,
         1.57,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         52,
@@ -24373,7 +24429,7 @@ INSERT INTO Neurketak (
         85,
         94.4,
         1.77,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         53,
@@ -24383,7 +24439,7 @@ INSERT INTO Neurketak (
         84,
         74.3,
         1.75,
-        'Apur bat nekatuta.'
+        66, 'Apur bat nekatuta.'
     ),
     (
         56,
@@ -24393,7 +24449,7 @@ INSERT INTO Neurketak (
         94,
         89.1,
         1.61,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         58,
@@ -24403,7 +24459,7 @@ INSERT INTO Neurketak (
         76,
         66.8,
         1.68,
-        'Gaur goizean neurtuta.'
+        78, 'Gaur goizean neurtuta.'
     ),
     (
         59,
@@ -24413,7 +24469,7 @@ INSERT INTO Neurketak (
         81,
         62.2,
         1.73,
-        'Baraualdian.'
+        89, 'Baraualdian.'
     ),
     (
         60,
@@ -24423,7 +24479,7 @@ INSERT INTO Neurketak (
         85,
         79.0,
         1.81,
-        'Gosariaren ondoren.'
+        86, 'Gosariaren ondoren.'
     ),
     (
         61,
@@ -24433,7 +24489,7 @@ INSERT INTO Neurketak (
         78,
         72.1,
         1.83,
-        'Apur bat nekatuta.'
+        92, 'Apur bat nekatuta.'
     ),
     (
         62,
@@ -24443,7 +24499,7 @@ INSERT INTO Neurketak (
         76,
         66.2,
         1.56,
-        'Ondo sentitzen naiz.'
+        73, 'Ondo sentitzen naiz.'
     ),
     (
         63,
@@ -24453,7 +24509,7 @@ INSERT INTO Neurketak (
         79,
         80.3,
         1.80,
-        'Gaur goizean neurtuta.'
+        80, 'Gaur goizean neurtuta.'
     ),
     (
         65,
@@ -24463,7 +24519,7 @@ INSERT INTO Neurketak (
         77,
         90.1,
         1.55,
-        'Ondo sentitzen naiz.'
+        94, 'Ondo sentitzen naiz.'
     ),
     (
         66,
@@ -24473,7 +24529,7 @@ INSERT INTO Neurketak (
         85,
         74.7,
         1.59,
-        'Baraualdian.'
+        91, 'Baraualdian.'
     ),
     (
         67,
@@ -24483,7 +24539,7 @@ INSERT INTO Neurketak (
         85,
         71.0,
         1.72,
-        'Baraualdian.'
+        84, 'Baraualdian.'
     ),
     (
         68,
@@ -24493,7 +24549,7 @@ INSERT INTO Neurketak (
         84,
         61.2,
         1.85,
-        'Gosariaren ondoren.'
+        86, 'Gosariaren ondoren.'
     ),
     (
         69,
@@ -24503,7 +24559,7 @@ INSERT INTO Neurketak (
         82,
         94.0,
         1.66,
-        'Baraualdian.'
+        69, 'Baraualdian.'
     ),
     (
         70,
@@ -24513,7 +24569,7 @@ INSERT INTO Neurketak (
         85,
         74.2,
         1.70,
-        'Kirola egin ondoren.'
+        73, 'Kirola egin ondoren.'
     ),
     (
         71,
@@ -24523,7 +24579,7 @@ INSERT INTO Neurketak (
         85,
         88.7,
         1.63,
-        'Ondo sentitzen naiz.'
+        79, 'Ondo sentitzen naiz.'
     ),
     (
         72,
@@ -24533,7 +24589,7 @@ INSERT INTO Neurketak (
         75,
         91.7,
         1.69,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         75,
@@ -24543,7 +24599,7 @@ INSERT INTO Neurketak (
         80,
         59.7,
         1.65,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         76,
@@ -24553,7 +24609,7 @@ INSERT INTO Neurketak (
         90,
         65.7,
         1.69,
-        'Gosariaren ondoren.'
+        78, 'Gosariaren ondoren.'
     ),
     (
         77,
@@ -24563,7 +24619,7 @@ INSERT INTO Neurketak (
         90,
         66.2,
         1.67,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         78,
@@ -24573,7 +24629,7 @@ INSERT INTO Neurketak (
         75,
         62.0,
         1.61,
-        'Ondo sentitzen naiz.'
+        82, 'Ondo sentitzen naiz.'
     ),
     (
         79,
@@ -24583,7 +24639,7 @@ INSERT INTO Neurketak (
         87,
         66.5,
         1.67,
-        'Ondo sentitzen naiz.'
+        92, 'Ondo sentitzen naiz.'
     ),
     (
         80,
@@ -24593,7 +24649,7 @@ INSERT INTO Neurketak (
         84,
         62.1,
         1.78,
-        'Apur bat nekatuta.'
+        84, 'Apur bat nekatuta.'
     ),
     (
         83,
@@ -24603,7 +24659,7 @@ INSERT INTO Neurketak (
         94,
         64.2,
         1.80,
-        'Apur bat nekatuta.'
+        86, 'Apur bat nekatuta.'
     ),
     (
         85,
@@ -24613,7 +24669,7 @@ INSERT INTO Neurketak (
         83,
         80.2,
         1.72,
-        'Apur bat nekatuta.'
+        86, 'Apur bat nekatuta.'
     ),
     (
         86,
@@ -24623,7 +24679,7 @@ INSERT INTO Neurketak (
         87,
         68.5,
         1.57,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         87,
@@ -24633,7 +24689,7 @@ INSERT INTO Neurketak (
         76,
         73.0,
         1.61,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         88,
@@ -24643,7 +24699,7 @@ INSERT INTO Neurketak (
         80,
         90.3,
         1.81,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         89,
@@ -24653,7 +24709,7 @@ INSERT INTO Neurketak (
         79,
         91.7,
         1.84,
-        'Baraualdian.'
+        75, 'Baraualdian.'
     ),
     (
         90,
@@ -24663,7 +24719,7 @@ INSERT INTO Neurketak (
         79,
         65.8,
         1.60,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         91,
@@ -24673,7 +24729,7 @@ INSERT INTO Neurketak (
         81,
         89.7,
         1.58,
-        'Baraualdian.'
+        94, 'Baraualdian.'
     ),
     (
         92,
@@ -24683,7 +24739,7 @@ INSERT INTO Neurketak (
         83,
         60.0,
         1.79,
-        'Kirola egin ondoren.'
+        68, 'Kirola egin ondoren.'
     ),
     (
         93,
@@ -24693,7 +24749,7 @@ INSERT INTO Neurketak (
         83,
         76.2,
         1.81,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         95,
@@ -24703,7 +24759,7 @@ INSERT INTO Neurketak (
         77,
         89.1,
         1.77,
-        'Apur bat nekatuta.'
+        86, 'Apur bat nekatuta.'
     ),
     (
         96,
@@ -24713,7 +24769,7 @@ INSERT INTO Neurketak (
         77,
         77.9,
         1.71,
-        'Baraualdian.'
+        88, 'Baraualdian.'
     ),
     (
         97,
@@ -24723,7 +24779,7 @@ INSERT INTO Neurketak (
         74,
         87.9,
         1.56,
-        'Dena ondo.'
+        93, 'Dena ondo.'
     ),
     (
         98,
@@ -24733,7 +24789,7 @@ INSERT INTO Neurketak (
         83,
         84.6,
         1.60,
-        'Kirola egin ondoren.'
+        71, 'Kirola egin ondoren.'
     ),
     (
         99,
@@ -24743,7 +24799,7 @@ INSERT INTO Neurketak (
         74,
         85.1,
         1.71,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         100,
@@ -24753,7 +24809,7 @@ INSERT INTO Neurketak (
         73,
         81.5,
         1.57,
-        'Dena ondo.'
+        65, 'Dena ondo.'
     ),
     (
         51,
@@ -24763,7 +24819,7 @@ INSERT INTO Neurketak (
         83,
         63.0,
         1.76,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         52,
@@ -24773,7 +24829,7 @@ INSERT INTO Neurketak (
         93,
         93.3,
         1.77,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         53,
@@ -24783,7 +24839,7 @@ INSERT INTO Neurketak (
         92,
         74.1,
         1.75,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         54,
@@ -24793,7 +24849,7 @@ INSERT INTO Neurketak (
         81,
         86.9,
         1.60,
-        'Apur bat nekatuta.'
+        72, 'Apur bat nekatuta.'
     ),
     (
         55,
@@ -24803,7 +24859,7 @@ INSERT INTO Neurketak (
         71,
         81.0,
         1.76,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         56,
@@ -24813,7 +24869,7 @@ INSERT INTO Neurketak (
         93,
         90.8,
         1.61,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         57,
@@ -24823,7 +24879,7 @@ INSERT INTO Neurketak (
         88,
         83.2,
         1.69,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         58,
@@ -24833,7 +24889,7 @@ INSERT INTO Neurketak (
         83,
         67.6,
         1.68,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         61,
@@ -24843,7 +24899,7 @@ INSERT INTO Neurketak (
         81,
         72.4,
         1.83,
-        'Gaur goizean neurtuta.'
+        72, 'Gaur goizean neurtuta.'
     ),
     (
         62,
@@ -24853,7 +24909,7 @@ INSERT INTO Neurketak (
         77,
         66.6,
         1.56,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         63,
@@ -24863,7 +24919,7 @@ INSERT INTO Neurketak (
         78,
         80.0,
         1.80,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         64,
@@ -24873,7 +24929,7 @@ INSERT INTO Neurketak (
         77,
         95.1,
         1.56,
-        'Ondo sentitzen naiz.'
+        87, 'Ondo sentitzen naiz.'
     ),
     (
         66,
@@ -24883,7 +24939,7 @@ INSERT INTO Neurketak (
         89,
         74.7,
         1.59,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         68,
@@ -24893,7 +24949,7 @@ INSERT INTO Neurketak (
         83,
         60.4,
         1.85,
-        'Dena ondo.'
+        78, 'Dena ondo.'
     ),
     (
         69,
@@ -24903,7 +24959,7 @@ INSERT INTO Neurketak (
         87,
         94.3,
         1.66,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         70,
@@ -24913,7 +24969,7 @@ INSERT INTO Neurketak (
         76,
         75.1,
         1.70,
-        'Baraualdian.'
+        86, 'Baraualdian.'
     ),
     (
         71,
@@ -24923,7 +24979,7 @@ INSERT INTO Neurketak (
         86,
         88.7,
         1.63,
-        'Dena ondo.'
+        73, 'Dena ondo.'
     ),
     (
         72,
@@ -24933,7 +24989,7 @@ INSERT INTO Neurketak (
         87,
         93.0,
         1.69,
-        'Apur bat nekatuta.'
+        71, 'Apur bat nekatuta.'
     ),
     (
         73,
@@ -24943,7 +24999,7 @@ INSERT INTO Neurketak (
         74,
         95.5,
         1.55,
-        'Gosariaren ondoren.'
+        86, 'Gosariaren ondoren.'
     ),
     (
         74,
@@ -24953,7 +25009,7 @@ INSERT INTO Neurketak (
         78,
         63.8,
         1.67,
-        'Baraualdian.'
+        65, 'Baraualdian.'
     ),
     (
         75,
@@ -24963,7 +25019,7 @@ INSERT INTO Neurketak (
         72,
         59.7,
         1.65,
-        'Ondo sentitzen naiz.'
+        91, 'Ondo sentitzen naiz.'
     ),
     (
         76,
@@ -24973,7 +25029,7 @@ INSERT INTO Neurketak (
         90,
         66.1,
         1.69,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         77,
@@ -24983,7 +25039,7 @@ INSERT INTO Neurketak (
         90,
         66.2,
         1.67,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         78,
@@ -24993,7 +25049,7 @@ INSERT INTO Neurketak (
         80,
         62.2,
         1.61,
-        'Ondo sentitzen naiz.'
+        87, 'Ondo sentitzen naiz.'
     ),
     (
         79,
@@ -25003,7 +25059,7 @@ INSERT INTO Neurketak (
         77,
         67.6,
         1.67,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         80,
@@ -25013,7 +25069,7 @@ INSERT INTO Neurketak (
         93,
         63.9,
         1.78,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         81,
@@ -25023,7 +25079,7 @@ INSERT INTO Neurketak (
         86,
         86.2,
         1.58,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         82,
@@ -25033,7 +25089,7 @@ INSERT INTO Neurketak (
         93,
         88.5,
         1.77,
-        'Kirola egin ondoren.'
+        80, 'Kirola egin ondoren.'
     ),
     (
         83,
@@ -25043,7 +25099,7 @@ INSERT INTO Neurketak (
         85,
         65.5,
         1.80,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         84,
@@ -25053,7 +25109,7 @@ INSERT INTO Neurketak (
         78,
         78.6,
         1.67,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         85,
@@ -25063,7 +25119,7 @@ INSERT INTO Neurketak (
         90,
         82.0,
         1.72,
-        'Ondo sentitzen naiz.'
+        84, 'Ondo sentitzen naiz.'
     ),
     (
         86,
@@ -25073,7 +25129,7 @@ INSERT INTO Neurketak (
         78,
         67.4,
         1.57,
-        'Baraualdian.'
+        83, 'Baraualdian.'
     ),
     (
         87,
@@ -25083,7 +25139,7 @@ INSERT INTO Neurketak (
         80,
         73.7,
         1.61,
-        'Gaur goizean neurtuta.'
+        88, 'Gaur goizean neurtuta.'
     ),
     (
         89,
@@ -25093,7 +25149,7 @@ INSERT INTO Neurketak (
         78,
         90.1,
         1.84,
-        'Kirola egin ondoren.'
+        81, 'Kirola egin ondoren.'
     ),
     (
         90,
@@ -25103,7 +25159,7 @@ INSERT INTO Neurketak (
         90,
         66.5,
         1.60,
-        'Ondo sentitzen naiz.'
+        69, 'Ondo sentitzen naiz.'
     ),
     (
         92,
@@ -25113,7 +25169,7 @@ INSERT INTO Neurketak (
         82,
         60.1,
         1.79,
-        'Dena ondo.'
+        79, 'Dena ondo.'
     ),
     (
         93,
@@ -25123,7 +25179,7 @@ INSERT INTO Neurketak (
         83,
         75.8,
         1.81,
-        'Kirola egin ondoren.'
+        94, 'Kirola egin ondoren.'
     ),
     (
         94,
@@ -25133,7 +25189,7 @@ INSERT INTO Neurketak (
         88,
         86.0,
         1.83,
-        'Kirola egin ondoren.'
+        69, 'Kirola egin ondoren.'
     ),
     (
         95,
@@ -25143,7 +25199,7 @@ INSERT INTO Neurketak (
         76,
         90.7,
         1.77,
-        'Ondo sentitzen naiz.'
+        67, 'Ondo sentitzen naiz.'
     ),
     (
         96,
@@ -25153,7 +25209,7 @@ INSERT INTO Neurketak (
         76,
         77.9,
         1.71,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         97,
@@ -25163,7 +25219,7 @@ INSERT INTO Neurketak (
         84,
         87.5,
         1.56,
-        'Gosariaren ondoren.'
+        81, 'Gosariaren ondoren.'
     ),
     (
         98,
@@ -25173,7 +25229,7 @@ INSERT INTO Neurketak (
         80,
         85.0,
         1.60,
-        'Ondo sentitzen naiz.'
+        71, 'Ondo sentitzen naiz.'
     ),
     (
         99,
@@ -25183,7 +25239,7 @@ INSERT INTO Neurketak (
         83,
         86.8,
         1.71,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         100,
@@ -25193,7 +25249,7 @@ INSERT INTO Neurketak (
         76,
         81.1,
         1.57,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         51,
@@ -25203,7 +25259,7 @@ INSERT INTO Neurketak (
         89,
         64.2,
         1.76,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         54,
@@ -25213,7 +25269,7 @@ INSERT INTO Neurketak (
         87,
         87.7,
         1.60,
-        'Apur bat nekatuta.'
+        91, 'Apur bat nekatuta.'
     ),
     (
         55,
@@ -25223,7 +25279,7 @@ INSERT INTO Neurketak (
         78,
         81.6,
         1.76,
-        'Baraualdian.'
+        83, 'Baraualdian.'
     ),
     (
         56,
@@ -25233,7 +25289,7 @@ INSERT INTO Neurketak (
         87,
         90.1,
         1.61,
-        'Gosariaren ondoren.'
+        94, 'Gosariaren ondoren.'
     ),
     (
         57,
@@ -25243,7 +25299,7 @@ INSERT INTO Neurketak (
         90,
         82.1,
         1.69,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         58,
@@ -25253,7 +25309,7 @@ INSERT INTO Neurketak (
         83,
         67.0,
         1.68,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         59,
@@ -25263,7 +25319,7 @@ INSERT INTO Neurketak (
         81,
         64.0,
         1.73,
-        'Ondo sentitzen naiz.'
+        87, 'Ondo sentitzen naiz.'
     ),
     (
         60,
@@ -25273,7 +25329,7 @@ INSERT INTO Neurketak (
         80,
         77.3,
         1.81,
-        'Kirola egin ondoren.'
+        88, 'Kirola egin ondoren.'
     ),
     (
         61,
@@ -25283,7 +25339,7 @@ INSERT INTO Neurketak (
         93,
         72.2,
         1.83,
-        'Ondo sentitzen naiz.'
+        79, 'Ondo sentitzen naiz.'
     ),
     (
         62,
@@ -25293,7 +25349,7 @@ INSERT INTO Neurketak (
         75,
         66.5,
         1.56,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         63,
@@ -25303,7 +25359,7 @@ INSERT INTO Neurketak (
         88,
         81.6,
         1.80,
-        'Gaur goizean neurtuta.'
+        87, 'Gaur goizean neurtuta.'
     ),
     (
         64,
@@ -25313,7 +25369,7 @@ INSERT INTO Neurketak (
         74,
         94.2,
         1.56,
-        'Ondo sentitzen naiz.'
+        77, 'Ondo sentitzen naiz.'
     ),
     (
         65,
@@ -25323,7 +25379,7 @@ INSERT INTO Neurketak (
         77,
         91.8,
         1.55,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         66,
@@ -25333,7 +25389,7 @@ INSERT INTO Neurketak (
         76,
         75.7,
         1.59,
-        'Baraualdian.'
+        84, 'Baraualdian.'
     ),
     (
         67,
@@ -25343,7 +25399,7 @@ INSERT INTO Neurketak (
         77,
         72.1,
         1.72,
-        'Ondo sentitzen naiz.'
+        82, 'Ondo sentitzen naiz.'
     ),
     (
         68,
@@ -25353,7 +25409,7 @@ INSERT INTO Neurketak (
         78,
         60.7,
         1.85,
-        'Gosariaren ondoren.'
+        88, 'Gosariaren ondoren.'
     ),
     (
         69,
@@ -25363,7 +25419,7 @@ INSERT INTO Neurketak (
         82,
         94.6,
         1.66,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         72,
@@ -25373,7 +25429,7 @@ INSERT INTO Neurketak (
         84,
         92.7,
         1.69,
-        'Gosariaren ondoren.'
+        74, 'Gosariaren ondoren.'
     ),
     (
         73,
@@ -25383,7 +25439,7 @@ INSERT INTO Neurketak (
         81,
         94.6,
         1.55,
-        'Ondo sentitzen naiz.'
+        75, 'Ondo sentitzen naiz.'
     ),
     (
         75,
@@ -25393,7 +25449,7 @@ INSERT INTO Neurketak (
         84,
         61.0,
         1.65,
-        'Dena ondo.'
+        68, 'Dena ondo.'
     ),
     (
         77,
@@ -25403,7 +25459,7 @@ INSERT INTO Neurketak (
         84,
         66.0,
         1.67,
-        'Dena ondo.'
+        77, 'Dena ondo.'
     ),
     (
         78,
@@ -25413,7 +25469,7 @@ INSERT INTO Neurketak (
         87,
         63.0,
         1.61,
-        'Dena ondo.'
+        77, 'Dena ondo.'
     ),
     (
         79,
@@ -25423,7 +25479,7 @@ INSERT INTO Neurketak (
         76,
         68.0,
         1.67,
-        'Baraualdian.'
+        75, 'Baraualdian.'
     ),
     (
         80,
@@ -25433,7 +25489,7 @@ INSERT INTO Neurketak (
         81,
         62.0,
         1.78,
-        'Kirola egin ondoren.'
+        91, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -25443,7 +25499,7 @@ INSERT INTO Neurketak (
         94,
         85.7,
         1.58,
-        'Ondo sentitzen naiz.'
+        89, 'Ondo sentitzen naiz.'
     ),
     (
         82,
@@ -25453,7 +25509,7 @@ INSERT INTO Neurketak (
         94,
         90.0,
         1.77,
-        'Apur bat nekatuta.'
+        89, 'Apur bat nekatuta.'
     ),
     (
         83,
@@ -25463,7 +25519,7 @@ INSERT INTO Neurketak (
         93,
         65.4,
         1.80,
-        'Apur bat nekatuta.'
+        76, 'Apur bat nekatuta.'
     ),
     (
         85,
@@ -25473,7 +25529,7 @@ INSERT INTO Neurketak (
         81,
         80.6,
         1.72,
-        'Apur bat nekatuta.'
+        65, 'Apur bat nekatuta.'
     ),
     (
         86,
@@ -25483,7 +25539,7 @@ INSERT INTO Neurketak (
         84,
         67.1,
         1.57,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         87,
@@ -25493,7 +25549,7 @@ INSERT INTO Neurketak (
         75,
         73.2,
         1.61,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         90,
@@ -25503,7 +25559,7 @@ INSERT INTO Neurketak (
         80,
         65.5,
         1.60,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         91,
@@ -25513,7 +25569,7 @@ INSERT INTO Neurketak (
         81,
         90.0,
         1.58,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         93,
@@ -25523,7 +25579,7 @@ INSERT INTO Neurketak (
         86,
         75.3,
         1.81,
-        'Kirola egin ondoren.'
+        72, 'Kirola egin ondoren.'
     ),
     (
         94,
@@ -25533,7 +25589,7 @@ INSERT INTO Neurketak (
         77,
         86.6,
         1.83,
-        'Gaur goizean neurtuta.'
+        92, 'Gaur goizean neurtuta.'
     ),
     (
         95,
@@ -25543,7 +25599,7 @@ INSERT INTO Neurketak (
         79,
         90.0,
         1.77,
-        'Apur bat nekatuta.'
+        75, 'Apur bat nekatuta.'
     ),
     (
         97,
@@ -25553,7 +25609,7 @@ INSERT INTO Neurketak (
         86,
         86.3,
         1.56,
-        'Gosariaren ondoren.'
+        66, 'Gosariaren ondoren.'
     ),
     (
         98,
@@ -25563,7 +25619,7 @@ INSERT INTO Neurketak (
         76,
         85.0,
         1.60,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         99,
@@ -25573,7 +25629,7 @@ INSERT INTO Neurketak (
         73,
         87.0,
         1.71,
-        'Baraualdian.'
+        83, 'Baraualdian.'
     ),
     (
         100,
@@ -25583,7 +25639,7 @@ INSERT INTO Neurketak (
         76,
         81.1,
         1.57,
-        'Baraualdian.'
+        79, 'Baraualdian.'
     ),
     (
         51,
@@ -25593,7 +25649,7 @@ INSERT INTO Neurketak (
         81,
         64.2,
         1.76,
-        'Ondo sentitzen naiz.'
+        93, 'Ondo sentitzen naiz.'
     ),
     (
         52,
@@ -25603,7 +25659,7 @@ INSERT INTO Neurketak (
         87,
         94.9,
         1.77,
-        'Baraualdian.'
+        80, 'Baraualdian.'
     ),
     (
         53,
@@ -25613,7 +25669,7 @@ INSERT INTO Neurketak (
         78,
         75.3,
         1.75,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         54,
@@ -25623,7 +25679,7 @@ INSERT INTO Neurketak (
         84,
         86.5,
         1.60,
-        'Gosariaren ondoren.'
+        68, 'Gosariaren ondoren.'
     ),
     (
         55,
@@ -25633,7 +25689,7 @@ INSERT INTO Neurketak (
         86,
         82.0,
         1.76,
-        'Dena ondo.'
+        65, 'Dena ondo.'
     ),
     (
         58,
@@ -25643,7 +25699,7 @@ INSERT INTO Neurketak (
         77,
         67.9,
         1.68,
-        'Baraualdian.'
+        75, 'Baraualdian.'
     ),
     (
         59,
@@ -25653,7 +25709,7 @@ INSERT INTO Neurketak (
         91,
         63.3,
         1.73,
-        'Kirola egin ondoren.'
+        91, 'Kirola egin ondoren.'
     ),
     (
         60,
@@ -25663,7 +25719,7 @@ INSERT INTO Neurketak (
         90,
         77.4,
         1.81,
-        'Gaur goizean neurtuta.'
+        74, 'Gaur goizean neurtuta.'
     ),
     (
         61,
@@ -25673,7 +25729,7 @@ INSERT INTO Neurketak (
         81,
         73.1,
         1.83,
-        'Gosariaren ondoren.'
+        73, 'Gosariaren ondoren.'
     ),
     (
         62,
@@ -25683,7 +25739,7 @@ INSERT INTO Neurketak (
         83,
         65.8,
         1.56,
-        'Ondo sentitzen naiz.'
+        75, 'Ondo sentitzen naiz.'
     ),
     (
         63,
@@ -25693,7 +25749,7 @@ INSERT INTO Neurketak (
         76,
         81.1,
         1.80,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         64,
@@ -25703,7 +25759,7 @@ INSERT INTO Neurketak (
         75,
         95.0,
         1.56,
-        'Kirola egin ondoren.'
+        69, 'Kirola egin ondoren.'
     ),
     (
         65,
@@ -25713,7 +25769,7 @@ INSERT INTO Neurketak (
         77,
         91.2,
         1.55,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         66,
@@ -25723,7 +25779,7 @@ INSERT INTO Neurketak (
         85,
         74.6,
         1.59,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         67,
@@ -25733,7 +25789,7 @@ INSERT INTO Neurketak (
         84,
         71.0,
         1.72,
-        'Ondo sentitzen naiz.'
+        72, 'Ondo sentitzen naiz.'
     ),
     (
         68,
@@ -25743,7 +25799,7 @@ INSERT INTO Neurketak (
         83,
         60.4,
         1.85,
-        'Kirola egin ondoren.'
+        89, 'Kirola egin ondoren.'
     ),
     (
         69,
@@ -25753,7 +25809,7 @@ INSERT INTO Neurketak (
         80,
         95.3,
         1.66,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         70,
@@ -25763,7 +25819,7 @@ INSERT INTO Neurketak (
         76,
         74.4,
         1.70,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         71,
@@ -25773,7 +25829,7 @@ INSERT INTO Neurketak (
         78,
         88.5,
         1.63,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         72,
@@ -25783,7 +25839,7 @@ INSERT INTO Neurketak (
         79,
         92.0,
         1.69,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         73,
@@ -25793,7 +25849,7 @@ INSERT INTO Neurketak (
         75,
         95.7,
         1.55,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         74,
@@ -25803,7 +25859,7 @@ INSERT INTO Neurketak (
         90,
         63.3,
         1.67,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         78,
@@ -25813,7 +25869,7 @@ INSERT INTO Neurketak (
         86,
         63.5,
         1.61,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         79,
@@ -25823,7 +25879,7 @@ INSERT INTO Neurketak (
         82,
         67.8,
         1.67,
-        'Gosariaren ondoren.'
+        76, 'Gosariaren ondoren.'
     ),
     (
         80,
@@ -25833,7 +25889,7 @@ INSERT INTO Neurketak (
         82,
         63.6,
         1.78,
-        'Dena ondo.'
+        88, 'Dena ondo.'
     ),
     (
         84,
@@ -25843,7 +25899,7 @@ INSERT INTO Neurketak (
         76,
         80.0,
         1.67,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         85,
@@ -25853,7 +25909,7 @@ INSERT INTO Neurketak (
         78,
         80.1,
         1.72,
-        'Baraualdian.'
+        89, 'Baraualdian.'
     ),
     (
         86,
@@ -25863,7 +25919,7 @@ INSERT INTO Neurketak (
         77,
         69.0,
         1.57,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         88,
@@ -25873,7 +25929,7 @@ INSERT INTO Neurketak (
         80,
         89.3,
         1.81,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         89,
@@ -25883,7 +25939,7 @@ INSERT INTO Neurketak (
         89,
         91.1,
         1.84,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         90,
@@ -25893,7 +25949,7 @@ INSERT INTO Neurketak (
         81,
         66.8,
         1.60,
-        'Ondo sentitzen naiz.'
+        80, 'Ondo sentitzen naiz.'
     ),
     (
         93,
@@ -25903,7 +25959,7 @@ INSERT INTO Neurketak (
         92,
         75.9,
         1.81,
-        'Gosariaren ondoren.'
+        83, 'Gosariaren ondoren.'
     ),
     (
         94,
@@ -25913,7 +25969,7 @@ INSERT INTO Neurketak (
         89,
         86.2,
         1.83,
-        'Ondo sentitzen naiz.'
+        91, 'Ondo sentitzen naiz.'
     ),
     (
         95,
@@ -25923,7 +25979,7 @@ INSERT INTO Neurketak (
         77,
         91.0,
         1.77,
-        'Gosariaren ondoren.'
+        83, 'Gosariaren ondoren.'
     ),
     (
         96,
@@ -25933,7 +25989,7 @@ INSERT INTO Neurketak (
         77,
         76.8,
         1.71,
-        'Baraualdian.'
+        79, 'Baraualdian.'
     ),
     (
         97,
@@ -25943,7 +25999,7 @@ INSERT INTO Neurketak (
         83,
         87.7,
         1.56,
-        'Baraualdian.'
+        66, 'Baraualdian.'
     ),
     (
         98,
@@ -25953,7 +26009,7 @@ INSERT INTO Neurketak (
         84,
         84.3,
         1.60,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         99,
@@ -25963,7 +26019,7 @@ INSERT INTO Neurketak (
         74,
         85.0,
         1.71,
-        'Baraualdian.'
+        86, 'Baraualdian.'
     ),
     (
         52,
@@ -25973,7 +26029,7 @@ INSERT INTO Neurketak (
         94,
         94.1,
         1.77,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         53,
@@ -25983,7 +26039,7 @@ INSERT INTO Neurketak (
         82,
         74.0,
         1.75,
-        'Dena ondo.'
+        72, 'Dena ondo.'
     ),
     (
         54,
@@ -25993,7 +26049,7 @@ INSERT INTO Neurketak (
         84,
         86.2,
         1.60,
-        'Ondo sentitzen naiz.'
+        82, 'Ondo sentitzen naiz.'
     ),
     (
         55,
@@ -26003,7 +26059,7 @@ INSERT INTO Neurketak (
         85,
         80.2,
         1.76,
-        'Baraualdian.'
+        90, 'Baraualdian.'
     ),
     (
         57,
@@ -26013,7 +26069,7 @@ INSERT INTO Neurketak (
         86,
         83.9,
         1.69,
-        'Ondo sentitzen naiz.'
+        65, 'Ondo sentitzen naiz.'
     ),
     (
         58,
@@ -26023,7 +26079,7 @@ INSERT INTO Neurketak (
         90,
         67.4,
         1.68,
-        'Gosariaren ondoren.'
+        91, 'Gosariaren ondoren.'
     ),
     (
         59,
@@ -26033,7 +26089,7 @@ INSERT INTO Neurketak (
         83,
         63.2,
         1.73,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         60,
@@ -26043,7 +26099,7 @@ INSERT INTO Neurketak (
         94,
         78.7,
         1.81,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         61,
@@ -26053,7 +26109,7 @@ INSERT INTO Neurketak (
         82,
         73.3,
         1.83,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         62,
@@ -26063,7 +26119,7 @@ INSERT INTO Neurketak (
         78,
         65.4,
         1.56,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         65,
@@ -26073,7 +26129,7 @@ INSERT INTO Neurketak (
         86,
         90.3,
         1.55,
-        'Kirola egin ondoren.'
+        94, 'Kirola egin ondoren.'
     ),
     (
         66,
@@ -26083,7 +26139,7 @@ INSERT INTO Neurketak (
         82,
         75.3,
         1.59,
-        'Ondo sentitzen naiz.'
+        89, 'Ondo sentitzen naiz.'
     ),
     (
         67,
@@ -26093,7 +26149,7 @@ INSERT INTO Neurketak (
         84,
         71.1,
         1.72,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         68,
@@ -26103,7 +26159,7 @@ INSERT INTO Neurketak (
         81,
         60.3,
         1.85,
-        'Gosariaren ondoren.'
+        93, 'Gosariaren ondoren.'
     ),
     (
         69,
@@ -26113,7 +26169,7 @@ INSERT INTO Neurketak (
         76,
         94.5,
         1.66,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         70,
@@ -26123,7 +26179,7 @@ INSERT INTO Neurketak (
         79,
         75.0,
         1.70,
-        'Gaur goizean neurtuta.'
+        87, 'Gaur goizean neurtuta.'
     ),
     (
         71,
@@ -26133,7 +26189,7 @@ INSERT INTO Neurketak (
         83,
         89.7,
         1.63,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         73,
@@ -26143,7 +26199,7 @@ INSERT INTO Neurketak (
         75,
         95.3,
         1.55,
-        'Ondo sentitzen naiz.'
+        78, 'Ondo sentitzen naiz.'
     ),
     (
         74,
@@ -26153,7 +26209,7 @@ INSERT INTO Neurketak (
         86,
         63.5,
         1.67,
-        'Gaur goizean neurtuta.'
+        76, 'Gaur goizean neurtuta.'
     ),
     (
         75,
@@ -26163,7 +26219,7 @@ INSERT INTO Neurketak (
         84,
         60.5,
         1.65,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         76,
@@ -26173,7 +26229,7 @@ INSERT INTO Neurketak (
         88,
         66.4,
         1.69,
-        'Dena ondo.'
+        76, 'Dena ondo.'
     ),
     (
         77,
@@ -26183,7 +26239,7 @@ INSERT INTO Neurketak (
         89,
         68.0,
         1.67,
-        'Dena ondo.'
+        78, 'Dena ondo.'
     ),
     (
         79,
@@ -26193,7 +26249,7 @@ INSERT INTO Neurketak (
         75,
         66.3,
         1.67,
-        'Gosariaren ondoren.'
+        70, 'Gosariaren ondoren.'
     ),
     (
         80,
@@ -26203,7 +26259,7 @@ INSERT INTO Neurketak (
         85,
         62.8,
         1.78,
-        'Apur bat nekatuta.'
+        78, 'Apur bat nekatuta.'
     ),
     (
         81,
@@ -26213,7 +26269,7 @@ INSERT INTO Neurketak (
         84,
         87.0,
         1.58,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         82,
@@ -26223,7 +26279,7 @@ INSERT INTO Neurketak (
         86,
         89.4,
         1.77,
-        'Kirola egin ondoren.'
+        85, 'Kirola egin ondoren.'
     ),
     (
         83,
@@ -26233,7 +26289,7 @@ INSERT INTO Neurketak (
         87,
         64.6,
         1.80,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         84,
@@ -26243,7 +26299,7 @@ INSERT INTO Neurketak (
         79,
         79.2,
         1.67,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         85,
@@ -26253,7 +26309,7 @@ INSERT INTO Neurketak (
         85,
         80.6,
         1.72,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         86,
@@ -26263,7 +26319,7 @@ INSERT INTO Neurketak (
         74,
         68.5,
         1.57,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         89,
@@ -26273,7 +26329,7 @@ INSERT INTO Neurketak (
         91,
         91.5,
         1.84,
-        'Dena ondo.'
+        92, 'Dena ondo.'
     ),
     (
         90,
@@ -26283,7 +26339,7 @@ INSERT INTO Neurketak (
         83,
         66.4,
         1.60,
-        'Ondo sentitzen naiz.'
+        77, 'Ondo sentitzen naiz.'
     ),
     (
         94,
@@ -26293,7 +26349,7 @@ INSERT INTO Neurketak (
         83,
         86.1,
         1.83,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         95,
@@ -26303,7 +26359,7 @@ INSERT INTO Neurketak (
         80,
         91.0,
         1.77,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         96,
@@ -26313,7 +26369,7 @@ INSERT INTO Neurketak (
         76,
         76.8,
         1.71,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         97,
@@ -26323,7 +26379,7 @@ INSERT INTO Neurketak (
         73,
         86.9,
         1.56,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         98,
@@ -26333,7 +26389,7 @@ INSERT INTO Neurketak (
         82,
         84.0,
         1.60,
-        'Gaur goizean neurtuta.'
+        94, 'Gaur goizean neurtuta.'
     ),
     (
         100,
@@ -26343,7 +26399,7 @@ INSERT INTO Neurketak (
         79,
         82.9,
         1.57,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         51,
@@ -26353,7 +26409,7 @@ INSERT INTO Neurketak (
         81,
         63.9,
         1.76,
-        'Baraualdian.'
+        75, 'Baraualdian.'
     ),
     (
         53,
@@ -26363,7 +26419,7 @@ INSERT INTO Neurketak (
         84,
         75.5,
         1.75,
-        'Gosariaren ondoren.'
+        78, 'Gosariaren ondoren.'
     ),
     (
         54,
@@ -26373,7 +26429,7 @@ INSERT INTO Neurketak (
         80,
         87.6,
         1.60,
-        'Ondo sentitzen naiz.'
+        86, 'Ondo sentitzen naiz.'
     ),
     (
         56,
@@ -26383,7 +26439,7 @@ INSERT INTO Neurketak (
         84,
         89.8,
         1.61,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         57,
@@ -26393,7 +26449,7 @@ INSERT INTO Neurketak (
         88,
         83.2,
         1.69,
-        'Dena ondo.'
+        76, 'Dena ondo.'
     ),
     (
         58,
@@ -26403,7 +26459,7 @@ INSERT INTO Neurketak (
         78,
         67.2,
         1.68,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         59,
@@ -26413,7 +26469,7 @@ INSERT INTO Neurketak (
         92,
         62.1,
         1.73,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         60,
@@ -26423,7 +26479,7 @@ INSERT INTO Neurketak (
         87,
         78.6,
         1.81,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         61,
@@ -26433,7 +26489,7 @@ INSERT INTO Neurketak (
         90,
         72.8,
         1.83,
-        'Gosariaren ondoren.'
+        74, 'Gosariaren ondoren.'
     ),
     (
         62,
@@ -26443,7 +26499,7 @@ INSERT INTO Neurketak (
         71,
         65.0,
         1.56,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         63,
@@ -26453,7 +26509,7 @@ INSERT INTO Neurketak (
         79,
         80.9,
         1.80,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         64,
@@ -26463,7 +26519,7 @@ INSERT INTO Neurketak (
         79,
         95.4,
         1.56,
-        'Baraualdian.'
+        79, 'Baraualdian.'
     ),
     (
         65,
@@ -26473,7 +26529,7 @@ INSERT INTO Neurketak (
         76,
         90.6,
         1.55,
-        'Apur bat nekatuta.'
+        81, 'Apur bat nekatuta.'
     ),
     (
         66,
@@ -26483,7 +26539,7 @@ INSERT INTO Neurketak (
         76,
         75.9,
         1.59,
-        'Ondo sentitzen naiz.'
+        86, 'Ondo sentitzen naiz.'
     ),
     (
         67,
@@ -26493,7 +26549,7 @@ INSERT INTO Neurketak (
         90,
         71.2,
         1.72,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         68,
@@ -26503,7 +26559,7 @@ INSERT INTO Neurketak (
         72,
         60.5,
         1.85,
-        'Gosariaren ondoren.'
+        88, 'Gosariaren ondoren.'
     ),
     (
         69,
@@ -26513,7 +26569,7 @@ INSERT INTO Neurketak (
         76,
         95.8,
         1.66,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         70,
@@ -26523,7 +26579,7 @@ INSERT INTO Neurketak (
         88,
         74.9,
         1.70,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         71,
@@ -26533,7 +26589,7 @@ INSERT INTO Neurketak (
         86,
         89.0,
         1.63,
-        'Ondo sentitzen naiz.'
+        92, 'Ondo sentitzen naiz.'
     ),
     (
         72,
@@ -26543,7 +26599,7 @@ INSERT INTO Neurketak (
         85,
         91.1,
         1.69,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         73,
@@ -26553,7 +26609,7 @@ INSERT INTO Neurketak (
         83,
         95.1,
         1.55,
-        'Gosariaren ondoren.'
+        86, 'Gosariaren ondoren.'
     ),
     (
         74,
@@ -26563,7 +26619,7 @@ INSERT INTO Neurketak (
         79,
         63.3,
         1.67,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         75,
@@ -26573,7 +26629,7 @@ INSERT INTO Neurketak (
         71,
         59.8,
         1.65,
-        'Ondo sentitzen naiz.'
+        77, 'Ondo sentitzen naiz.'
     ),
     (
         76,
@@ -26583,7 +26639,7 @@ INSERT INTO Neurketak (
         85,
         66.2,
         1.69,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         77,
@@ -26593,7 +26649,7 @@ INSERT INTO Neurketak (
         85,
         67.6,
         1.67,
-        'Dena ondo.'
+        67, 'Dena ondo.'
     ),
     (
         78,
@@ -26603,7 +26659,7 @@ INSERT INTO Neurketak (
         84,
         62.8,
         1.61,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         79,
@@ -26613,7 +26669,7 @@ INSERT INTO Neurketak (
         77,
         67.2,
         1.67,
-        'Gosariaren ondoren.'
+        65, 'Gosariaren ondoren.'
     ),
     (
         80,
@@ -26623,7 +26679,7 @@ INSERT INTO Neurketak (
         84,
         63.3,
         1.78,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -26633,7 +26689,7 @@ INSERT INTO Neurketak (
         84,
         86.2,
         1.58,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         82,
@@ -26643,7 +26699,7 @@ INSERT INTO Neurketak (
         79,
         88.2,
         1.77,
-        'Kirola egin ondoren.'
+        83, 'Kirola egin ondoren.'
     ),
     (
         83,
@@ -26653,7 +26709,7 @@ INSERT INTO Neurketak (
         80,
         65.9,
         1.80,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         84,
@@ -26663,7 +26719,7 @@ INSERT INTO Neurketak (
         81,
         79.3,
         1.67,
-        'Dena ondo.'
+        85, 'Dena ondo.'
     ),
     (
         85,
@@ -26673,7 +26729,7 @@ INSERT INTO Neurketak (
         88,
         81.1,
         1.72,
-        'Kirola egin ondoren.'
+        67, 'Kirola egin ondoren.'
     ),
     (
         86,
@@ -26683,7 +26739,7 @@ INSERT INTO Neurketak (
         78,
         68.1,
         1.57,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         88,
@@ -26693,7 +26749,7 @@ INSERT INTO Neurketak (
         80,
         90.0,
         1.81,
-        'Apur bat nekatuta.'
+        67, 'Apur bat nekatuta.'
     ),
     (
         89,
@@ -26703,7 +26759,7 @@ INSERT INTO Neurketak (
         88,
         91.4,
         1.84,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         91,
@@ -26713,7 +26769,7 @@ INSERT INTO Neurketak (
         90,
         89.9,
         1.58,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         92,
@@ -26723,7 +26779,7 @@ INSERT INTO Neurketak (
         93,
         59.7,
         1.79,
-        'Kirola egin ondoren.'
+        72, 'Kirola egin ondoren.'
     ),
     (
         93,
@@ -26733,7 +26789,7 @@ INSERT INTO Neurketak (
         83,
         75.1,
         1.81,
-        'Ondo sentitzen naiz.'
+        70, 'Ondo sentitzen naiz.'
     ),
     (
         94,
@@ -26743,7 +26799,7 @@ INSERT INTO Neurketak (
         80,
         86.3,
         1.83,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         95,
@@ -26753,7 +26809,7 @@ INSERT INTO Neurketak (
         73,
         90.6,
         1.77,
-        'Ondo sentitzen naiz.'
+        89, 'Ondo sentitzen naiz.'
     ),
     (
         96,
@@ -26763,7 +26819,7 @@ INSERT INTO Neurketak (
         78,
         76.5,
         1.71,
-        'Baraualdian.'
+        75, 'Baraualdian.'
     ),
     (
         97,
@@ -26773,7 +26829,7 @@ INSERT INTO Neurketak (
         71,
         86.5,
         1.56,
-        'Baraualdian.'
+        93, 'Baraualdian.'
     ),
     (
         98,
@@ -26783,7 +26839,7 @@ INSERT INTO Neurketak (
         87,
         83.1,
         1.60,
-        'Gaur goizean neurtuta.'
+        94, 'Gaur goizean neurtuta.'
     ),
     (
         99,
@@ -26793,7 +26849,7 @@ INSERT INTO Neurketak (
         75,
         85.6,
         1.71,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         51,
@@ -26803,7 +26859,7 @@ INSERT INTO Neurketak (
         88,
         64.9,
         1.76,
-        'Kirola egin ondoren.'
+        72, 'Kirola egin ondoren.'
     ),
     (
         53,
@@ -26813,7 +26869,7 @@ INSERT INTO Neurketak (
         89,
         75.7,
         1.75,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         54,
@@ -26823,7 +26879,7 @@ INSERT INTO Neurketak (
         76,
         86.3,
         1.60,
-        'Kirola egin ondoren.'
+        91, 'Kirola egin ondoren.'
     ),
     (
         55,
@@ -26833,7 +26889,7 @@ INSERT INTO Neurketak (
         84,
         81.7,
         1.76,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         56,
@@ -26843,7 +26899,7 @@ INSERT INTO Neurketak (
         87,
         90.0,
         1.61,
-        'Gaur goizean neurtuta.'
+        76, 'Gaur goizean neurtuta.'
     ),
     (
         57,
@@ -26853,7 +26909,7 @@ INSERT INTO Neurketak (
         85,
         83.4,
         1.69,
-        'Dena ondo.'
+        92, 'Dena ondo.'
     ),
     (
         59,
@@ -26863,7 +26919,7 @@ INSERT INTO Neurketak (
         83,
         62.0,
         1.73,
-        'Kirola egin ondoren.'
+        82, 'Kirola egin ondoren.'
     ),
     (
         60,
@@ -26873,7 +26929,7 @@ INSERT INTO Neurketak (
         93,
         78.9,
         1.81,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         63,
@@ -26883,7 +26939,7 @@ INSERT INTO Neurketak (
         86,
         81.7,
         1.80,
-        'Gaur goizean neurtuta.'
+        85, 'Gaur goizean neurtuta.'
     ),
     (
         65,
@@ -26893,7 +26949,7 @@ INSERT INTO Neurketak (
         90,
         91.0,
         1.55,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         66,
@@ -26903,7 +26959,7 @@ INSERT INTO Neurketak (
         86,
         75.4,
         1.59,
-        'Dena ondo.'
+        77, 'Dena ondo.'
     ),
     (
         67,
@@ -26913,7 +26969,7 @@ INSERT INTO Neurketak (
         82,
         71.8,
         1.72,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         68,
@@ -26923,7 +26979,7 @@ INSERT INTO Neurketak (
         84,
         60.6,
         1.85,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         69,
@@ -26933,7 +26989,7 @@ INSERT INTO Neurketak (
         91,
         94.3,
         1.66,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         70,
@@ -26943,7 +26999,7 @@ INSERT INTO Neurketak (
         75,
         74.7,
         1.70,
-        'Gaur goizean neurtuta.'
+        78, 'Gaur goizean neurtuta.'
     ),
     (
         73,
@@ -26953,7 +27009,7 @@ INSERT INTO Neurketak (
         72,
         95.5,
         1.55,
-        'Dena ondo.'
+        68, 'Dena ondo.'
     ),
     (
         74,
@@ -26963,7 +27019,7 @@ INSERT INTO Neurketak (
         79,
         64.1,
         1.67,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         75,
@@ -26973,7 +27029,7 @@ INSERT INTO Neurketak (
         70,
         60.2,
         1.65,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         76,
@@ -26983,7 +27039,7 @@ INSERT INTO Neurketak (
         93,
         67.0,
         1.69,
-        'Gaur goizean neurtuta.'
+        92, 'Gaur goizean neurtuta.'
     ),
     (
         77,
@@ -26993,7 +27049,7 @@ INSERT INTO Neurketak (
         87,
         67.0,
         1.67,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         78,
@@ -27003,7 +27059,7 @@ INSERT INTO Neurketak (
         74,
         62.7,
         1.61,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         79,
@@ -27013,7 +27069,7 @@ INSERT INTO Neurketak (
         76,
         67.8,
         1.67,
-        'Kirola egin ondoren.'
+        80, 'Kirola egin ondoren.'
     ),
     (
         80,
@@ -27023,7 +27079,7 @@ INSERT INTO Neurketak (
         79,
         62.7,
         1.78,
-        'Kirola egin ondoren.'
+        87, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -27033,7 +27089,7 @@ INSERT INTO Neurketak (
         85,
         85.8,
         1.58,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         82,
@@ -27043,7 +27099,7 @@ INSERT INTO Neurketak (
         89,
         89.1,
         1.77,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         83,
@@ -27053,7 +27109,7 @@ INSERT INTO Neurketak (
         93,
         65.0,
         1.80,
-        'Dena ondo.'
+        70, 'Dena ondo.'
     ),
     (
         84,
@@ -27063,7 +27119,7 @@ INSERT INTO Neurketak (
         79,
         79.9,
         1.67,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         85,
@@ -27073,7 +27129,7 @@ INSERT INTO Neurketak (
         78,
         81.3,
         1.72,
-        'Apur bat nekatuta.'
+        69, 'Apur bat nekatuta.'
     ),
     (
         86,
@@ -27083,7 +27139,7 @@ INSERT INTO Neurketak (
         80,
         68.0,
         1.57,
-        'Apur bat nekatuta.'
+        85, 'Apur bat nekatuta.'
     ),
     (
         87,
@@ -27093,7 +27149,7 @@ INSERT INTO Neurketak (
         78,
         72.5,
         1.61,
-        'Gaur goizean neurtuta.'
+        94, 'Gaur goizean neurtuta.'
     ),
     (
         88,
@@ -27103,7 +27159,7 @@ INSERT INTO Neurketak (
         79,
         89.8,
         1.81,
-        'Gosariaren ondoren.'
+        72, 'Gosariaren ondoren.'
     ),
     (
         89,
@@ -27113,7 +27169,7 @@ INSERT INTO Neurketak (
         86,
         90.8,
         1.84,
-        'Baraualdian.'
+        80, 'Baraualdian.'
     ),
     (
         90,
@@ -27123,7 +27179,7 @@ INSERT INTO Neurketak (
         89,
         66.2,
         1.60,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         91,
@@ -27133,7 +27189,7 @@ INSERT INTO Neurketak (
         86,
         90.8,
         1.58,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         92,
@@ -27143,7 +27199,7 @@ INSERT INTO Neurketak (
         90,
         59.1,
         1.79,
-        'Gosariaren ondoren.'
+        77, 'Gosariaren ondoren.'
     ),
     (
         93,
@@ -27153,7 +27209,7 @@ INSERT INTO Neurketak (
         84,
         75.1,
         1.81,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         95,
@@ -27163,7 +27219,7 @@ INSERT INTO Neurketak (
         74,
         90.1,
         1.77,
-        'Ondo sentitzen naiz.'
+        68, 'Ondo sentitzen naiz.'
     ),
     (
         96,
@@ -27173,7 +27229,7 @@ INSERT INTO Neurketak (
         78,
         77.8,
         1.71,
-        'Dena ondo.'
+        83, 'Dena ondo.'
     ),
     (
         97,
@@ -27183,7 +27239,7 @@ INSERT INTO Neurketak (
         85,
         87.5,
         1.56,
-        'Gaur goizean neurtuta.'
+        87, 'Gaur goizean neurtuta.'
     ),
     (
         99,
@@ -27193,7 +27249,7 @@ INSERT INTO Neurketak (
         73,
         87.0,
         1.71,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         51,
@@ -27203,7 +27259,7 @@ INSERT INTO Neurketak (
         88,
         63.1,
         1.76,
-        'Apur bat nekatuta.'
+        83, 'Apur bat nekatuta.'
     ),
     (
         52,
@@ -27213,7 +27269,7 @@ INSERT INTO Neurketak (
         93,
         94.3,
         1.77,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         53,
@@ -27223,7 +27279,7 @@ INSERT INTO Neurketak (
         85,
         75.3,
         1.75,
-        'Apur bat nekatuta.'
+        94, 'Apur bat nekatuta.'
     ),
     (
         56,
@@ -27233,7 +27289,7 @@ INSERT INTO Neurketak (
         83,
         90.4,
         1.61,
-        'Baraualdian.'
+        83, 'Baraualdian.'
     ),
     (
         57,
@@ -27243,7 +27299,7 @@ INSERT INTO Neurketak (
         81,
         83.1,
         1.69,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         58,
@@ -27253,7 +27309,7 @@ INSERT INTO Neurketak (
         86,
         67.2,
         1.68,
-        'Kirola egin ondoren.'
+        72, 'Kirola egin ondoren.'
     ),
     (
         59,
@@ -27263,7 +27319,7 @@ INSERT INTO Neurketak (
         94,
         63.2,
         1.73,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         60,
@@ -27273,7 +27329,7 @@ INSERT INTO Neurketak (
         95,
         77.2,
         1.81,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         61,
@@ -27283,7 +27339,7 @@ INSERT INTO Neurketak (
         78,
         73.1,
         1.83,
-        'Dena ondo.'
+        81, 'Dena ondo.'
     ),
     (
         62,
@@ -27293,7 +27349,7 @@ INSERT INTO Neurketak (
         82,
         65.9,
         1.56,
-        'Gosariaren ondoren.'
+        65, 'Gosariaren ondoren.'
     ),
     (
         63,
@@ -27303,7 +27359,7 @@ INSERT INTO Neurketak (
         86,
         81.9,
         1.80,
-        'Gosariaren ondoren.'
+        89, 'Gosariaren ondoren.'
     ),
     (
         64,
@@ -27313,7 +27369,7 @@ INSERT INTO Neurketak (
         80,
         95.2,
         1.56,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         66,
@@ -27323,7 +27379,7 @@ INSERT INTO Neurketak (
         80,
         74.1,
         1.59,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         67,
@@ -27333,7 +27389,7 @@ INSERT INTO Neurketak (
         83,
         71.8,
         1.72,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         68,
@@ -27343,7 +27399,7 @@ INSERT INTO Neurketak (
         73,
         61.3,
         1.85,
-        'Ondo sentitzen naiz.'
+        88, 'Ondo sentitzen naiz.'
     ),
     (
         69,
@@ -27353,7 +27409,7 @@ INSERT INTO Neurketak (
         78,
         95.0,
         1.66,
-        'Kirola egin ondoren.'
+        87, 'Kirola egin ondoren.'
     ),
     (
         70,
@@ -27363,7 +27419,7 @@ INSERT INTO Neurketak (
         77,
         75.9,
         1.70,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         71,
@@ -27373,7 +27429,7 @@ INSERT INTO Neurketak (
         81,
         89.8,
         1.63,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         72,
@@ -27383,7 +27439,7 @@ INSERT INTO Neurketak (
         89,
         92.2,
         1.69,
-        'Apur bat nekatuta.'
+        78, 'Apur bat nekatuta.'
     ),
     (
         73,
@@ -27393,7 +27449,7 @@ INSERT INTO Neurketak (
         79,
         95.4,
         1.55,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         74,
@@ -27403,7 +27459,7 @@ INSERT INTO Neurketak (
         79,
         63.3,
         1.67,
-        'Apur bat nekatuta.'
+        88, 'Apur bat nekatuta.'
     ),
     (
         75,
@@ -27413,7 +27469,7 @@ INSERT INTO Neurketak (
         74,
         59.9,
         1.65,
-        'Dena ondo.'
+        65, 'Dena ondo.'
     ),
     (
         76,
@@ -27423,7 +27479,7 @@ INSERT INTO Neurketak (
         88,
         66.6,
         1.69,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         77,
@@ -27433,7 +27489,7 @@ INSERT INTO Neurketak (
         90,
         66.5,
         1.67,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         78,
@@ -27443,7 +27499,7 @@ INSERT INTO Neurketak (
         78,
         63.3,
         1.61,
-        'Gaur goizean neurtuta.'
+        80, 'Gaur goizean neurtuta.'
     ),
     (
         79,
@@ -27453,7 +27509,7 @@ INSERT INTO Neurketak (
         89,
         66.2,
         1.67,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         80,
@@ -27463,7 +27519,7 @@ INSERT INTO Neurketak (
         85,
         63.3,
         1.78,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -27473,7 +27529,7 @@ INSERT INTO Neurketak (
         89,
         86.3,
         1.58,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         83,
@@ -27483,7 +27539,7 @@ INSERT INTO Neurketak (
         93,
         64.3,
         1.80,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         84,
@@ -27493,7 +27549,7 @@ INSERT INTO Neurketak (
         91,
         79.3,
         1.67,
-        'Apur bat nekatuta.'
+        94, 'Apur bat nekatuta.'
     ),
     (
         85,
@@ -27503,7 +27559,7 @@ INSERT INTO Neurketak (
         88,
         81.5,
         1.72,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         88,
@@ -27513,7 +27569,7 @@ INSERT INTO Neurketak (
         79,
         89.6,
         1.81,
-        'Dena ondo.'
+        83, 'Dena ondo.'
     ),
     (
         89,
@@ -27523,7 +27579,7 @@ INSERT INTO Neurketak (
         88,
         91.9,
         1.84,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         91,
@@ -27533,7 +27589,7 @@ INSERT INTO Neurketak (
         81,
         89.6,
         1.58,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         92,
@@ -27543,7 +27599,7 @@ INSERT INTO Neurketak (
         93,
         59.2,
         1.79,
-        'Gosariaren ondoren.'
+        90, 'Gosariaren ondoren.'
     ),
     (
         93,
@@ -27553,7 +27609,7 @@ INSERT INTO Neurketak (
         93,
         75.7,
         1.81,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         94,
@@ -27563,7 +27619,7 @@ INSERT INTO Neurketak (
         77,
         87.3,
         1.83,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         95,
@@ -27573,7 +27629,7 @@ INSERT INTO Neurketak (
         85,
         91.0,
         1.77,
-        'Gaur goizean neurtuta.'
+        86, 'Gaur goizean neurtuta.'
     ),
     (
         97,
@@ -27583,7 +27639,7 @@ INSERT INTO Neurketak (
         76,
         86.2,
         1.56,
-        'Kirola egin ondoren.'
+        66, 'Kirola egin ondoren.'
     ),
     (
         98,
@@ -27593,7 +27649,7 @@ INSERT INTO Neurketak (
         79,
         83.9,
         1.60,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         99,
@@ -27603,7 +27659,7 @@ INSERT INTO Neurketak (
         75,
         86.6,
         1.71,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         51,
@@ -27613,7 +27669,7 @@ INSERT INTO Neurketak (
         86,
         63.2,
         1.76,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         52,
@@ -27623,7 +27679,7 @@ INSERT INTO Neurketak (
         88,
         93.9,
         1.77,
-        'Gosariaren ondoren.'
+        67, 'Gosariaren ondoren.'
     ),
     (
         53,
@@ -27633,7 +27689,7 @@ INSERT INTO Neurketak (
         93,
         75.0,
         1.75,
-        'Baraualdian.'
+        79, 'Baraualdian.'
     ),
     (
         55,
@@ -27643,7 +27699,7 @@ INSERT INTO Neurketak (
         73,
         81.0,
         1.76,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         56,
@@ -27653,7 +27709,7 @@ INSERT INTO Neurketak (
         90,
         90.6,
         1.61,
-        'Kirola egin ondoren.'
+        93, 'Kirola egin ondoren.'
     ),
     (
         58,
@@ -27663,7 +27719,7 @@ INSERT INTO Neurketak (
         90,
         66.2,
         1.68,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         59,
@@ -27673,7 +27729,7 @@ INSERT INTO Neurketak (
         83,
         62.5,
         1.73,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         60,
@@ -27683,7 +27739,7 @@ INSERT INTO Neurketak (
         83,
         77.7,
         1.81,
-        'Baraualdian.'
+        85, 'Baraualdian.'
     ),
     (
         61,
@@ -27693,7 +27749,7 @@ INSERT INTO Neurketak (
         93,
         72.2,
         1.83,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         62,
@@ -27703,7 +27759,7 @@ INSERT INTO Neurketak (
         78,
         65.7,
         1.56,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         63,
@@ -27713,7 +27769,7 @@ INSERT INTO Neurketak (
         79,
         81.8,
         1.80,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         64,
@@ -27723,7 +27779,7 @@ INSERT INTO Neurketak (
         80,
         95.2,
         1.56,
-        'Ondo sentitzen naiz.'
+        68, 'Ondo sentitzen naiz.'
     ),
     (
         65,
@@ -27733,7 +27789,7 @@ INSERT INTO Neurketak (
         85,
         91.3,
         1.55,
-        'Apur bat nekatuta.'
+        85, 'Apur bat nekatuta.'
     ),
     (
         67,
@@ -27743,7 +27799,7 @@ INSERT INTO Neurketak (
         80,
         71.8,
         1.72,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         68,
@@ -27753,7 +27809,7 @@ INSERT INTO Neurketak (
         83,
         60.7,
         1.85,
-        'Gosariaren ondoren.'
+        79, 'Gosariaren ondoren.'
     ),
     (
         70,
@@ -27763,7 +27819,7 @@ INSERT INTO Neurketak (
         77,
         75.9,
         1.70,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         71,
@@ -27773,7 +27829,7 @@ INSERT INTO Neurketak (
         77,
         89.4,
         1.63,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         72,
@@ -27783,7 +27839,7 @@ INSERT INTO Neurketak (
         76,
         91.6,
         1.69,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         73,
@@ -27793,7 +27849,7 @@ INSERT INTO Neurketak (
         78,
         95.1,
         1.55,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         74,
@@ -27803,7 +27859,7 @@ INSERT INTO Neurketak (
         82,
         64.3,
         1.67,
-        'Ondo sentitzen naiz.'
+        78, 'Ondo sentitzen naiz.'
     ),
     (
         75,
@@ -27813,7 +27869,7 @@ INSERT INTO Neurketak (
         80,
         60.8,
         1.65,
-        'Kirola egin ondoren.'
+        76, 'Kirola egin ondoren.'
     ),
     (
         76,
@@ -27823,7 +27879,7 @@ INSERT INTO Neurketak (
         81,
         65.7,
         1.69,
-        'Gaur goizean neurtuta.'
+        78, 'Gaur goizean neurtuta.'
     ),
     (
         77,
@@ -27833,7 +27889,7 @@ INSERT INTO Neurketak (
         91,
         66.4,
         1.67,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         78,
@@ -27843,7 +27899,7 @@ INSERT INTO Neurketak (
         81,
         63.6,
         1.61,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         79,
@@ -27853,7 +27909,7 @@ INSERT INTO Neurketak (
         78,
         66.7,
         1.67,
-        'Dena ondo.'
+        73, 'Dena ondo.'
     ),
     (
         80,
@@ -27863,7 +27919,7 @@ INSERT INTO Neurketak (
         94,
         62.1,
         1.78,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -27873,7 +27929,7 @@ INSERT INTO Neurketak (
         92,
         85.2,
         1.58,
-        'Gosariaren ondoren.'
+        72, 'Gosariaren ondoren.'
     ),
     (
         82,
@@ -27883,7 +27939,7 @@ INSERT INTO Neurketak (
         82,
         89.1,
         1.77,
-        'Dena ondo.'
+        86, 'Dena ondo.'
     ),
     (
         83,
@@ -27893,7 +27949,7 @@ INSERT INTO Neurketak (
         91,
         64.4,
         1.80,
-        'Ondo sentitzen naiz.'
+        80, 'Ondo sentitzen naiz.'
     ),
     (
         85,
@@ -27903,7 +27959,7 @@ INSERT INTO Neurketak (
         85,
         80.9,
         1.72,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         86,
@@ -27913,7 +27969,7 @@ INSERT INTO Neurketak (
         81,
         68.7,
         1.57,
-        'Baraualdian.'
+        84, 'Baraualdian.'
     ),
     (
         87,
@@ -27923,7 +27979,7 @@ INSERT INTO Neurketak (
         81,
         73.8,
         1.61,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         88,
@@ -27933,7 +27989,7 @@ INSERT INTO Neurketak (
         77,
         89.5,
         1.81,
-        'Apur bat nekatuta.'
+        91, 'Apur bat nekatuta.'
     ),
     (
         89,
@@ -27943,7 +27999,7 @@ INSERT INTO Neurketak (
         90,
         90.1,
         1.84,
-        'Gosariaren ondoren.'
+        68, 'Gosariaren ondoren.'
     ),
     (
         90,
@@ -27953,7 +28009,7 @@ INSERT INTO Neurketak (
         84,
         66.5,
         1.60,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         91,
@@ -27963,7 +28019,7 @@ INSERT INTO Neurketak (
         83,
         89.3,
         1.58,
-        'Baraualdian.'
+        66, 'Baraualdian.'
     ),
     (
         92,
@@ -27973,7 +28029,7 @@ INSERT INTO Neurketak (
         91,
         59.3,
         1.79,
-        'Ondo sentitzen naiz.'
+        88, 'Ondo sentitzen naiz.'
     ),
     (
         93,
@@ -27983,7 +28039,7 @@ INSERT INTO Neurketak (
         94,
         76.4,
         1.81,
-        'Kirola egin ondoren.'
+        69, 'Kirola egin ondoren.'
     ),
     (
         96,
@@ -27993,7 +28049,7 @@ INSERT INTO Neurketak (
         82,
         77.4,
         1.71,
-        'Gosariaren ondoren.'
+        70, 'Gosariaren ondoren.'
     ),
     (
         99,
@@ -28003,7 +28059,7 @@ INSERT INTO Neurketak (
         88,
         87.0,
         1.71,
-        'Gosariaren ondoren.'
+        77, 'Gosariaren ondoren.'
     ),
     (
         100,
@@ -28013,7 +28069,7 @@ INSERT INTO Neurketak (
         72,
         81.9,
         1.57,
-        'Baraualdian.'
+        86, 'Baraualdian.'
     ),
     (
         51,
@@ -28023,7 +28079,7 @@ INSERT INTO Neurketak (
         81,
         63.5,
         1.76,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         52,
@@ -28033,7 +28089,7 @@ INSERT INTO Neurketak (
         86,
         94.8,
         1.77,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         53,
@@ -28043,7 +28099,7 @@ INSERT INTO Neurketak (
         83,
         74.4,
         1.75,
-        'Gosariaren ondoren.'
+        74, 'Gosariaren ondoren.'
     ),
     (
         54,
@@ -28053,7 +28109,7 @@ INSERT INTO Neurketak (
         85,
         86.5,
         1.60,
-        'Dena ondo.'
+        74, 'Dena ondo.'
     ),
     (
         55,
@@ -28063,7 +28119,7 @@ INSERT INTO Neurketak (
         78,
         81.1,
         1.76,
-        'Gosariaren ondoren.'
+        89, 'Gosariaren ondoren.'
     ),
     (
         56,
@@ -28073,7 +28129,7 @@ INSERT INTO Neurketak (
         88,
         89.5,
         1.61,
-        'Baraualdian.'
+        75, 'Baraualdian.'
     ),
     (
         57,
@@ -28083,7 +28139,7 @@ INSERT INTO Neurketak (
         93,
         83.8,
         1.69,
-        'Baraualdian.'
+        83, 'Baraualdian.'
     ),
     (
         58,
@@ -28093,7 +28149,7 @@ INSERT INTO Neurketak (
         83,
         66.2,
         1.68,
-        'Apur bat nekatuta.'
+        83, 'Apur bat nekatuta.'
     ),
     (
         59,
@@ -28103,7 +28159,7 @@ INSERT INTO Neurketak (
         95,
         63.2,
         1.73,
-        'Apur bat nekatuta.'
+        91, 'Apur bat nekatuta.'
     ),
     (
         60,
@@ -28113,7 +28169,7 @@ INSERT INTO Neurketak (
         80,
         78.4,
         1.81,
-        'Baraualdian.'
+        68, 'Baraualdian.'
     ),
     (
         63,
@@ -28123,7 +28179,7 @@ INSERT INTO Neurketak (
         78,
         80.8,
         1.80,
-        'Apur bat nekatuta.'
+        86, 'Apur bat nekatuta.'
     ),
     (
         65,
@@ -28133,7 +28189,7 @@ INSERT INTO Neurketak (
         76,
         90.3,
         1.55,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         66,
@@ -28143,7 +28199,7 @@ INSERT INTO Neurketak (
         79,
         74.7,
         1.59,
-        'Kirola egin ondoren.'
+        76, 'Kirola egin ondoren.'
     ),
     (
         67,
@@ -28153,7 +28209,7 @@ INSERT INTO Neurketak (
         87,
         72.9,
         1.72,
-        'Dena ondo.'
+        92, 'Dena ondo.'
     ),
     (
         68,
@@ -28163,7 +28219,7 @@ INSERT INTO Neurketak (
         76,
         60.6,
         1.85,
-        'Gosariaren ondoren.'
+        83, 'Gosariaren ondoren.'
     ),
     (
         71,
@@ -28173,7 +28229,7 @@ INSERT INTO Neurketak (
         71,
         89.8,
         1.63,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         72,
@@ -28183,7 +28239,7 @@ INSERT INTO Neurketak (
         82,
         91.9,
         1.69,
-        'Kirola egin ondoren.'
+        67, 'Kirola egin ondoren.'
     ),
     (
         73,
@@ -28193,7 +28249,7 @@ INSERT INTO Neurketak (
         85,
         95.4,
         1.55,
-        'Gaur goizean neurtuta.'
+        78, 'Gaur goizean neurtuta.'
     ),
     (
         74,
@@ -28203,7 +28259,7 @@ INSERT INTO Neurketak (
         83,
         64.8,
         1.67,
-        'Gosariaren ondoren.'
+        94, 'Gosariaren ondoren.'
     ),
     (
         75,
@@ -28213,7 +28269,7 @@ INSERT INTO Neurketak (
         79,
         59.3,
         1.65,
-        'Apur bat nekatuta.'
+        81, 'Apur bat nekatuta.'
     ),
     (
         76,
@@ -28223,7 +28279,7 @@ INSERT INTO Neurketak (
         95,
         66.1,
         1.69,
-        'Kirola egin ondoren.'
+        69, 'Kirola egin ondoren.'
     ),
     (
         77,
@@ -28233,7 +28289,7 @@ INSERT INTO Neurketak (
         87,
         66.5,
         1.67,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         79,
@@ -28243,7 +28299,7 @@ INSERT INTO Neurketak (
         79,
         67.9,
         1.67,
-        'Dena ondo.'
+        81, 'Dena ondo.'
     ),
     (
         82,
@@ -28253,7 +28309,7 @@ INSERT INTO Neurketak (
         94,
         88.2,
         1.77,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         83,
@@ -28263,7 +28319,7 @@ INSERT INTO Neurketak (
         91,
         66.0,
         1.80,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         84,
@@ -28273,7 +28329,7 @@ INSERT INTO Neurketak (
         89,
         79.6,
         1.67,
-        'Apur bat nekatuta.'
+        72, 'Apur bat nekatuta.'
     ),
     (
         85,
@@ -28283,7 +28339,7 @@ INSERT INTO Neurketak (
         83,
         80.4,
         1.72,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         86,
@@ -28293,7 +28349,7 @@ INSERT INTO Neurketak (
         83,
         67.1,
         1.57,
-        'Ondo sentitzen naiz.'
+        72, 'Ondo sentitzen naiz.'
     ),
     (
         87,
@@ -28303,7 +28359,7 @@ INSERT INTO Neurketak (
         76,
         74.0,
         1.61,
-        'Apur bat nekatuta.'
+        69, 'Apur bat nekatuta.'
     ),
     (
         88,
@@ -28313,7 +28369,7 @@ INSERT INTO Neurketak (
         74,
         90.7,
         1.81,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         90,
@@ -28323,7 +28379,7 @@ INSERT INTO Neurketak (
         92,
         66.4,
         1.60,
-        'Gosariaren ondoren.'
+        67, 'Gosariaren ondoren.'
     ),
     (
         92,
@@ -28333,7 +28389,7 @@ INSERT INTO Neurketak (
         90,
         59.3,
         1.79,
-        'Dena ondo.'
+        74, 'Dena ondo.'
     ),
     (
         93,
@@ -28343,7 +28399,7 @@ INSERT INTO Neurketak (
         84,
         75.0,
         1.81,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         94,
@@ -28353,7 +28409,7 @@ INSERT INTO Neurketak (
         90,
         87.6,
         1.83,
-        'Gaur goizean neurtuta.'
+        72, 'Gaur goizean neurtuta.'
     ),
     (
         96,
@@ -28363,7 +28419,7 @@ INSERT INTO Neurketak (
         81,
         76.0,
         1.71,
-        'Gaur goizean neurtuta.'
+        66, 'Gaur goizean neurtuta.'
     ),
     (
         97,
@@ -28373,7 +28429,7 @@ INSERT INTO Neurketak (
         85,
         86.5,
         1.56,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         98,
@@ -28383,7 +28439,7 @@ INSERT INTO Neurketak (
         76,
         84.2,
         1.60,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         99,
@@ -28393,7 +28449,7 @@ INSERT INTO Neurketak (
         81,
         85.8,
         1.71,
-        'Kirola egin ondoren.'
+        89, 'Kirola egin ondoren.'
     ),
     (
         100,
@@ -28403,7 +28459,7 @@ INSERT INTO Neurketak (
         73,
         81.6,
         1.57,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         53,
@@ -28413,7 +28469,7 @@ INSERT INTO Neurketak (
         78,
         74.6,
         1.75,
-        'Gaur goizean neurtuta.'
+        85, 'Gaur goizean neurtuta.'
     ),
     (
         54,
@@ -28423,7 +28479,7 @@ INSERT INTO Neurketak (
         81,
         86.2,
         1.60,
-        'Gosariaren ondoren.'
+        82, 'Gosariaren ondoren.'
     ),
     (
         55,
@@ -28433,7 +28489,7 @@ INSERT INTO Neurketak (
         82,
         81.8,
         1.76,
-        'Dena ondo.'
+        72, 'Dena ondo.'
     ),
     (
         56,
@@ -28443,7 +28499,7 @@ INSERT INTO Neurketak (
         89,
         89.4,
         1.61,
-        'Gaur goizean neurtuta.'
+        66, 'Gaur goizean neurtuta.'
     ),
     (
         59,
@@ -28453,7 +28509,7 @@ INSERT INTO Neurketak (
         91,
         62.9,
         1.73,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         60,
@@ -28463,7 +28519,7 @@ INSERT INTO Neurketak (
         85,
         77.2,
         1.81,
-        'Baraualdian.'
+        75, 'Baraualdian.'
     ),
     (
         61,
@@ -28473,7 +28529,7 @@ INSERT INTO Neurketak (
         81,
         72.0,
         1.83,
-        'Kirola egin ondoren.'
+        85, 'Kirola egin ondoren.'
     ),
     (
         65,
@@ -28483,7 +28539,7 @@ INSERT INTO Neurketak (
         91,
         90.6,
         1.55,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         66,
@@ -28493,7 +28549,7 @@ INSERT INTO Neurketak (
         91,
         74.7,
         1.59,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         68,
@@ -28503,7 +28559,7 @@ INSERT INTO Neurketak (
         77,
         60.3,
         1.85,
-        'Gaur goizean neurtuta.'
+        71, 'Gaur goizean neurtuta.'
     ),
     (
         69,
@@ -28513,7 +28569,7 @@ INSERT INTO Neurketak (
         87,
         95.7,
         1.66,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         71,
@@ -28523,7 +28579,7 @@ INSERT INTO Neurketak (
         73,
         88.3,
         1.63,
-        'Gaur goizean neurtuta.'
+        85, 'Gaur goizean neurtuta.'
     ),
     (
         72,
@@ -28533,7 +28589,7 @@ INSERT INTO Neurketak (
         81,
         92.4,
         1.69,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         73,
@@ -28543,7 +28599,7 @@ INSERT INTO Neurketak (
         73,
         94.1,
         1.55,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         74,
@@ -28553,7 +28609,7 @@ INSERT INTO Neurketak (
         81,
         64.5,
         1.67,
-        'Kirola egin ondoren.'
+        81, 'Kirola egin ondoren.'
     ),
     (
         76,
@@ -28563,7 +28619,7 @@ INSERT INTO Neurketak (
         82,
         66.3,
         1.69,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         78,
@@ -28573,7 +28629,7 @@ INSERT INTO Neurketak (
         76,
         63.3,
         1.61,
-        'Ondo sentitzen naiz.'
+        85, 'Ondo sentitzen naiz.'
     ),
     (
         79,
@@ -28583,7 +28639,7 @@ INSERT INTO Neurketak (
         89,
         66.0,
         1.67,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         81,
@@ -28593,7 +28649,7 @@ INSERT INTO Neurketak (
         83,
         85.4,
         1.58,
-        'Ondo sentitzen naiz.'
+        90, 'Ondo sentitzen naiz.'
     ),
     (
         83,
@@ -28603,7 +28659,7 @@ INSERT INTO Neurketak (
         81,
         65.8,
         1.80,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         84,
@@ -28613,7 +28669,7 @@ INSERT INTO Neurketak (
         84,
         79.2,
         1.67,
-        'Dena ondo.'
+        67, 'Dena ondo.'
     ),
     (
         87,
@@ -28623,7 +28679,7 @@ INSERT INTO Neurketak (
         76,
         72.9,
         1.61,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         88,
@@ -28633,7 +28689,7 @@ INSERT INTO Neurketak (
         86,
         89.6,
         1.81,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         94,
@@ -28643,7 +28699,7 @@ INSERT INTO Neurketak (
         76,
         86.7,
         1.83,
-        'Dena ondo.'
+        67, 'Dena ondo.'
     ),
     (
         95,
@@ -28653,7 +28709,7 @@ INSERT INTO Neurketak (
         73,
         89.9,
         1.77,
-        'Apur bat nekatuta.'
+        89, 'Apur bat nekatuta.'
     ),
     (
         96,
@@ -28663,7 +28719,7 @@ INSERT INTO Neurketak (
         85,
         76.2,
         1.71,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         97,
@@ -28673,7 +28729,7 @@ INSERT INTO Neurketak (
         74,
         86.4,
         1.56,
-        'Ondo sentitzen naiz.'
+        91, 'Ondo sentitzen naiz.'
     ),
     (
         98,
@@ -28683,7 +28739,7 @@ INSERT INTO Neurketak (
         89,
         84.5,
         1.60,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         100,
@@ -28693,7 +28749,7 @@ INSERT INTO Neurketak (
         84,
         81.4,
         1.57,
-        'Dena ondo.'
+        65, 'Dena ondo.'
     ),
     (
         52,
@@ -28703,7 +28759,7 @@ INSERT INTO Neurketak (
         79,
         93.9,
         1.77,
-        'Gaur goizean neurtuta.'
+        72, 'Gaur goizean neurtuta.'
     ),
     (
         53,
@@ -28713,7 +28769,7 @@ INSERT INTO Neurketak (
         82,
         74.5,
         1.75,
-        'Baraualdian.'
+        94, 'Baraualdian.'
     ),
     (
         54,
@@ -28723,7 +28779,7 @@ INSERT INTO Neurketak (
         84,
         87.3,
         1.60,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         57,
@@ -28733,7 +28789,7 @@ INSERT INTO Neurketak (
         80,
         82.9,
         1.69,
-        'Dena ondo.'
+        90, 'Dena ondo.'
     ),
     (
         58,
@@ -28743,7 +28799,7 @@ INSERT INTO Neurketak (
         84,
         66.9,
         1.68,
-        'Gosariaren ondoren.'
+        78, 'Gosariaren ondoren.'
     ),
     (
         59,
@@ -28753,7 +28809,7 @@ INSERT INTO Neurketak (
         82,
         62.9,
         1.73,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         60,
@@ -28763,7 +28819,7 @@ INSERT INTO Neurketak (
         83,
         77.1,
         1.81,
-        'Apur bat nekatuta.'
+        84, 'Apur bat nekatuta.'
     ),
     (
         61,
@@ -28773,7 +28829,7 @@ INSERT INTO Neurketak (
         85,
         73.6,
         1.83,
-        'Baraualdian.'
+        76, 'Baraualdian.'
     ),
     (
         62,
@@ -28783,7 +28839,7 @@ INSERT INTO Neurketak (
         72,
         66.8,
         1.56,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         64,
@@ -28793,7 +28849,7 @@ INSERT INTO Neurketak (
         86,
         95.6,
         1.56,
-        'Ondo sentitzen naiz.'
+        73, 'Ondo sentitzen naiz.'
     ),
     (
         66,
@@ -28803,7 +28859,7 @@ INSERT INTO Neurketak (
         84,
         74.6,
         1.59,
-        'Baraualdian.'
+        86, 'Baraualdian.'
     ),
     (
         68,
@@ -28813,7 +28869,7 @@ INSERT INTO Neurketak (
         87,
         61.3,
         1.85,
-        'Baraualdian.'
+        70, 'Baraualdian.'
     ),
     (
         69,
@@ -28823,7 +28879,7 @@ INSERT INTO Neurketak (
         77,
         94.4,
         1.66,
-        'Gosariaren ondoren.'
+        72, 'Gosariaren ondoren.'
     ),
     (
         70,
@@ -28833,7 +28889,7 @@ INSERT INTO Neurketak (
         87,
         74.3,
         1.70,
-        'Ondo sentitzen naiz.'
+        73, 'Ondo sentitzen naiz.'
     ),
     (
         71,
@@ -28843,7 +28899,7 @@ INSERT INTO Neurketak (
         80,
         89.2,
         1.63,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         72,
@@ -28853,7 +28909,7 @@ INSERT INTO Neurketak (
         87,
         91.6,
         1.69,
-        'Gosariaren ondoren.'
+        80, 'Gosariaren ondoren.'
     ),
     (
         73,
@@ -28863,7 +28919,7 @@ INSERT INTO Neurketak (
         75,
         94.0,
         1.55,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         74,
@@ -28873,7 +28929,7 @@ INSERT INTO Neurketak (
         77,
         64.2,
         1.67,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         75,
@@ -28883,7 +28939,7 @@ INSERT INTO Neurketak (
         73,
         59.3,
         1.65,
-        'Kirola egin ondoren.'
+        88, 'Kirola egin ondoren.'
     ),
     (
         76,
@@ -28893,7 +28949,7 @@ INSERT INTO Neurketak (
         95,
         66.4,
         1.69,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         77,
@@ -28903,7 +28959,7 @@ INSERT INTO Neurketak (
         93,
         66.4,
         1.67,
-        'Gaur goizean neurtuta.'
+        76, 'Gaur goizean neurtuta.'
     ),
     (
         78,
@@ -28913,7 +28969,7 @@ INSERT INTO Neurketak (
         82,
         62.5,
         1.61,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         80,
@@ -28923,7 +28979,7 @@ INSERT INTO Neurketak (
         83,
         62.4,
         1.78,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         81,
@@ -28933,7 +28989,7 @@ INSERT INTO Neurketak (
         81,
         85.1,
         1.58,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         82,
@@ -28943,7 +28999,7 @@ INSERT INTO Neurketak (
         88,
         88.8,
         1.77,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         83,
@@ -28953,7 +29009,7 @@ INSERT INTO Neurketak (
         94,
         64.7,
         1.80,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         84,
@@ -28963,7 +29019,7 @@ INSERT INTO Neurketak (
         79,
         79.8,
         1.67,
-        'Baraualdian.'
+        70, 'Baraualdian.'
     ),
     (
         85,
@@ -28973,7 +29029,7 @@ INSERT INTO Neurketak (
         87,
         81.5,
         1.72,
-        'Ondo sentitzen naiz.'
+        65, 'Ondo sentitzen naiz.'
     ),
     (
         87,
@@ -28983,7 +29039,7 @@ INSERT INTO Neurketak (
         86,
         73.7,
         1.61,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         88,
@@ -28993,7 +29049,7 @@ INSERT INTO Neurketak (
         84,
         90.3,
         1.81,
-        'Apur bat nekatuta.'
+        75, 'Apur bat nekatuta.'
     ),
     (
         89,
@@ -29003,7 +29059,7 @@ INSERT INTO Neurketak (
         86,
         90.3,
         1.84,
-        'Dena ondo.'
+        90, 'Dena ondo.'
     ),
     (
         90,
@@ -29013,7 +29069,7 @@ INSERT INTO Neurketak (
         93,
         65.7,
         1.60,
-        'Gaur goizean neurtuta.'
+        74, 'Gaur goizean neurtuta.'
     ),
     (
         91,
@@ -29023,7 +29079,7 @@ INSERT INTO Neurketak (
         77,
         89.6,
         1.58,
-        'Gosariaren ondoren.'
+        87, 'Gosariaren ondoren.'
     ),
     (
         92,
@@ -29033,7 +29089,7 @@ INSERT INTO Neurketak (
         81,
         60.8,
         1.79,
-        'Gosariaren ondoren.'
+        78, 'Gosariaren ondoren.'
     ),
     (
         94,
@@ -29043,7 +29099,7 @@ INSERT INTO Neurketak (
         78,
         87.3,
         1.83,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         95,
@@ -29053,7 +29109,7 @@ INSERT INTO Neurketak (
         79,
         89.9,
         1.77,
-        'Gosariaren ondoren.'
+        85, 'Gosariaren ondoren.'
     ),
     (
         96,
@@ -29063,7 +29119,7 @@ INSERT INTO Neurketak (
         74,
         76.3,
         1.71,
-        'Gosariaren ondoren.'
+        80, 'Gosariaren ondoren.'
     ),
     (
         97,
@@ -29073,7 +29129,7 @@ INSERT INTO Neurketak (
         79,
         87.2,
         1.56,
-        'Baraualdian.'
+        85, 'Baraualdian.'
     ),
     (
         99,
@@ -29083,7 +29139,7 @@ INSERT INTO Neurketak (
         80,
         85.8,
         1.71,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         100,
@@ -29093,7 +29149,7 @@ INSERT INTO Neurketak (
         87,
         82.8,
         1.57,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         51,
@@ -29103,7 +29159,7 @@ INSERT INTO Neurketak (
         90,
         63.6,
         1.76,
-        'Gosariaren ondoren.'
+        87, 'Gosariaren ondoren.'
     ),
     (
         54,
@@ -29113,7 +29169,7 @@ INSERT INTO Neurketak (
         77,
         87.6,
         1.60,
-        'Kirola egin ondoren.'
+        93, 'Kirola egin ondoren.'
     ),
     (
         56,
@@ -29123,7 +29179,7 @@ INSERT INTO Neurketak (
         84,
         90.0,
         1.61,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         57,
@@ -29133,7 +29189,7 @@ INSERT INTO Neurketak (
         80,
         82.8,
         1.69,
-        'Gaur goizean neurtuta.'
+        88, 'Gaur goizean neurtuta.'
     ),
     (
         58,
@@ -29143,7 +29199,7 @@ INSERT INTO Neurketak (
         82,
         67.5,
         1.68,
-        'Kirola egin ondoren.'
+        83, 'Kirola egin ondoren.'
     ),
     (
         59,
@@ -29153,7 +29209,7 @@ INSERT INTO Neurketak (
         83,
         63.7,
         1.73,
-        'Baraualdian.'
+        76, 'Baraualdian.'
     ),
     (
         60,
@@ -29163,7 +29219,7 @@ INSERT INTO Neurketak (
         83,
         77.6,
         1.81,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         61,
@@ -29173,7 +29229,7 @@ INSERT INTO Neurketak (
         93,
         73.6,
         1.83,
-        'Dena ondo.'
+        68, 'Dena ondo.'
     ),
     (
         62,
@@ -29183,7 +29239,7 @@ INSERT INTO Neurketak (
         71,
         65.1,
         1.56,
-        'Ondo sentitzen naiz.'
+        93, 'Ondo sentitzen naiz.'
     ),
     (
         63,
@@ -29193,7 +29249,7 @@ INSERT INTO Neurketak (
         90,
         81.9,
         1.80,
-        'Dena ondo.'
+        74, 'Dena ondo.'
     ),
     (
         64,
@@ -29203,7 +29259,7 @@ INSERT INTO Neurketak (
         88,
         94.9,
         1.56,
-        'Kirola egin ondoren.'
+        80, 'Kirola egin ondoren.'
     ),
     (
         65,
@@ -29213,7 +29269,7 @@ INSERT INTO Neurketak (
         88,
         91.0,
         1.55,
-        'Apur bat nekatuta.'
+        88, 'Apur bat nekatuta.'
     ),
     (
         68,
@@ -29223,7 +29279,7 @@ INSERT INTO Neurketak (
         83,
         60.8,
         1.85,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         70,
@@ -29233,7 +29289,7 @@ INSERT INTO Neurketak (
         88,
         74.6,
         1.70,
-        'Apur bat nekatuta.'
+        71, 'Apur bat nekatuta.'
     ),
     (
         72,
@@ -29243,7 +29299,7 @@ INSERT INTO Neurketak (
         80,
         93.0,
         1.69,
-        'Baraualdian.'
+        68, 'Baraualdian.'
     ),
     (
         73,
@@ -29253,7 +29309,7 @@ INSERT INTO Neurketak (
         71,
         94.6,
         1.55,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         75,
@@ -29263,7 +29319,7 @@ INSERT INTO Neurketak (
         73,
         60.6,
         1.65,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         76,
@@ -29273,7 +29329,7 @@ INSERT INTO Neurketak (
         92,
         65.9,
         1.69,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         78,
@@ -29283,7 +29339,7 @@ INSERT INTO Neurketak (
         80,
         62.7,
         1.61,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         80,
@@ -29293,7 +29349,7 @@ INSERT INTO Neurketak (
         90,
         62.4,
         1.78,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -29303,7 +29359,7 @@ INSERT INTO Neurketak (
         90,
         85.5,
         1.58,
-        'Kirola egin ondoren.'
+        85, 'Kirola egin ondoren.'
     ),
     (
         82,
@@ -29313,7 +29369,7 @@ INSERT INTO Neurketak (
         90,
         89.9,
         1.77,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         83,
@@ -29323,7 +29379,7 @@ INSERT INTO Neurketak (
         86,
         64.2,
         1.80,
-        'Gaur goizean neurtuta.'
+        87, 'Gaur goizean neurtuta.'
     ),
     (
         84,
@@ -29333,7 +29389,7 @@ INSERT INTO Neurketak (
         88,
         78.5,
         1.67,
-        'Gosariaren ondoren.'
+        71, 'Gosariaren ondoren.'
     ),
     (
         85,
@@ -29343,7 +29399,7 @@ INSERT INTO Neurketak (
         80,
         81.3,
         1.72,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         86,
@@ -29353,7 +29409,7 @@ INSERT INTO Neurketak (
         84,
         68.8,
         1.57,
-        'Gaur goizean neurtuta.'
+        66, 'Gaur goizean neurtuta.'
     ),
     (
         87,
@@ -29363,7 +29419,7 @@ INSERT INTO Neurketak (
         87,
         72.3,
         1.61,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         88,
@@ -29373,7 +29429,7 @@ INSERT INTO Neurketak (
         73,
         90.3,
         1.81,
-        'Gosariaren ondoren.'
+        65, 'Gosariaren ondoren.'
     ),
     (
         90,
@@ -29383,7 +29439,7 @@ INSERT INTO Neurketak (
         88,
         66.0,
         1.60,
-        'Kirola egin ondoren.'
+        85, 'Kirola egin ondoren.'
     ),
     (
         91,
@@ -29393,7 +29449,7 @@ INSERT INTO Neurketak (
         90,
         90.2,
         1.58,
-        'Gaur goizean neurtuta.'
+        80, 'Gaur goizean neurtuta.'
     ),
     (
         92,
@@ -29403,7 +29459,7 @@ INSERT INTO Neurketak (
         91,
         59.7,
         1.79,
-        'Ondo sentitzen naiz.'
+        94, 'Ondo sentitzen naiz.'
     ),
     (
         93,
@@ -29413,7 +29469,7 @@ INSERT INTO Neurketak (
         84,
         77.0,
         1.81,
-        'Gaur goizean neurtuta.'
+        94, 'Gaur goizean neurtuta.'
     ),
     (
         96,
@@ -29423,7 +29479,7 @@ INSERT INTO Neurketak (
         82,
         76.6,
         1.71,
-        'Dena ondo.'
+        72, 'Dena ondo.'
     ),
     (
         97,
@@ -29433,7 +29489,7 @@ INSERT INTO Neurketak (
         80,
         87.8,
         1.56,
-        'Gaur goizean neurtuta.'
+        86, 'Gaur goizean neurtuta.'
     ),
     (
         98,
@@ -29443,7 +29499,7 @@ INSERT INTO Neurketak (
         84,
         84.0,
         1.60,
-        'Baraualdian.'
+        79, 'Baraualdian.'
     ),
     (
         99,
@@ -29453,7 +29509,7 @@ INSERT INTO Neurketak (
         83,
         85.8,
         1.71,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         51,
@@ -29463,7 +29519,7 @@ INSERT INTO Neurketak (
         84,
         63.2,
         1.76,
-        'Dena ondo.'
+        77, 'Dena ondo.'
     ),
     (
         52,
@@ -29473,7 +29529,7 @@ INSERT INTO Neurketak (
         82,
         93.9,
         1.77,
-        'Apur bat nekatuta.'
+        81, 'Apur bat nekatuta.'
     ),
     (
         53,
@@ -29483,7 +29539,7 @@ INSERT INTO Neurketak (
         90,
         74.3,
         1.75,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         54,
@@ -29493,7 +29549,7 @@ INSERT INTO Neurketak (
         76,
         87.3,
         1.60,
-        'Gosariaren ondoren.'
+        91, 'Gosariaren ondoren.'
     ),
     (
         55,
@@ -29503,7 +29559,7 @@ INSERT INTO Neurketak (
         77,
         81.6,
         1.76,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         56,
@@ -29513,7 +29569,7 @@ INSERT INTO Neurketak (
         94,
         90.6,
         1.61,
-        'Dena ondo.'
+        94, 'Dena ondo.'
     ),
     (
         58,
@@ -29523,7 +29579,7 @@ INSERT INTO Neurketak (
         83,
         66.7,
         1.68,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         59,
@@ -29533,7 +29589,7 @@ INSERT INTO Neurketak (
         92,
         63.7,
         1.73,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         60,
@@ -29543,7 +29599,7 @@ INSERT INTO Neurketak (
         91,
         77.4,
         1.81,
-        'Apur bat nekatuta.'
+        67, 'Apur bat nekatuta.'
     ),
     (
         61,
@@ -29553,7 +29609,7 @@ INSERT INTO Neurketak (
         93,
         72.8,
         1.83,
-        'Apur bat nekatuta.'
+        93, 'Apur bat nekatuta.'
     ),
     (
         62,
@@ -29563,7 +29619,7 @@ INSERT INTO Neurketak (
         85,
         66.5,
         1.56,
-        'Apur bat nekatuta.'
+        67, 'Apur bat nekatuta.'
     ),
     (
         63,
@@ -29573,7 +29629,7 @@ INSERT INTO Neurketak (
         88,
         80.5,
         1.80,
-        'Dena ondo.'
+        88, 'Dena ondo.'
     ),
     (
         64,
@@ -29583,7 +29639,7 @@ INSERT INTO Neurketak (
         88,
         95.1,
         1.56,
-        'Gosariaren ondoren.'
+        86, 'Gosariaren ondoren.'
     ),
     (
         65,
@@ -29593,7 +29649,7 @@ INSERT INTO Neurketak (
         76,
         90.9,
         1.55,
-        'Gosariaren ondoren.'
+        88, 'Gosariaren ondoren.'
     ),
     (
         66,
@@ -29603,7 +29659,7 @@ INSERT INTO Neurketak (
         85,
         75.9,
         1.59,
-        'Kirola egin ondoren.'
+        94, 'Kirola egin ondoren.'
     ),
     (
         67,
@@ -29613,7 +29669,7 @@ INSERT INTO Neurketak (
         91,
         72.1,
         1.72,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         68,
@@ -29623,7 +29679,7 @@ INSERT INTO Neurketak (
         78,
         61.1,
         1.85,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         70,
@@ -29633,7 +29689,7 @@ INSERT INTO Neurketak (
         75,
         75.1,
         1.70,
-        'Gaur goizean neurtuta.'
+        78, 'Gaur goizean neurtuta.'
     ),
     (
         71,
@@ -29643,7 +29699,7 @@ INSERT INTO Neurketak (
         86,
         88.8,
         1.63,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         72,
@@ -29653,7 +29709,7 @@ INSERT INTO Neurketak (
         75,
         91.3,
         1.69,
-        'Kirola egin ondoren.'
+        72, 'Kirola egin ondoren.'
     ),
     (
         73,
@@ -29663,7 +29719,7 @@ INSERT INTO Neurketak (
         73,
         95.4,
         1.55,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         74,
@@ -29673,7 +29729,7 @@ INSERT INTO Neurketak (
         86,
         63.2,
         1.67,
-        'Dena ondo.'
+        94, 'Dena ondo.'
     ),
     (
         76,
@@ -29683,7 +29739,7 @@ INSERT INTO Neurketak (
         87,
         66.0,
         1.69,
-        'Ondo sentitzen naiz.'
+        87, 'Ondo sentitzen naiz.'
     ),
     (
         77,
@@ -29693,7 +29749,7 @@ INSERT INTO Neurketak (
         84,
         66.6,
         1.67,
-        'Baraualdian.'
+        76, 'Baraualdian.'
     ),
     (
         78,
@@ -29703,7 +29759,7 @@ INSERT INTO Neurketak (
         78,
         62.6,
         1.61,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         80,
@@ -29713,7 +29769,7 @@ INSERT INTO Neurketak (
         92,
         62.2,
         1.78,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         81,
@@ -29723,7 +29779,7 @@ INSERT INTO Neurketak (
         82,
         86.2,
         1.58,
-        'Apur bat nekatuta.'
+        92, 'Apur bat nekatuta.'
     ),
     (
         82,
@@ -29733,7 +29789,7 @@ INSERT INTO Neurketak (
         90,
         88.0,
         1.77,
-        'Apur bat nekatuta.'
+        75, 'Apur bat nekatuta.'
     ),
     (
         85,
@@ -29743,7 +29799,7 @@ INSERT INTO Neurketak (
         87,
         80.0,
         1.72,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         86,
@@ -29753,7 +29809,7 @@ INSERT INTO Neurketak (
         77,
         67.6,
         1.57,
-        'Kirola egin ondoren.'
+        91, 'Kirola egin ondoren.'
     ),
     (
         87,
@@ -29763,7 +29819,7 @@ INSERT INTO Neurketak (
         87,
         73.2,
         1.61,
-        'Gosariaren ondoren.'
+        66, 'Gosariaren ondoren.'
     ),
     (
         89,
@@ -29773,7 +29829,7 @@ INSERT INTO Neurketak (
         90,
         91.4,
         1.84,
-        'Apur bat nekatuta.'
+        94, 'Apur bat nekatuta.'
     ),
     (
         90,
@@ -29783,7 +29839,7 @@ INSERT INTO Neurketak (
         85,
         66.6,
         1.60,
-        'Ondo sentitzen naiz.'
+        79, 'Ondo sentitzen naiz.'
     ),
     (
         91,
@@ -29793,7 +29849,7 @@ INSERT INTO Neurketak (
         82,
         90.3,
         1.58,
-        'Gosariaren ondoren.'
+        80, 'Gosariaren ondoren.'
     ),
     (
         93,
@@ -29803,7 +29859,7 @@ INSERT INTO Neurketak (
         87,
         75.9,
         1.81,
-        'Apur bat nekatuta.'
+        72, 'Apur bat nekatuta.'
     ),
     (
         94,
@@ -29813,7 +29869,7 @@ INSERT INTO Neurketak (
         83,
         87.5,
         1.83,
-        'Baraualdian.'
+        70, 'Baraualdian.'
     ),
     (
         95,
@@ -29823,7 +29879,7 @@ INSERT INTO Neurketak (
         74,
         90.7,
         1.77,
-        'Baraualdian.'
+        76, 'Baraualdian.'
     ),
     (
         96,
@@ -29833,7 +29889,7 @@ INSERT INTO Neurketak (
         76,
         76.7,
         1.71,
-        'Baraualdian.'
+        84, 'Baraualdian.'
     ),
     (
         97,
@@ -29843,7 +29899,7 @@ INSERT INTO Neurketak (
         72,
         86.9,
         1.56,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         99,
@@ -29853,7 +29909,7 @@ INSERT INTO Neurketak (
         83,
         86.5,
         1.71,
-        'Dena ondo.'
+        77, 'Dena ondo.'
     ),
     (
         51,
@@ -29863,7 +29919,7 @@ INSERT INTO Neurketak (
         93,
         64.3,
         1.76,
-        'Baraualdian.'
+        80, 'Baraualdian.'
     ),
     (
         52,
@@ -29873,7 +29929,7 @@ INSERT INTO Neurketak (
         92,
         94.0,
         1.77,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         54,
@@ -29883,7 +29939,7 @@ INSERT INTO Neurketak (
         84,
         86.0,
         1.60,
-        'Gaur goizean neurtuta.'
+        91, 'Gaur goizean neurtuta.'
     ),
     (
         55,
@@ -29893,7 +29949,7 @@ INSERT INTO Neurketak (
         84,
         81.8,
         1.76,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         56,
@@ -29903,7 +29959,7 @@ INSERT INTO Neurketak (
         87,
         90.6,
         1.61,
-        'Gaur goizean neurtuta.'
+        74, 'Gaur goizean neurtuta.'
     ),
     (
         57,
@@ -29913,7 +29969,7 @@ INSERT INTO Neurketak (
         87,
         83.5,
         1.69,
-        'Kirola egin ondoren.'
+        80, 'Kirola egin ondoren.'
     ),
     (
         59,
@@ -29923,7 +29979,7 @@ INSERT INTO Neurketak (
         83,
         63.1,
         1.73,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         60,
@@ -29933,7 +29989,7 @@ INSERT INTO Neurketak (
         93,
         78.3,
         1.81,
-        'Dena ondo.'
+        68, 'Dena ondo.'
     ),
     (
         64,
@@ -29943,7 +29999,7 @@ INSERT INTO Neurketak (
         79,
         94.6,
         1.56,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         65,
@@ -29953,7 +30009,7 @@ INSERT INTO Neurketak (
         79,
         92.0,
         1.55,
-        'Dena ondo.'
+        67, 'Dena ondo.'
     ),
     (
         66,
@@ -29963,7 +30019,7 @@ INSERT INTO Neurketak (
         82,
         74.4,
         1.59,
-        'Apur bat nekatuta.'
+        81, 'Apur bat nekatuta.'
     ),
     (
         67,
@@ -29973,7 +30029,7 @@ INSERT INTO Neurketak (
         80,
         71.6,
         1.72,
-        'Kirola egin ondoren.'
+        78, 'Kirola egin ondoren.'
     ),
     (
         68,
@@ -29983,7 +30039,7 @@ INSERT INTO Neurketak (
         80,
         61.1,
         1.85,
-        'Ondo sentitzen naiz.'
+        71, 'Ondo sentitzen naiz.'
     ),
     (
         69,
@@ -29993,7 +30049,7 @@ INSERT INTO Neurketak (
         78,
         95.7,
         1.66,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         70,
@@ -30003,7 +30059,7 @@ INSERT INTO Neurketak (
         88,
         74.1,
         1.70,
-        'Gosariaren ondoren.'
+        76, 'Gosariaren ondoren.'
     ),
     (
         71,
@@ -30013,7 +30069,7 @@ INSERT INTO Neurketak (
         80,
         88.8,
         1.63,
-        'Ondo sentitzen naiz.'
+        69, 'Ondo sentitzen naiz.'
     ),
     (
         72,
@@ -30023,7 +30079,7 @@ INSERT INTO Neurketak (
         79,
         91.1,
         1.69,
-        'Gosariaren ondoren.'
+        91, 'Gosariaren ondoren.'
     ),
     (
         73,
@@ -30033,7 +30089,7 @@ INSERT INTO Neurketak (
         72,
         94.8,
         1.55,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         76,
@@ -30043,7 +30099,7 @@ INSERT INTO Neurketak (
         94,
         66.2,
         1.69,
-        'Ondo sentitzen naiz.'
+        70, 'Ondo sentitzen naiz.'
     ),
     (
         78,
@@ -30053,7 +30109,7 @@ INSERT INTO Neurketak (
         76,
         62.0,
         1.61,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         79,
@@ -30063,7 +30119,7 @@ INSERT INTO Neurketak (
         76,
         66.0,
         1.67,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         80,
@@ -30073,7 +30129,7 @@ INSERT INTO Neurketak (
         83,
         63.6,
         1.78,
-        'Ondo sentitzen naiz.'
+        87, 'Ondo sentitzen naiz.'
     ),
     (
         81,
@@ -30083,7 +30139,7 @@ INSERT INTO Neurketak (
         86,
         86.2,
         1.58,
-        'Gosariaren ondoren.'
+        90, 'Gosariaren ondoren.'
     ),
     (
         82,
@@ -30093,7 +30149,7 @@ INSERT INTO Neurketak (
         84,
         88.1,
         1.77,
-        'Baraualdian.'
+        69, 'Baraualdian.'
     ),
     (
         84,
@@ -30103,7 +30159,7 @@ INSERT INTO Neurketak (
         79,
         78.0,
         1.67,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         86,
@@ -30113,7 +30169,7 @@ INSERT INTO Neurketak (
         79,
         67.6,
         1.57,
-        'Dena ondo.'
+        65, 'Dena ondo.'
     ),
     (
         87,
@@ -30123,7 +30179,7 @@ INSERT INTO Neurketak (
         87,
         73.7,
         1.61,
-        'Gosariaren ondoren.'
+        73, 'Gosariaren ondoren.'
     ),
     (
         88,
@@ -30133,7 +30189,7 @@ INSERT INTO Neurketak (
         87,
         90.4,
         1.81,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         89,
@@ -30143,7 +30199,7 @@ INSERT INTO Neurketak (
         87,
         90.7,
         1.84,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         90,
@@ -30153,7 +30209,7 @@ INSERT INTO Neurketak (
         78,
         65.7,
         1.60,
-        'Gosariaren ondoren.'
+        67, 'Gosariaren ondoren.'
     ),
     (
         91,
@@ -30163,7 +30219,7 @@ INSERT INTO Neurketak (
         79,
         89.7,
         1.58,
-        'Ondo sentitzen naiz.'
+        69, 'Ondo sentitzen naiz.'
     ),
     (
         92,
@@ -30173,7 +30229,7 @@ INSERT INTO Neurketak (
         84,
         60.8,
         1.79,
-        'Gaur goizean neurtuta.'
+        71, 'Gaur goizean neurtuta.'
     ),
     (
         94,
@@ -30183,7 +30239,7 @@ INSERT INTO Neurketak (
         87,
         87.6,
         1.83,
-        'Apur bat nekatuta.'
+        65, 'Apur bat nekatuta.'
     ),
     (
         95,
@@ -30193,7 +30249,7 @@ INSERT INTO Neurketak (
         75,
         89.5,
         1.77,
-        'Gosariaren ondoren.'
+        91, 'Gosariaren ondoren.'
     ),
     (
         96,
@@ -30203,7 +30259,7 @@ INSERT INTO Neurketak (
         88,
         77.6,
         1.71,
-        'Ondo sentitzen naiz.'
+        73, 'Ondo sentitzen naiz.'
     ),
     (
         98,
@@ -30213,7 +30269,7 @@ INSERT INTO Neurketak (
         88,
         83.8,
         1.60,
-        'Dena ondo.'
+        65, 'Dena ondo.'
     ),
     (
         99,
@@ -30223,7 +30279,7 @@ INSERT INTO Neurketak (
         75,
         86.8,
         1.71,
-        'Gosariaren ondoren.'
+        79, 'Gosariaren ondoren.'
     ),
     (
         100,
@@ -30233,7 +30289,7 @@ INSERT INTO Neurketak (
         73,
         81.2,
         1.57,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         51,
@@ -30243,7 +30299,7 @@ INSERT INTO Neurketak (
         80,
         64.4,
         1.76,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         52,
@@ -30253,7 +30309,7 @@ INSERT INTO Neurketak (
         81,
         94.7,
         1.77,
-        'Dena ondo.'
+        70, 'Dena ondo.'
     ),
     (
         53,
@@ -30263,7 +30319,7 @@ INSERT INTO Neurketak (
         93,
         74.1,
         1.75,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         55,
@@ -30273,7 +30329,7 @@ INSERT INTO Neurketak (
         75,
         81.9,
         1.76,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         56,
@@ -30283,7 +30339,7 @@ INSERT INTO Neurketak (
         80,
         89.2,
         1.61,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         57,
@@ -30293,7 +30349,7 @@ INSERT INTO Neurketak (
         91,
         82.5,
         1.69,
-        'Baraualdian.'
+        74, 'Baraualdian.'
     ),
     (
         58,
@@ -30303,7 +30359,7 @@ INSERT INTO Neurketak (
         79,
         66.5,
         1.68,
-        'Apur bat nekatuta.'
+        76, 'Apur bat nekatuta.'
     ),
     (
         59,
@@ -30313,7 +30369,7 @@ INSERT INTO Neurketak (
         88,
         63.4,
         1.73,
-        'Baraualdian.'
+        76, 'Baraualdian.'
     ),
     (
         60,
@@ -30323,7 +30379,7 @@ INSERT INTO Neurketak (
         85,
         78.6,
         1.81,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         61,
@@ -30333,7 +30389,7 @@ INSERT INTO Neurketak (
         80,
         73.9,
         1.83,
-        'Gaur goizean neurtuta.'
+        91, 'Gaur goizean neurtuta.'
     ),
     (
         62,
@@ -30343,7 +30399,7 @@ INSERT INTO Neurketak (
         79,
         66.0,
         1.56,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         63,
@@ -30353,7 +30409,7 @@ INSERT INTO Neurketak (
         76,
         81.7,
         1.80,
-        'Dena ondo.'
+        93, 'Dena ondo.'
     ),
     (
         65,
@@ -30363,7 +30419,7 @@ INSERT INTO Neurketak (
         77,
         90.8,
         1.55,
-        'Gosariaren ondoren.'
+        79, 'Gosariaren ondoren.'
     ),
     (
         66,
@@ -30373,7 +30429,7 @@ INSERT INTO Neurketak (
         77,
         74.3,
         1.59,
-        'Dena ondo.'
+        67, 'Dena ondo.'
     ),
     (
         68,
@@ -30383,7 +30439,7 @@ INSERT INTO Neurketak (
         83,
         60.9,
         1.85,
-        'Kirola egin ondoren.'
+        82, 'Kirola egin ondoren.'
     ),
     (
         69,
@@ -30393,7 +30449,7 @@ INSERT INTO Neurketak (
         81,
         95.9,
         1.66,
-        'Ondo sentitzen naiz.'
+        93, 'Ondo sentitzen naiz.'
     ),
     (
         70,
@@ -30403,7 +30459,7 @@ INSERT INTO Neurketak (
         82,
         74.3,
         1.70,
-        'Gaur goizean neurtuta.'
+        74, 'Gaur goizean neurtuta.'
     ),
     (
         71,
@@ -30413,7 +30469,7 @@ INSERT INTO Neurketak (
         83,
         88.5,
         1.63,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         73,
@@ -30423,7 +30479,7 @@ INSERT INTO Neurketak (
         84,
         95.5,
         1.55,
-        'Ondo sentitzen naiz.'
+        70, 'Ondo sentitzen naiz.'
     ),
     (
         74,
@@ -30433,7 +30489,7 @@ INSERT INTO Neurketak (
         76,
         64.4,
         1.67,
-        'Gaur goizean neurtuta.'
+        92, 'Gaur goizean neurtuta.'
     ),
     (
         75,
@@ -30443,7 +30499,7 @@ INSERT INTO Neurketak (
         84,
         60.6,
         1.65,
-        'Apur bat nekatuta.'
+        83, 'Apur bat nekatuta.'
     ),
     (
         79,
@@ -30453,7 +30509,7 @@ INSERT INTO Neurketak (
         86,
         67.7,
         1.67,
-        'Baraualdian.'
+        74, 'Baraualdian.'
     ),
     (
         81,
@@ -30463,7 +30519,7 @@ INSERT INTO Neurketak (
         86,
         87.0,
         1.58,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         82,
@@ -30473,7 +30529,7 @@ INSERT INTO Neurketak (
         89,
         89.9,
         1.77,
-        'Dena ondo.'
+        93, 'Dena ondo.'
     ),
     (
         83,
@@ -30483,7 +30539,7 @@ INSERT INTO Neurketak (
         89,
         65.3,
         1.80,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         85,
@@ -30493,7 +30549,7 @@ INSERT INTO Neurketak (
         80,
         80.6,
         1.72,
-        'Gosariaren ondoren.'
+        90, 'Gosariaren ondoren.'
     ),
     (
         86,
@@ -30503,7 +30559,7 @@ INSERT INTO Neurketak (
         86,
         68.3,
         1.57,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         87,
@@ -30513,7 +30569,7 @@ INSERT INTO Neurketak (
         77,
         72.4,
         1.61,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         90,
@@ -30523,7 +30579,7 @@ INSERT INTO Neurketak (
         90,
         66.7,
         1.60,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         91,
@@ -30533,7 +30589,7 @@ INSERT INTO Neurketak (
         83,
         89.7,
         1.58,
-        'Gaur goizean neurtuta.'
+        66, 'Gaur goizean neurtuta.'
     ),
     (
         93,
@@ -30543,7 +30599,7 @@ INSERT INTO Neurketak (
         84,
         76.0,
         1.81,
-        'Kirola egin ondoren.'
+        75, 'Kirola egin ondoren.'
     ),
     (
         94,
@@ -30553,7 +30609,7 @@ INSERT INTO Neurketak (
         87,
         87.8,
         1.83,
-        'Gosariaren ondoren.'
+        85, 'Gosariaren ondoren.'
     ),
     (
         95,
@@ -30563,7 +30619,7 @@ INSERT INTO Neurketak (
         78,
         89.4,
         1.77,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         97,
@@ -30573,7 +30629,7 @@ INSERT INTO Neurketak (
         83,
         87.2,
         1.56,
-        'Baraualdian.'
+        66, 'Baraualdian.'
     ),
     (
         98,
@@ -30583,7 +30639,7 @@ INSERT INTO Neurketak (
         75,
         84.3,
         1.60,
-        'Dena ondo.'
+        83, 'Dena ondo.'
     ),
     (
         99,
@@ -30593,7 +30649,7 @@ INSERT INTO Neurketak (
         85,
         85.1,
         1.71,
-        'Kirola egin ondoren.'
+        93, 'Kirola egin ondoren.'
     ),
     (
         100,
@@ -30603,7 +30659,7 @@ INSERT INTO Neurketak (
         87,
         81.7,
         1.57,
-        'Gosariaren ondoren.'
+        87, 'Gosariaren ondoren.'
     ),
     (
         51,
@@ -30613,7 +30669,7 @@ INSERT INTO Neurketak (
         82,
         64.8,
         1.76,
-        'Gaur goizean neurtuta.'
+        74, 'Gaur goizean neurtuta.'
     ),
     (
         53,
@@ -30623,7 +30679,7 @@ INSERT INTO Neurketak (
         80,
         74.0,
         1.75,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         54,
@@ -30633,7 +30689,7 @@ INSERT INTO Neurketak (
         85,
         86.5,
         1.60,
-        'Apur bat nekatuta.'
+        85, 'Apur bat nekatuta.'
     ),
     (
         55,
@@ -30643,7 +30699,7 @@ INSERT INTO Neurketak (
         84,
         80.9,
         1.76,
-        'Gosariaren ondoren.'
+        89, 'Gosariaren ondoren.'
     ),
     (
         57,
@@ -30653,7 +30709,7 @@ INSERT INTO Neurketak (
         81,
         83.7,
         1.69,
-        'Gosariaren ondoren.'
+        67, 'Gosariaren ondoren.'
     ),
     (
         58,
@@ -30663,7 +30719,7 @@ INSERT INTO Neurketak (
         87,
         67.6,
         1.68,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         60,
@@ -30673,7 +30729,7 @@ INSERT INTO Neurketak (
         81,
         78.0,
         1.81,
-        'Apur bat nekatuta.'
+        78, 'Apur bat nekatuta.'
     ),
     (
         61,
@@ -30683,7 +30739,7 @@ INSERT INTO Neurketak (
         83,
         72.5,
         1.83,
-        'Gosariaren ondoren.'
+        88, 'Gosariaren ondoren.'
     ),
     (
         62,
@@ -30693,7 +30749,7 @@ INSERT INTO Neurketak (
         84,
         66.7,
         1.56,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         63,
@@ -30703,7 +30759,7 @@ INSERT INTO Neurketak (
         78,
         80.6,
         1.80,
-        'Baraualdian.'
+        85, 'Baraualdian.'
     ),
     (
         64,
@@ -30713,7 +30769,7 @@ INSERT INTO Neurketak (
         75,
         95.0,
         1.56,
-        'Dena ondo.'
+        90, 'Dena ondo.'
     ),
     (
         65,
@@ -30723,7 +30779,7 @@ INSERT INTO Neurketak (
         83,
         91.0,
         1.55,
-        'Apur bat nekatuta.'
+        76, 'Apur bat nekatuta.'
     ),
     (
         66,
@@ -30733,7 +30789,7 @@ INSERT INTO Neurketak (
         79,
         74.4,
         1.59,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         69,
@@ -30743,7 +30799,7 @@ INSERT INTO Neurketak (
         85,
         94.7,
         1.66,
-        'Apur bat nekatuta.'
+        75, 'Apur bat nekatuta.'
     ),
     (
         70,
@@ -30753,7 +30809,7 @@ INSERT INTO Neurketak (
         77,
         76.0,
         1.70,
-        'Gaur goizean neurtuta.'
+        71, 'Gaur goizean neurtuta.'
     ),
     (
         71,
@@ -30763,7 +30819,7 @@ INSERT INTO Neurketak (
         72,
         88.5,
         1.63,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         72,
@@ -30773,7 +30829,7 @@ INSERT INTO Neurketak (
         79,
         91.5,
         1.69,
-        'Dena ondo.'
+        76, 'Dena ondo.'
     ),
     (
         73,
@@ -30783,7 +30839,7 @@ INSERT INTO Neurketak (
         82,
         95.6,
         1.55,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         75,
@@ -30793,7 +30849,7 @@ INSERT INTO Neurketak (
         82,
         60.0,
         1.65,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         76,
@@ -30803,7 +30859,7 @@ INSERT INTO Neurketak (
         94,
         66.1,
         1.69,
-        'Dena ondo.'
+        94, 'Dena ondo.'
     ),
     (
         80,
@@ -30813,7 +30869,7 @@ INSERT INTO Neurketak (
         81,
         63.2,
         1.78,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         81,
@@ -30823,7 +30879,7 @@ INSERT INTO Neurketak (
         94,
         86.1,
         1.58,
-        'Gaur goizean neurtuta.'
+        70, 'Gaur goizean neurtuta.'
     ),
     (
         82,
@@ -30833,7 +30889,7 @@ INSERT INTO Neurketak (
         93,
         88.9,
         1.77,
-        'Ondo sentitzen naiz.'
+        72, 'Ondo sentitzen naiz.'
     ),
     (
         83,
@@ -30843,7 +30899,7 @@ INSERT INTO Neurketak (
         92,
         65.8,
         1.80,
-        'Gaur goizean neurtuta.'
+        70, 'Gaur goizean neurtuta.'
     ),
     (
         84,
@@ -30853,7 +30909,7 @@ INSERT INTO Neurketak (
         90,
         79.8,
         1.67,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         85,
@@ -30863,7 +30919,7 @@ INSERT INTO Neurketak (
         88,
         81.0,
         1.72,
-        'Gaur goizean neurtuta.'
+        88, 'Gaur goizean neurtuta.'
     ),
     (
         87,
@@ -30873,7 +30929,7 @@ INSERT INTO Neurketak (
         76,
         72.9,
         1.61,
-        'Dena ondo.'
+        78, 'Dena ondo.'
     ),
     (
         89,
@@ -30883,7 +30939,7 @@ INSERT INTO Neurketak (
         87,
         90.2,
         1.84,
-        'Dena ondo.'
+        85, 'Dena ondo.'
     ),
     (
         90,
@@ -30893,7 +30949,7 @@ INSERT INTO Neurketak (
         92,
         66.9,
         1.60,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         92,
@@ -30903,7 +30959,7 @@ INSERT INTO Neurketak (
         81,
         59.5,
         1.79,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         93,
@@ -30913,7 +30969,7 @@ INSERT INTO Neurketak (
         90,
         76.4,
         1.81,
-        'Apur bat nekatuta.'
+        67, 'Apur bat nekatuta.'
     ),
     (
         94,
@@ -30923,7 +30979,7 @@ INSERT INTO Neurketak (
         87,
         87.0,
         1.83,
-        'Kirola egin ondoren.'
+        68, 'Kirola egin ondoren.'
     ),
     (
         95,
@@ -30933,7 +30989,7 @@ INSERT INTO Neurketak (
         87,
         89.7,
         1.77,
-        'Apur bat nekatuta.'
+        71, 'Apur bat nekatuta.'
     ),
     (
         96,
@@ -30943,7 +30999,7 @@ INSERT INTO Neurketak (
         82,
         76.7,
         1.71,
-        'Gosariaren ondoren.'
+        83, 'Gosariaren ondoren.'
     ),
     (
         98,
@@ -30953,7 +31009,7 @@ INSERT INTO Neurketak (
         90,
         84.7,
         1.60,
-        'Ondo sentitzen naiz.'
+        78, 'Ondo sentitzen naiz.'
     ),
     (
         99,
@@ -30963,7 +31019,7 @@ INSERT INTO Neurketak (
         73,
         86.6,
         1.71,
-        'Ondo sentitzen naiz.'
+        72, 'Ondo sentitzen naiz.'
     ),
     (
         100,
@@ -30973,7 +31029,7 @@ INSERT INTO Neurketak (
         86,
         81.8,
         1.57,
-        'Gaur goizean neurtuta.'
+        86, 'Gaur goizean neurtuta.'
     ),
     (
         51,
@@ -30983,7 +31039,7 @@ INSERT INTO Neurketak (
         91,
         64.8,
         1.76,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         52,
@@ -30993,7 +31049,7 @@ INSERT INTO Neurketak (
         87,
         94.0,
         1.77,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         55,
@@ -31003,7 +31059,7 @@ INSERT INTO Neurketak (
         76,
         80.3,
         1.76,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         56,
@@ -31013,7 +31069,7 @@ INSERT INTO Neurketak (
         80,
         89.4,
         1.61,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         57,
@@ -31023,7 +31079,7 @@ INSERT INTO Neurketak (
         87,
         82.8,
         1.69,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         58,
@@ -31033,7 +31089,7 @@ INSERT INTO Neurketak (
         85,
         67.0,
         1.68,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         59,
@@ -31043,7 +31099,7 @@ INSERT INTO Neurketak (
         80,
         62.0,
         1.73,
-        'Baraualdian.'
+        68, 'Baraualdian.'
     ),
     (
         60,
@@ -31053,7 +31109,7 @@ INSERT INTO Neurketak (
         94,
         77.7,
         1.81,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         61,
@@ -31063,7 +31119,7 @@ INSERT INTO Neurketak (
         82,
         73.1,
         1.83,
-        'Apur bat nekatuta.'
+        75, 'Apur bat nekatuta.'
     ),
     (
         62,
@@ -31073,7 +31129,7 @@ INSERT INTO Neurketak (
         81,
         65.3,
         1.56,
-        'Baraualdian.'
+        90, 'Baraualdian.'
     ),
     (
         63,
@@ -31083,7 +31139,7 @@ INSERT INTO Neurketak (
         84,
         80.3,
         1.80,
-        'Dena ondo.'
+        77, 'Dena ondo.'
     ),
     (
         64,
@@ -31093,7 +31149,7 @@ INSERT INTO Neurketak (
         73,
         95.4,
         1.56,
-        'Apur bat nekatuta.'
+        86, 'Apur bat nekatuta.'
     ),
     (
         65,
@@ -31103,7 +31159,7 @@ INSERT INTO Neurketak (
         86,
         90.4,
         1.55,
-        'Ondo sentitzen naiz.'
+        67, 'Ondo sentitzen naiz.'
     ),
     (
         66,
@@ -31113,7 +31169,7 @@ INSERT INTO Neurketak (
         78,
         75.0,
         1.59,
-        'Gosariaren ondoren.'
+        88, 'Gosariaren ondoren.'
     ),
     (
         67,
@@ -31123,7 +31179,7 @@ INSERT INTO Neurketak (
         79,
         72.7,
         1.72,
-        'Dena ondo.'
+        72, 'Dena ondo.'
     ),
     (
         69,
@@ -31133,7 +31189,7 @@ INSERT INTO Neurketak (
         78,
         95.7,
         1.66,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         70,
@@ -31143,7 +31199,7 @@ INSERT INTO Neurketak (
         77,
         75.0,
         1.70,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         72,
@@ -31153,7 +31209,7 @@ INSERT INTO Neurketak (
         80,
         91.3,
         1.69,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         73,
@@ -31163,7 +31219,7 @@ INSERT INTO Neurketak (
         77,
         94.0,
         1.55,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         74,
@@ -31173,7 +31229,7 @@ INSERT INTO Neurketak (
         91,
         64.3,
         1.67,
-        'Kirola egin ondoren.'
+        88, 'Kirola egin ondoren.'
     ),
     (
         75,
@@ -31183,7 +31239,7 @@ INSERT INTO Neurketak (
         82,
         59.1,
         1.65,
-        'Ondo sentitzen naiz.'
+        85, 'Ondo sentitzen naiz.'
     ),
     (
         76,
@@ -31193,7 +31249,7 @@ INSERT INTO Neurketak (
         93,
         65.2,
         1.69,
-        'Baraualdian.'
+        79, 'Baraualdian.'
     ),
     (
         77,
@@ -31203,7 +31259,7 @@ INSERT INTO Neurketak (
         92,
         67.6,
         1.67,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         78,
@@ -31213,7 +31269,7 @@ INSERT INTO Neurketak (
         83,
         62.8,
         1.61,
-        'Ondo sentitzen naiz.'
+        66, 'Ondo sentitzen naiz.'
     ),
     (
         79,
@@ -31223,7 +31279,7 @@ INSERT INTO Neurketak (
         78,
         66.4,
         1.67,
-        'Ondo sentitzen naiz.'
+        93, 'Ondo sentitzen naiz.'
     ),
     (
         80,
@@ -31233,7 +31289,7 @@ INSERT INTO Neurketak (
         94,
         62.6,
         1.78,
-        'Gosariaren ondoren.'
+        94, 'Gosariaren ondoren.'
     ),
     (
         81,
@@ -31243,7 +31299,7 @@ INSERT INTO Neurketak (
         90,
         86.3,
         1.58,
-        'Kirola egin ondoren.'
+        74, 'Kirola egin ondoren.'
     ),
     (
         82,
@@ -31253,7 +31309,7 @@ INSERT INTO Neurketak (
         80,
         88.4,
         1.77,
-        'Ondo sentitzen naiz.'
+        92, 'Ondo sentitzen naiz.'
     ),
     (
         83,
@@ -31263,7 +31319,7 @@ INSERT INTO Neurketak (
         83,
         64.0,
         1.80,
-        'Gosariaren ondoren.'
+        80, 'Gosariaren ondoren.'
     ),
     (
         84,
@@ -31273,7 +31329,7 @@ INSERT INTO Neurketak (
         82,
         78.9,
         1.67,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         85,
@@ -31283,7 +31339,7 @@ INSERT INTO Neurketak (
         84,
         81.5,
         1.72,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         86,
@@ -31293,7 +31349,7 @@ INSERT INTO Neurketak (
         79,
         68.9,
         1.57,
-        'Ondo sentitzen naiz.'
+        72, 'Ondo sentitzen naiz.'
     ),
     (
         87,
@@ -31303,7 +31359,7 @@ INSERT INTO Neurketak (
         88,
         73.2,
         1.61,
-        'Dena ondo.'
+        78, 'Dena ondo.'
     ),
     (
         89,
@@ -31313,7 +31369,7 @@ INSERT INTO Neurketak (
         82,
         90.1,
         1.84,
-        'Ondo sentitzen naiz.'
+        79, 'Ondo sentitzen naiz.'
     ),
     (
         90,
@@ -31323,7 +31379,7 @@ INSERT INTO Neurketak (
         87,
         67.0,
         1.60,
-        'Apur bat nekatuta.'
+        83, 'Apur bat nekatuta.'
     ),
     (
         91,
@@ -31333,7 +31389,7 @@ INSERT INTO Neurketak (
         80,
         89.5,
         1.58,
-        'Gosariaren ondoren.'
+        83, 'Gosariaren ondoren.'
     ),
     (
         93,
@@ -31343,7 +31399,7 @@ INSERT INTO Neurketak (
         90,
         76.2,
         1.81,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         94,
@@ -31353,7 +31409,7 @@ INSERT INTO Neurketak (
         84,
         86.1,
         1.83,
-        'Ondo sentitzen naiz.'
+        75, 'Ondo sentitzen naiz.'
     ),
     (
         95,
@@ -31363,7 +31419,7 @@ INSERT INTO Neurketak (
         86,
         90.5,
         1.77,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         96,
@@ -31373,7 +31429,7 @@ INSERT INTO Neurketak (
         87,
         76.8,
         1.71,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         97,
@@ -31383,7 +31439,7 @@ INSERT INTO Neurketak (
         81,
         87.6,
         1.56,
-        'Kirola egin ondoren.'
+        76, 'Kirola egin ondoren.'
     ),
     (
         98,
@@ -31393,7 +31449,7 @@ INSERT INTO Neurketak (
         81,
         84.8,
         1.60,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         51,
@@ -31403,7 +31459,7 @@ INSERT INTO Neurketak (
         90,
         64.2,
         1.76,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         54,
@@ -31413,7 +31469,7 @@ INSERT INTO Neurketak (
         80,
         87.7,
         1.60,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         56,
@@ -31423,7 +31479,7 @@ INSERT INTO Neurketak (
         84,
         90.2,
         1.61,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         57,
@@ -31433,7 +31489,7 @@ INSERT INTO Neurketak (
         89,
         83.8,
         1.69,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         58,
@@ -31443,7 +31499,7 @@ INSERT INTO Neurketak (
         78,
         66.8,
         1.68,
-        'Dena ondo.'
+        92, 'Dena ondo.'
     ),
     (
         59,
@@ -31453,7 +31509,7 @@ INSERT INTO Neurketak (
         81,
         63.4,
         1.73,
-        'Apur bat nekatuta.'
+        76, 'Apur bat nekatuta.'
     ),
     (
         60,
@@ -31463,7 +31519,7 @@ INSERT INTO Neurketak (
         94,
         77.6,
         1.81,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         61,
@@ -31473,7 +31529,7 @@ INSERT INTO Neurketak (
         83,
         72.7,
         1.83,
-        'Ondo sentitzen naiz.'
+        70, 'Ondo sentitzen naiz.'
     ),
     (
         64,
@@ -31483,7 +31539,7 @@ INSERT INTO Neurketak (
         74,
         94.3,
         1.56,
-        'Gosariaren ondoren.'
+        68, 'Gosariaren ondoren.'
     ),
     (
         65,
@@ -31493,7 +31549,7 @@ INSERT INTO Neurketak (
         76,
         91.5,
         1.55,
-        'Gaur goizean neurtuta.'
+        76, 'Gaur goizean neurtuta.'
     ),
     (
         66,
@@ -31503,7 +31559,7 @@ INSERT INTO Neurketak (
         83,
         74.4,
         1.59,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         67,
@@ -31513,7 +31569,7 @@ INSERT INTO Neurketak (
         79,
         72.8,
         1.72,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         68,
@@ -31523,7 +31579,7 @@ INSERT INTO Neurketak (
         84,
         60.7,
         1.85,
-        'Baraualdian.'
+        74, 'Baraualdian.'
     ),
     (
         69,
@@ -31533,7 +31589,7 @@ INSERT INTO Neurketak (
         80,
         95.6,
         1.66,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         70,
@@ -31543,7 +31599,7 @@ INSERT INTO Neurketak (
         78,
         74.3,
         1.70,
-        'Ondo sentitzen naiz.'
+        87, 'Ondo sentitzen naiz.'
     ),
     (
         71,
@@ -31553,7 +31609,7 @@ INSERT INTO Neurketak (
         75,
         88.2,
         1.63,
-        'Kirola egin ondoren.'
+        73, 'Kirola egin ondoren.'
     ),
     (
         72,
@@ -31563,7 +31619,7 @@ INSERT INTO Neurketak (
         77,
         91.2,
         1.69,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         74,
@@ -31573,7 +31629,7 @@ INSERT INTO Neurketak (
         91,
         63.2,
         1.67,
-        'Baraualdian.'
+        80, 'Baraualdian.'
     ),
     (
         75,
@@ -31583,7 +31639,7 @@ INSERT INTO Neurketak (
         85,
         59.5,
         1.65,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         76,
@@ -31593,7 +31649,7 @@ INSERT INTO Neurketak (
         87,
         66.9,
         1.69,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         77,
@@ -31603,7 +31659,7 @@ INSERT INTO Neurketak (
         88,
         67.3,
         1.67,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         78,
@@ -31613,7 +31669,7 @@ INSERT INTO Neurketak (
         83,
         63.1,
         1.61,
-        'Gosariaren ondoren.'
+        68, 'Gosariaren ondoren.'
     ),
     (
         79,
@@ -31623,7 +31679,7 @@ INSERT INTO Neurketak (
         85,
         67.9,
         1.67,
-        'Ondo sentitzen naiz.'
+        71, 'Ondo sentitzen naiz.'
     ),
     (
         80,
@@ -31633,7 +31689,7 @@ INSERT INTO Neurketak (
         84,
         62.4,
         1.78,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         81,
@@ -31643,7 +31699,7 @@ INSERT INTO Neurketak (
         85,
         86.1,
         1.58,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         82,
@@ -31653,7 +31709,7 @@ INSERT INTO Neurketak (
         86,
         88.0,
         1.77,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         83,
@@ -31663,7 +31719,7 @@ INSERT INTO Neurketak (
         90,
         64.1,
         1.80,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         84,
@@ -31673,7 +31729,7 @@ INSERT INTO Neurketak (
         80,
         78.6,
         1.67,
-        'Gosariaren ondoren.'
+        70, 'Gosariaren ondoren.'
     ),
     (
         85,
@@ -31683,7 +31739,7 @@ INSERT INTO Neurketak (
         79,
         81.9,
         1.72,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         86,
@@ -31693,7 +31749,7 @@ INSERT INTO Neurketak (
         87,
         67.5,
         1.57,
-        'Gaur goizean neurtuta.'
+        70, 'Gaur goizean neurtuta.'
     ),
     (
         87,
@@ -31703,7 +31759,7 @@ INSERT INTO Neurketak (
         88,
         73.4,
         1.61,
-        'Kirola egin ondoren.'
+        90, 'Kirola egin ondoren.'
     ),
     (
         89,
@@ -31713,7 +31769,7 @@ INSERT INTO Neurketak (
         83,
         91.0,
         1.84,
-        'Gosariaren ondoren.'
+        70, 'Gosariaren ondoren.'
     ),
     (
         90,
@@ -31723,7 +31779,7 @@ INSERT INTO Neurketak (
         86,
         66.4,
         1.60,
-        'Apur bat nekatuta.'
+        84, 'Apur bat nekatuta.'
     ),
     (
         91,
@@ -31733,7 +31789,7 @@ INSERT INTO Neurketak (
         80,
         89.4,
         1.58,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         94,
@@ -31743,7 +31799,7 @@ INSERT INTO Neurketak (
         89,
         86.3,
         1.83,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         95,
@@ -31753,7 +31809,7 @@ INSERT INTO Neurketak (
         84,
         90.5,
         1.77,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         96,
@@ -31763,7 +31819,7 @@ INSERT INTO Neurketak (
         79,
         76.9,
         1.71,
-        'Gosariaren ondoren.'
+        74, 'Gosariaren ondoren.'
     ),
     (
         97,
@@ -31773,7 +31829,7 @@ INSERT INTO Neurketak (
         81,
         87.5,
         1.56,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         98,
@@ -31783,7 +31839,7 @@ INSERT INTO Neurketak (
         81,
         83.0,
         1.60,
-        'Apur bat nekatuta.'
+        90, 'Apur bat nekatuta.'
     ),
     (
         99,
@@ -31793,7 +31849,7 @@ INSERT INTO Neurketak (
         77,
         86.0,
         1.71,
-        'Baraualdian.'
+        68, 'Baraualdian.'
     ),
     (
         100,
@@ -31803,7 +31859,7 @@ INSERT INTO Neurketak (
         86,
         81.8,
         1.57,
-        'Apur bat nekatuta.'
+        73, 'Apur bat nekatuta.'
     ),
     (
         51,
@@ -31813,7 +31869,7 @@ INSERT INTO Neurketak (
         82,
         64.9,
         1.76,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         52,
@@ -31823,7 +31879,7 @@ INSERT INTO Neurketak (
         81,
         93.0,
         1.77,
-        'Gosariaren ondoren.'
+        73, 'Gosariaren ondoren.'
     ),
     (
         55,
@@ -31833,7 +31889,7 @@ INSERT INTO Neurketak (
         86,
         81.9,
         1.76,
-        'Dena ondo.'
+        90, 'Dena ondo.'
     ),
     (
         57,
@@ -31843,7 +31899,7 @@ INSERT INTO Neurketak (
         79,
         83.4,
         1.69,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         59,
@@ -31853,7 +31909,7 @@ INSERT INTO Neurketak (
         95,
         62.2,
         1.73,
-        'Kirola egin ondoren.'
+        82, 'Kirola egin ondoren.'
     ),
     (
         60,
@@ -31863,7 +31919,7 @@ INSERT INTO Neurketak (
         89,
         77.1,
         1.81,
-        'Gaur goizean neurtuta.'
+        80, 'Gaur goizean neurtuta.'
     ),
     (
         61,
@@ -31873,7 +31929,7 @@ INSERT INTO Neurketak (
         78,
         72.2,
         1.83,
-        'Apur bat nekatuta.'
+        81, 'Apur bat nekatuta.'
     ),
     (
         62,
@@ -31883,7 +31939,7 @@ INSERT INTO Neurketak (
         78,
         65.1,
         1.56,
-        'Kirola egin ondoren.'
+        82, 'Kirola egin ondoren.'
     ),
     (
         63,
@@ -31893,7 +31949,7 @@ INSERT INTO Neurketak (
         83,
         81.3,
         1.80,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         64,
@@ -31903,7 +31959,7 @@ INSERT INTO Neurketak (
         75,
         94.5,
         1.56,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         66,
@@ -31913,7 +31969,7 @@ INSERT INTO Neurketak (
         89,
         74.3,
         1.59,
-        'Gosariaren ondoren.'
+        81, 'Gosariaren ondoren.'
     ),
     (
         67,
@@ -31923,7 +31979,7 @@ INSERT INTO Neurketak (
         81,
         72.9,
         1.72,
-        'Gaur goizean neurtuta.'
+        70, 'Gaur goizean neurtuta.'
     ),
     (
         68,
@@ -31933,7 +31989,7 @@ INSERT INTO Neurketak (
         78,
         60.5,
         1.85,
-        'Kirola egin ondoren.'
+        82, 'Kirola egin ondoren.'
     ),
     (
         69,
@@ -31943,7 +31999,7 @@ INSERT INTO Neurketak (
         80,
         95.3,
         1.66,
-        'Kirola egin ondoren.'
+        87, 'Kirola egin ondoren.'
     ),
     (
         71,
@@ -31953,7 +32009,7 @@ INSERT INTO Neurketak (
         85,
         90.0,
         1.63,
-        'Dena ondo.'
+        77, 'Dena ondo.'
     ),
     (
         72,
@@ -31963,7 +32019,7 @@ INSERT INTO Neurketak (
         78,
         92.2,
         1.69,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         74,
@@ -31973,7 +32029,7 @@ INSERT INTO Neurketak (
         83,
         63.4,
         1.67,
-        'Apur bat nekatuta.'
+        75, 'Apur bat nekatuta.'
     ),
     (
         75,
@@ -31983,7 +32039,7 @@ INSERT INTO Neurketak (
         75,
         60.4,
         1.65,
-        'Apur bat nekatuta.'
+        78, 'Apur bat nekatuta.'
     ),
     (
         76,
@@ -31993,7 +32049,7 @@ INSERT INTO Neurketak (
         84,
         65.1,
         1.69,
-        'Gosariaren ondoren.'
+        81, 'Gosariaren ondoren.'
     ),
     (
         77,
@@ -32003,7 +32059,7 @@ INSERT INTO Neurketak (
         78,
         66.1,
         1.67,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         78,
@@ -32013,7 +32069,7 @@ INSERT INTO Neurketak (
         79,
         62.5,
         1.61,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         79,
@@ -32023,7 +32079,7 @@ INSERT INTO Neurketak (
         87,
         66.3,
         1.67,
-        'Gosariaren ondoren.'
+        90, 'Gosariaren ondoren.'
     ),
     (
         80,
@@ -32033,7 +32089,7 @@ INSERT INTO Neurketak (
         91,
         62.3,
         1.78,
-        'Kirola egin ondoren.'
+        74, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -32043,7 +32099,7 @@ INSERT INTO Neurketak (
         84,
         86.2,
         1.58,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         82,
@@ -32053,7 +32109,7 @@ INSERT INTO Neurketak (
         88,
         88.3,
         1.77,
-        'Dena ondo.'
+        65, 'Dena ondo.'
     ),
     (
         83,
@@ -32063,7 +32119,7 @@ INSERT INTO Neurketak (
         87,
         64.5,
         1.80,
-        'Ondo sentitzen naiz.'
+        68, 'Ondo sentitzen naiz.'
     ),
     (
         84,
@@ -32073,7 +32129,7 @@ INSERT INTO Neurketak (
         89,
         79.9,
         1.67,
-        'Dena ondo.'
+        93, 'Dena ondo.'
     ),
     (
         85,
@@ -32083,7 +32139,7 @@ INSERT INTO Neurketak (
         90,
         80.9,
         1.72,
-        'Dena ondo.'
+        85, 'Dena ondo.'
     ),
     (
         86,
@@ -32093,7 +32149,7 @@ INSERT INTO Neurketak (
         73,
         67.9,
         1.57,
-        'Dena ondo.'
+        73, 'Dena ondo.'
     ),
     (
         87,
@@ -32103,7 +32159,7 @@ INSERT INTO Neurketak (
         82,
         74.0,
         1.61,
-        'Ondo sentitzen naiz.'
+        82, 'Ondo sentitzen naiz.'
     ),
     (
         88,
@@ -32113,7 +32169,7 @@ INSERT INTO Neurketak (
         75,
         90.9,
         1.81,
-        'Gaur goizean neurtuta.'
+        87, 'Gaur goizean neurtuta.'
     ),
     (
         89,
@@ -32123,7 +32179,7 @@ INSERT INTO Neurketak (
         88,
         92.0,
         1.84,
-        'Dena ondo.'
+        73, 'Dena ondo.'
     ),
     (
         91,
@@ -32133,7 +32189,7 @@ INSERT INTO Neurketak (
         76,
         89.1,
         1.58,
-        'Gaur goizean neurtuta.'
+        74, 'Gaur goizean neurtuta.'
     ),
     (
         93,
@@ -32143,7 +32199,7 @@ INSERT INTO Neurketak (
         93,
         76.4,
         1.81,
-        'Gosariaren ondoren.'
+        83, 'Gosariaren ondoren.'
     ),
     (
         96,
@@ -32153,7 +32209,7 @@ INSERT INTO Neurketak (
         76,
         78.0,
         1.71,
-        'Apur bat nekatuta.'
+        92, 'Apur bat nekatuta.'
     ),
     (
         97,
@@ -32163,7 +32219,7 @@ INSERT INTO Neurketak (
         75,
         88.0,
         1.56,
-        'Gaur goizean neurtuta.'
+        88, 'Gaur goizean neurtuta.'
     ),
     (
         98,
@@ -32173,7 +32229,7 @@ INSERT INTO Neurketak (
         89,
         83.3,
         1.60,
-        'Gosariaren ondoren.'
+        82, 'Gosariaren ondoren.'
     ),
     (
         100,
@@ -32183,7 +32239,7 @@ INSERT INTO Neurketak (
         82,
         81.8,
         1.57,
-        'Ondo sentitzen naiz.'
+        85, 'Ondo sentitzen naiz.'
     ),
     (
         51,
@@ -32193,7 +32249,7 @@ INSERT INTO Neurketak (
         90,
         63.1,
         1.76,
-        'Apur bat nekatuta.'
+        66, 'Apur bat nekatuta.'
     ),
     (
         52,
@@ -32203,7 +32259,7 @@ INSERT INTO Neurketak (
         91,
         94.8,
         1.77,
-        'Dena ondo.'
+        85, 'Dena ondo.'
     ),
     (
         53,
@@ -32213,7 +32269,7 @@ INSERT INTO Neurketak (
         89,
         75.4,
         1.75,
-        'Ondo sentitzen naiz.'
+        65, 'Ondo sentitzen naiz.'
     ),
     (
         54,
@@ -32223,7 +32279,7 @@ INSERT INTO Neurketak (
         86,
         87.6,
         1.60,
-        'Gaur goizean neurtuta.'
+        78, 'Gaur goizean neurtuta.'
     ),
     (
         55,
@@ -32233,7 +32289,7 @@ INSERT INTO Neurketak (
         77,
         81.1,
         1.76,
-        'Gosariaren ondoren.'
+        73, 'Gosariaren ondoren.'
     ),
     (
         59,
@@ -32243,7 +32299,7 @@ INSERT INTO Neurketak (
         81,
         63.6,
         1.73,
-        'Gosariaren ondoren.'
+        90, 'Gosariaren ondoren.'
     ),
     (
         60,
@@ -32253,7 +32309,7 @@ INSERT INTO Neurketak (
         95,
         78.0,
         1.81,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         61,
@@ -32263,7 +32319,7 @@ INSERT INTO Neurketak (
         82,
         73.5,
         1.83,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         62,
@@ -32273,7 +32329,7 @@ INSERT INTO Neurketak (
         76,
         65.1,
         1.56,
-        'Kirola egin ondoren.'
+        67, 'Kirola egin ondoren.'
     ),
     (
         64,
@@ -32283,7 +32339,7 @@ INSERT INTO Neurketak (
         84,
         94.3,
         1.56,
-        'Gosariaren ondoren.'
+        90, 'Gosariaren ondoren.'
     ),
     (
         65,
@@ -32293,7 +32349,7 @@ INSERT INTO Neurketak (
         78,
         91.5,
         1.55,
-        'Dena ondo.'
+        74, 'Dena ondo.'
     ),
     (
         66,
@@ -32303,7 +32359,7 @@ INSERT INTO Neurketak (
         89,
         74.6,
         1.59,
-        'Dena ondo.'
+        79, 'Dena ondo.'
     ),
     (
         67,
@@ -32313,7 +32369,7 @@ INSERT INTO Neurketak (
         80,
         71.8,
         1.72,
-        'Baraualdian.'
+        83, 'Baraualdian.'
     ),
     (
         68,
@@ -32323,7 +32379,7 @@ INSERT INTO Neurketak (
         84,
         61.4,
         1.85,
-        'Gosariaren ondoren.'
+        76, 'Gosariaren ondoren.'
     ),
     (
         69,
@@ -32333,7 +32389,7 @@ INSERT INTO Neurketak (
         90,
         94.0,
         1.66,
-        'Apur bat nekatuta.'
+        66, 'Apur bat nekatuta.'
     ),
     (
         70,
@@ -32343,7 +32399,7 @@ INSERT INTO Neurketak (
         83,
         75.8,
         1.70,
-        'Ondo sentitzen naiz.'
+        87, 'Ondo sentitzen naiz.'
     ),
     (
         71,
@@ -32353,7 +32409,7 @@ INSERT INTO Neurketak (
         77,
         88.9,
         1.63,
-        'Ondo sentitzen naiz.'
+        94, 'Ondo sentitzen naiz.'
     ),
     (
         72,
@@ -32363,7 +32419,7 @@ INSERT INTO Neurketak (
         85,
         92.5,
         1.69,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         73,
@@ -32373,7 +32429,7 @@ INSERT INTO Neurketak (
         79,
         94.4,
         1.55,
-        'Gaur goizean neurtuta.'
+        86, 'Gaur goizean neurtuta.'
     ),
     (
         74,
@@ -32383,7 +32439,7 @@ INSERT INTO Neurketak (
         83,
         63.6,
         1.67,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         76,
@@ -32393,7 +32449,7 @@ INSERT INTO Neurketak (
         93,
         65.1,
         1.69,
-        'Kirola egin ondoren.'
+        82, 'Kirola egin ondoren.'
     ),
     (
         77,
@@ -32403,7 +32459,7 @@ INSERT INTO Neurketak (
         79,
         66.6,
         1.67,
-        'Gosariaren ondoren.'
+        77, 'Gosariaren ondoren.'
     ),
     (
         78,
@@ -32413,7 +32469,7 @@ INSERT INTO Neurketak (
         80,
         63.9,
         1.61,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         79,
@@ -32423,7 +32479,7 @@ INSERT INTO Neurketak (
         75,
         66.6,
         1.67,
-        'Baraualdian.'
+        65, 'Baraualdian.'
     ),
     (
         80,
@@ -32433,7 +32489,7 @@ INSERT INTO Neurketak (
         90,
         63.0,
         1.78,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         81,
@@ -32443,7 +32499,7 @@ INSERT INTO Neurketak (
         84,
         86.6,
         1.58,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         82,
@@ -32453,7 +32509,7 @@ INSERT INTO Neurketak (
         91,
         88.9,
         1.77,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         83,
@@ -32463,7 +32519,7 @@ INSERT INTO Neurketak (
         85,
         65.0,
         1.80,
-        'Baraualdian.'
+        66, 'Baraualdian.'
     ),
     (
         84,
@@ -32473,7 +32529,7 @@ INSERT INTO Neurketak (
         82,
         78.2,
         1.67,
-        'Kirola egin ondoren.'
+        83, 'Kirola egin ondoren.'
     ),
     (
         86,
@@ -32483,7 +32539,7 @@ INSERT INTO Neurketak (
         79,
         68.8,
         1.57,
-        'Baraualdian.'
+        83, 'Baraualdian.'
     ),
     (
         87,
@@ -32493,7 +32549,7 @@ INSERT INTO Neurketak (
         87,
         73.1,
         1.61,
-        'Baraualdian.'
+        88, 'Baraualdian.'
     ),
     (
         88,
@@ -32503,7 +32559,7 @@ INSERT INTO Neurketak (
         72,
         89.3,
         1.81,
-        'Gosariaren ondoren.'
+        74, 'Gosariaren ondoren.'
     ),
     (
         89,
@@ -32513,7 +32569,7 @@ INSERT INTO Neurketak (
         78,
         90.8,
         1.84,
-        'Apur bat nekatuta.'
+        73, 'Apur bat nekatuta.'
     ),
     (
         90,
@@ -32523,7 +32579,7 @@ INSERT INTO Neurketak (
         79,
         66.3,
         1.60,
-        'Apur bat nekatuta.'
+        89, 'Apur bat nekatuta.'
     ),
     (
         91,
@@ -32533,7 +32589,7 @@ INSERT INTO Neurketak (
         91,
         90.7,
         1.58,
-        'Gosariaren ondoren.'
+        73, 'Gosariaren ondoren.'
     ),
     (
         92,
@@ -32543,7 +32599,7 @@ INSERT INTO Neurketak (
         90,
         59.9,
         1.79,
-        'Kirola egin ondoren.'
+        87, 'Kirola egin ondoren.'
     ),
     (
         93,
@@ -32553,7 +32609,7 @@ INSERT INTO Neurketak (
         90,
         76.3,
         1.81,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         95,
@@ -32563,7 +32619,7 @@ INSERT INTO Neurketak (
         84,
         89.6,
         1.77,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         96,
@@ -32573,7 +32629,7 @@ INSERT INTO Neurketak (
         81,
         76.0,
         1.71,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         98,
@@ -32583,7 +32639,7 @@ INSERT INTO Neurketak (
         77,
         84.4,
         1.60,
-        'Dena ondo.'
+        85, 'Dena ondo.'
     ),
     (
         100,
@@ -32593,7 +32649,7 @@ INSERT INTO Neurketak (
         83,
         82.8,
         1.57,
-        'Gosariaren ondoren.'
+        83, 'Gosariaren ondoren.'
     ),
     (
         51,
@@ -32603,7 +32659,7 @@ INSERT INTO Neurketak (
         80,
         64.0,
         1.76,
-        'Dena ondo.'
+        78, 'Dena ondo.'
     ),
     (
         52,
@@ -32613,7 +32669,7 @@ INSERT INTO Neurketak (
         81,
         93.0,
         1.77,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         53,
@@ -32623,7 +32679,7 @@ INSERT INTO Neurketak (
         88,
         75.1,
         1.75,
-        'Kirola egin ondoren.'
+        90, 'Kirola egin ondoren.'
     ),
     (
         54,
@@ -32633,7 +32689,7 @@ INSERT INTO Neurketak (
         89,
         86.2,
         1.60,
-        'Baraualdian.'
+        70, 'Baraualdian.'
     ),
     (
         55,
@@ -32643,7 +32699,7 @@ INSERT INTO Neurketak (
         74,
         80.0,
         1.76,
-        'Apur bat nekatuta.'
+        89, 'Apur bat nekatuta.'
     ),
     (
         56,
@@ -32653,7 +32709,7 @@ INSERT INTO Neurketak (
         79,
         89.5,
         1.61,
-        'Gosariaren ondoren.'
+        93, 'Gosariaren ondoren.'
     ),
     (
         57,
@@ -32663,7 +32719,7 @@ INSERT INTO Neurketak (
         90,
         82.3,
         1.69,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         58,
@@ -32673,7 +32729,7 @@ INSERT INTO Neurketak (
         79,
         67.0,
         1.68,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         59,
@@ -32683,7 +32739,7 @@ INSERT INTO Neurketak (
         88,
         62.8,
         1.73,
-        'Dena ondo.'
+        76, 'Dena ondo.'
     ),
     (
         62,
@@ -32693,7 +32749,7 @@ INSERT INTO Neurketak (
         76,
         66.2,
         1.56,
-        'Baraualdian.'
+        90, 'Baraualdian.'
     ),
     (
         63,
@@ -32703,7 +32759,7 @@ INSERT INTO Neurketak (
         81,
         81.3,
         1.80,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         64,
@@ -32713,7 +32769,7 @@ INSERT INTO Neurketak (
         82,
         95.1,
         1.56,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         65,
@@ -32723,7 +32779,7 @@ INSERT INTO Neurketak (
         85,
         91.5,
         1.55,
-        'Kirola egin ondoren.'
+        87, 'Kirola egin ondoren.'
     ),
     (
         66,
@@ -32733,7 +32789,7 @@ INSERT INTO Neurketak (
         84,
         75.3,
         1.59,
-        'Gosariaren ondoren.'
+        93, 'Gosariaren ondoren.'
     ),
     (
         68,
@@ -32743,7 +32799,7 @@ INSERT INTO Neurketak (
         77,
         60.9,
         1.85,
-        'Gosariaren ondoren.'
+        65, 'Gosariaren ondoren.'
     ),
     (
         69,
@@ -32753,7 +32809,7 @@ INSERT INTO Neurketak (
         87,
         94.0,
         1.66,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         72,
@@ -32763,7 +32819,7 @@ INSERT INTO Neurketak (
         81,
         92.9,
         1.69,
-        'Kirola egin ondoren.'
+        71, 'Kirola egin ondoren.'
     ),
     (
         73,
@@ -32773,7 +32829,7 @@ INSERT INTO Neurketak (
         84,
         95.8,
         1.55,
-        'Dena ondo.'
+        92, 'Dena ondo.'
     ),
     (
         74,
@@ -32783,7 +32839,7 @@ INSERT INTO Neurketak (
         78,
         63.4,
         1.67,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         75,
@@ -32793,7 +32849,7 @@ INSERT INTO Neurketak (
         82,
         61.0,
         1.65,
-        'Apur bat nekatuta.'
+        83, 'Apur bat nekatuta.'
     ),
     (
         76,
@@ -32803,7 +32859,7 @@ INSERT INTO Neurketak (
         92,
         67.0,
         1.69,
-        'Baraualdian.'
+        85, 'Baraualdian.'
     ),
     (
         77,
@@ -32813,7 +32869,7 @@ INSERT INTO Neurketak (
         85,
         67.1,
         1.67,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         78,
@@ -32823,7 +32879,7 @@ INSERT INTO Neurketak (
         73,
         63.0,
         1.61,
-        'Ondo sentitzen naiz.'
+        92, 'Ondo sentitzen naiz.'
     ),
     (
         79,
@@ -32833,7 +32889,7 @@ INSERT INTO Neurketak (
         77,
         67.5,
         1.67,
-        'Gosariaren ondoren.'
+        88, 'Gosariaren ondoren.'
     ),
     (
         80,
@@ -32843,7 +32899,7 @@ INSERT INTO Neurketak (
         87,
         62.1,
         1.78,
-        'Baraualdian.'
+        74, 'Baraualdian.'
     ),
     (
         81,
@@ -32853,7 +32909,7 @@ INSERT INTO Neurketak (
         93,
         85.5,
         1.58,
-        'Gosariaren ondoren.'
+        74, 'Gosariaren ondoren.'
     ),
     (
         82,
@@ -32863,7 +32919,7 @@ INSERT INTO Neurketak (
         90,
         89.4,
         1.77,
-        'Gaur goizean neurtuta.'
+        88, 'Gaur goizean neurtuta.'
     ),
     (
         83,
@@ -32873,7 +32929,7 @@ INSERT INTO Neurketak (
         87,
         64.3,
         1.80,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         84,
@@ -32883,7 +32939,7 @@ INSERT INTO Neurketak (
         89,
         79.3,
         1.67,
-        'Gaur goizean neurtuta.'
+        71, 'Gaur goizean neurtuta.'
     ),
     (
         85,
@@ -32893,7 +32949,7 @@ INSERT INTO Neurketak (
         93,
         81.3,
         1.72,
-        'Ondo sentitzen naiz.'
+        75, 'Ondo sentitzen naiz.'
     ),
     (
         86,
@@ -32903,7 +32959,7 @@ INSERT INTO Neurketak (
         73,
         67.5,
         1.57,
-        'Baraualdian.'
+        85, 'Baraualdian.'
     ),
     (
         87,
@@ -32913,7 +32969,7 @@ INSERT INTO Neurketak (
         74,
         72.1,
         1.61,
-        'Dena ondo.'
+        77, 'Dena ondo.'
     ),
     (
         88,
@@ -32923,7 +32979,7 @@ INSERT INTO Neurketak (
         77,
         91.0,
         1.81,
-        'Ondo sentitzen naiz.'
+        69, 'Ondo sentitzen naiz.'
     ),
     (
         89,
@@ -32933,7 +32989,7 @@ INSERT INTO Neurketak (
         90,
         90.9,
         1.84,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         90,
@@ -32943,7 +32999,7 @@ INSERT INTO Neurketak (
         89,
         66.1,
         1.60,
-        'Dena ondo.'
+        76, 'Dena ondo.'
     ),
     (
         91,
@@ -32953,7 +33009,7 @@ INSERT INTO Neurketak (
         91,
         89.1,
         1.58,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         93,
@@ -32963,7 +33019,7 @@ INSERT INTO Neurketak (
         83,
         75.5,
         1.81,
-        'Ondo sentitzen naiz.'
+        68, 'Ondo sentitzen naiz.'
     ),
     (
         94,
@@ -32973,7 +33029,7 @@ INSERT INTO Neurketak (
         88,
         86.1,
         1.83,
-        'Kirola egin ondoren.'
+        94, 'Kirola egin ondoren.'
     ),
     (
         95,
@@ -32983,7 +33039,7 @@ INSERT INTO Neurketak (
         85,
         90.6,
         1.77,
-        'Dena ondo.'
+        72, 'Dena ondo.'
     ),
     (
         96,
@@ -32993,7 +33049,7 @@ INSERT INTO Neurketak (
         76,
         76.2,
         1.71,
-        'Kirola egin ondoren.'
+        91, 'Kirola egin ondoren.'
     ),
     (
         97,
@@ -33003,7 +33059,7 @@ INSERT INTO Neurketak (
         73,
         86.2,
         1.56,
-        'Gaur goizean neurtuta.'
+        91, 'Gaur goizean neurtuta.'
     ),
     (
         98,
@@ -33013,7 +33069,7 @@ INSERT INTO Neurketak (
         84,
         83.1,
         1.60,
-        'Ondo sentitzen naiz.'
+        69, 'Ondo sentitzen naiz.'
     ),
     (
         99,
@@ -33023,7 +33079,7 @@ INSERT INTO Neurketak (
         78,
         85.0,
         1.71,
-        'Baraualdian.'
+        88, 'Baraualdian.'
     ),
     (
         51,
@@ -33033,7 +33089,7 @@ INSERT INTO Neurketak (
         92,
         64.8,
         1.76,
-        'Gosariaren ondoren.'
+        72, 'Gosariaren ondoren.'
     ),
     (
         52,
@@ -33043,7 +33099,7 @@ INSERT INTO Neurketak (
         85,
         94.9,
         1.77,
-        'Dena ondo.'
+        72, 'Dena ondo.'
     ),
     (
         53,
@@ -33053,7 +33109,7 @@ INSERT INTO Neurketak (
         93,
         75.3,
         1.75,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         54,
@@ -33063,7 +33119,7 @@ INSERT INTO Neurketak (
         85,
         87.1,
         1.60,
-        'Ondo sentitzen naiz.'
+        70, 'Ondo sentitzen naiz.'
     ),
     (
         55,
@@ -33073,7 +33129,7 @@ INSERT INTO Neurketak (
         71,
         80.5,
         1.76,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         56,
@@ -33083,7 +33139,7 @@ INSERT INTO Neurketak (
         84,
         89.1,
         1.61,
-        'Baraualdian.'
+        86, 'Baraualdian.'
     ),
     (
         57,
@@ -33093,7 +33149,7 @@ INSERT INTO Neurketak (
         94,
         82.0,
         1.69,
-        'Apur bat nekatuta.'
+        94, 'Apur bat nekatuta.'
     ),
     (
         58,
@@ -33103,7 +33159,7 @@ INSERT INTO Neurketak (
         77,
         67.0,
         1.68,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         59,
@@ -33113,7 +33169,7 @@ INSERT INTO Neurketak (
         93,
         62.7,
         1.73,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         60,
@@ -33123,7 +33179,7 @@ INSERT INTO Neurketak (
         81,
         78.5,
         1.81,
-        'Gaur goizean neurtuta.'
+        88, 'Gaur goizean neurtuta.'
     ),
     (
         61,
@@ -33133,7 +33189,7 @@ INSERT INTO Neurketak (
         88,
         72.6,
         1.83,
-        'Ondo sentitzen naiz.'
+        86, 'Ondo sentitzen naiz.'
     ),
     (
         64,
@@ -33143,7 +33199,7 @@ INSERT INTO Neurketak (
         84,
         94.6,
         1.56,
-        'Ondo sentitzen naiz.'
+        74, 'Ondo sentitzen naiz.'
     ),
     (
         65,
@@ -33153,7 +33209,7 @@ INSERT INTO Neurketak (
         78,
         90.3,
         1.55,
-        'Ondo sentitzen naiz.'
+        69, 'Ondo sentitzen naiz.'
     ),
     (
         66,
@@ -33163,7 +33219,7 @@ INSERT INTO Neurketak (
         84,
         74.8,
         1.59,
-        'Gaur goizean neurtuta.'
+        68, 'Gaur goizean neurtuta.'
     ),
     (
         67,
@@ -33173,7 +33229,7 @@ INSERT INTO Neurketak (
         88,
         71.4,
         1.72,
-        'Dena ondo.'
+        74, 'Dena ondo.'
     ),
     (
         68,
@@ -33183,7 +33239,7 @@ INSERT INTO Neurketak (
         82,
         60.1,
         1.85,
-        'Kirola egin ondoren.'
+        82, 'Kirola egin ondoren.'
     ),
     (
         69,
@@ -33193,7 +33249,7 @@ INSERT INTO Neurketak (
         85,
         95.0,
         1.66,
-        'Gosariaren ondoren.'
+        94, 'Gosariaren ondoren.'
     ),
     (
         70,
@@ -33203,7 +33259,7 @@ INSERT INTO Neurketak (
         75,
         75.2,
         1.70,
-        'Gosariaren ondoren.'
+        82, 'Gosariaren ondoren.'
     ),
     (
         71,
@@ -33213,7 +33269,7 @@ INSERT INTO Neurketak (
         83,
         88.0,
         1.63,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         72,
@@ -33223,7 +33279,7 @@ INSERT INTO Neurketak (
         84,
         91.9,
         1.69,
-        'Kirola egin ondoren.'
+        88, 'Kirola egin ondoren.'
     ),
     (
         73,
@@ -33233,7 +33289,7 @@ INSERT INTO Neurketak (
         75,
         94.4,
         1.55,
-        'Apur bat nekatuta.'
+        76, 'Apur bat nekatuta.'
     ),
     (
         74,
@@ -33243,7 +33299,7 @@ INSERT INTO Neurketak (
         79,
         63.8,
         1.67,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         75,
@@ -33253,7 +33309,7 @@ INSERT INTO Neurketak (
         74,
         61.0,
         1.65,
-        'Gosariaren ondoren.'
+        65, 'Gosariaren ondoren.'
     ),
     (
         76,
@@ -33263,7 +33319,7 @@ INSERT INTO Neurketak (
         86,
         66.0,
         1.69,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         77,
@@ -33273,7 +33329,7 @@ INSERT INTO Neurketak (
         89,
         66.3,
         1.67,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         78,
@@ -33283,7 +33339,7 @@ INSERT INTO Neurketak (
         85,
         62.7,
         1.61,
-        'Gaur goizean neurtuta.'
+        68, 'Gaur goizean neurtuta.'
     ),
     (
         79,
@@ -33293,7 +33349,7 @@ INSERT INTO Neurketak (
         83,
         66.5,
         1.67,
-        'Gosariaren ondoren.'
+        78, 'Gosariaren ondoren.'
     ),
     (
         80,
@@ -33303,7 +33359,7 @@ INSERT INTO Neurketak (
         85,
         63.6,
         1.78,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         81,
@@ -33313,7 +33369,7 @@ INSERT INTO Neurketak (
         84,
         86.3,
         1.58,
-        'Apur bat nekatuta.'
+        77, 'Apur bat nekatuta.'
     ),
     (
         82,
@@ -33323,7 +33379,7 @@ INSERT INTO Neurketak (
         87,
         90.0,
         1.77,
-        'Gosariaren ondoren.'
+        73, 'Gosariaren ondoren.'
     ),
     (
         83,
@@ -33333,7 +33389,7 @@ INSERT INTO Neurketak (
         93,
         66.0,
         1.80,
-        'Gosariaren ondoren.'
+        86, 'Gosariaren ondoren.'
     ),
     (
         85,
@@ -33343,7 +33399,7 @@ INSERT INTO Neurketak (
         79,
         82.0,
         1.72,
-        'Gosariaren ondoren.'
+        72, 'Gosariaren ondoren.'
     ),
     (
         87,
@@ -33353,7 +33409,7 @@ INSERT INTO Neurketak (
         86,
         73.7,
         1.61,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         89,
@@ -33363,7 +33419,7 @@ INSERT INTO Neurketak (
         81,
         90.4,
         1.84,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         91,
@@ -33373,7 +33429,7 @@ INSERT INTO Neurketak (
         79,
         90.2,
         1.58,
-        'Dena ondo.'
+        86, 'Dena ondo.'
     ),
     (
         94,
@@ -33383,7 +33439,7 @@ INSERT INTO Neurketak (
         87,
         87.8,
         1.83,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         95,
@@ -33393,7 +33449,7 @@ INSERT INTO Neurketak (
         83,
         89.9,
         1.77,
-        'Dena ondo.'
+        85, 'Dena ondo.'
     ),
     (
         96,
@@ -33403,7 +33459,7 @@ INSERT INTO Neurketak (
         76,
         76.8,
         1.71,
-        'Kirola egin ondoren.'
+        83, 'Kirola egin ondoren.'
     ),
     (
         97,
@@ -33413,7 +33469,7 @@ INSERT INTO Neurketak (
         81,
         87.1,
         1.56,
-        'Baraualdian.'
+        76, 'Baraualdian.'
     ),
     (
         98,
@@ -33423,7 +33479,7 @@ INSERT INTO Neurketak (
         76,
         84.5,
         1.60,
-        'Dena ondo.'
+        86, 'Dena ondo.'
     ),
     (
         51,
@@ -33433,7 +33489,7 @@ INSERT INTO Neurketak (
         86,
         63.5,
         1.76,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         52,
@@ -33443,7 +33499,7 @@ INSERT INTO Neurketak (
         83,
         94.0,
         1.77,
-        'Apur bat nekatuta.'
+        65, 'Apur bat nekatuta.'
     ),
     (
         53,
@@ -33453,7 +33509,7 @@ INSERT INTO Neurketak (
         78,
         75.8,
         1.75,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         54,
@@ -33463,7 +33519,7 @@ INSERT INTO Neurketak (
         74,
         87.5,
         1.60,
-        'Kirola egin ondoren.'
+        78, 'Kirola egin ondoren.'
     ),
     (
         56,
@@ -33473,7 +33529,7 @@ INSERT INTO Neurketak (
         82,
         90.9,
         1.61,
-        'Ondo sentitzen naiz.'
+        82, 'Ondo sentitzen naiz.'
     ),
     (
         57,
@@ -33483,7 +33539,7 @@ INSERT INTO Neurketak (
         93,
         83.1,
         1.69,
-        'Ondo sentitzen naiz.'
+        72, 'Ondo sentitzen naiz.'
     ),
     (
         58,
@@ -33493,7 +33549,7 @@ INSERT INTO Neurketak (
         76,
         66.1,
         1.68,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         60,
@@ -33503,7 +33559,7 @@ INSERT INTO Neurketak (
         91,
         78.1,
         1.81,
-        'Ondo sentitzen naiz.'
+        75, 'Ondo sentitzen naiz.'
     ),
     (
         64,
@@ -33513,7 +33569,7 @@ INSERT INTO Neurketak (
         79,
         94.2,
         1.56,
-        'Gaur goizean neurtuta.'
+        94, 'Gaur goizean neurtuta.'
     ),
     (
         65,
@@ -33523,7 +33579,7 @@ INSERT INTO Neurketak (
         88,
         91.6,
         1.55,
-        'Baraualdian.'
+        89, 'Baraualdian.'
     ),
     (
         67,
@@ -33533,7 +33589,7 @@ INSERT INTO Neurketak (
         87,
         71.6,
         1.72,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         68,
@@ -33543,7 +33599,7 @@ INSERT INTO Neurketak (
         83,
         61.1,
         1.85,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         69,
@@ -33553,7 +33609,7 @@ INSERT INTO Neurketak (
         83,
         95.1,
         1.66,
-        'Dena ondo.'
+        93, 'Dena ondo.'
     ),
     (
         71,
@@ -33563,7 +33619,7 @@ INSERT INTO Neurketak (
         78,
         88.3,
         1.63,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         72,
@@ -33573,7 +33629,7 @@ INSERT INTO Neurketak (
         75,
         91.8,
         1.69,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         73,
@@ -33583,7 +33639,7 @@ INSERT INTO Neurketak (
         85,
         95.1,
         1.55,
-        'Kirola egin ondoren.'
+        94, 'Kirola egin ondoren.'
     ),
     (
         74,
@@ -33593,7 +33649,7 @@ INSERT INTO Neurketak (
         79,
         64.8,
         1.67,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         75,
@@ -33603,7 +33659,7 @@ INSERT INTO Neurketak (
         83,
         59.0,
         1.65,
-        'Kirola egin ondoren.'
+        88, 'Kirola egin ondoren.'
     ),
     (
         76,
@@ -33613,7 +33669,7 @@ INSERT INTO Neurketak (
         81,
         65.2,
         1.69,
-        'Gosariaren ondoren.'
+        72, 'Gosariaren ondoren.'
     ),
     (
         77,
@@ -33623,7 +33679,7 @@ INSERT INTO Neurketak (
         79,
         67.3,
         1.67,
-        'Apur bat nekatuta.'
+        93, 'Apur bat nekatuta.'
     ),
     (
         78,
@@ -33633,7 +33689,7 @@ INSERT INTO Neurketak (
         82,
         62.5,
         1.61,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         79,
@@ -33643,7 +33699,7 @@ INSERT INTO Neurketak (
         84,
         67.1,
         1.67,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         80,
@@ -33653,7 +33709,7 @@ INSERT INTO Neurketak (
         94,
         62.7,
         1.78,
-        'Kirola egin ondoren.'
+        81, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -33663,7 +33719,7 @@ INSERT INTO Neurketak (
         89,
         85.7,
         1.58,
-        'Baraualdian.'
+        65, 'Baraualdian.'
     ),
     (
         83,
@@ -33673,7 +33729,7 @@ INSERT INTO Neurketak (
         90,
         64.5,
         1.80,
-        'Gosariaren ondoren.'
+        87, 'Gosariaren ondoren.'
     ),
     (
         84,
@@ -33683,7 +33739,7 @@ INSERT INTO Neurketak (
         84,
         78.6,
         1.67,
-        'Gosariaren ondoren.'
+        65, 'Gosariaren ondoren.'
     ),
     (
         85,
@@ -33693,7 +33749,7 @@ INSERT INTO Neurketak (
         80,
         80.0,
         1.72,
-        'Gaur goizean neurtuta.'
+        68, 'Gaur goizean neurtuta.'
     ),
     (
         87,
@@ -33703,7 +33759,7 @@ INSERT INTO Neurketak (
         80,
         73.0,
         1.61,
-        'Gaur goizean neurtuta.'
+        68, 'Gaur goizean neurtuta.'
     ),
     (
         89,
@@ -33713,7 +33769,7 @@ INSERT INTO Neurketak (
         87,
         90.4,
         1.84,
-        'Gaur goizean neurtuta.'
+        88, 'Gaur goizean neurtuta.'
     ),
     (
         90,
@@ -33723,7 +33779,7 @@ INSERT INTO Neurketak (
         92,
         67.0,
         1.60,
-        'Baraualdian.'
+        91, 'Baraualdian.'
     ),
     (
         91,
@@ -33733,7 +33789,7 @@ INSERT INTO Neurketak (
         76,
         89.1,
         1.58,
-        'Kirola egin ondoren.'
+        73, 'Kirola egin ondoren.'
     ),
     (
         92,
@@ -33743,7 +33799,7 @@ INSERT INTO Neurketak (
         79,
         59.9,
         1.79,
-        'Apur bat nekatuta.'
+        81, 'Apur bat nekatuta.'
     ),
     (
         93,
@@ -33753,7 +33809,7 @@ INSERT INTO Neurketak (
         84,
         76.9,
         1.81,
-        'Apur bat nekatuta.'
+        91, 'Apur bat nekatuta.'
     ),
     (
         94,
@@ -33763,7 +33819,7 @@ INSERT INTO Neurketak (
         81,
         86.1,
         1.83,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         95,
@@ -33773,7 +33829,7 @@ INSERT INTO Neurketak (
         72,
         89.7,
         1.77,
-        'Gaur goizean neurtuta.'
+        70, 'Gaur goizean neurtuta.'
     ),
     (
         96,
@@ -33783,7 +33839,7 @@ INSERT INTO Neurketak (
         88,
         77.6,
         1.71,
-        'Ondo sentitzen naiz.'
+        82, 'Ondo sentitzen naiz.'
     ),
     (
         97,
@@ -33793,7 +33849,7 @@ INSERT INTO Neurketak (
         79,
         87.8,
         1.56,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         98,
@@ -33803,7 +33859,7 @@ INSERT INTO Neurketak (
         78,
         83.2,
         1.60,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         99,
@@ -33813,7 +33869,7 @@ INSERT INTO Neurketak (
         79,
         85.7,
         1.71,
-        'Gosariaren ondoren.'
+        86, 'Gosariaren ondoren.'
     ),
     (
         100,
@@ -33823,7 +33879,7 @@ INSERT INTO Neurketak (
         74,
         81.4,
         1.57,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         51,
@@ -33833,7 +33889,7 @@ INSERT INTO Neurketak (
         84,
         63.0,
         1.76,
-        'Gaur goizean neurtuta.'
+        80, 'Gaur goizean neurtuta.'
     ),
     (
         52,
@@ -33843,7 +33899,7 @@ INSERT INTO Neurketak (
         79,
         93.8,
         1.77,
-        'Gosariaren ondoren.'
+        73, 'Gosariaren ondoren.'
     ),
     (
         54,
@@ -33853,7 +33909,7 @@ INSERT INTO Neurketak (
         88,
         87.0,
         1.60,
-        'Baraualdian.'
+        84, 'Baraualdian.'
     ),
     (
         55,
@@ -33863,7 +33919,7 @@ INSERT INTO Neurketak (
         71,
         80.6,
         1.76,
-        'Baraualdian.'
+        68, 'Baraualdian.'
     ),
     (
         56,
@@ -33873,7 +33929,7 @@ INSERT INTO Neurketak (
         90,
         90.0,
         1.61,
-        'Gosariaren ondoren.'
+        90, 'Gosariaren ondoren.'
     ),
     (
         57,
@@ -33883,7 +33939,7 @@ INSERT INTO Neurketak (
         85,
         83.4,
         1.69,
-        'Kirola egin ondoren.'
+        68, 'Kirola egin ondoren.'
     ),
     (
         58,
@@ -33893,7 +33949,7 @@ INSERT INTO Neurketak (
         82,
         67.9,
         1.68,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         60,
@@ -33903,7 +33959,7 @@ INSERT INTO Neurketak (
         89,
         78.3,
         1.81,
-        'Apur bat nekatuta.'
+        93, 'Apur bat nekatuta.'
     ),
     (
         61,
@@ -33913,7 +33969,7 @@ INSERT INTO Neurketak (
         90,
         72.3,
         1.83,
-        'Apur bat nekatuta.'
+        94, 'Apur bat nekatuta.'
     ),
     (
         62,
@@ -33923,7 +33979,7 @@ INSERT INTO Neurketak (
         83,
         65.5,
         1.56,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         63,
@@ -33933,7 +33989,7 @@ INSERT INTO Neurketak (
         81,
         81.5,
         1.80,
-        'Baraualdian.'
+        81, 'Baraualdian.'
     ),
     (
         65,
@@ -33943,7 +33999,7 @@ INSERT INTO Neurketak (
         82,
         90.1,
         1.55,
-        'Apur bat nekatuta.'
+        72, 'Apur bat nekatuta.'
     ),
     (
         66,
@@ -33953,7 +34009,7 @@ INSERT INTO Neurketak (
         83,
         74.9,
         1.59,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         67,
@@ -33963,7 +34019,7 @@ INSERT INTO Neurketak (
         78,
         72.5,
         1.72,
-        'Kirola egin ondoren.'
+        85, 'Kirola egin ondoren.'
     ),
     (
         68,
@@ -33973,7 +34029,7 @@ INSERT INTO Neurketak (
         86,
         60.3,
         1.85,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         69,
@@ -33983,7 +34039,7 @@ INSERT INTO Neurketak (
         85,
         94.2,
         1.66,
-        'Kirola egin ondoren.'
+        67, 'Kirola egin ondoren.'
     ),
     (
         70,
@@ -33993,7 +34049,7 @@ INSERT INTO Neurketak (
         81,
         75.8,
         1.70,
-        'Ondo sentitzen naiz.'
+        88, 'Ondo sentitzen naiz.'
     ),
     (
         71,
@@ -34003,7 +34059,7 @@ INSERT INTO Neurketak (
         79,
         88.6,
         1.63,
-        'Kirola egin ondoren.'
+        82, 'Kirola egin ondoren.'
     ),
     (
         72,
@@ -34013,7 +34069,7 @@ INSERT INTO Neurketak (
         85,
         92.1,
         1.69,
-        'Baraualdian.'
+        68, 'Baraualdian.'
     ),
     (
         73,
@@ -34023,7 +34079,7 @@ INSERT INTO Neurketak (
         80,
         94.2,
         1.55,
-        'Gosariaren ondoren.'
+        76, 'Gosariaren ondoren.'
     ),
     (
         74,
@@ -34033,7 +34089,7 @@ INSERT INTO Neurketak (
         79,
         63.2,
         1.67,
-        'Apur bat nekatuta.'
+        83, 'Apur bat nekatuta.'
     ),
     (
         75,
@@ -34043,7 +34099,7 @@ INSERT INTO Neurketak (
         82,
         59.1,
         1.65,
-        'Kirola egin ondoren.'
+        71, 'Kirola egin ondoren.'
     ),
     (
         76,
@@ -34053,7 +34109,7 @@ INSERT INTO Neurketak (
         81,
         65.6,
         1.69,
-        'Ondo sentitzen naiz.'
+        94, 'Ondo sentitzen naiz.'
     ),
     (
         77,
@@ -34063,7 +34119,7 @@ INSERT INTO Neurketak (
         92,
         67.7,
         1.67,
-        'Dena ondo.'
+        79, 'Dena ondo.'
     ),
     (
         78,
@@ -34073,7 +34129,7 @@ INSERT INTO Neurketak (
         77,
         63.9,
         1.61,
-        'Kirola egin ondoren.'
+        89, 'Kirola egin ondoren.'
     ),
     (
         79,
@@ -34083,7 +34139,7 @@ INSERT INTO Neurketak (
         86,
         67.3,
         1.67,
-        'Ondo sentitzen naiz.'
+        85, 'Ondo sentitzen naiz.'
     ),
     (
         80,
@@ -34093,7 +34149,7 @@ INSERT INTO Neurketak (
         83,
         62.9,
         1.78,
-        'Gosariaren ondoren.'
+        76, 'Gosariaren ondoren.'
     ),
     (
         81,
@@ -34103,7 +34159,7 @@ INSERT INTO Neurketak (
         86,
         85.7,
         1.58,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         83,
@@ -34113,7 +34169,7 @@ INSERT INTO Neurketak (
         91,
         64.4,
         1.80,
-        'Gaur goizean neurtuta.'
+        71, 'Gaur goizean neurtuta.'
     ),
     (
         84,
@@ -34123,7 +34179,7 @@ INSERT INTO Neurketak (
         81,
         79.5,
         1.67,
-        'Baraualdian.'
+        76, 'Baraualdian.'
     ),
     (
         85,
@@ -34133,7 +34189,7 @@ INSERT INTO Neurketak (
         79,
         81.0,
         1.72,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         86,
@@ -34143,7 +34199,7 @@ INSERT INTO Neurketak (
         72,
         68.4,
         1.57,
-        'Gaur goizean neurtuta.'
+        70, 'Gaur goizean neurtuta.'
     ),
     (
         88,
@@ -34153,7 +34209,7 @@ INSERT INTO Neurketak (
         81,
         90.3,
         1.81,
-        'Ondo sentitzen naiz.'
+        92, 'Ondo sentitzen naiz.'
     ),
     (
         89,
@@ -34163,7 +34219,7 @@ INSERT INTO Neurketak (
         79,
         91.1,
         1.84,
-        'Ondo sentitzen naiz.'
+        73, 'Ondo sentitzen naiz.'
     ),
     (
         90,
@@ -34173,7 +34229,7 @@ INSERT INTO Neurketak (
         92,
         65.9,
         1.60,
-        'Baraualdian.'
+        93, 'Baraualdian.'
     ),
     (
         92,
@@ -34183,7 +34239,7 @@ INSERT INTO Neurketak (
         89,
         59.1,
         1.79,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         94,
@@ -34193,7 +34249,7 @@ INSERT INTO Neurketak (
         80,
         87.3,
         1.83,
-        'Gosariaren ondoren.'
+        88, 'Gosariaren ondoren.'
     ),
     (
         95,
@@ -34203,7 +34259,7 @@ INSERT INTO Neurketak (
         83,
         89.6,
         1.77,
-        'Ondo sentitzen naiz.'
+        93, 'Ondo sentitzen naiz.'
     ),
     (
         96,
@@ -34213,7 +34269,7 @@ INSERT INTO Neurketak (
         77,
         77.8,
         1.71,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         97,
@@ -34223,7 +34279,7 @@ INSERT INTO Neurketak (
         76,
         86.8,
         1.56,
-        'Gosariaren ondoren.'
+        66, 'Gosariaren ondoren.'
     ),
     (
         98,
@@ -34233,7 +34289,7 @@ INSERT INTO Neurketak (
         88,
         84.6,
         1.60,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         99,
@@ -34243,7 +34299,7 @@ INSERT INTO Neurketak (
         75,
         85.9,
         1.71,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         100,
@@ -34253,7 +34309,7 @@ INSERT INTO Neurketak (
         73,
         82.0,
         1.57,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         52,
@@ -34263,7 +34319,7 @@ INSERT INTO Neurketak (
         81,
         93.4,
         1.77,
-        'Gaur goizean neurtuta.'
+        85, 'Gaur goizean neurtuta.'
     ),
     (
         54,
@@ -34273,7 +34329,7 @@ INSERT INTO Neurketak (
         74,
         87.5,
         1.60,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         55,
@@ -34283,7 +34339,7 @@ INSERT INTO Neurketak (
         73,
         80.9,
         1.76,
-        'Ondo sentitzen naiz.'
+        82, 'Ondo sentitzen naiz.'
     ),
     (
         56,
@@ -34293,7 +34349,7 @@ INSERT INTO Neurketak (
         80,
         90.0,
         1.61,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         57,
@@ -34303,7 +34359,7 @@ INSERT INTO Neurketak (
         90,
         82.8,
         1.69,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         58,
@@ -34313,7 +34369,7 @@ INSERT INTO Neurketak (
         76,
         67.6,
         1.68,
-        'Gaur goizean neurtuta.'
+        94, 'Gaur goizean neurtuta.'
     ),
     (
         59,
@@ -34323,7 +34379,7 @@ INSERT INTO Neurketak (
         82,
         62.2,
         1.73,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         60,
@@ -34333,7 +34389,7 @@ INSERT INTO Neurketak (
         93,
         78.3,
         1.81,
-        'Gosariaren ondoren.'
+        85, 'Gosariaren ondoren.'
     ),
     (
         62,
@@ -34343,7 +34399,7 @@ INSERT INTO Neurketak (
         83,
         66.0,
         1.56,
-        'Kirola egin ondoren.'
+        93, 'Kirola egin ondoren.'
     ),
     (
         63,
@@ -34353,7 +34409,7 @@ INSERT INTO Neurketak (
         83,
         81.3,
         1.80,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         64,
@@ -34363,7 +34419,7 @@ INSERT INTO Neurketak (
         76,
         95.7,
         1.56,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         65,
@@ -34373,7 +34429,7 @@ INSERT INTO Neurketak (
         86,
         90.2,
         1.55,
-        'Ondo sentitzen naiz.'
+        77, 'Ondo sentitzen naiz.'
     ),
     (
         67,
@@ -34383,7 +34439,7 @@ INSERT INTO Neurketak (
         81,
         72.5,
         1.72,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         68,
@@ -34393,7 +34449,7 @@ INSERT INTO Neurketak (
         76,
         61.3,
         1.85,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         69,
@@ -34403,7 +34459,7 @@ INSERT INTO Neurketak (
         86,
         95.3,
         1.66,
-        'Apur bat nekatuta.'
+        76, 'Apur bat nekatuta.'
     ),
     (
         70,
@@ -34413,7 +34469,7 @@ INSERT INTO Neurketak (
         83,
         74.2,
         1.70,
-        'Kirola egin ondoren.'
+        67, 'Kirola egin ondoren.'
     ),
     (
         71,
@@ -34423,7 +34479,7 @@ INSERT INTO Neurketak (
         73,
         88.8,
         1.63,
-        'Gosariaren ondoren.'
+        68, 'Gosariaren ondoren.'
     ),
     (
         72,
@@ -34433,7 +34489,7 @@ INSERT INTO Neurketak (
         76,
         92.7,
         1.69,
-        'Kirola egin ondoren.'
+        67, 'Kirola egin ondoren.'
     ),
     (
         73,
@@ -34443,7 +34499,7 @@ INSERT INTO Neurketak (
         83,
         94.8,
         1.55,
-        'Gaur goizean neurtuta.'
+        85, 'Gaur goizean neurtuta.'
     ),
     (
         76,
@@ -34453,7 +34509,7 @@ INSERT INTO Neurketak (
         94,
         65.1,
         1.69,
-        'Ondo sentitzen naiz.'
+        69, 'Ondo sentitzen naiz.'
     ),
     (
         78,
@@ -34463,7 +34519,7 @@ INSERT INTO Neurketak (
         79,
         63.4,
         1.61,
-        'Apur bat nekatuta.'
+        76, 'Apur bat nekatuta.'
     ),
     (
         80,
@@ -34473,7 +34529,7 @@ INSERT INTO Neurketak (
         86,
         63.9,
         1.78,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         82,
@@ -34483,7 +34539,7 @@ INSERT INTO Neurketak (
         90,
         89.1,
         1.77,
-        'Gosariaren ondoren.'
+        67, 'Gosariaren ondoren.'
     ),
     (
         83,
@@ -34493,7 +34549,7 @@ INSERT INTO Neurketak (
         79,
         65.2,
         1.80,
-        'Gaur goizean neurtuta.'
+        78, 'Gaur goizean neurtuta.'
     ),
     (
         84,
@@ -34503,7 +34559,7 @@ INSERT INTO Neurketak (
         85,
         79.9,
         1.67,
-        'Kirola egin ondoren.'
+        82, 'Kirola egin ondoren.'
     ),
     (
         85,
@@ -34513,7 +34569,7 @@ INSERT INTO Neurketak (
         84,
         81.9,
         1.72,
-        'Baraualdian.'
+        69, 'Baraualdian.'
     ),
     (
         86,
@@ -34523,7 +34579,7 @@ INSERT INTO Neurketak (
         81,
         67.4,
         1.57,
-        'Baraualdian.'
+        94, 'Baraualdian.'
     ),
     (
         87,
@@ -34533,7 +34589,7 @@ INSERT INTO Neurketak (
         75,
         73.8,
         1.61,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         90,
@@ -34543,7 +34599,7 @@ INSERT INTO Neurketak (
         93,
         66.0,
         1.60,
-        'Baraualdian.'
+        65, 'Baraualdian.'
     ),
     (
         91,
@@ -34553,7 +34609,7 @@ INSERT INTO Neurketak (
         89,
         90.2,
         1.58,
-        'Gosariaren ondoren.'
+        66, 'Gosariaren ondoren.'
     ),
     (
         92,
@@ -34563,7 +34619,7 @@ INSERT INTO Neurketak (
         89,
         60.2,
         1.79,
-        'Apur bat nekatuta.'
+        85, 'Apur bat nekatuta.'
     ),
     (
         93,
@@ -34573,7 +34629,7 @@ INSERT INTO Neurketak (
         82,
         76.2,
         1.81,
-        'Baraualdian.'
+        75, 'Baraualdian.'
     ),
     (
         96,
@@ -34583,7 +34639,7 @@ INSERT INTO Neurketak (
         79,
         76.0,
         1.71,
-        'Baraualdian.'
+        79, 'Baraualdian.'
     ),
     (
         97,
@@ -34593,7 +34649,7 @@ INSERT INTO Neurketak (
         74,
         86.4,
         1.56,
-        'Kirola egin ondoren.'
+        90, 'Kirola egin ondoren.'
     ),
     (
         98,
@@ -34603,7 +34659,7 @@ INSERT INTO Neurketak (
         81,
         83.0,
         1.60,
-        'Ondo sentitzen naiz.'
+        66, 'Ondo sentitzen naiz.'
     ),
     (
         99,
@@ -34613,7 +34669,7 @@ INSERT INTO Neurketak (
         79,
         85.1,
         1.71,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         100,
@@ -34623,7 +34679,7 @@ INSERT INTO Neurketak (
         78,
         82.6,
         1.57,
-        'Baraualdian.'
+        65, 'Baraualdian.'
     ),
     (
         52,
@@ -34633,7 +34689,7 @@ INSERT INTO Neurketak (
         87,
         94.8,
         1.77,
-        'Gaur goizean neurtuta.'
+        65, 'Gaur goizean neurtuta.'
     ),
     (
         53,
@@ -34643,7 +34699,7 @@ INSERT INTO Neurketak (
         92,
         75.9,
         1.75,
-        'Baraualdian.'
+        87, 'Baraualdian.'
     ),
     (
         54,
@@ -34653,7 +34709,7 @@ INSERT INTO Neurketak (
         74,
         87.6,
         1.60,
-        'Kirola egin ondoren.'
+        94, 'Kirola egin ondoren.'
     ),
     (
         55,
@@ -34663,7 +34719,7 @@ INSERT INTO Neurketak (
         73,
         80.1,
         1.76,
-        'Dena ondo.'
+        92, 'Dena ondo.'
     ),
     (
         56,
@@ -34673,7 +34729,7 @@ INSERT INTO Neurketak (
         92,
         89.6,
         1.61,
-        'Kirola egin ondoren.'
+        88, 'Kirola egin ondoren.'
     ),
     (
         57,
@@ -34683,7 +34739,7 @@ INSERT INTO Neurketak (
         87,
         82.4,
         1.69,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         58,
@@ -34693,7 +34749,7 @@ INSERT INTO Neurketak (
         90,
         66.9,
         1.68,
-        'Gosariaren ondoren.'
+        65, 'Gosariaren ondoren.'
     ),
     (
         60,
@@ -34703,7 +34759,7 @@ INSERT INTO Neurketak (
         83,
         77.3,
         1.81,
-        'Kirola egin ondoren.'
+        75, 'Kirola egin ondoren.'
     ),
     (
         61,
@@ -34713,7 +34769,7 @@ INSERT INTO Neurketak (
         86,
         73.0,
         1.83,
-        'Gosariaren ondoren.'
+        78, 'Gosariaren ondoren.'
     ),
     (
         63,
@@ -34723,7 +34779,7 @@ INSERT INTO Neurketak (
         81,
         81.5,
         1.80,
-        'Ondo sentitzen naiz.'
+        77, 'Ondo sentitzen naiz.'
     ),
     (
         64,
@@ -34733,7 +34789,7 @@ INSERT INTO Neurketak (
         80,
         95.2,
         1.56,
-        'Gaur goizean neurtuta.'
+        67, 'Gaur goizean neurtuta.'
     ),
     (
         65,
@@ -34743,7 +34799,7 @@ INSERT INTO Neurketak (
         80,
         91.9,
         1.55,
-        'Ondo sentitzen naiz.'
+        94, 'Ondo sentitzen naiz.'
     ),
     (
         66,
@@ -34753,7 +34809,7 @@ INSERT INTO Neurketak (
         79,
         74.4,
         1.59,
-        'Gosariaren ondoren.'
+        68, 'Gosariaren ondoren.'
     ),
     (
         67,
@@ -34763,7 +34819,7 @@ INSERT INTO Neurketak (
         84,
         71.8,
         1.72,
-        'Ondo sentitzen naiz.'
+        82, 'Ondo sentitzen naiz.'
     ),
     (
         68,
@@ -34773,7 +34829,7 @@ INSERT INTO Neurketak (
         82,
         61.9,
         1.85,
-        'Dena ondo.'
+        93, 'Dena ondo.'
     ),
     (
         69,
@@ -34783,7 +34839,7 @@ INSERT INTO Neurketak (
         79,
         95.2,
         1.66,
-        'Baraualdian.'
+        94, 'Baraualdian.'
     ),
     (
         70,
@@ -34793,7 +34849,7 @@ INSERT INTO Neurketak (
         88,
         74.4,
         1.70,
-        'Baraualdian.'
+        89, 'Baraualdian.'
     ),
     (
         71,
@@ -34803,7 +34859,7 @@ INSERT INTO Neurketak (
         76,
         88.4,
         1.63,
-        'Kirola egin ondoren.'
+        85, 'Kirola egin ondoren.'
     ),
     (
         72,
@@ -34813,7 +34869,7 @@ INSERT INTO Neurketak (
         74,
         92.8,
         1.69,
-        'Dena ondo.'
+        88, 'Dena ondo.'
     ),
     (
         73,
@@ -34823,7 +34879,7 @@ INSERT INTO Neurketak (
         81,
         94.3,
         1.55,
-        'Apur bat nekatuta.'
+        76, 'Apur bat nekatuta.'
     ),
     (
         74,
@@ -34833,7 +34889,7 @@ INSERT INTO Neurketak (
         80,
         64.2,
         1.67,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         76,
@@ -34843,7 +34899,7 @@ INSERT INTO Neurketak (
         93,
         65.0,
         1.69,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         78,
@@ -34853,7 +34909,7 @@ INSERT INTO Neurketak (
         78,
         63.3,
         1.61,
-        'Dena ondo.'
+        74, 'Dena ondo.'
     ),
     (
         79,
@@ -34863,7 +34919,7 @@ INSERT INTO Neurketak (
         88,
         67.0,
         1.67,
-        'Gaur goizean neurtuta.'
+        70, 'Gaur goizean neurtuta.'
     ),
     (
         82,
@@ -34873,7 +34929,7 @@ INSERT INTO Neurketak (
         82,
         90.0,
         1.77,
-        'Ondo sentitzen naiz.'
+        71, 'Ondo sentitzen naiz.'
     ),
     (
         84,
@@ -34883,7 +34939,7 @@ INSERT INTO Neurketak (
         82,
         78.9,
         1.67,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         86,
@@ -34893,7 +34949,7 @@ INSERT INTO Neurketak (
         82,
         68.6,
         1.57,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         89,
@@ -34903,7 +34959,7 @@ INSERT INTO Neurketak (
         91,
         90.2,
         1.84,
-        'Dena ondo.'
+        72, 'Dena ondo.'
     ),
     (
         90,
@@ -34913,7 +34969,7 @@ INSERT INTO Neurketak (
         92,
         66.4,
         1.60,
-        'Dena ondo.'
+        77, 'Dena ondo.'
     ),
     (
         91,
@@ -34923,7 +34979,7 @@ INSERT INTO Neurketak (
         78,
         89.3,
         1.58,
-        'Gosariaren ondoren.'
+        85, 'Gosariaren ondoren.'
     ),
     (
         92,
@@ -34933,7 +34989,7 @@ INSERT INTO Neurketak (
         80,
         59.6,
         1.79,
-        'Baraualdian.'
+        86, 'Baraualdian.'
     ),
     (
         93,
@@ -34943,7 +34999,7 @@ INSERT INTO Neurketak (
         82,
         75.5,
         1.81,
-        'Kirola egin ondoren.'
+        69, 'Kirola egin ondoren.'
     ),
     (
         94,
@@ -34953,7 +35009,7 @@ INSERT INTO Neurketak (
         82,
         87.9,
         1.83,
-        'Gosariaren ondoren.'
+        84, 'Gosariaren ondoren.'
     ),
     (
         95,
@@ -34963,7 +35019,7 @@ INSERT INTO Neurketak (
         74,
         89.4,
         1.77,
-        'Kirola egin ondoren.'
+        70, 'Kirola egin ondoren.'
     ),
     (
         99,
@@ -34973,7 +35029,7 @@ INSERT INTO Neurketak (
         78,
         85.3,
         1.71,
-        'Kirola egin ondoren.'
+        67, 'Kirola egin ondoren.'
     ),
     (
         100,
@@ -34983,7 +35039,7 @@ INSERT INTO Neurketak (
         73,
         81.5,
         1.57,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         51,
@@ -34993,7 +35049,7 @@ INSERT INTO Neurketak (
         83,
         63.0,
         1.76,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         52,
@@ -35003,7 +35059,7 @@ INSERT INTO Neurketak (
         80,
         94.7,
         1.77,
-        'Dena ondo.'
+        76, 'Dena ondo.'
     ),
     (
         53,
@@ -35013,7 +35069,7 @@ INSERT INTO Neurketak (
         90,
         74.3,
         1.75,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         54,
@@ -35023,7 +35079,7 @@ INSERT INTO Neurketak (
         87,
         87.6,
         1.60,
-        'Ondo sentitzen naiz.'
+        92, 'Ondo sentitzen naiz.'
     ),
     (
         56,
@@ -35033,7 +35089,7 @@ INSERT INTO Neurketak (
         86,
         90.1,
         1.61,
-        'Gaur goizean neurtuta.'
+        72, 'Gaur goizean neurtuta.'
     ),
     (
         58,
@@ -35043,7 +35099,7 @@ INSERT INTO Neurketak (
         89,
         66.2,
         1.68,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         59,
@@ -35053,7 +35109,7 @@ INSERT INTO Neurketak (
         83,
         63.3,
         1.73,
-        'Baraualdian.'
+        67, 'Baraualdian.'
     ),
     (
         60,
@@ -35063,7 +35119,7 @@ INSERT INTO Neurketak (
         86,
         78.2,
         1.81,
-        'Gosariaren ondoren.'
+        82, 'Gosariaren ondoren.'
     ),
     (
         61,
@@ -35073,7 +35129,7 @@ INSERT INTO Neurketak (
         80,
         72.0,
         1.83,
-        'Apur bat nekatuta.'
+        80, 'Apur bat nekatuta.'
     ),
     (
         63,
@@ -35083,7 +35139,7 @@ INSERT INTO Neurketak (
         90,
         81.0,
         1.80,
-        'Ondo sentitzen naiz.'
+        65, 'Ondo sentitzen naiz.'
     ),
     (
         64,
@@ -35093,7 +35149,7 @@ INSERT INTO Neurketak (
         73,
         95.6,
         1.56,
-        'Gosariaren ondoren.'
+        78, 'Gosariaren ondoren.'
     ),
     (
         65,
@@ -35103,7 +35159,7 @@ INSERT INTO Neurketak (
         79,
         90.4,
         1.55,
-        'Apur bat nekatuta.'
+        94, 'Apur bat nekatuta.'
     ),
     (
         66,
@@ -35113,7 +35169,7 @@ INSERT INTO Neurketak (
         88,
         74.8,
         1.59,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         67,
@@ -35123,7 +35179,7 @@ INSERT INTO Neurketak (
         90,
         71.7,
         1.72,
-        'Dena ondo.'
+        94, 'Dena ondo.'
     ),
     (
         68,
@@ -35133,7 +35189,7 @@ INSERT INTO Neurketak (
         76,
         61.5,
         1.85,
-        'Baraualdian.'
+        73, 'Baraualdian.'
     ),
     (
         70,
@@ -35143,7 +35199,7 @@ INSERT INTO Neurketak (
         89,
         75.8,
         1.70,
-        'Gaur goizean neurtuta.'
+        86, 'Gaur goizean neurtuta.'
     ),
     (
         71,
@@ -35153,7 +35209,7 @@ INSERT INTO Neurketak (
         81,
         88.6,
         1.63,
-        'Gosariaren ondoren.'
+        93, 'Gosariaren ondoren.'
     ),
     (
         72,
@@ -35163,7 +35219,7 @@ INSERT INTO Neurketak (
         78,
         92.6,
         1.69,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         73,
@@ -35173,7 +35229,7 @@ INSERT INTO Neurketak (
         79,
         96.0,
         1.55,
-        'Apur bat nekatuta.'
+        85, 'Apur bat nekatuta.'
     ),
     (
         74,
@@ -35183,7 +35239,7 @@ INSERT INTO Neurketak (
         89,
         63.8,
         1.67,
-        'Baraualdian.'
+        65, 'Baraualdian.'
     ),
     (
         75,
@@ -35193,7 +35249,7 @@ INSERT INTO Neurketak (
         78,
         60.4,
         1.65,
-        'Gaur goizean neurtuta.'
+        88, 'Gaur goizean neurtuta.'
     ),
     (
         76,
@@ -35203,7 +35259,7 @@ INSERT INTO Neurketak (
         88,
         65.9,
         1.69,
-        'Gaur goizean neurtuta.'
+        72, 'Gaur goizean neurtuta.'
     ),
     (
         78,
@@ -35213,7 +35269,7 @@ INSERT INTO Neurketak (
         75,
         62.0,
         1.61,
-        'Apur bat nekatuta.'
+        67, 'Apur bat nekatuta.'
     ),
     (
         79,
@@ -35223,7 +35279,7 @@ INSERT INTO Neurketak (
         77,
         66.2,
         1.67,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         83,
@@ -35233,7 +35289,7 @@ INSERT INTO Neurketak (
         88,
         65.5,
         1.80,
-        'Kirola egin ondoren.'
+        67, 'Kirola egin ondoren.'
     ),
     (
         84,
@@ -35243,7 +35299,7 @@ INSERT INTO Neurketak (
         77,
         79.3,
         1.67,
-        'Gaur goizean neurtuta.'
+        70, 'Gaur goizean neurtuta.'
     ),
     (
         85,
@@ -35253,7 +35309,7 @@ INSERT INTO Neurketak (
         92,
         81.0,
         1.72,
-        'Kirola egin ondoren.'
+        81, 'Kirola egin ondoren.'
     ),
     (
         86,
@@ -35263,7 +35319,7 @@ INSERT INTO Neurketak (
         86,
         67.3,
         1.57,
-        'Kirola egin ondoren.'
+        71, 'Kirola egin ondoren.'
     ),
     (
         87,
@@ -35273,7 +35329,7 @@ INSERT INTO Neurketak (
         73,
         73.6,
         1.61,
-        'Ondo sentitzen naiz.'
+        82, 'Ondo sentitzen naiz.'
     ),
     (
         88,
@@ -35283,7 +35339,7 @@ INSERT INTO Neurketak (
         78,
         90.3,
         1.81,
-        'Gosariaren ondoren.'
+        73, 'Gosariaren ondoren.'
     ),
     (
         89,
@@ -35293,7 +35349,7 @@ INSERT INTO Neurketak (
         87,
         91.8,
         1.84,
-        'Apur bat nekatuta.'
+        93, 'Apur bat nekatuta.'
     ),
     (
         90,
@@ -35303,7 +35359,7 @@ INSERT INTO Neurketak (
         82,
         65.3,
         1.60,
-        'Kirola egin ondoren.'
+        89, 'Kirola egin ondoren.'
     ),
     (
         91,
@@ -35313,7 +35369,7 @@ INSERT INTO Neurketak (
         85,
         89.2,
         1.58,
-        'Apur bat nekatuta.'
+        69, 'Apur bat nekatuta.'
     ),
     (
         92,
@@ -35323,7 +35379,7 @@ INSERT INTO Neurketak (
         86,
         59.1,
         1.79,
-        'Gaur goizean neurtuta.'
+        78, 'Gaur goizean neurtuta.'
     ),
     (
         93,
@@ -35333,7 +35389,7 @@ INSERT INTO Neurketak (
         82,
         75.7,
         1.81,
-        'Ondo sentitzen naiz.'
+        68, 'Ondo sentitzen naiz.'
     ),
     (
         94,
@@ -35343,7 +35399,7 @@ INSERT INTO Neurketak (
         77,
         86.1,
         1.83,
-        'Dena ondo.'
+        68, 'Dena ondo.'
     ),
     (
         95,
@@ -35353,7 +35409,7 @@ INSERT INTO Neurketak (
         77,
         90.4,
         1.77,
-        'Gosariaren ondoren.'
+        68, 'Gosariaren ondoren.'
     ),
     (
         98,
@@ -35363,7 +35419,7 @@ INSERT INTO Neurketak (
         90,
         84.2,
         1.60,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         99,
@@ -35373,7 +35429,7 @@ INSERT INTO Neurketak (
         85,
         85.0,
         1.71,
-        'Gaur goizean neurtuta.'
+        87, 'Gaur goizean neurtuta.'
     ),
     (
         100,
@@ -35383,7 +35439,7 @@ INSERT INTO Neurketak (
         77,
         82.0,
         1.57,
-        'Kirola egin ondoren.'
+        72, 'Kirola egin ondoren.'
     ),
     (
         51,
@@ -35393,7 +35449,7 @@ INSERT INTO Neurketak (
         91,
         64.8,
         1.76,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         52,
@@ -35403,7 +35459,7 @@ INSERT INTO Neurketak (
         83,
         94.6,
         1.77,
-        'Dena ondo.'
+        71, 'Dena ondo.'
     ),
     (
         53,
@@ -35413,7 +35469,7 @@ INSERT INTO Neurketak (
         90,
         74.5,
         1.75,
-        'Kirola egin ondoren.'
+        82, 'Kirola egin ondoren.'
     ),
     (
         55,
@@ -35423,7 +35479,7 @@ INSERT INTO Neurketak (
         81,
         81.4,
         1.76,
-        'Kirola egin ondoren.'
+        74, 'Kirola egin ondoren.'
     ),
     (
         56,
@@ -35433,7 +35489,7 @@ INSERT INTO Neurketak (
         91,
         89.6,
         1.61,
-        'Baraualdian.'
+        85, 'Baraualdian.'
     ),
     (
         57,
@@ -35443,7 +35499,7 @@ INSERT INTO Neurketak (
         86,
         83.4,
         1.69,
-        'Kirola egin ondoren.'
+        93, 'Kirola egin ondoren.'
     ),
     (
         58,
@@ -35453,7 +35509,7 @@ INSERT INTO Neurketak (
         83,
         66.0,
         1.68,
-        'Apur bat nekatuta.'
+        67, 'Apur bat nekatuta.'
     ),
     (
         60,
@@ -35463,7 +35519,7 @@ INSERT INTO Neurketak (
         93,
         77.0,
         1.81,
-        'Dena ondo.'
+        83, 'Dena ondo.'
     ),
     (
         61,
@@ -35473,7 +35529,7 @@ INSERT INTO Neurketak (
         78,
         72.8,
         1.83,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         62,
@@ -35483,7 +35539,7 @@ INSERT INTO Neurketak (
         79,
         65.6,
         1.56,
-        'Apur bat nekatuta.'
+        89, 'Apur bat nekatuta.'
     ),
     (
         63,
@@ -35493,7 +35549,7 @@ INSERT INTO Neurketak (
         87,
         81.5,
         1.80,
-        'Apur bat nekatuta.'
+        67, 'Apur bat nekatuta.'
     ),
     (
         64,
@@ -35503,7 +35559,7 @@ INSERT INTO Neurketak (
         75,
         94.7,
         1.56,
-        'Kirola egin ondoren.'
+        78, 'Kirola egin ondoren.'
     ),
     (
         66,
@@ -35513,7 +35569,7 @@ INSERT INTO Neurketak (
         85,
         74.7,
         1.59,
-        'Baraualdian.'
+        79, 'Baraualdian.'
     ),
     (
         67,
@@ -35523,7 +35579,7 @@ INSERT INTO Neurketak (
         79,
         72.0,
         1.72,
-        'Kirola egin ondoren.'
+        80, 'Kirola egin ondoren.'
     ),
     (
         68,
@@ -35533,7 +35589,7 @@ INSERT INTO Neurketak (
         85,
         61.2,
         1.85,
-        'Kirola egin ondoren.'
+        89, 'Kirola egin ondoren.'
     ),
     (
         69,
@@ -35543,7 +35599,7 @@ INSERT INTO Neurketak (
         81,
         94.5,
         1.66,
-        'Gosariaren ondoren.'
+        74, 'Gosariaren ondoren.'
     ),
     (
         70,
@@ -35553,7 +35609,7 @@ INSERT INTO Neurketak (
         83,
         75.3,
         1.70,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         71,
@@ -35563,7 +35619,7 @@ INSERT INTO Neurketak (
         80,
         89.7,
         1.63,
-        'Baraualdian.'
+        79, 'Baraualdian.'
     ),
     (
         72,
@@ -35573,7 +35629,7 @@ INSERT INTO Neurketak (
         74,
         92.5,
         1.69,
-        'Ondo sentitzen naiz.'
+        71, 'Ondo sentitzen naiz.'
     ),
     (
         73,
@@ -35583,7 +35639,7 @@ INSERT INTO Neurketak (
         86,
         96.0,
         1.55,
-        'Dena ondo.'
+        86, 'Dena ondo.'
     ),
     (
         74,
@@ -35593,7 +35649,7 @@ INSERT INTO Neurketak (
         90,
         64.2,
         1.67,
-        'Dena ondo.'
+        74, 'Dena ondo.'
     ),
     (
         75,
@@ -35603,7 +35659,7 @@ INSERT INTO Neurketak (
         70,
         59.6,
         1.65,
-        'Baraualdian.'
+        76, 'Baraualdian.'
     ),
     (
         76,
@@ -35613,7 +35669,7 @@ INSERT INTO Neurketak (
         85,
         66.9,
         1.69,
-        'Kirola egin ondoren.'
+        74, 'Kirola egin ondoren.'
     ),
     (
         78,
@@ -35623,7 +35679,7 @@ INSERT INTO Neurketak (
         88,
         63.1,
         1.61,
-        'Gaur goizean neurtuta.'
+        81, 'Gaur goizean neurtuta.'
     ),
     (
         79,
@@ -35633,7 +35689,7 @@ INSERT INTO Neurketak (
         89,
         67.0,
         1.67,
-        'Apur bat nekatuta.'
+        86, 'Apur bat nekatuta.'
     ),
     (
         80,
@@ -35643,7 +35699,7 @@ INSERT INTO Neurketak (
         87,
         62.4,
         1.78,
-        'Kirola egin ondoren.'
+        90, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -35653,7 +35709,7 @@ INSERT INTO Neurketak (
         91,
         86.5,
         1.58,
-        'Dena ondo.'
+        83, 'Dena ondo.'
     ),
     (
         83,
@@ -35663,7 +35719,7 @@ INSERT INTO Neurketak (
         90,
         65.9,
         1.80,
-        'Apur bat nekatuta.'
+        66, 'Apur bat nekatuta.'
     ),
     (
         84,
@@ -35673,7 +35729,7 @@ INSERT INTO Neurketak (
         91,
         78.7,
         1.67,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         85,
@@ -35683,7 +35739,7 @@ INSERT INTO Neurketak (
         82,
         80.7,
         1.72,
-        'Ondo sentitzen naiz.'
+        73, 'Ondo sentitzen naiz.'
     ),
     (
         86,
@@ -35693,7 +35749,7 @@ INSERT INTO Neurketak (
         75,
         67.5,
         1.57,
-        'Apur bat nekatuta.'
+        76, 'Apur bat nekatuta.'
     ),
     (
         87,
@@ -35703,7 +35759,7 @@ INSERT INTO Neurketak (
         82,
         74.0,
         1.61,
-        'Ondo sentitzen naiz.'
+        70, 'Ondo sentitzen naiz.'
     ),
     (
         88,
@@ -35713,7 +35769,7 @@ INSERT INTO Neurketak (
         72,
         90.3,
         1.81,
-        'Gaur goizean neurtuta.'
+        83, 'Gaur goizean neurtuta.'
     ),
     (
         89,
@@ -35723,7 +35779,7 @@ INSERT INTO Neurketak (
         77,
         90.6,
         1.84,
-        'Dena ondo.'
+        88, 'Dena ondo.'
     ),
     (
         90,
@@ -35733,7 +35789,7 @@ INSERT INTO Neurketak (
         78,
         65.4,
         1.60,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         93,
@@ -35743,7 +35799,7 @@ INSERT INTO Neurketak (
         87,
         76.3,
         1.81,
-        'Gaur goizean neurtuta.'
+        66, 'Gaur goizean neurtuta.'
     ),
     (
         94,
@@ -35753,7 +35809,7 @@ INSERT INTO Neurketak (
         88,
         86.1,
         1.83,
-        'Ondo sentitzen naiz.'
+        75, 'Ondo sentitzen naiz.'
     ),
     (
         96,
@@ -35763,7 +35819,7 @@ INSERT INTO Neurketak (
         80,
         76.6,
         1.71,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         97,
@@ -35773,7 +35829,7 @@ INSERT INTO Neurketak (
         77,
         86.5,
         1.56,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         98,
@@ -35783,7 +35839,7 @@ INSERT INTO Neurketak (
         78,
         83.9,
         1.60,
-        'Gosariaren ondoren.'
+        79, 'Gosariaren ondoren.'
     ),
     (
         99,
@@ -35793,7 +35849,7 @@ INSERT INTO Neurketak (
         86,
         86.9,
         1.71,
-        'Baraualdian.'
+        74, 'Baraualdian.'
     ),
     (
         100,
@@ -35803,7 +35859,7 @@ INSERT INTO Neurketak (
         78,
         81.9,
         1.57,
-        'Ondo sentitzen naiz.'
+        82, 'Ondo sentitzen naiz.'
     ),
     (
         51,
@@ -35813,7 +35869,7 @@ INSERT INTO Neurketak (
         89,
         64.1,
         1.76,
-        'Apur bat nekatuta.'
+        71, 'Apur bat nekatuta.'
     ),
     (
         52,
@@ -35823,7 +35879,7 @@ INSERT INTO Neurketak (
         94,
         93.0,
         1.77,
-        'Gaur goizean neurtuta.'
+        71, 'Gaur goizean neurtuta.'
     ),
     (
         53,
@@ -35833,7 +35889,7 @@ INSERT INTO Neurketak (
         91,
         75.9,
         1.75,
-        'Baraualdian.'
+        66, 'Baraualdian.'
     ),
     (
         54,
@@ -35843,7 +35899,7 @@ INSERT INTO Neurketak (
         88,
         87.1,
         1.60,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         55,
@@ -35853,7 +35909,7 @@ INSERT INTO Neurketak (
         71,
         81.8,
         1.76,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         56,
@@ -35863,7 +35919,7 @@ INSERT INTO Neurketak (
         80,
         90.2,
         1.61,
-        'Baraualdian.'
+        78, 'Baraualdian.'
     ),
     (
         57,
@@ -35873,7 +35929,7 @@ INSERT INTO Neurketak (
         81,
         82.0,
         1.69,
-        'Dena ondo.'
+        73, 'Dena ondo.'
     ),
     (
         59,
@@ -35883,7 +35939,7 @@ INSERT INTO Neurketak (
         85,
         63.4,
         1.73,
-        'Ondo sentitzen naiz.'
+        88, 'Ondo sentitzen naiz.'
     ),
     (
         60,
@@ -35893,7 +35949,7 @@ INSERT INTO Neurketak (
         88,
         78.5,
         1.81,
-        'Apur bat nekatuta.'
+        93, 'Apur bat nekatuta.'
     ),
     (
         63,
@@ -35903,7 +35959,7 @@ INSERT INTO Neurketak (
         90,
         80.6,
         1.80,
-        'Apur bat nekatuta.'
+        89, 'Apur bat nekatuta.'
     ),
     (
         65,
@@ -35913,7 +35969,7 @@ INSERT INTO Neurketak (
         86,
         90.9,
         1.55,
-        'Apur bat nekatuta.'
+        91, 'Apur bat nekatuta.'
     ),
     (
         66,
@@ -35923,7 +35979,7 @@ INSERT INTO Neurketak (
         80,
         74.6,
         1.59,
-        'Ondo sentitzen naiz.'
+        73, 'Ondo sentitzen naiz.'
     ),
     (
         67,
@@ -35933,7 +35989,7 @@ INSERT INTO Neurketak (
         90,
         71.3,
         1.72,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         69,
@@ -35943,7 +35999,7 @@ INSERT INTO Neurketak (
         87,
         94.1,
         1.66,
-        'Gaur goizean neurtuta.'
+        72, 'Gaur goizean neurtuta.'
     ),
     (
         70,
@@ -35953,7 +36009,7 @@ INSERT INTO Neurketak (
         78,
         75.8,
         1.70,
-        'Apur bat nekatuta.'
+        91, 'Apur bat nekatuta.'
     ),
     (
         71,
@@ -35963,7 +36019,7 @@ INSERT INTO Neurketak (
         73,
         88.9,
         1.63,
-        'Apur bat nekatuta.'
+        83, 'Apur bat nekatuta.'
     ),
     (
         72,
@@ -35973,7 +36029,7 @@ INSERT INTO Neurketak (
         82,
         91.0,
         1.69,
-        'Dena ondo.'
+        70, 'Dena ondo.'
     ),
     (
         73,
@@ -35983,7 +36039,7 @@ INSERT INTO Neurketak (
         74,
         95.1,
         1.55,
-        'Gosariaren ondoren.'
+        70, 'Gosariaren ondoren.'
     ),
     (
         74,
@@ -35993,7 +36049,7 @@ INSERT INTO Neurketak (
         80,
         64.5,
         1.67,
-        'Ondo sentitzen naiz.'
+        72, 'Ondo sentitzen naiz.'
     ),
     (
         76,
@@ -36003,7 +36059,7 @@ INSERT INTO Neurketak (
         82,
         65.1,
         1.69,
-        'Ondo sentitzen naiz.'
+        76, 'Ondo sentitzen naiz.'
     ),
     (
         78,
@@ -36013,7 +36069,7 @@ INSERT INTO Neurketak (
         75,
         63.8,
         1.61,
-        'Apur bat nekatuta.'
+        67, 'Apur bat nekatuta.'
     ),
     (
         79,
@@ -36023,7 +36079,7 @@ INSERT INTO Neurketak (
         84,
         66.8,
         1.67,
-        'Baraualdian.'
+        76, 'Baraualdian.'
     ),
     (
         80,
@@ -36033,7 +36089,7 @@ INSERT INTO Neurketak (
         94,
         63.2,
         1.78,
-        'Dena ondo.'
+        89, 'Dena ondo.'
     ),
     (
         81,
@@ -36043,7 +36099,7 @@ INSERT INTO Neurketak (
         89,
         86.5,
         1.58,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         82,
@@ -36053,7 +36109,7 @@ INSERT INTO Neurketak (
         94,
         88.4,
         1.77,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         83,
@@ -36063,7 +36119,7 @@ INSERT INTO Neurketak (
         90,
         65.3,
         1.80,
-        'Baraualdian.'
+        92, 'Baraualdian.'
     ),
     (
         84,
@@ -36073,7 +36129,7 @@ INSERT INTO Neurketak (
         80,
         78.7,
         1.67,
-        'Baraualdian.'
+        91, 'Baraualdian.'
     ),
     (
         85,
@@ -36083,7 +36139,7 @@ INSERT INTO Neurketak (
         86,
         80.7,
         1.72,
-        'Ondo sentitzen naiz.'
+        72, 'Ondo sentitzen naiz.'
     ),
     (
         86,
@@ -36093,7 +36149,7 @@ INSERT INTO Neurketak (
         72,
         67.9,
         1.57,
-        'Dena ondo.'
+        90, 'Dena ondo.'
     ),
     (
         87,
@@ -36103,7 +36159,7 @@ INSERT INTO Neurketak (
         80,
         73.1,
         1.61,
-        'Apur bat nekatuta.'
+        92, 'Apur bat nekatuta.'
     ),
     (
         88,
@@ -36113,7 +36169,7 @@ INSERT INTO Neurketak (
         87,
         90.1,
         1.81,
-        'Gosariaren ondoren.'
+        69, 'Gosariaren ondoren.'
     ),
     (
         89,
@@ -36123,7 +36179,7 @@ INSERT INTO Neurketak (
         81,
         90.3,
         1.84,
-        'Ondo sentitzen naiz.'
+        74, 'Ondo sentitzen naiz.'
     ),
     (
         91,
@@ -36133,7 +36189,7 @@ INSERT INTO Neurketak (
         77,
         90.3,
         1.58,
-        'Gosariaren ondoren.'
+        85, 'Gosariaren ondoren.'
     ),
     (
         92,
@@ -36143,7 +36199,7 @@ INSERT INTO Neurketak (
         82,
         60.8,
         1.79,
-        'Dena ondo.'
+        85, 'Dena ondo.'
     ),
     (
         93,
@@ -36153,7 +36209,7 @@ INSERT INTO Neurketak (
         87,
         75.8,
         1.81,
-        'Gaur goizean neurtuta.'
+        82, 'Gaur goizean neurtuta.'
     ),
     (
         94,
@@ -36163,7 +36219,7 @@ INSERT INTO Neurketak (
         90,
         87.4,
         1.83,
-        'Gaur goizean neurtuta.'
+        93, 'Gaur goizean neurtuta.'
     ),
     (
         95,
@@ -36173,7 +36229,7 @@ INSERT INTO Neurketak (
         76,
         90.5,
         1.77,
-        'Gosariaren ondoren.'
+        94, 'Gosariaren ondoren.'
     ),
     (
         96,
@@ -36183,7 +36239,7 @@ INSERT INTO Neurketak (
         75,
         77.2,
         1.71,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         98,
@@ -36193,7 +36249,7 @@ INSERT INTO Neurketak (
         83,
         83.0,
         1.60,
-        'Kirola egin ondoren.'
+        76, 'Kirola egin ondoren.'
     ),
     (
         100,
@@ -36203,7 +36259,7 @@ INSERT INTO Neurketak (
         78,
         81.8,
         1.57,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         52,
@@ -36213,7 +36269,7 @@ INSERT INTO Neurketak (
         90,
         94.4,
         1.77,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         53,
@@ -36223,7 +36279,7 @@ INSERT INTO Neurketak (
         84,
         75.0,
         1.75,
-        'Baraualdian.'
+        70, 'Baraualdian.'
     ),
     (
         54,
@@ -36233,7 +36289,7 @@ INSERT INTO Neurketak (
         77,
         86.1,
         1.60,
-        'Ondo sentitzen naiz.'
+        82, 'Ondo sentitzen naiz.'
     ),
     (
         55,
@@ -36243,7 +36299,7 @@ INSERT INTO Neurketak (
         72,
         81.0,
         1.76,
-        'Gosariaren ondoren.'
+        91, 'Gosariaren ondoren.'
     ),
     (
         56,
@@ -36253,7 +36309,7 @@ INSERT INTO Neurketak (
         92,
         90.9,
         1.61,
-        'Kirola egin ondoren.'
+        69, 'Kirola egin ondoren.'
     ),
     (
         57,
@@ -36263,7 +36319,7 @@ INSERT INTO Neurketak (
         90,
         82.0,
         1.69,
-        'Dena ondo.'
+        77, 'Dena ondo.'
     ),
     (
         58,
@@ -36273,7 +36329,7 @@ INSERT INTO Neurketak (
         79,
         67.5,
         1.68,
-        'Ondo sentitzen naiz.'
+        88, 'Ondo sentitzen naiz.'
     ),
     (
         59,
@@ -36283,7 +36339,7 @@ INSERT INTO Neurketak (
         81,
         63.4,
         1.73,
-        'Kirola egin ondoren.'
+        65, 'Kirola egin ondoren.'
     ),
     (
         60,
@@ -36293,7 +36349,7 @@ INSERT INTO Neurketak (
         87,
         78.2,
         1.81,
-        'Dena ondo.'
+        86, 'Dena ondo.'
     ),
     (
         61,
@@ -36303,7 +36359,7 @@ INSERT INTO Neurketak (
         85,
         73.4,
         1.83,
-        'Ondo sentitzen naiz.'
+        93, 'Ondo sentitzen naiz.'
     ),
     (
         62,
@@ -36313,7 +36369,7 @@ INSERT INTO Neurketak (
         81,
         66.1,
         1.56,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         64,
@@ -36323,7 +36379,7 @@ INSERT INTO Neurketak (
         85,
         94.4,
         1.56,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         65,
@@ -36333,7 +36389,7 @@ INSERT INTO Neurketak (
         77,
         92.0,
         1.55,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         66,
@@ -36343,7 +36399,7 @@ INSERT INTO Neurketak (
         85,
         74.9,
         1.59,
-        'Baraualdian.'
+        66, 'Baraualdian.'
     ),
     (
         67,
@@ -36353,7 +36409,7 @@ INSERT INTO Neurketak (
         84,
         71.4,
         1.72,
-        'Baraualdian.'
+        90, 'Baraualdian.'
     ),
     (
         68,
@@ -36363,7 +36419,7 @@ INSERT INTO Neurketak (
         81,
         61.0,
         1.85,
-        'Baraualdian.'
+        84, 'Baraualdian.'
     ),
     (
         69,
@@ -36373,7 +36429,7 @@ INSERT INTO Neurketak (
         80,
         95.5,
         1.66,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         70,
@@ -36383,7 +36439,7 @@ INSERT INTO Neurketak (
         86,
         75.4,
         1.70,
-        'Dena ondo.'
+        90, 'Dena ondo.'
     ),
     (
         72,
@@ -36393,7 +36449,7 @@ INSERT INTO Neurketak (
         89,
         92.9,
         1.69,
-        'Kirola egin ondoren.'
+        84, 'Kirola egin ondoren.'
     ),
     (
         73,
@@ -36403,7 +36459,7 @@ INSERT INTO Neurketak (
         78,
         94.1,
         1.55,
-        'Gosariaren ondoren.'
+        70, 'Gosariaren ondoren.'
     ),
     (
         74,
@@ -36413,7 +36469,7 @@ INSERT INTO Neurketak (
         83,
         63.3,
         1.67,
-        'Apur bat nekatuta.'
+        75, 'Apur bat nekatuta.'
     ),
     (
         76,
@@ -36423,7 +36479,7 @@ INSERT INTO Neurketak (
         80,
         66.1,
         1.69,
-        'Gosariaren ondoren.'
+        82, 'Gosariaren ondoren.'
     ),
     (
         77,
@@ -36433,7 +36489,7 @@ INSERT INTO Neurketak (
         83,
         67.6,
         1.67,
-        'Dena ondo.'
+        79, 'Dena ondo.'
     ),
     (
         78,
@@ -36443,7 +36499,7 @@ INSERT INTO Neurketak (
         84,
         63.6,
         1.61,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         79,
@@ -36453,7 +36509,7 @@ INSERT INTO Neurketak (
         84,
         67.2,
         1.67,
-        'Gaur goizean neurtuta.'
+        73, 'Gaur goizean neurtuta.'
     ),
     (
         81,
@@ -36463,7 +36519,7 @@ INSERT INTO Neurketak (
         91,
         86.1,
         1.58,
-        'Gaur goizean neurtuta.'
+        88, 'Gaur goizean neurtuta.'
     ),
     (
         82,
@@ -36473,7 +36529,7 @@ INSERT INTO Neurketak (
         89,
         89.3,
         1.77,
-        'Dena ondo.'
+        83, 'Dena ondo.'
     ),
     (
         83,
@@ -36483,7 +36539,7 @@ INSERT INTO Neurketak (
         83,
         65.1,
         1.80,
-        'Gaur goizean neurtuta.'
+        85, 'Gaur goizean neurtuta.'
     ),
     (
         84,
@@ -36493,7 +36549,7 @@ INSERT INTO Neurketak (
         77,
         78.2,
         1.67,
-        'Gosariaren ondoren.'
+        87, 'Gosariaren ondoren.'
     ),
     (
         85,
@@ -36503,7 +36559,7 @@ INSERT INTO Neurketak (
         78,
         81.9,
         1.72,
-        'Baraualdian.'
+        72, 'Baraualdian.'
     ),
     (
         86,
@@ -36513,7 +36569,7 @@ INSERT INTO Neurketak (
         79,
         68.1,
         1.57,
-        'Gosariaren ondoren.'
+        72, 'Gosariaren ondoren.'
     ),
     (
         87,
@@ -36523,7 +36579,7 @@ INSERT INTO Neurketak (
         87,
         73.8,
         1.61,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         88,
@@ -36533,7 +36589,7 @@ INSERT INTO Neurketak (
         80,
         89.9,
         1.81,
-        'Ondo sentitzen naiz.'
+        73, 'Ondo sentitzen naiz.'
     ),
     (
         89,
@@ -36543,7 +36599,7 @@ INSERT INTO Neurketak (
         79,
         91.9,
         1.84,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         90,
@@ -36553,7 +36609,7 @@ INSERT INTO Neurketak (
         84,
         67.0,
         1.60,
-        'Gosariaren ondoren.'
+        77, 'Gosariaren ondoren.'
     ),
     (
         91,
@@ -36563,7 +36619,7 @@ INSERT INTO Neurketak (
         79,
         89.2,
         1.58,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         92,
@@ -36573,7 +36629,7 @@ INSERT INTO Neurketak (
         94,
         60.7,
         1.79,
-        'Dena ondo.'
+        87, 'Dena ondo.'
     ),
     (
         96,
@@ -36583,7 +36639,7 @@ INSERT INTO Neurketak (
         82,
         77.5,
         1.71,
-        'Gaur goizean neurtuta.'
+        74, 'Gaur goizean neurtuta.'
     ),
     (
         97,
@@ -36593,7 +36649,7 @@ INSERT INTO Neurketak (
         79,
         87.5,
         1.56,
-        'Apur bat nekatuta.'
+        89, 'Apur bat nekatuta.'
     ),
     (
         98,
@@ -36603,7 +36659,7 @@ INSERT INTO Neurketak (
         75,
         83.0,
         1.60,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         99,
@@ -36613,7 +36669,7 @@ INSERT INTO Neurketak (
         88,
         85.7,
         1.71,
-        'Kirola egin ondoren.'
+        68, 'Kirola egin ondoren.'
     ),
     (
         51,
@@ -36623,7 +36679,7 @@ INSERT INTO Neurketak (
         91,
         63.8,
         1.76,
-        'Ondo sentitzen naiz.'
+        75, 'Ondo sentitzen naiz.'
     ),
     (
         52,
@@ -36633,7 +36689,7 @@ INSERT INTO Neurketak (
         91,
         94.1,
         1.77,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         53,
@@ -36643,7 +36699,7 @@ INSERT INTO Neurketak (
         83,
         74.9,
         1.75,
-        'Kirola egin ondoren.'
+        85, 'Kirola egin ondoren.'
     ),
     (
         54,
@@ -36653,7 +36709,7 @@ INSERT INTO Neurketak (
         75,
         88.0,
         1.60,
-        'Gaur goizean neurtuta.'
+        85, 'Gaur goizean neurtuta.'
     ),
     (
         55,
@@ -36663,7 +36719,7 @@ INSERT INTO Neurketak (
         73,
         81.0,
         1.76,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         58,
@@ -36673,7 +36729,7 @@ INSERT INTO Neurketak (
         77,
         67.3,
         1.68,
-        'Ondo sentitzen naiz.'
+        81, 'Ondo sentitzen naiz.'
     ),
     (
         59,
@@ -36683,7 +36739,7 @@ INSERT INTO Neurketak (
         83,
         63.2,
         1.73,
-        'Kirola egin ondoren.'
+        82, 'Kirola egin ondoren.'
     ),
     (
         60,
@@ -36693,7 +36749,7 @@ INSERT INTO Neurketak (
         80,
         77.8,
         1.81,
-        'Apur bat nekatuta.'
+        87, 'Apur bat nekatuta.'
     ),
     (
         61,
@@ -36703,7 +36759,7 @@ INSERT INTO Neurketak (
         88,
         72.0,
         1.83,
-        'Dena ondo.'
+        80, 'Dena ondo.'
     ),
     (
         62,
@@ -36713,7 +36769,7 @@ INSERT INTO Neurketak (
         86,
         65.9,
         1.56,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         63,
@@ -36723,7 +36779,7 @@ INSERT INTO Neurketak (
         85,
         80.4,
         1.80,
-        'Ondo sentitzen naiz.'
+        93, 'Ondo sentitzen naiz.'
     ),
     (
         65,
@@ -36733,7 +36789,7 @@ INSERT INTO Neurketak (
         90,
         91.4,
         1.55,
-        'Baraualdian.'
+        82, 'Baraualdian.'
     ),
     (
         66,
@@ -36743,7 +36799,7 @@ INSERT INTO Neurketak (
         86,
         74.3,
         1.59,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         67,
@@ -36753,7 +36809,7 @@ INSERT INTO Neurketak (
         84,
         72.8,
         1.72,
-        'Kirola egin ondoren.'
+        85, 'Kirola egin ondoren.'
     ),
     (
         68,
@@ -36763,7 +36819,7 @@ INSERT INTO Neurketak (
         87,
         61.9,
         1.85,
-        'Gosariaren ondoren.'
+        82, 'Gosariaren ondoren.'
     ),
     (
         69,
@@ -36773,7 +36829,7 @@ INSERT INTO Neurketak (
         86,
         94.8,
         1.66,
-        'Gaur goizean neurtuta.'
+        94, 'Gaur goizean neurtuta.'
     ),
     (
         70,
@@ -36783,7 +36839,7 @@ INSERT INTO Neurketak (
         87,
         75.1,
         1.70,
-        'Ondo sentitzen naiz.'
+        83, 'Ondo sentitzen naiz.'
     ),
     (
         71,
@@ -36793,7 +36849,7 @@ INSERT INTO Neurketak (
         72,
         89.0,
         1.63,
-        'Ondo sentitzen naiz.'
+        74, 'Ondo sentitzen naiz.'
     ),
     (
         72,
@@ -36803,7 +36859,7 @@ INSERT INTO Neurketak (
         82,
         92.0,
         1.69,
-        'Baraualdian.'
+        73, 'Baraualdian.'
     ),
     (
         74,
@@ -36813,7 +36869,7 @@ INSERT INTO Neurketak (
         79,
         64.2,
         1.67,
-        'Gosariaren ondoren.'
+        68, 'Gosariaren ondoren.'
     ),
     (
         75,
@@ -36823,7 +36879,7 @@ INSERT INTO Neurketak (
         79,
         59.2,
         1.65,
-        'Gaur goizean neurtuta.'
+        69, 'Gaur goizean neurtuta.'
     ),
     (
         76,
@@ -36833,7 +36889,7 @@ INSERT INTO Neurketak (
         92,
         65.7,
         1.69,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         77,
@@ -36843,7 +36899,7 @@ INSERT INTO Neurketak (
         88,
         67.9,
         1.67,
-        'Dena ondo.'
+        79, 'Dena ondo.'
     ),
     (
         78,
@@ -36853,7 +36909,7 @@ INSERT INTO Neurketak (
         84,
         62.5,
         1.61,
-        'Ondo sentitzen naiz.'
+        79, 'Ondo sentitzen naiz.'
     ),
     (
         79,
@@ -36863,7 +36919,7 @@ INSERT INTO Neurketak (
         76,
         67.2,
         1.67,
-        'Baraualdian.'
+        80, 'Baraualdian.'
     ),
     (
         80,
@@ -36873,7 +36929,7 @@ INSERT INTO Neurketak (
         80,
         63.6,
         1.78,
-        'Kirola egin ondoren.'
+        67, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -36883,7 +36939,7 @@ INSERT INTO Neurketak (
         84,
         86.6,
         1.58,
-        'Dena ondo.'
+        84, 'Dena ondo.'
     ),
     (
         82,
@@ -36893,7 +36949,7 @@ INSERT INTO Neurketak (
         92,
         89.9,
         1.77,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         83,
@@ -36903,7 +36959,7 @@ INSERT INTO Neurketak (
         91,
         65.9,
         1.80,
-        'Apur bat nekatuta.'
+        86, 'Apur bat nekatuta.'
     ),
     (
         84,
@@ -36913,7 +36969,7 @@ INSERT INTO Neurketak (
         90,
         78.7,
         1.67,
-        'Dena ondo.'
+        67, 'Dena ondo.'
     ),
     (
         85,
@@ -36923,7 +36979,7 @@ INSERT INTO Neurketak (
         83,
         80.3,
         1.72,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         86,
@@ -36933,7 +36989,7 @@ INSERT INTO Neurketak (
         72,
         68.1,
         1.57,
-        'Gosariaren ondoren.'
+        75, 'Gosariaren ondoren.'
     ),
     (
         87,
@@ -36943,7 +36999,7 @@ INSERT INTO Neurketak (
         83,
         73.4,
         1.61,
-        'Ondo sentitzen naiz.'
+        79, 'Ondo sentitzen naiz.'
     ),
     (
         88,
@@ -36953,7 +37009,7 @@ INSERT INTO Neurketak (
         83,
         89.3,
         1.81,
-        'Ondo sentitzen naiz.'
+        75, 'Ondo sentitzen naiz.'
     ),
     (
         90,
@@ -36963,7 +37019,7 @@ INSERT INTO Neurketak (
         84,
         66.6,
         1.60,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         92,
@@ -36973,7 +37029,7 @@ INSERT INTO Neurketak (
         86,
         60.3,
         1.79,
-        'Kirola egin ondoren.'
+        71, 'Kirola egin ondoren.'
     ),
     (
         93,
@@ -36983,7 +37039,7 @@ INSERT INTO Neurketak (
         79,
         75.7,
         1.81,
-        'Gosariaren ondoren.'
+        92, 'Gosariaren ondoren.'
     ),
     (
         94,
@@ -36993,7 +37049,7 @@ INSERT INTO Neurketak (
         82,
         87.1,
         1.83,
-        'Dena ondo.'
+        68, 'Dena ondo.'
     ),
     (
         96,
@@ -37003,7 +37059,7 @@ INSERT INTO Neurketak (
         79,
         76.9,
         1.71,
-        'Baraualdian.'
+        70, 'Baraualdian.'
     ),
     (
         97,
@@ -37013,7 +37069,7 @@ INSERT INTO Neurketak (
         85,
         86.7,
         1.56,
-        'Baraualdian.'
+        85, 'Baraualdian.'
     ),
     (
         98,
@@ -37023,7 +37079,7 @@ INSERT INTO Neurketak (
         83,
         83.0,
         1.60,
-        'Apur bat nekatuta.'
+        84, 'Apur bat nekatuta.'
     ),
     (
         100,
@@ -37033,7 +37089,7 @@ INSERT INTO Neurketak (
         76,
         82.7,
         1.57,
-        'Baraualdian.'
+        94, 'Baraualdian.'
     ),
     (
         51,
@@ -37043,7 +37099,7 @@ INSERT INTO Neurketak (
         82,
         64.4,
         1.76,
-        'Kirola egin ondoren.'
+        66, 'Kirola egin ondoren.'
     ),
     (
         52,
@@ -37053,7 +37109,7 @@ INSERT INTO Neurketak (
         80,
         94.2,
         1.77,
-        'Ondo sentitzen naiz.'
+        80, 'Ondo sentitzen naiz.'
     ),
     (
         53,
@@ -37063,7 +37119,7 @@ INSERT INTO Neurketak (
         92,
         74.7,
         1.75,
-        'Apur bat nekatuta.'
+        71, 'Apur bat nekatuta.'
     ),
     (
         54,
@@ -37073,7 +37129,7 @@ INSERT INTO Neurketak (
         89,
         86.8,
         1.60,
-        'Kirola egin ondoren.'
+        86, 'Kirola egin ondoren.'
     ),
     (
         57,
@@ -37083,7 +37139,7 @@ INSERT INTO Neurketak (
         79,
         83.3,
         1.69,
-        'Apur bat nekatuta.'
+        91, 'Apur bat nekatuta.'
     ),
     (
         59,
@@ -37093,7 +37149,7 @@ INSERT INTO Neurketak (
         90,
         62.8,
         1.73,
-        'Apur bat nekatuta.'
+        82, 'Apur bat nekatuta.'
     ),
     (
         61,
@@ -37103,7 +37159,7 @@ INSERT INTO Neurketak (
         83,
         72.1,
         1.83,
-        'Apur bat nekatuta.'
+        65, 'Apur bat nekatuta.'
     ),
     (
         64,
@@ -37113,7 +37169,7 @@ INSERT INTO Neurketak (
         76,
         95.7,
         1.56,
-        'Kirola egin ondoren.'
+        76, 'Kirola egin ondoren.'
     ),
     (
         65,
@@ -37123,7 +37179,7 @@ INSERT INTO Neurketak (
         76,
         91.2,
         1.55,
-        'Gaur goizean neurtuta.'
+        70, 'Gaur goizean neurtuta.'
     ),
     (
         66,
@@ -37133,7 +37189,7 @@ INSERT INTO Neurketak (
         90,
         74.9,
         1.59,
-        'Apur bat nekatuta.'
+        68, 'Apur bat nekatuta.'
     ),
     (
         67,
@@ -37143,7 +37199,7 @@ INSERT INTO Neurketak (
         76,
         72.4,
         1.72,
-        'Gosariaren ondoren.'
+        87, 'Gosariaren ondoren.'
     ),
     (
         68,
@@ -37153,7 +37209,7 @@ INSERT INTO Neurketak (
         85,
         61.9,
         1.85,
-        'Gaur goizean neurtuta.'
+        94, 'Gaur goizean neurtuta.'
     ),
     (
         69,
@@ -37163,7 +37219,7 @@ INSERT INTO Neurketak (
         81,
         94.8,
         1.66,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         70,
@@ -37173,7 +37229,7 @@ INSERT INTO Neurketak (
         81,
         74.4,
         1.70,
-        'Gosariaren ondoren.'
+        68, 'Gosariaren ondoren.'
     ),
     (
         72,
@@ -37183,7 +37239,7 @@ INSERT INTO Neurketak (
         75,
         92.7,
         1.69,
-        'Kirola egin ondoren.'
+        74, 'Kirola egin ondoren.'
     ),
     (
         73,
@@ -37193,7 +37249,7 @@ INSERT INTO Neurketak (
         79,
         94.5,
         1.55,
-        'Dena ondo.'
+        66, 'Dena ondo.'
     ),
     (
         75,
@@ -37203,7 +37259,7 @@ INSERT INTO Neurketak (
         71,
         60.7,
         1.65,
-        'Gaur goizean neurtuta.'
+        85, 'Gaur goizean neurtuta.'
     ),
     (
         76,
@@ -37213,7 +37269,7 @@ INSERT INTO Neurketak (
         90,
         66.1,
         1.69,
-        'Gaur goizean neurtuta.'
+        92, 'Gaur goizean neurtuta.'
     ),
     (
         77,
@@ -37223,7 +37279,7 @@ INSERT INTO Neurketak (
         78,
         66.0,
         1.67,
-        'Dena ondo.'
+        91, 'Dena ondo.'
     ),
     (
         78,
@@ -37233,7 +37289,7 @@ INSERT INTO Neurketak (
         84,
         62.9,
         1.61,
-        'Gosariaren ondoren.'
+        68, 'Gosariaren ondoren.'
     ),
     (
         80,
@@ -37243,7 +37299,7 @@ INSERT INTO Neurketak (
         91,
         62.5,
         1.78,
-        'Kirola egin ondoren.'
+        72, 'Kirola egin ondoren.'
     ),
     (
         81,
@@ -37253,7 +37309,7 @@ INSERT INTO Neurketak (
         85,
         86.5,
         1.58,
-        'Dena ondo.'
+        74, 'Dena ondo.'
     ),
     (
         83,
@@ -37263,7 +37319,7 @@ INSERT INTO Neurketak (
         81,
         65.0,
         1.80,
-        'Kirola egin ondoren.'
+        77, 'Kirola egin ondoren.'
     ),
     (
         84,
@@ -37273,7 +37329,7 @@ INSERT INTO Neurketak (
         78,
         79.5,
         1.67,
-        'Gaur goizean neurtuta.'
+        77, 'Gaur goizean neurtuta.'
     ),
     (
         85,
@@ -37283,7 +37339,7 @@ INSERT INTO Neurketak (
         82,
         81.0,
         1.72,
-        'Gosariaren ondoren.'
+        71, 'Gosariaren ondoren.'
     ),
     (
         86,
@@ -37293,7 +37349,7 @@ INSERT INTO Neurketak (
         81,
         68.0,
         1.57,
-        'Ondo sentitzen naiz.'
+        67, 'Ondo sentitzen naiz.'
     ),
     (
         88,
@@ -37303,7 +37359,7 @@ INSERT INTO Neurketak (
         77,
         89.8,
         1.81,
-        'Baraualdian.'
+        69, 'Baraualdian.'
     ),
     (
         89,
@@ -37313,7 +37369,7 @@ INSERT INTO Neurketak (
         79,
         91.8,
         1.84,
-        'Dena ondo.'
+        69, 'Dena ondo.'
     ),
     (
         90,
@@ -37323,7 +37379,7 @@ INSERT INTO Neurketak (
         79,
         66.1,
         1.60,
-        'Gosariaren ondoren.'
+        70, 'Gosariaren ondoren.'
     ),
     (
         91,
@@ -37333,7 +37389,7 @@ INSERT INTO Neurketak (
         78,
         90.5,
         1.58,
-        'Kirola egin ondoren.'
+        73, 'Kirola egin ondoren.'
     ),
     (
         92,
@@ -37343,7 +37399,7 @@ INSERT INTO Neurketak (
         94,
         60.2,
         1.79,
-        'Kirola egin ondoren.'
+        92, 'Kirola egin ondoren.'
     ),
     (
         93,
@@ -37353,7 +37409,7 @@ INSERT INTO Neurketak (
         91,
         75.8,
         1.81,
-        'Apur bat nekatuta.'
+        70, 'Apur bat nekatuta.'
     ),
     (
         94,
@@ -37363,7 +37419,7 @@ INSERT INTO Neurketak (
         89,
         86.1,
         1.83,
-        'Apur bat nekatuta.'
+        65, 'Apur bat nekatuta.'
     ),
     (
         96,
@@ -37373,7 +37429,7 @@ INSERT INTO Neurketak (
         86,
         77.4,
         1.71,
-        'Kirola egin ondoren.'
+        87, 'Kirola egin ondoren.'
     ),
     (
         98,
@@ -37383,7 +37439,7 @@ INSERT INTO Neurketak (
         84,
         84.8,
         1.60,
-        'Gaur goizean neurtuta.'
+        74, 'Gaur goizean neurtuta.'
     ),
     (
         99,
@@ -37393,7 +37449,7 @@ INSERT INTO Neurketak (
         83,
         85.6,
         1.71,
-        'Ondo sentitzen naiz.'
+        69, 'Ondo sentitzen naiz.'
     ),
     (
         51,
@@ -37403,7 +37459,7 @@ INSERT INTO Neurketak (
         87,
         64.9,
         1.76,
-        'Kirola egin ondoren.'
+        93, 'Kirola egin ondoren.'
     ),
     (
         52,
@@ -37413,7 +37469,7 @@ INSERT INTO Neurketak (
         86,
         94.8,
         1.77,
-        'Gaur goizean neurtuta.'
+        80, 'Gaur goizean neurtuta.'
     ),
     (
         53,
@@ -37423,7 +37479,7 @@ INSERT INTO Neurketak (
         79,
         75.4,
         1.75,
-        'Gosariaren ondoren.'
+        87, 'Gosariaren ondoren.'
     ),
     (
         54,
@@ -37433,7 +37489,7 @@ INSERT INTO Neurketak (
         86,
         86.3,
         1.60,
-        'Kirola egin ondoren.'
+        67, 'Kirola egin ondoren.'
     ),
     (
         56,
@@ -37443,7 +37499,7 @@ INSERT INTO Neurketak (
         94,
         89.3,
         1.61,
-        'Dena ondo.'
+        77, 'Dena ondo.'
     ),
     (
         57,
@@ -37453,7 +37509,7 @@ INSERT INTO Neurketak (
         86,
         82.0,
         1.69,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         58,
@@ -37463,7 +37519,7 @@ INSERT INTO Neurketak (
         83,
         68.0,
         1.68,
-        'Baraualdian.'
+        84, 'Baraualdian.'
     ),
     (
         59,
@@ -37473,7 +37529,7 @@ INSERT INTO Neurketak (
         84,
         63.2,
         1.73,
-        'Baraualdian.'
+        71, 'Baraualdian.'
     ),
     (
         60,
@@ -37483,7 +37539,7 @@ INSERT INTO Neurketak (
         90,
         78.9,
         1.81,
-        'Gosariaren ondoren.'
+        86, 'Gosariaren ondoren.'
     ),
     (
         61,
@@ -37493,7 +37549,7 @@ INSERT INTO Neurketak (
         79,
         72.2,
         1.83,
-        'Ondo sentitzen naiz.'
+        66, 'Ondo sentitzen naiz.'
     ),
     (
         63,
@@ -37503,7 +37559,7 @@ INSERT INTO Neurketak (
         89,
         81.3,
         1.80,
-        'Apur bat nekatuta.'
+        74, 'Apur bat nekatuta.'
     ),
     (
         64,
@@ -37513,7 +37569,7 @@ INSERT INTO Neurketak (
         77,
         94.7,
         1.56,
-        'Kirola egin ondoren.'
+        83, 'Kirola egin ondoren.'
     ),
     (
         65,
@@ -37523,7 +37579,7 @@ INSERT INTO Neurketak (
         84,
         91.3,
         1.55,
-        'Apur bat nekatuta.'
+        66, 'Apur bat nekatuta.'
     ),
     (
         66,
@@ -37533,7 +37589,7 @@ INSERT INTO Neurketak (
         88,
         75.9,
         1.59,
-        'Ondo sentitzen naiz.'
+        74, 'Ondo sentitzen naiz.'
     ),
     (
         67,
@@ -37543,7 +37599,7 @@ INSERT INTO Neurketak (
         85,
         71.9,
         1.72,
-        'Gaur goizean neurtuta.'
+        89, 'Gaur goizean neurtuta.'
     ),
     (
         68,
@@ -37553,7 +37609,7 @@ INSERT INTO Neurketak (
         83,
         61.2,
         1.85,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         69,
@@ -37563,7 +37619,7 @@ INSERT INTO Neurketak (
         86,
         94.6,
         1.66,
-        'Dena ondo.'
+        75, 'Dena ondo.'
     ),
     (
         70,
@@ -37573,7 +37629,7 @@ INSERT INTO Neurketak (
         85,
         74.6,
         1.70,
-        'Ondo sentitzen naiz.'
+        87, 'Ondo sentitzen naiz.'
     ),
     (
         71,
@@ -37583,7 +37639,7 @@ INSERT INTO Neurketak (
         82,
         89.1,
         1.63,
-        'Gaur goizean neurtuta.'
+        88, 'Gaur goizean neurtuta.'
     ),
     (
         72,
@@ -37593,7 +37649,7 @@ INSERT INTO Neurketak (
         76,
         92.8,
         1.69,
-        'Gaur goizean neurtuta.'
+        79, 'Gaur goizean neurtuta.'
     ),
     (
         73,
@@ -37603,7 +37659,7 @@ INSERT INTO Neurketak (
         79,
         94.2,
         1.55,
-        'Apur bat nekatuta.'
+        67, 'Apur bat nekatuta.'
     ),
     (
         74,
@@ -37613,7 +37669,7 @@ INSERT INTO Neurketak (
         82,
         64.2,
         1.67,
-        'Gosariaren ondoren.'
+        76, 'Gosariaren ondoren.'
     ),
     (
         75,
@@ -37623,7 +37679,7 @@ INSERT INTO Neurketak (
         83,
         59.9,
         1.65,
-        'Gaur goizean neurtuta.'
+        90, 'Gaur goizean neurtuta.'
     ),
     (
         77,
@@ -37633,7 +37689,7 @@ INSERT INTO Neurketak (
         85,
         67.9,
         1.67,
-        'Kirola egin ondoren.'
+        67, 'Kirola egin ondoren.'
     ),
     (
         78,
@@ -37643,7 +37699,7 @@ INSERT INTO Neurketak (
         75,
         63.7,
         1.61,
-        'Dena ondo.'
+        78, 'Dena ondo.'
     ),
     (
         80,
@@ -37653,7 +37709,7 @@ INSERT INTO Neurketak (
         89,
         62.4,
         1.78,
-        'Gaur goizean neurtuta.'
+        84, 'Gaur goizean neurtuta.'
     ),
     (
         81,
@@ -37663,7 +37719,7 @@ INSERT INTO Neurketak (
         92,
         86.4,
         1.58,
-        'Gaur goizean neurtuta.'
+        75, 'Gaur goizean neurtuta.'
     ),
     (
         82,
@@ -37673,7 +37729,7 @@ INSERT INTO Neurketak (
         93,
         89.6,
         1.77,
-        'Gosariaren ondoren.'
+        68, 'Gosariaren ondoren.'
     ),
     (
         83,
@@ -37683,7 +37739,7 @@ INSERT INTO Neurketak (
         89,
         65.2,
         1.80,
-        'Ondo sentitzen naiz.'
+        72, 'Ondo sentitzen naiz.'
     ),
     (
         84,
@@ -37693,7 +37749,7 @@ INSERT INTO Neurketak (
         77,
         80.0,
         1.67,
-        'Dena ondo.'
+        85, 'Dena ondo.'
     ),
     (
         86,
@@ -37703,7 +37759,7 @@ INSERT INTO Neurketak (
         73,
         68.7,
         1.57,
-        'Baraualdian.'
+        77, 'Baraualdian.'
     ),
     (
         88,
@@ -37713,7 +37769,7 @@ INSERT INTO Neurketak (
         74,
         89.1,
         1.81,
-        'Gosariaren ondoren.'
+        76, 'Gosariaren ondoren.'
     ),
     (
         89,
@@ -37723,7 +37779,7 @@ INSERT INTO Neurketak (
         84,
         90.9,
         1.84,
-        'Baraualdian.'
+        66, 'Baraualdian.'
     ),
     (
         90,
@@ -37733,7 +37789,7 @@ INSERT INTO Neurketak (
         84,
         66.3,
         1.60,
-        'Ondo sentitzen naiz.'
+        85, 'Ondo sentitzen naiz.'
     ),
     (
         91,
@@ -37743,7 +37799,7 @@ INSERT INTO Neurketak (
         80,
         89.2,
         1.58,
-        'Dena ondo.'
+        82, 'Dena ondo.'
     ),
     (
         92,
@@ -37753,7 +37809,7 @@ INSERT INTO Neurketak (
         94,
         59.3,
         1.79,
-        'Ondo sentitzen naiz.'
+        86, 'Ondo sentitzen naiz.'
     ),
     (
         95,
@@ -37763,7 +37819,7 @@ INSERT INTO Neurketak (
         75,
         91.0,
         1.77,
-        'Ondo sentitzen naiz.'
+        90, 'Ondo sentitzen naiz.'
     ),
     (
         96,
@@ -37773,7 +37829,7 @@ INSERT INTO Neurketak (
         85,
         76.5,
         1.71,
-        'Kirola egin ondoren.'
+        79, 'Kirola egin ondoren.'
     ),
     (
         97,
@@ -37783,7 +37839,7 @@ INSERT INTO Neurketak (
         84,
         86.5,
         1.56,
-        'Apur bat nekatuta.'
+        79, 'Apur bat nekatuta.'
     ),
     (
         99,
@@ -37793,7 +37849,7 @@ INSERT INTO Neurketak (
         76,
         85.1,
         1.71,
-        'Gosariaren ondoren.'
+        79, 'Gosariaren ondoren.'
     ),
     (
         100,
@@ -37803,7 +37859,7 @@ INSERT INTO Neurketak (
         86,
         81.1,
         1.57,
-        'Baraualdian.'
+        90, 'Baraualdian.'
     );
 -- 1. Tentsio Sistolikoa (Altua > 140, Baxua < 90)
 INSERT INTO Abisuak (paziente_id, data, mota, testua)
