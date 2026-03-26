@@ -459,7 +459,7 @@ body {
 
 .izenburu-nagusia {
     margin: 0;
-    color: var(--primary-color);
+    color: var(--dark-text);
     font-size: 2rem;
     font-weight: 800;
 }
