@@ -41,8 +41,10 @@ include_once '../php_includeak/harrera_goiburua.php';
 
     <main class="panel-nagusia">
         <div class="orri-goiburua">
-            <h2><img src="../img/users.svg" alt="" class="ikono-ertaina marjina-esk-5"> Harrerako Langileak</h2>
-            <p>Kudeatu zentroko harrerako lantaldea.</p>
+            <div>
+                <h2 class="izenburu-nagusia"><img src="../img/svg/users.svg" alt="" class="ikono-ertaina marjina-esk-5"> Harrerako Langileak</h2>
+                <p class="azpititulu-grisa">Kudeatu zentroko harrerako lantaldea.</p>
+            </div>
         </div>
 
         <?php if ($mezua): ?>
@@ -52,7 +54,7 @@ include_once '../php_includeak/harrera_goiburua.php';
             <div class="alerta alerta-errorea"><?php echo htmlspecialchars($errorea); ?></div>
         <?php endif; ?>
 
-        <div class="flex-tartea-20">
+        <div class="flex-tartea-20 marjina-behe-20">
             <a href="harrerako_langile_sortu.php" class="botoia botoi-sortu marjina-behe-0" >+ Langile Berria</a>
             <input type="text" id="bilaketaLangileak" class="inprimaki-kontrola bilaketa-barra" placeholder="Bilatu izena edo abizena...">
         </div>

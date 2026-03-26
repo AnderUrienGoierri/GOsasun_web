@@ -20,6 +20,19 @@ if (file_exists($xml_path)) {
         $gaia_def = isset($xml_conf->gaia) ? (string)$xml_conf->gaia : $gaia_def;
     }
 }
+
+// Kargatu hizkuntzen fitxategia
+$hizkuntza_xml_path = __DIR__ . '/../xml_hizkuntzak/' . $hizkuntza_def . '.xml';
+$itzulpenak = null;
+if (file_exists($hizkuntza_xml_path)) {
+    $itzulpenak = simplexml_load_file($hizkuntza_xml_path);
+} else {
+    // Fallback: kargatu eu.xml baieztatzeko existitzen dela
+    $hizkuntza_xml_path = __DIR__ . '/../xml_hizkuntzak/eu.xml';
+    if (file_exists($hizkuntza_xml_path)) {
+        $itzulpenak = simplexml_load_file($hizkuntza_xml_path);
+    }
+}
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo htmlspecialchars($hizkuntza_def); ?>">
@@ -85,7 +98,7 @@ if (file_exists($xml_path)) {
             <li><a href="mezuak.php" class="<?php echo ($uneko_orria === 'mezuak') ? 'aktiboa' : ''; ?>">Mezuak</a></li>
             <li><a href="kanpoko_mezuak.php" class="<?php echo ($uneko_orria === 'kanpoko_mezuak') ? 'aktiboa' : ''; ?>">Kanpoko Mezuak</a></li>
             <li><a href="harrerako_langileak.php" class="<?php echo ($uneko_orria === 'harrerako_langileak') ? 'aktiboa' : ''; ?>">Harrerako Langileak</a></li>
-            <li><a href="ezarpenak.php" class="<?php echo ($uneko_orria === 'ezarpenak') ? 'aktiboa' : ''; ?>"><img src="<?php echo $bide_absolutua; ?>img/settings.svg" alt="" class="ikono-24px-erdian" <?php if ($gaia_def == 'iluna') echo 'style="filter: invert(1);"'; ?>> Ezarpenak</a></li>
+            <li><a href="#" id="irekiEzarpenakModala">Ezarpenak</a></li>
             <li><a href="<?php echo $bide_absolutua; ?>php_laguntzaileak/logout.php" class="botoia botoi-ertza arrisku-kolorea">Saioa Itxi</a></li>
         </ul>
     </header>

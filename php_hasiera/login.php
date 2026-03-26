@@ -85,7 +85,7 @@ include '../php_includeak/goiburua.php';
                     <span class="errore-mezua" id="error-login-pass">Pasahitza ezin da hutsik egon.</span>
                 </div>
                 
-                <button type="submit" class="botoia botoi-nagusia zabalera-100 goiko-tartea-20">Sartu</button>
+                <button type="submit" class="botoia botoi-ertza zabalera-100 goiko-tartea-20"><?php echo $itzulpenak->login->sartu; ?></button>
             </form>
             
             <div class="hasiera-oina">
@@ -93,6 +93,38 @@ include '../php_includeak/goiburua.php';
             </div>
         </div>
     </div>
+
+<?php include '../php_includeak/ezarpenak_modala.php'; ?>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var modal = document.getElementById("ezarpenakModala");
+        var btns = document.querySelectorAll("#irekiEzarpenakModala, #irekiEzarpenakModalaMugikorra");
+        var span = document.getElementsByClassName("itxi-modala")[0];
+
+        btns.forEach(function(btn) {
+            btn.onclick = function(e) {
+                e.preventDefault();
+                modal.style.display = "block";
+            }
+        });
+
+        if (span) {
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        <?php if (isset($_GET['ezarpenak_gordeta']) || isset($_GET['ezarpenak_reset'])): ?>
+        modal.style.display = "block";
+        <?php endif; ?>
+    });
+    </script>
 
 <?php
 $js_gehigarria = ["login.js"];

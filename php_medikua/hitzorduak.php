@@ -97,7 +97,10 @@ include_once '../php_includeak/mediku_goiburua.php';
 
     <main class="panel-nagusia">
         <div class="orri-goiburua">
-            <h2><img src="../img/calendar-days.svg" alt="" class="ikono-ertaina marjina-esk-5"> Agenda eta Hitzorduak</h2>
+            <div>
+                <h2><img src="../img/svg/calendar-days.svg" alt="" class="ikono-ertaina marjina-esk-5"> Agenda eta Hitzorduak</h2>
+                <p>Ikusi zure eguneroko hitzorduak eta kudeatu zure agenda.</p>
+            </div>
             <!-- (+ Hitzordu Berria) Botoia ezabatuta medikuentzat -->
         </div>
 

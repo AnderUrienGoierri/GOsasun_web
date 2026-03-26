@@ -35,8 +35,10 @@ include_once '../php_includeak/harrera_goiburua.php';
 
     <main class="panel-nagusia">
         <div class="orri-goiburua">
-            <h2><img src="../img/stethoscope.svg" alt="" class="ikono-1_25rem marjina-esk-10"> Medikuen Kudeaketa</h2>
-            <p>Ikusi eta kudeatu zentroko lantalde medikoa.</p>
+            <div>
+                <h2 class="izenburu-nagusia"><img src="../img/svg/stethoscope.svg" alt="" class="ikono-1_25rem marjina-esk-10"> Medikuen Kudeaketa</h2>
+                <p class="azpititulu-grisa">Ikusi eta kudeatu zentroko lantalde medikoa.</p>
+            </div>
         </div>
 
         <?php if ($mezua): ?>
@@ -46,8 +48,8 @@ include_once '../php_includeak/harrera_goiburua.php';
             <div class="alerta alerta-errorea"><?php echo htmlspecialchars($errorea); ?></div>
         <?php endif; ?>
 
-        <div class="flex-tartea-20">
-            <a href="mediku_sortu.php" class="botoia botoi-nagusia marjina-behe-0">+ Mediku Berria</a>
+        <div class="flex-tartea-20 marjina-behe-20">
+            <a href="mediku_sortu.php" class="botoia botoi-sortu marjina-behe-0">+ Mediku Berria</a>
             <input type="text" id="bilaketaMedikuak" class="inprimaki-kontrola bilaketa-barra gehienezko-zabalera-300" placeholder="Bilatu izena edo espezialitatea..." >
         </div>
 

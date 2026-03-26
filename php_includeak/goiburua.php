@@ -32,6 +32,19 @@ if (file_exists($xml_path)) {
     }
 }
 
+// Kargatu hizkuntzen fitxategia
+$hizkuntza_xml_path = __DIR__ . '/../xml_hizkuntzak/' . $hizkuntza_def . '.xml';
+$itzulpenak = null;
+if (file_exists($hizkuntza_xml_path)) {
+    $itzulpenak = simplexml_load_file($hizkuntza_xml_path);
+} else {
+    // Fallback: kargatu eu.xml baieztatzeko existitzen dela
+    $hizkuntza_xml_path = __DIR__ . '/../xml_hizkuntzak/eu.xml';
+    if (file_exists($hizkuntza_xml_path)) {
+        $itzulpenak = simplexml_load_file($hizkuntza_xml_path);
+    }
+}
+
 // Bidaliko dugu izenburua konfiguraziotik zuzenean
 $orri_izenburua = $sistema_izena_def . " - Zure Osasun Ataria";
 ?>
@@ -88,12 +101,14 @@ $orri_izenburua = $sistema_izena_def . " - Zure Osasun Ataria";
                     <img src="<?php echo $bide_absolutua; ?>img/GOsasun_logoa.png" alt="GOsasun" class="logo-irudia">
                 </a>
             </div>
-            <button class="menu-botoia" aria-label="Ireki menua"><img src="<?php echo $bide_absolutua; ?>img/list.svg" alt="" class="ikono-24px"></button>
+            <div class="mugikorreko-ikonoak">
+                <button class="menu-botoia" aria-label="Ireki menua"><img src="<?php echo $bide_absolutua; ?>img/svg/list.svg" alt=""></button>
+            </div>
             <ul class="nabigazio-estekak">
-                <li><a href="<?php echo $bide_absolutua; ?>index.php" <?php echo (isset($uneko_orria) && $uneko_orria === 'index') ? 'class="aktiboa"' : ''; ?>>Hasiera</a></li>
-                <li><a href="<?php echo $bide_absolutua; ?>php_hasiera/kontaktua.php" <?php echo (isset($uneko_orria) && $uneko_orria === 'kontaktua') ? 'class="aktiboa"' : ''; ?>>Kontaktua</a></li>
-                <li><a href="#" id="irekiEzarpenakModala"><img src="<?php echo $bide_absolutua; ?>img/settings.svg" alt="" class="ikono-24px-erdian" <?php if ($gaia_def == 'iluna') echo 'style="filter: invert(1);"'; ?>> Ezarpenak</a></li>
-                <li><a href="<?php echo $bide_absolutua; ?>php_hasiera/login.php" class="botoia botoi-nagusia">Saioa Hasi</a></li>
+                <li><a href="<?php echo $bide_absolutua; ?>index.php" <?php echo (isset($uneko_orria) && $uneko_orria === 'index') ? 'class="aktiboa"' : ''; ?>><?php echo $itzulpenak->menua->hasiera; ?></a></li>
+                <li><a href="<?php echo $bide_absolutua; ?>php_hasiera/kontaktua.php" <?php echo (isset($uneko_orria) && $uneko_orria === 'kontaktua') ? 'class="aktiboa"' : ''; ?>><?php echo $itzulpenak->menua->kontaktua; ?></a></li>
+                <li><a href="#" id="irekiEzarpenakModala"><?php echo $itzulpenak->menua->ezarpenak; ?></a></li>
+                <li><a href="<?php echo $bide_absolutua; ?>php_hasiera/login.php" class="botoia botoi-ertza" id="goiburu-login-botoia"><?php echo $itzulpenak->menua->saioa_hasi; ?></a></li>
             </ul>
         </nav>
     </header>

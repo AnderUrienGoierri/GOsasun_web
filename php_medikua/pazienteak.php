@@ -27,12 +27,13 @@ include_once '../php_includeak/mediku_goiburua.php';
     <main class="panel-nagusia">
         <div class="orri-goiburua">
             <div>
-                <h2><img src="../img/users.svg" alt="" class="ikono-ertaina marjina-esk-5"> Nire Pazienteak</h2>
-                <p>Zuri esleitutako pazienteen zerrenda eta jarraipena.</p>
+                <h2 class="izenburu-nagusia"><img src="../img/svg/users.svg" alt="" class="ikono-ertaina marjina-esk-5"> Nire Pazienteak</h2>
+                <p class="azpititulu-grisa">Zuri esleitutako pazienteen zerrenda eta jarraipena.</p>
             </div>
-            <div class="bilaketa-barra">
-                <input type="text" id="bilaketaPazienteak" class="inprimaki-kontrola" placeholder="Bilatu izena edo NAN bidez...">
-            </div>
+        </div>
+        
+        <div class="flex-tartea-20 marjina-behe-20">
+            <input type="text" id="bilaketaPazienteak" class="inprimaki-kontrola bilaketa-barra" placeholder="Bilatu izena edo NAN bidez...">
         </div>
 
         <div class="taula-inguratzailea">

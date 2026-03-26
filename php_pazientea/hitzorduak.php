@@ -147,8 +147,14 @@ include_once '../php_includeak/paziente_goiburua.php';
 
     <main class="panel-nagusia">
         <div class="orri-goiburua">
-            <h2><img src="../img/calendar-days.svg" alt="" class="ikono-ertaina marjina-esk-5"> Nire Hitzorduen Agenda</h2>
-            <button class="botoia botoi-nagusia" onclick="openModal()">+ Hitzordu Berria</button>
+            <div>
+                <h2><img src="../img/svg/calendar-days.svg" alt="" class="ikono-ertaina marjina-esk-5"> Nire Hitzorduen Agenda</h2>
+                <p>Kudeatu zure hitzorduak eta agenda modu errazean.</p>
+            </div>
+        </div>
+
+        <div class="flex-tartea-20 marjina-behe-20">
+            <button class="botoia botoi-sortu marjina-behe-0" onclick="openModal()">+ Hitzordu Berria</button>
         </div>
 
         <script>

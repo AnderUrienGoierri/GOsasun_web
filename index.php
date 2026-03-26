@@ -35,9 +35,9 @@ include 'php_includeak/goiburua.php';
                     <img src="img/index_pazientea.png" alt="Pazientea">
                 </div>
                 <div class="portal-info">
-                    <h3>Pazienteen Txokoa</h3>
-                    <p>Kontsultatu zure analitikak, hitzorduak eta jarraipen datuak modu seguruan.</p>
-                    <span class="botoia botoi-nagusia">Sartu</span>
+                    <h3><?php echo $itzulpenak->index->paziente_izenburua; ?></h3>
+                    <p><?php echo $itzulpenak->index->paziente_testua; ?></p>
+                    <span class="botoia botoi-ertza arrisku-kolorea"><?php echo $itzulpenak->index->sartu; ?></span>
                 </div>
             </a>
 
@@ -47,9 +47,9 @@ include 'php_includeak/goiburua.php';
                     <img src="img/index_medikua.png" alt="Medikua">
                 </div>
                 <div class="portal-info">
-                    <h3>Mediku Ataria</h3>
-                    <p>Kudeatu zure pazienteen hitoria, hitzorduak eta mezuak era erraz batetan.</p>
-                    <span class="botoia botoi-nagusia">Sartu</span>
+                    <h3><?php echo $itzulpenak->index->mediku_izenburua; ?></h3>
+                    <p><?php echo $itzulpenak->index->mediku_testua; ?></p>
+                    <span class="botoia botoi-ertza arrisku-kolorea"><?php echo $itzulpenak->index->sartu; ?></span>
                 </div>
             </a>
 
@@ -59,9 +59,9 @@ include 'php_includeak/goiburua.php';
                     <img src="img/index_harrera.png" alt="Harrera">
                 </div>
                 <div class="portal-info">
-                    <h3>Harrera Zerbitzua</h3>
-                    <p>Pazienteen harrera, medikuen agendak eta zentroko hitzordu guztiak kudeatu.</p>
-                    <span class="botoia botoi-nagusia">Sartu</span>
+                    <h3><?php echo $itzulpenak->index->harrera_izenburua; ?></h3>
+                    <p><?php echo $itzulpenak->index->harrera_testua; ?></p>
+                    <span class="botoia botoi-ertza arrisku-kolorea"><?php echo $itzulpenak->index->sartu; ?></span>
                 </div>
             </a>
         </div>

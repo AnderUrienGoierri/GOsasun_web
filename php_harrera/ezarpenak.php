@@ -74,9 +74,20 @@ if (file_exists($xml_path)) {
                     <input type="checkbox" name="mantenimendua" id="mantenimendua" value="bai" <?php echo ($mantenimendua_def === 'bai') ? 'checked' : ''; ?> class="checkbox-20px">
                     <label for="mantenimendua" class="marjina-behe-0">Mantenimendu Modua (bezeroei sarbidea itxi batzuetan erabiltzeko prestatu)</label>
                 </div>
-
-                <div class="testua-erdian-marjina-goi-30">
-                    <button type="submit" class="botoia botoi-nagusia zabalera-osoa-300px">Gorde Ezarpenak (XML-an)</button>
+ 
+                <div class="testua-erdian-marjina-behe-20">
+                    <button type="submit" class="botoia botoi-ertza arrisku-kolorea zabalera-osoa-300px" id="gorde-ezarpenak-botoia"><?php echo $itzulpenak->ezarpenak->gorde_botoia; ?></button>
+                </div>
+            </form>
+ 
+            <hr class="banatzaile-marra">
+ 
+            <form action="../php_laguntzaileak/ezarpenak_gorde.php" method="POST" class="marjina-goi-15">
+                <input type="hidden" name="ekintza" value="reset">
+                <input type="hidden" name="form_type" value="orokorra">
+                <input type="hidden" name="itzulera" value="harrera">
+                <div class="testua-erdian">
+                    <button type="submit" class="botoia botoi-itsua-gorria" onclick="return confirm('<?php echo $itzulpenak->ezarpenak->reset_konfirmazioa; ?>')"><?php echo $itzulpenak->ezarpenak->reset_botoia; ?></button>
                 </div>
             </form>
         </div>

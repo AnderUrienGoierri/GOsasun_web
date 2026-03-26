@@ -41,8 +41,10 @@ include_once '../php_includeak/harrera_goiburua.php';
 
     <main class="panel-nagusia">
         <div class="orri-goiburua">
-            <h2><img src="../img/user.svg" alt="" class="ikono-ertaina marjina-esk-5"> Pazienteen Kudeaketa</h2>
-            <p>Sortu, editatu edo ezabatu zentroko paziente guztiak.</p>
+            <div>
+                <h2 class="izenburu-nagusia"><img src="../img/svg/users.svg" alt="" class="ikono-ertaina marjina-esk-5"> Pazienteen Kudeaketa</h2>
+                <p class="azpititulu-grisa">Sortu, editatu edo ezabatu zentroko paziente guztiak.</p>
+            </div>
         </div>
 
         <?php if ($mezua): ?>
@@ -52,8 +54,8 @@ include_once '../php_includeak/harrera_goiburua.php';
             <div class="alerta alerta-errorea"><?php echo htmlspecialchars($errorea); ?></div>
         <?php endif; ?>
 
-        <div class="flex-tartea-20">
-            <a href="paziente_sortu.php" class="botoi-sortu marjina-behe-0" >+ Paziente Berria</a>
+        <div class="flex-tartea-20 marjina-behe-20">
+            <a href="paziente_sortu.php" class="botoia botoi-sortu marjina-behe-0" >+ Paziente Berria</a>
             <input type="text" id="bilaketaPazienteak" class="inprimaki-kontrola bilaketa-barra gehienezko-zabalera-300" placeholder="Bilatu izena edo abizena..." >
         </div>
 

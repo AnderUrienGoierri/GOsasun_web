@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hizkuntza izena="Español" kodea="es">
+    <menua>
+        <hasiera>Inicio</hasiera>
+        <kontaktua>Contacto</kontaktua>
+        <ezarpenak>Configuración</ezarpenak>
+        <saioa_hasi>Iniciar Sesión</saioa_hasi>
+    </menua>
+    <index>
+        <izenburua_nagusia>Tu salud, nuestra prioridad</izenburua_nagusia>
+        <azpititulua>Plataforma segura para gestionar tu salud, monitorear medidas y conectar con tu médico</azpititulua>
+        <paziente_izenburua>Área de Pacientes</paziente_izenburua>
+        <paziente_testua>Consulta tus análisis, citas y datos de seguimiento de forma segura.</paziente_testua>
+        <mediku_izenburua>Portal Médico</mediku_izenburua>
+        <mediku_testua>Gestiona el historial de tus pacientes, citas y mensajes fácilmente.</mediku_testua>
+        <harrera_izenburua>Servicio de Recepción</harrera_izenburua>
+        <harrera_testua>Gestiona la recepción de pacientes, agendas médicas y todas las citas del centro.</harrera_testua>
+        <sartu>Entrar</sartu>
+    </index>
+    <kontaktua>
+        <izenburua>Ponte en contacto conmigo</izenburua>
+        <azpititulua>Si tienes alguna duda o necesitas más información, escríbenos:</azpititulua>
+        <izena>Nombre</izena>
+        <email>Correo Electrónico</email>
+        <mezua>Mensaje</mezua>
+        <bidali>Enviar Mensaje</bidali>
+        <bulegoak>Nuestras Oficinas</bulegoak>
+        <arrakasta>Tu mensaje se envió correctamente. ¡Nos pondremos en contacto pronto!</arrakasta>
+    </kontaktua>
+    <erabiltzaile_panela>
+        <kaixo>¿Qué quieres hacer hoy?</kaixo>
+        <ongi_etorri>Bienvenido</ongi_etorri>
+        <laburpena>Aquí puedes consultar un resumen de tu salud y gestionar todas tus acciones.</laburpena>
+        <langile_laburpena>Desde aquí puedes realizar toda la gestión del centro.</langile_laburpena>
+        <ekintza_azkarrak>Acciones Rápidas</ekintza_azkarrak>
+        <saioa_itxi>Cerrar Sesión</saioa_itxi>
+        <saioa_itxi_testua>Finaliza tu sesión de forma segura.</saioa_itxi_testua>
+    </erabiltzaile_panela>
+    <menua_pazientea>
+        <hasiera>Inicio</hasiera>
+        <datuak>Mis Datos</datuak>
+        <datuak_testua>Ver y actualizar tus datos.</datuak_testua>
+        <neurketak>Mediciones</neurketak>
+        <neurketak_testua>Ver tu historial de mediciones.</neurketak_testua>
+        <grafikak>Gráficos</grafikak>
+        <grafikak_testua>Ver tu evolución de salud.</grafikak_testua>
+        <errezetak>Recetas</errezetak>
+        <errezetak_testua>Ver recetas asignadas.</errezetak_testua>
+        <abisuak>Alertas</abisuak>
+        <abisuak_testua>Ver notas sobre mediciones.</abisuak_testua>
+        <hitzorduak>Citas</hitzorduak>
+        <hitzorduak_testua>Gestiona tus citas médicas.</hitzorduak_testua>
+        <mezuak>Mensajes</mezuak>
+        <mezuak_testua>Comunícate con tu médico.</mezuak_testua>
+        <ezarpenak>Configuración</ezarpenak>
+        <ezarpenak_testua>Personaliza la apariencia del sitio web.</ezarpenak_testua>
+    </menua_pazientea>
+    <dashboard_pazientea>
+        <data_taula>Fecha</data_taula>
+        <oharrak>Notas</oharrak>
+        <azken_neurketak>Últimos Signos Vitales</azken_neurketak>
+        <tentsioa>Tensión</tentsioa>
+        <pultsua>Pulso</pultsua>
+        <glukosa>Glucosa</glukosa>
+        <altuera>Altura</altuera>
+        <pisua>Peso</pisua>
+        <eguneratua>Actualizado</eguneratua>
+        <ez_dago_neurketarik>No hay mediciones registradas.</ez_dago_neurketarik>
+        <neurketa_berria>Mis Mediciones</neurketa_berria>
+        <hurrengo_hitzordua>Próxima Cita</hurrengo_hitzordua>
+        <ez_hitzordurik>No tienes citas programadas.</ez_hitzordurik>
+        <agenda_ikusi>Ver Agenda</agenda_ikusi>
+        <esportatu_xml>Exportación de Datos (XML)</esportatu_xml>
+        <hasiera_data>Fecha de Inicio</hasiera_data>
+        <bukaera_data>Fecha de Fin</bukaera_data>
+        <deskargatu>Descargar</deskargatu>
+    </dashboard_pazientea>
+    <menua_medikua>
+        <hasiera>Inicio</hasiera>
+        <pazienteak>Mis Pacientes</pazienteak>
+        <pazienteak_testua>Gestiona tu lista de pacientes.</pazienteak_testua>
+        <hitzorduak>Citas</hitzorduak>
+        <hitzorduak_testua>Ver y gestionar tu agenda.</hitzorduak_testua>
+        <errezetak>Recetas</errezetak>
+        <errezetak_testua>Crear y gestionar recetas.</errezetak_testua>
+        <neurketak>Mediciones</neurketak>
+        <neurketak_testua>Ver mediciones de pacientes.</neurketak_testua>
+        <grafikak>Gráficos</grafikak>
+        <grafikak_testua>Analizar evoluciones de mediciones.</grafikak_testua>
+        <mezuak>Mensajes</mezuak>
+        <mezuak_testua>Comunícate con pacientes.</mezuak_testua>
+        <abisuak>Alertas</abisuak>
+        <abisuak_testua>Ver alertas críticas.</abisuak_testua>
+    </menua_medikua>
+    <dashboard_medikua>
+        <paziente_kopurua>Pacientes Asignados</paziente_kopurua>
+        <gaurko_hitzorduak>Citas de Hoy</gaurko_hitzorduak>
+        <zerrenda_ikusi>Ver Lista</zerrenda_ikusi>
+        <agenda_kudeatu>Gestionar Agenda</agenda_kudeatu>
+    </dashboard_medikua>
+    <menua_harrera>
+        <hasiera>Inicio</hasiera>
+        <pazienteak>Pacientes</pazienteak>
+        <pazienteak_testua>Crear o gestionar pacientes.</pazienteak_testua>
+        <medikuak>Médicos</medikuak>
+        <medikuak_testua>Lista y gestión de médicos.</medikuak_testua>
+        <hitzorduak>Citas</hitzorduak>
+        <hitzorduak_testua>Reservar nuevas citas.</hitzorduak_testua>
+        <mezuak>Mensajes</mezuak>
+        <mezuak_testua>Gestionar mensajes recibidos.</mezuak_testua>
+        <kanpoko_mezuak>Mensajes Externos</kanpoko_mezuak>
+        <kanpoko_mezuak_testua>Leer consultas del sitio web público.</kanpoko_mezuak_testua>
+        <harrerako_langileak>Personal de Recepción</harrerako_langileak>
+        <harrerako_langileak_testua>Gestionar personal de recepción.</harrerako_langileak_testua>
+    </menua_harrera>
+    <login>
+        <izenburua>Iniciar Sesión</izenburua>
+        <azpititulua>Bienvenido de nuevo a tu portal</azpititulua>
+        <email>Dirección de Correo</email>
+        <email_placeholder>Tu dirección de correo electrónico</email_placeholder>
+        <pasahitza>Contraseña</pasahitza>
+        <sartu>Entrar</sartu>
+        <itzuli>Volver al Inicio</itzuli>
+        <errore_eremuak>Por favor, completa todos los campos.</errore_eremuak>
+        <errore_kredentzialak>El correo o contraseña no son correctos.</errore_kredentzialak>
+    </login>
+    <ezarpenak>
+        <izenburua>Configuración de la Aplicación Web (XML)</izenburua>
+        <laguntza>Aquí puedes cambiar el comportamiento y aspecto de la web en el archivo XML</laguntza>
+        <hizkuntza>Idioma:</hizkuntza>
+        <gordeta>¡La configuración se guardó en el archivo XML!</gordeta>
+        <reset_mezua>¡Se han recuperado los valores iniciales!</reset_mezua>
+        <kolore_nagusia>Color principal:</kolore_nagusia>
+        <bigarren_kolorea>Color secundario:</bigarren_kolorea>
+        <footer_kolorea>Color del pie de página:</footer_kolorea>
+        <itxura>Apariencia de la Aplicación (Tema):</itxura>
+        <gaia_argia>Claro (Interfaz clásica)</gaia_argia>
+        <gaia_iluna>Oscuro (Modo oscuro)</gaia_iluna>
+        <hizkuntza_eu>Euskera</hizkuntza_eu>
+        <hizkuntza_es>Español</hizkuntza_es>
+        <hizkuntza_en>Inglés</hizkuntza_en>
+        <hizkuntza_nl>Holandés</hizkuntza_nl>
+        <gorde_botoia>Guardar Configuración (XML)</gorde_botoia>
+        <reset_botoia>Recuperar valores iniciales</reset_botoia>
+        <reset_konfirmazioa>¿Estás seguro de que quieres recuperar los valores iniciales?</reset_konfirmazioa>
+    </ezarpenak>
+</hizkuntza>
