@@ -66,20 +66,25 @@ if (file_exists($hizkuntza_xml_path)) {
     echo "}\n";
     
     if ($gaia_def == 'iluna') {
-        echo "body, main { background-color: #121212 !important; color: #f0f0f0 !important; }\n";
-        echo ".panel-gorputza, .panel-nagusia { background-color: #121212 !important; color: #f0f0f0 !important; }\n";
+        echo ":root { --dark-text: #ffffff !important; --light-text: #cccccc !important; }\n";
+        echo "body, main { background-color: #121212 !important; color: #ffffff !important; }\n";
+        echo ".panel-gorputza, .panel-nagusia { background-color: #121212 !important; color: #ffffff !important; }\n";
         echo ".kutxa-zuria, .kaixo-atalak, .menu-txartela, .kutxa-zuria-800, .kutxa-zuria-700, .kuadro-estatistikak, .panel-goiburua {\n";
-        echo "    background-color: #1e1e1e !important; color: #f0f0f0 !important; border-color: #333 !important;\n";
+        echo "    background-color: #1e1e1e !important; color: #ffffff !important; border-color: #333 !important;\n";
         echo "}\n";
+        echo "h1, h2, h3, h4, h5, h6, p, div, span, a, button, label { color: #ffffff !important; }\n";
         echo "h1, h2, h3, .izenburu-nagusia, .izenburu-iluna, .nabigazio-estekak a {\n";
         echo "    color: #ffffff !important;\n";
         echo "}\n";
         echo ".azpititulua, .testu-gris-txikia, .azpititulu-grisa, .gray-text, .deskribapen-grisa, .logo-etiketa {\n";
         echo "    color: #cccccc !important;\n";
         echo "}\n";
-        echo "td, th { color: #f0f0f0 !important; border-color: #333 !important; }\n";
+        echo "td, th { color: #ffffff !important; border-color: #333 !important; }\n";
         echo "th { background: #2d2d2d !important; }\n";
         echo ".egoera-hutsa, .kutxa-hutsa-40, .inprimaki-kontrola { background-color: #1e1e1e !important; color: #fff !important; border-color: #555 !important; }\n";
+        echo ".datu-taula tbody tr:hover, .paziente-taula tbody tr:hover { background-color: rgba(255, 255, 255, 0.05) !important; }\n";
+        echo "a { color: #4361ee !important; }\n";
+        echo "a:hover { color: #6b84ff !important; }\n";
     }
     echo "</style>\n";
     ?>
