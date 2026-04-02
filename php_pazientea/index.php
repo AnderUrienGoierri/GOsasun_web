@@ -16,7 +16,7 @@ $stmt->execute([$erabiltzaile_id]);
 $erabiltzaile_datuak = $stmt->fetch(PDO::FETCH_ASSOC);
 
 // Azken neurketa lortu
-$stmtNeurketa = $pdo->prepare("SELECT erregistro_data, tentsio_sistolikoa, tentsio_diastolikoa, glukosa_mg_dl, pultsua_ppm, altuera, pisua_kg FROM Neurketak WHERE paziente_id = ? ORDER BY erregistro_data DESC LIMIT 1");
+$stmtNeurketa = $pdo->prepare("SELECT erregistro_data, tentsio_sistolikoa, tentsio_diastolikoa, pultsua_ppm, altuera, pisua_kg FROM Neurketak WHERE paziente_id = ? ORDER BY erregistro_data DESC LIMIT 1");
 $stmtNeurketa->execute([$erabiltzaile_id]);
 $azkenNeurketa = $stmtNeurketa->fetch(PDO::FETCH_ASSOC);
 
@@ -70,10 +70,6 @@ include_once '../php_includeak/paziente_goiburua.php';
                         <div class="informazio-taldea">
                             <label><?php echo $itzulpenak->dashboard_pazientea->tentsioa; ?></label>
                             <div class="informazio-balioa"><?php echo htmlspecialchars($azkenNeurketa['tentsio_sistolikoa'] . '/' . $azkenNeurketa['tentsio_diastolikoa']); ?></div>
-                        </div>
-                        <div class="informazio-taldea">
-                            <label><?php echo $itzulpenak->dashboard_pazientea->glukosa; ?></label>
-                            <div class="informazio-balioa"><?php echo htmlspecialchars($azkenNeurketa['glukosa_mg_dl']); ?> mg/dL</div>
                         </div>
                         <div class="informazio-taldea">
                             <label><?php echo $itzulpenak->dashboard_pazientea->pultsua; ?></label>

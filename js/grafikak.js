@@ -71,24 +71,6 @@ $(document).ready(function() {
             datuMultzoak.push(lortuRegresioLerroa(diastolikoa, 'Joera (Diast.)', '#117a8b'));
             eguneratuEstatistikaPanela(sistolikoa, unitatea, 'Sistolikoa', diastolikoa, 'Diastolikoa');
 
-        } else if (mota === 'glukosa') {
-            const neurketaIragaziak = neurketakData.filter(d => d.glukosa_mg_dl !== null && d.glukosa_mg_dl !== undefined && d.glukosa_mg_dl !== '');
-            const datuak = neurketaIragaziak.map(d => parseFloat(d.glukosa_mg_dl));
-            etiketak = neurketaIragaziak.map(d => d.data);
-            unitatea = 'mg/dl';
-            
-            datuMultzoak.push({
-                label: 'Glukosa (mg/dl)',
-                data: datuak,
-                borderColor: '#28a745',
-                backgroundColor: 'rgba(40, 167, 69, 0.1)',
-                borderWidth: 2,
-                fill: true,
-                tension: 0.3
-            });
-            datuMultzoak.push(lortuRegresioLerroa(datuak, 'Joera (Glukosa)', '#1e7e34'));
-            eguneratuEstatistikaPanela(datuak, unitatea);
-
         } else if (mota === 'pultsua') {
             const neurketaIragaziak = neurketakData.filter(d => d.pultsua_ppm !== null && d.pultsua_ppm !== undefined && d.pultsua_ppm !== '');
             const datuak = neurketaIragaziak.map(d => parseInt(d.pultsua_ppm));

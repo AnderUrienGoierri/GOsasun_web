@@ -72,7 +72,7 @@ include 'php_includeak/goiburua.php';
             <div class="ezaugarri-txartela">
                 <div class="ezaugarri-ikonoa"><img src="img/svg/line-chart.svg" alt="Neurketa Jarraipena"></div>
                 <h3>Neurketa Jarraipena</h3>
-                <p>Sartu zure eguneroko osasun datuak (tentsioa, pisua, glukosa...) eta ikusi bilakaera.</p>
+                <p>Sartu zure eguneroko osasun datuak (tentsioa, pultsua, pisua, altuera...) eta ikusi bilakaera.</p>
             </div>
             <div class="ezaugarri-txartela">
                 <div class="ezaugarri-ikonoa"><img src="img/svg/calendar.svg" alt="Hitzorduak"></div>

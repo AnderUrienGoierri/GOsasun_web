@@ -10,7 +10,7 @@ require_once '../php_laguntzaileak/DB_konexioa.php';
 $paziente_id = $_SESSION['erabiltzaile_id'];
 
 // Lortu neurketen historia (pultsua eta altuera barne)
-$stmtNeurketak = $pdo->prepare("SELECT erregistro_data, glukosa_mg_dl, tentsio_sistolikoa, tentsio_diastolikoa, pisua_kg, altuera, pultsua_ppm, sintomak FROM Neurketak WHERE paziente_id = ? ORDER BY erregistro_data DESC");
+$stmtNeurketak = $pdo->prepare("SELECT erregistro_data, tentsio_sistolikoa, tentsio_diastolikoa, pisua_kg, altuera, pultsua_ppm, sintomak FROM Neurketak WHERE paziente_id = ? ORDER BY erregistro_data DESC");
 $stmtNeurketak->execute([$paziente_id]);
 $neurketak = $stmtNeurketak->fetchAll(PDO::FETCH_ASSOC);
 
@@ -36,7 +36,6 @@ include_once '../php_includeak/paziente_goiburua.php';
                         <thead>
                             <tr>
                                 <th><?php echo $itzulpenak->dashboard_pazientea->data_taula; ?></th>
-                                <th><?php echo $itzulpenak->dashboard_pazientea->glukosa; ?></th>
                                 <th><?php echo $itzulpenak->dashboard_pazientea->tentsioa; ?></th>
                                 <th><?php echo $itzulpenak->dashboard_pazientea->pultsua; ?></th>
                                 <th><?php echo $itzulpenak->dashboard_pazientea->altuera; ?></th>
@@ -48,7 +47,6 @@ include_once '../php_includeak/paziente_goiburua.php';
                             <?php foreach ($neurketak as $n): ?>
                                 <tr>
                                     <td><strong><?php echo date('Y/m/d', strtotime($n['erregistro_data'])); ?></strong><br><small><?php echo date('H:i', strtotime($n['erregistro_data'])); ?></small></td>
-                                    <td><?php echo $n['glukosa_mg_dl'] ? $n['glukosa_mg_dl'] . ' mg/dL' : '-'; ?></td>
                                     <td><?php echo ($n['tentsio_sistolikoa'] && $n['tentsio_diastolikoa']) ? $n['tentsio_sistolikoa'] . '/' . $n['tentsio_diastolikoa'] : '-'; ?></td>
                                     <td><?php echo $n['pultsua_ppm'] ? $n['pultsua_ppm'] . ' ppm' : '-'; ?></td>
                                     <td><?php echo $n['altuera'] ? $n['altuera'] . ' cm' : '-'; ?></td>

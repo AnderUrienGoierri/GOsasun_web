@@ -8,7 +8,7 @@ if (!isset($_SESSION['rol_id']) || $_SESSION['rol_izena'] !== 'Pazientea') {
 }
 
 $erab_id = $_SESSION['erabiltzaile_id'];
-$stmt = $pdo->prepare("SELECT DATE(erregistro_data) AS data, glukosa_mg_dl, tentsio_sistolikoa, tentsio_diastolikoa, pisua_kg, altuera, pultsua_ppm 
+$stmt = $pdo->prepare("SELECT DATE(erregistro_data) AS data, tentsio_sistolikoa, tentsio_diastolikoa, pisua_kg, altuera, pultsua_ppm 
                        FROM Neurketak WHERE paziente_id = ? ORDER BY erregistro_data ASC");
 $stmt->execute([$erab_id]);
 $neurketak = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -34,7 +34,6 @@ include_once '../php_includeak/paziente_goiburua.php';
                 <select id="datu-mota" class="inprimaki-kontrola">
                     <option value="pisua">Pisua (kg)</option>
                     <option value="tentsioa">Tentsio Arteriala</option>
-                    <option value="glukosa">Glukosa (mg/dl)</option>
                     <option value="pultsua">Pultsua (ppm)</option>
                 </select>
                 <button type="button" class="botoia botoi-nagusia" id="btn-deskargatu-pdf">
