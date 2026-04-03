@@ -9,9 +9,9 @@ require_once '../php_laguntzaileak/DB_konexioa.php';
 $mediku_id = $_SESSION['erabiltzaile_id'];
 
 // 1. Lortu esleitutako pazienteen zerrenda
-$stmtP = $pdo->prepare("SELECT p.paziente_id, p.izena, p.abizenak, p.nan 
+$stmtP = $pdo->prepare("SELECT p.id, p.izena, p.abizenak, p.nan 
                        FROM Pazienteak p
-                       JOIN Mediku_Paziente mp ON p.paziente_id = mp.paziente_id
+                       JOIN Mediku_Paziente mp ON p.id = mp.paziente_id
                        WHERE mp.mediku_id = ?
                        ORDER BY p.abizenak ASC");
 $stmtP->execute([$mediku_id]);
@@ -33,7 +33,7 @@ if ($paziente_id_aukera) {
         $neurketak = $stmtN->fetchAll(PDO::FETCH_ASSOC);
         
         // Lortu pazientearen izena izenbururako
-        $stmtI = $pdo->prepare("SELECT izena, abizenak FROM Pazienteak WHERE paziente_id = ?");
+        $stmtI = $pdo->prepare("SELECT izena, abizenak FROM Pazienteak WHERE id = ?");
         $stmtI->execute([$paziente_id_aukera]);
         $pInfo = $stmtI->fetch();
         $paziente_izena = $pInfo['izena'] . " " . $pInfo['abizenak'];
@@ -61,7 +61,7 @@ include_once '../php_includeak/mediku_goiburua.php';
                         <select name="paziente_id" id="paziente_id" class="inprimaki-kontrola sarrera-handia" onchange="this.form.submit()">
                             <option value="">-- Hautatu pazientea --</option>
                             <?php foreach ($pazienteak as $p): ?>
-                                <option value="<?php echo $p['paziente_id']; ?>" <?php echo ($paziente_id_aukera == $p['paziente_id']) ? 'selected' : ''; ?>>
+                                <option value="<?php echo $p['id']; ?>" <?php echo ($paziente_id_aukera == $p['id']) ? 'selected' : ''; ?>>
                                     <?php echo htmlspecialchars($p['abizenak'] . ", " . $p['izena'] . " (" . $p['nan'] . ")"); ?>
                                 </option>
                             <?php endforeach; ?>
@@ -84,12 +84,12 @@ include_once '../php_includeak/mediku_goiburua.php';
                         <table class="neurketa-taula">
                             <thead>
                                 <tr>
-                                    <th><?php echo $itzulpenak->dashboard_pazientea->data_taula; ?> / Ordua</th>
-                                    <th><?php echo $itzulpenak->dashboard_pazientea->tentsioa; ?></th>
-                                    <th><?php echo $itzulpenak->dashboard_pazientea->pultsua; ?></th>
-                                    <th><?php echo $itzulpenak->dashboard_pazientea->altuera; ?></th>
-                                    <th><?php echo $itzulpenak->dashboard_pazientea->pisua; ?></th>
-                                    <th><?php echo $itzulpenak->dashboard_pazientea->oharrak; ?></th>
+                                    <th>Data / Ordua</th>
+                                    <th>Tentsioa</th>
+                                    <th>Pultsua</th>
+                                    <th>Altuera</th>
+                                    <th>Pisua</th>
+                                    <th>Oharrak / Sintomak</th>
                                 </tr>
                             </thead>
                             <tbody>

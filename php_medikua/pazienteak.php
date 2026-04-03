@@ -10,7 +10,7 @@ $mediku_id = $_SESSION['erabiltzaile_id'];
 
 // Lortu pazienteen zerrenda
 $stmt = $pdo->prepare("
-    SELECT paziente_id, paziente_izena AS izena, paziente_abizenak AS abizenak, nan, paziente_telefonoa AS telefonoa, odol_taldea 
+    SELECT paziente_id, paziente_izena AS izena, paziente_abizenak AS abizenak, nan, paziente_telefonoa AS telefonoa, odol_taldea, paziente_irudia AS irudia
     FROM V_Mediku_Pazienteak
     WHERE mediku_id = ?
 ");

@@ -11,9 +11,9 @@ $mediku_id = $_SESSION['erabiltzaile_id'];
 
 // Get Medikuaren pazienteak
 $stmt = $pdo->prepare("
-    SELECT p.paziente_id, p.izena, p.abizenak
+    SELECT p.id as paziente_id, p.izena, p.abizenak
     FROM Pazienteak p
-    JOIN Mediku_Paziente mp ON p.paziente_id = mp.paziente_id
+    JOIN Mediku_Paziente mp ON p.id = mp.paziente_id
     WHERE mp.mediku_id = ?
 ");
 $stmt->execute([$mediku_id]);

@@ -20,7 +20,7 @@ $msg_status = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['berria_egoera'])) {
     $berria = $_POST['berria_egoera'];
     if (in_array($berria, ['Alta', 'Baja'])) {
-        $stm_eguneratu = $pdo->prepare("UPDATE Pazienteak SET egoera_klinikoa = ? WHERE paziente_id = ?");
+        $stm_eguneratu = $pdo->prepare("UPDATE Pazienteak SET egoera_klinikoa = ? WHERE id = ?");
         $stm_eguneratu->execute([$berria, $paziente_id]);
         $msg_status = "Egoera klinikoa harrerako langileentzat eguneratu da: " . $berria;
     }

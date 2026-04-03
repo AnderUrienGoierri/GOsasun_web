@@ -11,9 +11,9 @@ $mezua = '';
 $errorea = '';
 
 // 1. Lortu esleitutako pazienteen zerrenda
-$stmtP = $pdo->prepare("SELECT p.paziente_id, p.izena, p.abizenak, p.nan 
+$stmtP = $pdo->prepare("SELECT p.id, p.izena, p.abizenak, p.nan 
                        FROM Pazienteak p
-                       JOIN Mediku_Paziente mp ON p.paziente_id = mp.paziente_id
+                       JOIN Mediku_Paziente mp ON p.id = mp.id
                        WHERE mp.mediku_id = ?
                        ORDER BY p.abizenak ASC");
 $stmtP->execute([$mediku_id]);
@@ -56,9 +56,9 @@ if ($bista === 'eguna') {
     $bukaera_data = date('Y-m-d', strtotime('sunday this week'));
 }
 
-$sqlH = "SELECT h.*, p.izena, p.abizenak
+$sqlH = "SELECT h.*, h.id as hitzordu_id, p.izena, p.abizenak
          FROM Hitzorduak h
-         JOIN Pazienteak p ON h.paziente_id = p.paziente_id
+         JOIN Pazienteak p ON h.paziente_id = p.id
          WHERE h.mediku_id = :mid AND h.data BETWEEN :start AND :end
          ORDER BY h.data ASC, h.hasiera_ordua ASC";
 

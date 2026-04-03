@@ -10,16 +10,16 @@ $erabiltzaile_id = $_SESSION['erabiltzaile_id'];
 
 // Lortu medikuaren paziente esleituak
 $stmt_pazienteak = $pdo->prepare("
-    SELECT p.paziente_id, p.izena, p.abizenak, p.nan
+    SELECT p.id, p.izena, p.abizenak, p.nan
     FROM Pazienteak p
-    JOIN Mediku_Paziente mp ON p.paziente_id = mp.paziente_id
+    JOIN Mediku_Paziente mp ON p.id = mp.id
     WHERE mp.mediku_id = ?
 ");
 $stmt_pazienteak->execute([$erabiltzaile_id]);
 $pazienteak = $stmt_pazienteak->fetchAll(PDO::FETCH_ASSOC);
 
 // Lortu harrerako langileak
-$stmt_harrera = $pdo->query("SELECT langile_id, izena, abizenak FROM Harrerako_Langileak");
+$stmt_harrera = $pdo->query("SELECT id as langile_id, izena, abizenak FROM Harrerako_Langileak");
 $harrerakoak = $stmt_harrera->fetchAll(PDO::FETCH_ASSOC);
 
 $errore_mezua = '';

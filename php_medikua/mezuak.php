@@ -17,10 +17,10 @@ $stmt_jasotakoak = $pdo->prepare("
                ELSE e.email
            END as bidaltzaile_izena
     FROM Mezuak m
-    JOIN Erabiltzaileak e ON m.bidaltzaile_id = e.erabiltzaile_id
-    JOIN Rolak r ON e.rol_id = r.rol_id
-    LEFT JOIN Pazienteak p ON e.erabiltzaile_id = p.paziente_id
-    LEFT JOIN Harrerako_Langileak hl ON e.erabiltzaile_id = hl.langile_id
+    JOIN Erabiltzaileak e ON m.bidaltzaile_id = e.id
+    JOIN Rolak r ON e.rol_id = r.id
+    LEFT JOIN Pazienteak p ON e.id = p.id
+    LEFT JOIN Harrerako_Langileak hl ON e.id = hl.id
     WHERE m.hartzaile_id = ?
     ORDER BY m.bidalketa_data DESC
 ");
@@ -36,10 +36,10 @@ $stmt_bidalitakoak = $pdo->prepare("
                ELSE e.email
            END as hartzaile_izena
     FROM Mezuak m
-    JOIN Erabiltzaileak e ON m.hartzaile_id = e.erabiltzaile_id
-    JOIN Rolak r ON e.rol_id = r.rol_id
-    LEFT JOIN Pazienteak p ON e.erabiltzaile_id = p.paziente_id
-    LEFT JOIN Harrerako_Langileak hl ON e.erabiltzaile_id = hl.langile_id
+    JOIN Erabiltzaileak e ON m.hartzaile_id = e.id
+    JOIN Rolak r ON e.rol_id = r.id
+    LEFT JOIN Pazienteak p ON e.id = p.id
+    LEFT JOIN Harrerako_Langileak hl ON e.id = hl.id
     WHERE m.bidaltzaile_id = ?
     ORDER BY m.bidalketa_data DESC
 ");
@@ -91,7 +91,7 @@ include_once '../php_includeak/mediku_goiburua.php';
                                 <?php endif; ?>
                             </td>
                             <td>
-                                <a href="mezu_xehetasuna.php?id=<?php echo $m['mezu_id']; ?>" class="botoia botoi-informazioa botoi-txikia">Irakurri</a>
+                                <a href="mezu_xehetasuna.php?id=<?php echo $m['id']; ?>" class="botoia botoi-informazioa botoi-txikia">Irakurri</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
@@ -124,7 +124,7 @@ include_once '../php_includeak/mediku_goiburua.php';
                             <td><?php echo htmlspecialchars($m['hartzaile_izena']); ?></td>
                             <td><?php echo htmlspecialchars($m['gaia']); ?></td>
                             <td>
-                                <a href="mezu_xehetasuna.php?id=<?php echo $m['mezu_id']; ?>" class="botoia botoi-informazioa botoi-txikia">Ikusi</a>
+                                <a href="mezu_xehetasuna.php?id=<?php echo $m['id']; ?>" class="botoia botoi-informazioa botoi-txikia">Ikusi</a>
                             </td>
                         </tr>
                     <?php endforeach; ?>

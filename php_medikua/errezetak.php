@@ -11,9 +11,9 @@ $mezua = '';
 $errorea = '';
 
 // 1. Lortu medikuaren pazienteen zerrenda
-$stmtP = $pdo->prepare("SELECT p.paziente_id, p.izena, p.abizenak, p.nan 
+$stmtP = $pdo->prepare("SELECT p.id, p.izena, p.abizenak, p.nan 
                        FROM Pazienteak p
-                       JOIN Mediku_Paziente mp ON p.paziente_id = mp.paziente_id
+                       JOIN Mediku_Paziente mp ON p.id = mp.paziente_id
                        WHERE mp.mediku_id = ?
                        ORDER BY p.abizenak ASC");
 $stmtP->execute([$mediku_id]);
@@ -21,16 +21,16 @@ $pazienteak = $stmtP->fetchAll(PDO::FETCH_ASSOC);
 
 // 2. Lortu medikuaren hitzorduak (errezeta bati lotzeko - hautazkoa)
 $gaur = date('Y-m-d');
-$stmtH = $pdo->prepare("SELECT hitzordu_id, data, hasiera_ordua, p.izena, p.abizenak 
+$stmtH = $pdo->prepare("SELECT h.id AS hitzordu_id, h.data, h.hasiera_ordua, p.izena, p.abizenak 
                         FROM Hitzorduak h
-                        JOIN Pazienteak p ON h.paziente_id = p.paziente_id
+                        JOIN Pazienteak p ON h.paziente_id = p.id
                         WHERE h.mediku_id = ? 
                         ORDER BY h.data DESC LIMIT 50");
 $stmtH->execute([$mediku_id]);
 $hitzordu_aukerak = $stmtH->fetchAll(PDO::FETCH_ASSOC);
 
 // 2b. Lortu botiken zerrenda
-$stmtB = $pdo->query("SELECT botika_id, izena FROM Botikak ORDER BY izena ASC");
+$stmtB = $pdo->query("SELECT id AS botika_id, izena FROM Botikak ORDER BY izena ASC");
 $botikak_aukerak = $stmtB->fetchAll(PDO::FETCH_ASSOC);
 
 // 3. Kudeatu errezeta ekintzak
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($p_id && $i_data && $diag) {
             try {
                 if ($e_id) {
-                    $stmt = $pdo->prepare("UPDATE Errezetak SET paziente_id = ?, hitzordu_id = ?, igorpen_data = ?, iraungitze_data = ?, diagnostiko_laburra = ?, aktibo = ? WHERE errezeta_id = ? AND mediku_id = ?");
+                    $stmt = $pdo->prepare("UPDATE Errezetak SET paziente_id = ?, hitzordu_id = ?, igorpen_data = ?, iraungitze_data = ?, diagnostiko_laburra = ?, aktibo = ? WHERE id = ? AND mediku_id = ?");
                     $stmt->execute([$p_id, $h_id, $i_data, $ir_data, $diag, $aktibo, $e_id, $mediku_id]);
                     $mezua = "Errezeta arrakastaz aldatu da.";
                 } else {
@@ -78,7 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (isset($_POST['ezabatu_errezeta'])) {
         $e_id = $_POST['errezeta_id_delete'];
         try {
-            $stmt = $pdo->prepare("DELETE FROM Errezetak WHERE errezeta_id = ? AND mediku_id = ?");
+            $stmt = $pdo->prepare("DELETE FROM Errezetak WHERE id = ? AND mediku_id = ?");
             $stmt->execute([$e_id, $mediku_id]);
             $mezua = "Errezeta ezabatu da.";
         } catch (PDOException $e) {
@@ -88,15 +88,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 
 // 4. Lortu medikuak sortutako errezeta guztiak
-$sql = "SELECT e.*, p.izena, p.abizenak, p.nan, 
+$sql = "SELECT e.*, e.id AS errezeta_id, p.izena, p.abizenak, p.nan, 
         GROUP_CONCAT(CONCAT(b.izena, ' (', eb.dosia, ', ', eb.maiztasuna, ')') SEPARATOR ' | ') as botikak_info
         FROM Errezetak e
-        JOIN Pazienteak p ON e.paziente_id = p.paziente_id
-        LEFT JOIN errezeta_botikak eb ON e.errezeta_id = eb.errezeta_id
-        LEFT JOIN Botikak b ON eb.botika_id = b.botika_id
+        JOIN Pazienteak p ON e.paziente_id = p.id
+        LEFT JOIN errezeta_botikak eb ON e.id = eb.errezeta_id
+        LEFT JOIN Botikak b ON eb.botika_id = b.id
         WHERE e.mediku_id = :mid 
-        GROUP BY e.errezeta_id
-        ORDER BY e.igorpen_data DESC, e.errezeta_id DESC";
+        GROUP BY e.id
+        ORDER BY e.igorpen_data DESC, e.id DESC";
 $stmtErr = $pdo->prepare($sql);
 $stmtErr->execute(['mid' => $mediku_id]);
 $errezetak = $stmtErr->fetchAll(PDO::FETCH_ASSOC);
@@ -194,7 +194,7 @@ include_once '../php_includeak/mediku_goiburua.php';
                         <select name="paziente_id" id="modal_paziente_id" class="inprimaki-kontrola" required>
                             <option value="">Hautatu pazientea...</option>
                             <?php foreach ($pazienteak as $p): ?>
-                                <option value="<?php echo $p['paziente_id']; ?>"><?php echo htmlspecialchars($p['abizenak'] . ", " . $p['izena'] . " (" . $p['nan'] . ")"); ?></option>
+                                <option value="<?php echo $p['id']; ?>"><?php echo htmlspecialchars($p['abizenak'] . ", " . $p['izena'] . " (" . $p['nan'] . ")"); ?></option>
                             <?php endforeach; ?>
                         </select>
                     </div>

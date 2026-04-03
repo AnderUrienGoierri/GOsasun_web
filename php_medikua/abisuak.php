@@ -12,8 +12,8 @@ $mediku_id = $_SESSION['erabiltzaile_id'];
 $stmt = $pdo->prepare("
     SELECT a.*, p.izena, p.abizenak 
     FROM Abisuak a
-    JOIN Pazienteak p ON a.paziente_id = p.paziente_id
-    JOIN Mediku_Paziente mp ON p.paziente_id = mp.paziente_id
+    JOIN Pazienteak p ON a.paziente_id = p.id
+    JOIN Mediku_Paziente mp ON p.id = mp.id
     WHERE mp.mediku_id = ?
     ORDER BY a.data DESC
 ");
