@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS pazienteak (
     azken_pisua DECIMAL(5, 2),
     egoera_klinikoa ENUM('Alta', 'Baja') DEFAULT 'Alta',
     irudia VARCHAR(255) DEFAULT 'img/lehenetsia_pazientea.png',
-    FOREIGN KEY (paziente_id) REFERENCES Erabiltzaileak(erabiltzaile_id) ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY (paziente_id) REFERENCES Erabiltzaileak(erabiltzaile_id) ON DELETE RESTRICT ON UPDATE CASCADE
 );
 -- 4. MEDIKUAK TAULA
 CREATE TABLE IF NOT EXISTS medikuak (
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS medikuak (
     lanaldia ENUM('Osoa', 'Murriztua') DEFAULT 'Osoa',
     telefonoa VARCHAR(20),
     irudia VARCHAR(255) DEFAULT 'img/lehenetsia_medikua.png',
-    FOREIGN KEY (mediku_id) REFERENCES Erabiltzaileak(erabiltzaile_id) ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY (mediku_id) REFERENCES Erabiltzaileak(erabiltzaile_id) ON DELETE RESTRICT ON UPDATE CASCADE
 );
 -- 5. HARRERAKO LANGILEAK TAULA
 CREATE TABLE IF NOT EXISTS harrerako_Langileak (
@@ -60,7 +60,7 @@ CREATE TABLE IF NOT EXISTS harrerako_Langileak (
     jaiotze_data DATE,
     telefonoa VARCHAR(20),
     irudia VARCHAR(255) DEFAULT 'img/lehenetsia_harrera.png',
-    FOREIGN KEY (langile_id) REFERENCES Erabiltzaileak(erabiltzaile_id) ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY (langile_id) REFERENCES Erabiltzaileak(erabiltzaile_id) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 -- 6. MEDIKU-PAZIENTE LOTURA TAULA
 CREATE TABLE IF NOT EXISTS mediku_Paziente (
@@ -68,8 +68,8 @@ CREATE TABLE IF NOT EXISTS mediku_Paziente (
     mediku_id INT NOT NULL,
     paziente_id INT NOT NULL,
     esleipen_data TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (mediku_id) REFERENCES Medikuak(mediku_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (paziente_id) REFERENCES Pazienteak(paziente_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (mediku_id) REFERENCES Medikuak(mediku_id) ON DELETE RESTRICT ON UPDATE CASCADE,
+    FOREIGN KEY (paziente_id) REFERENCES Pazienteak(paziente_id) ON DELETE RESTRICT ON UPDATE CASCADE,
     UNIQUE(mediku_id, paziente_id)
 );
 -- 7. OSASUN NEURKETAK TAULA
@@ -83,7 +83,7 @@ CREATE TABLE IF NOT EXISTS neurketak (
     pultsua_ppm INT,
     sintomak TEXT,
     erregistro_data TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (paziente_id) REFERENCES Pazienteak(paziente_id) ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY (paziente_id) REFERENCES Pazienteak(paziente_id) ON DELETE RESTRICT ON UPDATE CASCADE
 );
 -- 8. KONTUAK / MEZULARITZA TAULA
 CREATE TABLE IF NOT EXISTS mezuak (
@@ -94,8 +94,8 @@ CREATE TABLE IF NOT EXISTS mezuak (
     mezua TEXT NOT NULL,
     irakurrita BOOLEAN DEFAULT FALSE,
     bidalketa_data TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (bidaltzaile_id) REFERENCES Erabiltzaileak(erabiltzaile_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (hartzaile_id) REFERENCES Erabiltzaileak(erabiltzaile_id) ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY (bidaltzaile_id) REFERENCES Erabiltzaileak(erabiltzaile_id) ON DELETE RESTRICT ON UPDATE CASCADE,
+    FOREIGN KEY (hartzaile_id) REFERENCES Erabiltzaileak(erabiltzaile_id) ON DELETE RESTRICT ON UPDATE CASCADE
 );
 -- 9. DOKUMENTUAK TAULA
 CREATE TABLE IF NOT EXISTS dokumentuak (
@@ -108,8 +108,8 @@ CREATE TABLE IF NOT EXISTS dokumentuak (
     mota VARCHAR(50),
     igotze_data TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     deskribapena TEXT,
-    FOREIGN KEY (paziente_id) REFERENCES Pazienteak(paziente_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (igotzaile_id) REFERENCES Erabiltzaileak(erabiltzaile_id) ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY (paziente_id) REFERENCES Pazienteak(paziente_id) ON DELETE RESTRICT ON UPDATE CASCADE,
+    FOREIGN KEY (igotzaile_id) REFERENCES Erabiltzaileak(erabiltzaile_id) ON DELETE RESTRICT ON UPDATE CASCADE
 );
 -- 10. HITZORDUAK TAULA
 CREATE TABLE IF NOT EXISTS hitzorduak (
@@ -122,8 +122,8 @@ CREATE TABLE IF NOT EXISTS hitzorduak (
     arrazoia VARCHAR(255),
     egoera ENUM('Zain', 'Bukatuta', 'Ezeztatuta') DEFAULT 'Zain',
     sortze_data TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (paziente_id) REFERENCES Pazienteak(paziente_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (mediku_id) REFERENCES Medikuak(mediku_id) ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY (paziente_id) REFERENCES Pazienteak(paziente_id) ON DELETE RESTRICT ON UPDATE CASCADE,
+    FOREIGN KEY (mediku_id) REFERENCES Medikuak(mediku_id) ON DELETE RESTRICT ON UPDATE CASCADE
 );
 -- 11. ERREZETAK ETA DIAGNOSTIKOAK TAULA
 CREATE TABLE IF NOT EXISTS errezetak (
@@ -137,8 +137,8 @@ CREATE TABLE IF NOT EXISTS errezetak (
     diagnostiko_laburra VARCHAR(255),
     aktibo BOOLEAN DEFAULT TRUE,
     FOREIGN KEY (hitzordu_id) REFERENCES Hitzorduak(hitzordu_id) ON DELETE SET NULL ON UPDATE CASCADE,
-    FOREIGN KEY (mediku_id) REFERENCES Medikuak(mediku_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (paziente_id) REFERENCES Pazienteak(paziente_id) ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY (mediku_id) REFERENCES Medikuak(mediku_id) ON DELETE RESTRICT ON UPDATE CASCADE,
+    FOREIGN KEY (paziente_id) REFERENCES Pazienteak(paziente_id) ON DELETE RESTRICT ON UPDATE CASCADE
 );
 -- 12. KONTAKTURAKO MEZUAK
 CREATE TABLE IF NOT EXISTS kontaktua_Mezuak (
@@ -159,7 +159,7 @@ CREATE TABLE IF NOT EXISTS abisuak (
     mota VARCHAR(50),
     testua TEXT,
     irakurrita TINYINT(1) DEFAULT 0,
-    FOREIGN KEY (paziente_id) REFERENCES Pazienteak(paziente_id) ON DELETE CASCADE ON UPDATE CASCADE
+    FOREIGN KEY (paziente_id) REFERENCES Pazienteak(paziente_id) ON DELETE RESTRICT ON UPDATE CASCADE
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
 -- 14. BOTIKAK TAULA
 CREATE TABLE IF NOT EXISTS botikak (
@@ -177,7 +177,7 @@ CREATE TABLE IF NOT EXISTS errezeta_botikak (
     botika_id INT NOT NULL,
     dosia VARCHAR(100),
     maiztasuna VARCHAR(100),
-    FOREIGN KEY (errezeta_id) REFERENCES Errezetak(errezeta_id) ON DELETE CASCADE ON UPDATE CASCADE,
-    FOREIGN KEY (botika_id) REFERENCES Botikak(botika_id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (errezeta_id) REFERENCES Errezetak(errezeta_id) ON DELETE RESTRICT ON UPDATE CASCADE,
+    FOREIGN KEY (botika_id) REFERENCES Botikak(botika_id) ON DELETE RESTRICT ON UPDATE CASCADE,
     UNIQUE(errezeta_id, botika_id)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
