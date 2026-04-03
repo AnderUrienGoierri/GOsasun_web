@@ -52,13 +52,18 @@ include_once '../php_includeak/harrera_goiburua.php';
     
     <div class="orri-goiburua">
         <h2><img src="../img/svg/user.svg" alt="" class="ikono-ertaina marjina-esk-5"> Pazientearen Fitxa</h2>
-        <span class="egoera-etiketa <?php echo $pazientea['egoera_klinikoa'] == 'Alta' ? 'egoera-alta' : 'egoera-baja'; ?>">
-            <?php echo htmlspecialchars($pazientea['egoera_klinikoa']); ?>
-        </span>
+        <div class="flex-taldea-10">
+            <span class="egoera-etiketa <?php echo $pazientea['egoera_klinikoa'] == 'Alta' ? 'egoera-alta' : 'egoera-baja'; ?>">
+                <?php echo htmlspecialchars($pazientea['egoera_klinikoa']); ?>
+            </span>
+            <span class="egoera-etiketa <?php echo $pazientea['aktibo'] ? 'egoera-arrakasta' : 'egoera-baja'; ?>" style="background-color: #e0f2fe; color: #0369a1;">
+                <?php echo $pazientea['aktibo'] ? 'Kontu Aktiboa' : 'Kontu Ez-Aktiboa'; ?>
+            </span>
+        </div>
     </div>
 
     <div class="fitxa-edukiontzia">
-        <!-- Ezkerreko zutabea: Datu pertsonalak -->
+        <!-- Ezkerreko zutabea: Profila eta Harremana -->
         <div class="profil-txartela">
             <?php 
             $irudia_bide = htmlspecialchars($pazientea['irudia'] ?? 'img/lehenetsia_pazientea.png');
@@ -66,26 +71,59 @@ include_once '../php_includeak/harrera_goiburua.php';
                 $irudia_bide = str_replace('img/', 'img/png/', $irudia_bide);
             }
             ?>
-            <img src="../<?php echo $irudia_bide; ?>" alt="Profila" class="profil-irudia">
-            <h3><?php echo htmlspecialchars($pazientea['izena'] . ' ' . $pazientea['abizenak']); ?></h3>
+            <img src="../<?php echo $irudia_bide; ?>" alt="Profila" class="profil-irudia-handia">
+            <h3 class="marjina-goi-15"><?php echo htmlspecialchars($pazientea['izena'] . ' ' . $pazientea['abizenak']); ?></h3>
             <p class="identifikadorea">ID: #<?php echo $pazientea['paziente_id']; ?> | NAN: <?php echo htmlspecialchars($pazientea['nan']); ?></p>
             
             <hr class="banatzaile-marra">
             
             <div class="testua-ezkerrean">
-                <p><strong><img src="../img/svg/mail.svg" alt="" class="ikono-ertaina marjina-esk-5"> Email:</strong> <?php echo htmlspecialchars($pazientea['email']); ?></p>
-                <p><strong><img src="../img/svg/phone.svg" alt="" class="ikono-ertaina marjina-esk-5"> Telefonoa:</strong> <?php echo htmlspecialchars($pazientea['telefonoa'] ?? 'Ez zehaztua'); ?></p>
+                <p class="betegarria-15"><img src="../img/svg/mail.svg" alt="" class="ikono-ertaina marjina-esk-10"><strong>Email:</strong> <br><span class="testu-normala marjina-ezk-30"><?php echo htmlspecialchars($pazientea['email']); ?></span></p>
+                <p class="betegarria-15"><img src="../img/svg/phone.svg" alt="" class="ikono-ertaina marjina-esk-10"><strong>Telefonoa:</strong> <br><span class="testu-normala marjina-ezk-30"><?php echo htmlspecialchars($pazientea['telefonoa'] ?? 'Ez zehaztua'); ?></span></p>
             </div>
             
             <a href="paziente_editatu.php?id=<?php echo $pazientea['paziente_id']; ?>" class="botoia botoi-ertza marjina-goi-zabalera"><img src="../img/svg/pencil.svg" alt="" class="ikono-ertaina marjina-esk-5"> Editatu Datuak</a>
         </div>
 
-        <!-- Eskuineko zutabea: Neurketak eta Hitzorduak -->
+        <!-- Eskuineko zutabea: Datuen xehetasunak -->
         <div>
+            <!-- Datu Pertsonalak eta Kokapena -->
+            <div class="kutxa-zuria marjina-behe-30">
+                <h3 class="izenburu-urdina"><img src="../img/svg/info.svg" alt="" class="ikono-ertaina marjina-esk-10"> Informazio Pertsonala eta Kokapena</h3>
+                <div class="param-sareta">
+                    <div class="param-txartela">
+                        <div class="testu-gris-iluna">Sexua</div>
+                        <div class="param-balioa"><?php echo htmlspecialchars($pazientea['sexua']); ?></div>
+                    </div>
+                    <div class="param-txartela">
+                        <div class="testu-gris-iluna">Jaiotze Data</div>
+                        <div class="param-balioa"><?php echo date('Y/m/d', strtotime($pazientea['jaiotze_data'])); ?></div>
+                        <div class="testu-gris-txikia"><?php echo floor((time() - strtotime($pazientea['jaiotze_data'])) / 31556926); ?> urte</div>
+                    </div>
+                    <div class="param-txartela">
+                        <div class="testu-gris-iluna">Odol Taldea</div>
+                        <div class="param-balioa"><?php echo htmlspecialchars($pazientea['odol_taldea'] ?? '-'); ?></div>
+                    </div>
+                    <div class="param-txartela">
+                        <div class="testu-gris-iluna">Erregistro Data</div>
+                        <div class="param-balioa"><?php echo date('Y/m/d', strtotime($pazientea['sortze_data'])); ?></div>
+                        <div class="testu-gris-txikia">Alta data</div>
+                    </div>
+                </div>
+                
+                <div class="marjina-goi-20">
+                    <p><strong><img src="../img/svg/map-pin.svg" alt="" class="ikono-ertaina marjina-esk-10"> Helbidea:</strong> 
+                        <?php echo htmlspecialchars($pazientea['helbidea'] ?? 'Ez zehaztua'); ?>, 
+                        <?php echo htmlspecialchars($pazientea['posta_kodea'] ?? ''); ?> 
+                        <?php echo htmlspecialchars($pazientea['herria'] ?? ''); ?>
+                    </p>
+                </div>
+            </div>
+
             <!-- Azken neurketen laburpena -->
-            <div class="kutxa-zuria">
+            <div class="kutxa-zuria marjina-behe-30">
                 <h3 class="goiburu-iluna-flex">
-                    Azken Parametroak
+                    <img src="../img/svg/activity.svg" alt="" class="ikono-ertaina marjina-esk-10"> Azken Parametroak
                     <?php if(count($neurketak) > 0): ?>
                         <small class="datu-txikia-grisa">(<?php echo date('Y/m/d', strtotime($neurketak[0]['erregistro_data'])); ?>)</small>
                     <?php endif; ?>
@@ -95,34 +133,36 @@ include_once '../php_includeak/harrera_goiburua.php';
                     <?php $azkena = $neurketak[0]; ?>
                     <div class="param-sareta">
                         <div class="param-txartela">
-                            <div>Tentsioa</div>
+                            <div class="testu-gris-iluna">Tentsioa</div>
                             <div class="param-balioa"><?php echo $azkena['tentsio_sistolikoa'] . '/' . $azkena['tentsio_diastolikoa']; ?></div>
-                            <div>mmHg</div>
+                            <div class="testu-gris-txikia">mmHg</div>
                         </div>
                         <div class="param-txartela">
-                            <div>Pultsua</div>
+                            <div class="testu-gris-iluna">Pultsua</div>
                             <div class="param-balioa"><?php echo $azkena['pultsua_ppm'] ?? '-'; ?></div>
-                            <div>ppm</div>
+                            <div class="testu-gris-txikia">ppm</div>
                         </div>
                         <div class="param-txartela">
-                            <div>Pisua</div>
+                            <div class="testu-gris-iluna">Pisua</div>
                             <div class="param-balioa"><?php echo $azkena['pisua_kg']; ?></div>
-                            <div>kg</div>
+                            <div class="testu-gris-txikia">kg</div>
                         </div>
                         <div class="param-txartela">
-                            <div>Altuera</div>
+                            <div class="testu-gris-iluna">Altuera</div>
                             <div class="param-balioa"><?php echo $azkena['altuera']; ?></div>
-                            <div>m</div>
+                            <div class="testu-gris-txikia">m</div>
                         </div>
                     </div>
                 <?php else: ?>
-                    <p class="testu-gris-etzana">Paziente honek ez du neurketarik erregistratuta.</p>
+                    <div class="egoera-hutsa">
+                        <p class="testu-gris-etzana">Paziente honek ez du neurketarik erregistratuta.</p>
+                    </div>
                 <?php endif; ?>
             </div>
 
             <!-- Hitzorduen historia -->
             <div class="kutxa-zuria-itzala">
-                <h3 class="izenburu-iluna">Hitzorduen Historia</h3>
+                <h3 class="izenburu-iluna"><img src="../img/svg/calendar-days.svg" alt="" class="ikono-ertaina marjina-esk-10"> Hitzorduen Historia</h3>
                 
                 <?php if(count($hitzorduak) > 0): ?>
                     <div class="hitzordu-zerrenda">
@@ -134,12 +174,12 @@ include_once '../php_includeak/harrera_goiburua.php';
                             ?>
                             <div class="hitzordu-txartela betegarria-15" >
                                 <div class="ordu-tartea etiketa-testua" >
-                                    <?php echo date('Y/m/d', strtotime($h['data'])); ?><br>
+                                    <strong><?php echo date('Y/m/d', strtotime($h['data'])); ?></strong><br>
                                     <span class="testu-gris-txikia"><?php echo date('H:i', strtotime($h['hasiera_ordua'])); ?></span>
                                 </div>
                                 <div class="hitzordu-xehetasunak">
                                     <h4 class="testu-normala">Med. <?php echo htmlspecialchars($h['m_abizenak'] . ' ' . $h['m_izena']); ?></h4>
-                                    <p class="arrazoia"><?php echo htmlspecialchars($h['arrazoia']); ?></p>
+                                    <p class="arrazoia testu-gris-txikia"><?php echo htmlspecialchars($h['arrazoia']); ?></p>
                                 </div>
                                 <div class="hitzordu-egoera">
                                     <span class="egoera-txapa <?php echo $class; ?>"><?php echo htmlspecialchars($h['egoera']); ?></span>
@@ -148,7 +188,9 @@ include_once '../php_includeak/harrera_goiburua.php';
                         <?php endforeach; ?>
                     </div>
                 <?php else: ?>
-                    <p class="testu-gris-etzana">Paziente honek ez du hitzordurik erregistratuta.</p>
+                    <div class="egoera-hutsa">
+                        <p class="testu-gris-etzana">Paziente honek ez du hitzordurik erregistratuta.</p>
+                    </div>
                 <?php endif; ?>
             </div>
         </div>

@@ -72,9 +72,9 @@ include_once '../php_includeak/harrera_goiburua.php';
                         <th class="kurtsore-erakuslea" onclick="ordenatuTaula(6)">Jaiotze Data <img src="../img/svg/sort.svg" alt="" class="ikono-txikia-gardena"></th>
                         <th class="kurtsore-erakuslea" onclick="ordenatuTaula(7)">Telefonoa <img src="../img/svg/sort.svg" alt="" class="ikono-txikia-gardena"></th>
                         <th class="kurtsore-erakuslea" onclick="ordenatuTaula(8)">Helbidea <img src="../img/svg/sort.svg" alt="" class="ikono-txikia-gardena"></th>
-                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(9)">Posta Kodea <img src="../img/svg/sort.svg" alt="" class="ikono-txikia-gardena"></th>
+                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(9)">P.K. <img src="../img/svg/sort.svg" alt="" class="ikono-txikia-gardena"></th>
                         <th class="kurtsore-erakuslea" onclick="ordenatuTaula(10)">Herria <img src="../img/svg/sort.svg" alt="" class="ikono-txikia-gardena"></th>
-                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(11)">Odol Taldea <img src="../img/svg/sort.svg" alt="" class="ikono-txikia-gardena"></th>
+                        <th class="kurtsore-erakuslea" onclick="ordenatuTaula(11)">O.T. <img src="../img/svg/sort.svg" alt="" class="ikono-txikia-gardena"></th>
                         <th class="kurtsore-erakuslea" onclick="ordenatuTaula(12)">Egoera <img src="../img/svg/sort.svg" alt="" class="ikono-txikia-gardena"></th>
                         <th>Ekintzak</th>
                     </tr>

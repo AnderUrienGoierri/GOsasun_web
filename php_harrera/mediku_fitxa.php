@@ -47,11 +47,16 @@ include_once '../php_includeak/harrera_goiburua.php';
     
     <div class="orri-goiburua">
         <h2><img src="../img/svg/stethoscope.svg" alt="" class="ikono-ertaina marjina-esk-10"> Medikuaren Fitxa</h2>
-        <a href="hitzorduak.php?filter_mediku_id=<?php echo $medikua['mediku_id']; ?>" class="botoia botoi-nagusia"><img src="../img/svg/calendar-days.svg" alt="" class="ikono-ertaina-zuria marjina-esk-5"> Ikusi Agenda Osoa</a>
+        <div class="flex-taldea-10">
+            <span class="egoera-etiketa <?php echo $medikua['aktibo'] ? 'egoera-alta' : 'egoera-baja'; ?>">
+                <?php echo $medikua['aktibo'] ? 'Kontu Aktiboa' : 'Kontu Ez-Aktiboa'; ?>
+            </span>
+            <a href="hitzorduak.php?filter_mediku_id=<?php echo $medikua['mediku_id']; ?>" class="botoia botoi-nagusia"><img src="../img/svg/calendar-days.svg" alt="" class="ikono-ertaina-zuria marjina-esk-5"> Ikusi Agenda Osoa</a>
+        </div>
     </div>
 
     <div class="fitxa-edukiontzia">
-        <!-- Ezkerreko zutabea: Datu profesionalak -->
+        <!-- Ezkerreko zutabea: Profila eta Oinarrizko Datuak -->
         <div class="profil-txartela">
             <?php 
             $irudia_bide = htmlspecialchars($medikua['irudia'] ?? 'img/lehenetsia_medikua.png');
@@ -59,25 +64,53 @@ include_once '../php_includeak/harrera_goiburua.php';
                 $irudia_bide = str_replace('img/', 'img/png/', $irudia_bide);
             }
             ?>
-            <img src="../<?php echo $irudia_bide; ?>" alt="Profila" class="profil-irudia">
-            <h3><?php echo htmlspecialchars($medikua['izena'] . ' ' . $medikua['abizenak']); ?></h3>
-            <div class="espezialitatea-txapa"><?php echo htmlspecialchars($medikua['espezialitatea']); ?></div>
+            <img src="../<?php echo $irudia_bide; ?>" alt="Profila" class="profil-irudia-handia">
+            <h3 class="marjina-goi-15"><?php echo htmlspecialchars($medikua['izena'] . ' ' . $medikua['abizenak']); ?></h3>
+            <div class="espezialitatea-txapa marjina-behe-10"><?php echo htmlspecialchars($medikua['espezialitatea']); ?></div>
+            <p class="identifikadorea">ID: #<?php echo $medikua['mediku_id']; ?> | Zkia: <?php echo htmlspecialchars($medikua['elkargokide_zenbakia']); ?></p>
             
             <hr class="banatzaile-marra">
             
             <div class="testua-ezkerrean">
-                <p><strong><img src="../img/svg/stethoscope.svg" alt="" class="ikono-ertaina marjina-esk-5"> Elkargokide Zkia:</strong> <span class="identifikadorea"><?php echo htmlspecialchars($medikua['elkargokide_zenbakia']); ?></span></p>
-                <p><strong><img src="../img/svg/mail.svg" alt="" class="ikono-ertaina marjina-esk-5"> Email:</strong> <?php echo htmlspecialchars($medikua['email'] ?? 'Ez zehaztua'); ?></p>
+                <p class="betegarria-15"><img src="../img/svg/mail.svg" alt="" class="ikono-ertaina marjina-esk-10"><strong>Email:</strong> <br><span class="testu-normala marjina-ezk-30"><?php echo htmlspecialchars($medikua['email']); ?></span></p>
+                <p class="betegarria-15"><img src="../img/svg/phone.svg" alt="" class="ikono-ertaina marjina-esk-10"><strong>Telefonoa:</strong> <br><span class="testu-normala marjina-ezk-30"><?php echo htmlspecialchars($medikua['telefonoa'] ?? 'Ez zehaztua'); ?></span></p>
             </div>
             
             <a href="mediku_editatu.php?id=<?php echo $medikua['mediku_id']; ?>" class="botoia botoi-ertza marjina-goi-zabalera"><img src="../img/svg/pencil.svg" alt="" class="ikono-ertaina marjina-esk-5"> Editatu Datuak</a>
         </div>
 
-        <!-- Eskuineko zutabea: Hitzorduak -->
+        <!-- Eskuineko zutabea: Info Profesionala eta Hitzorduak -->
         <div>
+            <!-- Datu Profesionalak -->
+            <div class="kutxa-zuria marjina-behe-30">
+                <h3 class="izenburu-urdina"><img src="../img/svg/clipboard-pen.svg" alt="" class="ikono-ertaina marjina-esk-10"> Informazio Profesionala</h3>
+                <div class="param-sareta">
+                    <div class="param-txartela">
+                        <div class="testu-gris-iluna">Kontsulta Gela</div>
+                        <div class="param-balioa"><?php echo htmlspecialchars($medikua['kontsulta'] ?? '-'); ?></div>
+                        <div class="testu-gris-txikia">Solairua / Gela</div>
+                    </div>
+                    <div class="param-txartela">
+                        <div class="testu-gris-iluna">Lanaldia</div>
+                        <div class="param-balioa"><?php echo htmlspecialchars($medikua['lanaldia']); ?></div>
+                        <div class="testu-gris-txikia">Mota</div>
+                    </div>
+                    <div class="param-txartela">
+                        <div class="testu-gris-iluna">Jaiotze Data</div>
+                        <div class="param-balioa"><?php echo date('Y/m/d', strtotime($medikua['jaiotze_data'])); ?></div>
+                        <div class="testu-gris-txikia"><?php echo floor((time() - strtotime($medikua['jaiotze_data'])) / 31556926); ?> urte</div>
+                    </div>
+                    <div class="param-txartela">
+                        <div class="testu-gris-iluna">Erabiltzailea Izandakoan</div>
+                        <div class="param-balioa"><?php echo date('Y/m/d', strtotime($medikua['sortze_data'])); ?></div>
+                        <div class="testu-gris-txikia">Alta data</div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Hitzorduen historia -->
             <div class="kutxa-zuria-itzala">
-                <h3 class="izenburu-iluna">Azken eta Datozen Hitzorduak</h3>
+                <h3 class="izenburu-iluna"><img src="../img/svg/calendar-days.svg" alt="" class="ikono-ertaina marjina-esk-10"> Azken eta Datozen Hitzorduak</h3>
                 
                 <?php if(count($hitzorduak) > 0): ?>
                     <div class="hitzordu-zerrenda">
@@ -89,12 +122,12 @@ include_once '../php_includeak/harrera_goiburua.php';
                             ?>
                             <div class="hitzordu-txartela betegarria-15" >
                                 <div class="ordu-tartea etiketa-testua" >
-                                    <?php echo date('Y/m/d', strtotime($h['data'])); ?><br>
+                                    <strong><?php echo date('Y/m/d', strtotime($h['data'])); ?></strong><br>
                                     <span class="testu-gris-txikia"><?php echo date('H:i', strtotime($h['hasiera_ordua'])) . ' - ' . date('H:i', strtotime($h['bukaera_ordua'])); ?></span>
                                 </div>
                                 <div class="hitzordu-xehetasunak">
                                     <h4 class="testu-normala">Paz. <?php echo htmlspecialchars($h['p_abizenak'] . ' ' . $h['p_izena']); ?></h4>
-                                    <p class="arrazoia"><?php echo htmlspecialchars($h['arrazoia']); ?></p>
+                                    <p class="arrazoia testu-gris-txikia"><?php echo htmlspecialchars($h['arrazoia']); ?></p>
                                 </div>
                                 <div class="hitzordu-egoera">
                                     <span class="egoera-txapa <?php echo $class; ?>"><?php echo htmlspecialchars($h['egoera']); ?></span>
@@ -103,7 +136,10 @@ include_once '../php_includeak/harrera_goiburua.php';
                         <?php endforeach; ?>
                     </div>
                 <?php else: ?>
-                    <p class="testu-gris-etzana">Mediku honek ez du hitzordurik esleituta.</p>
+                    <div class="egoera-hutsa">
+                        <img src="../img/svg/calendar.svg" alt="" class="ikono-handia-3 marjina-behe-20">
+                        <p class="testu-gris-etzana">Mediku honek ez du hitzordurik esleituta.</p>
+                    </div>
                 <?php endif; ?>
             </div>
         </div>

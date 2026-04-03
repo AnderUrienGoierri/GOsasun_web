@@ -25,7 +25,7 @@ $gaur = date('Y-m-d');
 $stmtHitzordu = $pdo->prepare("
     SELECT h.data, h.hasiera_ordua, m.izena as mediku_izena, m.abizenak as mediku_abizenak 
     FROM Hitzorduak h
-    JOIN Medikuak m ON h.mediku_id = m.mediku_id
+    JOIN Medikuak m ON h.mediku_id = m.id
     WHERE h.paziente_id = ? AND h.data >= ? AND h.egoera = 'Zain'
     ORDER BY h.data ASC, h.hasiera_ordua ASC LIMIT 1
 ");

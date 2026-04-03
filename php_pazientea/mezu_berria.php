@@ -13,13 +13,13 @@ $stmt_medikuak = $pdo->prepare("
     SELECT m.mediku_id, m.izena, m.abizenak, m.espezialitatea
     FROM Medikuak m
     JOIN Mediku_Paziente mp ON m.mediku_id = mp.mediku_id
-    WHERE mp.paziente_id = ?
+    WHERE mp.id = ?
 ");
 $stmt_medikuak->execute([$erabiltzaile_id]);
 $medikuak = $stmt_medikuak->fetchAll(PDO::FETCH_ASSOC);
 
 // Lortu harrerako langileak (guztiak edo aktiboak)
-$stmt_harrera = $pdo->query("SELECT langile_id, izena, abizenak FROM Harrerako_Langileak");
+$stmt_harrera = $pdo->query("SELECT id as langile_id, izena, abizenak FROM Harrerako_Langileak");
 $harrerakoak = $stmt_harrera->fetchAll(PDO::FETCH_ASSOC);
 
 $errore_mezua = '';

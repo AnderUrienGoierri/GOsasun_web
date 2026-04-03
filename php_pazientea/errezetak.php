@@ -12,7 +12,7 @@ $paziente_id = $_SESSION['erabiltzaile_id'];
 $sql = "SELECT e.*, m.izena, m.abizenak,
         GROUP_CONCAT(CONCAT(b.izena, ' (', eb.dosia, ', ', eb.maiztasuna, ')') SEPARATOR ' | ') as botikak_info 
         FROM Errezetak e
-        JOIN Medikuak m ON e.mediku_id = m.mediku_id
+        JOIN Medikuak m ON e.mediku_id = m.id
         LEFT JOIN errezeta_botikak eb ON e.errezeta_id = eb.errezeta_id
         LEFT JOIN Botikak b ON eb.botika_id = b.botika_id
         WHERE e.paziente_id = :pid 

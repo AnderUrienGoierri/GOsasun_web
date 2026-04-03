@@ -22,7 +22,7 @@ $stmtMedikuak = $pdo->prepare("
     SELECT m.izena, m.abizenak, m.espezialitatea 
     FROM Medikuak m
     JOIN Mediku_Paziente mp ON m.mediku_id = mp.mediku_id
-    WHERE mp.paziente_id = ?
+    WHERE mp.id = ?
 ");
 $stmtMedikuak->execute([$paziente_id]);
 $medikuak = $stmtMedikuak->fetchAll(PDO::FETCH_ASSOC);

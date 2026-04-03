@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 
                 if ($stm_egiaztatu->fetchColumn() == 0) {
                     if ($h_id) {
-                        $stmt = $pdo->prepare("UPDATE Hitzorduak SET mediku_id = ?, data = ?, hasiera_ordua = ?, bukaera_ordua = ?, arrazoia = ? WHERE hitzordu_id = ? AND paziente_id = ? AND egoera = 'Zain'");
+                        $stmt = $pdo->prepare("UPDATE Hitzorduak SET mediku_id = ?, data = ?, hasiera_ordua = ?, bukaera_ordua = ?, arrazoia = ? WHERE id = ? AND paziente_id = ? AND egoera = 'Zain'");
                         $stmt->execute([$m_id, $data, $h_ordua, $b_ordua, $arrazoia, $h_id, $p_id]);
                         $mezua = "Hitzordua aldatu da.";
                     } else {
@@ -56,7 +56,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif (isset($_POST['ezeztatu_hitzordu_id']) || isset($_POST['ezabatu_hitzordua'])) {
         $h_id = $_POST['ezeztatu_hitzordu_id'] ?? $_POST['hitzordu_id_delete'];
         try {
-            $stmt = $pdo->prepare("UPDATE Hitzorduak SET egoera = 'Ezeztatuta' WHERE hitzordu_id = ? AND paziente_id = ? AND egoera = 'Zain'");
+            $stmt = $pdo->prepare("UPDATE Hitzorduak SET egoera = 'Ezeztatuta' WHERE id = ? AND paziente_id = ? AND egoera = 'Zain'");
             $stmt->execute([$h_id, $paziente_id]);
             $mezua = "Hitzordua ezeztatu da.";
         } catch (PDOException $e) {
@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $stmtM = $pdo->prepare("SELECT m.mediku_id, m.izena, m.abizenak, m.espezialitatea 
                        FROM Medikuak m
                        JOIN Mediku_Paziente mp ON m.mediku_id = mp.mediku_id
-                       WHERE mp.paziente_id = ?
+                       WHERE mp.id = ?
                        ORDER BY m.abizenak ASC");
 $stmtM->execute([$paziente_id]);
 $medikuak = $stmtM->fetchAll(PDO::FETCH_ASSOC);
@@ -104,10 +104,10 @@ if ($bista === 'eguna') {
 }
 
 $stmt = $pdo->prepare("
-    SELECT h.hitzordu_id, h.data, h.hasiera_ordua, h.arrazoia, h.egoera, 
+    SELECT h.id as hitzordu_id, h.data, h.hasiera_ordua, h.arrazoia, h.egoera, 
            m.izena as mediku_izena, m.abizenak as mediku_abizenak, m.espezialitatea
     FROM Hitzorduak h
-    JOIN Medikuak m ON h.mediku_id = m.mediku_id
+    JOIN Medikuak m ON h.mediku_id = m.id
     WHERE h.paziente_id = :pid AND h.data BETWEEN :start AND :end
     ORDER BY h.data DESC, h.hasiera_ordua DESC
 ");
