@@ -27,6 +27,11 @@ $stmtMedikuak = $pdo->prepare("
 $stmtMedikuak->execute([$paziente_id]);
 $medikuak = $stmtMedikuak->fetchAll(PDO::FETCH_ASSOC);
 
+if (!$pazientea) {
+    header("Location: index.php?errorea=ez_aurkitua");
+    exit;
+}
+
 $orri_izenburua = "Nire Datuak - GOsasun";
 $uneko_orria = "datuak";
 $css_pertsonalizatua = "pazienteak.css";
@@ -49,6 +54,10 @@ include_once '../php_includeak/paziente_goiburua.php';
                     <span class="balioa"><?php echo htmlspecialchars($pazientea['izena'] . ' ' . $pazientea['abizenak']); ?></span>
                 </div>
                 <div class="datu-eremua">
+                    <span class="etiketa">Sexua:</span>
+                    <span class="balioa"><?php echo htmlspecialchars($pazientea['sexua'] ?? 'Zehaztu gabe'); ?></span>
+                </div>
+                <div class="datu-eremua">
                     <span class="etiketa">NAN:</span>
                     <span class="balioa"><?php echo htmlspecialchars($pazientea['nan']); ?></span>
                 </div>
@@ -64,6 +73,14 @@ include_once '../php_includeak/paziente_goiburua.php';
                     <span class="etiketa">Telefonoa:</span>
                     <span class="balioa"><?php echo htmlspecialchars($pazientea['telefonoa'] ?? 'Zehaztu gabe'); ?></span>
                 </div>
+                <div class="datu-eremua">
+                    <span class="etiketa">Helbidea:</span>
+                    <span class="balioa"><?php echo htmlspecialchars($pazientea['helbidea'] ?? 'Zehaztu gabe'); ?></span>
+                </div>
+                <div class="datu-eremua">
+                    <span class="etiketa">Herria:</span>
+                    <span class="balioa"><?php echo htmlspecialchars($pazientea['herria'] . ' (' . ($pazientea['posta_kodea'] ?? '') . ')'); ?></span>
+                </div>
             </section>
 
             <!-- Egoera Klinikoa -->
@@ -74,7 +91,7 @@ include_once '../php_includeak/paziente_goiburua.php';
                     <span class="balioa"><?php echo htmlspecialchars($pazientea['odol_taldea'] ?? 'Ezezaguna'); ?></span>
                 </div>
                 <div class="datu-eremua">
-                    <span class="etiketa">Azken Altuerra:</span>
+                    <span class="etiketa">Azken Altuera:</span>
                     <span class="balioa"><?php echo htmlspecialchars($pazientea['azken_altuera'] ?? '-'); ?> m</span>
                 </div>
                 <div class="datu-eremua">
