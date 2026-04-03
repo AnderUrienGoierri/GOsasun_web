@@ -29,6 +29,31 @@
     color: var(--gray);
 }
 
+/* Table space-saving adjustments */
+.paziente-taula th {
+    padding: 10px 8px;
+    font-size: 0.75rem;
+}
+
+.paziente-taula td {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.paziente-taula th:nth-child(1), .paziente-taula td:nth-child(1) { width: 50px; text-align: center; } /* Argazkia */
+.paziente-taula th:nth-child(2), .paziente-taula td:nth-child(2) { width: 40px; } /* ID */
+.paziente-taula th:nth-child(4), .paziente-taula td:nth-child(4) { max-width: 150px; } /* Email */
+.paziente-taula th:nth-child(5), .paziente-taula td:nth-child(5) { max-width: 140px; } /* Espezialitatea */
+.paziente-taula th:nth-child(6), .paziente-taula td:nth-child(6) { width: 100px; } /* Elkargokide Zkia. */
+.paziente-taula th:nth-child(7), .paziente-taula td:nth-child(7) { width: 100px; } /* Telefonoa */
+.paziente-taula th:nth-child(8), .paziente-taula td:nth-child(8) { width: 70px; } /* Kontsulta */
+.paziente-taula th:nth-child(9), .paziente-taula td:nth-child(9) { width: 80px; } /* Lanaldia */
+.paziente-taula th:nth-child(10), .paziente-taula td:nth-child(10) { width: 130px; text-align: center; } /* Ekintzak */
+
 /* Medikuaren Xehetasun Ikuspegia (Fitxa) */
 .fitxa-edukiontzia {
     display: grid;

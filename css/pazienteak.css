@@ -67,18 +67,36 @@
     color: var(--text-main);
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     letter-spacing: 0.5px;
-    padding: 15px 20px;
+    padding: 8px 6px;
     border-bottom: 2px solid var(--border-color);
     text-align: left;
 }
 
 .paziente-taula td, .datu-taula td {
-    padding: 15px 20px;
+    padding: 8px 6px;
     border-bottom: 1px solid var(--border-color);
     vertical-align: middle;
+    font-size: 0.8rem;
+    max-width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
+
+/* Specific column adjustments to save more space */
+.paziente-taula th:nth-child(1), .paziente-taula td:nth-child(1) { width: 45px; text-align: center; } /* Argazkia */
+.paziente-taula th:nth-child(2), .paziente-taula td:nth-child(2) { width: 35px; } /* ID */
+.paziente-taula th:nth-child(3), .paziente-taula td:nth-child(3) { max-width: 140px; } /* Izena/Abizenak */
+.paziente-taula th:nth-child(4), .paziente-taula td:nth-child(4) { max-width: 120px; } /* Email */
+.paziente-taula th:nth-child(5), .paziente-taula td:nth-child(5) { width: 85px; } /* NAN */
+.paziente-taula th:nth-child(6), .paziente-taula td:nth-child(6) { width: 70px; } /* Sexua */
+.paziente-taula th:nth-child(7), .paziente-taula td:nth-child(7) { width: 85px; } /* Jaiotze Data */
+.paziente-taula th:nth-child(8), .paziente-taula td:nth-child(8) { width: 90px; } /* Telefonoa */
+.paziente-taula th:nth-child(9), .paziente-taula td:nth-child(9) { max-width: 130px; } /* Helbidea */
+.paziente-taula th:nth-child(10), .paziente-taula td:nth-child(10) { width: 65px; } /* Posta Kodea */
+.paziente-taula th:nth-child(11), .paziente-taula td:nth-child(11) { width: 100px; text-align: center; } /* Ekintzak */
 
 .paziente-taula tbody tr:hover, .datu-taula tbody tr:hover {
     background-color: rgba(67, 97, 238, 0.02);
@@ -93,11 +111,6 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.identifikadorea {
-    font-weight: 600;
-    color: #4361ee;
-    font-size: 0.9rem;
-}
 
 .egoera-alta, .egoera-aktiboa { background-color: #d1fae5; color: #065f46; }
 .egoera-baja, .egoera-ez-aktiboa { background-color: #fee2e2; color: #991b1b; }

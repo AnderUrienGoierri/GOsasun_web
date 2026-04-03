@@ -69,7 +69,7 @@ VALUES -- Medikuak (1 - 50)
     (49, 'mendi.j@gosasun.eus', '1234', 1, 1),
     (50, 'haran.k@gosasun.eus', '1234', 1, 1),
     -- Pazienteak (51 - 100)
-    (51, 'ander.m@paziente.eus', '1234', 3, 1),
+    (51, 'ander.m@paziente.eus', '1234', 2, 1),
     (52, 'maite.g@paziente.eus', '1234', 2, 1),
     (53, 'mikel.u@paziente.eus', '1234', 2, 1),
     (54, 'nerea.a@paziente.eus', '1234', 2, 1),

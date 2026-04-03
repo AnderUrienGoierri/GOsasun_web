@@ -49,7 +49,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     try {
         // Lortu pazientearen datu pertsonalak XML goibururako
-        $paz_stmt = $pdo->prepare("SELECT izena, abizenak, nan FROM Pazienteak WHERE paziente_id = ?");
+        $paz_stmt = $pdo->prepare("SELECT izena, abizenak, nan FROM Pazienteak WHERE id = ?");
         $paz_stmt->execute([$jomuga_paziente_id]);
         $paziente_info = $paz_stmt->fetch(PDO::FETCH_ASSOC);
         
