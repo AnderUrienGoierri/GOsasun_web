@@ -18,14 +18,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $jaiotze_data = $_POST['jaiotze_data'] ?? null;
     $telefonoa = $_POST['telefonoa'] ?? null;
     $odol_taldea = $_POST['odol_taldea'] ?? null;
+    $hizkuntza = $_POST['hizkuntza'] ?? 'Euskara';
 
     if ($nan && $izena && $abizenak && $email) {
         try {
             $pdo->beginTransaction();
 
             // 1. Erabiltzailea sortu
-            $stmtUser = $pdo->prepare("INSERT INTO Erabiltzaileak (email, pasahitza, rol_id, aktibo) VALUES (?, ?, 2, 1)");
-            $stmtUser->execute([$email, $pasahitza]);
+            $stmtUser = $pdo->prepare("INSERT INTO Erabiltzaileak (email, pasahitza, rol_id, hizkuntza, aktibo) VALUES (?, ?, 2, ?, 1)");
+            $stmtUser->execute([$email, $pasahitza, $hizkuntza]);
             $id_berria = $pdo->lastInsertId();
 
             // 2. Pazientearen datuak sortu
@@ -103,6 +104,15 @@ include_once '../php_includeak/harrera_goiburua.php';
                     <div class="informazio-taldea">
                         <label for="pasahitza">Pasahitza (lehenetsia: 1234)</label>
                         <input type="password" id="pasahitza" name="pasahitza" class="inprimaki-kontrola" value="1234">
+                    </div>
+                    <div class="informazio-taldea">
+                        <label for="hizkuntza">Hizkuntza</label>
+                        <select id="hizkuntza" name="hizkuntza" class="inprimaki-kontrola">
+                            <option value="Euskara">Euskara</option>
+                            <option value="Gaztelania">Gaztelania</option>
+                            <option value="Ingelesa">Ingelesa</option>
+                            <option value="Nederlandera">Nederlandera</option>
+                        </select>
                     </div>
                 </div>
 

@@ -16,6 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email =        $_POST['email']                ?? '';
     $pasahitza =    $_POST['pasahitza']            ?? '';
     $pasahitza2 =   $_POST['pasahitza_errepikatu'] ?? '';
+    $hizkuntza =    $_POST['hizkuntza']            ?? 'Euskara';
 
     if (empty($izena) || empty($abizenak) || empty($email) || empty($pasahitza) || empty($pasahitza2)) {
         $errorea = "Eremu guztiak bete behar dira.";
@@ -26,9 +27,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $pdo->beginTransaction();
 
             // 1. Sortu erabiltzailea
-            // Rolaren IDa Harrera da (4)
-            $stmt = $pdo->prepare("INSERT INTO Erabiltzaileak (email, pasahitza, rol_id, aktibo) VALUES (?, ?, 4, 1)");
-            $stmt->execute([$email, $pasahitza]); // Oharra: sistemak testu laua darabil bistan (GOsasun_DB_data.sql-en '1234') - ez segurua baina bat egiteko 
+            // Rolaren IDa Harrera da (3)
+            $stmt = $pdo->prepare("INSERT INTO Erabiltzaileak (email, pasahitza, rol_id, hizkuntza, aktibo) VALUES (?, ?, 3, ?, 1)");
+            $stmt->execute([$email, $pasahitza, $hizkuntza]); 
             
             $berri_id = $pdo->lastInsertId();
 
@@ -90,6 +91,15 @@ include_once '../php_includeak/harrera_goiburua.php';
                     <label>Errepikatu Pasahitza</label>
                     <input type="password" name="pasahitza_errepikatu" class="inprimaki-kontrola" required>
                 </div>
+                <div class="inprimaki-taldea zutabe-osoa">
+                    <label>Hizkuntza</label>
+                    <select name="hizkuntza" class="inprimaki-kontrola">
+                        <option value="Euskara">Euskara</option>
+                        <option value="Gaztelania">Gaztelania</option>
+                        <option value="Ingelesa">Ingelesa</option>
+                        <option value="Nederlandera">Nederlandera</option>
+                    </select>
+                </div>
             </div>
             
             <div class="marjina-goi-20">
@@ -100,5 +110,3 @@ include_once '../php_includeak/harrera_goiburua.php';
 </main>
 
 <?php include_once '../php_includeak/harrera_footer.php'; ?>
-
-

@@ -13,8 +13,7 @@ CREATE TABLE IF NOT EXISTS erabiltzaileak (
     email VARCHAR(100) NOT NULL UNIQUE,
     pasahitza VARCHAR(255) NOT NULL,
     rol_id INT NOT NULL,
-    hizkuntza VARCHAR(50) DEFAULT 'Euskara',
-    ezarpenak JSON NULL,
+    hizkuntza ENUM('Euskara', 'Gaztelania', 'Ingelesa', 'Nederlandera') DEFAULT 'Euskara',
     aktibo BOOLEAN DEFAULT TRUE,
     sortze_data TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (rol_id) REFERENCES Rolak(rol_id) ON DELETE RESTRICT ON UPDATE CASCADE

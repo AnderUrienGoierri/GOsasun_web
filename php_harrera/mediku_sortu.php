@@ -16,13 +16,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $elkargokide = $_POST['elkargokide_zenbakia'] ?? '';
     $espezialitatea = $_POST['espezialitatea'] ?? '';
     $telefonoa = $_POST['telefonoa'] ?? null;
+    $hizkuntza = $_POST['hizkuntza'] ?? 'Euskara';
 
     if ($izena && $abizenak && $email && $elkargokide) {
         try {
             $pdo->beginTransaction();
 
-            $stmtUser = $pdo->prepare("INSERT INTO Erabiltzaileak (email, pasahitza, rol_id, aktibo) VALUES (?, ?, 1, 1)");
-            $stmtUser->execute([$email, $pasahitza]);
+            $stmtUser = $pdo->prepare("INSERT INTO Erabiltzaileak (email, pasahitza, rol_id, hizkuntza, aktibo) VALUES (?, ?, 1, ?, 1)");
+            $stmtUser->execute([$email, $pasahitza, $hizkuntza]);
             $id_berria = $pdo->lastInsertId();
 
             $stmtMediku = $pdo->prepare("INSERT INTO Medikuak (mediku_id, izena, abizenak, elkargokide_zenbakia, espezialitatea, telefonoa) VALUES (?, ?, ?, ?, ?, ?)");
@@ -78,6 +79,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="informazio-taldea"><label>Espezialitatea</label><input type="text" name="espezialitatea" class="inprimaki-kontrola"></div>
                     <div class="informazio-taldea"><label>Telefonoa</label><input type="text" name="telefonoa" class="inprimaki-kontrola"></div>
                     <div class="informazio-taldea"><label>Pasahitza</label><input type="password" name="pasahitza" class="inprimaki-kontrola" value="1234"></div>
+                    <div class="informazio-taldea">
+                        <label>Hizkuntza</label>
+                        <select name="hizkuntza" class="inprimaki-kontrola">
+                            <option value="Euskara">Euskara</option>
+                            <option value="Gaztelania">Gaztelania</option>
+                            <option value="Ingelesa">Ingelesa</option>
+                            <option value="Nederlandera">Nederlandera</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="botoi-taldea marjina-goi-20" >
                     <button type="submit" class="botoia botoi-nagusia">Gorde Medikua</button>
