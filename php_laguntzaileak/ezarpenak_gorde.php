@@ -10,30 +10,69 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // 'osasun_zentroa' bada, beti globala (config.xml)
     // 'orokorra' bada eta logeatuta badago, erabiltzailearena
+    // 'orokorra' bada eta EZ badago logeatuta, saio (session) askean gorde bakarrik
+    if ($form_type === 'orokorra' && !isset($_SESSION['erabiltzaile_id'])) {
+        if ($ekintza === 'reset') {
+            unset($_SESSION['guest_konfig']);
+            $nondik = $_POST['nondik'] ?? '';
+            if (!empty($nondik)) {
+                $separatzailea = (strpos($nondik, '?') === false) ? '?' : '&';
+                header("Location: " . $nondik . $separatzailea . "ezarpenak_reset=1");
+            } else {
+                header("Location: ../index.php?ezarpenak_reset=1");
+            }
+            exit();
+        } else {
+            $_SESSION['guest_konfig'] = [
+                'hizkuntza' => $_POST['hizkuntza'] ?? 'eu',
+                'kolore_nagusia' => $_POST['kolore_nagusia'] ?? '#4361ee',
+                'bigarren_kolorea' => $_POST['bigarren_kolorea'] ?? '#3f37c9',
+                'footer_kolorea' => $_POST['footer_kolorea'] ?? '#2b2d42',
+                'gaia' => $_POST['gaia'] ?? 'argia'
+            ];
+            $nondik = $_POST['nondik'] ?? '';
+            if (!empty($nondik)) {
+                $separatzailea = (strpos($nondik, '?') === false) ? '?' : '&';
+                header("Location: " . $nondik . $separatzailea . "ezarpenak_gordeta=1");
+            } else {
+                header("Location: ../index.php?ezarpenak_gordeta=1");
+            }
+            exit();
+        }
+    }
+
     if ($form_type === 'orokorra' && isset($_SESSION['erabiltzaile_id'])) {
         $xml_path = "../xml_konfigurazioa/konfig_erabiltzailea_" . $_SESSION['erabiltzaile_id'] . ".xml";
     }
 
-    // Ekintza 'reset' bada, hasierako balioak ezarri (Basque, Light, Blue)
+    // Ekintza 'reset' bada
     if ($ekintza === 'reset') {
-        $hizk = 'eu'; 
-        $kol_nag = '#4361ee'; 
-        $big_kol = '#3f37c9'; 
-        $foot_kol = '#2b2d42'; 
-        $gaia = 'argia';
+        if ($form_type === 'orokorra' && isset($_SESSION['erabiltzaile_id'])) {
+            // Pertsonala: ezabatu XML fitxategi pertsonala, konfigurazio orokorra jasotzeko (hereditatez)
+            if (file_exists($xml_path)) {
+                unlink($xml_path);
+            }
+        } else {
+            // Globala ('osasun_zentroa'): hasierako balioak ezarri (Basque, Light, Blue)
+            $hizk = 'eu'; 
+            $kol_nag = '#4361ee'; 
+            $big_kol = '#3f37c9'; 
+            $foot_kol = '#2b2d42'; 
+            $gaia = 'argia';
 
-        $xml = new DOMDocument("1.0", "UTF-8");
-        $xml->formatOutput = true;
-        $root = $xml->createElement("konfigurazioa");
-        $xml->appendChild($root);
-     
-        $root->appendChild($xml->createElement("hizkuntza", $hizk));
-        $root->appendChild($xml->createElement("kolore_nagusia", $kol_nag));
-        $root->appendChild($xml->createElement("bigarren_kolorea", $big_kol));
-        $root->appendChild($xml->createElement("footer_kolorea", $foot_kol));
-        $root->appendChild($xml->createElement("gaia", $gaia));
-        
-        $xml->save($xml_path);
+            $xml = new DOMDocument("1.0", "UTF-8");
+            $xml->formatOutput = true;
+            $root = $xml->createElement("konfigurazioa");
+            $xml->appendChild($root);
+         
+            $root->appendChild($xml->createElement("hizkuntza", $hizk));
+            $root->appendChild($xml->createElement("kolore_nagusia", $kol_nag));
+            $root->appendChild($xml->createElement("bigarren_kolorea", $big_kol));
+            $root->appendChild($xml->createElement("footer_kolorea", $foot_kol));
+            $root->appendChild($xml->createElement("gaia", $gaia));
+            
+            $xml->save($xml_path);
+        }
         
         $nondik = $_POST['nondik'] ?? '';
         if (!empty($nondik)) {
@@ -70,13 +109,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
  
-    if ($form_type === 'orokorra') {
-        $hizk = $_POST['hizkuntza'] ?? $hizk;
-        $kol_nag = $_POST['kolore_nagusia'] ?? $kol_nag;
-        $big_kol = $_POST['bigarren_kolorea'] ?? $big_kol;
-        $foot_kol = $_POST['footer_kolorea'] ?? $foot_kol;
-        $gaia = $_POST['gaia'] ?? $gaia;
-    }
+    // Formulario mota edozein izanda ere, bidalitako datuak jaso
+    $hizk = $_POST['hizkuntza'] ?? $hizk;
+    $kol_nag = $_POST['kolore_nagusia'] ?? $kol_nag;
+    $big_kol = $_POST['bigarren_kolorea'] ?? $big_kol;
+    $foot_kol = $_POST['footer_kolorea'] ?? $foot_kol;
+    $gaia = $_POST['gaia'] ?? $gaia;
  
     // Log values right before saving
  

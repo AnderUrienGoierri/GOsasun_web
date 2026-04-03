@@ -23,6 +23,30 @@ $kolore_nagusia_def = $konf['kolore_nagusia'];
 $bigarren_kolorea_def = $konf['bigarren_kolorea'];
 $footer_kolorea_def = $konf['footer_kolorea'];
 $gaia_def = $konf['gaia'];
+
+// Zentroaren datu globalak zuzenean irakurri, erabiltzailearen pertsonalizazioak ez nahasteko
+$konf_globala = [
+    'hizkuntza' => 'eu',
+    'kolore_nagusia' => '#4361ee',
+    'bigarren_kolorea' => '#3f37c9',
+    'footer_kolorea' => '#2b2d42',
+    'gaia' => 'argia'
+];
+$global_xml_path = '../xml_konfigurazioa/konfigurazio_orokorra.xml';
+if (file_exists($global_xml_path)) {
+    $xml_conf_globala = simplexml_load_file($global_xml_path);
+    if ($xml_conf_globala) {
+        $konf_globala['hizkuntza'] = (string)$xml_conf_globala->hizkuntza ?: $konf_globala['hizkuntza'];
+        $konf_globala['kolore_nagusia'] = (string)$xml_conf_globala->kolore_nagusia ?: $konf_globala['kolore_nagusia'];
+        $konf_globala['bigarren_kolorea'] = (string)$xml_conf_globala->bigarren_kolorea ?: $konf_globala['bigarren_kolorea'];
+        $konf_globala['footer_kolorea'] = (string)$xml_conf_globala->footer_kolorea ?: $konf_globala['footer_kolorea'];
+        $konf_globala['gaia'] = (string)$xml_conf_globala->gaia ?: $konf_globala['gaia'];
+    }
+}
+$hizkuntza_glob = $konf_globala['hizkuntza'];
+$kolore_nagusia_glob = $konf_globala['kolore_nagusia'];
+$bigarren_kolorea_glob = $konf_globala['bigarren_kolorea'];
+$gaia_glob = $konf_globala['gaia'];
 ?>
 
 <main class="panel-nagusia">
@@ -135,28 +159,28 @@ $gaia_def = $konf['gaia'];
                 <div class="inprimaki-taldea">
                     <label><?php echo $itzulpenak->ezarpenak->hizkuntza; ?></label>
                     <select name="hizkuntza" class="inprimaki-kontrola">
-                        <option value="eu" <?php echo ($hizkuntza_def === 'eu') ? 'selected' : ''; ?>><?php echo $itzulpenak->ezarpenak->hizkuntza_eu; ?></option>
-                        <option value="es" <?php echo ($hizkuntza_def === 'es') ? 'selected' : ''; ?>><?php echo $itzulpenak->ezarpenak->hizkuntza_es; ?></option>
-                        <option value="en" <?php echo ($hizkuntza_def === 'en') ? 'selected' : ''; ?>><?php echo $itzulpenak->ezarpenak->hizkuntza_en; ?></option>
-                        <option value="nl" <?php echo ($hizkuntza_def === 'nl') ? 'selected' : ''; ?>><?php echo $itzulpenak->ezarpenak->hizkuntza_nl; ?></option>
+                        <option value="eu" <?php echo ($hizkuntza_glob === 'eu') ? 'selected' : ''; ?>><?php echo $itzulpenak->ezarpenak->hizkuntza_eu; ?></option>
+                        <option value="es" <?php echo ($hizkuntza_glob === 'es') ? 'selected' : ''; ?>><?php echo $itzulpenak->ezarpenak->hizkuntza_es; ?></option>
+                        <option value="en" <?php echo ($hizkuntza_glob === 'en') ? 'selected' : ''; ?>><?php echo $itzulpenak->ezarpenak->hizkuntza_en; ?></option>
+                        <option value="nl" <?php echo ($hizkuntza_glob === 'nl') ? 'selected' : ''; ?>><?php echo $itzulpenak->ezarpenak->hizkuntza_nl; ?></option>
                     </select>
                 </div>
 
                 <div class="inprimaki-taldea">
                     <label><?php echo $itzulpenak->ezarpenak->kolore_nagusia; ?></label>
-                    <input type="color" name="kolore_nagusia" value="<?php echo htmlspecialchars($kolore_nagusia_def); ?>" class="inprimaki-kontrola sarrera-altuera-50">
+                    <input type="color" name="kolore_nagusia" value="<?php echo htmlspecialchars($kolore_nagusia_glob); ?>" class="inprimaki-kontrola sarrera-altuera-50">
                 </div>
 
                 <div class="inprimaki-taldea">
                     <label><?php echo $itzulpenak->ezarpenak->bigarren_kolorea; ?></label>
-                    <input type="color" name="bigarren_kolorea" value="<?php echo htmlspecialchars($bigarren_kolorea_def); ?>" class="inprimaki-kontrola sarrera-altuera-50">
+                    <input type="color" name="bigarren_kolorea" value="<?php echo htmlspecialchars($bigarren_kolorea_glob); ?>" class="inprimaki-kontrola sarrera-altuera-50">
                 </div>
 
                 <div class="inprimaki-taldea">
                     <label><?php echo $itzulpenak->ezarpenak->itxura; ?></label>
                     <select name="gaia" class="inprimaki-kontrola">
-                        <option value="argia" <?php echo ($gaia_def === 'argia') ? 'selected' : ''; ?>><?php echo $itzulpenak->ezarpenak->gaia_argia; ?></option>
-                        <option value="iluna" <?php echo ($gaia_def === 'iluna') ? 'selected' : ''; ?>><?php echo $itzulpenak->ezarpenak->gaia_iluna; ?></option>
+                        <option value="argia" <?php echo ($gaia_glob === 'argia') ? 'selected' : ''; ?>><?php echo $itzulpenak->ezarpenak->gaia_argia; ?></option>
+                        <option value="iluna" <?php echo ($gaia_glob === 'iluna') ? 'selected' : ''; ?>><?php echo $itzulpenak->ezarpenak->gaia_iluna; ?></option>
                     </select>
                 </div>
 

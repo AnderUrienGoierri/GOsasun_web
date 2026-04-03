@@ -41,6 +41,16 @@ function kargatuKonfigurazioa($publikoa = false) {
         }
     }
 
+    // Logeatu gabe dauden erabiltzaileek egindako ezarpenak saioan bakarrik gordetzen ditugu
+    // Beraz, konfigurazio orokorra kargatu ondoren, saio-balio hauekin gainidatziko ditugu euren erabilera esklusiborako.
+    if (!isset($_SESSION['erabiltzaile_id']) && isset($_SESSION['guest_konfig'])) {
+        $konf['hizkuntza'] = $_SESSION['guest_konfig']['hizkuntza'];
+        $konf['kolore_nagusia'] = $_SESSION['guest_konfig']['kolore_nagusia'];
+        $konf['bigarren_kolorea'] = $_SESSION['guest_konfig']['bigarren_kolorea'];
+        $konf['footer_kolorea'] = $_SESSION['guest_konfig']['footer_kolorea'];
+        $konf['gaia'] = $_SESSION['guest_konfig']['gaia'];
+    }
+
     return $konf;
 }
 ?>
