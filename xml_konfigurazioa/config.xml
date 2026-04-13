@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <konfigurazioa>
-  <hizkuntza>eu</hizkuntza>
-  <kolore_nagusia>#4450ee</kolore_nagusia>
+  <hizkuntza>es</hizkuntza>
+  <kolore_nagusia>#4361ee</kolore_nagusia>
   <bigarren_kolorea>#3f37c9</bigarren_kolorea>
-  <footer_kolorea>#1f277a</footer_kolorea>
+  <footer_kolorea>#2b2d42</footer_kolorea>
   <gaia>iluna</gaia>
   <osasun_zentroa>
     <sistema_izena>GOsasun</sistema_izena>

@@ -82,6 +82,21 @@ if (file_exists($hizkuntza_xml_path)) {
         echo ".datu-taula tbody tr:hover, .paziente-taula tbody tr:hover { background-color: rgba(255, 255, 255, 0.05) !important; }\n";
         echo "a { color: #4361ee !important; }\n";
         echo "a:hover { color: #6b84ff !important; }\n";
+        echo ".logo-irudia { mix-blend-mode: normal !important; height: 85px !important; margin: -10px 0 !important; }\n";
+        
+        // Modal ezarpenak (XML configuratzailea) - modo oscuro
+        echo ".modal-edukia { background-color: #1e1e2e !important; color: #e0e0e0 !important; box-shadow: 0 10px 40px rgba(0,0,0,0.7) !important; }\n";
+        echo ".modal-goiburua { background-color: #252540 !important; border-bottom-color: #333355 !important; }\n";
+        echo ".modal-goiburua h3 { color: #ffffff !important; }\n";
+        echo ".modal-gorputza { background-color: #1e1e2e !important; }\n";
+        echo ".modal-gorputza label { color: #cccccc !important; }\n";
+        echo ".modal-gorputza .testu-grisa { color: #aaaaaa !important; }\n";
+        echo ".modal-gorputza select.inprimaki-kontrola, .modal-gorputza input.inprimaki-kontrola { background-color: #2a2a3e !important; color: #e0e0e0 !important; border-color: #444466 !important; }\n";
+        echo ".itxi-modala { color: #aaaaaa !important; }\n";
+        echo ".itxi-modala:hover { color: #ff6b6b !important; }\n";
+        echo ".modal-wrapper { background-color: rgba(0,0,0,0.75) !important; }\n";
+        // Alerta berde iluna (arrakasta mezua)
+        echo ".alerta-arrakasta { background-color: #1a3d2b !important; color: #6fcf97 !important; border-color: #2d6a4f !important; }\n";
     }
     echo "</style>\n";
     ?>
@@ -90,21 +105,21 @@ if (file_exists($hizkuntza_xml_path)) {
     <header class="panel-goiburua">
         <div class="logoa">
             <a href="index.php" class="logo-esteka">
-                <img src="<?php echo $bide_absolutua; ?>img/GOsasun_logoa.png" alt="GOsasun" class="logo-irudia">
+                <img src="<?php echo $bide_absolutua; ?>img/<?php echo ($gaia_def == 'iluna') ? 'GOsasun_logoa-removebg-preview-white.png' : 'GOsasun_logoa.png'; ?>" alt="GOsasun" class="logo-irudia">
                 <span class="logo-etiketa">Harrera</span>
             </a>
         </div>
         <button class="menu-botoia" aria-label="Ireki menua"><img src="<?php echo $bide_absolutua; ?>img/list.svg" alt="" class="ikono-24px"></button>
         <ul class="nabigazio-estekak">
-            <li><a href="index.php" class="<?php echo ($uneko_orria === 'index') ? 'aktiboa' : ''; ?>">Hasiera</a></li>
-            <li><a href="pazienteak.php" class="<?php echo ($uneko_orria === 'pazienteak') ? 'aktiboa' : ''; ?>">Pazienteak</a></li>
-            <li><a href="medikuak.php" class="<?php echo ($uneko_orria === 'medikuak') ? 'aktiboa' : ''; ?>">Medikuak</a></li>
-            <li><a href="hitzorduak.php" class="<?php echo ($uneko_orria === 'hitzorduak') ? 'aktiboa' : ''; ?>">Hitzorduak</a></li>
-            <li><a href="mezuak.php" class="<?php echo ($uneko_orria === 'mezuak') ? 'aktiboa' : ''; ?>">Mezuak</a></li>
-            <li><a href="kanpoko_mezuak.php" class="<?php echo ($uneko_orria === 'kanpoko_mezuak') ? 'aktiboa' : ''; ?>">Kanpoko Mezuak</a></li>
-            <li><a href="harrerako_langileak.php" class="<?php echo ($uneko_orria === 'harrerako_langileak') ? 'aktiboa' : ''; ?>">Harrerako Langileak</a></li>
-            <li><a href="#" id="irekiEzarpenakModala">Ezarpenak</a></li>
-            <li><a href="<?php echo $bide_absolutua; ?>php_laguntzaileak/logout.php" class="botoia botoi-ertza arrisku-kolorea">Saioa Itxi</a></li>
+            <li><a href="index.php" class="<?php echo ($uneko_orria === 'index') ? 'aktiboa' : ''; ?>"><?php echo $itzulpenak->menua_harrera->hasiera ?? 'Hasiera'; ?></a></li>
+            <li><a href="pazienteak.php" class="<?php echo ($uneko_orria === 'pazienteak') ? 'aktiboa' : ''; ?>"><?php echo $itzulpenak->menua_harrera->pazienteak ?? 'Pazienteak'; ?></a></li>
+            <li><a href="medikuak.php" class="<?php echo ($uneko_orria === 'medikuak') ? 'aktiboa' : ''; ?>"><?php echo $itzulpenak->menua_harrera->medikuak ?? 'Medikuak'; ?></a></li>
+            <li><a href="hitzorduak.php" class="<?php echo ($uneko_orria === 'hitzorduak') ? 'aktiboa' : ''; ?>"><?php echo $itzulpenak->menua_harrera->hitzorduak ?? 'Hitzorduak'; ?></a></li>
+            <li><a href="mezuak.php" class="<?php echo ($uneko_orria === 'mezuak') ? 'aktiboa' : ''; ?>"><?php echo $itzulpenak->menua_harrera->mezuak ?? 'Mezuak'; ?></a></li>
+            <li><a href="kanpoko_mezuak.php" class="<?php echo ($uneko_orria === 'kanpoko_mezuak') ? 'aktiboa' : ''; ?>"><?php echo $itzulpenak->menua_harrera->kanpoko_mezuak ?? 'Kanpoko Mezuak'; ?></a></li>
+            <li><a href="harrerako_langileak.php" class="<?php echo ($uneko_orria === 'harrerako_langileak') ? 'aktiboa' : ''; ?>"><?php echo $itzulpenak->menua_harrera->harrerako_langileak ?? 'Harrerako Langileak'; ?></a></li>
+            <li><a href="#" id="irekiEzarpenakModala"><?php echo $itzulpenak->menua->ezarpenak ?? 'Ezarpenak'; ?></a></li>
+            <li><a href="<?php echo $bide_absolutua; ?>php_laguntzaileak/logout.php" class="botoia botoi-ertza arrisku-kolorea"><?php echo $itzulpenak->erabiltzaile_panela->saioa_itxi ?? 'Saioa Itxi'; ?></a></li>
         </ul>
     </header>
 

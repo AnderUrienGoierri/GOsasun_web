@@ -112,6 +112,7 @@
         <kanpoko_mezuak_testua>Irakurri webgune publikoko kontsultak.</kanpoko_mezuak_testua>
         <harrerako_langileak>Harrerako Langileak</harrerako_langileak>
         <harrerako_langileak_testua>Kudeatu harrerako langileak.</harrerako_langileak_testua>
+        <ezarpenak_testua>Konfiguratu sistemaren izena, hitzordu mugak eta ordutegiak XML bidez.</ezarpenak_testua>
     </menua_harrera>
     <login>
         <izenburua>Saioa Hasi</izenburua>

@@ -27,8 +27,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $form_type = $_POST['form_type'] ?? 'orokorra';
+    $ekintza   = $_POST['ekintza']   ?? '';
 
-    if ($form_type === 'orokorra') {
+    // ── RESET: jatorrizko balioak berrezarri ──────────────────────────────
+    if ($ekintza === 'reset') {
+        $hizk     = 'eu';
+        $kol_nag  = '#4361ee';
+        $big_kol  = '#3f37c9';
+        $foot_kol = '#2b2d42';
+        $gaia     = 'argia';
+        // Osasun-zentroko datuak XML-tik mantentzen ditugu (soilik itxura eta hizkuntza berrezartzen ditugu)
+        // $sis_ize, $hitz_muga, $ordu_ireki, $ordu_itxi, $mant aldatu gabe geratzen dira
+    }
+    // ── ALDAKETAK: erabiltzaileak bidalitako balioak ──────────────────────
+    elseif ($form_type === 'orokorra') {
         $hizk = $_POST['hizkuntza'] ?? $hizk;
         $kol_nag = $_POST['kolore_nagusia'] ?? $kol_nag;
         $big_kol = $_POST['bigarren_kolorea'] ?? $big_kol;
@@ -65,10 +77,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $xml->save($xml_path);
 
+    $nondik   = $_POST['nondik']   ?? '';
     $itzulera = $_POST['itzulera'] ?? 'orokorra';
 
+    // Bideratze logika: 'nondik' lehentasuna dauka beti (logeatutako erabiltzaileak orri berean geratzeko)
     if ($form_type === 'osasun_zentroa') {
+        // Osasun-zentroko inprimakia beti bere orrira bidaltzen da
         header("Location: ../php_harrera/ezarpenak.php?ezarpenak_gordeta=1");
+    } elseif (!empty($nondik)) {
+        // Erabiltzailea jatorrizko orrialdera itzultzen da (sesioa aktibo badago)
+        $jokalekua = (strpos($nondik, '?') !== false)
+            ? $nondik . '&ezarpenak_gordeta=1'
+            : $nondik . '?ezarpenak_gordeta=1';
+        header("Location: " . $jokalekua);
     } elseif ($itzulera === 'medikua') {
         header("Location: ../php_medikua/ezarpenak.php?ezarpenak_gordeta=1");
     } elseif ($itzulera === 'pazientea') {

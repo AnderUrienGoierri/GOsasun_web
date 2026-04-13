@@ -713,7 +713,7 @@ body {
     gap: 10px;
 }
 .hondo-arrakasta {
-    background-color: var(--success-color) !important;
+    background-color: var(--success-color);
 }
 
 .map-container {

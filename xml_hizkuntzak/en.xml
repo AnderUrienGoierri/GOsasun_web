@@ -112,6 +112,7 @@
         <kanpoko_mezuak_testua>Read inquiries from the public website.</kanpoko_mezuak_testua>
         <harrerako_langileak>Reception Staff</harrerako_langileak>
         <harrerako_langileak_testua>Manage reception staff.</harrerako_langileak_testua>
+        <ezarpenak_testua>Configure the system name, appointment limits and schedules via XML.</ezarpenak_testua>
     </menua_harrera>
     <login>
         <izenburua>Sign In</izenburua>

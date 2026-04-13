@@ -112,6 +112,7 @@
         <kanpoko_mezuak_testua>Leer consultas del sitio web público.</kanpoko_mezuak_testua>
         <harrerako_langileak>Personal de Recepción</harrerako_langileak>
         <harrerako_langileak_testua>Gestionar personal de recepción.</harrerako_langileak_testua>
+        <ezarpenak_testua>Configura el nombre del sistema, límites de citas y horarios mediante XML.</ezarpenak_testua>
     </menua_harrera>
     <login>
         <izenburua>Iniciar Sesión</izenburua>
