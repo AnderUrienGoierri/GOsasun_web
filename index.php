@@ -79,11 +79,6 @@ include 'php_includeak/goiburua.php';
                 <h3>Hitzorduak</h3>
                 <p>Ikusi zure hurrengo hitzorduak era erraz eta azkar batean.</p>
             </div>
-            <div class="ezaugarri-txartela">
-                <div class="ezaugarri-ikonoa"><img src="img/svg/message-square.svg" alt="Komunikazio Zuzena"></div>
-                <h3>Komunikazio Zuzena</h3>
-                <p>Zure medikuarekin harremanetan jarri mezu bidez modu seguruan.</p>
-            </div>
         </div>
     </section>
 

@@ -4,23 +4,6 @@ $bide_absolutua = '../'; require_once '../php_laguntzaileak/DB_konexioa.php';
 $arrakasta_mezua = '';
 $errore_mezua = '';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $izena = $_POST['izena'] ?? '';
-    $email = $_POST['email'] ?? '';
-    $mezua = $_POST['mezua'] ?? '';
-
-    if (!empty($izena) && filter_var($email, FILTER_VALIDATE_EMAIL) && !empty($mezua) && strlen($mezua) >= 10) {
-        try {
-            $stmt = $pdo->prepare("INSERT INTO Kontaktua_Mezuak (izena, email, mezua) VALUES (?, ?, ?)");
-            $stmt->execute([$izena, $email, $mezua]);
-            $arrakasta_mezua = "Zure mezua ondo bidali da. Laster jarriko gara zurekin harremanetan!";
-        } catch (PDOException $e) {
-            $errore_mezua = "Errorea gertatu da mezua bidaltzean: " . $e->getMessage();
-        }
-    } else {
-        $errore_mezua = "Mesedez, bete eremu guztiak zuzen (mezua gutxienez 10 karaktere).";
-    }
-}
 ?>
 <?php
 $orri_izenburua = ($itzulpenak->menua->kontaktua ?? 'Kontaktua') . " - GOsasun";
@@ -30,45 +13,10 @@ include '../php_includeak/goiburua.php';
 ?>
 
     <main class="kontaktu-sekzioa">
-        <div class="kontaktu-edukiontzia">
-            <h2><?php echo $itzulpenak->kontaktua->izenburua; ?></h2>
-            <p><?php echo $itzulpenak->kontaktua->azpititulua; ?></p>
-            
-            <form id="kontaktuaForm" class="kontaktu-inprimakia" method="POST" action="kontaktua.php">
-                <?php if (!empty($arrakasta_mezua)): ?>
-                    <div class="alerta alerta-arrakasta">
-                        <?php echo $itzulpenak->kontaktua->arrakasta; ?>
-                    </div>
-                <?php elseif (!empty($errore_mezua)): ?>
-                    <div class="alerta alerta-errorea">
-                        <?php echo htmlspecialchars($errore_mezua); ?>
-                    </div>
-                <?php else: ?>
-                    <div id="form-success" class="alerta alerta-arrakasta ezkutatuta" >
-                        <?php echo $itzulpenak->kontaktua->arrakasta; ?>
-                    </div>
-                <?php endif; ?>
-
-                <div class="inprimaki-taldea">
-                    <label for="izena"><?php echo $itzulpenak->kontaktua->izena; ?>:</label>
-                    <input type="text" id="izena" name="izena" class="inprimaki-kontrola">
-                </div>
-                
-                <div class="inprimaki-taldea">
-                    <label for="email"><?php echo $itzulpenak->kontaktua->email; ?>:</label>
-                    <input type="email" id="email" name="email" class="inprimaki-kontrola">
-                </div>
-                
-                <div class="inprimaki-taldea">
-                    <label for="mezua"><?php echo $itzulpenak->kontaktua->mezua; ?>:</label>
-                    <textarea id="mezua" name="mezua" class="inprimaki-kontrola" rows="5"></textarea>
-                </div>
-
-                <button type="submit" class="botoia botoi-nagusia zabalera-100"><?php echo $itzulpenak->kontaktua->bidali; ?></button>
-            </form>
-        </div>
         
-        <div class="kontaktu-informazioa">
+        <div class="kontaktu-informazioa" style="margin: 0 auto; max-width: 600px; text-align: center;">
+            <h2 style="margin-bottom: 20px;"><?php echo $itzulpenak->kontaktua->izenburua; ?></h2>
+            <p style="margin-bottom: 30px;"><?php echo $itzulpenak->kontaktua->azpititulua; ?></p>
             <h3><?php echo $itzulpenak->kontaktua->bulegoak; ?></h3>
             <p> <a href="https://maps.app.goo.gl/dSYPAQ8F2d5wJ3RX6" target="_blank">Arranomendia, 2, 20240 Ordizia, Gipuzkoa</a></p>
             <p> <a href="tel:+34944123456" >+34 944 123 456</a></p>
@@ -84,7 +32,7 @@ include '../php_includeak/goiburua.php';
     </main>
 
 <?php
-$js_gehigarria = ["kontaktua.js"];
+$js_gehigarria = [];
 include '../php_includeak/ezarpenak_modala.php';
 include '../php_includeak/footer.php';
 ?>
