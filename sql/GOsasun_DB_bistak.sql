@@ -59,22 +59,20 @@ FROM osasun_langileak ol
 
 -- 4. V_Langile_Pazienteak: Langile eta pazienteen arteko loturak
 CREATE OR REPLACE VIEW V_Langile_Pazienteak AS
-SELECT pl.langile_id,
+SELECT 
     pl.paziente_id,
-    ep.nan AS paziente_nan,
-    ep.izena AS paziente_izena,
-    ep.abizenak AS paziente_abizenak,
-    ep.telefonoa AS paziente_telefonoa,
+    p.nan,
+    p.izena,
+    p.abizenak,
+    p.telefonoa,
     p.odol_taldea,
-    ep.irudia AS paziente_irudia,
-    el.izena AS langile_izena,
-    el.abizenak AS langile_abizenak,
-    ol.espezialitatea
+    p.irudia,
+    pl.langile_id,
+    ol.izena AS langile_izena,
+    ol.abizenak AS langile_abizenak
 FROM pazientek_langileak pl
-    JOIN pazienteak p ON pl.paziente_id = p.id
-    JOIN erabiltzaileak ep ON p.id = ep.id
-    JOIN osasun_langileak ol ON pl.langile_id = ol.id
-    JOIN erabiltzaileak el ON ol.id = el.id;
+JOIN V_Pazientea p ON pl.paziente_id = p.paziente_id
+JOIN V_Osasun_Langilea ol ON pl.langile_id = ol.langile_id;
 
 -- 5. V_Hitzorduak_Osoa: Hitzorduen datu guztiak (paziente eta langile izenekin)
 CREATE OR REPLACE VIEW V_Hitzorduak_Osoa AS

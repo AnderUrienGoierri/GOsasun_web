@@ -1,0 +1,83 @@
+/* abisuak_medikua.css */
+.abisu-zerrenda {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.abisu-txartela-medikua {
+    background: var(--bg-surface);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.abisua-berria {
+    border-left: 5px solid var(--danger-color);
+}
+
+.abisua-irakurrita {
+    opacity: 0.8;
+}
+
+.abisua-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.etiketa-gorria {
+    background-color: #fce4ec;
+    color: var(--danger-color);
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.etiketa-grisa {
+    background-color: #f5f5f5;
+    color: #757575;
+    font-size: 0.75rem;
+}
+
+.abisua-gorputza p {
+    color: var(--text-main);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.botoi-nagusia-txikia {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 8px 16px;
+    border-radius: var(--border-radius-sm);
+    border: none;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.botoi-nagusia-txikia:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.botoi-ertza-txikia {
+    border: 1px solid var(--border-color);
+    background: transparent;
+    padding: 8px 16px;
+    border-radius: var(--border-radius-sm);
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.botoi-ertza-txikia:hover {
+    background-color: #f8faff;
+    border-color: var(--primary-color);
+}

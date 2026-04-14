@@ -29,7 +29,7 @@ Aplikazioak bi konfigurazio maila bereizten ditu:
 
 ## 2. Funtzionamendu Teknikoa
 
-### Kargatzea (`php_includeak/konfigurazioa_kargatu.php`)
+### Kargatzea (`php_orri_includeak/konfigurazioa_kargatu.php`)
 
 `kargatuKonfigurazioa()` funtzioak algoritmo hau jarraitzen du:
 
@@ -38,7 +38,7 @@ Aplikazioak bi konfigurazio maila bereizten ditu:
 3. Saioa hasita badago, `konfig_erabiltzailea_{id}.xml` badagoen begiratzen du.
 4. Badago, erabiltzailearen balioek aurrekoak gainidazten dituzte.
 
-### Gordetzea (`php_laguntzaileak/ezarpenak_gorde.php`)
+### Gordetzea (`php_orri_laguntzaileak/ezarpenak_gorde.php`)
 
 `ezarpenak_gorde.php` fitxategiak prozesatzen ditu inprimakiak:
 
@@ -59,7 +59,7 @@ Prozesu guztia ikusteko, kontsultatu `mp4/konfigurazio_demoa.mp4` bideoa. Bertan
 
 Aplikazioaren ezarpenen kudeaketa hainbat fitxategitan banatzen da. Jarraian, logikaren gakoak eta horien inplementazioa erakusten dira:
 
-### 4.1. Berrezartze Logika (`php_laguntzaileak/ezarpenak_gorde.php`)
+### 4.1. Berrezartze Logika (`php_orri_laguntzaileak/ezarpenak_gorde.php`)
 Erabiltzaile batek "Reset Pertsonala" eskatzen duenean bere pertsonalizazioak zuzenean ezabatzen dira (`unlink`), zentroaren orokorra lehenetsia denez bertatik jasotzeko oinordetza bidez. Aldiz, zentroak "Reset Globala" eskatzean balio korporatiboak idatziko dira (`konfigurazio_orokorra.xml` barruan).
 
 ```php
@@ -85,14 +85,14 @@ Erabiltzaile batek "Reset Pertsonala" eskatzen duenean bere pertsonalizazioak zu
         // ... (bideratze lerroak)
 ```
 
-### 4.2. Harrerako Kudeaketa Orokorra (`php_harrera/ezarpenak.php`)
+### 4.2. Harrerako Kudeaketa Orokorra (`php_harrera_langileak/ezarpenak.php`)
 Harrerako profilean, ohiko erabiltzaile ezarpenen azpian, esklusiboa den **Osasun Zentroaren Konfigurazio Orokorra** atala dago. Inprimaki honek `form_type="osasun_zentroa"` bidaltzen du, `konfigurazio_orokorra.xml` fitxategi globala eguneratzeko.
 
 ```html
 <!-- Zentroaren Konfigurazio Orokorra (Administratzaileentzat soilik) -->
 <div class="kutxa-zuria ertz-lodi-urdina marjina-goi-30">
     <!-- ... izenburua ... -->
-    <form action="../php_laguntzaileak/ezarpenak_gorde.php" method="POST">
+    <form action="../php_orri_laguntzaileak/ezarpenak_gorde.php" method="POST">
         <input type="hidden" name="form_type" value="osasun_zentroa">
         <input type="hidden" name="itzulera" value="harrera">
         

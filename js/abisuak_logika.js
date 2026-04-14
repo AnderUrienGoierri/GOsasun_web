@@ -76,7 +76,7 @@ function egiaztatuAbisuak(pazienteId, data) {
     formData.append("mota", abisu.mota);
     formData.append("testua", abisu.testua);
 
-    fetch("../php_laguntzaileak/abisu_sortu_api.php", {
+    fetch("../php_orri_laguntzaileak/abisu_sortu_api.php", {
       method: "POST",
       body: formData,
     })
@@ -94,7 +94,7 @@ function egiaztatuAbisuak(pazienteId, data) {
 $(document).ready(function () {
   // Abisu berriak detektatu eta goiburuko eta footerreko esteka gorriz margotu
   function eguneratuAbisuEsteka() {
-    $.get("../php_pazientea/abisuak.php?json=1", function (data) {
+    $.get("../php_pazienteak/abisuak.php?json=1", function (data) {
       if (data && data.abisuak) {
         const berriak = data.abisuak.filter((a) => a.irakurrita == 0);
         if (berriak.length > 0) {

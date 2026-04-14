@@ -3,7 +3,7 @@ $bide_absolutua = '';
 $orri_izenburua = "GOsasun - Zure Osasun Ataria";
 $uneko_orria = "index";
 
-include 'php_includeak/goiburua.php';
+include 'php_orri_includeak/goiburua.php';
 ?>
 
     <main class="hero-sekzioa">
@@ -30,7 +30,7 @@ include 'php_includeak/goiburua.php';
         
         <div class="hero-errenkada portal-sarbideak">
             <!-- Pazientea -->
-            <a href="php_hasiera/login.php" class="portal-txartela">
+            <a href="php_orri_hasierakoak/login.php" class="portal-txartela">
                 <div class="portal-irudia">
                     <img src="img/png/index_pazientea.png" alt="Pazientea">
                 </div>
@@ -42,7 +42,7 @@ include 'php_includeak/goiburua.php';
             </a>
 
             <!-- Medikua -->
-            <a href="php_hasiera/login.php" class="portal-txartela">
+            <a href="php_orri_hasierakoak/login.php" class="portal-txartela">
                 <div class="portal-irudia">
                     <img src="img/png/index_medikua.png" alt="Medikua">
                 </div>
@@ -54,7 +54,7 @@ include 'php_includeak/goiburua.php';
             </a>
 
             <!-- Harrera -->
-            <a href="php_hasiera/login.php" class="portal-txartela">
+            <a href="php_orri_hasierakoak/login.php" class="portal-txartela">
                 <div class="portal-irudia">
                     <img src="img/png/index_harrera.png" alt="Harrera">
                 </div>
@@ -92,7 +92,7 @@ include 'php_includeak/goiburua.php';
         </div>
     </section>
 
-<?php include 'php_includeak/ezarpenak_modala.php'; ?>
+<?php include 'php_orri_includeak/ezarpenak_modala.php'; ?>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
         var modal = document.getElementById("ezarpenakModala");
@@ -127,6 +127,6 @@ include 'php_includeak/goiburua.php';
 
 <?php
 $js_gehigarria = ["hasiera_index.js"];
-include 'php_includeak/footer.php';
+include 'php_orri_includeak/footer.php';
 ?>
 

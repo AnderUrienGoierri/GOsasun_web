@@ -10,4 +10,6 @@ xml_konfigurazioa/
 pdf_bezero_txostenak/
 xml_bezero_neurketak/
 
-
+pasahitzak.txt
+paziente_dokumentuak/*.pdf
+xml_paziente_neurketak/*.xml

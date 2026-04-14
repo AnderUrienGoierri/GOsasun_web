@@ -145,5 +145,4 @@ CREATE TABLE IF NOT EXISTS errezeta_botikak (
     maiztasuna VARCHAR(100),
     FOREIGN KEY (errezeta_id) REFERENCES errezetak(id) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (botika_id) REFERENCES botikak(id) ON DELETE RESTRICT ON UPDATE CASCADE,
-    UNIQUE(errezeta_id, botika_id)
-) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4;
+)

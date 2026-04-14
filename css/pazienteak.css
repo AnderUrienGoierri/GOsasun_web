@@ -189,28 +189,39 @@
     margin-bottom: 20px;
 }
 
+/* Modern Health Dashboard Style */
 .txartel-klinikoa {
     background-color: var(--white);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
     padding: 30px;
+    border: 1px solid #eef2f6;
 }
 
 .estatistika-klinikoak {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* 150px-tik murriztua 300px pantailetarako */
-    gap: 15px;
-    margin-bottom: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+    margin-bottom: 35px;
 }
 
 .estatistika-kutxa {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 15px;
-    padding: 20px;
-    background-color: var(--bg-body);
-    border-radius: var(--border-radius);
-    border: 1px solid var(--border-color);
+    justify-content: center;
+    text-align: center;
+    padding: 24px 15px;
+    background-color: #f8fafc;
+    border-radius: 15px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.estatistika-kutxa:hover {
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-color: var(--primary-color);
 }
 
 .param-sareta {
@@ -237,11 +248,32 @@
     border: 1px solid var(--border-color);
 }
 
-.param-balioa {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    margin: 5px 0;
+.estatistika-balioa {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--primary-dark);
+    margin: 8px 0 2px 0;
+}
+
+.estatistika-etiketa {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.estatistika-ikonoa {
+    background: #ffffff;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    margin-bottom: 15px;
 }
 
 /* ==========================================

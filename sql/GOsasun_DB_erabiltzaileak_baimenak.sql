@@ -93,9 +93,9 @@ GRANT SELECT ON GOsasun_DB.V_Langile_Pazienteak TO 'db_harrera';
 
 -- 7. APLIKAZIO ERABILTZAILEAK
 -- Pazientearen App-a (PHP)
-CREATE USER IF NOT EXISTS 'app_php_pazientea'@'localhost' IDENTIFIED BY 'AppPaziente123!';
-GRANT 'db_pazientea' TO 'app_php_pazientea'@'localhost';
-SET DEFAULT ROLE 'db_pazientea' TO 'app_php_pazientea'@'localhost';
+CREATE USER IF NOT EXISTS 'app_php_pazienteak'@'localhost' IDENTIFIED BY 'AppPaziente123!';
+GRANT 'db_pazientea' TO 'app_php_pazienteak'@'localhost';
+SET DEFAULT ROLE 'db_pazientea' TO 'app_php_pazienteak'@'localhost';
 
 -- Medikuaren App-a (C# Desktop)
 CREATE USER IF NOT EXISTS 'app_csharp_medikua'@'%' IDENTIFIED BY 'AppMediku123!';
@@ -103,8 +103,8 @@ GRANT 'db_medikua' TO 'app_csharp_medikua'@'%';
 SET DEFAULT ROLE 'db_medikua' TO 'app_csharp_medikua'@'%';
 
 -- Harreraren App-a (PHP)
-CREATE USER IF NOT EXISTS 'app_php_harrera'@'localhost' IDENTIFIED BY 'AppHarrera123!';
-GRANT 'db_harrera' TO 'app_php_harrera'@'localhost';
-SET DEFAULT ROLE 'db_harrera' TO 'app_php_harrera'@'localhost';
+CREATE USER IF NOT EXISTS 'app_php_harrera_langileak'@'localhost' IDENTIFIED BY 'AppHarrera123!';
+GRANT 'db_harrera' TO 'app_php_harrera_langileak'@'localhost';
+SET DEFAULT ROLE 'db_harrera' TO 'app_php_harrera_langileak'@'localhost';
 
 FLUSH PRIVILEGES;

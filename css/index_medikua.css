@@ -1,12 +1,40 @@
-/* index_medikua.css */
-
-.menu-orria {
-    background-color: var(--light-bg);
-}
-
 /* Medikuaren aginte-paneleko doikuntza espezifikoak */
 .kaixo-atalak {
     border-left-color: var(--primary-color);
+}
+
+.index-aginte-panela {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    gap: 30px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+@media (min-width: 1024px) {
+    .index-aginte-panela {
+        grid-template-columns: repeat(3, 300px);
+    }
+}
+
+.aginte-panel-kutxa {
+    background: var(--bg-surface);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.aginte-panel-kutxa:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px var(--shadow-color);
+    border-color: var(--primary-color);
 }
 
 .menu-txartela {

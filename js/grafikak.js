@@ -35,28 +35,56 @@ $(document).ready(function() {
             'altuera': { label: 'Altuera (cm)', color: '#28a745', unit: 'cm' }
         };
 
-        if (!config[mota]) return;
-        
-        const c = config[mota];
-        unitatea = c.unit;
+        if (mota === 'tentsioa') {
+            unitatea = 'mmHg';
+            const neurketaIragaziak = jarraipenakData.filter(d => d.tentsio_sistolikoa && d.tentsio_diastolikoa);
+            etiketak = neurketaIragaziak.map(d => d.data);
+            
+            const sisDatuak = neurketaIragaziak.map(d => parseFloat(d.tentsio_sistolikoa));
+            const diaDatuak = neurketaIragaziak.map(d => parseFloat(d.tentsio_diastolikoa));
 
-        // Iragazi datuak balioa dutenak bakarrik hartzeko
-        const neurketaIragaziak = jarraipenakData.filter(d => d[mota] !== null && d[mota] !== undefined && d[mota] !== '');
-        const datuak = neurketaIragaziak.map(d => parseFloat(d[mota]));
-        etiketak = neurketaIragaziak.map(d => d.data);
-        
-        datuMultzoak.push({
-            label: c.label,
-            data: datuak,
-            borderColor: c.color,
-            backgroundColor: hexToRgba(c.color, 0.1),
-            borderWidth: 2,
-            fill: true,
-            tension: 0.3
-        });
-        
-        datuMultzoak.push(lortuRegresioLerroa(datuak, 'Joera', hexToRgba(c.color, 0.8)));
-        eguneratuEstatistikaPanela(datuak, unitatea);
+            datuMultzoak.push({
+                label: 'Sistolikoa (SIS)',
+                data: sisDatuak,
+                borderColor: config.tentsio_sistolikoa.color,
+                backgroundColor: hexToRgba(config.tentsio_sistolikoa.color, 0.1),
+                borderWidth: 2,
+                fill: true,
+                tension: 0.3
+            });
+            datuMultzoak.push({
+                label: 'Diastolikoa (DIA)',
+                data: diaDatuak,
+                borderColor: config.tentsio_diastolikoa.color,
+                backgroundColor: hexToRgba(config.tentsio_diastolikoa.color, 0.1),
+                borderWidth: 2,
+                fill: true,
+                tension: 0.3
+            });
+            
+            eguneratuEstatistikaPanela(sisDatuak, unitatea, 'SIS', diaDatuak, 'DIA');
+        } else {
+            if (!config[mota]) return;
+            const c = config[mota];
+            unitatea = c.unit;
+
+            const neurketaIragaziak = jarraipenakData.filter(d => d[mota] !== null && d[mota] !== undefined && d[mota] !== '');
+            const datuak = neurketaIragaziak.map(d => parseFloat(d[mota]));
+            etiketak = neurketaIragaziak.map(d => d.data);
+            
+            datuMultzoak.push({
+                label: c.label,
+                data: datuak,
+                borderColor: c.color,
+                backgroundColor: hexToRgba(c.color, 0.1),
+                borderWidth: 2,
+                fill: true,
+                tension: 0.3
+            });
+            
+            datuMultzoak.push(lortuRegresioLerroa(datuak, 'Joera', hexToRgba(c.color, 0.8)));
+            eguneratuEstatistikaPanela(datuak, unitatea);
+        }
         
         if (nireGrafika) {
             nireGrafika.destroy();

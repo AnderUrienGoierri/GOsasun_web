@@ -6,6 +6,7 @@
   --danger-color: #f72585;
   --white: #ffffff;
   --gray: #8d99ae;
+  --black: #000000;
   
   /* Gaia (Light - Default) */
   --bg-body: #f8faff;
@@ -146,6 +147,68 @@ body {
   background-color: #d4edda;
   color: #155724;
   border: 1px solid #c3e6cb;
+}
+
+/* Modalak */
+.modala {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Overlay iluna */
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+
+}
+
+.modala-edukia {
+  background-color: var(--bg-surface);
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: var(--border-radius);
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: modalSarrera 0.3s ease-out;
+}
+
+.modala-handia {
+  max-width: 800px;
+}
+
+@keyframes modalSarrera {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.itxi-modala {
+  color: var(--text-muted);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+  line-height: 1;
+}
+
+.itxi-modala:hover {
+  color: var(--danger-color);
+}
+
+.taula-sinplea {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.taula-sinplea th, .taula-sinplea td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
 }
 
 /* ================= DATU TAULA ETA ETIKETA PARTEKATUAK ================= */
@@ -495,6 +558,15 @@ body {
     border: 3px solid var(--primary-color);
 }
 /* ================= AGINTE-PANELEKO ELEMENTU PARTEKATUAK ================= */
+.profil-irudia-80 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 .kaixo-atalak, .kaixo-atal-modernoa { 
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
     padding: 40px;
@@ -955,7 +1027,10 @@ body {
 
 /* Bistarapena eta Flex/Grid */
 .ezkutatu { display: none; }
-.sareta-bikoa-sareta { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.sareta-bikoa-sareta { display: grid; grid-template-columns: 1fr; gap: 15px; }
+@media (min-width: 768px) {
+    .sareta-bikoa-sareta { grid-template-columns: 1fr 1fr; }
+}
 .flex-hazkundea-1 { flex-grow: 1; }
 
 /* Ertzak eta Atzeko planoak */
@@ -977,14 +1052,12 @@ body {
 .ikono-1_2rem-marjina-10 { width: 1.2rem; height: 1.2rem; vertical-align: middle; filter: var(--primary-filter); margin-right: 10px; }
 .ikono-1_5rem-marjina-10 { width: 1.5rem; height: 1.5rem; vertical-align: middle; filter: var(--primary-filter); margin-right: 10px; }
 .ikono-1_5rem { width: 1.5rem; height: 1.5rem; filter: var(--primary-filter); }
-.aginte-panel-sareta { 
+.aginte-panel-sareta, .index-aginte-panela { 
     display: grid; 
-    grid-template-columns: 1fr; 
-    gap: 20px; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 350px)); 
+    gap: 25px; 
     margin-bottom: 30px; 
-}
-@media (min-width: 550px) {
-    .aginte-panel-sareta { grid-template-columns: 1fr 1fr; gap: 30px; }
+    justify-content: center;
 }
 .panel-sareta { width: 100%; }
 .flex-tartea-20 { display: flex; gap: 20px; flex-wrap: wrap; }
