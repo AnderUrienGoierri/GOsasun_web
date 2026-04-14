@@ -42,12 +42,12 @@ include_once '../php_includeak/paziente_goiburua.php';
     <main class="panel-nagusia">
         <section class="kaixo-atalak">
             <?php 
-            $irudia_bide = htmlspecialchars($erabiltzaile_datuak['irudia'] ?? 'img/lehenetsia_pazientea.png');
-            if (strpos($irudia_bide, 'img/') === 0 && strpos($irudia_bide, 'img/png/') === false && strpos($irudia_bide, 'img/svg/') === false) {
-                $irudia_bide = str_replace('img/', 'img/png/', $irudia_bide);
+            $irudia_bide = htmlspecialchars($erabiltzaile_datuak['irudia'] ?? 'lehenetsia_pazientea.png');
+            if (strpos($irudia_bide, 'pazientea_') === 0 || strpos($irudia_bide, 'lehenetsia_') === 0) {
+                $irudia_bide = 'img/png/' . $irudia_bide;
             }
             ?>
-            <img src="../<?php echo $irudia_bide; ?>" alt="Zure profila" class="profil-irudia-80">
+            <img src="../<?php echo $irudia_bide; ?>" alt="Zure profila" class="profil-izena">
             <div>
                 <h1 class="izenburu-nagusia"><?php echo $itzulpenak->erabiltzaile_panela->kaixo; ?>, <?php echo htmlspecialchars($erabiltzaile_datuak['izena']); ?>?</h1>
                 <p class="azpititulu-grisa"><?php echo $itzulpenak->erabiltzaile_panela->laburpena; ?></p>
@@ -138,6 +138,11 @@ include_once '../php_includeak/paziente_goiburua.php';
                 <div class="txartel-ikonoa"><img src="../img/svg/bell-ring.svg" alt="Abisuak" class="ikono-handia-48"></div>
                 <h3><?php echo $itzulpenak->menua_pazientea->abisuak; ?></h3>
                 <p><?php echo $itzulpenak->menua_pazientea->abisuak_testua; ?></p>
+            </a>
+            <a href="dokumentuak.php" class="menu-txartela">
+                <div class="txartel-ikonoa"><img src="../img/svg/file-text.svg" alt="Dokumentuak" class="ikono-handia-48"></div>
+                <h3><?php echo $itzulpenak->menua_pazientea->dokumentuak; ?></h3>
+                <p><?php echo $itzulpenak->menua_pazientea->dokumentuak_testua; ?></p>
             </a>
             <a href="hitzorduak.php" class="menu-txartela">
                 <div class="txartel-ikonoa"><img src="../img/svg/calendar-days.svg" alt="Hitzorduak" class="ikono-handia-48"></div>

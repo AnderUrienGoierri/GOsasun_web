@@ -40,90 +40,118 @@ include_once '../php_includeak/paziente_goiburua.php';
 
     <main class="panel-nagusia">
         <div class="orri-goiburua">
-            <h2><img src="../img/svg/user.svg" alt="" class="ikono-ertaina marjina-esk-5"> Nire Informazioa</h2>
-            <p>Berrikusi zure datu pertsonalak eta egoera klinikoa.</p>
+            <h2><img src="../img/svg/user.svg" alt="" class="ikono-ertaina marjina-esk-5"> Nire Fitxa Klinikoa</h2>
+            <p>Berrikusi zure datu pertsonalak, kontaktua eta egoera klinikoa modu egituratuan.</p>
         </div>
 
-        <div class="datu-sareta">
-            <!-- Datu Pertsonalak -->
-            <section class="datu-txartela">
-                <h3>Datu Pertsonalak</h3>
-                <div class="datu-eremua">
-                    <span class="etiketa">Izena:</span>
-                    <span class="balioa"><?php echo htmlspecialchars($pazientea['izena'] . ' ' . $pazientea['abizenak']); ?></span>
+        <div class="fitxa-klinikoa">
+            <!-- Goi-atala: Argazkia eta Oinarrizko Datuak -->
+            <section class="fitxa-goiburua">
+                <div class="fitxa-argazkia">
+                    <?php 
+                        $irudia_izena = trim($pazientea['irudia'] ?? '');
+                        if (empty($irudia_izena)) {
+                            $irudia_izena = 'lehenetsia_pazientea.png';
+                        }
+                        
+                        // DBko ikuspegiak jada 'img/png/' badu, ez gehitu berriro
+                        if (strpos($irudia_izena, 'img/') === false) {
+                            $irudia_bidea_erakutsi = "../img/png/" . $irudia_izena;
+                        } else {
+                            $irudia_bidea_erakutsi = "../" . $irudia_izena;
+                        }
+                    ?>
+                    <img src="<?php echo $irudia_bidea_erakutsi; ?>" alt="Profila" class="paziente-profil-irudia">
                 </div>
-                <div class="datu-eremua">
-                    <span class="etiketa">Sexua:</span>
-                    <span class="balioa"><?php echo htmlspecialchars($pazientea['sexua'] ?? 'Zehaztu gabe'); ?></span>
-                </div>
-                <div class="datu-eremua">
-                    <span class="etiketa">NAN:</span>
-                    <span class="balioa"><?php echo htmlspecialchars($pazientea['nan']); ?></span>
-                </div>
-                <div class="datu-eremua">
-                    <span class="etiketa">Jaiotze Data:</span>
-                    <span class="balioa"><?php echo htmlspecialchars($pazientea['jaiotze_data']); ?></span>
-                </div>
-                <div class="datu-eremua">
-                    <span class="etiketa">Email:</span>
-                    <span class="balioa"><?php echo htmlspecialchars($pazientea['email']); ?></span>
-                </div>
-                <div class="datu-eremua">
-                    <span class="etiketa">Telefonoa:</span>
-                    <span class="balioa"><?php echo htmlspecialchars($pazientea['telefonoa'] ?? 'Zehaztu gabe'); ?></span>
-                </div>
-                <div class="datu-eremua">
-                    <span class="etiketa">Helbidea:</span>
-                    <span class="balioa"><?php echo htmlspecialchars($pazientea['helbidea'] ?? 'Zehaztu gabe'); ?></span>
-                </div>
-                <div class="datu-eremua">
-                    <span class="etiketa">Herria:</span>
-                    <span class="balioa"><?php echo htmlspecialchars($pazientea['herria'] . ' (' . ($pazientea['posta_kodea'] ?? '') . ')'); ?></span>
+                <div class="fitxa-oinarrizkoa">
+                    <h3 class="paziente-izena-fitxa"><?php echo htmlspecialchars($pazientea['izena'] . ' ' . $pazientea['abizenak']); ?></h3>
+                    <p class="paziente-id-fitxa">ID: #<?php echo str_pad($pazientea['paziente_id'], 5, '0', STR_PAD_LEFT); ?></p>
+                    <div class="etiketa-taldea marjina-goi-10">
+                        <span class="egoera-txapa <?php echo ($pazientea['egoera_klinikoa'] === 'Alta') ? 'status-bukatuta' : 'status-ezeztatuta'; ?>">
+                            <?php echo htmlspecialchars($pazientea['egoera_klinikoa'] ?? 'Zehaztu gabe'); ?>
+                        </span>
+                        <span class="egoera-txapa status-zain"><?php echo htmlspecialchars($pazientea['odol_taldea'] ?? 'Ezezaguna'); ?></span>
+                    </div>
                 </div>
             </section>
 
-            <!-- Egoera Klinikoa -->
-            <section class="datu-txartela">
-                <h3>Egoera Klinikoa</h3>
-                <div class="datu-eremua">
-                    <span class="etiketa">Odol Taldea:</span>
-                    <span class="balioa"><?php echo htmlspecialchars($pazientea['odol_taldea'] ?? 'Ezezaguna'); ?></span>
+            <div class="datu-sareta-modernoa">
+                <!-- Datu Pertsonalak eta Kontaktua -->
+                <div class="fitxa-panela">
+                    <div class="fitxa-panela-goiburua">
+                        <img src="../img/svg/user.svg" alt="" class="ikono-16px marjina-esk-10">
+                        Datu Pertsonalak eta Kontaktua
+                    </div>
+                    <table class="fitxa-taula">
+                        <tr>
+                            <th>NAN / Identifikazioa</th>
+                            <td><?php echo htmlspecialchars($pazientea['nan']); ?></td>
+                        </tr>
+                        <tr>
+                            <th>Sexua / Jaiotze Data</th>
+                            <td><?php echo htmlspecialchars($pazientea['sexua'] ?? 'Zehaztu gabe'); ?> / <?php echo htmlspecialchars($pazientea['jaiotze_data']); ?></td>
+                        </tr>
+                        <tr>
+                            <th>Posta Elektronikoa</th>
+                            <td><?php echo htmlspecialchars($pazientea['email']); ?></td>
+                        </tr>
+                        <tr>
+                            <th>Telefono Zenbakia</th>
+                            <td><?php echo htmlspecialchars($pazientea['telefonoa'] ?? 'Zehaztu gabe'); ?></td>
+                        </tr>
+                        <tr>
+                            <th>Helbide Fiskala</th>
+                            <td><?php echo htmlspecialchars($pazientea['helbidea'] ?? 'Zehaztu gabe'); ?></td>
+                        </tr>
+                        <tr>
+                            <th>Herria eta PK</th>
+                            <td><?php echo htmlspecialchars($pazientea['herria'] . ' (' . ($pazientea['posta_kodea'] ?? '') . ')'); ?></td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="datu-eremua">
-                    <span class="etiketa">Azken Altuera:</span>
-                    <span class="balioa"><?php echo htmlspecialchars($pazientea['azken_altuera'] ?? '-'); ?> m</span>
-                </div>
-                <div class="datu-eremua">
-                    <span class="etiketa">Azken Pisua:</span>
-                    <span class="balioa"><?php echo htmlspecialchars($pazientea['azken_pisua'] ?? '-'); ?> kg</span>
-                </div>
-                <div class="datu-eremua">
-                    <span class="etiketa">Egoera:</span>
-                    <span class="egoera-etiketa <?php echo ($pazientea['egoera_klinikoa'] === 'Alta') ? 'egoera-alta' : 'egoera-baja'; ?>">
-                        <?php echo htmlspecialchars($pazientea['egoera_klinikoa'] ?? 'Ezezaguna'); ?>
-                    </span>
-                </div>
-            </section>
-        </div>
 
-        <!-- Esleitutako osasun_langileak -->
-        <section class="mediku-sekzioa">
-            <h3>Nire osasun_langileak</h3>
-            <?php if (count($medikuak) > 0): ?>
-                <div class="mediku-sareta">
-                    <?php foreach ($medikuak as $m): ?>
-                        <div class="mediku-txartela">
-                            <div class="mediku-info">
-                                <strong>Osasun Langilea <?php echo htmlspecialchars($m['izena'] . ' ' . $m['abizenak']); ?></strong>
-                                <p><?php echo htmlspecialchars($m['espezialitatea']); ?></p>
+                <!-- Egoera Klinikoa eta Medikuak -->
+                <div class="fitxa-zutabe-bikoitza">
+                    <div class="fitxa-panela">
+                        <div class="fitxa-panela-goiburua">
+                            <img src="../img/svg/list.svg" alt="" class="ikono-16px marjina-esk-10">
+                            Azken Neurketa Biometrikoak
+                        </div>
+                        <div class="biometria-grid">
+                            <div class="biometria-item">
+                                <span class="biometria-balioa"><?php echo htmlspecialchars($pazientea['azken_pisua'] ?? '-'); ?></span>
+                                <span class="biometria-unitatea">kg</span>
+                                <span class="biometria-etiketa">Pisua</span>
+                            </div>
+                            <div class="biometria-item">
+                                <span class="biometria-balioa"><?php echo htmlspecialchars($pazientea['azken_altuera'] ?? '-'); ?></span>
+                                <span class="biometria-unitatea">m</span>
+                                <span class="biometria-etiketa">Altuera</span>
                             </div>
                         </div>
-                    <?php endforeach; ?>
+                    </div>
+
+                    <div class="fitxa-panela marjina-goi-20">
+                        <div class="fitxa-panela-goiburua">
+                            <img src="../img/svg/user.svg" alt="" class="ikono-16px marjina-esk-10">
+                            Esleitutako Osasun Langileak
+                        </div>
+                        <?php if (count($medikuak) > 0): ?>
+                            <ul class="fitxa-mediku-zerrenda">
+                                <?php foreach ($medikuak as $m): ?>
+                                    <li>
+                                        <strong><?php echo htmlspecialchars($m['langile_izena'] . ' ' . $m['langile_abizenak']); ?></strong>
+                                        <span class="espezialitatea"><?php echo htmlspecialchars($m['espezialitatea']); ?></span>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        <?php else: ?>
+                            <p class="testu-hutsa padding-10">Ez daukazu langile esleiturik.</p>
+                        <?php endif; ?>
+                    </div>
                 </div>
-            <?php else: ?>
-                <p class="testu-hutsa">Ez duzu medikurik esleituta mementoz.</p>
-            <?php endif; ?>
-        </section>
+            </div>
+        </div>
     </main>
 
 <?php $js_gehigarria = ["datuak.js"];

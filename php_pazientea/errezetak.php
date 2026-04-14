@@ -9,15 +9,15 @@ require_once '../php_laguntzaileak/DB_konexioa.php';
 $paziente_id = $_SESSION['erabiltzaile_id'];
 
 // Lortu pazienteari agindutako errezeta guztiak
-$sql = "SELECT e.*, m.izena, m.abizenak,
+$sql = "SELECT e.*, e.id AS errezeta_id, m.izena, m.abizenak,
         GROUP_CONCAT(CONCAT(b.izena, ' (', eb.dosia, ', ', eb.maiztasuna, ')') SEPARATOR ' | ') as botikak_info 
-        FROM Errezetak e
-        JOIN osasun_langileak m ON e.osasun_langile_id = m.id
-        LEFT JOIN errezeta_botikak eb ON e.errezeta_id = eb.errezeta_id
-        LEFT JOIN Botikak b ON eb.botika_id = b.botika_id
+        FROM errezetak e
+        JOIN v_osasun_langilea m ON e.osasun_langile_id = m.langile_id
+        LEFT JOIN errezeta_botikak eb ON e.id = eb.errezeta_id
+        LEFT JOIN botikak b ON eb.botika_id = b.id
         WHERE e.paziente_id = :pid 
-        GROUP BY e.errezeta_id
-        ORDER BY e.igorpen_data DESC, e.errezeta_id DESC";
+        GROUP BY e.id
+        ORDER BY e.igorpen_data DESC, e.id DESC";
 $stmtErr = $pdo->prepare($sql);
 $stmtErr->execute(['pid' => $paziente_id]);
 $errezetak = $stmtErr->fetchAll(PDO::FETCH_ASSOC);

@@ -40,12 +40,14 @@
         <hasiera>Home</hasiera>
         <datuak>My Data</datuak>
         <datuak_testua>View and update your personal data.</datuak_testua>
-        <neurketak>Measurements</neurketak>
-        <neurketak_testua>View your measurement history.</neurketak_testua>
+        <jarraipenak>Measurements</jarraipenak>
+        <jarraipenak_testua>View your measurement history.</jarraipenak_testua>
         <grafikak>Charts</grafikak>
         <grafikak_testua>View your health evolution.</grafikak_testua>
         <errezetak>Prescriptions</errezetak>
         <errezetak_testua>View assigned prescriptions.</errezetak_testua>
+        <dokumentuak>Documents</dokumentuak>
+        <dokumentuak_testua>Manage your clinical documents.</dokumentuak_testua>
         <abisuak>Alerts</abisuak>
         <abisuak_testua>View notes in your measurements.</abisuak_testua>
         <hitzorduak>Appointments</hitzorduak>
@@ -73,7 +75,7 @@
         <hasiera_data>Start Date</hasiera_data>
         <bukaera_data>End Date</bukaera_data>
         <deskargatu>Download</deskargatu>
-    </dashboard_pazientea>
+    <tentsio_sistolikoa>Systolic B.P.</tentsio_sistolikoa><tentsio_diastolikoa>Diastolic B.P.</tentsio_diastolikoa><data_column>Date</data_column><ordua_column>Time</ordua_column></dashboard_pazientea>
     <menua_medikua>
         <hasiera>Home</hasiera>
         <pazienteak>My Patients</pazienteak>
@@ -82,8 +84,10 @@
         <hitzorduak_testua>View and manage your agenda.</hitzorduak_testua>
         <errezetak>Prescriptions</errezetak>
         <errezetak_testua>Create and manage prescriptions.</errezetak_testua>
-        <neurketak>Measurements</neurketak>
-        <neurketak_testua>View patient measurements.</neurketak_testua>
+        <dokumentuak>Documents</dokumentuak>
+        <dokumentuak_testua>Search for patient clinical documents.</dokumentuak_testua>
+        <jarraipenak>Measurements</jarraipenak>
+        <jarraipenak_testua>View patient measurements.</jarraipenak_testua>
         <grafikak>Charts</grafikak>
         <grafikak_testua>Analyze measurement trends.</grafikak_testua>
         <mezuak>Messages</mezuak>
@@ -106,6 +110,8 @@
         <medikuak_testua>List and management of doctors.</medikuak_testua>
         <hitzorduak>Appointments</hitzorduak>
         <hitzorduak_testua>Book new appointments.</hitzorduak_testua>
+        <dokumentuak>Documents</dokumentuak>
+        <dokumentuak_testua>Manage all documents in the center.</dokumentuak_testua>
         <mezuak>Messages</mezuak>
         <mezuak_testua>Manage received messages.</mezuak_testua>
         <kanpoko_mezuak>External Messages</kanpoko_mezuak>

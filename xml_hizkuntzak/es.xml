@@ -40,12 +40,14 @@
         <hasiera>Inicio</hasiera>
         <datuak>Mis Datos</datuak>
         <datuak_testua>Vea y actualice sus datos personales.</datuak_testua>
-        <neurketak>Mediciones</neurketak>
-        <neurketak_testua>Consulte su historial de mediciones.</neurketak_testua>
+        <jarraipenak>Mediciones</jarraipenak>
+        <jarraipenak_testua>Consulte su historial de mediciones.</jarraipenak_testua>
         <grafikak>Gráficos</grafikak>
         <grafikak_testua>Vea la evolución de su salud.</grafikak_testua>
         <errezetak>Recetas</errezetak>
         <errezetak_testua>Vea sus recetas asignadas.</errezetak_testua>
+        <dokumentuak>Documentos</dokumentuak>
+        <dokumentuak_testua>Gestione sus documentos clínicos.</dokumentuak_testua>
         <abisuak>Avisos</abisuak>
         <abisuak_testua>Vea notas en sus mediciones.</abisuak_testua>
         <hitzorduak>Citas</hitzorduak>
@@ -73,7 +75,7 @@
         <hasiera_data>Fecha Inicio</hasiera_data>
         <bukaera_data>Fecha Fin</bukaera_data>
         <deskargatu>Descargar</deskargatu>
-    </dashboard_pazientea>
+    <tentsio_sistolikoa>T. Sistólica</tentsio_sistolikoa><tentsio_diastolikoa>T. Diastólica</tentsio_diastolikoa><data_column>Fecha</data_column><ordua_column>Hora</ordua_column></dashboard_pazientea>
     <menua_medikua>
         <hasiera>Inicio</hasiera>
         <pazienteak>Mis Pacientes</pazienteak>
@@ -82,8 +84,10 @@
         <hitzorduak_testua>Vea y gestione su agenda.</hitzorduak_testua>
         <errezetak>Recetas</errezetak>
         <errezetak_testua>Cree y gestione recetas.</errezetak_testua>
-        <neurketak>Mediciones</neurketak>
-        <neurketak_testua>Vea las mediciones de los pacientes.</neurketak_testua>
+        <dokumentuak>Documentos</dokumentuak>
+        <dokumentuak_testua>Busque documentos clínicos de pacientes.</dokumentuak_testua>
+        <jarraipenak>Mediciones</jarraipenak>
+        <jarraipenak_testua>Vea las mediciones de los pacientes.</jarraipenak_testua>
         <grafikak>Gráficos</grafikak>
         <grafikak_testua>Analice la evolución de mediciones.</grafikak_testua>
         <mezuak>Mensajes</mezuak>
@@ -106,6 +110,8 @@
         <medikuak_testua>Lista y gestión de médicos.</medikuak_testua>
         <hitzorduak>Citas</hitzorduak>
         <hitzorduak_testua>Reserve nuevas citas.</hitzorduak_testua>
+        <dokumentuak>Documentos</dokumentuak>
+        <dokumentuak_testua>Gestione todos los documentos del centro.</dokumentuak_testua>
         <mezuak>Mensajes</mezuak>
         <mezuak_testua>Gestione los mensajes recibidos.</mezuak_testua>
         <kanpoko_mezuak>Mensajes Externos</kanpoko_mezuak>

@@ -8,6 +8,7 @@
             <a href="pazienteak.php">Pazienteak</a>
             <a href="medikuak.php">osasun_langileak</a>
             <a href="hitzorduak.php">Hitzorduak</a>
+            <a href="dokumentuak.php">Dokumentuak</a>
             <a href="mezuak.php">Mezuak</a>
             <a href="kanpoko_mezuak.php">Kanpoko Mezuak</a>
             <a href="harrerako_langileak.php">Harrerako Langileak</a>

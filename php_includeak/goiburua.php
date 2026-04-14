@@ -47,17 +47,13 @@ $orri_izenburua = "GOsasun - Zure Osasun Ataria";
                 </a>
             </div>
             <div class="mugikorreko-ikonoak">
-                <?php if (isset($uneko_orria) && ($uneko_orria === 'index' || $uneko_orria === 'kontaktua')): ?>
                 <button class="ezarpenak-botoia-mugikorra" aria-label="Ireki ezarpenak" id="irekiEzarpenakModalaMugikorra"><img src="<?php echo $bide_absolutua; ?>img/svg/settings.svg" alt=""></button>
-                <?php endif; ?>
                 <button class="menu-botoia" aria-label="Ireki menua"><img src="<?php echo $bide_absolutua; ?>img/svg/list.svg" alt=""></button>
             </div>
             <ul class="nabigazio-estekak">
                 <li><a href="<?php echo $bide_absolutua; ?>index.php" <?php echo (isset($uneko_orria) && $uneko_orria === 'index') ? 'class="aktiboa"' : ''; ?>><?php echo $itzulpenak->menua->hasiera; ?></a></li>
                 <li><a href="<?php echo $bide_absolutua; ?>php_hasiera/kontaktua.php" <?php echo (isset($uneko_orria) && $uneko_orria === 'kontaktua') ? 'class="aktiboa"' : ''; ?>><?php echo $itzulpenak->menua->kontaktua; ?></a></li>
-                <?php if (isset($uneko_orria) && ($uneko_orria === 'index' || $uneko_orria === 'kontaktua')): ?>
                 <li><a href="#" id="irekiEzarpenakModala"><img src="<?php echo $bide_absolutua; ?>img/svg/settings.svg" alt=""> <?php echo $itzulpenak->menua->ezarpenak; ?></a></li>
-                <?php endif; ?>
                 <li><a href="<?php echo $bide_absolutua; ?>php_hasiera/login.php" class="botoia botoi-nagusia"><?php echo $itzulpenak->menua->saioa_hasi; ?></a></li>
             </ul>
         </nav>

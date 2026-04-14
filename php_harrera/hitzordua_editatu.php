@@ -47,15 +47,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             try {
                 // Conflict check (excluding current appointment)
                 $sql_check = "SELECT COUNT(*) FROM Hitzorduak WHERE osasun_langile_id = ? AND data = ? AND id != ? AND 
-                             ((hasiera_ordua < ? AND bukaera_ordua > ?) OR (hasiera_ordua < ? AND bukaera_ordua > ?))";
+                            ((hasiera_ordua < ? AND bukaera_ordua > ?) OR (hasiera_ordua < ? AND bukaera_ordua > ?))";
                 $stmt_check = $pdo->prepare($sql_check);
                 $stmt_check->execute([$m_id, $data, $h_id, $b_ordua, $h_ordua, $b_ordua, $h_ordua]);
-                
+
                 if ($stmt_check->fetchColumn() == 0) {
                     $sql_update = "UPDATE Hitzorduak SET paziente_id = ?, osasun_langile_id = ?, data = ?, hasiera_ordua = ?, bukaera_ordua = ?, arrazoia = ?, egoera = ? WHERE id = ?";
                     $stmt_update = $pdo->prepare($sql_update);
                     $stmt_update->execute([$p_id, $m_id, $data, $h_ordua, $b_ordua, $arrazoia, $egoera, $h_id]);
-                    
+
                     header("Location: hitzorduak.php?msg=" . urlencode("Hitzordua arrakastaz aldatu da."));
                     exit;
                 } else {

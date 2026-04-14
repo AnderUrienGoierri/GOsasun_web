@@ -74,14 +74,14 @@ include_once '../php_includeak/harrera_goiburua.php';
                         <?php foreach ($langileak as $l): ?>
                             <tr>
                                 <td class="zabalera-50">
-                                    <?php 
+                                    <?php
                                     $irudia_bide = htmlspecialchars($l['irudia'] ?? 'img/lehenetsia_harrera.png');
                                     if (strpos($irudia_bide, 'img/') === 0 && strpos($irudia_bide, 'img/png/') === false && strpos($irudia_bide, 'img/svg/') === false) {
                                         $irudia_bide = str_replace('img/', 'img/png/', $irudia_bide);
                                     }
                                     ?>
-                                    <img src="../<?php echo $irudia_bide; ?>" 
-                                         alt="Langilearen argazkia" class="irudia-txikia">
+                                    <img src="../<?php echo $irudia_bide; ?>"
+                                        alt="Langilearen argazkia" class="irudia-txikia">
                                 </td>
                                 <td class="identifikadorea">#<?php echo $l['langile_id']; ?></td>
                                 <td>
@@ -115,7 +115,7 @@ include_once '../php_includeak/harrera_goiburua.php';
     </main>
 
 <?php $js_gehigarria = ['harrera_langileak.js'];
-include_once '../php_includeak/harrera_footer.php'; 
+include_once '../php_includeak/harrera_footer.php';
 ?>
 
 

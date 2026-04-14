@@ -69,7 +69,8 @@ $itzulpenak = kargatuItzulpenak($hizkuntza_def);
             <li><a href="osasun_langileak.php" class="<?php echo ($uneko_orria === 'medikuak') ? 'aktiboa' : ''; ?>"><?php echo $itzulpenak->menua_harrera->medikuak; ?></a></li>
             <li><a href="harrerako_langileak.php" class="<?php echo ($uneko_orria === 'harrerako_langileak') ? 'aktiboa' : ''; ?>"><?php echo $itzulpenak->menua_harrera->harrerako_langileak; ?></a></li>
             <li><a href="hitzorduak.php" class="<?php echo ($uneko_orria === 'hitzorduak') ? 'aktiboa' : ''; ?>"><?php echo $itzulpenak->menua_harrera->hitzorduak; ?></a></li>
-            <li><a href="ezarpenak.php" class="<?php echo ($uneko_orria === 'ezarpenak') ? 'aktiboa' : ''; ?>"><?php echo $itzulpenak->menua->ezarpenak; ?></a></li>
+            <li><a href="dokumentuak.php" class="<?php echo ($uneko_orria === 'dokumentuak') ? 'aktiboa' : ''; ?>"><?php echo $itzulpenak->menua_harrera->dokumentuak; ?></a></li>
+            <li><a href="ezarpenak.php" class="<?php echo ($uneko_orria === 'ezarpenak') ? 'aktiboa' : ''; ?>"><img src="<?php echo $bide_absolutua; ?>img/svg/settings.svg" alt=""> <?php echo $itzulpenak->menua->ezarpenak; ?></a></li>
             <li><a href="<?php echo $bide_absolutua; ?>php_laguntzaileak/logout.php" class="botoia botoi-ertza arrisku-kolorea"><?php echo $itzulpenak->erabiltzaile_panela->saioa_itxi; ?></a></li>
         </ul>
     </header>

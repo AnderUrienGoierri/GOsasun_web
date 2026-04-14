@@ -1,14 +1,141 @@
-/* index_harrera.css */
+/* index_harrera.css - Harrera Ataleko Estilo Modernoak */
 
-/* Harrerako aginte-paneleko doikuntza espezifikoak */
-.kaixo-atalak {
-    border-left-color: var(--secondary-color);
+.kaixo-atal-modernoa {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.kaixo-atal-modernoa .profil-izena {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.kaixo-testua h1 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.kaixo-testua .azpititulu-grisa {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+/* Menu Sareta */
+.menu-sareta {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-bottom: 50px;
 }
 
 .menu-txartela {
-    border-bottom: 5px solid var(--secondary-color);
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid #edf2f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
 }
 
-.irteera-txartela {
-    border-bottom-color: var(--danger-color);
+.menu-txartela::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--secondary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.menu-txartela:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: var(--secondary-color);
+}
+
+.menu-txartela:hover::after {
+    transform: scaleX(1);
+}
+
+.txartel-ikonoa {
+    width: 70px;
+    height: 70px;
+    background: rgba(67, 97, 238, 0.05);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.menu-txartela:hover .txartel-ikonoa {
+    background: var(--secondary-color);
+    transform: rotate(-5deg);
+}
+
+.menu-txartela:hover .ikono-handia-48 {
+    filter: brightness(0) invert(1);
+}
+
+.menu-txartela h3 {
+    font-size: 1.25rem;
+    color: #2d3748;
+    margin-bottom: 12px;
+}
+
+.menu-txartela p {
+    font-size: 0.95rem;
+    color: #718096;
+    line-height: 1.5;
+}
+
+/* Saioa itxi botoi espezifikoa */
+.irteera-txartela::after {
+    background: var(--danger-color);
+}
+
+.irteera-txartela:hover {
+    border-color: var(--danger-color);
+}
+
+.irteera-txartela:hover .txartel-ikonoa {
+    background: var(--danger-color);
+}
+
+/* Mugikorrerako egokitzapenak */
+@media (max-width: 768px) {
+    .kaixo-atal-modernoa {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .kaixo-testua h1 {
+        font-size: 1.8rem;
+    }
+    
+    .menu-sareta {
+        grid-template-columns: 1fr;
+    }
 }

@@ -16,7 +16,6 @@ include_once '../php_includeak/harrera_goiburua.php';
 require_once '../php_includeak/konfigurazioa_kargatu.php';
 $konf = kargatuKonfigurazioa(false);
 
- 
 // Pertsonalak ere kargatu itzulpen-flagetarako etab.
 $hizkuntza_def = $konf['hizkuntza'];
 $kolore_nagusia_def = $konf['kolore_nagusia'];
@@ -54,7 +53,7 @@ $gaia_glob = $konf_globala['gaia'];
         <h1><img src="../img/svg/settings.svg" alt="" class="ikono-32px-erdian"> <?php echo $itzulpenak->ezarpenak->izenburua; ?></h1>
         <a href="index.php" class="botoia botoi-itsua"><img src="../img/svg/arrow-left.svg" alt="" class="ikono-16px-erdian"> <?php echo $itzulpenak->login->itzuli ?? 'Itzuli'; ?></a>
     </div>
- 
+
     <section class="ezarpen-panela-wrapper edukiontzi-ertaina">
         <div class="kutxa-zuria ertz-lodi-urdina">
             <div class="testua-erdian-marjina-behe-20">
@@ -70,7 +69,7 @@ $gaia_glob = $konf_globala['gaia'];
                 <!-- Ezarpen Pertsonalak (Standardized) -->
                 <input type="hidden" name="form_type" value="orokorra">
                 <input type="hidden" name="itzulera" value="harrera">
- 
+
                 <div class="inprimaki-taldea">
                     <label><?php echo $itzulpenak->ezarpenak->hizkuntza; ?></label>
                     <div class="hizkuntza-hautatzailea">
@@ -104,22 +103,22 @@ $gaia_glob = $konf_globala['gaia'];
                         </div>
                     </div>
                 </div>
- 
+
                 <div class="inprimaki-taldea">
                     <label><?php echo $itzulpenak->ezarpenak->kolore_nagusia; ?></label>
                     <input type="color" name="kolore_nagusia" value="<?php echo htmlspecialchars($kolore_nagusia_def); ?>" class="inprimaki-kontrola sarrera-altuera-50">
                 </div>
- 
+
                 <div class="inprimaki-taldea">
                     <label><?php echo $itzulpenak->ezarpenak->bigarren_kolorea; ?></label>
                     <input type="color" name="bigarren_kolorea" value="<?php echo htmlspecialchars($bigarren_kolorea_def); ?>" class="inprimaki-kontrola sarrera-altuera-50">
                 </div>
- 
+
                 <div class="inprimaki-taldea">
                     <label><?php echo $itzulpenak->ezarpenak->footer_kolorea; ?></label>
                     <input type="color" name="footer_kolorea" value="<?php echo htmlspecialchars($footer_kolorea_def); ?>" class="inprimaki-kontrola sarrera-altuera-50">
                 </div>
- 
+
                 <div class="inprimaki-taldea">
                     <label><?php echo $itzulpenak->ezarpenak->itxura; ?></label>
                     <select name="gaia" class="inprimaki-kontrola">
@@ -127,14 +126,14 @@ $gaia_glob = $konf_globala['gaia'];
                         <option value="iluna" <?php echo ($gaia_def === 'iluna') ? 'selected' : ''; ?>><?php echo $itzulpenak->ezarpenak->gaia_iluna; ?></option>
                     </select>
                 </div>
- 
+
                 <div class="testua-erdian-marjina-behe-20">
                     <button type="submit" class="botoia botoi-nagusia zabalera-osoa-300px"><?php echo $itzulpenak->ezarpenak->gorde_botoia; ?></button>
                 </div>
             </form>
- 
+
             <hr class="banatzaile-marra">
- 
+
             <form action="../php_laguntzaileak/ezarpenak_gorde.php" method="POST" class="marjina-goi-15">
                 <input type="hidden" name="ekintza" value="reset">
                 <input type="hidden" name="form_type" value="orokorra">
@@ -151,7 +150,7 @@ $gaia_glob = $konf_globala['gaia'];
                 <h2 class="testua-urdina"><img src="../img/svg/hospital.svg" alt="" class="ikono-24px-erdian"> <?php echo $itzulpenak->ezarpenak->zentro_konfigurazioa; ?></h2>
                 <p class="testu-grisa"><?php echo $itzulpenak->ezarpenak->zentro_laguntza; ?></p>
             </div>
-            
+
             <form action="../php_laguntzaileak/ezarpenak_gorde.php" method="POST">
                 <input type="hidden" name="form_type" value="osasun_zentroa">
                 <input type="hidden" name="itzulera" value="harrera">

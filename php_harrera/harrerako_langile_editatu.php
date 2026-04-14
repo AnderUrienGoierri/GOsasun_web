@@ -41,12 +41,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Pasahitza aldatu nahi bada
             if (!empty($_POST['pasahitza'])) {
+<<<<<<< Updated upstream
                  if ($_POST['pasahitza'] === $_POST['pasahitza_errepikatu']) {
                      $stmtP = $pdo->prepare("UPDATE Erabiltzaileak SET pasahitza = ? WHERE id = ?");
                      $stmtP->execute([$_POST['pasahitza'], $id]);
                  } else {
                      throw new Exception("Pasahitzak ez datoz bat.");
                  }
+=======
+                if ($_POST['pasahitza'] === $_POST['pasahitza_errepikatu']) {
+                    $stmtP = $pdo->prepare("UPDATE Erabiltzaileak SET pasahitza = ? WHERE id = ?");
+                    $stmtP->execute([$_POST['pasahitza'], $id]);
+                } else {
+                    throw new Exception("Pasahitzak ez datoz bat.");
+                }
+>>>>>>> Stashed changes
             }
 
             $pdo->commit();
@@ -143,6 +152,7 @@ include_once '../php_includeak/harrera_goiburua.php';
                     <input type="password" id="pasahitza_errepikatu" name="pasahitza_errepikatu" class="inprimaki-kontrola" placeholder="Hutsik utzi ez aldatzeko">
                 </div>
             </div>
+<<<<<<< Updated upstream
             
             <div class="botoi-taldea marjina-goi-20">
                 <button type="submit" class="botoia botoi-nagusia">Gorde Aldaketak</button>

@@ -1,0 +1,157 @@
+/* dokumentuak.css */
+.dokumentu-zerrenda {
+    margin-top: 20px;
+}
+
+.dokumentu-taula {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--bg-surface);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+}
+
+.dokumentu-taula th, .dokumentu-taula td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dokumentu-taula th {
+    background: rgba(67, 97, 238, 0.05);
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+}
+
+.dokumentu-taula tr:hover {
+    background: rgba(67, 97, 238, 0.02);
+}
+
+.ekintza-botoiak {
+    display: flex;
+    gap: 10px;
+}
+
+.botoi-ikonoa {
+    padding: 8px;
+    border-radius: 6px;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botoi-ikonoa:hover {
+    background: rgba(0,0,0,0.05);
+}
+
+.editatu-botoia:hover {
+    background: rgba(67, 97, 238, 0.1);
+}
+
+.ezabatu-botoia:hover {
+    background: rgba(239, 71, 111, 0.1);
+}
+
+.bilaketa-eremua {
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.pdf-aurrebista {
+    width: 100%;
+    height: 500px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* Modal estiloak (edizio form-erako) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
+.modal-content {
+    background-color: var(--bg-surface);
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+    position: relative;
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.itxi-modal {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--gray);
+    cursor: pointer;
+}
+
+.itxi-modal:hover {
+    color: var(--text-main);
+}
+
+@media (max-width: 600px) {
+    .bilaketa-eremua {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .dokumentu-taula th:nth-child(3),
+    .dokumentu-taula td:nth-child(3) {
+        display: none; /* Deskribapena ezkutatu mugikorrean */
+    }
+    
+    .dokumentu-taula th, .dokumentu-taula td {
+        padding: 10px 8px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .panel-nagusia {
+        padding: 10px;
+    }
+    
+    .orri-goiburua h2 {
+        font-size: 1.2rem;
+    }
+    
+    .dokumentu-taula th:nth-child(1),
+    .dokumentu-taula td:nth-child(1) {
+        font-size: 0.75rem; /* Data txikiagoa */
+    }
+
+    .ekintza-botoiak {
+        gap: 5px;
+    }
+    
+    .botoi-ikonoa {
+        padding: 5px;
+    }
+}

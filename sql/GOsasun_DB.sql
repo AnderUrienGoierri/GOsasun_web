@@ -1,7 +1,7 @@
 -- GOsasun_DB.sql
 -- Datu-basea sortu eta erabili
-CREATE DATABASE IF NOT EXISTS GOsasun_DB CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE GOsasun_DB;
+CREATE DATABASE IF NOT EXISTS gosasun_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE gosasun_db;
 -- 1. ROLAK TAULA
 CREATE TABLE IF NOT EXISTS rolak (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS pazienteak (
     FOREIGN KEY (id) REFERENCES erabiltzaileak(id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
--- 4. OSASUN LANGILEAK TAULA (Lehen: medikuak)
+-- 4. OSASUN LANGILEAK TAULA
 CREATE TABLE IF NOT EXISTS osasun_langileak (
     id INT PRIMARY KEY,
     elkargokide_zenbakia VARCHAR(50) NOT NULL UNIQUE,

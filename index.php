@@ -75,6 +75,16 @@ include 'php_includeak/goiburua.php';
                 <p>Sartu zure eguneroko osasun datuak (tentsioa, pultsua, pisua, altuera...) eta ikusi bilakaera.</p>
             </div>
             <div class="ezaugarri-txartela">
+                <div class="ezaugarri-ikonoa"><img src="img/svg/activity.svg" alt="Grafikak eta Analisia"></div>
+                <h3>Grafikak eta Analisia</h3>
+                <p>Ikusi zure osasun datuen grafika interaktiboak eta aztertu zure bilakaera modu bisualean.</p>
+            </div>
+            <div class="ezaugarri-txartela">
+                <div class="ezaugarri-ikonoa"><img src="img/svg/file-text.svg" alt="Dokumentuen kudeaketa"></div>
+                <h3>Dokumentuen kudeaketa</h3>
+                <p>Kudeatu zure txosten medikoak, analizak eta bestelako dokumentu garrantzitsuak modu seguruan.</p>
+            </div>
+            <div class="ezaugarri-txartela">
                 <div class="ezaugarri-ikonoa"><img src="img/svg/calendar.svg" alt="Hitzorduak"></div>
                 <h3>Hitzorduak</h3>
                 <p>Ikusi zure hurrengo hitzorduak era erraz eta azkar batean.</p>

@@ -40,12 +40,14 @@
         <hasiera>Hasiera</hasiera>
         <datuak>Nire Datuak</datuak>
         <datuak_testua>Ikusi eta eguneratu zure datuak.</datuak_testua>
-        <neurketak>Neurketak</neurketak>
-        <neurketak_testua>Ikusi zure neurketen historiala.</neurketak_testua>
+        <jarraipenak>Jarraipenak</jarraipenak>
+        <jarraipenak_testua>Ikusi zure neurketen historiala.</jarraipenak_testua>
         <grafikak>Grafikak</grafikak>
         <grafikak_testua>Ikusi zure osasun bilakaera.</grafikak_testua>
         <errezetak>Errezetak</errezetak>
         <errezetak_testua>Ikusi esleitutako errezetak.</errezetak_testua>
+        <dokumentuak>Dokumentuak</dokumentuak>
+        <dokumentuak_testua>Kudeatu zure dokumentu klinikoak.</dokumentuak_testua>
         <abisuak>Abisuak</abisuak>
         <abisuak_testua>Ikusi neurketetako oharrak.</abisuak_testua>
         <hitzorduak>Hitzorduak</hitzorduak>
@@ -65,7 +67,7 @@
         <pisua>Pisua</pisua>
         <eguneratua>Eguneratua</eguneratua>
         <ez_dago_neurketarik>Ez dago neurketa erregistratutik.</ez_dago_neurketarik>
-        <neurketa_berria>Nire Neurketak</neurketa_berria>
+        <neurketa_berria>Nire Jarraipenak</neurketa_berria>
         <hurrengo_hitzordua>Hurrengo Hitzordua</hurrengo_hitzordua>
         <ez_hitzordurik>Ez duzu hitzordurik aurreikusita.</ez_hitzordurik>
         <agenda_ikusi>Agenda Ikusi</agenda_ikusi>
@@ -73,7 +75,7 @@
         <hasiera_data>Hasiera Data</hasiera_data>
         <bukaera_data>Bukaera Data</bukaera_data>
         <deskargatu>Deskargatu</deskargatu>
-    </dashboard_pazientea>
+    <tentsio_sistolikoa>T. Sistolikoa</tentsio_sistolikoa><tentsio_diastolikoa>T. Diastolikoa</tentsio_diastolikoa><data_column>Data</data_column><ordua_column>Ordua</ordua_column></dashboard_pazientea>
     <menua_medikua>
         <hasiera>Hasiera</hasiera>
         <pazienteak>Nire Pazienteak</pazienteak>
@@ -82,8 +84,10 @@
         <hitzorduak_testua>Ikusi eta kudeatu zure agenda.</hitzorduak_testua>
         <errezetak>Errezetak</errezetak>
         <errezetak_testua>Sortu eta kudeatu errezetak.</errezetak_testua>
-        <neurketak>Neurketak</neurketak>
-        <neurketak_testua>Ikusi pazienteen neurketak.</neurketak_testua>
+        <dokumentuak>Dokumentuak</dokumentuak>
+        <dokumentuak_testua>Pazienteen dokumentu klinikoak bilatu.</dokumentuak_testua>
+        <jarraipenak>Jarraipenak</jarraipenak>
+        <jarraipenak_testua>Ikusi pazienteen neurketak.</jarraipenak_testua>
         <grafikak>Grafikak</grafikak>
         <grafikak_testua>Aztertu neurketa bilakaerak.</grafikak_testua>
         <mezuak>Mezuak</mezuak>
@@ -106,6 +110,8 @@
         <medikuak_testua>Medikuen zerrenda eta kudeaketa.</medikuak_testua>
         <hitzorduak>Hitzorduak</hitzorduak>
         <hitzorduak_testua>Erreserbatu hitzordu berriak.</hitzorduak_testua>
+        <dokumentuak>Dokumentuak</dokumentuak>
+        <dokumentuak_testua>Kudeatu zentroko dokumentu guztiak.</dokumentuak_testua>
         <mezuak>Mezuak</mezuak>
         <mezuak_testua>Kudeatu jasotako mezuak.</mezuak_testua>
         <kanpoko_mezuak>Kanpoko Mezuak</kanpoko_mezuak>

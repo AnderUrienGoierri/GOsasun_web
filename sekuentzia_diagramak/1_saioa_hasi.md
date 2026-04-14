@@ -21,7 +21,7 @@ Diagrama honek erabiltzaile batek `login.php` bitartez saioa hastean jarraitzen 
 
 **[Alt: Kredentzial zuzenak]**:
 8.  **login.php (PHP) -> login.php (PHP):** Saioa hasi eta aldagaiak gorde. Testua: `session_start()` eta `$_SESSION['rol_id'] = ...`
-9.  **login.php (PHP) -->> Erabiltzailea:** Orri nagusira birbideratu. Testua: `header("Location: ../php_medikua/index.php")` (edota dagokion rola).
+9.  **login.php (PHP) -->> Erabiltzailea:** Orri nagusira birbideratu. Testua: `header("Location: ../php_osasun_langileak/index.php")` (edota dagokion rola).
 
 ---
 

@@ -1,296 +1,445 @@
-/* hitzorduak.css - Hitzordu Kudeaketa Estilo Bateratuak */
+/* hitzorduak.css - Hitzordu Kudeaketa Estilo Bateratuak (Mobile-First) */
 
 /* Goiburu eta Edukiontzi Komuna */
 .orri-goiburua {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 30px;
-    flex-wrap: wrap;
-    gap: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .orri-goiburua h2 {
-    color: var(--primary-color);
-    margin: 0;
-    font-size: 1.75rem;
-    font-weight: 700;
+  color: var(--primary-color);
+  margin: 0;
+  font-size: 1.75rem;
+  font-weight: 700;
 }
 
 .orri-goiburua p {
-    color: var(--gray);
-    margin-top: 5px;
+  color: var(--gray);
+  margin-top: 5px;
 }
 
-/* Laburpen Txartelak */
-.laburpen-txartelak {
+/* Dashboard Layout - Default (Mobile) */
+.hitzorduak-dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+@media (min-width: 992px) {
+  .hitzorduak-dashboard {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 280px 1fr;
+    gap: 30px;
+    margin-top: 20px;
+  }
+}
+
+/* Sidebar Iragazkiak - Default (Mobile) */
+.sidebar-iragazkiak {
+  background: var(--bg-surface);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  border: 1px solid var(--border-color);
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .sidebar-iragazkiak {
+    padding: 25px;
+    position: sticky;
+    top: 90px;
+  }
+}
+
+.iragazki-taldea h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--dark-text);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 2px solid var(--bg-body);
+  padding-bottom: 8px;
+}
+
+.checkbox-zerrenda {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.iragazki-aukera {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  transition: var(--transition);
+}
+
+.iragazki-aukera:hover {
+  color: var(--primary-color);
+}
+
+.iragazki-aukera input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: var(--primary-color);
+}
+
+.testu-botoia {
+  color: var(--gray);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.testu-botoia:hover {
+  color: var(--danger-color);
+  text-decoration: underline;
+}
+
+.egutegia-panel-nagusia {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Laburpen Txartelak - Default (Mobile) */
+.laburpen-txartelak {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+}
+
+@media (min-width: 480px) {
+  .laburpen-txartelak {
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
-    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .laburpen-txartelak {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .itxurazko-txartela {
-    background: var(--bg-surface);
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: var(--box-shadow);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid var(--border-color);
+  background: var(--bg-surface);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--border-color);
 }
 
 .txartel-info h4 {
-    color: var(--gray);
-    font-size: 0.9rem;
-    margin-bottom: 5px;
-    font-weight: 500;
+  color: var(--gray);
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+  font-weight: 500;
 }
 
 .txartel-balioa {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--dark-text);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--dark-text);
 }
 
 .joera-etiketa {
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 
 .joera-igoera {
-    background: rgba(40, 167, 69, 0.1);
-    color: #28a745;
+  background: rgba(40, 167, 69, 0.1);
+  color: #28a745;
 }
 
 .joera-beherakada {
-    background: rgba(220, 53, 69, 0.1);
-    color: #dc3545;
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
 }
 
 /* Egutegi Edukiontzia */
 .egutegia-edukiontzia {
-    background: var(--bg-surface);
-    border-radius: 15px;
-    box-shadow: var(--box-shadow);
-    padding: 25px;
-    margin-top: 20px;
-    overflow-x: auto; 
-    border: 1px solid var(--border-color);
+  background: var(--bg-surface);
+  border-radius: 15px;
+  box-shadow: var(--box-shadow);
+  padding: 25px;
+  margin-top: 20px;
+  overflow-x: auto;
+  border: 1px solid var(--border-color);
 }
 
 .egutegia-goiburua {
-    display: flex;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+  .egutegia-goiburua {
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 25px;
-    flex-wrap: wrap;
-    gap: 15px;
+  }
 }
 
 .egutegia-nabigazioa {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .egutegia-titulua {
-    font-size: 1.5rem;
-    font-weight: 700;
-    min-width: 150px;
-    text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  min-width: 150px;
+  text-align: center;
 }
 
 .bista-hautatzailea {
-    display: flex;
-    background: var(--bg-body);
-    padding: 4px;
-    border-radius: 8px;
-    gap: 15px;
-    border: 1px solid var(--border-color);
+  display: flex;
+  background: var(--bg-body);
+  padding: 4px;
+  border-radius: 8px;
+  gap: 15px;
+  border: 1px solid var(--border-color);
 }
 
 /* Sareta Egutegia */
 .grid-egutegia {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr) !important;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    overflow: hidden;
-    min-width: 700px; 
+  display: grid;
+  grid-template-columns: repeat(7, 1fr) !important;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  min-width: 700px;
 }
 
 .grid-goiburua {
-    display: contents;
+  display: contents;
 }
 
 .grid-th {
-    padding: 15px 10px;
-    background: var(--bg-body);
-    border-bottom: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
-    text-align: center;
-    font-weight: 600;
+  padding: 15px 10px;
+  background: var(--bg-body);
+  border-bottom: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  text-align: center;
+  font-weight: 600;
 }
 
 .egun-gelaxka {
-    min-height: 120px;
-    border-bottom: 1px solid var(--border-color);
-    border-right: 1px solid var(--border-color);
-    position: relative;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
+  min-height: 120px;
+  border-bottom: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  position: relative;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .egun-gelaxka.hutsik {
-    background-color: var(--bg-body);
-    opacity: 0.6;
+  background-color: var(--bg-body);
+  opacity: 0.6;
 }
 
 .egun-gelaxka.gaurkoa {
-    background: rgba(0, 123, 255, 0.03);
+  background: rgba(0, 123, 255, 0.03);
 }
 
 .egun-gelaxka .egun-zenbakia {
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: var(--gray);
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--gray);
 }
 
 .egun-gelaxka.gaurkoa .egun-zenbakia {
-    background: var(--primary-color);
-    color: white;
-    width: 28px;
-    height: 28px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
+  background: var(--primary-color);
+  color: white;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
 /* Hitzordu Blokeak (Sareta) */
 .eguneko-hitzorduak {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .hitzordu-blokea {
-    background: rgba(74, 144, 226, 0.15);
-    border-left: 4px solid var(--primary-color);
-    padding: 8px;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    margin-bottom: 5px;
-    cursor: pointer;
-    transition: var(--transition);
+  background: rgba(74, 144, 226, 0.15);
+  border-left: 4px solid var(--primary-color);
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: var(--transition);
 }
 
 .hitzordu-blokea:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.hitzordu-blokea.status-bukatuta { border-left-color: var(--success-color); background-color: rgba(40, 167, 69, 0.1); }
-.hitzordu-blokea.status-ezeztatuta { border-left-color: var(--danger-color); background-color: rgba(220, 53, 69, 0.1); }
-.hitzordu-blokea.status-zain { border-left-color: #ffc107; background-color: rgba(255, 193, 7, 0.1); }
+.hitzordu-blokea.status-bukatuta {
+  border-left-color: var(--success-color);
+  background-color: rgba(40, 167, 69, 0.1);
+}
+.hitzordu-blokea.status-ezeztatuta {
+  border-left-color: var(--danger-color);
+  background-color: rgba(220, 53, 69, 0.1);
+}
+.hitzordu-blokea.status-zain {
+  border-left-color: #ffc107;
+  background-color: rgba(255, 193, 7, 0.1);
+}
 
-.bloke-izenik { font-weight: 700; display: block; margin-bottom: 2px; }
-.bloke-mota { font-size: 0.75rem; color: var(--gray); }
+.bloke-izenik {
+  font-weight: 700;
+  display: block;
+  margin-bottom: 2px;
+}
+.bloke-mota {
+  font-size: 0.75rem;
+  color: var(--gray);
+}
 
 /* Zerrenda Ikuspegia (Agenda) */
 .agenda-edukiontzia {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .egun-taldea {
-    background-color: var(--bg-surface);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    overflow: hidden;
-    border: 1px solid var(--border-color);
+  background-color: var(--bg-surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
 }
 
 .egun-goiburua {
-    background-color: var(--bg-body);
-    padding: 15px 25px;
-    margin: 0;
-    border-bottom: 1px solid var(--border-color);
-    font-size: 1.1rem;
-    color: var(--text-main);
+  background-color: var(--bg-body);
+  padding: 15px 25px;
+  margin: 0;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 1.1rem;
+  color: var(--text-main);
 }
 
 .hitzordu-txartela {
-    display: flex;
-    align-items: center;
-    padding: 20px 25px;
-    border-bottom: 1px solid var(--border-color);
-    transition: var(--transition);
-    gap: 20px;
+  display: flex;
+  align-items: center;
+  padding: 20px 25px;
+  border-bottom: 1px solid var(--border-color);
+  transition: var(--transition);
+  gap: 20px;
 }
 
-.hitzordu-txartela:hover { background-color: var(--bg-body); }
+.hitzordu-txartela:hover {
+  background-color: var(--bg-body);
+}
 
 .ordu-tartea {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: var(--primary-color);
-    min-width: 80px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  min-width: 80px;
 }
 
-.hitzordu-xehetasunak { flex: 1; }
-.hitzordu-xehetasunak h4 { margin: 0 0 5px 0; color: var(--text-main); font-size: 1.1rem; }
-.hitzordu-xehetasunak .arrazoia { margin: 0; color: var(--gray); font-size: 0.9rem; }
+.hitzordu-xehetasunak {
+  flex: 1;
+}
+.hitzordu-xehetasunak h4 {
+  margin: 0 0 5px 0;
+  color: var(--text-main);
+  font-size: 1.1rem;
+}
+.hitzordu-xehetasunak .arrazoia {
+  margin: 0;
+  color: var(--gray);
+  font-size: 0.9rem;
+}
 
 .egoera-txapa {
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
 }
 
-.egoera-txapa.status-bukatuta { background: rgba(40, 167, 69, 0.1); color: #28a745; }
-.egoera-txapa.status-ezeztatuta { background: rgba(220, 53, 69, 0.1); color: #dc3545; }
-.egoera-txapa.status-zain { background: rgba(255, 193, 7, 0.1); color: #b7791f; }
+.egoera-txapa.status-bukatuta {
+  background: rgba(40, 167, 69, 0.1);
+  color: #28a745;
+}
+.egoera-txapa.status-ezeztatuta {
+  background: rgba(220, 53, 69, 0.1);
+  color: #dc3545;
+}
+.egoera-txapa.status-zain {
+  background: rgba(255, 193, 7, 0.1);
+  color: #b7791f;
+}
 
 /* Modalak */
 .modala-inguratzailea {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 
 .modala-edukia {
-    background-color: var(--bg-surface);
-    margin: 5% auto;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 550px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-    overflow: hidden;
-    border: 1px solid var(--border-color);
+  background-color: var(--bg-surface);
+  margin: 5% auto;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 550px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
 }
 
 .modala-goiburua {
-    padding: 20px 25px;
-    background: var(--bg-body);
-    border-bottom: 1px solid var(--border-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  padding: 20px 25px;
+  background: var(--bg-body);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Kudeaketa Tresnak */
@@ -310,85 +459,4 @@
   margin-bottom: 15px;
 }
 
-@media (max-width: 768px) {
-    .hitzordu-txartela {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .egutegia-edukiontzia {
-        padding: 10px;
-        margin-top: 15px;
-    }
-    
-    .egutegia-goiburua {
-        flex-direction: column;
-        align-items: stretch;
-    }
-    
-    .egutegia-nabigazioa {
-        justify-content: space-between;
-    }
-    
-    .bista-hautatzailea {
-        justify-content: space-between;
-        margin-top: 10px;
-    }
-
-    .grid-th {
-        padding: 10px 2px;
-        font-size: 0.75rem;
-    }
-    
-    .egun-gelaxka {
-        padding: 4px;
-        min-height: 80px;
-    }
-
-    .egun-gelaxka.gaurkoa .egun-zenbakia {
-        width: 24px;
-        height: 24px;
-        font-size: 0.8rem;
-    }
-    
-    .hitzordu-blokea {
-        padding: 4px;
-        border-left-width: 3px;
-    }
-    
-    .bloke-izenik {
-        font-size: 0.7rem;
-    }
-    
-    .bloke-mota {
-        font-size: 0.65rem;
-        display: block;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 350px) {
-    .grid-th {
-        font-size: 0.6rem;
-        padding: 8px 1px;
-    }
-    
-    .bista-hautatzailea {
-        gap: 5px;
-    }
-    
-    .bista-botoia {
-        font-size: 0.8rem;
-        padding: 4px;
-    }
-    
-    .egun-gelaxka {
-        padding: 2px;
-    }
-}
+/* Responsive Overrides already handled via Mobile-First above */

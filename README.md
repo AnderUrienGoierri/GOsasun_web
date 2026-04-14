@@ -8,7 +8,7 @@ Proiektua logika eta rol ezberdinen arabera antolatu da:
 
 - php_hasiera/ - Atariaren atal publikoak (Saioa hasi, kontaktua).
 - php_harrera/ - Harrerako langileen ataria (Paziente/mediku kudeaketa, hitzorduak, webguneko mezu publikoak).
-- php_medikua/ - Medikuaren atari pribatua (Nire pazienteak, agendaren kudeaketa, errezetak, pazienteen jarraipena).
+- php_osasun_langileak/ - Medikuaren atari pribatua (Nire pazienteak, agendaren kudeaketa, errezetak, pazienteen jarraipena).
 - php_pazientea/ - Pazientearen ataria (Datu pertsonalak, neurketen sarrera, hitzorduak eskatzea, abisuak).
 - php_includeak/ - Webgune osoko atal komunak (goiburuak, oinak, CSS/JS loturak).
 - php_laguntzaileak/ - Rolik behar ez duten puskak kudeatzeko (Login egiaztapenak, DB Konexioa, Saioa itxi).
@@ -147,38 +147,38 @@ Dokumentazio hau automatikoki sortu da proiektuko karpeta nagusiak miatuz.
 #### C:/Xampp/htdocs/GOsasun/php_harrera/paziente_sortu.php
 - **Aldagai nagusiak:** `$bide_absolutua`, `$mezua`, `$errorea`, `$nan`, `$izena`, `$abizenak`, `$email`, `$pasahitza`, `$jaiotze_data`, `$telefonoa`, `$odol_taldea`, `$stmtUser`, `$id_berria`, `$stmtPaziente`, `$_SESSION['rol_id']`, ... (gehiago)
 
-### 📁 `php_medikua/`
+### 📁 `php_osasun_langileak/`
 
-#### C:/Xampp/htdocs/GOsasun/php_medikua/abisuak.php
+#### C:/Xampp/htdocs/GOsasun/php_osasun_langileak/abisuak.php
 - **Aldagai nagusiak:** `$bide_absolutua`, `$mediku_id`, `$abisuak`, `$orri_izenburua`, `$uneko_orria`, `$css_pertsonalizatua`, `$_SESSION['rol_id']`, `$_SESSION['rol_izena']`, `$_SESSION['erabiltzaile_id']`
 
-#### C:/Xampp/htdocs/GOsasun/php_medikua/errezetak.php
+#### C:/Xampp/htdocs/GOsasun/php_osasun_langileak/errezetak.php
 - **Funtzioak/Metodoak:** `openModal`, `closeModal`, `viewPrescription`, `confirmDelete`
 - **Aldagai nagusiak:** `$bide_absolutua`, `$mediku_id`, `$mezua`, `$errorea`, `$stmtP`, `$pazienteak`, `$gaur`, `$stmtH`, `$hitzordu_aukerak`, `$e_id`, `$p_id`, `$h_id`, `$i_data`, `$ir_data`, `$diag`, ... (gehiago)
 
-#### C:/Xampp/htdocs/GOsasun/php_medikua/grafikak.php
+#### C:/Xampp/htdocs/GOsasun/php_osasun_langileak/grafikak.php
 - **Aldagai nagusiak:** `$bide_absolutua`, `$mediku_id`, `$pazienteZerrenda`, `$aukeratutako_pazientea`, `$neurketak`, `$baimena`, `$stmt_datuak`, `$json_neurketak`, `$orri_izenburua`, `$uneko_orria`, `$css_pertsonalizatua`, `$aukeratutako_pazientea`, `$js_gehigarria`, `$_SESSION['rol_id']`, `$_SESSION['rol_izena']`, ... (gehiago)
 
-#### C:/Xampp/htdocs/GOsasun/php_medikua/hitzorduak.php
+#### C:/Xampp/htdocs/GOsasun/php_osasun_langileak/hitzorduak.php
 - **Aldagai nagusiak:** `$bide_absolutua`, `$mediku_id`, `$mezua`, `$errorea`, `$stmtP`, `$pazienteak`, `$h_id`, `$p_id`, `$m_id`, `$data`, `$h_ordua`, `$b_ordua`, `$arrazoia`, `$egoera`, `$kontsulta_egiaztatu`, ... (gehiago)
 
-#### C:/Xampp/htdocs/GOsasun/php_medikua/index.php
+#### C:/Xampp/htdocs/GOsasun/php_osasun_langileak/index.php
 - **Aldagai nagusiak:** `$bide_absolutua`, `$mediku_id`, `$erabiltzaile_datuak`, `$stmtPaziente`, `$pazienteKopurua`, `$gaur`, `$stmtHitzordu`, `$gaurkoHitzorduak`, `$orri_izenburua`, `$uneko_orria`, `$css_pertsonalizatua`, `$js_gehigarria`, `$_SESSION['rol_id']`, `$_SESSION['rol_izena']`, `$_SESSION['erabiltzaile_id']`
 
-#### C:/Xampp/htdocs/GOsasun/php_medikua/mezuak.php
+#### C:/Xampp/htdocs/GOsasun/php_osasun_langileak/mezuak.php
 - **Funtzioak/Metodoak:** `fitxaAldatu`
 - **Aldagai nagusiak:** `$bide_absolutua`, `$erabiltzaile_id`, `$stmt_jasotakoak`, `$jasotako_mezuak`, `$stmt_bidalitakoak`, `$bidalitako_mezuak`, `$orri_izenburua`, `$uneko_orria`, `$_SESSION['rol_id']`, `$_SESSION['rol_izena']`, `$_SESSION['erabiltzaile_id']`
 
-#### C:/Xampp/htdocs/GOsasun/php_medikua/mezu_berria.php
+#### C:/Xampp/htdocs/GOsasun/php_osasun_langileak/mezu_berria.php
 - **Aldagai nagusiak:** `$bide_absolutua`, `$erabiltzaile_id`, `$stmt_pazienteak`, `$pazienteak`, `$stmt_harrera`, `$harrerakoak`, `$errore_mezua`, `$arrakasta_mezua`, `$hartzaile_id`, `$gaia`, `$mezua`, `$orri_izenburua`, `$uneko_orria`, `$_SESSION['rol_id']`, `$_SESSION['rol_izena']`, ... (gehiago)
 
-#### C:/Xampp/htdocs/GOsasun/php_medikua/mezu_xehetasuna.php
+#### C:/Xampp/htdocs/GOsasun/php_osasun_langileak/mezu_xehetasuna.php
 - **Aldagai nagusiak:** `$bide_absolutua`, `$erabiltzaile_id`, `$mezu_id`, `$mezua`, `$stmt_mark`, `$orri_izenburua`, `$uneko_orria`, `$_SESSION['rol_id']`, `$_SESSION['rol_izena']`, `$_SESSION['erabiltzaile_id']`
 
-#### C:/Xampp/htdocs/GOsasun/php_medikua/pazienteak.php
+#### C:/Xampp/htdocs/GOsasun/php_osasun_langileak/pazienteak.php
 - **Aldagai nagusiak:** `$bide_absolutua`, `$mediku_id`, `$pazienteak`, `$orri_izenburua`, `$uneko_orria`, `$css_pertsonalizatua`, `$js_gehigarria`, `$_SESSION['rol_id']`, `$_SESSION['rol_izena']`, `$_SESSION['erabiltzaile_id']`
 
-#### C:/Xampp/htdocs/GOsasun/php_medikua/paziente_info.php
+#### C:/Xampp/htdocs/GOsasun/php_osasun_langileak/paziente_info.php
 - **Aldagai nagusiak:** `$bide_absolutua`, `$mediku_id`, `$paziente_id`, `$msg_status`, `$berria`, `$stm_eguneratu`, `$stm_egiaztatu`, `$pazientea`, `$stmtNeurketak`, `$neurketak`, `$orri_izenburua`, `$uneko_orria`, `$css_pertsonalizatua`, `$_SESSION['rol_id']`, `$_SESSION['rol_izena']`, ... (gehiago)
 
 ### 📁 `php_pazientea/`

@@ -36,15 +36,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         try {
             // Check for conflicts
             $sql_check = "SELECT COUNT(*) FROM Hitzorduak WHERE osasun_langile_id = ? AND data = ? AND 
-                         ((hasiera_ordua < ? AND bukaera_ordua > ?) OR (hasiera_ordua < ? AND bukaera_ordua > ?))";
+                        ((hasiera_ordua < ? AND bukaera_ordua > ?) OR (hasiera_ordua < ? AND bukaera_ordua > ?))";
             $stmt_check = $pdo->prepare($sql_check);
             $stmt_check->execute([$m_id, $data, $b_ordua, $h_ordua, $b_ordua, $h_ordua]);
-            
+
             if ($stmt_check->fetchColumn() == 0) {
                 $sql_insert = "INSERT INTO Hitzorduak (paziente_id, osasun_langile_id, data, hasiera_ordua, bukaera_ordua, arrazoia, egoera) VALUES (?, ?, ?, ?, ?, ?, 'Zain')";
                 $stmt_insert = $pdo->prepare($sql_insert);
                 $stmt_insert->execute([$p_id, $m_id, $data, $h_ordua, $b_ordua, $arrazoia]);
-                
+
                 header("Location: hitzorduak.php?msg=" . urlencode("Hitzordua arrakastaz sortu da."));
                 exit;
             } else {

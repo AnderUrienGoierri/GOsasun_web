@@ -1,97 +1,166 @@
-/* pazientea_errezetak.css */
+/* pacientea_errezetak.css - Estilo Kliniko Profesionala (Pazientea eta Langilea) */
+
+:root {
+    --clinical-blue: #2c5282;
+    --clinical-light: #ebf8ff;
+    --active-green: #38a169;
+    --expired-red: #e53e3e;
+    --revoked-gray: #718096;
+    --card-shadow: 0 4px 12px rgba(44, 82, 130, 0.08);
+}
 
 .errezetak-edukiontzia {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
 }
 
 .errezeta-txartela {
     display: flex;
-    align-items: center;
-    padding: 20px 25px;
-    border-bottom: 1px solid #f0f0f0;
-    transition: var(--transition);
-    gap: 20px;
-    background: white;
-    margin-bottom: 10px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    align-items: stretch;
+    margin-bottom: 5px;
 }
 
-.errezeta-txartela:hover { 
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+.errezeta-txartela:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(44, 82, 130, 0.12);
+    border-color: #cbd5e0;
 }
 
+/* Data Blokea - Ezkerreko zutabea */
 .data-blokea {
+    background: linear-gradient(135deg, #4299e1 0%, #3182ce 100%);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-width: 100px;
     text-align: center;
-    background: #f8f9fa;
-    padding: 10px;
-    border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
 }
 
 .data-blokea .hilabetea {
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--gray);
     text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    opacity: 0.9;
 }
 
 .data-blokea .eguna {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--dark-text);
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+    margin: 4px 0;
 }
 
 .data-blokea .urtea {
     font-size: 0.85rem;
-    color: var(--gray);
+    font-weight: 600;
+    opacity: 0.8;
 }
 
-.errezeta-xehetasunak { flex: 1; }
-.errezeta-xehetasunak h4 { margin: 0 0 5px 0; color: var(--dark-text); font-size: 1.1rem; }
-.errezeta-xehetasunak .medikua { margin: 0 0 5px 0; color: var(--primary-color); font-size: 0.95rem; font-weight: 500; }
-.errezeta-xehetasunak .iraungitzea { margin: 0; color: var(--gray); font-size: 0.85rem; }
+/* Xehetasunak */
+.errezeta-xehetasunak {
+    flex: 1;
+    padding: 20px 25px;
+}
+
+.errezeta-xehetasunak h4 {
+    margin: 0 0 10px 0;
+    color: var(--clinical-blue);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.diagnostikoa {
+    font-weight: 600;
+    color: #4a5568;
+    margin: 0 0 10px 0;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.botikak-info {
+    background: #f7fafc;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #2d3748;
+    border-left: 3px solid #4299e1;
+    margin-bottom: 12px;
+}
+
+.iraungitzea {
+    font-size: 0.85rem;
+    color: #a0aec0;
+    margin: 0;
+}
+
+/* Egoera Txapa */
+.errezeta-egoera {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
 
 .egoera-txapa {
-    padding: 5px 12px;
+    padding: 6px 14px;
     border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
 }
 
-.egoera-txapa.aktiboa { background: #e6ffed; color: #22863a; }
-.egoera-txapa.iraungita { background: #fff8e1; color: #b7791f; }
-.egoera-txapa.baliogabetuta { background: #ffeef0; color: #cb2431; }
-
-.egoera-hutsa {
-    text-align: center;
-    padding: 40px;
-    background: white;
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
+.aktiboa {
+    background-color: #f0fff4;
+    color: var(--active-green);
+    border: 1px solid #c6f6d5;
 }
 
-.ikono-hutsa {
-    font-size: 3rem;
-    margin-bottom: 15px;
+.iraungita {
+    background-color: #fff5f5;
+    color: var(--expired-red);
+    border: 1px solid #fed7d7;
 }
 
-@media (max-width: 768px) {
+.baliogabetuta {
+    background-color: #edf2f7;
+    color: var(--revoked-gray);
+    border: 1px solid #e2e8f0;
+}
+
+/* Elementu osagarriak */
+.testu-gris-txikia {
+    color: #a0aec0;
+    font-weight: 400;
+}
+
+.ikono-ertaina { width: 20px; height: 20px; vertical-align: middle; }
+.marjina-esk-5 { margin-right: 5px; }
+.marjina-esk-10 { margin-right: 10px; }
+.marjina-ezk-10 { margin-left: 10px; }
+.marjina-goi-30 { margin-top: 30px; }
+
+@media (max-width: 600px) {
     .errezeta-txartela {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
     }
     .data-blokea {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-left: none;
-        border-top: 4px solid var(--primary-color);
+        flex-direction: row;
+        gap: 10px;
+        padding: 10px;
     }
+    .data-blokea .eguna { font-size: 1.2rem; }
 }

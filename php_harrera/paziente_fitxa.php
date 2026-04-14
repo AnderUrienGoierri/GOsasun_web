@@ -38,6 +38,11 @@ $stmtH = $pdo->prepare("SELECT h.*, m.izena as m_izena, m.abizenak as m_abizenak
 $stmtH->execute([$id]);
 $hitzorduak = $stmtH->fetchAll(PDO::FETCH_ASSOC);
 
+// 4. Pazientearen dokumentuak lortu
+$stmtd = $pdo->prepare("SELECT * FROM dokumentuak WHERE paziente_id = ? ORDER BY igotze_data DESC");
+$stmtd->execute([$id]);
+$dokumentuak = $stmtd->fetchAll(PDO::FETCH_ASSOC);
+
 $orri_izenburua = $pazientea['izena'] . " " . $pazientea['abizenak'] . " - Fitxa";
 $uneko_orria = "pazienteak";
 $css_pertsonalizatua = "pazienteak.css";
@@ -190,6 +195,42 @@ include_once '../php_includeak/harrera_goiburua.php';
                 <?php else: ?>
                     <div class="egoera-hutsa">
                         <p class="testu-gris-etzana">Paziente honek ez du hitzordurik erregistratuta.</p>
+                    </div>
+                <?php endif; ?>
+            </div>
+
+            <!-- Dokumentuak -->
+            <div class="kutxa-zuria marjina-goi-30">
+                <h3 class="izenburu-iluna"><img src="../img/svg/file-text.svg" alt="" class="ikono-ertaina marjina-esk-10"> Dokumentuak</h3>
+                
+                <?php if(count($dokumentuak) > 0): ?>
+                    <div class="dokumentu-zerrenda-fitxa">
+                        <table class="dokumentu-taula">
+                            <thead>
+                                <tr>
+                                    <th>Data</th>
+                                    <th>Izena</th>
+                                    <th>Ekintza</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach($dokumentuak as $d): ?>
+                                    <tr>
+                                        <td><?php echo date('Y/m/d', strtotime($d['igotze_data'])); ?></td>
+                                        <td><?php echo htmlspecialchars($d['dokumentu_izena'] ?: $d['fitxategi_izena']); ?></td>
+                                        <td>
+                                            <a href="../<?php echo htmlspecialchars($d['bidea_zerbitzarian']); ?>" target="_blank" class="botoi-ikonoa">
+                                                <img src="../img/svg/download.svg" alt="" class="ikono-txikia">
+                                            </a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                <?php else: ?>
+                    <div class="egoera-hutsa">
+                        <p class="testu-gris-etzana">Paziente honek ez du dokumenturik.</p>
                     </div>
                 <?php endif; ?>
             </div>

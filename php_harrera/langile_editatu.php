@@ -28,11 +28,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // 1. Update Erabiltzaileak (Personal data)
         $pdo->prepare("UPDATE erabiltzaileak SET email = ?, izena = ?, abizenak = ?, jaiotze_data = ?, telefonoa = ? WHERE id = ?")
             ->execute([$email, $izena, $abizenak, $jaiotze_data, $telefonoa, $id]);
-        
+
         // 2. Update osasun_langileak (Work data)
         $pdo->prepare("UPDATE osasun_langileak SET elkargokide_zenbakia = ?, espezialitatea = ?, kontsulta = ?, lanaldia = ? WHERE id = ?")
             ->execute([$elkargokide, $espezialitatea, $kontsulta, $lanaldia, $id]);
-            
+
         $pdo->commit();
         $mezua = "Langilearen datuak eguneratu dira.";
     } catch (PDOException $e) {

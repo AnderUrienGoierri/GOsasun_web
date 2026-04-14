@@ -27,6 +27,10 @@
   --white-filter: brightness(0) invert(1);
 }
 
+.ikono-txikia { width: 14px; height: 14px; vertical-align: middle; }
+.ikono-ertaina { width: 20px; height: 20px; vertical-align: middle; }
+.ikono-handia { width: 32px; height: 32px; vertical-align: middle; }
+
 /* Atzeko plano gainjarria */
 body::before {
     content: "";
@@ -336,7 +340,7 @@ body {
 .botoi-ikonoa:hover { transform: scale(1.2); }
 
 /* Neurketa Taulak (Bordedun diseinua) */
-.neurketa-taula {
+.jarraipen-taula {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
@@ -345,14 +349,14 @@ body {
     border-radius: var(--border-radius-sm);
 }
 
-.neurketa-taula th, 
-.neurketa-taula td {
+.jarraipen-taula th, 
+.jarraipen-taula td {
     padding: 12px 15px;
     border: 1px solid #dee2e6;
     text-align: left;
 }
 
-.neurketa-taula th {
+.jarraipen-taula th {
     background-color: #f8f9fa;
     font-weight: 600;
     color: var(--dark-text);
@@ -361,7 +365,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-.neurketa-taula tbody tr:hover {
+.jarraipen-taula tbody tr:hover {
     background-color: rgba(67, 97, 238, 0.04);
 }
 
@@ -483,7 +487,7 @@ body {
     gap: 20px;
     text-align: center;
 }
-.profil-irudia-80 {
+.profil-izena {
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -491,16 +495,16 @@ body {
     border: 3px solid var(--primary-color);
 }
 /* ================= AGINTE-PANELEKO ELEMENTU PARTEKATUAK ================= */
-.kaixo-atalak { 
-    background: var(--bg-surface); 
-    padding: 30px;
-    border-radius: var(--border-radius); 
-    box-shadow: var(--box-shadow); 
-    margin-bottom: 30px; 
-    border-left: 6px solid var(--primary-color); 
+.kaixo-atalak, .kaixo-atal-modernoa { 
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 40px;
+    border-radius: 20px;
+    margin-bottom: 40px;
     display: flex;
     align-items: center;
-    gap: 25px;
+    gap: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.8);
 }
 
 .izenburu-nagusia {
@@ -524,38 +528,85 @@ body {
 
 .menu-txartela {
     background: var(--bg-surface);
-    padding: 40px 25px;
-    border-radius: var(--border-radius);
+    padding: 30px;
+    border-radius: 16px;
     text-decoration: none;
-    color: var(--text-main);
-    box-shadow: var(--box-shadow);
-    transition: var(--transition);
-    border-bottom: 5px solid var(--primary-color);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-txartela::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--primary-color);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
 }
 
 .menu-txartela:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(67, 97, 238, 0.15);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: var(--primary-color);
+}
+
+.menu-txartela:hover::after {
+    transform: scaleX(1);
 }
 
 .txartel-ikonoa {
-    font-size: 3.5rem;
+    width: 70px;
+    height: 70px;
+    background: rgba(67, 97, 238, 0.05);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.menu-txartela:hover .txartel-ikonoa {
+    background: var(--primary-color);
+    transform: rotate(-5deg);
+}
+
+.menu-txartela:hover .txartel-ikonoa img {
+    filter: brightness(0) invert(1);
 }
 
 .menu-txartela h3 {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
+    font-size: 1.25rem;
     color: var(--text-main);
+    margin-bottom: 12px;
 }
 
 .menu-txartela p {
-    color: var(--gray);
+    color: var(--text-muted);
     font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Specific cards */
+.irteera-txartela::after {
+    background: var(--danger-color);
+}
+
+.irteera-txartela:hover {
+    border-color: var(--danger-color);
+}
+
+.irteera-txartela:hover .txartel-ikonoa {
+    background: var(--danger-color);
 }
 .gehienezko-zabalera-300 {
     max-width: 300px;

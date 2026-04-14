@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $itzulera = $_POST['itzulera'] ?? 'orokorra';
         if ($itzulera === 'medikua') {
-            header("Location: ../php_medikua/ezarpenak.php?ezarpenak_reset=1");
+            header("Location: ../php_osasun_langileak/ezarpenak.php?ezarpenak_reset=1");
         } elseif ($itzulera === 'pazientea') {
             header("Location: ../php_pazientea/ezarpenak.php?ezarpenak_reset=1");
         } elseif ($itzulera === 'harrera') {
@@ -148,7 +148,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($form_type === 'osasun_zentroa') {
         header("Location: ../php_harrera/ezarpenak.php?ezarpenak_gordeta=1");
     } elseif ($itzulera === 'medikua') {
-        header("Location: ../php_medikua/ezarpenak.php?ezarpenak_gordeta=1");
+        header("Location: ../php_osasun_langileak/ezarpenak.php?ezarpenak_gordeta=1");
     } elseif ($itzulera === 'pazientea') {
         header("Location: ../php_pazientea/ezarpenak.php?ezarpenak_gordeta=1");
     } elseif ($itzulera === 'harrera') {

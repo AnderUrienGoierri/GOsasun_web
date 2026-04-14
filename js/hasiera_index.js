@@ -1,16 +1,21 @@
-// Carouselaren logika
+// Carouselaren logika modua
 $(document).ready(function() {
     let currentSlide = 0;
     const slides = $('.ezaugarri-txartela');
     const totalSlides = slides.length;
-    const container = $('.ezaugarriak-container');
+    const wrapper = $('.ezaugarriak-wrapper');
 
     function nextSlide() {
         currentSlide = (currentSlide + 1) % totalSlides;
-        const offset = - (currentSlide * (100 / totalSlides));
-        container.css('transform', `translateX(${offset}%)`);
+        
+        // Kalkulatu posizioa (txartela + gap)
+        const slideWidth = 320; // Txartelaren zabalera (300) + gap (20)
+        wrapper.scrollTo({
+            left: currentSlide * slideWidth,
+            behavior: 'smooth'
+        });
     }
 
-    // 3 segunduoro aldatu ezaugarri txartelak
-    setInterval(nextSlide, 3000);
+    // 4 segunduoro aldatu ezaugarri txartelak
+    setInterval(nextSlide, 4000);
 });

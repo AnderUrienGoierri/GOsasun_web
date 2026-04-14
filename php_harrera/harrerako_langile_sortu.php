@@ -30,6 +30,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt = $pdo->prepare("INSERT INTO Erabiltzaileak (email, pasahitza, rol_id, hizkuntza, aktibo) VALUES (?, ?, 3, ?, 1)");
             $stmt->execute([$email, $pasahitza, $hizkuntza]); 
             
+
+            $stmt = $pdo->prepare("INSERT INTO Erabiltzaileak (email, pasahitza, rol_id, hizkuntza, aktibo) VALUES (?, ?, 3, ?, 1)");
+            $stmt->execute([$email, $pasahitza, $hizkuntza]); 
+
+
             $berri_id = $pdo->lastInsertId();
 
             // 2. Sortu langilea
@@ -120,6 +125,7 @@ include_once '../php_includeak/harrera_goiburua.php';
                     </select>
                 </div>
             </div>
+<<<<<<< Updated upstream
             
             <div class="botoi-taldea marjina-goi-20">
                 <button type="submit" class="botoia botoi-nagusia">Langilea Gorde</button>

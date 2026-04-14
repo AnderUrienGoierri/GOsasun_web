@@ -10,10 +10,10 @@ $(document).ready(function() {
         const diastolikoa = $('#diastolikoa').val();
         const pisua = $('#pisua').val();
         const pultsua = $('#pultsua').val();
-        const sintomak = $('#sintomak').val();
+        const oharrak = $('#sintomak').val();
         
         // Egiaztatu gutxienez datu bat sartu dela
-        if (glukosa !== '' || (sistolikoa !== '' && diastolikoa !== '') || pisua !== '' || pultsua !== '' || sintomak !== '') {
+        if (glukosa !== '' || (sistolikoa !== '' && diastolikoa !== '') || pisua !== '' || pultsua !== '' || oharrak !== '') {
             gutxienez_bat_behar_da = true;
         }
 

@@ -40,12 +40,14 @@
         <hasiera>Home</hasiera>
         <datuak>Mijn Gegevens</datuak>
         <datuak_testua>Bekijk en update uw persoonlijke gegevens.</datuak_testua>
-        <neurketak>Metingen</neurketak>
-        <neurketak_testua>Bekijk uw meetgeschiedenis.</neurketak_testua>
+        <jarraipenak>Metingen</jarraipenak>
+        <jarraipenak_testua>Bekijk uw meetgeschiedenis.</jarraipenak_testua>
         <grafikak>Grafieken</grafikak>
         <grafikak_testua>Bekijk uw gezondheidsontwikkeling.</grafikak_testua>
         <errezetak>Voorschriften</errezetak>
         <errezetak_testua>Bekijk toegewezen voorschriften.</errezetak_testua>
+        <dokumentuak>Documenten</dokumentuak>
+        <dokumentuak_testua>Beheer uw klinische documenten.</dokumentuak_testua>
         <abisuak>Waarschuwingen</abisuak>
         <abisuak_testua>Bekijk opmerkingen bij uw metingen.</abisuak_testua>
         <hitzorduak>Afspraken</hitzorduak>
@@ -73,7 +75,7 @@
         <hasiera_data>Startdatum</hasiera_data>
         <bukaera_data>Einddatum</bukaera_data>
         <deskargatu>Downloaden</deskargatu>
-    </dashboard_pazientea>
+    <tentsio_sistolikoa>Systolische B.D.</tentsio_sistolikoa><tentsio_diastolikoa>Diastolische B.D.</tentsio_diastolikoa><data_column>Datum</data_column><ordua_column>Tijd</ordua_column></dashboard_pazientea>
     <menua_medikua>
         <hasiera>Home</hasiera>
         <pazienteak>Mijn Patiënten</pazienteak>
@@ -82,8 +84,10 @@
         <hitzorduak_testua>Bekijk en beheer uw agenda.</hitzorduak_testua>
         <errezetak>Voorschriften</errezetak>
         <errezetak_testua>Maak en beheer voorschriften.</errezetak_testua>
-        <neurketak>Metingen</neurketak>
-        <neurketak_testua>Bekijk patiëntmetingen.</neurketak_testua>
+        <dokumentuak>Documenten</dokumentuak>
+        <dokumentuak_testua>Zoek naar klinische documenten van patiënten.</dokumentuak_testua>
+        <jarraipenak>Metingen</jarraipenak>
+        <jarraipenak_testua>Bekijk patiëntmetingen.</jarraipenak_testua>
         <grafikak>Grafieken</grafikak>
         <grafikak_testua>Analyseer meettrends.</grafikak_testua>
         <mezuak>Berichten</mezuak>
@@ -106,6 +110,8 @@
         <medikuak_testua>Lijst en beheer van artsen.</medikuak_testua>
         <hitzorduak>Afspraken</hitzorduak>
         <hitzorduak_testua>Boek nieuwe afspraken.</hitzorduak_testua>
+        <dokumentuak>Documenten</dokumentuak>
+        <dokumentuak_testua>Beheer alle documenten in het centrum.</dokumentuak_testua>
         <mezuak>Berichten</mezuak>
         <mezuak_testua>Beheer ontvangen berichten.</mezuak_testua>
         <kanpoko_mezuak>Externe Berichten</kanpoko_mezuak>

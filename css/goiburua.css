@@ -29,29 +29,29 @@ header {
 }
 
 .logo-irudia {
-    height: 60px;
-    width: auto;
-    display: block;
-    object-fit: contain;
-    mix-blend-mode: multiply;
-    transition: var(--transition);
+  height: 60px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transition: var(--transition);
 }
 
 .logo-esteka {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
 }
 
 .logo-etiketa {
-    font-size: 1.1rem;
-    color: var(--gray);
-    font-weight: 400;
+  font-size: 1.1rem;
+  color: var(--gray);
+  font-weight: 400;
 }
 
 .logoa a:hover .logo-irudia {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* Mugikorreko Ikonoen Edukiontzia */
@@ -77,8 +77,8 @@ header {
 
 .menu-botoia:hover,
 .ezarpenak-botoia-mugikorra:hover {
-    transform: scale(1.1);
-    opacity: 0.8;
+  transform: scale(1.1);
+  opacity: 0.8;
 }
 
 .nabigazio-estekak {
@@ -138,7 +138,7 @@ header {
 
 .botoi-nagusia:hover {
   background-color: #00c3ff;
-  color: white
+  color: white;
 }
 
 .botoi-ertza {
@@ -153,8 +153,8 @@ header {
 }
 
 .arrisku-kolorea:hover {
-    background-color: var(--danger-color) !important;
-    color: var(--white) !important;
+  background-color: var(--danger-color) !important;
+  color: var(--white) !important;
 }
 
 /* Common Actions in Goiburuko eremua (baleude) */
@@ -177,18 +177,18 @@ header {
 
 /* Panel Goiburua (Dashboard Espezifikoa goiburu itsaskorrak) */
 .panel-goiburua {
-    background-color: var(--bg-surface);
-    padding: 1rem 5%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-    box-shadow: 0 2px 5px var(--shadow-color);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    flex-wrap: wrap;
-    border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-surface);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 5px var(--shadow-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+  border-bottom: 1px solid var(--border-color);
 }
 
 @media (min-width: 769px) {
@@ -244,7 +244,7 @@ header {
 
 /* Modalaren estiloak Ezarpenentzako */
 .modal-wrapper {
-  display: none; 
+  display: none;
   position: fixed;
   z-index: 2000; /* Header-aren gainetik (1000) */
   left: 0;
@@ -252,7 +252,7 @@ header {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.6); 
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .modal-edukia {
@@ -262,14 +262,20 @@ header {
   border-radius: var(--border-radius);
   width: 90%;
   max-width: 600px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   animation: irekiModala 0.3s ease-out forwards;
   border: 1px solid var(--border-color);
 }
 
 @keyframes irekiModala {
-  from {transform: translateY(-50px); opacity: 0;}
-  to {transform: translateY(0); opacity: 1;}
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .modal-goiburua {
@@ -305,10 +311,44 @@ header {
 }
 
 /* Modalaren barneko formutik hartutako laguntzaileak (estilo_orokorrak-etik dakar gabe balego) */
-.testu-erdian-marjina-behe-20 { text-align: center; margin-bottom: 20px; }
-.testua-erdian { text-align: center; }
-.marjina-goi-15 { margin-top: 15px; }
-.marjina-goi-30 { margin-top: 30px; }
-.zabalera-osoa-300px { width: 100%; max-width: 300px; }
-.botoi-itsua-gorria { background: none; border: 1px solid var(--danger-color); color: var(--danger-color); padding: 8px 15px; border-radius: 8px; cursor: pointer; transition: all 0.3s; }
-.botoi-itsua-gorria:hover { background: var(--danger-color); color: white; }
+.testu-erdian-marjina-behe-20 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.testua-erdian {
+  text-align: center;
+}
+.marjina-goi-15 {
+  margin-top: 15px;
+}
+.marjina-goi-30 {
+  margin-top: 30px;
+}
+.zabalera-osoa-300px {
+  width: 100%;
+  max-width: 300px;
+}
+.botoi-itsua-gorria {
+  background: none;
+  border: 1px solid var(--danger-color);
+  color: var(--danger-color);
+  padding: 8px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.botoi-itsua-gorria:hover {
+  background: var(--danger-color);
+  color: white;
+}
+
+/* Goiburuko Abisuak */
+.abisuak-gorriz {
+  color: #d32f2f !important;
+  font-weight: bold;
+  position: relative;
+}
+/* Kendu ::after edukia, ez da behar */
+.abisuak-gorriz::after {
+  content: "";
+}

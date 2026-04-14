@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $_SESSION['rol_izena'] = $user['rol_izena'];
 
                 if ($user['rol_izena'] === 'Osasun Langilea') {
-                    header("Location: ../php_medikua/index.php");
+                    header("Location: ../php_osasun_langileak/index.php");
                     exit;
                 } else if ($user['rol_izena'] === 'Pazientea') {
                     header("Location: ../php_pazientea/index.php");
@@ -89,7 +89,9 @@ include '../php_includeak/goiburua.php';
                     <span class="errore-mezua" id="error-login-pass">Pasahitza ezin da hutsik egon.</span>
                 </div>
                 
-                <button type="submit" class="botoia botoi-nagusia zabalera-100 goiko-tartea-20"><?php echo $itzulpenak->login->sartu; ?></button>
+                <div class="botoi-kontainerra" style="display: flex; justify-content: center; width: 100%; margin-top: 1.5rem;">
+                    <button type="submit" class="botoia botoi-nagusia"><?php echo $itzulpenak->login->sartu; ?></button>
+                </div>
             </form>
             
             <div class="hasiera-oina">

@@ -68,19 +68,28 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto 50px auto;
-  overflow: hidden;
-  position: relative;
-  padding: 30px 5%;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  padding: 30px 0;
+}
+
+.ezaugarriak-wrapper::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
 .ezaugarriak-container {
   display: flex;
-  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  width: 300%; /* 3 slides */
+  width: max-content;
+  gap: 20px;
+  padding: 0 5%;
 }
 
 .ezaugarri-txartela {
-  flex: 0 0 33.333333%; /* 1 slide visible at a time */
+  flex: 0 0 300px; /* Fixed width for better snap control */
+  scroll-snap-align: center;
   text-align: center;
   padding: 40px;
   background-color: var(--bg-surface);
@@ -98,6 +107,14 @@
 .ezaugarri-ikonoa {
   font-size: 2.5rem;
   margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ezaugarri-ikonoa img {
+  width: 64px;
+  height: 64px;
 }
 
 .ezaugarri-txartela h3 {

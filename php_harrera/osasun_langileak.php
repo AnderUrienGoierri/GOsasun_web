@@ -94,10 +94,10 @@ include_once '../php_includeak/harrera_goiburua.php';
                             <td><?php echo htmlspecialchars($l['lanaldia'] ?? '-'); ?></td>
                             <td>
                                 <div class="taula-ekintzak">
-                                    <a href="langile_fitxa.php?id=<?php echo $l['langile_id']; ?>" class="botoi-ikonoa" title="Ikusi Fitxa"><img src="../img/svg/eye.svg" alt="" class="ikono-ertaina marjina-esk-5"></a>
-                                    <a href="hitzorduak.php?filter_langile_id=<?php echo $l['langile_id']; ?>" class="botoi-ikonoa hitzordu-botoia" title="Ikusi Agenda"><img src="../img/svg/calendar-days.svg" alt="" class="ikono-ertaina marjina-esk-5"></a>
-                                    <a href="langile_editatu.php?id=<?php echo $l['langile_id']; ?>" class="botoi-ikonoa editatu-botoia" title="Editatu"><img src="../img/svg/pencil.svg" alt="" class="ikono-ertaina marjina-esk-5"></a>
-                                    <a href="osasun_langileak.php?delete_id=<?php echo $l['langile_id']; ?>" class="botoi-ikonoa ezabatu-botoia" onclick="return confirm('Ziur zaude langile hau ezabatu nahi duzula? Ezabatzean bere erabiltzaile kontua ere ezabatuko da.');" title="Ezabatu"><img src="../img/svg/trash-2.svg" alt="" class="ikono-ertaina marjina-esk-5"></a>
+                                    <a href="langile_fitxa.php?id=<?php echo $l['langile_id']; ?>" class="botoi-ikonoa" title="Ikusi Fitxa"><img src="../img/svg/eye.svg" alt="" class="ikono-ertaina"></a>
+                                    <a href="hitzorduak.php?filter_langile_id=<?php echo $l['langile_id']; ?>" class="botoi-ikonoa hitzordu-botoia" title="Ikusi Agenda"><img src="../img/svg/calendar-days.svg" alt="" class="ikono-ertaina"></a>
+                                    <a href="langile_editatu.php?id=<?php echo $l['langile_id']; ?>" class="botoi-ikonoa editatu-botoia" title="Editatu"><img src="../img/svg/pencil.svg" alt="" class="ikono-ertaina"></a>
+                                    <a href="osasun_langileak.php?delete_id=<?php echo $l['langile_id']; ?>" class="botoi-ikonoa ezabatu-botoia" onclick="return confirm('Ziur zaude langile hau ezabatu nahi duzula? Ezabatzean bere erabiltzaile kontua ere ezabatuko da.');" title="Ezabatu"><img src="../img/svg/trash-2.svg" alt="" class="ikono-ertaina"></a>
                                 </div>
                             </td>
                         </tr>

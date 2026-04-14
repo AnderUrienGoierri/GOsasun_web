@@ -32,9 +32,11 @@ include_once '../php_includeak/paziente_goiburua.php';
             <h2>Nire Datuen Bilakaera</h2>
             <div class="grafika-kontrolak" data-html2canvas-ignore="true">
                 <select id="datu-mota" class="inprimaki-kontrola">
-                    <option value="pisua">Pisua (kg)</option>
-                    <option value="tentsioa">Tentsio Arteriala</option>
-                    <option value="pultsua">Pultsua (ppm)</option>
+                    <option value="pisua_kg">Pisua (kg)</option>
+                    <option value="tentsio_sistolikoa">Tentsio Sistolikoa (mmHg)</option>
+                    <option value="tentsio_diastolikoa">Tentsio Diastolikoa (mmHg)</option>
+                    <option value="pultsua_ppm">Pultsua (ppm)</option>
+                    <option value="altuera">Altuera (cm)</option>
                 </select>
                 <button type="button" class="botoia botoi-nagusia" id="btn-deskargatu-pdf">
                     <img src="../img/svg/file-text.svg" alt="" class="ikono-ertaina marjina-esk-5"> Deskargatu PDF (Txostena)

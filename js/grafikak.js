@@ -6,89 +6,57 @@ $(document).ready(function() {
     const ctx = kanbasa.getContext('2d');
     
     // Hasierako marrazketa
-    marraztuGrafika('pisua');
+    marraztuGrafika('pisua_kg');
     
     // Aldaketak kudeatu hautatzailean
     $('#datu-mota').on('change', function() {
         marraztuGrafika($(this).val());
     });
+
+    function hexToRgba(hex, alpha) {
+        const r = parseInt(hex.slice(1, 3), 16);
+        const g = parseInt(hex.slice(3, 5), 16);
+        const b = parseInt(hex.slice(5, 7), 16);
+        return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+    }
     
     // Grafika motaren arabera marrazteko funtzioa
     function marraztuGrafika(mota) {
-        if (typeof neurketakData === 'undefined' || neurketakData.length === 0) return;
+        if (typeof jarraipenakData === 'undefined' || jarraipenakData.length === 0) return;
         
         let datuMultzoak = [];
         let unitatea = '';
         let etiketak = [];
+        let config = {
+            'pisua_kg': { label: 'Pisua (kg)', color: '#007bff', unit: 'kg' },
+            'tentsio_sistolikoa': { label: 'Tentsio Sistolikoa (mmHg)', color: '#dc3545', unit: 'mmHg' },
+            'tentsio_diastolikoa': { label: 'Tentsio Diastolikoa (mmHg)', color: '#17a2b8', unit: 'mmHg' },
+            'pultsua_ppm': { label: 'Pultsua (ppm)', color: '#fd7e14', unit: 'ppm' },
+            'altuera': { label: 'Altuera (cm)', color: '#28a745', unit: 'cm' }
+        };
+
+        if (!config[mota]) return;
         
-        if (mota === 'pisua') {
-            // Iragazi datuak balioa dutenak bakarrik hartzeko
-            const neurketaIragaziak = neurketakData.filter(d => d.pisua_kg !== null && d.pisua_kg !== undefined && d.pisua_kg !== '');
-            const datuak = neurketaIragaziak.map(d => parseFloat(d.pisua_kg));
-            etiketak = neurketaIragaziak.map(d => d.data);
-            unitatea = 'kg';
-            
-            datuMultzoak.push({
-                label: 'Pisua (kg)',
-                data: datuak,
-                borderColor: '#007bff',
-                backgroundColor: 'rgba(0, 123, 255, 0.1)',
-                borderWidth: 2,
-                fill: true,
-                tension: 0.3
-            });
-            datuMultzoak.push(lortuRegresioLerroa(datuak, 'Joera (Pisua)', '#0056b3'));
-            eguneratuEstatistikaPanela(datuak, unitatea);
+        const c = config[mota];
+        unitatea = c.unit;
 
-        } else if (mota === 'tentsioa') {
-            const neurketaIragaziak = neurketakData.filter(d => d.tentsio_sistolikoa !== null && d.tentsio_diastolikoa !== null);
-            const sistolikoa = neurketaIragaziak.map(d => parseInt(d.tentsio_sistolikoa));
-            const diastolikoa = neurketaIragaziak.map(d => parseInt(d.tentsio_diastolikoa));
-            etiketak = neurketaIragaziak.map(d => d.data);
-            unitatea = 'mmHg';
-            
-            datuMultzoak = [
-                {
-                    label: 'Tentsio Sistolikoa ',
-                    data: sistolikoa,
-                    borderColor: '#dc3545',
-                    backgroundColor: 'rgba(220, 53, 69, 0.1)',
-                    borderWidth: 2,
-                    fill: false,
-                    tension: 0.1
-                },
-                {
-                    label: 'Tentsio Diastolikoa',
-                    data: diastolikoa,
-                    borderColor: '#17a2b8',
-                    backgroundColor: 'rgba(23, 162, 184, 0.1)',
-                    borderWidth: 2,
-                    fill: false,
-                    tension: 0.1
-                }
-            ];
-            datuMultzoak.push(lortuRegresioLerroa(sistolikoa, 'Joera (Sist.)', '#a71d2a'));
-            datuMultzoak.push(lortuRegresioLerroa(diastolikoa, 'Joera (Diast.)', '#117a8b'));
-            eguneratuEstatistikaPanela(sistolikoa, unitatea, 'Sistolikoa', diastolikoa, 'Diastolikoa');
-
-        } else if (mota === 'pultsua') {
-            const neurketaIragaziak = neurketakData.filter(d => d.pultsua_ppm !== null && d.pultsua_ppm !== undefined && d.pultsua_ppm !== '');
-            const datuak = neurketaIragaziak.map(d => parseInt(d.pultsua_ppm));
-            etiketak = neurketaIragaziak.map(d => d.data);
-            unitatea = 'ppm';
-            
-            datuMultzoak.push({
-                label: 'Pultsua (ppm)',
-                data: datuak,
-                borderColor: '#fd7e14',
-                backgroundColor: 'rgba(253, 126, 20, 0.1)',
-                borderWidth: 2,
-                fill: true,
-                tension: 0.3
-            });
-            datuMultzoak.push(lortuRegresioLerroa(datuak, 'Joera (Pultsua)', '#d4660a'));
-            eguneratuEstatistikaPanela(datuak, unitatea);
-        }
+        // Iragazi datuak balioa dutenak bakarrik hartzeko
+        const neurketaIragaziak = jarraipenakData.filter(d => d[mota] !== null && d[mota] !== undefined && d[mota] !== '');
+        const datuak = neurketaIragaziak.map(d => parseFloat(d[mota]));
+        etiketak = neurketaIragaziak.map(d => d.data);
+        
+        datuMultzoak.push({
+            label: c.label,
+            data: datuak,
+            borderColor: c.color,
+            backgroundColor: hexToRgba(c.color, 0.1),
+            borderWidth: 2,
+            fill: true,
+            tension: 0.3
+        });
+        
+        datuMultzoak.push(lortuRegresioLerroa(datuak, 'Joera', hexToRgba(c.color, 0.8)));
+        eguneratuEstatistikaPanela(datuak, unitatea);
         
         if (nireGrafika) {
             nireGrafika.destroy();
