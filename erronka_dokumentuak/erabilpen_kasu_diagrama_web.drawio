@@ -1,11 +1,11 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
   <diagram name="Página-1" id="on_5mQcz4jS5WpHQyo0y">
-    <mxGraphModel dx="1940" dy="1948" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2178" dy="2115" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="qUQVLFs1YVv8TIABpPdD-1" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=120;height=30;" value="GOsasun - WEB" vertex="1">
-          <mxGeometry height="2395" width="1030" x="60" y="-1040" as="geometry" />
+          <mxGeometry height="2345" width="1030" x="60" y="-990" as="geometry" />
         </mxCell>
         <mxCell id="qUQVLFs1YVv8TIABpPdD-3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Pazientea" vertex="1">
           <mxGeometry height="60" width="30" x="-5" y="-760" as="geometry" />
@@ -407,7 +407,7 @@
         <mxCell id="Pf2Wl4w0Xv_v8MMfpMd0-77" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontColor=#990000;" value="Harrera Saioa Itxi" vertex="1">
           <mxGeometry height="50" width="100" x="150" y="450" as="geometry" />
         </mxCell>
-        <mxCell id="Pf2Wl4w0Xv_v8MMfpMd0-78" edge="1" parent="1" source="Pf2Wl4w0Xv_v8MMfpMd0-77" style="endArrow=classic;html=1;rounded=0;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.278;entryY=1.001;entryDx=0;entryDy=0;entryPerimeter=0;" target="qUQVLFs1YVv8TIABpPdD-27" value="&amp;lt;extend&amp;gt;">
+        <mxCell id="Pf2Wl4w0Xv_v8MMfpMd0-78" edge="1" parent="1" source="Pf2Wl4w0Xv_v8MMfpMd0-77" style="endArrow=classic;html=1;rounded=0;dashed=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0.278;entryY=1.001;entryDx=0;entryDy=0;entryPerimeter=0;" target="qUQVLFs1YVv8TIABpPdD-27" value="&amp;lt;extend&amp;gt;">
           <mxGeometry height="50" relative="1" width="50" x="-0.1111" y="10" as="geometry">
             <mxPoint as="offset" />
             <mxPoint x="460" y="1180" as="sourcePoint" />
@@ -538,7 +538,7 @@
             <mxPoint x="540" y="900" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Pf2Wl4w0Xv_v8MMfpMd0-106" edge="1" parent="1" source="Pf2Wl4w0Xv_v8MMfpMd0-19" style="endArrow=classic;html=1;rounded=0;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" target="Pf2Wl4w0Xv_v8MMfpMd0-6" value="&amp;lt;extend&amp;gt;">
+        <mxCell id="Pf2Wl4w0Xv_v8MMfpMd0-106" edge="1" parent="1" source="Pf2Wl4w0Xv_v8MMfpMd0-19" style="endArrow=classic;html=1;rounded=0;dashed=1;exitX=0.724;exitY=0.048;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;exitPerimeter=0;" target="Pf2Wl4w0Xv_v8MMfpMd0-6" value="&amp;lt;extend&amp;gt;">
           <mxGeometry height="50" relative="1" width="50" x="0.0323" y="5" as="geometry">
             <mxPoint as="offset" />
             <mxPoint x="437" y="1351" as="sourcePoint" />
