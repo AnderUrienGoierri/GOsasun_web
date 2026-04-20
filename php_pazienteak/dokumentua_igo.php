@@ -9,6 +9,7 @@ if (!isset($_SESSION['rol_id']) || $_SESSION['rol_izena'] !== 'Pazientea') {
 }
 
 require_once '../php_orri_laguntzaileak/DB_konexioa.php';
+require_once '../php_orri_laguntzaileak/fitxategi_baimenak.php';
 $paziente_id = $_SESSION['erabiltzaile_id'];
 $mezua = '';
 $errorea = '';
@@ -18,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $titulua = $_POST['dokumentu_izena'] ?? '';
     $desk = $_POST['deskribapena'] ?? '';
     $pdf = $_FILES['pdf'] ?? null;
-    $j_id = $_POST['jarraipen_id'] ?: null;
 
     if (!$titulua || !$pdf || $pdf['error'] !== UPLOAD_ERR_OK) {
         $errorea = "Datu guztiak bete eta PDF-a igo behar duzu.";
@@ -35,19 +35,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $garbi_titulua = preg_replace('/[^a-zA-Z0-9._-]/', '_', $titulua);
             $dest_name = "dok_paziente_{$paziente_id}_{$data}_{$ordua}_{$garbi_titulua}.pdf";
 
-            if (move_uploaded_file($pdf['tmp_name'], $pdf_dir . $dest_name)) {
+            $helmugaBidea = $pdf_dir . $dest_name;
+
+            if (move_uploaded_file($pdf['tmp_name'], $helmugaBidea)) {
+                normalizatu_fitxategi_baimenak($helmugaBidea);
                 try {
-                    $stmt = $pdo->prepare("INSERT INTO dokumentuak (paziente_id, fitxategi_izena, bidea_zerbitzarian, dokumentu_izena, deskribapena, jarraipena_id) VALUES (?, ?, ?, ?, ?, ?)");
-                    $stmt->execute([$paziente_id, $dest_name, 'paziente_dokumentuak/' . $dest_name, $titulua, $desk, $j_id]);
-                    
-                    // Redirect back based on where we came from
-                    if ($j_id) {
-                        header("Location: jarraipenak.php?msg=" . urlencode("Dokumentua ondo igo eta lotu da."));
-                    } else {
-                        header("Location: dokumentuak.php?msg=" . urlencode("Dokumentu berria ondo igo da."));
-                    }
+                    $pdo->beginTransaction();
+
+                    // 1. Sortu jarraipen berria dokumentuaren erreferentziarekin
+                    $stmtJ = $pdo->prepare("INSERT INTO jarraipenak (paziente_id, oharrak, erregistro_data) VALUES (?, ?, NOW())");
+                    $stmtJ->execute([$paziente_id, 'Dokumentu atxikia']);
+                    $jarraipen_id = $pdo->lastInsertId();
+
+                    // 2. Dokumentua lotu jarraipen horri
+                    $stmt = $pdo->prepare("INSERT INTO dokumentuak (jarraipena_id, fitxategi_izena, bidea_zerbitzarian, dokumentu_izena, deskribapena) VALUES (?, ?, ?, ?, ?)");
+                    $stmt->execute([$jarraipen_id, $dest_name, 'paziente_dokumentuak/' . $dest_name, $titulua, $desk]);
+
+                    $pdo->commit();
+
+                    header("Location: dokumentuak.php?msg=" . urlencode("Dokumentu berria ondo igo da."));
                     exit;
                 } catch (PDOException $e) {
+                    if ($pdo->inTransaction()) {
+                        $pdo->rollBack();
+                    }
+                    if (file_exists($pdf_dir . $dest_name)) {
+                        unlink($pdf_dir . $dest_name);
+                    }
                     $errorea = "Errorea datu basean sartzean: " . $e->getMessage();
                 }
             } else {

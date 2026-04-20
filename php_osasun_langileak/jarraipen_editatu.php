@@ -6,6 +6,8 @@ if (!isset($_SESSION['rol_id']) || $_SESSION['rol_izena'] !== 'Osasun Langilea')
 }
 
 require_once '../php_orri_laguntzaileak/DB_konexioa.php';
+require_once '../php_orri_laguntzaileak/dokumentu_estekak.php';
+require_once '../php_orri_laguntzaileak/fitxategi_baimenak.php';
 
 $j_id = $_GET['id'] ?? null;
 if (!$j_id) {
@@ -53,7 +55,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         if ($ext === 'pdf') {
                             $timestamp = date('Ymd_His');
                             $dest_name = "dok_edit_j{$j_id}_{$timestamp}_{$i}.pdf";
-                            if (move_uploaded_file($tmp_name, $pdf_dir . $dest_name)) {
+                            $helmugaBidea = $pdf_dir . $dest_name;
+
+                            if (move_uploaded_file($tmp_name, $helmugaBidea)) {
+                                normalizatu_fitxategi_baimenak($helmugaBidea);
                                 $stmtD = $pdo->prepare("INSERT INTO dokumentuak (paziente_id, igotzaile_id, jarraipena_id, fitxategi_izena, bidea_zerbitzarian, dokumentu_izena, igotze_data) VALUES (?, ?, ?, ?, ?, ?, NOW())");
                                 $stmtD->execute([$jarraipena['paziente_id'], $_SESSION['erabiltzaile_id'], $j_id, $dest_name, 'paziente_dokumentuak/' . $dest_name, "Erantsitakoa " . ($i+1)]);
                             }
@@ -147,12 +152,13 @@ include_once '../php_orri_includeak/osasun_langile_goiburua.php';
             <?php if (count($dokumentuak) > 0): ?>
                 <div class="dokumentu-zerrenda">
                     <?php foreach ($dokumentuak as $d): ?>
+                        <?php $dokumentu_esteka = lortu_dokumentu_esteka($d); ?>
                         <div class="hitzordu-txartela padding-10 marjina-behe-10 flex-tartea-15 flex-erdia">
                             <div class="flex-hazkundea-1">
                                 <div class="testu-lodia"><?php echo htmlspecialchars($d['dokumentu_izena']); ?></div>
                                 <div class="testu-gris-txikia"><?php echo date('Y/m/d H:i', strtotime($d['igotze_data'])); ?></div>
                             </div>
-                            <a href="../<?php echo htmlspecialchars($d['bidea_zerbitzarian']); ?>" target="_blank" class="botoi-ikonoa">
+                            <a href="<?php echo htmlspecialchars($dokumentu_esteka); ?>" target="_blank" class="botoi-ikonoa">
                                 <img src="../img/svg/download.svg" alt="" class="ikono-ertaina">
                             </a>
                         </div>

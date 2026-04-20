@@ -173,6 +173,9 @@ SELECT d.id AS dokumentu_id,
     d.igotze_data,
     j.erregistro_data AS jarraipen_data,
     j.paziente_id,
+    ep.izena AS p_izena,
+    ep.abizenak AS p_abizenak,
+    ep.nan AS p_nan,
     ep.izena AS paziente_izena,
     ep.abizenak AS paziente_abizenak
 FROM dokumentuak d

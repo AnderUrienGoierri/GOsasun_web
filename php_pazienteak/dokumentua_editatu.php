@@ -9,6 +9,7 @@ if (!isset($_SESSION['rol_id']) || $_SESSION['rol_izena'] !== 'Pazientea') {
 }
 
 require_once '../php_orri_laguntzaileak/DB_konexioa.php';
+require_once '../php_orri_laguntzaileak/fitxategi_baimenak.php';
 $paziente_id = $_SESSION['erabiltzaile_id'];
 $dok_id = $_GET['id'] ?? null;
 $mezua = '';
@@ -56,6 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $bide_berria_osoa = $pdf_dir . $fitx_izena_berria;
 
                 if (move_uploaded_file($tmp_name, $bide_berria_osoa)) {
+                    normalizatu_fitxategi_baimenak($bide_berria_osoa);
                     // Ezabatu zaharra
                     if (file_exists('../' . $dokumentua['bidea_zerbitzarian'])) {
                         unlink('../' . $dokumentua['bidea_zerbitzarian']);

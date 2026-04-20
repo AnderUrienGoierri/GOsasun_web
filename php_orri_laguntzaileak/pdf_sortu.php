@@ -7,6 +7,7 @@ if (!isset($_SESSION['rol_id'])) {
 }
 
 require_once 'DB_konexioa.php';
+require_once 'fitxategi_baimenak.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['pdf'])) {
     // 1. Helburuko karpeta definitu (C:\Apache24-64\htdocs\GOsasun_web\paziente_dokumentuak)
@@ -26,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['pdf'])) {
     $jomuga_bidea = $karga_karpeta . $fitxategi_izena;
     
     if (move_uploaded_file($_FILES['pdf']['tmp_name'], $jomuga_bidea)) {
+        normalizatu_fitxategi_baimenak($jomuga_bidea);
         try {
             $pdo->beginTransaction();
 

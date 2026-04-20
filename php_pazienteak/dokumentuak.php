@@ -9,6 +9,7 @@ if (!isset($_SESSION['rol_id']) || $_SESSION['rol_izena'] !== 'Pazientea') {
 }
 
 require_once '../php_orri_laguntzaileak/DB_konexioa.php';
+require_once '../php_orri_laguntzaileak/dokumentu_estekak.php';
 $paziente_id = $_SESSION['erabiltzaile_id'];
 $mezua = '';
 $errorea = '';
@@ -18,7 +19,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['action']) && $_POST['action'] === 'delete') {
         $dok_id = intval($_POST['dok_id']);
         try {
-            $stmtGet = $pdo->prepare("SELECT bidea_zerbitzarian FROM dokumentuak WHERE id = ? AND paziente_id = ?");
+            // Dokumentua benetan pazienteari dagokion egiaztatu bistaren bidez
+            $stmtGet = $pdo->prepare("SELECT bidea_zerbitzarian FROM V_Dokumentuak_Osoa WHERE dokumentu_id = ? AND paziente_id = ?");
             $stmtGet->execute([$dok_id, $paziente_id]);
             $dok = $stmtGet->fetch();
 
@@ -26,6 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 if (file_exists('../' . $dok['bidea_zerbitzarian'])) {
                     unlink('../' . $dok['bidea_zerbitzarian']);
                 }
+                // Dokumentua ezabatu
                 $stmtDel = $pdo->prepare("DELETE FROM dokumentuak WHERE id = ?");
                 $stmtDel->execute([$dok_id]);
                 $mezua = "Dokumentua ezabatu da.";
@@ -42,11 +45,14 @@ $ordenazioa = isset($_GET['order']) && $_GET['order'] === 'asc' ? 'ASC' : 'DESC'
 $bilaketa = isset($_GET['q']) ? $_GET['q'] : '';
 $ordenatuta = isset($_GET['sort']) ? $_GET['sort'] : 'data';
 
-$sql = "SELECT * FROM dokumentuak WHERE paziente_id = ?";
+
+// Dokumentuak lortu bistaren bidez
+$sql = "SELECT * FROM V_Dokumentuak_Osoa WHERE paziente_id = ?";
 $params = [$paziente_id];
 
 if ($bilaketa) {
-    $sql .= " AND (dokumentu_izena LIKE ? OR deskribapena LIKE ?)";
+    $sql .= " AND (dokumentu_izena LIKE ? OR deskribapena LIKE ? OR fitxategi_izena LIKE ?)";
+    $params[] = "%$bilaketa%";
     $params[] = "%$bilaketa%";
     $params[] = "%$bilaketa%";
 }
@@ -114,18 +120,17 @@ include_once '../php_orri_includeak/paziente_goiburua.php';
                     </tr>
                 <?php else: ?>
                     <?php foreach ($dokumentuak as $d): ?>
+                        <?php $dokumentu_esteka = lortu_dokumentu_esteka($d); ?>
                         <tr>
                             <td><?php echo date('Y/m/d H:i', strtotime($d['igotze_data'])); ?></td>
                             <td><strong><?php echo htmlspecialchars($d['dokumentu_izena'] ?: $d['fitxategi_izena']); ?></strong></td>
                             <td><?php echo htmlspecialchars($d['deskribapena'] ?: '-'); ?></td>
                             <td class="ekintza-botoiak">
-                                <a href="../<?php echo htmlspecialchars($d['bidea_zerbitzarian']); ?>" target="_blank" class="botoi-ikonoa" title="Ikusi PDF">
+                                <a href="<?php echo htmlspecialchars($dokumentu_esteka); ?>" target="_blank" class="botoi-ikonoa" title="Ikusi PDF">
                                     <img src="../img/svg/eye.svg" alt="" class="ikono-ertaina">
                                 </a>
-                                <a href="dokumentua_editatu.php?id=<?php echo $d['id']; ?>" class="botoi-ikonoa editatu-botoia" title="Editatu">
-                                    <img src="../img/svg/pencil.svg" alt="" class="ikono-ertaina">
-                                </a>
-                                <button class="botoi-ikonoa ezabatu-botoia" onclick="if(confirm('Ziur zaude dokumentua ezabatu nahi duzula?')) { document.getElementById('delete_dok_id').value = <?php echo $d['id']; ?>; document.getElementById('deleteForm').submit(); }" title="Ezabatu">
+                                <!-- Editatu botoia ez da erakusten, erabiltzaileak ezin duelako dokumentuak editatu -->
+                                <button class="botoi-ikonoa ezabatu-botoia" onclick="if(confirm('Ziur zaude dokumentua ezabatu nahi duzula?')) { document.getElementById('delete_dok_id').value = <?php echo $d['dokumentu_id']; ?>; document.getElementById('deleteForm').submit(); }" title="Ezabatu">
                                     <img src="../img/svg/trash-2.svg" alt="" class="ikono-ertaina">
                                 </button>
                             </td>

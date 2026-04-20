@@ -1,6 +1,7 @@
 <?php
 // lortu_dokumentuak_ajax.php
 require_once '../php_orri_laguntzaileak/DB_konexioa.php';
+require_once '../php_orri_laguntzaileak/dokumentu_estekak.php';
 session_start();
 
 if (!isset($_SESSION['rol_id']) || $_SESSION['rol_izena'] !== 'Osasun Langilea') {
@@ -26,12 +27,13 @@ if (empty($dokumentuak)) {
     echo '<thead><tr><th>Izena</th><th>Data</th><th>Deskribapena</th><th>Ekintza</th></tr></thead>';
     echo '<tbody>';
     foreach ($dokumentuak as $d) {
+        $dokumentuEsteka = lortu_dokumentu_esteka($d);
         echo '<tr>';
         echo '<td>' . htmlspecialchars($d['dokumentu_izena']) . '</td>';
         echo '<td>' . date('Y/m/d', strtotime($d['igotze_data'])) . '</td>';
         echo '<td><small>' . htmlspecialchars($d['deskribapena'] ?: '-') . '</small></td>';
         echo '<td>
-                <a href="../' . htmlspecialchars($d['bidea_zerbitzarian']) . '" target="_blank" class="botoi-ikonoa">
+                <a href="' . htmlspecialchars($dokumentuEsteka) . '" target="_blank" class="botoi-ikonoa">
                     <img src="../img/svg/download.svg" class="ikono-txikia">
                 </a>
             </td>';

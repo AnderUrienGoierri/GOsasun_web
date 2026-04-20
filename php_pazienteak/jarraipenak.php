@@ -6,6 +6,7 @@ if (!isset($_SESSION['rol_id']) || $_SESSION['rol_izena'] !== 'Pazientea') {
 }
 
 require_once '../php_orri_laguntzaileak/DB_konexioa.php';
+require_once '../php_orri_laguntzaileak/fitxategi_baimenak.php';
 
 $paziente_id = $_SESSION['erabiltzaile_id'];
 $mezua = '';
@@ -32,7 +33,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
             $garbi_izena = preg_replace('/[^a-zA-Z0-9._-]/', '_', $d_izena);
             $dest_name = "dok_jarraipena_{$j_id}_{$timestamp}_{$garbi_izena}.pdf";
 
-            if (move_uploaded_file($pdf['tmp_name'], $pdf_dir . $dest_name)) {
+            $helmugaBidea = $pdf_dir . $dest_name;
+
+            if (move_uploaded_file($pdf['tmp_name'], $helmugaBidea)) {
+                normalizatu_fitxategi_baimenak($helmugaBidea);
                 $stmtInsert = $pdo->prepare("INSERT INTO dokumentuak (jarraipena_id, fitxategi_izena, bidea_zerbitzarian, dokumentu_izena, deskribapena) VALUES (?, ?, ?, ?, ?)");
                 $stmtInsert->execute([$j_id, $dest_name, 'paziente_dokumentuak/' . $dest_name, $d_izena, $d_desk]);
                 $mezua = "Dokumentu berria ondo gorde da.";

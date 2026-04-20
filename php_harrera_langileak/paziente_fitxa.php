@@ -6,6 +6,7 @@ if (!isset($_SESSION['rol_id']) || $_SESSION['rol_izena'] !== 'Harrera Langilea'
 }
 
 require_once '../php_orri_laguntzaileak/DB_konexioa.php';
+require_once '../php_orri_laguntzaileak/dokumentu_estekak.php';
 
 if (!isset($_GET['id']) || empty($_GET['id'])) {
     header("Location: pazienteak.php");
@@ -38,13 +39,12 @@ $stmtH = $pdo->prepare("SELECT h.*, m.izena as m_izena, m.abizenak as m_abizenak
 $stmtH->execute([$id]);
 $hitzorduak = $stmtH->fetchAll(PDO::FETCH_ASSOC);
 
-// 4. Pazientearen dokumentuak lortu (Zuzenean lotutakoak edo jarraipen baten bidez)
-$stmtd = $pdo->prepare("SELECT d.* 
-                        FROM dokumentuak d
-                        LEFT JOIN jarraipenak j ON d.jarraipena_id = j.id
-                        WHERE d.paziente_id = ? OR j.paziente_id = ?
-                        ORDER BY d.igotze_data DESC");
-$stmtd->execute([$id, $id]);
+// 4. Pazientearen dokumentuak lortu
+$stmtd = $pdo->prepare("SELECT * 
+                        FROM V_Dokumentuak_Osoa
+                        WHERE paziente_id = ?
+                        ORDER BY igotze_data DESC");
+$stmtd->execute([$id]);
 $dokumentuak = $stmtd->fetchAll(PDO::FETCH_ASSOC);
 
 $orri_izenburua = $pazientea['izena'] . " " . $pazientea['abizenak'] . " - Fitxa";
@@ -222,11 +222,12 @@ include_once '../php_orri_includeak/harrera_goiburua.php';
                             </thead>
                             <tbody>
                                 <?php foreach($dokumentuak as $d): ?>
+                                    <?php $dokumentu_esteka = lortu_dokumentu_esteka($d); ?>
                                     <tr>
                                         <td><?php echo date('Y/m/d', strtotime($d['igotze_data'])); ?></td>
                                         <td><?php echo htmlspecialchars($d['dokumentu_izena'] ?: $d['fitxategi_izena']); ?></td>
                                         <td>
-                                            <a href="../<?php echo htmlspecialchars($d['bidea_zerbitzarian']); ?>" target="_blank" class="botoi-ikonoa">
+                                            <a href="<?php echo htmlspecialchars($dokumentu_esteka); ?>" target="_blank" class="botoi-ikonoa">
                                                 <img src="../img/svg/download.svg" alt="" class="ikono-txikia">
                                             </a>
                                         </td>

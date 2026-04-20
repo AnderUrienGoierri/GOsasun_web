@@ -9,6 +9,7 @@ if (!isset($_SESSION['rol_id']) || $_SESSION['rol_izena'] !== 'Pazientea') {
 }
 
 require_once '../php_orri_laguntzaileak/DB_konexioa.php';
+require_once '../php_orri_laguntzaileak/dokumentu_estekak.php';
 $paziente_id = $_SESSION['erabiltzaile_id'];
 $j_id = $_GET['id'] ?? null;
 
@@ -71,12 +72,13 @@ include_once '../php_orri_includeak/paziente_goiburua.php';
                     </thead>
                     <tbody>
                         <?php foreach ($dokumentuak as $d): ?>
+                            <?php $dokumentu_esteka = lortu_dokumentu_esteka($d); ?>
                             <tr>
                                 <td><?php echo date('Y/m/d H:i', strtotime($d['igotze_data'])); ?></td>
                                 <td><strong><?php echo htmlspecialchars($d['dokumentu_izena']); ?></strong></td>
                                 <td><small><?php echo htmlspecialchars($d['deskribapena'] ?: '-'); ?></small></td>
                                 <td class="ekintza-botoiak">
-                                    <a href="../<?php echo htmlspecialchars($d['bidea_zerbitzarian']); ?>" target="_blank" class="botoi-ikonoa" title="Ikusi PDF">
+                                    <a href="<?php echo htmlspecialchars($dokumentu_esteka); ?>" target="_blank" class="botoi-ikonoa" title="Ikusi PDF">
                                         <img src="../img/svg/eye.svg" alt="" class="ikono-ertaina">
                                     </a>
                                     <a href="dokumentua_editatu.php?id=<?php echo $d['id']; ?>" class="botoi-ikonoa editatu-botoia" title="Editatu">

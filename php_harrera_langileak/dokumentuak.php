@@ -9,6 +9,8 @@ if (!isset($_SESSION['rol_id']) || $_SESSION['rol_izena'] !== 'Harrera Langilea'
 }
 
 require_once '../php_orri_laguntzaileak/DB_konexioa.php';
+require_once '../php_orri_laguntzaileak/dokumentu_estekak.php';
+require_once '../php_orri_laguntzaileak/fitxategi_baimenak.php';
 $mezua = '';
 $errorea = '';
 
@@ -34,10 +36,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['
             $garbi_titulua = preg_replace('/[^a-zA-Z0-9._-]/', '_', $titulua);
             $dest_name = "dok_paziente_{$hautatutako_id}_{$data}_{$ordua}_{$garbi_titulua}.pdf";
 
-            if (move_uploaded_file($pdf['tmp_name'], $pdf_dir . $dest_name)) {
-                $stmtInsert = $pdo->prepare("INSERT INTO dokumentuak (paziente_id, fitxategi_izena, bidea_zerbitzarian, dokumentu_izena, deskribapena) VALUES (?, ?, ?, ?, ?)");
-                $stmtInsert->execute([$hautatutako_id, $dest_name, 'paziente_dokumentuak/' . $dest_name, $titulua, $desk]);
-                $mezua = "Dokumentua behar bezala erregistratu da sisteman.";
+            $helmugaBidea = $pdf_dir . $dest_name;
+
+            if (move_uploaded_file($pdf['tmp_name'], $helmugaBidea)) {
+                normalizatu_fitxategi_baimenak($helmugaBidea);
+                try {
+                    $pdo->beginTransaction();
+
+                    $stmtJ = $pdo->prepare("INSERT INTO jarraipenak (paziente_id, oharrak, erregistro_data) VALUES (?, ?, NOW())");
+                    $stmtJ->execute([$hautatutako_id, 'Dokumentu atxikia']);
+                    $jarraipen_id = $pdo->lastInsertId();
+
+                    $stmtInsert = $pdo->prepare("INSERT INTO dokumentuak (jarraipena_id, fitxategi_izena, bidea_zerbitzarian, dokumentu_izena, deskribapena) VALUES (?, ?, ?, ?, ?)");
+                    $stmtInsert->execute([$jarraipen_id, $dest_name, 'paziente_dokumentuak/' . $dest_name, $titulua, $desk]);
+
+                    $pdo->commit();
+                    $mezua = "Dokumentua behar bezala erregistratu da sisteman.";
+                } catch (PDOException $e) {
+                    if ($pdo->inTransaction()) {
+                        $pdo->rollBack();
+                    }
+                    if (file_exists($pdf_dir . $dest_name)) {
+                        unlink($pdf_dir . $dest_name);
+                    }
+                    $errorea = "Errorea datu basean gordetzean: " . $e->getMessage();
+                }
             } else {
                 $errorea = "Errorea fitxategia fisikoan mugitzean zerbitzarira.";
             }
@@ -54,17 +77,15 @@ $q = isset($_GET['q']) ? $_GET['q'] : '';
 $order = isset($_GET['order']) && $_GET['order'] === 'asc' ? 'ASC' : 'DESC';
 
 // SQL eraiki
-$sql = "SELECT d.*, p.izena as p_izena, p.abizenak as p_abizenak, p.nan as p_nan 
-        FROM dokumentuak d 
-        JOIN V_Pazientea p ON d.paziente_id = p.paziente_id";
+$sql = "SELECT * FROM V_Dokumentuak_Osoa";
 
 $params = [];
 if ($q) {
-    $sql .= " WHERE p.izena LIKE ? OR p.abizenak LIKE ? OR p.nan LIKE ? OR d.dokumentu_izena LIKE ?";
-    $params = ["%$q%", "%$q%", "%$q%", "%$q%"];
+    $sql .= " WHERE p_izena LIKE ? OR p_abizenak LIKE ? OR p_nan LIKE ? OR dokumentu_izena LIKE ? OR fitxategi_izena LIKE ?";
+    $params = ["%$q%", "%$q%", "%$q%", "%$q%", "%$q%"];
 }
 
-$sql .= " ORDER BY d.igotze_data $order";
+$sql .= " ORDER BY igotze_data $order";
 
 $stmt = $pdo->prepare($sql);
 $stmt->execute($params);
@@ -165,14 +186,19 @@ include_once '../php_orri_includeak/harrera_goiburua.php';
                     </tr>
                 <?php else: ?>
                     <?php foreach ($dokumentuak as $d): ?>
+                        <?php $dokumentu_esteka = lortu_dokumentu_esteka($d); ?>
                         <tr>
                             <td><?php echo date('Y/m/d H:i', strtotime($d['igotze_data'])); ?></td>
-                            <td><strong><?php echo htmlspecialchars($d['p_abizenak'] . ', ' . $d['p_izena']); ?></strong></td>
-                            <td><small><?php echo htmlspecialchars($d['p_nan']); ?></small></td>
+                            <td><strong><?php 
+                                $abizenak = $d['p_abizenak'] ?? $d['paziente_abizenak'] ?? '';
+                                $izena = $d['p_izena'] ?? $d['paziente_izena'] ?? '';
+                                echo htmlspecialchars(trim($abizenak . ', ' . $izena), ENT_QUOTES) ?: '-'; 
+                            ?></strong></td>
+                            <td><small><?php echo htmlspecialchars($d['p_nan'] ?? '-', ENT_QUOTES); ?></small></td>
                             <td><?php echo htmlspecialchars($d['dokumentu_izena'] ?: $d['fitxategi_izena']); ?></td>
                             <td><small><?php echo htmlspecialchars($d['deskribapena'] ?: '-'); ?></small></td>
                             <td class="ekintza-botoiak">
-                                <a href="../<?php echo htmlspecialchars($d['bidea_zerbitzarian']); ?>" target="_blank" class="botoi-ikonoa" title="Ikusi / Deskargatu">
+                                <a href="<?php echo htmlspecialchars($dokumentu_esteka); ?>" target="_blank" class="botoi-ikonoa" title="Ikusi PDF">
                                     <img src="../img/svg/download.svg" alt="" class="ikono-ertaina">
                                 </a>
                             </td>
