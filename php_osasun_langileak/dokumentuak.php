@@ -16,54 +16,74 @@ $mezua = '';
 $errorea = '';
 
 // --- DOKUMENTUA IGOTZEKO LOGIKA ---
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'create') {
-    $p_id = intval($_POST['paziente_id'] ?? 0);
-    $titulua = trim($_POST['dokumentu_izena'] ?? '');
-    $desk = trim($_POST['deskribapena'] ?? '');
-    $pdf = $_FILES['pdf'] ?? null;
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
+    if ($_POST['action'] === 'create') {
+        $p_id = intval($_POST['paziente_id'] ?? 0);
+        $titulua = trim($_POST['dokumentu_izena'] ?? '');
+        $desk = trim($_POST['deskribapena'] ?? '');
+        $pdf = $_FILES['pdf'] ?? null;
 
-    if (!$p_id || !$titulua || !$pdf || $pdf['error'] !== UPLOAD_ERR_OK) {
-        $errorea = "Mesedez, hautatu pazientea, bete titulua eta igo PDF bat.";
-    } else {
-        $ext = strtolower(pathinfo($pdf['name'], PATHINFO_EXTENSION));
-        if ($ext !== 'pdf') {
-            $errorea = "PDF fitxategiak bakarrik onartzen dira.";
+        if (!$p_id || !$titulua || !$pdf || $pdf['error'] !== UPLOAD_ERR_OK) {
+            $errorea = "Mesedez, hautatu pazientea, bete titulua eta igo PDF bat.";
         } else {
-            $pdf_dir = '../paziente_dokumentuak/';
-            if (!is_dir($pdf_dir)) mkdir($pdf_dir, 0777, true);
-
-            $timestamp = date('Ymd_His');
-            $garbi_titulua = preg_replace('/[^a-zA-Z0-9._-]/', '_', $titulua);
-            $dest_name = "dok_manuala_{$p_id}_{$timestamp}_{$garbi_titulua}.pdf";
-
-            $helmugaBidea = $pdf_dir . $dest_name;
-
-            if (move_uploaded_file($pdf['tmp_name'], $helmugaBidea)) {
-                normalizatu_fitxategi_baimenak($helmugaBidea);
-                try {
-                    $pdo->beginTransaction();
-
-                    $stmtJ = $pdo->prepare("INSERT INTO jarraipenak (paziente_id, osasun_langile_id, oharrak, erregistro_data) VALUES (?, ?, ?, NOW())");
-                    $stmtJ->execute([$p_id, $langile_id, 'Dokumentu atxikia']);
-                    $jarraipen_id = $pdo->lastInsertId();
-
-                    $stmtInsert = $pdo->prepare("INSERT INTO dokumentuak (jarraipena_id, fitxategi_izena, bidea_zerbitzarian, dokumentu_izena, deskribapena) VALUES (?, ?, ?, ?, ?)");
-                    $stmtInsert->execute([$jarraipen_id, $dest_name, 'paziente_dokumentuak/' . $dest_name, $titulua, $desk]);
-
-                    $pdo->commit();
-                    $mezua = "Dokumentu berria ondo gorde da.";
-                } catch (PDOException $e) {
-                    if ($pdo->inTransaction()) {
-                        $pdo->rollBack();
-                    }
-                    if (file_exists($pdf_dir . $dest_name)) {
-                        unlink($pdf_dir . $dest_name);
-                    }
-                    $errorea = "Errorea datu basean gordetzean: " . $e->getMessage();
-                }
+            $ext = strtolower(pathinfo($pdf['name'], PATHINFO_EXTENSION));
+            if ($ext !== 'pdf') {
+                $errorea = "PDF fitxategiak bakarrik onartzen dira.";
             } else {
-                $errorea = "Errorea fitxategia gorde bitartean.";
+                $pdf_dir = '../paziente_dokumentuak/';
+                if (!is_dir($pdf_dir)) mkdir($pdf_dir, 0777, true);
+
+                $timestamp = date('Ymd_His');
+                $garbi_titulua = preg_replace('/[^a-zA-Z0-9._-]/', '_', $titulua);
+                $dest_name = "dok_manuala_{$p_id}_{$timestamp}_{$garbi_titulua}.pdf";
+
+                $helmugaBidea = $pdf_dir . $dest_name;
+
+                if (move_uploaded_file($pdf['tmp_name'], $helmugaBidea)) {
+                    normalizatu_fitxategi_baimenak($helmugaBidea);
+                    try {
+                        $pdo->beginTransaction();
+
+                        $stmtJ = $pdo->prepare("INSERT INTO jarraipenak (paziente_id, osasun_langile_id, oharrak, erregistro_data) VALUES (?, ?, ?, NOW())");
+                        $stmtJ->execute([$p_id, $langile_id, 'Dokumentu atxikia']);
+                        $jarraipen_id = $pdo->lastInsertId();
+
+                        $stmtInsert = $pdo->prepare("INSERT INTO dokumentuak (jarraipena_id, fitxategi_izena, bidea_zerbitzarian, dokumentu_izena, deskribapena) VALUES (?, ?, ?, ?, ?)");
+                        $stmtInsert->execute([$jarraipen_id, $dest_name, 'paziente_dokumentuak/' . $dest_name, $titulua, $desk]);
+
+                        $pdo->commit();
+                        $mezua = "Dokumentu berria ondo gorde da.";
+                    } catch (PDOException $e) {
+                        if ($pdo->inTransaction()) {
+                            $pdo->rollBack();
+                        }
+                        if (file_exists($pdf_dir . $dest_name)) {
+                            unlink($pdf_dir . $dest_name);
+                        }
+                        $errorea = "Errorea datu basean gordetzean: " . $e->getMessage();
+                    }
+                } else {
+                    $errorea = "Errorea fitxategia gorde bitartean.";
+                }
             }
+        }
+    } elseif ($_POST['action'] === 'delete') {
+        $dok_id = intval($_POST['dok_id']);
+        try {
+            $stmtGet = $pdo->prepare("SELECT bidea_zerbitzarian FROM dokumentuak WHERE id = ?");
+            $stmtGet->execute([$dok_id]);
+            $dok = $stmtGet->fetch();
+
+            if ($dok) {
+                if (file_exists('../' . $dok['bidea_zerbitzarian'])) {
+                    unlink('../' . $dok['bidea_zerbitzarian']);
+                }
+                $stmtDel = $pdo->prepare("DELETE FROM dokumentuak WHERE id = ?");
+                $stmtDel->execute([$dok_id]);
+                $mezua = "Dokumentua ezabatu da.";
+            }
+        } catch (PDOException $e) {
+            $errorea = "Errorea ezabatzean: " . $e->getMessage();
         }
     }
 }
@@ -263,6 +283,9 @@ if ($_SESSION['rol_izena'] === 'Osasun Langilea') {
                                 <a href="<?php echo htmlspecialchars($dokumentu_esteka); ?>" download class="botoi-ikonoa" title="Deskargatu">
                                     <img src="../img/svg/download.svg" alt="" class="ikono-ertaina">
                                 </a>
+                                <button type="button" class="botoi-ikonoa ezabatu-botoia" title="Ezabatu" onclick="if(confirm('Ziur zaude dokumentua ezabatu nahi duzula?')) { document.getElementById('delete_dok_id').value = <?php echo $d['dokumentu_id']; ?>; document.getElementById('deleteForm').submit(); }">
+                                    <img src="../img/svg/trash-2.svg" alt="" class="ikono-ertaina">
+                                </button>
                             </td>
                         </tr>
                 <?php endforeach; ?>
@@ -270,6 +293,12 @@ if ($_SESSION['rol_izena'] === 'Osasun Langilea') {
         </tbody>
     </table>
 </div>
+
+<!-- Delete Form (Hidden) -->
+<form id="deleteForm" method="post" style="display:none;">
+    <input type="hidden" name="action" value="delete">
+    <input type="hidden" name="dok_id" id="delete_dok_id">
+</form>
 
 <!-- PAGINAZIO BOTOIAK -->
 <?php if ($orri_kopurua > 1): ?>
