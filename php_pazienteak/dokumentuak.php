@@ -129,6 +129,9 @@ include_once '../php_orri_includeak/paziente_goiburua.php';
                                 <a href="<?php echo htmlspecialchars($dokumentu_esteka); ?>" target="_blank" class="botoi-ikonoa" title="Ikusi PDF">
                                     <img src="../img/svg/eye.svg" alt="" class="ikono-ertaina">
                                 </a>
+                                <a href="<?php echo htmlspecialchars($dokumentu_esteka); ?>" download class="botoi-ikonoa" title="Deskargatu">
+                                    <img src="../img/svg/download.svg" alt="" class="ikono-ertaina">
+                                </a>
                                 <!-- Editatu botoia ez da erakusten, erabiltzaileak ezin duelako dokumentuak editatu -->
                                 <button class="botoi-ikonoa ezabatu-botoia" onclick="if(confirm('Ziur zaude dokumentua ezabatu nahi duzula?')) { document.getElementById('delete_dok_id').value = <?php echo $d['dokumentu_id']; ?>; document.getElementById('deleteForm').submit(); }" title="Ezabatu">
                                     <img src="../img/svg/trash-2.svg" alt="" class="ikono-ertaina">

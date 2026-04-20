@@ -199,6 +199,9 @@ include_once '../php_orri_includeak/harrera_goiburua.php';
                             <td><small><?php echo htmlspecialchars($d['deskribapena'] ?: '-'); ?></small></td>
                             <td class="ekintza-botoiak">
                                 <a href="<?php echo htmlspecialchars($dokumentu_esteka); ?>" target="_blank" class="botoi-ikonoa" title="Ikusi PDF">
+                                    <img src="../img/svg/eye.svg" alt="" class="ikono-ertaina">
+                                </a>
+                                <a href="<?php echo htmlspecialchars($dokumentu_esteka); ?>" download class="botoi-ikonoa" title="Deskargatu">
                                     <img src="../img/svg/download.svg" alt="" class="ikono-ertaina">
                                 </a>
                             </td>
