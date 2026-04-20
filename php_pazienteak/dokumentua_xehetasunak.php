@@ -20,17 +20,24 @@ if (!$j_id) {
 
 // Lortu jarraipenaren data (informatzeko)
 try {
-    $stmtJ = $pdo->prepare("SELECT erregistro_data FROM jarraipenak WHERE id = ? AND paciente_id = ?");
+    $stmtJ = $pdo->prepare("SELECT erregistro_data FROM jarraipenak WHERE id = ? AND paziente_id = ?");
     $stmtJ->execute([$j_id, $paziente_id]);
     $jarraipena = $stmtJ->fetch();
+    
+    if (!$jarraipena) {
+        // Jarraipena ez da aurkitu edo ez da pazientearena
+        header("Location: jarraipenak.php");
+        exit;
+    }
 } catch (PDOException $e) {
-    // Fail silently or handle
+    header("Location: jarraipenak.php");
+    exit;
 }
 
 // Lortu dokumentuak
 try {
-    $stmt = $pdo->prepare("SELECT * FROM dokumentuak WHERE jarraipena_id = ? AND paziente_id = ? ORDER BY igotze_data DESC");
-    $stmt->execute([$j_id, $paziente_id]);
+    $stmt = $pdo->prepare("SELECT * FROM dokumentuak WHERE jarraipena_id = ? ORDER BY igotze_data DESC");
+    $stmt->execute([$j_id]);
     $dokumentuak = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } catch (PDOException $e) {
     $errorea = "Errorea dokumentuak lortzean: " . $e->getMessage();

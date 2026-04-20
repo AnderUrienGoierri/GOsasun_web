@@ -13,6 +13,8 @@
         <p>&copy; 2026 GOsasun</p>
         
     </footer>
+    
+    <?php include __DIR__ . '/ezarpenak_modala.php'; ?>
 
     <!-- JS -->
     <script src="<?php echo $bide_absolutua; ?>js/orokorrak.js"></script>

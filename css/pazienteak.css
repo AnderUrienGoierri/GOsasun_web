@@ -5,21 +5,35 @@
    ========================================== */
 .orri-goiburua {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     margin-bottom: 30px;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 30px;
 }
 
 @media (max-width: 480px) {
     .orri-goiburua {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
+        gap: 15px;
     }
     .orri-goiburua h2 {
         font-size: 1.4rem;
+        line-height: 1.3;
+    }
+    .talde-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 10px;
+    }
+    .talde-flex .botoia, 
+    .talde-flex .egoera-etiketa {
+        width: 100%;
+        margin: 0 !important;
+        text-align: center;
+        justify-content: center;
     }
 }
 
@@ -45,7 +59,7 @@
 }
 
 .bilaketa-barra {
-    flex: 0 1 350px;
+    flex: 0 1 150px;
     position: relative;
 }
 
@@ -119,13 +133,14 @@
 /* ==========================================
    2. PATIENT FORMS (CREATE / EDIT)
    ========================================== */
-.inprimaki-kutxa {
-    background: var(--bg-surface);
-    padding: 30px;
-    border-radius: 12px;
+.inprimaki-kutxa, .kutxa-zuria, .txartel-atala, .kutxa-zuria-itzala {
+    background: white;
+    padding: 20px; 
+    border-radius: 15px;
     box-shadow: var(--box-shadow);
-    max-width: 800px;
-    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 100%;
     border: 1px solid var(--border-color);
 }
 
@@ -168,25 +183,34 @@
     padding: 30px;
     border-radius: 15px;
     box-shadow: var(--box-shadow);
-    text-align: center;
     height: fit-content;
     word-break: break-word; 
     border: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 100%;
 }
 
 @media (max-width: 480px) {
     .profil-txartela {
-        padding: 20px 15px;
+        padding: 15px;
     }
 }
 
 .profil-irudia-handia {
     width: 150px;
     height: 150px;
+    max-width: 100%;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid var(--bg-body);
     margin-bottom: 20px;
+}
+
+@media (max-width: 350px) {
+    .profil-irudia-handia {
+        width: 120px;
+        height: 120px;
+    }
 }
 
 /* Modern Health Dashboard Style */
@@ -274,6 +298,28 @@
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
     margin-bottom: 15px;
+}
+
+.kaixo-atalak, .kaixo-atal-modernoa { 
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 30px 20px;
+    border-radius: 20px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .kaixo-atalak, .kaixo-atal-modernoa {
+        flex-direction: column;
+        padding: 25px 15px;
+        text-align: center;
+        gap: 15px;
+    }
 }
 
 /* ==========================================
@@ -512,10 +558,10 @@
 @media (max-width: 350px) {
     .param-sareta {
         grid-template-columns: 1fr;
-        gap: 12px;
+        gap: 10px;
     }
     .param-balioa {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
     }
     .profil-txartela {
         padding: 15px 10px;
@@ -523,7 +569,20 @@
     .orri-goiburua h2 {
         font-size: 1.2rem;
     }
-    .kutxa-zuria, .kutxa-zuria-itzala {
+    .kutxa-zuria, .kutxa-zuria-itzala, .txartel-atala {
         padding: 15px 10px;
+    }
+    .datu-taula th, .datu-taula td {
+        padding: 6px 8px;
+        font-size: 0.75rem;
+    }
+    /* Estutu botoiak */
+    .botoia {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+    .profil-irudia-handia {
+        width: 100px;
+        height: 100px;
     }
 }

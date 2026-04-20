@@ -1,78 +1,39 @@
 <?php
-// php_osasun_langileak/txostena_eraiki.php
+// php_pazienteak/txostena_eraiki.php
 $bide_absolutua = '../'; session_start();
-if (!isset($_SESSION['rol_id']) || !in_array($_SESSION['rol_izena'], ['Osasun Langilea', 'Harrera Langilea'])) {
+if (!isset($_SESSION['rol_id']) || $_SESSION['rol_izena'] !== 'Pazientea') {
     header("Location: ../php_orri_hasierakoak/login.php");
     exit;
 }
 
 require_once '../php_orri_laguntzaileak/DB_konexioa.php';
 
-$paziente_id = $_GET['paziente_id'] ?? null;
+$paziente_id = $_SESSION['erabiltzaile_id'];
 $pazientea = null;
 
-if ($paziente_id) {
-    // Lortu pazientearen datuak goibururako
-    $stmt = $pdo->prepare("SELECT * FROM V_Pazientea WHERE paziente_id = ?");
-    $stmt->execute([$paziente_id]);
-    $pazientea = $stmt->fetch(PDO::FETCH_ASSOC);
-}
+// Lortu pazientearen datuak goibururako
+$stmt = $pdo->prepare("SELECT * FROM V_Pazientea WHERE paziente_id = ?");
+$stmt->execute([$paziente_id]);
+$pazientea = $stmt->fetch(PDO::FETCH_ASSOC);
 
-// Lortu paziente guztiak dropdown-erako
-if ($_SESSION['rol_izena'] === 'Osasun Langilea') {
-    $stmtP = $pdo->prepare("SELECT paziente_id, izena, abizenak, nan FROM V_Langile_Pazienteak WHERE langile_id = ? ORDER BY abizenak ASC");
-    $stmtP->execute([$_SESSION['erabiltzaile_id']]);
-} else {
-    $stmtP = $pdo->prepare("SELECT paziente_id, izena, abizenak, nan FROM V_Pazientea ORDER BY abizenak ASC");
-    $stmtP->execute();
-}
-$paziente_zerrenda = $stmtP->fetchAll(PDO::FETCH_ASSOC);
-
-$orri_izenburua = "Txostena Eraiki" . ($pazientea ? " - " . htmlspecialchars($pazientea['izena'] . ' ' . $pazientea['abizenak']) : "");
-$uneko_orria = "pazienteak";
+$orri_izenburua = "Nire Txostena Eraiki - GOsasun";
+$uneko_orria = "dokumentuak";
 $css_pertsonalizatua = "osasun_langileak.css";
 
-include_once '../php_orri_includeak/osasun_langile_goiburua.php';
+include_once '../php_orri_includeak/paziente_goiburua.php';
 ?>
 
 <main class="panel-nagusia">
     <div class="orri-goiburua">
         <div class="flex-tarte-beteta">
             <div>
-                <?php if($paziente_id): ?>
-                    <a href="paziente_info.php?id=<?php echo $paziente_id; ?>" class="atzera-esteka-testua flex-zentratua"><img src="../img/svg/arrow-left.svg" alt="" class="ikono-txikia marjina-esk-5"> Itzuli pazientearen fitxara</a>
-                <?php endif; ?>
+                <a href="dokumentuak.php" class="atzera-esteka-testua flex-zentratua"><img src="../img/svg/arrow-left.svg" alt="" class="ikono-txikia marjina-esk-5"> Itzuli dokumentuetara</a>
                 <h2>Txosten Kliniko Pertsonalizatua</h2>
-                <p>Hautatu txostenean sartu nahi dituzun atalak eta datu-tartea.</p>
-            </div>
-            <!-- PAZIENTE BILATZAILEA (Goran integratua) -->
-            <div class="paziente-bilatzaile-txikia">
-                <label class="testu-txikia-lodia">Pazientea:</label>
-                <div class="paziente-bilatzaile-edukiontzia">
-                    <!-- Bilatzailea AJAX -->
-                    <input type="text" id="bilaketa_testua" class="inprimaki-kontrola" style="margin-bottom: 5px;" placeholder="Bilatu izena, NAN edo ID..." autocomplete="off" value="<?php echo $pazientea ? htmlspecialchars($pazientea['izena'] . ' ' . $pazientea['abizenak']) : ''; ?>">
-                    <div id="bilaketa_emaitzak" class="bilaketa-emaitzak"></div>
-                    
-                    <!-- Dropdown osoa -->
-                    <select id="paziente_select" class="inprimaki-kontrola" onchange="if(this.value) window.location.href='txostena_eraiki.php?paziente_id=' + this.value;">
-                        <option value="">Aukeratu paziente bat...</option>
-                        <?php foreach ($paziente_zerrenda as $paz): ?>
-                            <option value="<?php echo $paz['paziente_id']; ?>" <?php echo ($paziente_id == $paz['paziente_id']) ? 'selected' : ''; ?>>
-                                <?php echo htmlspecialchars($paz['abizenak'] . ', ' . $paz['izena'] . ' (' . $paz['nan'] . ')'); ?>
-                            </option>
-                        <?php endforeach; ?>
-                    </select>
-                </div>
+                <p>Hautatu txostenean sartu nahi dituzun atalak eta datu-tartea zure txostena sortzeko.</p>
             </div>
         </div>
     </div>
 
-    <?php if(!$paziente_id): ?>
-        <div class="egoera-hutsa marjina-goi-40">
-            <img src="../img/svg/search.svg" alt="" class="ikono-handia opazitatea-20">
-            <p class="marjina-goi-20">Mesedez, erabili goiko bilatzailea txostena sortzeko paziente bat hautatzeko.</p>
-        </div>
-    <?php else: ?>
     <div class="sareta-bikoa-flex marjina-goi-20">
         <!-- Ezkerreko zutabea: Konfigurazioa -->
         <div class="txartel-zuria flex-hazkundea-1">
@@ -80,7 +41,7 @@ include_once '../php_orri_includeak/osasun_langile_goiburua.php';
 
             <div class="konfigurazio-atala marjina-goi-20">
                 <label class="etiketa-lodibitxia">Txostenaren Deskribapena / Izena</label>
-                <input type="text" id="txosten_izena" class="inprimaki-kontrola" placeholder="Adib: Jarraipen Klinikoa Ane" value="Paziente Txostena">
+                <input type="text" id="txosten_izena" class="inprimaki-kontrola" placeholder="Adib: Nire Jarraipen Klinikoa" value="Nire Txostena">
             </div>
 
             <div class="konfigurazio-atala marjina-goi-20">
@@ -155,7 +116,7 @@ include_once '../php_orri_includeak/osasun_langile_goiburua.php';
             <div class="informazio-kutxa-lagungarria marjina-goi-20">
                 <h4>Garrantzitsua:</h4>
                 <ul>
-                    <li>PDFa automatikoki gordeko da pazientearen dokumentuen atalean.</li>
+                    <li>PDFa automatikoki gordeko da zure dokumentuen atalean.</li>
                     <li>Grafikak aukeratuz gero, karga denbora pixka bat handituko da.</li>
                     <li>Egiaztatu datu guztiak zuzenak direla inprimatu aurretik.</li>
                 </ul>
@@ -166,64 +127,10 @@ include_once '../php_orri_includeak/osasun_langile_goiburua.php';
             </div>
         </div>
     </div>
-    <?php endif; ?>
 </main>
-
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="../js/txostenak.js"></script>
 
-<script>
-// Pazienteen bilaketa dinamikoa AJAX bidez
-const bilaketaInput = document.getElementById('bilaketa_testua');
-const emaitzakBox = document.getElementById('bilaketa_emaitzak');
-
-bilaketaInput.addEventListener('input', async (e) => {
-    const q = e.target.value;
-    if (q.length < 2) {
-        emaitzakBox.style.display = 'none';
-        return;
-    }
-
-    try {
-        const resp = await fetch(`../php_orri_laguntzaileak/bilatu_pazienteak_ajax.php?q=${encodeURIComponent(q)}`);
-        const data = await resp.json();
-
-        if (data.success && data.pazienteak.length > 0) {
-            emaitzakBox.innerHTML = '';
-            data.pazienteak.forEach(p => {
-                const div = document.createElement('div');
-                div.className = 'emaitza-elementua';
-                const imgPath = p.irudia ? `../${p.irudia.replace('img/', 'img/png/')}` : '../img/png/lehenetsia_pazientea.png';
-                div.innerHTML = `
-                    <img src="${imgPath}" class="emaitza-irudia" onerror="this.src='../img/png/lehenetsia_pazientea.png'">
-                    <div class="emaitza-info">
-                        <strong>${p.izena} ${p.abizenak}</strong>
-                        <small>NAN: ${p.nan} | ID: #${p.paziente_id}</small>
-                    </div>
-                `;
-                div.onclick = () => {
-                    window.location.href = `txostena_eraiki.php?paziente_id=${p.paziente_id}`;
-                };
-                emaitzakBox.appendChild(div);
-            });
-            emaitzakBox.style.display = 'block';
-        } else {
-            emaitzakBox.style.display = 'none';
-        }
-    } catch (err) {
-        console.error("Bilaketa errorea:", err);
-    }
-});
-
-// Itxi emaitzak kanpoan klik egitean
-document.addEventListener('click', (e) => {
-    if (!bilaketaInput.contains(e.target) && !emaitzakBox.contains(e.target)) {
-        emaitzakBox.style.display = 'none';
-    }
-});
-</script>
-
-<?php include_once '../php_orri_includeak/osasun_footer.php'; ?>
+<?php include_once '../php_orri_includeak/paziente_footer.php'; ?>

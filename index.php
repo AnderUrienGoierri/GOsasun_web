@@ -92,39 +92,6 @@ include 'php_orri_includeak/goiburua.php';
         </div>
     </section>
 
-<?php include 'php_orri_includeak/ezarpenak_modala.php'; ?>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var modal = document.getElementById("ezarpenakModala");
-        var btns = document.querySelectorAll("#irekiEzarpenakModala, #irekiEzarpenakModalaMugikorra");
-        var span = document.getElementsByClassName("itxi-modala")[0];
-
-        btns.forEach(function(btn) {
-            btn.onclick = function(e) {
-                e.preventDefault();
-                modal.style.display = "block";
-            }
-        });
-
-        if (span) {
-            span.onclick = function() {
-                modal.style.display = "none";
-            }
-        }
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        <?php if (isset($_GET['ezarpenak_gordeta']) || isset($_GET['ezarpenak_reset'])): ?>
-        modal.style.display = "block";
-        <?php endif; ?>
-    });
-    </script>
-
-
 <?php
 $js_gehigarria = ["hasiera_index.js"];
 include 'php_orri_includeak/footer.php';

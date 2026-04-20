@@ -22,7 +22,12 @@ if (!$dok_id) {
 
 // Lortu uneko datuak
 try {
-    $stmt = $pdo->prepare("SELECT * FROM dokumentuak WHERE id = ? AND paziente_id = ?");
+    $stmt = $pdo->prepare("
+        SELECT d.* 
+        FROM dokumentuak d
+        JOIN jarraipenak j ON d.jarraipena_id = j.id
+        WHERE d.id = ? AND j.paziente_id = ?
+    ");
     $stmt->execute([$dok_id, $paziente_id]);
     $dokumentua = $stmt->fetch();
 
@@ -32,6 +37,8 @@ try {
     }
 } catch (PDOException $e) {
     $errorea = "Errorea datuak lortzean: " . $e->getMessage();
+    header("Location: dokumentuak.php?error=" . urlencode("Errorea gertatu da."));
+    exit;
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

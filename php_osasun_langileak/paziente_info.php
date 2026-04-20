@@ -207,7 +207,7 @@ include_once '../php_orri_includeak/osasun_langile_goiburua.php';
 
                 <!-- Jarraipen historia -->
                 <div class="kutxa-zuria-itzala">
-                    <h3 class="izenburu-iluna"><img src="../img/svg/clipboard.svg" alt="" class="ikono-ertaina tarte-eskubia"> Jarraipen Historikoa</h3>
+                    <h3 class="izenburu-iluna"><img src="../img/svg/clipboard-pen.svg" alt="" class="ikono-ertaina tarte-eskubia"> Jarraipen Historikoa</h3>
 
                     <?php if(count($jarraipenak) > 0): ?>
                         <div class="korritze-horizontala tarte-goia">

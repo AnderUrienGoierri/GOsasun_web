@@ -67,35 +67,6 @@ $itzulpenak = kargatuItzulpenak($hizkuntza_def);
     <?php inprimatuEstiloak($konf); ?>
 
     <?php
-    // ABISUAK EGIAZTATU (HEADERRA GORRIZ JARTZEKO)
-    $ba_dago_abisurik = false;
-    if (isset($_SESSION['erabiltzaile_id']) && $_SESSION['rol_izena'] === 'Osasun Langilea') {
-        $l_id = $_SESSION['erabiltzaile_id'];
-        $c_name = 'abisu_irakurrita_jarraipenak';
-        $ir_ids = isset($_COOKIE[$c_name]) ? json_decode($_COOKIE[$c_name], true) ?: [] : [];
-
-        $m_data = date('Y-m-d H:i:s', strtotime('-7 days')); // Azken astea bakarrik headerrarentzat
-        $st_abs = $pdo->prepare("
-            SELECT j.id, j.tentsio_sistolikoa, j.tentsio_diastolikoa, j.pultsua_ppm
-            FROM jarraipenak j
-            JOIN V_Langile_Pazienteak vlp ON j.paziente_id = vlp.paziente_id
-            WHERE vlp.langile_id = ? AND j.erregistro_data >= ?
-        ");
-        $st_abs->execute([$l_id, $m_data]);
-        $neurketak = $st_abs->fetchAll(PDO::FETCH_ASSOC);
-
-        foreach ($neurketak as $n) {
-            if (!in_array($n['id'], $ir_ids)) {
-                // Thresholds
-                if ($n['tentsio_sistolikoa'] > 140 || ($n['tentsio_sistolikoa'] > 0 && $n['tentsio_sistolikoa'] < 90) ||
-                    $n['tentsio_diastolikoa'] > 90 || ($n['tentsio_diastolikoa'] > 0 && $n['tentsio_diastolikoa'] < 60) ||
-                    ($n['pultsua_ppm'] > 100) || ($n['pultsua_ppm'] > 0 && $n['pultsua_ppm'] < 50)) {
-                    $ba_dago_abisurik = true;
-                    break;
-                }
-            }
-        }
-    }
     ?>
 
 </head>

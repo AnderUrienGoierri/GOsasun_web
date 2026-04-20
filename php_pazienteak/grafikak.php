@@ -61,9 +61,7 @@ include_once '../php_orri_includeak/paziente_goiburua.php';
                         <option value="pultsua_ppm">Pultsua (ppm)</option>
                         <option value="altuera">Altuera (cm)</option>
                     </select>
-                    <button type="button" class="botoia botoi-nagusia" id="btn-deskargatu-pdf">
-                        <img src="../img/svg/file-text.svg" alt="" class="ikono-ertaina marjina-esk-5"> Deskargatu PDF (Txostena)
-                    </button>
+
                 </form>
             </div>
         </div>

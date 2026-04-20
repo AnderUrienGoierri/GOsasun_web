@@ -341,11 +341,6 @@ body {
   border-collapse: collapse;
   background: var(--bg-surface);
   border-radius: var(--border-radius);
-  overflow: hidden;
-  box-shadow: var(--box-shadow);
-  display: block; 
-  overflow-x: auto; 
-  white-space: nowrap; 
 }
 
 .datu-taula th, .datu-taula td,
@@ -895,12 +890,12 @@ body {
 
   /* Mugikorra lehenesteko hurbilketa panel nagusirako */
   .panel-nagusia {
-    padding: 20px 15px; 
+    padding: 15px 10px; 
     width: 100%;
     overflow-x: hidden;
   }
   
-  .kaixo-atalak {
+  .kaixo-atalak, .kaixo-atal-modernoa {
     padding: 20px 15px; 
   }
 

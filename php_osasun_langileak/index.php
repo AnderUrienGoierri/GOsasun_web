@@ -103,11 +103,6 @@ include_once '../php_orri_includeak/osasun_langile_goiburua.php';
                 <p><?php echo $itzulpenak->menua_medikua->grafikak_testua; ?></p>
             </a>
 
-            <a href="abisuak.php" class="menu-txartela">
-                <div class="txartel-ikonoa"><img src="../img/svg/bell-ring.svg" alt="Abisuak" class="ikono-handia-48"></div>
-                <h3><?php echo $itzulpenak->menua_medikua->abisuak; ?></h3>
-                <p><?php echo $itzulpenak->menua_medikua->abisuak_testua; ?></p>
-            </a>
             <a href="ezarpenak.php" class="menu-txartela">
                 <div class="txartel-ikonoa"><img src="../img/svg/settings.svg" alt="Ezarpenak" class="ikono-handia-48"></div>
                 <h3>Ezarpenak</h3>
@@ -122,7 +117,6 @@ include_once '../php_orri_includeak/osasun_langile_goiburua.php';
     </main>
 
 <?php
-$js_gehigarria = ["mediku_menua.js"];
 include_once '../php_orri_includeak/osasun_footer.php';
 ?>
 

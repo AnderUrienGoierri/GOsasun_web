@@ -193,15 +193,22 @@ if ($_SESSION['rol_izena'] === 'Osasun Langilea') {
 
                 <div class="sareta-bikoa tarte-behea">
                     <div class="inprimaki-taldea">
-                        <label class="etiketa-lodia">Hautatu Pazientea *</label>
-                        <select name="paziente_id" required class="inprimaki-kontrola sarrera-handia">
-                            <option value="">Aukeratu bat...</option>
-                            <?php foreach ($paziente_zerrenda as $paz): ?>
-                                <option value="<?php echo $paz['paziente_id']; ?>">
-                                    <?php echo htmlspecialchars($paz['abizenak'] . ', ' . $paz['izena'] . ' (' . $paz['nan'] . ')'); ?>
-                                </option>
-                            <?php endforeach; ?>
-                        </select>
+                        <label class="etiketa-lodia">Hautatu Pazientea * (Izena, NAN edo ID)</label>
+                        <div class="paziente-bilatzaile-edukiontzia" style="position: relative;">
+                            <!-- Bilatzailea AJAX -->
+                            <input type="text" id="bilaketa_testua" class="inprimaki-kontrola sarrera-handia" style="margin-bottom: 5px;" placeholder="Bilatu izena, NAN edo ID..." autocomplete="off">
+                            <div id="bilaketa_emaitzak" class="bilaketa-emaitzak" style="position: absolute; top: 45px; left: 0; right: 0; background: white; border: 1px solid #ccc; border-radius: 4px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); z-index: 1000; max-height: 300px; overflow-y: auto; display: none;"></div>
+                            
+                            <!-- Dropdown osoa -->
+                            <select name="paziente_id" id="paziente_select" required class="inprimaki-kontrola sarrera-handia">
+                                <option value="">...Edo aukeratu zerrendatik...</option>
+                                <?php foreach ($paziente_zerrenda as $paz): ?>
+                                    <option value="<?php echo $paz['paziente_id']; ?>">
+                                        <?php echo htmlspecialchars($paz['abizenak'] . ', ' . $paz['izena'] . ' (' . $paz['nan'] . ')'); ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
                     </div>
                     <div class="inprimaki-taldea">
                         <label class="etiketa-lodia">PDF Agiria *</label>
@@ -326,3 +333,64 @@ if ($_SESSION['rol_izena'] === 'Osasun Langilea') {
     include_once '../php_orri_includeak/harrera_footer.php';
 }
 ?>
+
+<script>
+// Pazienteen bilaketa dinamikoa AJAX bidez
+const bilaketaInput = document.getElementById('bilaketa_testua');
+const emaitzakBox = document.getElementById('bilaketa_emaitzak');
+
+bilaketaInput.addEventListener('input', async (e) => {
+    const q = e.target.value;
+    if (q.length < 2) {
+        emaitzakBox.style.display = 'none';
+        return;
+    }
+
+    try {
+        const resp = await fetch(`../php_orri_laguntzaileak/bilatu_pazienteak_ajax.php?q=${encodeURIComponent(q)}`);
+        const data = await resp.json();
+
+        if (data.success && data.pazienteak.length > 0) {
+            emaitzakBox.innerHTML = '';
+            data.pazienteak.forEach(p => {
+                const div = document.createElement('div');
+                div.style.padding = '10px';
+                div.style.borderBottom = '1px solid #eee';
+                div.style.cursor = 'pointer';
+                div.style.display = 'flex';
+                div.style.alignItems = 'center';
+                
+                div.onmouseover = () => div.style.backgroundColor = '#f1f5f9';
+                div.onmouseout = () => div.style.backgroundColor = 'transparent';
+                
+                const imgPath = p.irudia ? `../${p.irudia.replace('img/', 'img/png/')}` : '../img/png/lehenetsia_pazientea.png';
+                div.innerHTML = `
+                    <img src="${imgPath}" style="width: 40px; height: 40px; border-radius: 50%; margin-right: 15px; object-fit: cover;" onerror="this.src='../img/png/lehenetsia_pazientea.png'">
+                    <div>
+                        <strong style="display:block; color: #1e293b;">${p.izena} ${p.abizenak}</strong>
+                        <small style="color: #64748b;">NAN: ${p.nan} | ID: #${p.paziente_id}</small>
+                    </div>
+                `;
+                div.onclick = () => {
+                    document.getElementById('paziente_select').value = p.paziente_id;
+                    bilaketaInput.value = `${p.izena} ${p.abizenak}`;
+                    emaitzakBox.style.display = 'none';
+                };
+                emaitzakBox.appendChild(div);
+            });
+            emaitzakBox.style.display = 'block';
+        } else {
+            emaitzakBox.style.display = 'none';
+        }
+    } catch (err) {
+        console.error("Bilaketa errorea:", err);
+    }
+});
+
+// Itxi emaitzak kanpoan klik egitean
+document.addEventListener('click', (e) => {
+    if (!bilaketaInput.contains(e.target) && !emaitzakBox.contains(e.target)) {
+        emaitzakBox.style.display = 'none';
+    }
+});
+</script>

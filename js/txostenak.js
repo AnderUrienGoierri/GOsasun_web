@@ -149,13 +149,17 @@ async function hasiTxostenSorkuntza() {
         statusText.textContent = "PDF-a sortzen... (Hau luzeagoa izan daiteke)";
         
         // Ensure the container is "visible" for html2canvas
-        // We move it from off-screen to a visible but hidden state if needed
+        container.innerHTML = container.innerHTML; // Refresh DOM
         container.style.position = 'fixed';
         container.style.top = '0';
         container.style.left = '0';
-        container.style.zIndex = '-9999';
+        container.style.width = '800px';
+        container.style.zIndex = '-999';
         container.style.visibility = 'visible';
+        container.style.display = 'block';
         container.style.opacity = '1';
+        container.style.background = 'white';
+        container.style.color = 'black';
 
         const opt = {
             margin:       10,
@@ -166,14 +170,20 @@ async function hasiTxostenSorkuntza() {
                 useCORS: true, 
                 allowTaint: true,
                 letterRendering: true,
-                logging: false
+                logging: true,
+                backgroundColor: '#ffffff',
+                removeContainer: true
             },
             jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
         };
 
-        // Wait for EVERYTHING to be stable
-        await new Promise(resolve => setTimeout(resolve, 800));
+        // Wait for EVERYTHING to be stable (increased for chart rendering)
+        await new Promise(resolve => setTimeout(resolve, 2000));
         
+        if (!container.innerHTML || container.innerHTML.trim() === "") {
+            throw new Error("Ez dago edukirik txostena sortzeko.");
+        }
+
         const pdfBlob = await html2pdf().set(opt).from(container).output('blob');
         
         // Restore container hidden state
@@ -207,10 +217,10 @@ async function hasiTxostenSorkuntza() {
             status.innerHTML = `<p style="color: #059669; font-weight: bold;">Txostena ondo sortu da!</p>
                                 <a href="${fullUrl}" target="_blank" style="color: #0369a1; text-decoration: underline;">Klikatu hemen ikusteko</a>`;
             
-            // Auto download
+            // Auto open in new tab
             const link = document.createElement('a');
             link.href = fullUrl;
-            link.download = uploadResult.filename;
+            link.target = '_blank';
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);

@@ -79,7 +79,12 @@ include_once '../php_orri_includeak/paziente_goiburua.php';
             <h2><img src="../img/svg/file-text.svg" alt="" class="ikono-ertaina marjina-esk-5"> Dokumentuen Kudeaketa</h2>
             <p>Ikusi, editatu edo ezabatu igotako dokumentu guztiak.</p>
         </div>
-        <a href="dokumentua_igo.php" class="botoia botoi-sortu"><img src="../img/svg/plus-circle.svg" alt="" class="ikono-ertaina marjina-esk-5"> Gehitu Dokumentu Berria</a>
+        <div style="display: flex; gap: 15px;">
+            <a href="dokumentua_igo.php" class="botoia botoi-sortu"><img src="../img/svg/plus-circle.svg" alt="" class="ikono-ertaina marjina-esk-5"> Gehitu Dokumentu Berria</a>
+            <a href="txostena_eraiki.php" class="botoia botoi-nagusia flex-zentratu" style="background-color: var(--primary-color); height: fit-content;">
+                <img src="../img/svg/file-text.svg" alt="" class="ikono-ertaina tarte-eskubia ikono-zuria"> Txostena Sortu (PDF)
+            </a>
+        </div>
     </div>
 
     <?php if ($mezua): ?><div class="alerta alerta-arrakasta"><?php echo htmlspecialchars($mezua); ?></div><?php endif; ?>

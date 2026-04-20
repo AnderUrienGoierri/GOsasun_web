@@ -20,10 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['pdf'])) {
     $paziente_id = $_POST['paziente_id'] ?? $igotzaile_id;
     $txosten_izena = $_POST['txosten_izena'] ?? 'Txostena'; // Default name if not provided
     
-    // 2. Fitxategi izena sortu: DOK_paziente_ID[ID]_[YYYYMMDD]_[HHMMSS]_[IZENA].pdf
+    // 2. Fitxategi izena sortu: dok_paziente_[ID]_[YYYYMMDD]_[HHMMSS]_[IZENA].pdf
     $data_aldagaia = date('Ymd_His');
-    $garbi_izena = preg_replace('/[^a-zA-Z0-9._-]/', '_', $txosten_izena);
-    $fitxategi_izena = "DOK_paziente_ID{$paziente_id}_{$data_aldagaia}_{$garbi_izena}.pdf";
+    $garbi_izena = strtolower(preg_replace('/[^a-zA-Z0-9._-]/', '_', $txosten_izena));
+    $fitxategi_izena = "dok_paziente_{$paziente_id}_{$data_aldagaia}_{$garbi_izena}.pdf";
     $jomuga_bidea = $karga_karpeta . $fitxategi_izena;
     
     if (move_uploaded_file($_FILES['pdf']['tmp_name'], $jomuga_bidea)) {
@@ -48,8 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['pdf'])) {
             $bide_erlatiboa = 'paziente_dokumentuak/' . $fitxategi_izena;
             $deskribapena = "Sistemak automatikoki sortutako txostena. Igotzailea ID: " . $igotzaile_id;
             
-            $stmt = $pdo->prepare("INSERT INTO dokumentuak (paziente_id, jarraipena_id, fitxategi_izena, bidea_zerbitzarian, dokumentu_izena, deskribapena, igotze_data) VALUES (?, ?, ?, ?, ?, ?, NOW())");
-            $stmt->execute([$paziente_id, $jarraipena_id, $fitxategi_izena, $bide_erlatiboa, $txosten_izena, $deskribapena]);
+            $stmt = $pdo->prepare("INSERT INTO dokumentuak (jarraipena_id, fitxategi_izena, bidea_zerbitzarian, dokumentu_izena, deskribapena, igotze_data) VALUES (?, ?, ?, ?, ?, NOW())");
+            $stmt->execute([$jarraipena_id, $fitxategi_izena, $bide_erlatiboa, $txosten_izena, $deskribapena]);
 
             $pdo->commit();
 
