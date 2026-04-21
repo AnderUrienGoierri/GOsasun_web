@@ -84,15 +84,17 @@ if ($paziente_id && isset($_SESSION['abisuak'][$paziente_id])) {
 </head>
 <body class="<?php echo $body_class ?? 'panel-gorputza'; ?>">
     <header class="panel-goiburua">
-        <div class="logoa">
-            <a href="index.php" class="logo-esteka">
-                <img src="<?php echo $bide_absolutua; ?>img/png/GOsasun_logoa.png" alt="GOsasun" class="logo-irudia">
-                <span class="logo-etiketa"><?php echo $itzulpenak->rolak->pazientea; ?> | <?php echo htmlspecialchars($u_izena . " " . $u_abizena); ?></span>
-            </a>
-        </div>
-        <div class="mugikorreko-ikonoak">
-            <a href="ezarpenak.php" class="ezarpenak-botoia-mugikorra" aria-label="Ireki ezarpenak"><img src="<?php echo $bide_absolutua; ?>img/svg/settings.svg" alt=""></a>
-            <button class="menu-botoia" aria-label="Ireki menua"><img src="<?php echo $bide_absolutua; ?>img/svg/list.svg" alt=""></button>
+        <div class="panel-goi-barra">
+            <div class="logoa">
+                <a href="index.php" class="logo-esteka">
+                    <img src="<?php echo $bide_absolutua; ?>img/png/GOsasun_logoa.png" alt="GOsasun" class="logo-irudia">
+                </a>
+            </div>
+            <div class="mugikorreko-ikonoak">
+                <a href="ezarpenak.php" class="ezarpenak-botoia-mugikorra" aria-label="Ireki ezarpenak"><img src="<?php echo $bide_absolutua; ?>img/svg/settings.svg" alt=""></a>
+                <button class="menu-botoia" aria-label="Ireki menua"><img src="<?php echo $bide_absolutua; ?>img/svg/list.svg" alt=""></button>
+            </div>
+            <span class="panel-erabiltzaile-izena"><?php echo $itzulpenak->rolak->pazientea; ?> &mdash; <?php echo htmlspecialchars($u_izena . " " . $u_abizena); ?></span>
         </div>
         <ul class="nabigazio-estekak">
             <li><a href="index.php" <?php echo (isset($uneko_orria) && $uneko_orria === 'index') ? 'class="aktiboa"' : ''; ?>><?php echo $itzulpenak->menua_pazientea->hasiera; ?></a></li>
