@@ -80,12 +80,12 @@ $orri_izenburua = $sistema_izena_def . " - Zure Osasun Ataria";
         echo "body, main { background-color: #121212 !important; color: #ffffff !important; }\n";
 
         // Header eta nabigazioa - modo oscuro
-        echo "header { background-color: #1a1a2e !important; box-shadow: 0 2px 10px rgba(0,0,0,0.5) !important; }\n";
+        echo "header { background-color: #1a1a2e !important; box-shadow: 0 4px 20px rgba(0,0,0,0.4) !important; border-bottom: none !important; }\n";
         echo ".nabigazio-estekak { background-color: #1a1a2e !important; }\n";
         echo ".nabigazio-estekak a { color: #e0e0e0 !important; }\n";
         echo ".nabigazio-estekak a:hover, .nabigazio-estekak a.aktiboa { color: var(--primary-color) !important; }\n";
         echo ".logo-irudia { mix-blend-mode: normal !important; height: 85px !important; margin: -10px 0 !important; }\n";
-        echo ".panel-goiburua { background-color: #1a1a2e !important; box-shadow: 0 2px 10px rgba(0,0,0,0.5) !important; }\n";
+        echo ".panel-goiburua { background-color: #1a1a2e !important; box-shadow: 0 4px 20px rgba(0,0,0,0.4) !important; border-bottom: none !important; }\n";
 
         // Modal ezarpenak (XML configuratzailea) - modo oscuro
         echo ".modal-edukia { background-color: #1e1e2e !important; color: #e0e0e0 !important; box-shadow: 0 10px 40px rgba(0,0,0,0.7) !important; }\n";

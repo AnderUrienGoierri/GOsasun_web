@@ -1,19 +1,21 @@
 /* goiburua.css - Goiburuko eta Nabigazioko Estiloak */
 
 header {
-  background-color: var(--white);
-  box-shadow: var(--box-shadow);
+  background-color: var(--bg-surface);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Smoother, more modern shadow */
   position: sticky;
   top: 0;
   z-index: 1000;
+  border-bottom: none; /* Removed border */
+  transition: all 0.3s ease;
 }
 
 .nabigazio-barra {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5%;
-  max-width: 1200px;
+  padding: 0.75rem 5%; /* Slightly more compact */
+  max-width: 1400px; /* Wider for premium feel */
   margin: 0 auto;
 }
 
@@ -28,7 +30,7 @@ header {
 }
 
 .logo-irudia {
-  height: 65px;
+  height: 60px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -53,16 +55,25 @@ header {
   transform: scale(1.05);
 }
 
-/* Mugikorreko Menu Botoia */
-.menu-botoia {
+/* Mugikorreko Ikonoen Edukiontzia */
+.mugikorreko-ikonoak {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: auto;
+}
+
+/* Mugikorreko Menu eta Ezarpen Botoiak */
+.menu-botoia,
+.ezarpenak-botoia-mugikorra {
   display: block;
   background: none;
   border: none;
   font-size: 2rem;
   color: var(--primary-color);
   cursor: pointer;
-  margin-left: auto;
   transition: var(--transition);
+  padding: 0;
 }
 
 .menu-botoia:hover,
@@ -73,18 +84,18 @@ header {
 
 .nabigazio-estekak {
   list-style: none;
-  display: none;
-  /* Mugikorra lehenetsia: ezkutatuta lehenespenez */
+  display: none; /* Mugikorra lehenetsia: ezkutatuta lehenespenez */
   flex-direction: column;
   width: 100%;
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: var(--white);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg-surface);
+  box-shadow: 0 4px 6px var(--shadow-color);
   padding: 20px 0;
   text-align: center;
   z-index: 1001;
+  border: 1px solid var(--border-color);
 }
 
 .nabigazio-estekak.aktiboa {
@@ -97,12 +108,9 @@ header {
 
 .nabigazio-estekak a {
   text-decoration: none;
-  color: var(--dark-text);
+  color: var(--text-main);
   font-weight: 500;
   transition: var(--transition);
-  white-space: nowrap;
-  display: inline-flex;
-  align-items: center;
 }
 
 .nabigazio-estekak a:hover,
@@ -130,23 +138,23 @@ header {
 }
 
 .botoi-nagusia:hover {
-  background-color: var(--secondary-color);
-  color: white
+  background-color: #0081e6;
+  color: white;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(0, 145, 255, 0.45);
 }
 
 .botoi-ertza {
-  background-color: transparent;
+  background-color: var(--primary-color); /* Changed to solid background to allow white text */
   border: 2px solid var(--primary-color);
-  color: var(--primary-color);
+  color: #ffffff !important; /* Extremely explicit white with important */
 }
 
 .botoi-ertza:hover {
-  background-color: var(--secondary-color) !important;
-  color: #ffffff !important;
-}
-
-#goiburu-login-botoia:hover {
-  color: #ffffff !important;
+  background-color: #70a1ff; /* A slightly more visible light blue for white text */
+  border-color: #70a1ff;
+  color: #ffffff !important; /* White letters as requested */
+  transform: translateY(-1px);
 }
 
 .arrisku-kolorea:hover {
@@ -154,20 +162,12 @@ header {
   color: var(--white) !important;
 }
 
-#gorde-ezarpenak-botoia:hover {
-    background-color: var(--secondary-color) !important;
-    border-color: var(--secondary-color) !important;
-    color: var(--white) !important;
-}
-
-
-
 /* Common Actions in Goiburuko eremua (baleude) */
 .botoi-sortu {
-  background-color: var(--secondary-color) !important;
-  color: white !important;
+  background: var(--success-color);
+  color: white;
   display: inline-block;
-  padding: 8px 20px;
+  padding: 10px 20px;
   border-radius: var(--border-radius-sm);
   text-decoration: none;
   font-weight: 600;
@@ -176,90 +176,36 @@ header {
 }
 
 .botoi-sortu:hover {
-  background-color: #1e562c !important;
-  color: white !important;
+  background: #218838;
   transform: translateY(-2px);
 }
 
 /* Panel Goiburua (Dashboard Espezifikoa goiburu itsaskorrak) */
 .panel-goiburua {
-  background-color: var(--white);
-  padding: 1rem 5%;
+  background-color: var(--bg-surface);
+  padding: 0.75rem 5%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* Smoother shadow */
   position: sticky;
   top: 0;
   z-index: 1000;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  border-bottom: none; /* Removed border */
 }
 
-@media (min-width: 769px) {
-  .menu-botoia {
-    display: none;
-  }
 
-  .nabigazio-barra {
-    padding: 1rem 5%;
-  }
-
-  .nabigazio-estekak {
-    display: flex;
-    flex-direction: row;
-    position: static;
-    width: auto;
-    background: none;
-    box-shadow: none;
-    padding: 0;
-    text-align: left;
-    gap: 15px;
-    padding-left: 1rem;
-    align-items: center;
-  }
-
-  .nabigazio-estekak li {
-    margin: 0;
-    display: flex;
-    align-items: center;
-  }
-
-  .panel-goiburua {
-    padding: 1rem 5%;
-    gap: 20px;
-    justify-content: space-between;
-  }
-}
 
 /* Espezifikoa responsiveness Pantaila txikietarako */
-@media (max-width: 400px) {
-  .logoa a {
-    font-size: 1.3rem;
-    gap: 8px;
-  }
 
-  .logo-irudia {
-    height: 40px;
-  }
-
-  .logo-etiketa {
-    font-size: 0.9rem;
-    display: block;
-    /* Erakutsi 'Medikua'/'Pazientea' label on very pantaila txikiak as requested */
-  }
-
-  .menu-botoia {
-    font-size: 1.6rem;
-  }
-}
 
 /* Modalaren estiloak Ezarpenentzako */
 .modal-wrapper {
   display: none;
   position: fixed;
-  z-index: 2000;
-  /* Header-aren gainetik (1000) */
+  z-index: 2000; /* Header-aren gainetik (1000) */
   left: 0;
   top: 0;
   width: 100%;
@@ -269,14 +215,15 @@ header {
 }
 
 .modal-edukia {
-  background-color: var(--white);
+  background-color: var(--bg-surface);
   margin: 10vh auto;
   padding: 0;
   border-radius: var(--border-radius);
   width: 90%;
   max-width: 600px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   animation: irekiModala 0.3s ease-out forwards;
+  border: 1px solid var(--border-color);
 }
 
 @keyframes irekiModala {
@@ -284,7 +231,6 @@ header {
     transform: translateY(-50px);
     opacity: 0;
   }
-
   to {
     transform: translateY(0);
     opacity: 1;
@@ -293,7 +239,7 @@ header {
 
 .modal-goiburua {
   padding: 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--border-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -301,7 +247,7 @@ header {
 
 .modal-goiburua h3 {
   margin: 0;
-  color: var(--dark-text);
+  color: var(--text-main);
   font-size: 1.5rem;
   display: flex;
   align-items: center;
@@ -328,24 +274,19 @@ header {
   text-align: center;
   margin-bottom: 20px;
 }
-
 .testua-erdian {
   text-align: center;
 }
-
 .marjina-goi-15 {
   margin-top: 15px;
 }
-
 .marjina-goi-30 {
   margin-top: 30px;
 }
-
 .zabalera-osoa-300px {
   width: 100%;
   max-width: 300px;
 }
-
 .botoi-itsua-gorria {
   background: none;
   border: 1px solid var(--danger-color);
@@ -355,8 +296,69 @@ header {
   cursor: pointer;
   transition: all 0.3s;
 }
-
 .botoi-itsua-gorria:hover {
   background: var(--danger-color);
   color: white;
+}
+
+/* Goiburuko Abisuak */
+.abisuak-gorriz {
+  color: #d32f2f !important;
+  font-weight: bold;
+  position: relative;
+}
+/* Kendu ::after edukia, ez da behar */
+.abisuak-gorriz::after {
+  content: "";
+}
+
+/* === @MEDIA KONTSULTAK === */
+@media (min-width: 769px) {
+  .mugikorreko-ikonoak {
+    display: none;
+  }
+
+  .nabigazio-barra {
+    padding: 1rem 5%;
+  }
+
+  .nabigazio-estekak {
+    display: flex;
+    flex-direction: row;
+    position: static;
+    width: auto;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    text-align: left;
+    gap: 20px;
+    padding-left: 2rem;
+    align-items: center;
+  }
+
+  .nabigazio-estekak li {
+    margin: 0;
+  }
+
+  .panel-goiburua {
+    padding: 1rem 5%;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 400px) {
+  .logoa a {
+    font-size: 1.3rem;
+    gap: 8px;
+  }
+  .logo-irudia {
+    height: 40px;
+  }
+  .logo-etiketa {
+    font-size: 0.9rem;
+    display: block; /* Erakutsi 'Medikua'/'Pazientea' label on very pantaila txikiak as requested */
+  }
+  .menu-botoia {
+    font-size: 1.6rem;
+  }
 }

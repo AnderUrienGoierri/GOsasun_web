@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <konfigurazioa>
-  <hizkuntza>es</hizkuntza>
+  <hizkuntza>eu</hizkuntza>
   <kolore_nagusia>#4361ee</kolore_nagusia>
   <bigarren_kolorea>#3f37c9</bigarren_kolorea>
   <footer_kolorea>#2b2d42</footer_kolorea>
-  <gaia>iluna</gaia>
+  <gaia>argia</gaia>
   <osasun_zentroa>
     <sistema_izena>GOsasun</sistema_izena>
     <mediku_bakoitzeko_gehienezko_hitzorduak>20</mediku_bakoitzeko_gehienezko_hitzorduak>
