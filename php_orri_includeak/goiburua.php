@@ -53,7 +53,7 @@ $orri_izenburua = "GOsasun - Zure Osasun Ataria";
             <ul class="nabigazio-estekak">
                 <li><a href="<?php echo $bide_absolutua; ?>index.php" <?php echo (isset($uneko_orria) && $uneko_orria === 'index') ? 'class="aktiboa"' : ''; ?>><?php echo $itzulpenak->menua->hasiera; ?></a></li>
                 <li><a href="<?php echo $bide_absolutua; ?>php_orri_hasierakoak/kontaktua.php" <?php echo (isset($uneko_orria) && $uneko_orria === 'kontaktua') ? 'class="aktiboa"' : ''; ?>><?php echo $itzulpenak->menua->kontaktua; ?></a></li>
-                <li><a href="#" id="irekiEzarpenakModala"><img src="<?php echo $bide_absolutua; ?>img/svg/settings.svg" alt=""> <?php echo $itzulpenak->menua->ezarpenak; ?></a></li>
+                <li><a href="#" id="irekiEzarpenakModala"><?php echo $itzulpenak->menua->ezarpenak; ?></a></li>
                 <li><a href="<?php echo $bide_absolutua; ?>php_orri_hasierakoak/login.php" class="botoia botoi-nagusia"><?php echo $itzulpenak->menua->saioa_hasi; ?></a></li>
             </ul>
         </nav>
