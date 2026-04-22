@@ -56,15 +56,17 @@ $itzulpenak = kargatuItzulpenak($hizkuntza_def);
 </head>
 <body class="<?php echo $body_class ?? 'panel-gorputza'; ?>">
     <header class="panel-goiburua">
-        <div class="logoa">
-            <a href="index.php" class="logo-esteka">
-                <img src="<?php echo $bide_absolutua; ?>img/png/GOsasun_logoa.png" alt="GOsasun" class="logo-irudia">
-                <span class="logo-etiketa"><?php echo $itzulpenak->rolak->harrera; ?></span>
-            </a>
-        </div>
-        <div class="mugikorreko-ikonoak">
-            <a href="ezarpenak.php" class="ezarpenak-botoia-mugikorra" aria-label="Ireki ezarpenak"><img src="<?php echo $bide_absolutua; ?>img/svg/settings.svg" alt=""></a>
-            <button class="menu-botoia" aria-label="Ireki menua"><img src="<?php echo $bide_absolutua; ?>img/svg/list.svg" alt=""></button>
+        <div class="panel-goi-barra">
+            <div class="logoa">
+                <a href="index.php" class="logo-esteka">
+                    <img src="<?php echo $bide_absolutua; ?>img/png/GOsasun_logoa.png" alt="GOsasun" class="logo-irudia">
+                </a>
+            </div>
+            <div class="mugikorreko-ikonoak">
+                <a href="ezarpenak.php" class="ezarpenak-botoia-mugikorra" aria-label="Ireki ezarpenak"><img src="<?php echo $bide_absolutua; ?>img/svg/settings.svg" alt=""></a>
+                <button class="menu-botoia" aria-label="Ireki menua"><img src="<?php echo $bide_absolutua; ?>img/svg/list.svg" alt=""></button>
+            </div>
+            <span class="panel-erabiltzaile-izena"><?php echo $itzulpenak->rolak->harrera; ?></span>
         </div>
         <ul class="nabigazio-estekak">
             <li><a href="index.php" class="<?php echo ($uneko_orria === 'index') ? 'aktiboa' : ''; ?>"><?php echo $itzulpenak->menua_harrera->hasiera; ?></a></li>
@@ -73,7 +75,7 @@ $itzulpenak = kargatuItzulpenak($hizkuntza_def);
             <li><a href="harrerako_langileak.php" class="<?php echo ($uneko_orria === 'harrerako_langileak') ? 'aktiboa' : ''; ?>"><?php echo $itzulpenak->menua_harrera->harrerako_langileak; ?></a></li>
             <li><a href="hitzorduak.php" class="<?php echo ($uneko_orria === 'hitzorduak') ? 'aktiboa' : ''; ?>"><?php echo $itzulpenak->menua_harrera->hitzorduak; ?></a></li>
             <li><a href="dokumentuak.php" class="<?php echo ($uneko_orria === 'dokumentuak') ? 'aktiboa' : ''; ?>"><?php echo $itzulpenak->menua_harrera->dokumentuak; ?></a></li>
-            <li><a href="ezarpenak.php" class="<?php echo ($uneko_orria === 'ezarpenak') ? 'aktiboa' : ''; ?>"><img src="<?php echo $bide_absolutua; ?>img/svg/settings.svg" alt=""> <?php echo $itzulpenak->menua->ezarpenak; ?></a></li>
+            <li><a href="ezarpenak.php" class="<?php echo ($uneko_orria === 'ezarpenak') ? 'aktiboa' : ''; ?>"><?php echo $itzulpenak->menua->ezarpenak; ?></a></li>
             <li><a href="<?php echo $bide_absolutua; ?>php_orri_laguntzaileak/logout.php" class="botoia botoi-ertza arrisku-kolorea"><?php echo $itzulpenak->erabiltzaile_panela->saioa_itxi; ?></a></li>
         </ul>
     </header>
