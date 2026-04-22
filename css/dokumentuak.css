@@ -117,6 +117,8 @@
 }
 
 /* === @MEDIA KONTSULTAK === */
+
+/* === @MEDIA KONTSULTAK === */
 @media (max-width: 600px) {
     .bilaketa-eremua {
         flex-direction: column;

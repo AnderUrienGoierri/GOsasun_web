@@ -42,6 +42,8 @@
 }
 
 /* === @MEDIA KONTSULTAK === */
+
+/* === @MEDIA KONTSULTAK === */
 @media (min-width: 1024px) {
     .index-aginte-panela {
         grid-template-columns: repeat(3, 300px);

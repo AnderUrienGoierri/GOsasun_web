@@ -308,6 +308,8 @@ header {
 }
 
 /* === @MEDIA KONTSULTAK === */
+
+/* === @MEDIA KONTSULTAK === */
 @media (min-width: 769px) {
   .mugikorreko-ikonoak {
     display: none;

@@ -152,6 +152,8 @@
 }
 
 /* === @MEDIA KONTSULTAK === */
+
+/* === @MEDIA KONTSULTAK === */
 @media (max-width: 768px) {
     .orri-goiburua {
         flex-direction: column;

@@ -1119,6 +1119,8 @@ body {
 
 
 /* === @MEDIA KONTSULTAK === */
+
+/* === @MEDIA KONTSULTAK === */
 @media (min-width: 768px) {
     .hero-errenkada-1 {
         flex-direction: row;
@@ -1215,5 +1217,3 @@ body {
 @media (min-width: 480px) { .hutsune-zatia { display: block; } }
 
 @media (max-width: 768px) { .inprimaki-lerroa { grid-template-columns: 1fr; gap: 15px; } .argazki-koadroa { flex-direction: column; text-align: center; } .ekintza-botoiak { flex-direction: column-reverse; } .ekintza-botoiak .botoia { width: 100%; text-align: center; } }
-
-

@@ -146,6 +146,8 @@
 .botoi-handia-padding { padding: 14px 24px; font-size: 16px; }
 
 /* === @MEDIA KONTSULTAK === */
+
+/* === @MEDIA KONTSULTAK === */
 @media (max-width: 768px) {
     .panel-goiburua .nabigazio-estekak {
         display: none;

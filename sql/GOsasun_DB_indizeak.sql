@@ -29,3 +29,11 @@ CREATE INDEX idx_botikak_izena ON botikak (izena);
 -- 6. DOKUMENTUAK
 -- Jarraipen bati lotutako dokumentuak azkar lortzeko
 CREATE INDEX idx_dokumentuak_jarraipena ON dokumentuak (jarraipena_id);
+
+
+
+
+
+
+
+

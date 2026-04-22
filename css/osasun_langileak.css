@@ -131,6 +131,8 @@
 .ikono-handia { width: 60px; height: 60px; margin: 0 auto; display: block; }
 
 /* === @MEDIA KONTSULTAK === */
+
+/* === @MEDIA KONTSULTAK === */
 @media (max-width: 768px) {
     .fitxa-edukiontzia { grid-template-columns: 1fr; }
 }

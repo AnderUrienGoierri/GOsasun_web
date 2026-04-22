@@ -141,6 +141,8 @@
 }
 
 /* === @MEDIA KONTSULTAK === */
+
+/* === @MEDIA KONTSULTAK === */
 @media (max-width: 768px) {
     .grafika-goiburua {
         flex-direction: column;

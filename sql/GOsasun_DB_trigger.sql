@@ -37,3 +37,6 @@ DELIMITER ;
 
 -- TRIGGER bakarra erabili behar bada, bi hauek nahikoak dira eta 
 -- datu-basearen trinkotasuna (consistency) bermatzen dute.
+
+
+
