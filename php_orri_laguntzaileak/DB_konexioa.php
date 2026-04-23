@@ -1,8 +1,8 @@
 <?php
 $host = 'localhost';
 $dbname = 'GOsasun_DB';
-$username = 'root'; // Edo zure phpMyAdmin erabiltzailea
-$password = '1MG32025'; // Zure phpMyAdmin pasahitza
+$username = 'root'; // Edo zure adminRoot erabiltzailea
+$password = '1MG32025'; // Zure adminRoot pasahitza
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);

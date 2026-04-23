@@ -82,15 +82,15 @@ try {
         $sql = "SELECT erregistro_data, tentsio_sistolikoa, tentsio_diastolikoa, pultsua_ppm, pisua_kg, altuera, oharrak 
                 FROM jarraipenak WHERE paziente_id = ?";
         $params = [$paziente_id];
-        
+
         if ($h_data) { $sql .= " AND erregistro_data >= ?"; $params[] = $h_data . ' 00:00:00'; }
         if ($a_data) { $sql .= " AND erregistro_data <= ?"; $params[] = $a_data . ' 23:59:59'; }
-        
+
         $sql .= " ORDER BY erregistro_data DESC";
         $stmt = $pdo->prepare($sql);
         $stmt->execute($params);
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        
+
         $html = '<h3 style="color: #0369a1; border-bottom: 2px solid #0369a1; padding-bottom: 5px;">Jarraipenak eta Neurketak</h3>';
         if (count($data) > 0) {
             $html .= '<table style="width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 12px;">
@@ -113,7 +113,7 @@ try {
                             <td style="padding: 8px; border: 1px solid #cbd5e1;">' . ($r['pisua_kg'] ? $r['pisua_kg'].' kg' : '-') . '</td>
                             <td style="padding: 8px; border: 1px solid #cbd5e1;">' . ($r['altuera'] ? $r['altuera'].' cm' : '-') . '</td>
                             <td style="padding: 8px; border: 1px solid #cbd5e1; color: #475569;">' . htmlspecialchars($r['oharrak'] ?? '-') . '</td>
-                          </tr>';
+                        </tr>';
             }
             $html .= '</tbody></table>';
         } else {
@@ -128,15 +128,15 @@ try {
         $sql = "SELECT data, hasiera_ordua, arrazoia, egoera, langile_izena, langile_abizenak 
                 FROM V_Hitzorduak_Osoa WHERE paziente_id = ?";
         $params = [$paziente_id];
-        
+
         if ($h_data) { $sql .= " AND data >= ?"; $params[] = $h_data; }
         if ($a_data) { $sql .= " AND data <= ?"; $params[] = $a_data; }
-        
+
         $sql .= " ORDER BY data DESC, hasiera_ordua DESC";
         $stmt = $pdo->prepare($sql);
         $stmt->execute($params);
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        
+
         $html = '<h3 style="color: #0369a1; border-bottom: 2px solid #0369a1; padding-bottom: 5px; margin-top: 25px;">Hitzorduen Historia</h3>';
         if (count($data) > 0) {
             $html .= '<table style="width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 12px;">
@@ -155,7 +155,7 @@ try {
                             <td style="padding: 8px; border: 1px solid #cbd5e1;">' . htmlspecialchars($r['langile_izena'] . ' ' . $r['langile_abizenak']) . '</td>
                             <td style="padding: 8px; border: 1px solid #cbd5e1;">' . htmlspecialchars($r['arrazoia']) . '</td>
                             <td style="padding: 8px; border: 1px solid #cbd5e1;">' . htmlspecialchars($r['egoera']) . '</td>
-                          </tr>';
+                        </tr>';
             }
             $html .= '</tbody></table>';
         } else {
@@ -173,15 +173,15 @@ try {
                 LEFT JOIN botikak b ON eb.botika_id = b.id
                 WHERE e.paziente_id = ? ";
         $params = [$paziente_id];
-        
+
         if ($h_data) { $sql .= " AND e.igorpen_data >= ?"; $params[] = $h_data; }
         if ($a_data) { $sql .= " AND e.igorpen_data <= ?"; $params[] = $a_data; }
-        
+
         $sql .= " GROUP BY e.id ORDER BY e.igorpen_data DESC";
         $stmt = $pdo->prepare($sql);
         $stmt->execute($params);
         $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        
+
         $html = '<h3 style="color: #0369a1; border-bottom: 2px solid #0369a1; padding-bottom: 5px; margin-top: 25px;">Errezetak eta Diagnostikoak</h3>';
         if (count($data) > 0) {
             foreach ($data as $r) {
@@ -192,7 +192,7 @@ try {
                             </div>
                             <p style="margin: 5px 0 0 0; font-size: 12px;"><strong>Botikak:</strong> ' . htmlspecialchars($r['botikak_info'] ?? 'Botikarik gabe') . '</p>
                             ' . ($r['iraungitze_data'] ? '<p style="margin: 2px 0 0 0; font-size: 11px; color: #64748b;">Iraungitzea: ' . date('Y/m/d', strtotime($r['iraungitze_data'])) . '</p>' : '') . '
-                          </div>';
+                        </div>';
             }
         } else {
             $html .= '<p style="color: #64748b;">Ez dago errezetarik aukeratutako tartean.</p>';

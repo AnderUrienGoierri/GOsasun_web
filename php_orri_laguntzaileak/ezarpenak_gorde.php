@@ -3,7 +3,7 @@ session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Debug log
     error_log("Saving configuration. Form type: " . ($_POST['form_type'] ?? 'unknown') . ". Language: " . ($_POST['hizkuntza'] ?? 'not set'));
-    
+
     $form_type = $_POST['form_type'] ?? 'orokorra';
     $ekintza = $_POST['ekintza'] ?? 'gorde';
     $xml_path = "../xml_konfigurazioa/konfigurazio_orokorra.xml";
@@ -54,26 +54,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         } else {
             // Globala ('osasun_zentroa'): hasierako balioak ezarri (Basque, Light, Blue)
-            $hizk = 'eu'; 
-            $kol_nag = '#4361ee'; 
-            $big_kol = '#3f37c9'; 
-            $foot_kol = '#2b2d42'; 
+            $hizk = 'eu';
+            $kol_nag = '#4361ee';
+            $big_kol = '#3f37c9';
+            $foot_kol = '#2b2d42';
             $gaia = 'argia';
 
             $xml = new DOMDocument("1.0", "UTF-8");
             $xml->formatOutput = true;
             $root = $xml->createElement("konfigurazioa");
             $xml->appendChild($root);
-         
+
             $root->appendChild($xml->createElement("hizkuntza", $hizk));
             $root->appendChild($xml->createElement("kolore_nagusia", $kol_nag));
             $root->appendChild($xml->createElement("bigarren_kolorea", $big_kol));
             $root->appendChild($xml->createElement("footer_kolorea", $foot_kol));
             $root->appendChild($xml->createElement("gaia", $gaia));
-            
+
             $xml->save($xml_path);
         }
-        
+
         $nondik = $_POST['nondik'] ?? '';
         if (!empty($nondik)) {
             $separatzailea = (strpos($nondik, '?') === false) ? '?' : '&';
@@ -87,16 +87,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } elseif ($itzulera === 'pazientea') {
             header("Location: ../php_pazienteak/ezarpenak.php?ezarpenak_reset=1");
         } elseif ($itzulera === 'harrera') {
-             header("Location: ../php_harrera_langileak/ezarpenak.php?ezarpenak_reset=1");
+            header("Location: ../php_harrera_langileak/ezarpenak.php?ezarpenak_reset=1");
         } else {
             header("Location: ../index.php?ezarpenak_reset=1");
         }
         exit();
     }
-    
+
     // Lehenetsitako balioak (fitxategia hutsik badoa)
     $hizk = 'eu'; $kol_nag = '#4361ee'; $big_kol = '#3f37c9'; $foot_kol = '#2b2d42'; $gaia = 'argia';
- 
+
     // Dauden balioak irakurri
     if (file_exists($xml_path)) {
         $xml_conf = simplexml_load_file($xml_path);
@@ -108,22 +108,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $gaia = (string)$xml_conf->gaia ?: $gaia;
         }
     }
- 
+
     // Formulario mota edozein izanda ere, bidalitako datuak jaso
     $hizk = $_POST['hizkuntza'] ?? $hizk;
     $kol_nag = $_POST['kolore_nagusia'] ?? $kol_nag;
     $big_kol = $_POST['bigarren_kolorea'] ?? $big_kol;
     $foot_kol = $_POST['footer_kolorea'] ?? $foot_kol;
     $gaia = $_POST['gaia'] ?? $gaia;
- 
+
     // Log values right before saving
- 
- 
     $xml = new DOMDocument("1.0", "UTF-8");
     $xml->formatOutput = true;
     $root = $xml->createElement("konfigurazioa");
     $xml->appendChild($root);
- 
+
     $root->appendChild($xml->createElement("hizkuntza", $hizk));
     $root->appendChild($xml->createElement("kolore_nagusia", $kol_nag));
     $root->appendChild($xml->createElement("bigarren_kolorea", $big_kol));

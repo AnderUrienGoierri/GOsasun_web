@@ -9,16 +9,16 @@ function lortu_dokumentu_esteka(array $dokumentua, string $aurrizkia = '../'): s
     if ($bidea !== '') {
         // Normalizatu bidea (aldatu \ -> / eta kendu bikoiztutako /)
         $bideaNormalizatua = preg_replace('#/+#', '/', str_replace('\\', '/', $bidea));
-        
+
         // Kendu Windows-eko unitate letra (adib: C:/)
         $bideaNormalizatua = preg_replace('/^[a-zA-Z]:\//', '', $bideaNormalizatua);
-        
+
         // Kendu proiektuaren erroko bide absolutua (segurtasun gehigarria)
         $webErroaPos = strpos($bideaNormalizatua, 'GOsasun_web/');
         if ($webErroaPos !== false) {
             $bideaNormalizatua = substr($bideaNormalizatua, $webErroaPos + strlen('GOsasun_web/'));
         }
-        
+
         $bideaNormalizatua = ltrim($bideaNormalizatua, '/');
         $hautagaiak[] = $bideaNormalizatua;
 
