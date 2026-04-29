@@ -15,17 +15,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['pdf'])) {
     if (!is_dir($karga_karpeta)) {
         mkdir($karga_karpeta, 0777, true);
     }
-    
+
     $igotzaile_id = $_SESSION['erabiltzaile_id'];
     $paziente_id = $_POST['paziente_id'] ?? $igotzaile_id;
     $txosten_izena = $_POST['txosten_izena'] ?? 'Txostena'; // Default name if not provided
-    
+
     // 2. Fitxategi izena sortu: dok_paziente_[ID]_[YYYYMMDD]_[HHMMSS]_[IZENA].pdf
     $data_aldagaia = date('Ymd_His');
     $garbi_izena = strtolower(preg_replace('/[^a-zA-Z0-9._-]/', '_', $txosten_izena));
     $fitxategi_izena = "dok_paziente_{$paziente_id}_{$data_aldagaia}_{$garbi_izena}.pdf";
     $jomuga_bidea = $karga_karpeta . $fitxategi_izena;
-    
+
     if (move_uploaded_file($_FILES['pdf']['tmp_name'], $jomuga_bidea)) {
         normalizatu_fitxategi_baimenak($jomuga_bidea);
         try {
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['pdf'])) {
             if ($create_jarraipen) {
                 $langile_id = ($_SESSION['rol_izena'] === 'Osasun Langilea') ? $igotzaile_id : null;
                 $oharrak = "Sistema: PDF Txostena sortu da - " . $txosten_izena;
-                
+
                 $stmtJ = $pdo->prepare("INSERT INTO jarraipenak (paziente_id, osasun_langile_id, oharrak, erregistro_data) VALUES (?, ?, ?, NOW())");
                 $stmtJ->execute([$paziente_id, $langile_id, $oharrak]);
                 $jarraipena_id = $pdo->lastInsertId();
@@ -47,14 +47,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['pdf'])) {
             // 4. Erregistratu datu-basean dokumentu gisa
             $bide_erlatiboa = 'paziente_dokumentuak/' . $fitxategi_izena;
             $deskribapena = "Sistemak automatikoki sortutako txostena. Igotzailea ID: " . $igotzaile_id;
-            
+
             $stmt = $pdo->prepare("INSERT INTO dokumentuak (jarraipena_id, fitxategi_izena, bidea_zerbitzarian, dokumentu_izena, deskribapena, igotze_data) VALUES (?, ?, ?, ?, ?, NOW())");
             $stmt->execute([$jarraipena_id, $fitxategi_izena, $bide_erlatiboa, $txosten_izena, $deskribapena]);
 
             $pdo->commit();
 
             echo json_encode([
-                'success' => true, 
+                'success' => true,
                 'url' => $bide_erlatiboa,
                 'msg' => 'PDF txostena behar bezala sortu eta gorde da!',
                 'filename' => $fitxategi_izena

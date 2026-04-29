@@ -22,9 +22,9 @@ try {
     // Bilatu izena, abizena edo NANaren arabera
     $bilaketa = "%$testua%";
     $stmt = $pdo->prepare("
-        SELECT paziente_id, izena, abizenak, nan, irudia 
-        FROM V_Langile_Pazienteak 
-        WHERE langile_id = ? 
+        SELECT paziente_id, izena, abizenak, nan, irudia
+        FROM V_Langile_Pazienteak
+        WHERE langile_id = ?
         AND (izena LIKE ? OR abizenak LIKE ? OR nan LIKE ? OR paziente_id LIKE ?)
         LIMIT 10
     ");

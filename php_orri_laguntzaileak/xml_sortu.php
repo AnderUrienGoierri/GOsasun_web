@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Lortu jarraipenak tarte horretan
         $jarraipenak_stmt = $pdo->prepare("
-            SELECT DATE(erregistro_data) AS data, TIME(erregistro_data) AS ordua, glukosa_mg_dl, tentsio_sistolikoa, tentsio_diastolikoa, pisua_kg, altuera, oharrak 
+            SELECT DATE(erregistro_data) AS data, TIME(erregistro_data) AS ordua, glukosa_mg_dl, tentsio_sistolikoa, tentsio_diastolikoa, pisua_kg, altuera, oharrak
             FROM jarraipenak
             WHERE paziente_id = ? AND DATE(erregistro_data) BETWEEN ? AND ?
             ORDER BY erregistro_data ASC
